@@ -168,7 +168,7 @@ def sprawdz_pythona(exe, timeout=25):
         return None
     if "WindowsApps" in exe:     # stub ze Sklepu Windows otwiera Store zamiast uruchomić Pythona
         return None
-    kod, out, _ = uruchom([exe, "-I", "-c", "import sys,json;print(json.dumps({'w':'%d.%d.%d'%sys.version_info[:3],'p':sys.prefix,'b':sys.base_prefix,'e':sys.executable}))"], timeout=timeout)
+    kod, out, _ = uruchom([exe, "-I", "-X", "utf8", "-c", "import sys,json;print(json.dumps({'w':'%d.%d.%d'%sys.version_info[:3],'p':sys.prefix,'b':sys.base_prefix,'e':sys.executable}))"], timeout=timeout)
     if kod != 0:
         return None
     try:
@@ -596,7 +596,7 @@ class Srodowisko:
         if not pv or not kt:
             return {}
         mods = [self.modul(p) for p in self.pakiety_wymagane()]
-        kod, out, _ = uruchom([pv, "-I", str(kt / "probe_pakiety.py"), *mods], timeout=60)
+        kod, out, _ = uruchom([pv, "-I", "-X", "utf8", str(kt / "probe_pakiety.py"), *mods], timeout=60)
         if kod != 0:
             return {}
         try:
@@ -914,7 +914,7 @@ class Srodowisko:
     def _test_api(self, pv, kt, log):
         port = _wolny_port()
         try:
-            serwer = subprocess.Popen([str(pv), "-I", str(kt / "api_serwer.py"), str(port)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            serwer = subprocess.Popen([str(pv), "-I", "-X", "utf8", str(kt / "api_serwer.py"), str(port)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                       text=True, encoding="utf-8", errors="replace", env=_env_czysty(), **_flagi())
         except OSError as e:
             raise RuntimeError(f"nie udało się uruchomić serwera testowego: {e}")
@@ -935,7 +935,7 @@ class Srodowisko:
                 raise RuntimeError("serwer lokalny nie odpowiedział w 30 s (port zajęty? zapora?)")
             # prawdziwe żądanie HTTP z biblioteką kursu (requests), jeśli jest wymagana
             klient = "requests" if "requests" in self.pakiety_wymagane() else "urllib"
-            kod, out, err = uruchom([pv, "-I", str(kt / "api_klient.py"), url, klient], timeout=60)
+            kod, out, err = uruchom([pv, "-I", "-X", "utf8", str(kt / "api_klient.py"), url, klient], timeout=60)
             if kod != 0:
                 raise RuntimeError(f"żądanie HTTP ({klient}) nie powiodło się:\n" + (out + err).strip()[-400:])
             return f"serwer na porcie {port} odpowiedział 200, klient {klient}: {out.strip().splitlines()[-1][:120]}"
@@ -954,7 +954,7 @@ class Srodowisko:
                 break
         html = html or (kt / "strona_testowa.html")
         log(f"Selenium: {b['nazwa']} {b['wersja']} ({b['exe']}), strona {html}")
-        kod, out, err = uruchom([pv, "-I", str(kt / "selenium_test.py"), b["nazwa"], b["exe"], str(html)], timeout=180)
+        kod, out, err = uruchom([pv, "-I", "-X", "utf8", str(kt / "selenium_test.py"), b["nazwa"], b["exe"], str(html)], timeout=180)
         if kod != 0:
             tekst = (out + err).strip()
             if "Unable to obtain" in tekst or "selenium-manager" in tekst.lower() or "SessionNotCreated" in tekst:

@@ -168,8 +168,8 @@ def test_zmiana_locka_uniewaznia_gotowe(srodowisko_kursu, monkeypatch):
 
 
 def test_srodowisko_w_katalogu_danych(srodowisko_kursu):
-    assert srodowisko_kursu.venv.is_relative_to(KATALOG_SRODOWISK)
-    assert str(KATALOG_SRODOWISK).startswith(os.environ["MENTOR_DANE"])
+    assert srodowisko_kursu.venv.resolve().is_relative_to(KATALOG_SRODOWISK.resolve())
+    assert KATALOG_SRODOWISK.resolve().is_relative_to(Path(os.environ["MENTOR_DANE"]).resolve())
 
 
 # ---------------------------------------------------------------- runtime Pythona (etap 2) — tylko Windows, pobiera ok. 46 MB

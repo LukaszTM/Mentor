@@ -97,7 +97,7 @@ def test_import_v11_nie_uruchamia_skryptow(zip_kursu, tmp_path):
     meta = json.loads((w["katalog"] / "meta.json").read_text(encoding="utf-8"))
     assert meta["skrypty_niewykonywane"] == ["install.bat", "setup.ps1"]
     assert w["praca"] and w["praca"].is_dir() and w["praca"].name == "PRACA"
-    assert str(w["praca"]).startswith(os.environ["MENTOR_PRACA"])
+    assert w["praca"].resolve().is_relative_to(Path(os.environ["MENTOR_PRACA"]).resolve())
     # katalog PRACA poza katalogiem kursu i środowiska
     assert KATALOG_KURSOW not in w["praca"].parents
     # program czyta kurs z paczki przez lista_programow

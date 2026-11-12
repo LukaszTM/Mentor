@@ -9,9 +9,9 @@ import program
 
 
 def test_katalog_danych_z_env():
-    assert str(program.KATALOG_DANYCH) == os.environ["MENTOR_DANE"]
+    assert program.KATALOG_DANYCH.resolve() == Path(os.environ["MENTOR_DANE"]).resolve()
     for k in (program.KATALOG_PROGRAMOW, program.KATALOG_KURSOW, program.KATALOG_SRODOWISK, program.KATALOG_LOGOW, program.KATALOG_POBRANE):
-        assert k.is_dir() and k.is_relative_to(program.KATALOG_DANYCH)
+        assert k.is_dir() and k.resolve().is_relative_to(program.KATALOG_DANYCH.resolve())
     assert program.PLIK_DANYCH.parent == program.KATALOG_DANYCH
 
 

@@ -20,6 +20,7 @@ import wiedza           # noqa: E402
 from jak import JAK     # noqa: E402
 from lekcje_extra import LEKCJE_TYDZIEN_0, TESTY  # noqa: E402
 from cele import CELE  # noqa: E402
+from cwiczenia import CWICZENIA, SRODOWISKO  # noqa: E402
 
 
 def zbuduj():
@@ -54,6 +55,8 @@ def zbuduj():
             z["sprawdz"] = j.get("sprawdz", "")
             z["problemy"] = j.get("problemy", [])
             z["tytul"] = z["tytul"].replace("Piątek: ", "", 1)
+            if z["id"] in CWICZENIA:
+                z["cwiczenie"] = CWICZENIA[z["id"]]
             zadania.append(z)
         w["zadania"] = zadania
         tygodnie.append(w)
@@ -67,9 +70,10 @@ def zbuduj():
                 "projekt z testami automatycznymi (pytest + Selenium), który możesz pokazać na rozmowie o pracę Junior QA. "
                 "Uczysz się z asystentem AI (Claude Code, API albo tryb offline) na zasadzie 70/30: 70% kodu piszesz sam.",
         "autor": "Łukasz + Claude",
-        "wersja": "2.0",
+        "wersja": "2.1",
         "jezyk": "pl",
         "katalog_projektu": "nauka-python",
+        "srodowisko": SRODOWISKO,
         "stanowisko": "Junior QA",
         "czas_dziennie_min": 90,
         "dni_w_tygodniu": [0, 1, 2, 3, 4],

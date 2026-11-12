@@ -200,7 +200,16 @@ def analizuj_kod(zrodlo, nazwa="plik.py"):
 
 
 def uruchom_plik(sciezka, dane_wejsciowe="", limit=10):
-    """Uruchamia plik .py w osobnym procesie; zwraca (kod, stdout, stderr)."""
+    """Uruchamia plik .py w osobnym procesie interpreterem KURSU (.venv kursu albo Python systemowy — nigdy Mentor.exe);
+    zwraca (kod, stdout, stderr)."""
+    try:
+        import srodowisko
+        from program import P
+        sr = srodowisko.srodowisko_programu(P)
+        return sr.uruchom_plik_ucznia(sciezka, wejscie=dane_wejsciowe, limit=limit)
+    except Exception as e:  # noqa: BLE001 — awaryjnie (tryb deweloperski) własnym interpreterem, ale nigdy zamrożonym EXE
+        if getattr(sys, "frozen", False):
+            return -2, "", f"Nie udało się uruchomić pliku interpreterem kursu: {e}"
     try:
         r = subprocess.run([sys.executable, str(sciezka)], cwd=str(Path(sciezka).parent), input=dane_wejsciowe,
                            capture_output=True, text=True, timeout=limit, **_flagi())

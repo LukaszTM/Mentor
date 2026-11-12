@@ -15,10 +15,12 @@ a = Analysis(
         ("programy/FORMAT.md", "programy"),
         ("programy/STANDARD_KURSOW.md", "programy"),
         ("programy/materialy", "programy/materialy"),
+        ("programy/zaleznosci", "programy/zaleznosci"),      # requirements.lock z sumami SHA-256 (instalacja bibliotek kursu)
+        ("srodowisko_testy", "srodowisko_testy"),            # testy końcowe środowiska: pytest, lokalne API, Selenium + strona HTML
         ("mentor.ico", "."),
     ],
-    hiddenimports=["asystent", "program", "motywy", "wiedza_ogolna", "warsztat", "kadry", "tkinter", "tkinter.ttk", "tkinter.font", "tkinter.filedialog",
-                   "tkinter.messagebox", "tkinter.simpledialog"],
+    hiddenimports=["asystent", "program", "motywy", "wiedza_ogolna", "warsztat", "kadry", "paczki", "srodowisko", "widok_srodowisko", "cwiczenia",
+                   "tkinter", "tkinter.ttk", "tkinter.font", "tkinter.filedialog", "tkinter.messagebox", "tkinter.simpledialog", "tkinter.scrolledtext"],
     hookspath=[],
     runtime_hooks=[],
     excludes=["PIL", "numpy", "matplotlib", "pytest", "selenium", "requests", "flask", "pandas"],

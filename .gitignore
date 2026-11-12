@@ -1,8 +1,15 @@
 __pycache__/
 *.pyc
 mentor_dane.json
+mentor_dane.json.kopia-*
 build/
 dist/
 *_z_bledem.py
 cwiczenie_debug.py
 .venv/
+# katalog danych w trybie deweloperskim (python mentor.py w repo)
+/kursy/
+/srodowiska/
+/logi/
+/pobrane/
+/python/

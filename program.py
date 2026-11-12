@@ -13,43 +13,141 @@ Użycie w aplikacji:
 Funkcje emulatora i widoków czytają P w chwili wywołania, więc zmiana programu działa od razu.
 """
 
+import datetime as dt
 import json
+import os
 import shutil
 import sys
 from pathlib import Path
 
-# W wersji .exe (PyInstaller) dane użytkownika leżą obok pliku exe, a wbudowane programy w paczce (sys._MEIPASS);
-# przy pierwszym uruchomieniu kopiujemy je do katalogu programy/ obok exe, żeby dało się je edytować i dokładać własne.
+# W wersji .exe (PyInstaller) zasoby wbudowane leżą w paczce (sys._MEIPASS — TYLKO DO ODCZYTU), a dane użytkownika
+# (postępy, kursy, środowiska, logi) w katalogu danych użytkownika: %LOCALAPPDATA%\Mentor. Katalog EXE traktujemy jako
+# potencjalnie tylko do odczytu (Program Files, pendrive z blokadą). Tryb przenośny: plik portable.txt obok EXE → dane obok EXE.
+# Uruchomienie ze źródeł (python mentor.py): dane w katalogu repozytorium, jak dotąd. Zmienna MENTOR_DANE nadpisuje wszystko (testy).
 ZAMROZONY = getattr(sys, "frozen", False)
+WINDOWS = sys.platform.startswith("win")
 KATALOG = Path(sys.executable).resolve().parent if ZAMROZONY else Path(__file__).resolve().parent
-KATALOG_PROGRAMOW = KATALOG / "programy"
+KATALOG_ZASOBOW = Path(getattr(sys, "_MEIPASS", KATALOG))          # tylko do odczytu w EXE
 FORMAT = "mentor-program/1"
 
 
+def _katalog_danych():
+    env = os.environ.get("MENTOR_DANE")
+    if env:
+        return Path(env).expanduser().resolve()
+    if not ZAMROZONY or (KATALOG / "portable.txt").exists():
+        return KATALOG
+    if WINDOWS:
+        baza = os.environ.get("LOCALAPPDATA") or str(Path.home() / "AppData" / "Local")
+        return Path(baza) / "Mentor"
+    if sys.platform == "darwin":
+        return Path.home() / "Library" / "Application Support" / "Mentor"
+    return Path(os.environ.get("XDG_DATA_HOME") or Path.home() / ".local" / "share") / "mentor"
+
+
+KATALOG_DANYCH = _katalog_danych()
+KATALOG_PROGRAMOW = KATALOG_DANYCH / "programy"        # programy JSON + materialy/ (wbudowane i wgrane z pliku)
+KATALOG_KURSOW = KATALOG_DANYCH / "kursy"              # kursy zaimportowane z paczek ZIP: kursy/<id>/{kurs.json, meta.json, paczka/}
+KATALOG_SRODOWISK = KATALOG_DANYCH / "srodowiska"      # .venv i stan środowiska per kurs
+KATALOG_LOGOW = KATALOG_DANYCH / "logi"
+KATALOG_POBRANE = KATALOG_DANYCH / "pobrane"           # pobrane instalatory/runtime (z weryfikacją SHA-256)
+KATALOG_RUNTIME = KATALOG_DANYCH / "python"            # Python zarządzany przez Mentora (gdy w systemie go nie ma)
+PLIK_DANYCH = KATALOG_DANYCH / "mentor_dane.json"
+MIGRACJA = {"wykonana": False, "kroki": [], "bledy": []}
+
+
+def _utworz_katalogi():
+    for k in (KATALOG_DANYCH, KATALOG_PROGRAMOW, KATALOG_KURSOW, KATALOG_SRODOWISK, KATALOG_LOGOW, KATALOG_POBRANE):
+        try:
+            k.mkdir(parents=True, exist_ok=True)
+        except OSError as e:
+            MIGRACJA["bledy"].append(f"Nie można utworzyć {k}: {e}")
+
+
+def migruj_dane():
+    """Przenosi dane z katalogu EXE (stary układ: mentor_dane.json i programy/ obok Mentor.exe) do katalogu danych użytkownika.
+    Nic nie usuwa: oryginały zostają, a przed migracją powstaje kopia mentor_dane.json.kopia-<data>. Wynik w MIGRACJA."""
+    if KATALOG_DANYCH == KATALOG:
+        return
+    stare = KATALOG / "mentor_dane.json"
+    if stare.exists() and not PLIK_DANYCH.exists():
+        try:
+            kopia = KATALOG / f"mentor_dane.json.kopia-{dt.datetime.now():%Y%m%d-%H%M%S}"
+            shutil.copy2(stare, kopia)
+            shutil.copy2(stare, PLIK_DANYCH)
+            MIGRACJA["kroki"].append(f"Postępy przeniesione do {PLIK_DANYCH} (kopia: {kopia.name}, oryginał obok EXE bez zmian).")
+            MIGRACJA["wykonana"] = True
+        except OSError as e:
+            MIGRACJA["bledy"].append(f"Postępy: {e}")
+    stare_prog = KATALOG / "programy"
+    if stare_prog.is_dir() and stare_prog.resolve() != KATALOG_PROGRAMOW.resolve():
+        n = 0
+        try:
+            for f in stare_prog.rglob("*"):
+                if not f.is_file() or "__pycache__" in f.parts:
+                    continue
+                cel = KATALOG_PROGRAMOW / f.relative_to(stare_prog)
+                if not cel.exists():
+                    cel.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(f, cel)
+                    n += 1
+        except OSError as e:
+            MIGRACJA["bledy"].append(f"Programy: {e}")
+        if n:
+            MIGRACJA["kroki"].append(f"Skopiowano {n} plików programów z katalogu EXE do {KATALOG_PROGRAMOW} (oryginały zostały).")
+            MIGRACJA["wykonana"] = True
+
+
 def _rozpakuj_wbudowane():
+    """Wbudowane programy i materiały (z paczki EXE) trafiają do katalogu danych — tylko brakujące pliki, nic nie nadpisujemy."""
     if not ZAMROZONY:
         return
-    zrodlo = Path(getattr(sys, "_MEIPASS", KATALOG)) / "programy"
+    zrodlo = KATALOG_ZASOBOW / "programy"
     if not zrodlo.is_dir():
         return
     try:
-        KATALOG_PROGRAMOW.mkdir(exist_ok=True)
+        KATALOG_PROGRAMOW.mkdir(parents=True, exist_ok=True)
         for f in zrodlo.rglob("*"):
             cel = KATALOG_PROGRAMOW / f.relative_to(zrodlo)
             if f.is_file() and not cel.exists():
                 cel.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy(f, cel)
-    except OSError:
-        pass
+    except OSError as e:
+        MIGRACJA["bledy"].append(f"Wbudowane programy: {e}")
 
 
+_utworz_katalogi()
+migruj_dane()
 _rozpakuj_wbudowane()
 
 
-def katalog_materialow(program_id):
-    """Katalog z materiałami kursu (START_TUTAJ.md, cwiczenia/, przyklady/, rozwiazania/, pomoc/) albo None."""
+def katalog_kursu(program_id):
+    """Katalog kursu zaimportowanego z paczki ZIP (kursy/<id>/) albo None."""
     if not program_id:
         return None
+    k = KATALOG_KURSOW / program_id
+    return k if (k / "kurs.json").exists() else None
+
+
+def meta_kursu(program_id):
+    """meta.json kursu z paczki (id, wersja, źródło, data importu, wymagania, manifest) albo {}."""
+    k = katalog_kursu(program_id)
+    if not k:
+        return {}
+    try:
+        return json.loads((k / "meta.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def katalog_materialow(program_id):
+    """Katalog z materiałami kursu (START_TUTAJ.md, cwiczenia/, przyklady/, rozwiazania/, pomoc/) albo None.
+    Kolejność: kursy/<id>/paczka (zaimportowany ZIP — jawna decyzja ucznia) → programy/materialy/<id> (wbudowane)."""
+    if not program_id:
+        return None
+    kk = KATALOG_KURSOW / program_id / "paczka"
+    if kk.is_dir():
+        return kk
     k = KATALOG_PROGRAMOW / "materialy" / program_id
     return k if k.is_dir() else None
 
@@ -255,17 +353,24 @@ def wczytaj_plik(sciezka):
 
 
 def lista_programow():
-    """[(sciezka, nazwa, podtytul, liczba_tygodni)] z katalogu programy/."""
-    wynik = []
-    KATALOG_PROGRAMOW.mkdir(exist_ok=True)
-    for p in sorted(KATALOG_PROGRAMOW.glob("*.json")):
-        if p.name.startswith("szablon"):
-            continue
+    """[(sciezka, nazwa, podtytul, liczba_tygodni)] z katalogu programy/ oraz kursów z paczek (kursy/<id>/kurs.json)."""
+    wynik, widziane = [], set()
+    KATALOG_PROGRAMOW.mkdir(parents=True, exist_ok=True)
+    sciezki = []
+    if KATALOG_KURSOW.is_dir():   # kursy z paczek mają pierwszeństwo przed wbudowanym plikiem o tym samym id
+        sciezki += sorted(p for p in KATALOG_KURSOW.glob("*/kurs.json") if not p.parent.name.startswith("_"))
+    sciezki += [p for p in sorted(KATALOG_PROGRAMOW.glob("*.json")) if not p.name.startswith("szablon")]
+    for p in sciezki:
         try:
             d = json.loads(p.read_text(encoding="utf-8"))
-            wynik.append((p, d.get("nazwa", p.stem), d.get("podtytul", ""), len(d.get("tygodnie", []))))
         except (OSError, json.JSONDecodeError):
             wynik.append((p, p.stem + " (uszkodzony plik)", "", 0))
+            continue
+        pid = d.get("id") or p.stem
+        if pid in widziane:
+            continue
+        widziane.add(pid)
+        wynik.append((p, d.get("nazwa", p.stem), d.get("podtytul", ""), len(d.get("tygodnie", []))))
     return wynik
 
 
@@ -274,7 +379,7 @@ def importuj(zrodlo):
     dane, bledy = wczytaj_plik(zrodlo)
     if bledy:
         return None, bledy
-    KATALOG_PROGRAMOW.mkdir(exist_ok=True)
+    KATALOG_PROGRAMOW.mkdir(parents=True, exist_ok=True)
     cel = KATALOG_PROGRAMOW / Path(zrodlo).name
     if cel.exists() and cel.resolve() != Path(zrodlo).resolve():
         i = 2

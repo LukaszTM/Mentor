@@ -41,7 +41,28 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 
 - `kroki` — pełna instrukcja; linie zaczynające się od `git `, `python`, `pip `, `cd `, `print(` itd. są wyświetlane jako kod.
 - `pliki` — nazwy plików, których istnienie w katalogu projektu Mentor wykrywa (podpowiedź, nie zaliczenie).
-- `id` musi być unikalne w całym programie (to klucz postępów).
+- `id` musi być unikalne w całym programie (to klucz postępów) i **stabilne między wersjami kursu** — po aktualizacji paczki postępy zostają.
+- `cwiczenie` (opcjonalne; tylko w kursach z polem `srodowisko`) — ćwiczenie wykonywane w Mentorze (pasek pod zadaniem):
+
+```json
+"cwiczenie": {
+ "plik": "kalkulator.py",
+ "szablon": "# kalkulator.py — …\n",
+ "przyklad": "temperatura = float(input(…))\n…",
+ "przyklad_plik": "przyklady/kalkulator.py",
+ "podpowiedz": "input() zwraca napis — zamień przez float().",
+ "stdin": "6\n*\n3\n",
+ "sprawdzenie": {"rodzaj": "wyjscie_zawiera", "stdin": "6\n*\n3\n", "tekst": ["18"], "nie_zawiera": [], "min_linii": 1, "limit_s": 20}
+}
+```
+
+  `plik` — nazwa pliku w katalogu PRACA (domyślnie pierwszy `.py` z `pliki`; bez `/`); `szablon` — treść startowa (domyślnie nagłówek z tytułem
+  i „Gotowe, gdy”); `przyklad` — kod pokazywany w oknie „Otwórz przykład” (ma pokazywać konstrukcję w INNYM kontekście niż zadanie)
+  albo `przyklad_plik` — ścieżka w materiałach kursu; `stdin` — dane dla `input()` przy „Uruchom” (uczeń może zmienić).
+  `sprawdzenie.rodzaj`: `uruchom_bez_bledu` (kod wyjścia 0), `wyjscie_zawiera` (wszystkie `tekst` w stdout, żaden z `nie_zawiera`,
+  co najmniej `min_linii` linii), `pytest` (uruchamia `python -m pytest <plik_testu|plik>` w PRACA — zielone = zaliczone),
+  `plik_istnieje` (domyślne; daje status „Plik istnieje — wymaga sprawdzenia”, **nie** „Zaliczone”). `{rok}` = bieżący rok.
+  Kod ucznia uruchamia **interpreter kursu** (`.venv` kursu, nigdy Python Mentora) z limitem czasu i przyciskiem Anuluj.
 
 ## Lekcja
 
@@ -102,7 +123,8 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `stanowisko` | nazwa roli docelowej (np. „Junior QA”) — nagłówek próbnej rozmowy rekrutacyjnej w Asystencie |
 | `diagnoza` | lista pytań jak w `test` + `lekcja` (id) — zadanie diagnostyczne na start (Panel → Pierwsze kroki, Quiz, „Jak zacząć”); nie blokuje nauki, nie daje XP; wynik i lekcje do powtórki w `stan["diagnoza"]` |
 | `pytania_dziennika` | lista pytań pomocniczych pokazywanych w zakładce Dziennik (domyślnie ogólne) |
-| `materialy` | ścieżka (informacyjna) paczki materiałów; Mentor szuka jej w `programy/materialy/<id>/` i udostępnia „Skopiuj materiały kursu do katalogu projektu” (bez nadpisywania) |
+| `materialy` | ścieżka (informacyjna) paczki materiałów; Mentor szuka jej w `kursy/<id>/paczka/` (kurs z ZIP) albo `programy/materialy/<id>/` i udostępnia „Skopiuj materiały kursu do katalogu projektu” (bez nadpisywania) |
+| `srodowisko` | **wymagania środowiska** kursu, które Mentor sprawdza i instaluje w zakładce Środowisko: `{"python": ">=3.11,<3.14", "pakiety": ["pytest", "requests", "selenium", "flask"], "lock": "programy/zaleznosci/requirements.lock", "narzedzia_wymagane": [], "narzedzia_opcjonalne": {"git": 0, "claude": 0}, "przegladarka": "edge", "przegladarka_od_tygodnia": 8, "sprawdzenia": [{"kind": "python_import", "module": "pytest"}, {"kind": "pytest_sample"}, {"kind": "local_api"}, {"kind": "selenium_browser", "optional": true}], "uwagi": ["…"]}`. `narzedzia_opcjonalne` to `{nazwa: od_tygodnia}` — Mentor ich nie instaluje, pokazuje tylko status (Brak dopiero od danego tygodnia). Pakiety spoza zaufanej listy (pytest, requests, selenium, flask) wymagają locka z sumami SHA-256 w paczce. Brak pola = kurs działa w samym Mentorze (bez zakładki środowiska). |
 | `quizy[...][i].lekcja` | id lekcji do powtórki po błędnej odpowiedzi — pokazywane na ekranie wyniku quizu |
 | `poziom`, `system`, `wymagania_wstepne`, `umiejetnosci_koncowe` | metadane kursu dla START_TUTAJ.md i przewodnika (STANDARD §2) |
 | `stan_prawny` / `firma` | dowolne metadane programu (np. „listopad 2026”, opis firmy ćwiczeniowej) |
@@ -120,3 +142,25 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 
 Walidacja: program z brakującym polem obowiązkowym, powtórzonym `id` zadania, lekcją bez `id`/`nazwa`/`wyjasnienie`
 lub pytaniem z błędnym `odp` nie zostanie wczytany — Mentor wypisze, co poprawić.
+
+## Paczka kursu ZIP (`mentor-manifest.json`, schemat `mentor-course/1`)
+
+Kurs rozprowadzasz jako ZIP: plik programu (`kurs_mentor.json` / `kurs.json`), materiały (`lekcje/`, `przyklady/`, `cwiczenia/`, `rozwiazania/`, `pomoc/`…)
+i **manifest** w korzeniu. Starsze paczki bez manifestu (v1.1: JSON w korzeniu + `requirements.txt` + skrypty `.bat`/`.ps1`) też się importują —
+wymagania są brane z pola `srodowisko`, z `requirements.txt`/`requirements.lock` albo rozpoznawane po treści; **skryptów Mentor nigdy nie uruchamia**.
+
+```json
+{"schema": "mentor-course/1",
+ "course_id": "python-junior-qa", "version": "2.1", "entrypoint": "kurs_mentor.json",
+ "requirements": {"python": ">=3.11,<3.14",
+                  "python_packages_lock": "requirements.lock",
+                  "required_tools": [], "optional_tools": [{"name": "git", "from_week": 0}, {"name": "claude", "from_week": 0}],
+                  "browser": "edge", "browser_from_week": 8},
+ "checks": [{"kind": "python_import", "module": "pytest"}, {"kind": "pytest_sample"}, {"kind": "local_api"}, {"kind": "selenium_browser", "optional": true}]}
+```
+
+- `course_id` i `version` muszą zgadzać się z `id`/`wersja` w pliku programu (sprzeczność = odrzucenie paczki).
+- `requirements.lock` — format pip z hashami: `nazwa==wersja [; marker] \` + linie `--hash=sha256:…` (tylko taka składnia jest akceptowana;
+  bez `-e`, `--index-url`, nieprzypiętych wersji). Bez locka Mentor użyje własnego (`programy/zaleznosci/requirements.lock`) dla zaufanych pakietów.
+- Zabronione w archiwum: ścieżki z `..`, bezwzględne, dowiązania symboliczne; limity: 20 000 plików, 2 GB po rozpakowaniu, 512 MB na plik.
+- Pomocnik: `paczki.zbuduj_paczke(katalog_kursu, "kurs.zip", manifest=...)`.

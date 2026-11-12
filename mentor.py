@@ -27,12 +27,15 @@ import tkinter.font as tkfont
 
 from asystent import EmulatorOffline, KlientAPI
 from motywy import GRUPY, MOTYW_DOMYSLNY, MOTYWY, motyw
+import cwiczenia
+import paczki
 import warsztat
+import widok_srodowisko
 from program import (P, KATALOG_PROGRAMOW, domyslna_sciezka, importuj as importuj_program, lista_programow,
                      wczytaj as wczytaj_program, zapisz_szablon, katalog_materialow, skopiuj_materialy)
 
 KATALOG = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent
-PLIK_DANYCH = KATALOG / "mentor_dane.json"
+from program import PLIK_DANYCH, KATALOG_DANYCH, KATALOG_KURSOW, MIGRACJA, katalog_kursu, meta_kursu  # noqa: E402
 WINDOWS = sys.platform.startswith("win")
 
 # ---------------------------------------------------------------------------
@@ -138,9 +141,10 @@ class Stan:
         "xp": 0, "odznaki": [], "skala_sesji": 1.0,
         "przewodnik": {},   # id programu -> True, gdy uczeń zamknął „Jak zacząć”
         "warsztat": {},     # dane Warsztatu (symulatory, kartoteka) — per program
+        "sprawdzenia": {},  # id zadania -> wynik „Sprawdź wynik” (ćwiczenia w Mentorze) — per program
     }
     # postępy liczone per program: klucze zależne od programu trzymamy w "programy": {id: {...}}
-    KLUCZE_PROGRAMU = ("zadania", "checklista", "quizy", "lekcje", "powtorki", "odznaki", "warsztat")
+    KLUCZE_PROGRAMU = ("zadania", "checklista", "quizy", "lekcje", "powtorki", "odznaki", "warsztat", "projekt", "sprawdzenia")
 
     def __init__(self):
         self.d = json.loads(json.dumps(self.DOMYSLNE))
@@ -484,7 +488,7 @@ def plakietka(parent, tekst, kolor_tla, kolor_tekstu):
 class Mentor(tk.Tk):
     WIDOKI = [
         ("panel", "🏠", "Panel"), ("plan", "📅", "Plan nauki"), ("sesja", "⏱", "Sesja nauki"),
-        ("lekcje", "📖", "Lekcje"), ("warsztat", "🧰", "Warsztat"), ("projekt", "📂", "Mój projekt"), ("prompty", "💬", "Prompty"), ("asystent", "🤖", "Asystent"), ("quiz", "🧠", "Quiz"),
+        ("lekcje", "📖", "Lekcje"), ("warsztat", "🧰", "Warsztat"), ("projekt", "📂", "Mój projekt"), ("srodowisko", "🧪", "Środowisko"), ("prompty", "💬", "Prompty"), ("asystent", "🤖", "Asystent"), ("quiz", "🧠", "Quiz"),
         ("dziennik", "📓", "Dziennik"), ("checklista", "✅", "Checklista"), ("sciaga", "📎", "Ściąga"),
         ("ustawienia", "⚙", "Ustawienia"),
     ]
@@ -821,6 +825,20 @@ class Mentor(tk.Tk):
             przycisk(r, "📂 Skopiuj materiały kursu do katalogu projektu", self._skopiuj_materialy, "drugi").pack(side="left")
             etykieta(r, "  START_TUTAJ.md, ćwiczenia, rozwiązania, pomoc — nic nie nadpisuje", 9, kolor=K["szary"], wrap=W - 380).pack(side="left")
 
+        # krok 1a — środowisko kursu (gdy kurs czegoś wymaga)
+        sr_ = widok_srodowisko.srodowisko_biezace()
+        if sr_.wymaga_srodowiska():
+            z, k = karta(w, tytul="Krok 1a · Środowisko kursu — Python i biblioteki przygotowuje Mentor")
+            z.pack(fill="x", padx=28, pady=(12, 0))
+            et, (tlo, fg) = widok_srodowisko.status_skrot()
+            r = tk.Frame(k, bg=K["karta"])
+            r.pack(fill="x")
+            plakietka(r, et.upper()[:40], K[tlo], K[fg]).pack(side="left")
+            etykieta(k, "Ten kurs uruchamia kod na Twoim komputerze. Zakładka Środowisko sprawdza, czego brakuje, pokazuje źródła i rozmiary pobrań, "
+                     "a po Twojej zgodzie instaluje wszystko do osobnego środowiska kursu — bez terminala, bez szukania instalatorów, bez uprawnień administratora. "
+                     "Teorię i ćwiczenia offline możesz robić od razu.", 10, wrap=W).pack(fill="x", pady=(6, 0))
+            przycisk(k, "🧪 Otwórz Środowisko", lambda: self.pokaz("srodowisko"), "drugi").pack(anchor="w", pady=(8, 0))
+
         # krok 1b — diagnoza (opcjonalna)
         if P.diagnoza:
             z, k = karta(w, tytul=f"Krok 1b · Diagnoza na start — {len(P.diagnoza)} pytań, ok. 5 minut (nie blokuje nauki)")
@@ -933,6 +951,28 @@ class Mentor(tk.Tk):
         tk.Label(gora, text=f"{powitanie}, {imie}!" if imie else f"{powitanie}!", font=czc(22, "bold"), bg=K["tlo"], fg=K["tekst"], anchor="w").pack(side="left")
         przycisk(gora, "❓ Jak zacząć", lambda: self.pokaz("start"), "drugi").pack(side="right")
         tk.Label(w, text=data_pl(d), font=czc(11), bg=K["tlo"], fg=K["szary"], anchor="w").pack(fill="x", padx=28)
+        if widok_srodowisko.srodowisko_biezace().wymaga_srodowiska():
+            et, (tlo, fg) = widok_srodowisko.status_skrot()
+            r = tk.Frame(w, bg=K["tlo"])
+            r.pack(fill="x", padx=28, pady=(6, 0))
+            pl = plakietka(r, "🧪 " + et, K[tlo], K[fg])
+            pl.pack(side="left")
+            pl.bind("<Button-1>", lambda e: self.pokaz("srodowisko"))
+            pl.configure(cursor="hand2")
+
+        # komunikat o migracji danych (raz)
+        if MIGRACJA["wykonana"] and not self.__dict__.get("_migracja_pokazana"):
+            self._migracja_pokazana = True
+            z, k = karta(w, bg=K["zolty"])
+            z.pack(fill="x", padx=28, pady=(14, 0))
+            etykieta(k, "Dane Mentora przeniesione do katalogu użytkownika", 11, bold=True, bg=K["zolty"]).pack(fill="x")
+            etykieta(k, "\n".join(MIGRACJA["kroki"] + [f"Uwaga: {b}" for b in MIGRACJA["bledy"]]) + f"\nNowy katalog danych: {KATALOG_DANYCH}. Nic nie zostało usunięte.",
+                     9, bg=K["zolty"], wrap=860).pack(fill="x", pady=(2, 0))
+        elif MIGRACJA["bledy"] and not self.__dict__.get("_migracja_pokazana"):
+            self._migracja_pokazana = True
+            z, k = karta(w, bg=K["czerw_tlo"])
+            z.pack(fill="x", padx=28, pady=(14, 0))
+            etykieta(k, "Problem z katalogiem danych: " + " · ".join(MIGRACJA["bledy"]), 9, bg=K["czerw_tlo"], kolor=K["czerw"], wrap=860).pack(fill="x")
 
         # pierwsze kroki — dopóki nie ma ani jednego zadania i sesji w tym programie
         if s["zadania_ukonczone"] == 0 and s["dni_nauki"] == 0:
@@ -946,6 +986,9 @@ class Mentor(tk.Tk):
                      ("4", "Uruchom sesję nauki — 4 fazy, timer prowadzi", "▶ Sesja nauki", lambda: self.pokaz("sesja"))]
             if P.diagnoza and not (self.stan.d.get("diagnoza") or {}).get("wynik") is not None:
                 kroki.insert(1, ("1b", f"Opcjonalnie: diagnoza na start ({len(P.diagnoza)} pytań, 5 min) — pokaże, co już znasz", "🩺 Diagnoza", self.pokaz_diagnoze))
+            sr_ = widok_srodowisko.srodowisko_biezace()
+            if sr_.wymaga_srodowiska() and not sr_.gotowe():
+                kroki.insert(2, ("2b", "Przygotuj środowisko kursu — Mentor sprawdzi Python i biblioteki i zainstaluje brakujące (za Twoją zgodą)", "🧪 Środowisko", lambda: self.pokaz("srodowisko")))
             for nr, opis, tekst, cmd in kroki:
                 r = tk.Frame(k, bg=K["nieb_tlo"])
                 r.pack(fill="x", pady=2)
@@ -1155,6 +1198,7 @@ class Mentor(tk.Tk):
             if zad.get("opis"):
                 etykieta(k, zad["opis"], 10, bg=bg, wrap=WRAP - 30).pack(fill="x", padx=(26, 0), pady=(2, 0))
             self._kroki_zadania(k, zad, bg, WRAP - 30)
+            cwiczenia.zbuduj_pasek(self, k, zad, bg, WRAP - 30)
 
         z, k = karta(prawa.wnetrze)
         z.pack(fill="x", pady=(8, 0))
@@ -1850,15 +1894,29 @@ class Mentor(tk.Tk):
             return
 
         p = Path(sciezka)
-        # narzędzia
+        # narzędzia — z zapisanej diagnozy środowiska (realne uruchomienia, nie samo PATH); bez blokowania GUI
         z, k = karta(w, tytul="Narzędzia")
         z.pack(fill="x", padx=28, pady=(12, 0))
-        for nazwa, cmd in (("Python", "python"), ("Git", "git"), ("Claude Code", "claude")):
-            ok = shutil.which(cmd) is not None
+        sr_ = widok_srodowisko.srodowisko_biezace()
+        if sr_.wymaga_srodowiska():
+            diag = sr_.stan().get("diagnoza") or []
+            if not diag:
+                etykieta(k, "Jeszcze nie sprawdzono. Zakładka Środowisko uruchamia Python, biblioteki i narzędzia kursu i pokazuje, czego brakuje.", 10, kolor=K["szary"], wrap=800).pack(fill="x")
+            for poz in diag:
+                if str(poz.get("klucz", "")).startswith("test:"):
+                    continue
+                tlo, fg = widok_srodowisko.KOLORY.get(poz.get("status"), ("jasny", "szary"))
+                r = tk.Frame(k, bg=K["karta"])
+                r.pack(fill="x")
+                plakietka(r, str(poz.get("status", "?"))[:14], K[tlo], K[fg]).pack(side="left")
+                etykieta(r, f"  {poz.get('nazwa', '')} — {poz.get('szczegoly', '')}"[:160], 10).pack(side="left")
+            et, (tlo, fg) = widok_srodowisko.status_skrot()
             r = tk.Frame(k, bg=K["karta"])
-            r.pack(fill="x")
-            plakietka(r, "OK" if ok else "BRAK", K["ziel_tlo"] if ok else K["czerw_tlo"], K["ziel"] if ok else K["czerw"]).pack(side="left")
-            etykieta(r, f"  {nazwa}" + ("" if ok else f" — nie znaleziono komendy „{cmd}” w PATH (tydzień 0, zadanie 1)"), 10).pack(side="left")
+            r.pack(fill="x", pady=(6, 0))
+            plakietka(r, et.upper()[:40], K[tlo], K[fg]).pack(side="left")
+            przycisk(r, "🧪 Środowisko kursu", lambda: self.pokaz("srodowisko"), "drugi").pack(side="left", padx=10)
+        else:
+            etykieta(k, "Ten kurs działa w samym Mentorze — nie wymaga Pythona ani dodatkowych programów.", 10, kolor=K["szary"], wrap=800).pack(fill="x")
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(4, 0))
         ma_claude_md = (p / "CLAUDE.md").exists()
@@ -2027,6 +2085,50 @@ class Mentor(tk.Tk):
                     raise OSError("brak terminala")
         except OSError as e:
             messagebox.showwarning("Claude Code", f"Nie udało się otworzyć terminala ({e}).\nOtwórz go sam, wejdź do katalogu projektu i wpisz: claude", parent=self)
+
+    # ================================================================ środowisko kursu
+    def widok_srodowisko(self):
+        w = self._strona("Środowisko kursu", "Mentor sprawdza, czy Python, biblioteki, narzędzia i przeglądarka NAPRAWDĘ działają dla tego kursu "
+                         "(uruchamia je, nie patrzy tylko na PATH), i instaluje brakujące składniki za Twoją zgodą — w osobnym środowisku kursu, bez terminala i bez uprawnień administratora.")
+        widok_srodowisko.zbuduj(self, w)
+
+    def _importuj_zip(self):
+        """Ustawienia → Importuj kurs ZIP: podgląd → zgoda → bezpieczne rozpakowanie → katalog PRACA → przełączenie → Środowisko."""
+        sc = filedialog.askopenfilename(title="Wybierz paczkę kursu (ZIP)", filetypes=[("Paczka kursu Mentora", "*.zip")], parent=self)
+        if not sc:
+            return
+        try:
+            pg = paczki.przejrzyj_zip(sc)
+        except paczki.BladPaczki as e:
+            messagebox.showerror("Import kursu", f"Paczka odrzucona:\n\n{e}", parent=self)
+            return
+        opis = paczki.opis_podgladu(pg)
+        if not messagebox.askyesno("Import kursu — podgląd", opis + "\n\nZaimportować? (Skrypty z paczki nie będą uruchamiane; instalacja środowiska to osobny krok za Twoją zgodą.)", parent=self):
+            return
+        nadpisz = bool(pg["istniejacy"])
+        if nadpisz and not messagebox.askyesno("Import kursu — aktualizacja", f"Kurs „{pg['id']}” jest już zaimportowany (wersja {pg['istniejacy'].get('wersja')}).\n\nZastąpić go wersją {pg['wersja']}? Poprzednia wersja trafi do kopii (kursy/_kopie), a postępy i katalog PRACA zostaną.", parent=self):
+            return
+        try:
+            w = paczki.importuj_zip(sc, nadpisz=nadpisz)
+        except paczki.BladPaczki as e:
+            messagebox.showerror("Import kursu", f"Import nie powiódł się:\n\n{e}", parent=self)
+            return
+        except OSError as e:
+            messagebox.showerror("Import kursu", f"Błąd zapisu (miejsce na dysku? uprawnienia?):\n{e}", parent=self)
+            return
+        if self.ustaw_program(w["kurs_json"]):
+            if w["praca"] and not self.stan.d.get("projekt"):
+                self.stan.d["projekt"] = str(w["praca"])
+                self.stan.zapisz()
+                self._pliki_cache.clear()
+            self._srod = {}
+            sr = widok_srodowisko.srodowisko_biezace()
+            tekst = f"Kurs „{P.nazwa}” zaimportowany" + (f" (poprzednia wersja w kopii: {w['kopia'].name})" if w["kopia"] else "") + f".\nKatalog roboczy: {w['praca'] or '— wskaż w Mój projekt'}"
+            if sr.wymaga_srodowiska():
+                messagebox.showinfo("Import kursu", tekst + "\n\nTen kurs potrzebuje środowiska (Python, biblioteki). Otwieram zakładkę Środowisko — sprawdź wymagania i zainstaluj brakujące, kiedy będziesz gotowy.", parent=self)
+                self.pokaz("srodowisko")
+            else:
+                messagebox.showinfo("Import kursu", tekst + "\n\nKurs nie wymaga dodatkowych programów — zacznij od przewodnika „Jak zacząć”.", parent=self)
 
     # ================================================================ P.prompty
     def widok_prompty(self):
@@ -2702,21 +2804,25 @@ class Mentor(tk.Tk):
         etykieta(k, f"Aktywny: {P.nazwa}" + (f" — {P.podtytul}" if P.podtytul else ""), 11, bold=True, wrap=820).pack(fill="x")
         if P.opis:
             etykieta(k, P.opis, 9, kolor=K["szary"], wrap=820).pack(fill="x", pady=(2, 0))
-        etykieta(k, f"{P.liczba_tygodni()} tygodni · {len(P.wszystkie_zadania())} zadań · {len(P.lekcje)} lekcji · "
-                 f"plik: {Path(P.sciezka).name if P.sciezka else '—'}", 9, kolor=K["szary"], wrap=820).pack(fill="x")
+        meta_akt = meta_kursu(P.id)
+        zrodlo_akt = (f"paczka ZIP {Path(str((meta_akt.get('zrodlo') or {}).get('plik', ''))).name} (wersja {meta_akt.get('wersja', '?')}, import {str(meta_akt.get('data_importu', ''))[:10]})"
+                      if meta_akt else f"plik: {Path(P.sciezka).name if P.sciezka else '—'}")
+        etykieta(k, f"{P.liczba_tygodni()} tygodni · {len(P.wszystkie_zadania())} zadań · {len(P.lekcje)} lekcji · {zrodlo_akt}", 9, kolor=K["szary"], wrap=820).pack(fill="x")
         etykieta(k, "Postępy każdego programu są zapisywane osobno — możesz przełączać bez straty.", 9, kolor=K["szary"], wrap=820).pack(fill="x", pady=(2, 8))
         for sc, nazwa, pod, n_tyg in lista_programow():
             r = tk.Frame(k, bg=K["karta"])
             r.pack(fill="x", pady=2)
             akt = P.sciezka and Path(P.sciezka).resolve() == sc.resolve()
             plakietka(r, "AKTYWNY" if akt else f"{n_tyg} tyg.", K["ziel_tlo"] if akt else K["jasny"], K["ziel"] if akt else K["szary"]).pack(side="left")
-            etykieta(r, f"  {nazwa}" + (f" — {pod}" if pod else ""), 10, wrap=560).pack(side="left", fill="x", expand=True)
+            z_paczki = sc.parent.parent == KATALOG_KURSOW and sc.name == "kurs.json"
+            etykieta(r, f"  {nazwa}" + (f" — {pod}" if pod else "") + ("  [paczka ZIP]" if z_paczki else ""), 10, wrap=560).pack(side="left", fill="x", expand=True)
             if not akt and n_tyg:
                 przycisk(r, "Przełącz", lambda s_=sc: self.ustaw_program(s_), "drugi").pack(side="right")
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(8, 0))
-        przycisk(r, "Wgraj program z pliku…", self._wgraj_program, "drugi").pack(side="left")
-        przycisk(r, "Otwórz folder programów", lambda: self._otworz_folder(str(KATALOG_PROGRAMOW)), "drugi").pack(side="left", padx=8)
+        przycisk(r, "📦 Importuj kurs ZIP…", self._importuj_zip, "glowny").pack(side="left")
+        przycisk(r, "Importuj JSON…", self._wgraj_program, "drugi").pack(side="left", padx=8)
+        przycisk(r, "Otwórz folder danych Mentora", lambda: self._otworz_folder(str(KATALOG_DANYCH)), "drugi").pack(side="left")
         przycisk(r, "Zapisz pusty szablon programu", self._szablon_programu, "drugi").pack(side="left")
         etykieta(k, "Program to plik JSON: nazwa, etapy, tygodnie z zadaniami (każde z krokami „jak to zrobić”), lekcje z testami, quizy, checklista, prompty. "
                  "Opis formatu: programy/FORMAT.md. Źródła przykładowego programu (w Pythonie, z generatorem): programy/zrodla/.", 9, kolor=K["szary"], wrap=820).pack(fill="x", pady=(6, 0))

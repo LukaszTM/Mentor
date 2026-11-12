@@ -32,6 +32,14 @@ jobs:
         run: python -c "import program; [print(f, program.wczytaj(f) or 'OK') for f in ('programy/python-junior-qa.json', 'programy/kadry-i-place.json')]"
       - name: Test paczki materiałów (STANDARD §10 — import, pliki, sumy kontrolne)
         run: python programy/materialy/kadry-i-place/testy/sprawdz_kurs.py
+      - name: Testy pytest (ZIP, środowiska, instalacja .venv z locka, testy końcowe z Edge, ćwiczenia, GUI)
+        shell: pwsh
+        env:
+          MENTOR_DANE: ${{ runner.temp }}\mentor-dane
+          MENTOR_PRACA: ${{ runner.temp }}\mentor-praca
+        run: |
+          pip install pytest==9.2.0
+          python -m pytest testy -q -p no:cacheprovider --durations=10
       - name: PyInstaller
         run: pyinstaller --clean --noconfirm mentor.spec
       - name: Test uruchomienia exe (smoke)
@@ -80,7 +88,11 @@ jobs:
             `Kadry-i-place-kurs.zip` — sam kurs (kurs_mentor.json + materiały) do wgrania w innym Mentorze lub do czytania offline.
 
             Windows SmartScreen może ostrzec przy pierwszym uruchomieniu (plik bez podpisu): „Więcej informacji” → „Uruchom mimo to”.
-            Dane zapisują się w `mentor_dane.json` obok exe.
+
+            **Nowe (2.7):** zakładka **Środowisko** — Mentor sam sprawdza i instaluje Pythona, biblioteki i środowisko kursu (bez terminala, bez
+            uprawnień administratora, za Twoją zgodą), **Importuj kurs ZIP…** w Ustawieniach (podgląd, bezpieczne rozpakowanie, stare paczki v1.1 bez
+            uruchamiania skryptów), ćwiczenia uruchamiane i sprawdzane **w Mentorze**. Dane (postępy, kursy, środowiska) są w `%LOCALAPPDATA%\Mentor\`;
+            stary `mentor_dane.json` obok exe przenosi się sam (z kopią). `portable.txt` obok exe = tryb przenośny.
           files: |
             dist/Mentor.exe
             Mentor-windows.zip

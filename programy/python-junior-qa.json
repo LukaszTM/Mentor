@@ -5,9 +5,58 @@
  "podtytul": "12 tygodni · Python, Git, pytest, Selenium, projekt portfolio",
  "opis": "Po 12 tygodniach piszesz samodzielnie proste programy w Pythonie, czytasz cudzy kod, pracujesz z Gitem i masz na GitHubie projekt z testami automatycznymi (pytest + Selenium), który możesz pokazać na rozmowie o pracę Junior QA. Uczysz się z asystentem AI (Claude Code, API albo tryb offline) na zasadzie 70/30: 70% kodu piszesz sam.",
  "autor": "Łukasz + Claude",
- "wersja": "2.0",
+ "wersja": "2.1",
  "jezyk": "pl",
  "katalog_projektu": "nauka-python",
+ "srodowisko": {
+  "python": ">=3.11,<3.14",
+  "pakiety": [
+   "pytest",
+   "requests",
+   "selenium",
+   "flask"
+  ],
+  "lock": "programy/zaleznosci/requirements.lock",
+  "narzedzia_wymagane": [],
+  "narzedzia_opcjonalne": {
+   "git": 0,
+   "claude": 0
+  },
+  "przegladarka": "edge",
+  "przegladarka_od_tygodnia": 8,
+  "sprawdzenia": [
+   {
+    "kind": "python_import",
+    "module": "pytest"
+   },
+   {
+    "kind": "python_import",
+    "module": "requests"
+   },
+   {
+    "kind": "python_import",
+    "module": "selenium"
+   },
+   {
+    "kind": "python_import",
+    "module": "flask"
+   },
+   {
+    "kind": "pytest_sample"
+   },
+   {
+    "kind": "local_api"
+   },
+   {
+    "kind": "selenium_browser",
+    "optional": true
+   }
+  ],
+  "uwagi": [
+   "Git i Claude Code są opcjonalne: Mentor ich nie instaluje, pokazuje tylko, czy działają (zadanie 1 tygodnia 0 prowadzi przez instalację).",
+   "Przeglądarka (Edge) potrzebna od tygodnia 8 (Selenium) — Windows 10/11 ma ją wbudowaną."
+  ]
+ },
  "stanowisko": "Junior QA",
  "czas_dziennie_min": 90,
  "dni_w_tygodniu": [
@@ -153,7 +202,20 @@
       "„SyntaxError” z strzałką → sprawdź cudzysłowy i nawiasy w tej linii; muszą być parami.",
       "„python: can't open file 'hello.py'” → terminal stoi w innym folderze. Wpisz  cd  i ścieżkę do nauka-python, albo w PyCharm otwórz terminal ponownie (otwiera się w folderze projektu).",
       "Polskie znaki wyświetlają się krzywo w terminalu → wpisz  chcp 65001  i uruchom program ponownie."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "hello.py",
+      "szablon": "# hello.py — pierwszy program\n# 1) wypisz powitanie ze swoim imieniem\n# 2) na górze: import datetime, na dole wypisz dzisiejszą datę\n\n",
+      "przyklad": "import datetime\n\nprint(\"Dzień dobry z Mentora\")\nprint(\"Dziś jest dzień tygodnia numer\", datetime.date.today().weekday() + 1)\n",
+      "podpowiedz": "print(\"tekst w cudzysłowie\") wypisuje tekst. datetime.date.today() zwraca dzisiejszą datę — ale najpierw import datetime na górze pliku. Jeśli widzisz SyntaxError: sprawdź cudzysłowy i nawiasy.",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "tekst": [
+        "{rok}"
+       ],
+       "min_linii": 2
+      }
+     }
     },
     {
      "id": "t0z4",
@@ -240,7 +302,22 @@
      "problemy": [
       "NameError: name 'True' is not defined → True i False z wielkiej litery.",
       "Polskie znaki w nazwach zmiennych (waga_kg, nie waga_kilogramów) — unikaj."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "zmienne.py",
+      "szablon": "# zmienne.py — 5 zmiennych różnych typów opisujących jedno zwierzę\n# imie (str), waga_kg (float), wiek_lat (int), rasa (str), czy_zdrowe (bool)\n# dla każdej: print(zmienna, type(zmienna))\n\n",
+      "przyklad": "tytul = \"Mentor\"          # str\nwersja = 2.7             # float\nlekcji = 60              # int\ndarmowy = True           # bool\n\nprint(tytul, type(tytul))\nprint(wersja, type(wersja))\nprint(lekcji, type(lekcji))\nprint(darmowy, type(darmowy))\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "tekst": [
+        "<class 'str'>",
+        "<class 'float'>",
+        "<class 'int'>",
+        "<class 'bool'>"
+       ],
+       "min_linii": 5
+      }
+     }
     },
     {
      "id": "t1z2",
@@ -262,7 +339,21 @@
      "problemy": [
       "Wynik „53” zamiast 8 dla 5+3 → nie zamieniłeś input() na liczbę.",
       "IndentationError → wszystkie linie pod if wcięte dokładnie 4 spacjami."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "kalkulator.py",
+      "szablon": "# kalkulator.py — trzy input(): pierwsza liczba, działanie (+ - * /), druga liczba\n# if/elif/elif/elif/else; przed dzieleniem sprawdź b == 0\n\n",
+      "przyklad": "temperatura = float(input(\"Temperatura w °C: \"))\njednostka = input(\"Na co przeliczyć (F/K)? \")\n\nif jednostka == \"F\":\n    print(\"Wynik:\", temperatura * 9 / 5 + 32)\nelif jednostka == \"K\":\n    print(\"Wynik:\", temperatura + 273.15)\nelse:\n    print(\"Nieznana jednostka\")\n",
+      "stdin": "6\n*\n3\n",
+      "podpowiedz": "input() zawsze zwraca napis — liczby zamień przez float(). Porównanie działania to podwójny znak: if dzialanie == \"+\":. Test „Sprawdź wynik” podaje: 6, potem *, potem 3 — w tej kolejności (liczba, działanie, liczba) — i szuka w wyjściu 18.",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "6\n*\n3\n",
+       "tekst": [
+        "18"
+       ]
+      }
+     }
     },
     {
      "id": "t1z3",
@@ -280,7 +371,23 @@
       "Commit: „dzień 8: wiek i warunki”."
      ],
      "sprawdz": "Rok 2000 → poprawny wiek i „pełnoletni”; rok 2015 → „niepełnoletni”; rok 2099 → komunikat o przyszłości.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "wiek.py",
+      "szablon": "# wiek.py — rok urodzenia → wiek i pełnoletniość\n# int(input(...)); import datetime; rok = datetime.date.today().year\n\n",
+      "przyklad": "import datetime\n\nrok_zakupu = int(input(\"Rok zakupu ciągnika: \"))\nlata = datetime.date.today().year - rok_zakupu\nif lata < 0:\n    print(\"to jeszcze nie ten rok\")\nelif lata >= 10:\n    print(f\"Ciągnik ma {lata} lat — czas na przegląd\")\nelse:\n    print(f\"Ciągnik ma {lata} lat\")\n",
+      "stdin": "2000\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "2000\n",
+       "tekst": [
+        "pełnoletni"
+       ],
+       "nie_zawiera": [
+        "niepełnoletni"
+       ]
+      }
+     }
     },
     {
      "id": "t1z4",
@@ -301,7 +408,21 @@
      "sprawdz": "Dla 500 l i 4.2% → ok. 515 kg, 2.10 zł/l, 1050.00 zł. Dla 3.5% → 1.70 (bo > 3.5 jest fałszywe).",
      "problemy": [
       "Progi w złej kolejności (najpierw > 3.5) → wszystko powyżej 3.5 dostaje 1.90. Pierwszy prawdziwy warunek wygrywa."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "litry.py",
+      "szablon": "# litry.py — litry mleka i % tłuszczu → kilogramy, cena za litr, wartość dostawy\n# kg = litry * 1.03; progi: > 4.0 → 2.10, > 3.5 → 1.90, inaczej 1.70\n\n",
+      "stdin": "500\n4.2\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "500\n4.2\n",
+       "tekst": [
+        "515",
+        "2.1",
+        "1050"
+       ]
+      }
+     }
     },
     {
      "id": "t1z5",
@@ -321,7 +442,20 @@
       "Recenzja: „przejrzyj @bmi.py jak cierpliwy mentor”. Wdróż uwagi. Commit: „dzień 10: kalkulator BMI”. Push. Odhacz. Sobota: quiz z tygodnia 1."
      ],
      "sprawdz": "1.80 / 75 → 23.1, norma. 1.80 / 50 → niedowaga. 0 / 75 → komunikat. 180 / 75 → ostrzeżenie o jednostkach.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "bmi.py",
+      "szablon": "# bmi.py — wzrost (m) i waga (kg) → BMI i kategoria\n# walidacja: wzrost > 0 i waga > 0, inaczej komunikat i brak obliczeń\n\n",
+      "stdin": "1.80\n75\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "1.80\n75\n",
+       "tekst": [
+        "23.1",
+        "norma"
+       ]
+      }
+     }
     }
    ],
    "rola_asystenta": "Tylko podpowiada. Minimum 15 minut własnej walki, zanim zapytasz.",
@@ -353,7 +487,19 @@
       "Wersja tabelki (opcjonalnie): print(f\"{a*b:4}\", end=\"\") w wewnętrznej, print() w zewnętrznej — zobaczysz siatkę 10×10. Zapytaj Asystenta, co robi end=\"\" i :4."
      ],
      "sprawdz": "Wypisanych 100 działań (lub siatka 10×10), ostatnie to 10 x 10 = 100.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "tabliczka.py",
+      "szablon": "# tabliczka.py — tabliczka mnożenia 1–10 pętlą for (potem pętla w pętli)\n\n",
+      "przyklad": "for dzien in range(1, 8):\n    print(f\"Dzień {dzien}: {dzien * 20} minut nauki\")\nprint()\nfor rzad in range(1, 4):\n    for kol in range(1, 4):\n        print(f\"{rzad * kol:3}\", end=\"\")\n    print()\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "tekst": [
+        "100"
+       ],
+       "min_linii": 10
+      }
+     }
     },
     {
      "id": "t2z2",
@@ -373,7 +519,13 @@
      "sprawdz": "Menu działa w pętli; usunięcie nieistniejącego produktu daje komunikat, nie błąd; wypisanie numeruje od 1.",
      "problemy": [
       "ValueError: list.remove(x): x not in list → zapomniałeś sprawdzić „in” przed remove."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "lista_zakupow.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t2z3",
@@ -391,7 +543,21 @@
       "Zapisz w notatkach: czym jest akumulator (zmienna, która „zbiera” wynik w pętli)."
      ],
      "sprawdz": "Dane 5, 10, 15, 0 → suma 30, średnia 10, max 15. Od razu 0 → komunikat, nie ZeroDivisionError.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "suma.py",
+      "szablon": "# suma.py — pętla while: liczby do wpisania 0 → suma, średnia, maksimum\n# len(liczby) == 0 → komunikat, nie ZeroDivisionError\n\n",
+      "stdin": "5\n10\n15\n0\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "5\n10\n15\n0\n",
+       "tekst": [
+        "30",
+        "10",
+        "15"
+       ]
+      }
+     }
     },
     {
      "id": "t2z4",
@@ -410,7 +576,22 @@
       "Pułapka do sprawdzenia: wpisz zdanie ze spacjami na początku — czy strip() pomógł? Usuń strip() i zobacz różnicę w len()."
      ],
      "sprawdz": "„Krowa je trawę” → KROWA JE TRAWĘ, ęwart ej aworK, 15 znaków, 6 samogłosek, 3 słowa, najdłuższe „trawę”.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "napisy.py",
+      "szablon": "# napisy.py — tekst = input(...).strip(); upper(), [::-1], len(), samogłoski, słowa, najdłuższe słowo\n\n",
+      "stdin": "Krowa je trawę\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "Krowa je trawę\n",
+       "tekst": [
+        "KROWA JE TRAWĘ",
+        "15",
+        "6",
+        "3"
+       ]
+      }
+     }
     },
     {
      "id": "t2z5",
@@ -431,7 +612,13 @@
       "Recenzja Asystenta, poprawki, commit „dzień 15: gra zgadnij liczbę”, push, odhacz. Sobota: quiz z tygodnia 2 i README do gry (co robi, jak uruchomić, przykładowa rozgrywka)."
      ],
      "sprawdz": "Da się wygrać i zagrać ponownie; ranking pokazuje najmniejsze liczby prób jako pierwsze; 0 lub 150 nie zwiększa licznika prób.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "zgadnij.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     }
    ],
    "rola_asystenta": "Tylko podpowiada. Każdy fragment kodu od Claude przepisujesz ręcznie.",
@@ -466,7 +653,20 @@
      "problemy": [
       "Funkcja wypisuje None → masz print zamiast return w środku.",
       "NameError przy wywołaniu → wywołanie jest wyżej niż def; definicja musi być przed użyciem."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "funkcje.py",
+      "szablon": "# funkcje.py — 5 funkcji z docstringami, bez input()/print() w środku\n\n\ndef pole_prostokata(a, b):\n    \"\"\"Zwraca pole prostokąta o bokach a i b.\"\"\"\n    ...\n\n\n# czy_parzysta(n), maksimum(lista), odwroc(napis), silnia(n)\n\n\nif __name__ == \"__main__\":\n    print(pole_prostokata(3, 4))\n",
+      "przyklad": "def srednia(lista):\n    \"\"\"Zwraca średnią arytmetyczną listy liczb (0 dla pustej listy).\"\"\"\n    if not lista:\n        return 0\n    suma = 0\n    for x in lista:\n        suma += x\n    return suma / len(lista)\n\n\nif __name__ == \"__main__\":\n    print(srednia([2, 4, 6]))\n    help(srednia)\n",
+      "sprawdzenie": {
+       "rodzaj": "wyjscie_zawiera",
+       "tekst": [
+        "12",
+        "120",
+        "tok"
+       ]
+      }
+     }
     },
     {
      "id": "t3z2",
@@ -484,7 +684,14 @@
       "Test: usuń zwierzę, którego nie ma → komunikat, nie KeyError. Dodaj drugi raz to samo imię → co się dzieje ze starą wagą? Zapisz."
      ],
      "sprawdz": "Wypisanie posortowane rosnąco po wadze; brak KeyError przy nieistniejącym imieniu.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "slownik.py",
+      "sprawdzenie": {
+       "rodzaj": "uruchom_bez_bledu",
+       "stdin": "Krasula\nNiema\n"
+      }
+     }
     },
     {
      "id": "t3z3",
@@ -502,7 +709,15 @@
       "Eksperyment: zamień except ValueError na gołe except: i w try zrób literówkę w nazwie zmiennej. Zobacz, jak błąd znika — i dlaczego to źle. Przywróć ValueError."
      ],
      "sprawdz": "Litera zamiast liczby → komunikat i ponowne pytanie, program nie kończy się. Dzielenie przez 0 → komunikat.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "bledy.py",
+      "stdin": "abc\n5\n0\n",
+      "sprawdzenie": {
+       "rodzaj": "uruchom_bez_bledu",
+       "stdin": "abc\n5\n0\n7\n"
+      }
+     }
     },
     {
      "id": "t3z4",
@@ -520,7 +735,14 @@
       "Dodatkowo: policz, ile dni zostało do 1 stycznia przyszłego roku (datetime.date(dzis.year + 1, 1, 1) - dzis).days."
      ],
      "sprawdz": "Trzy różne imiona i data za tydzień w formacie DD.MM.RRRR.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "losowanie.py",
+      "sprawdzenie": {
+       "rodzaj": "uruchom_bez_bledu",
+       "min_linii": 2
+      }
+     }
     },
     {
      "id": "t3z5",
@@ -542,7 +764,13 @@
       "Recenzja → poprawki → commit „dzień 20: menedżer zadań” → push → odhacz. Sobota: quiz tygodnia 3, README, i CHECKLISTA etapu 1 — uczciwie."
      ],
      "sprawdz": "Dodanie, oznaczenie i usunięcie działają; zły numer i litera nie wywalają programu; każda operacja to osobna funkcja.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "menedzer.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     }
    ],
    "rola_asystenta": "Tylko podpowiada. Po tym tygodniu — checklista etapu 1.",
@@ -596,7 +824,14 @@
       "Otwórz stado.txt w PyCharm i zobacz, co jest w środku. Usuń \"\\n\" z write i zobacz jeszcze raz. Zapisz wniosek."
      ],
      "sprawdz": "stado.txt ma 5 linii; odczyt wypisuje je bez pustych linii między nimi (strip()).",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "zapis.py",
+      "sprawdzenie": {
+       "rodzaj": "uruchom_bez_bledu",
+       "min_linii": 5
+      }
+     }
     },
     {
      "id": "t4z3",
@@ -615,7 +850,13 @@
       "Zepsuj dane: w jednym wierszu wpisz „abc” jako wagę → ValueError. Obsłuż: pomiń wiersz z komunikatem, nie przerywaj."
      ],
      "sprawdz": "Średnia liczona poprawnie; wiersz ze złą wagą jest pomijany z ostrzeżeniem.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "csv_odczyt.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t4z4",
@@ -652,7 +893,13 @@
       "Zrób to na gałęzi feature/dziennik i scal przez pull request — jak w zadaniu 1. Recenzja, commit, push, odhacz. Sobota: quiz 4, README."
      ],
      "sprawdz": "Po dodaniu 2 zwierząt plik ma 2 nowe wiersze (sprawdź w PyCharm), statystyki się zgadzają, szukanie „hf” znajduje „HF”.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "dziennik_stada.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     }
    ],
    "rola_asystenta": "Może pisać fragmenty — ale zanim ich użyjesz, tłumaczysz mu je linijka po linijce.",
@@ -686,7 +933,13 @@
      "sprawdz": "print(krasula) wypisuje czytelny opis; po przybierz(8) waga w opisie jest o 8 większa.",
      "problemy": [
       "TypeError: opis() takes 0 positional arguments but 1 was given → brak self w def opis(self)."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "zwierze.py",
+      "sprawdzenie": {
+       "rodzaj": "uruchom_bez_bledu"
+      }
+     }
     },
     {
      "id": "t5z2",
@@ -707,7 +960,13 @@
      "sprawdz": "Trzy pliki, każdy z jedną rolą; zadania przeżywają restart programu (plik zadania.json).",
      "problemy": [
       "ModuleNotFoundError: No module named 'zadania' → uruchamiasz z innego folderu; cd menedzer."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "main.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t5z3",
@@ -747,7 +1006,14 @@
       "Obsłuż błędy: try/except requests.exceptions.RequestException (brak internetu — wyłącz Wi‑Fi i sprawdź) i if odp.status_code != 200. Zepsuj URL (literówka) → jaki kod?"
      ],
      "sprawdz": "Wypisana data i dwie temperatury; bez internetu — komunikat, nie traceback.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "api.py",
+      "sprawdzenie": {
+       "rodzaj": "uruchom_bez_bledu",
+       "limit_s": 40
+      }
+     }
     },
     {
      "id": "t5z5",
@@ -766,7 +1032,14 @@
       "requirements.txt aktualny (pip freeze), .gitignore ok, README z instrukcją (venv → pip install -r requirements.txt → python pogoda.py). Commit, push, odhacz. Sobota: quiz 5."
      ],
      "sprawdz": "Dwa uruchomienia → pogoda.csv ma 6 wierszy z datą pobrania; dla ujemnej tmin pojawia się ostrzeżenie.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "pogoda.py",
+      "sprawdzenie": {
+       "rodzaj": "uruchom_bez_bledu",
+       "limit_s": 40
+      }
+     }
     }
    ],
    "rola_asystenta": "Tryb planowania przed większym zadaniem. Czytasz plan, dopiero potem kodujesz.",
@@ -902,7 +1175,14 @@
      "problemy": [
       "pytest: command not found → venv nieaktywny.",
       "ModuleNotFoundError: funkcje → uruchamiasz pytest z innego folderu; cd do folderu z plikami."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "test_funkcje.py",
+      "szablon": "# test_funkcje.py — 5 testów funkcji z funkcje.py\nfrom funkcje import pole_prostokata\n\n\ndef test_pole_prostokata():\n    assert pole_prostokata(3, 4) == 12\n",
+      "sprawdzenie": {
+       "rodzaj": "pytest"
+      }
+     }
     },
     {
      "id": "t7z2",
@@ -919,7 +1199,13 @@
       "pytest -v → 6 linii test_kategoria[1.8-50-niedowaga] … Każdy przypadek osobno. Dodaj przypadek GRANICZNY: BMI dokładnie 25.0 (wzrost 2.0, waga 100) — norma czy nadwaga? Sprawdź, co mówi Twoja funkcja, i czy to zgodne z zamiarem."
      ],
      "sprawdz": "7 parametryzowanych przypadków, wszystkie zielone, w tym graniczny.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "test_bmi.py",
+      "sprawdzenie": {
+       "rodzaj": "pytest"
+      }
+     }
     },
     {
      "id": "t7z3",
@@ -939,7 +1225,13 @@
       "Przenieś fixture do conftest.py w tym samym folderze — testy nadal działają bez importu. Zapytaj Asystenta, jak pytest ją znajduje."
      ],
      "sprawdz": "pytest -v: 4 PASSED; fixture w conftest.py; każdy test zaczyna z 3 zadaniami.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "test_menedzer.py",
+      "sprawdzenie": {
+       "rodzaj": "pytest"
+      }
+     }
     },
     {
      "id": "t7z4",
@@ -974,7 +1266,13 @@
       "Recenzja testów: „przejrzyj @test_dziennik.py”. Commit „dzień 35: 15 testów z przypadkami brzegowymi”. Sobota: quiz 7."
      ],
      "sprawdz": "pytest -v wypisuje ≥ 15 PASSED; co najmniej 5 testów dotyczy przypadków brzegowych.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "test_dziennik.py",
+      "sprawdzenie": {
+       "rodzaj": "pytest"
+      }
+     }
     }
    ],
    "rola_asystenta": "Claude pisze kod, Ty piszesz testy — i odwrotnie. Celowe błędy do znalezienia.",
@@ -1010,7 +1308,13 @@
      "problemy": [
       "SessionNotCreatedException / wersja sterownika → zaktualizuj Chrome i selenium (pip install -U selenium).",
       "Okno zamyka się natychmiast → to normalne po quit(); dodaj time.sleep(3) przed quit, żeby zobaczyć (tylko do podglądu!)."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "saucedemo.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t8z2",
@@ -1029,7 +1333,13 @@
       "W notatkach tabela: element | id | CSS | XPath | który najstabilniejszy i dlaczego."
      ],
      "sprawdz": "Skrypt wypisuje 5 elementów × 3 sposoby bez NoSuchElementException; tabela w notatkach.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "lokatory.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t8z3",
@@ -1047,7 +1357,13 @@
       "Eksperyment: ustaw WebDriverWait(driver, 0.01) → TimeoutException. Przeczytaj, zapisz: co się stało i dlaczego sleep(5) nie jest odpowiedzią."
      ],
      "sprawdz": "Oba scenariusze (dobre i złe hasło) kończą się bez wyjątku, asserty przechodzą, zero time.sleep w pliku.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "formularz.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t8z4",
@@ -1065,7 +1381,13 @@
       "Zasada POM: w klasie strony NIE ma assertów; w testach NIE ma find_element. Sprawdź swój kod pod tym kątem."
      ],
      "sprawdz": "LoginPage ma 3 metody i lokatory w jednym miejscu; skrypt próbny wypisuje komunikat błędu przez page.error_text().",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "login_page.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t8z5",
@@ -1085,7 +1407,14 @@
       "README folderu: jak uruchomić (venv, requirements, pytest), zrzut z konsoli. Commit, push, odhacz. Sobota: quiz 8."
      ],
      "sprawdz": "5 testów E2E zielonych; żaden test nie zawiera find_element; żadna strona nie zawiera assert.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "test_meridianbank.py",
+      "sprawdzenie": {
+       "rodzaj": "pytest",
+       "limit_s": 180
+      }
+     }
     }
    ],
    "rola_asystenta": "Pyta o zgodę przed każdą komendą — widzisz, jak wygląda pip install selenium i pytest.",
@@ -1237,7 +1566,13 @@
       "Obejrzyj bazę: PyCharm → View → Tool Windows → Database → + → Data Source → SQLite → wskaż stado.db. Zobacz tabele i dane."
      ],
      "sprawdz": "Po skrypcie próbnym w stado.db są 2 zwierzęta i 1 zdarzenie (widać w PyCharm Database); usunięcie zwierzęcia z zdarzeniami daje błąd klucza obcego (zapisz, co z tym zrobisz).",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "baza.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t10z3",
@@ -1255,7 +1590,13 @@
       "Zasada: stado.py woła baza.py, nigdy odwrotnie; main.py woła stado.py. Narysuj te trzy klocki ze strzałkami w PLAN.md."
      ],
      "sprawdz": "Stado(con).zarejestruj(\"\", \"HF\", \"2020-01-01\", 600) rzuca ValueError; poprawne dane zwracają id; zdarzenie z typem „inne” rzuca ValueError.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "stado.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t10z4",
@@ -1274,7 +1615,13 @@
       "pytest -v → wszystko zielone. pip install pytest; requirements.txt; tests.yml jak w tygodniu 9 → Actions zielone od pierwszego pusha testów."
      ],
      "sprawdz": "≥ 14 testów zielonych lokalnie i w Actions; żaden test nie dotyka stado.db (sprawdź: usuń stado.db i uruchom pytest — nadal zielone).",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "test_baza.py",
+      "sprawdzenie": {
+       "rodzaj": "pytest"
+      }
+     }
     },
     {
      "id": "t10z5",
@@ -1324,7 +1671,13 @@
      "problemy": [
       "TemplateNotFound → folder musi nazywać się dokładnie templates i leżeć obok app.py.",
       "Port zajęty → app.run(port=5001)."
-     ]
+     ],
+     "cwiczenie": {
+      "plik": "app.py",
+      "sprawdzenie": {
+       "rodzaj": "plik_istnieje"
+      }
+     }
     },
     {
      "id": "t11z2",
@@ -1375,7 +1728,14 @@
       "tests.yml: krok setup-chrome, STADO_DB w env, pytest tests/ -v. Push → Actions zielone (jednostkowe + Selenium). Czerwone w CI, zielone lokalnie? Czytaj log: zwykle brak headless albo serwer nie zdążył wstać (dodaj pętlę czekania na odpowiedź HTTP, max 10 s)."
      ],
      "sprawdz": "3 testy Selenium zielone lokalnie i w Actions obok testów jednostkowych.",
-     "problemy": []
+     "problemy": [],
+     "cwiczenie": {
+      "plik": "test_web.py",
+      "sprawdzenie": {
+       "rodzaj": "pytest",
+       "limit_s": 180
+      }
+     }
     },
     {
      "id": "t11z5",

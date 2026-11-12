@@ -21,7 +21,25 @@ Własny program robisz w JSON (Ustawienia → „Zapisz pusty szablon programu�
 Nie potrzeba żadnych bibliotek — program używa tylko tego, co jest w Pythonie (tkinter).
 Przy pierwszym uruchomieniu poda imię, potem w zakładce **Mój projekt** wskaż katalog `nauka-python`.
 
-Twoje postępy zapisują się w `mentor_dane.json` obok programu. Skopiuj ten plik = masz kopię zapasową.
+**Mentor.exe (z Releases) nie wymaga Pythona.** Gdy kurs potrzebuje Pythona i bibliotek (np. Python → Junior QA),
+Mentor sam je przygotuje w zakładce **Środowisko** — bez terminala i bez uprawnień administratora (patrz niżej).
+
+### Gdzie są dane
+
+| Uruchomienie | Katalog danych (postępy, kursy, środowiska, logi) |
+|---|---|
+| `Mentor.exe` na Windows | `%LOCALAPPDATA%\Mentor\` (np. `C:\Users\<Ty>\AppData\Local\Mentor\`) — katalog EXE może być tylko do odczytu |
+| `Mentor.exe` z plikiem `portable.txt` obok | katalog EXE (tryb przenośny, np. pendrive) |
+| `python mentor.py` (deweloper) | katalog repozytorium |
+| zmienna środowiskowa `MENTOR_DANE` | wskazany katalog (testy, nietypowe instalacje) |
+
+Struktura: `mentor_dane.json` (postępy), `programy/` (wbudowane programy JSON i wgrane z pliku), `kursy/<id>/` (kursy z paczek ZIP:
+`kurs.json`, `meta.json`, `paczka/` z materiałami; `kursy/_kopie/` — poprzednie wersje), `srodowiska/<id>/.venv` (osobne środowisko Pythona
+każdego kursu + `stan.json`), `python/` (Python pobrany przez Mentora, gdy w systemie go nie ma), `pobrane/`, `logi/`.
+Pliki ćwiczeń ucznia są **poza** tym wszystkim: `Dokumenty\Mentor\<id kursu>\PRACA\` (albo katalog wskazany w Mój projekt).
+
+Starsza wersja trzymała `mentor_dane.json` i `programy/` obok EXE — nowy Mentor **przenosi je sam** przy pierwszym uruchomieniu
+(z kopią `mentor_dane.json.kopia-<data>`; oryginały zostają) i pokazuje na Panelu, co zrobił. Ustawienia → „Otwórz folder danych Mentora”.
 
 ## Co robi
 
@@ -29,11 +47,12 @@ Twoje postępy zapisują się w `mentor_dane.json` obok programu. Skopiuj ten pl
 |---|---|
 | **Jak zacząć** | Przewodnik, który otwiera się sam przy pierwszym uruchomieniu i przy pierwszym wejściu w nowy program (potem: przycisk „Jak zacząć” na Panelu): imię i katalog projektu bez okienek, rytm dnia, pętla lekcja → zadanie → odhaczenie, opis każdej zakładki i „co, jeśli…”. Na Panelu do pierwszego zadania wisi karta **Pierwsze kroki** z 4 przyciskami. |
 | **Panel** | Powitanie, seria dni, XP, odznaki, postęp etapów i — najważniejsze — *co masz zrobić dzisiaj* (pon–czw zadanie dnia, pt zadanie tygodnia, sob quiz, nd wolne). Po przerwie ≥ 2 dni pokazuje łagodny komunikat powrotu, nie wyrzut sumienia. |
-| **Plan nauki** | Wszystkie tygodnie i zadania programu. Każde zadanie ma rozwijaną sekcję **„Jak to zrobić”** — pełną instrukcję krok po kroku (co kliknąć, co wpisać, jakie komendy), „Gotowe, gdy…” (jak samemu sprawdzić) i „Gdy coś nie działa” (typowe problemy). Przy tygodniu — lekcje do przeczytania przed zadaniem. Jeśli wskażesz katalog projektu, Mentor pokazuje „✔ wykryto zmienne.py” — jako podpowiedź, nie zaliczenie. |
+| **Plan nauki** | Wszystkie tygodnie i zadania programu. Każde zadanie ma rozwijaną sekcję **„Jak to zrobić”** — pełną instrukcję krok po kroku (co kliknąć, co wpisać, jakie komendy), „Gotowe, gdy…” (jak samemu sprawdzić) i „Gdy coś nie działa” (typowe problemy). Przy tygodniu — lekcje do przeczytania przed zadaniem. Jeśli wskażesz katalog projektu, Mentor pokazuje „✔ wykryto zmienne.py” — jako podpowiedź, nie zaliczenie. W kursach z Pythonem pod zadaniem jest pasek **Ćwiczenie w Mentorze**: *Otwórz przykład* (kod w innym kontekście niż zadanie), *Utwórz plik ćwiczenia* (szablon w katalogu PRACA; istniejącego pliku nie nadpisuje bez pytania), *Otwórz w edytorze* (VS Code / PyCharm / Notatnik — nigdy przez „otwórz” systemowe, które by plik uruchomiło), *Uruchom* (interpreter kursu, limit czasu, Anuluj, wyjście i błędy z wyjaśnieniem po polsku, pole danych dla `input()`), *Sprawdź wynik* (test z definicji zadania: uruchomienie bez błędu / oczekiwane wyjście / pytest — zalicza automatycznie; bez testu: „Plik istnieje — wymaga sprawdzenia”, nigdy „Zaliczone”), *Pokaż podpowiedź*. |
 | **Lekcje** | Pierwsza lekcja każdego programu to **wprowadzenie** („Start: jak uczyć się z tego programu”). Lekcje zgodne ze standardem (`programy/STANDARD_KURSOW.md`) mają stałą kolejność: 🎯 cel → 💡 po co mi to → 📦 czego potrzebujesz → 1 · wyjaśnienie od podstaw → 2 · demonstracja (przykład w ramce + omówienie każdego kroku + oczekiwany wynik) → 3 · jak to uruchomić → 4 · ćwiczenie prowadzone i 5 · samodzielne z przyciskiem **„Podpowiedź 1 z 3”** (pytanie naprowadzające → gdzie szukać → częściowy przykład → „Pokaż pełne rozwiązanie”) → 6 · typowe błędy i naprawa (komunikat, przyczyna, jak sprawdzić, poprawka) → pułapki → dodatkowe zadania → sprawdzenie (pytania rozwijane + „co potrafię bez przykładu”) → **test 3 pytań**; powtórka na końcu każdego etapu; ← poprzednia / następna →. Lekcje bez bloków standardu — układ klasyczny (cel, wyjaśnienie, przykład, pułapki, zadania, pytania, test). |
 | **Sesja nauki** | Timer rytmu dnia 20/50/15/5 min z dzwonkiem i promptem do każdej fazy; pole **„Temat sesji”** zapisuje się razem z minutami. Tryb pełny (90 min), skrócony (45) i mini (30). Osobny **licznik 15 minut własnej walki**. **„Dopisz czas nauki…”** — czas spoza aplikacji: podajesz minuty i temat (lekcję z listy albo własny), odpowiadasz na **3–4 pytania** z tego tematu i dopiero wtedy wpis się zapisuje. XP za dzień nauki przyznaje się **raz na dobę**, niezależnie od liczby wpisów. |
 | **Warsztat** | Narzędzia wewnętrzne programu (gdy program je deklaruje — kurs kadrowy ma 9): Firma ćwiczeniowa, Lista płac (brutto→netto krok po kroku, „Tryb ćwiczenia”: najpierw wpisujesz swoje netto), Zasiłki i chorobowe (podstawa z 12 miesięcy z uzupełnianiem, pula 33/14 i okres zasiłkowy), Urlopy i ekwiwalent, Czas pracy (wymiar każdego miesiąca, nadgodziny, dodatek nocny, okres wypowiedzenia), Potrącenia (kwoty wolne), **symulator eZUS/Płatnika** (rejestr ubezpieczonych, ZUA/ZZA/ZWUA/ZCNA/ZIUA z weryfikacją jak w Płatniku, komplety DRA/RCA/RSA z listy płac, skrzynka e-ZLA, rejestr z numerami UPP), **symulator e-Urzędu** (PIT-11 i PIT-4R z kartoteki, UPO) i Przepisy (48 streszczeń offline z linkami do ISAP jako opcją). Każde narzędzie ma „Zapisz do projektu” (.md/.csv). Zero kont zewnętrznych, zero instalacji, zero arkuszy — cały kurs da się przejść w Mentorze. Silnik obliczeń: `kadry.py`, widoki: `warsztat.py`. |
-| **Mój projekt** | Mentor zagląda do Twojego katalogu: czy są Python/Git/Claude Code w PATH, czy jest `CLAUDE.md` (może go utworzyć z zasadami), ostatni commit, czy dziś był commit, ile plików czeka bez commita, które pliki z zadań bieżącego tygodnia już istnieją. Przycisk **Otwórz Claude Code tutaj** otwiera terminal w katalogu projektu z uruchomionym `claude`. |
+| **Mój projekt** | Mentor zagląda do Twojego katalogu: stan narzędzi kursu (z ostatniej realnej diagnozy w zakładce Środowisko — nie z samego PATH), czy jest `CLAUDE.md` (może go utworzyć z zasadami), ostatni commit, czy dziś był commit, ile plików czeka bez commita, które pliki z zadań bieżącego tygodnia już istnieją. Przycisk **Otwórz Claude Code tutaj** otwiera terminal w katalogu projektu z uruchomionym `claude`. |
+| **Środowisko** | Dla kursów, które uruchamiają kod (Python, biblioteki, Git, przeglądarka). Tabela statusów **z realnych uruchomień** (`python --version`, import w środowisku kursu, `git --version`, Edge): Gotowe / Brak / Nieprawidłowa wersja / Błąd / Opcjonalne / Sprawdzanie. **Zainstaluj brakujące** pokazuje najpierw listę kroków ze źródłem, rozmiarem, potrzebą internetu i uprawnień — i dopiero po zgodzie, w tle (GUI nie zamarza), tworzy osobne `.venv` kursu, instaluje biblioteki **z locka z sumami SHA-256** (tylko zadeklarowane w kursie, z PyPI, bez komend z paczki), a gdy w systemie nie ma Pythona — pobiera oficjalny runtime (python-build-standalone 3.12, suma przypięta w Mentorze) do katalogu Mentora. Potem **Sprawdź działanie**: interpreter, importy, przykładowy pytest, lokalne API + prawdziwe żądanie HTTP, Selenium w prawdziwej przeglądarce (raportowane osobno). „Gotowe” dopiero, gdy testy przechodzą. Przyciski: Sprawdź ponownie, Napraw środowisko, Usuń środowisko, Usuń kurs (PRACA i postępy zostają), Anuluj / Ponów / Pokaż szczegóły (log). Offline: lekcje i teoria działają zawsze, instalacja mówi wprost, że brak sieci. |
 | **Asystent** | Trzy karty: **Subskrypcja** (Claude Code — status instalacji, komendy, otwarcie w projekcie), **API** (prawdziwy Claude przez klucz z console.anthropic.com, płatność za użycie; rozmowa w oknie, pliki przez `@nazwa.py`, zasady z CLAUDE.md i kontekst tygodnia w tle) oraz **Offline** (wbudowany emulator bez konta i internetu). |
 | **Prompty** | 15 szablonów z dokumentu i etapów (Nowy temat, Utknąłem, Recenzja, Zatrzymaj się, Ja tłumaczę Twój kod, Ukryty błąd, Oczami rekrutera, Próbna rozmowa…) + treść `CLAUDE.md` + szablon bug raportu. „Wypełnij [nawiasy]” pyta o każdy nawias i kopiuje gotowy prompt. |
 | **Quiz** | 59 pytań — 5 na tydzień 0–9, 3 na tygodnie 10–12 — z wyjaśnieniami. Błędne odpowiedzi trafiają do **powtórki** i wracają, aż odpowiesz dobrze. 100% = odznaka. Ekran wyniku w aplikacji (bez okienek): punkty, komentarz, **lekcje do powtórzenia** z przyciskami „Otwórz lekcję”, „Powtórz błędne pytania”. **Diagnoza na start** (jeśli program ją ma): kilka pytań z całego kursu, nie blokuje nauki, nie daje XP — wskazuje lekcje, przy których zwolnić. |
@@ -44,9 +63,26 @@ Twoje postępy zapisują się w `mentor_dane.json` obok programu. Skopiuj ten pl
 
 ## Programy nauczania
 
-Ustawienia → **Program nauczania**: lista programów z folderu `programy/`, przełączanie (postępy każdego programu zapisują się
-osobno pod jego `id`), **„Wgraj program z pliku…”** (walidacja + kopia do `programy/`), „Zapisz pusty szablon programu”.
-Format: `programy/FORMAT.md`.
+Ustawienia → **Program nauczania**: lista programów (wbudowane, wgrane z JSON i zaimportowane z paczek ZIP), przełączanie (postępy
+każdego programu zapisują się osobno pod jego `id`), **„Importuj kurs ZIP…”**, „Importuj JSON…” (walidacja + kopia do `programy/`),
+„Zapisz pusty szablon programu”. Format: `programy/FORMAT.md`.
+
+### Import kursu z paczki ZIP
+
+1. Ustawienia → **Importuj kurs ZIP…** → wybierz plik. Mentor **najpierw pokazuje podgląd**: nazwa, wersja, autor, liczba lekcji i zadań,
+   wymagania (Python, biblioteki, narzędzia, przeglądarka), rozmiar, źródło, czy potrzebny internet, jakie uprawnienia (żadnych — wszystko w katalogu użytkownika),
+   oraz ostrzeżenie o skryptach w paczce (`.bat`, `.ps1`, `.py` w korzeniu) — **Mentor ich nigdy nie uruchamia**.
+2. Po zgodzie paczka jest rozpakowywana do `kursy/<id>/` (katalog tymczasowy → atomowe podmienienie). Odrzucane są: ścieżki z `..`, bezwzględne,
+   dowiązania symboliczne, archiwa z >20 000 plików, >2 GB po rozpakowaniu, pojedyncze pliki >512 MB i „bomby” kompresji.
+3. Kurs o tym samym `id` w nowszej/innej wersji: Mentor pyta, robi kopię poprzedniej wersji w `kursy/_kopie/` i **zachowuje postępy**
+   (identyfikatory zadań i lekcji są stabilne) oraz katalog PRACA.
+4. Mentor tworzy katalog roboczy `Dokumenty\Mentor\<id>\PRACA` i podpina go jako „Mój projekt”; jeśli kurs wymaga środowiska, otwiera zakładkę Środowisko.
+
+Obsługiwane paczki: nowe z `mentor-manifest.json` (schemat `mentor-course/1`: `course_id`, `version`, `entrypoint`, `requirements` z `python`,
+`python_packages_lock`, `required_tools`, `optional_tools` (`{name, from_week}`), `browser`, `browser_from_week`, `checks`) oraz **starsze** (v1.1:
+JSON kursu w korzeniu + `requirements.txt` + skrypty) — wymagania są wtedy brane z pola `srodowisko` programu, z `requirements.txt`/`.lock` albo
+rozpoznawane po treści. Biblioteki spoza zaufanej listy (pytest, requests, selenium, flask) bez locka z hashami nie są instalowane automatycznie.
+Paczkę przygotujesz funkcją `paczki.zbuduj_paczke(katalog, plik.zip, manifest)`.
 
 Wbudowane programy (źródła w Pythonie z generatorami w `programy/zrodla/*/zbuduj.py`):
 
@@ -120,7 +156,14 @@ kolory po najechaniu) program wylicza sam.
 ## Pliki
 
 - `mentor.py` — aplikacja (okno, timer, nadzór projektu, lekcje, quiz, dziennik)
-- `program.py` — wczytywanie i walidacja programów JSON
+- `program.py` — wczytywanie i walidacja programów JSON; katalog danych (`%LOCALAPPDATA%\Mentor`), migracja starych danych, kursy z paczek
+- `paczki.py` — podgląd i bezpieczny import paczek ZIP (manifest `mentor-course/1` i stare v1.1), synteza wymagań, katalog PRACA, kopie wersji
+- `srodowisko.py` — menedżer środowisk: realna diagnoza (Python, .venv, biblioteki, Git/Claude, przeglądarka), plan instalacji, pobranie runtime’u Pythona (SHA-256), `.venv` + pip z locka z hashami, testy końcowe (pytest, API, Selenium), uruchamianie kodu ucznia interpreterem kursu
+- `widok_srodowisko.py` — zakładka Środowisko (wątek roboczy + kolejka + `after`, log, Anuluj/Ponów)
+- `cwiczenia.py` — ćwiczenia w Mentorze (przykład, szablon, edytor, uruchomienie z limitem, sprawdzenie wyniku)
+- `srodowisko_testy/` — skrypty testów końcowych uruchamiane w środowisku kursu (próbka pytest, serwer API, klient HTTP, Selenium + strona HTML)
+- `programy/zaleznosci/requirements.lock` — przypięte wersje bibliotek kursów z sumami SHA-256 (Windows i Linux, Python 3.11–3.13)
+- `testy/` — testy pytest (`python -m pytest testy -q`): bezpieczeństwo ZIP, import v1.1 bez uruchamiania skryptów, manifest, aktualizacja z kopią, lock, diagnoza, realne `.venv` + pip, testy końcowe, ćwiczenia, GUI (na Windows CI także pobranie runtime’u Pythona i Selenium z Edge)
 - `asystent.py` — emulator offline (analiza kodu, uruchamianie, quiz, git) i klient API
 - `wiedza_ogolna.py` — wbudowany słownik błędów Pythona (gdy program nie ma własnego)
 - `motywy.py` — motywy kolorystyczne
@@ -130,4 +173,4 @@ kolory po najechaniu) program wylicza sam.
 - `programy/STANDARD_KURSOW.md` — standard tworzenia kursów; `programy/materialy/kadry-i-place/` — paczka materiałów kursu (generowana)
 - `kadry.py` — silnik obliczeń kadrowo-płacowych; `warsztat.py` — widoki Warsztatu
 - `start_mentor.bat` — uruchamianie dwuklikiem na Windows
-- `mentor_dane.json` — Twoje postępy (powstaje po pierwszym uruchomieniu)
+- `mentor_dane.json` — Twoje postępy (w katalogu danych, patrz „Gdzie są dane”)

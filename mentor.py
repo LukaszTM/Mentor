@@ -135,6 +135,7 @@ class Stan:
         "powtorki": [],     # id pytań do powtórki "tydzien-indeks"
         "dziennik": [],     # {"data", "tekst", "nastroj"}
         "xp": 0, "odznaki": [], "skala_sesji": 1.0,
+        "przewodnik": {},   # id programu -> True, gdy uczeń zamknął „Jak zacząć”
     }
     # postępy liczone per program: klucze zależne od programu trzymamy w "programy": {id: {...}}
     KLUCZE_PROGRAMU = ("zadania", "checklista", "quizy", "lekcje", "powtorki", "odznaki")
@@ -462,8 +463,7 @@ class Mentor(tk.Tk):
         self.przyciski_boku = {}
         self._zbuduj_szkielet()
         self.after(1000, self._petla)
-        self._pierwsze_uruchomienie()
-        self.pokaz("panel")
+        self.pokaz("start" if self._pokazac_przewodnik() else "panel")
 
     # --------------------------------------------------------------- program
     def _zaladuj_program_startowy(self):
@@ -490,6 +490,8 @@ class Mentor(tk.Tk):
         self.klient_api = None
         self._timer_reset()
         self.przebuduj()
+        if self._pokazac_przewodnik():
+            self.pokaz("start")
         return True
 
     # ------------------------------------------------------------------ styl
@@ -668,7 +670,7 @@ class Mentor(tk.Tk):
             self.bok_stopka.configure(text=f"🔥 seria: {s['seria']} dni\n⭐ {s['xp']} XP\n⏳ {czas_hm(s['minuty'])} nauki")
 
     def pokaz(self, nazwa):
-        podsw = {"wpis": "sesja", "czcionki": "ustawienia"}.get(nazwa, nazwa)
+        podsw = {"wpis": "sesja", "czcionki": "ustawienia", "start": "panel"}.get(nazwa, nazwa)
         for k in self.przyciski_boku:
             self._bok_koloruj(k, K["bok_akt"] if k == podsw else K["bok"], K["bok_tytul"] if k == podsw else K["bok_tekst"])
         self.aktywny = nazwa
@@ -695,12 +697,9 @@ class Mentor(tk.Tk):
         self._naglowek(p.wnetrze, tytul, podtytul)
         return p.wnetrze
 
-    def _pierwsze_uruchomienie(self):
-        if not self.stan.d["imie"]:
-            imie = simpledialog.askstring("Witaj!", "Jak masz na imię? (Mentor będzie się tak do Ciebie zwracał)", parent=self)
-            if imie:
-                self.stan.d["imie"] = imie.strip()
-                self.stan.zapisz()
+    def _pokazac_przewodnik(self):
+        """Przewodnik „Jak zacząć” otwiera się sam: przy pierwszym uruchomieniu (brak imienia) i przy pierwszym wejściu w nowy program."""
+        return not self.stan.d["imie"] or not self.stan.d.get("przewodnik", {}).get(P.id)
 
     def schowek(self, tekst, komunikat="Skopiowano do schowka."):
         self.clipboard_clear()
@@ -714,6 +713,111 @@ class Mentor(tk.Tk):
         self._odswiez_stopke()
 
     # ================================================================== PANEL
+    # ================================================================ JAK ZACZĄĆ
+    def widok_start(self):
+        w = self._strona("Jak zacząć — przewodnik po Mentorze", f"Program: {P.nazwa}. Dziesięć minut, które oszczędzą tygodnie błądzenia. "
+                         "Wrócisz tu zawsze przyciskiem „Jak zacząć” na Panelu.")
+        W = 860
+
+        # krok 1 — imię i katalog
+        z, k = karta(w, tytul="Krok 1 · Imię i katalog projektu")
+        z.pack(fill="x", padx=28)
+        r = tk.Frame(k, bg=K["karta"])
+        r.pack(fill="x")
+        etykieta(r, "Jak masz na imię? ", 10).pack(side="left")
+        imie = tk.StringVar(value=self.stan.d["imie"])
+        tk.Entry(r, textvariable=imie, font=czc(10), relief="flat", bg=K["jasny"], fg=K["tekst"], insertbackground=K["tekst"], width=22).pack(side="left", ipady=4)
+
+        def zapisz_imie():
+            self.stan.d["imie"] = imie.get().strip()
+            self.stan.zapisz()
+            self._odswiez_stopke()
+            zap.configure(text="✔ zapisano")
+
+        zap = przycisk(r, "Zapisz", zapisz_imie, "drugi")
+        zap.pack(side="left", padx=8)
+        r = tk.Frame(k, bg=K["karta"])
+        r.pack(fill="x", pady=(8, 0))
+        proj = self.stan.d["projekt"]
+        etykieta(r, "Katalog projektu: " + (proj if proj else "jeszcze nie wybrany"), 10, bold=bool(proj), kolor=K["tekst"] if proj else K["czerw"]).pack(side="left")
+        przycisk(r, "Wybierz katalog…", self._wybierz_projekt, "drugi").pack(side="left", padx=8)
+        etykieta(k, f"To zwykły folder na dysku (proponowana nazwa: {P.katalog_projektu}). Trafiają do niego wszystkie pliki z zadań — Mentor sprawdza, "
+                 "czy powstały (zakładka Mój projekt), a Asystent może je czytać. Jeśli folderu nie ma, utwórz go w Eksploratorze i wskaż tutaj.", 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(6, 0))
+
+        # krok 2 — dzień nauki
+        z, k = karta(w, tytul=f"Krok 2 · Jak wygląda dzień nauki ({sum(f['minuty'] for f in P.rytm_dnia)} min, 4 fazy)")
+        z.pack(fill="x", padx=28, pady=(12, 0))
+        for i, f in enumerate(P.rytm_dnia, 1):
+            r = tk.Frame(k, bg=K["karta"])
+            r.pack(fill="x", pady=2)
+            tk.Label(r, text=f"{f['ikona']} {i}. {f['nazwa']} · {f['minuty']} min", font=czc(10, "bold"), bg=K["jasny"], fg=K["tekst"], width=30, anchor="w", padx=8, pady=3).pack(side="left", anchor="n")
+            etykieta(r, "  " + f["opis"], 10, wrap=560).pack(side="left", fill="x", expand=True)
+        etykieta(k, "Timer w zakładce Sesja nauki prowadzi Cię przez fazy i sam zapisuje czas. Masz mniej czasu? Ustawienia → skala sesji (np. 50%) "
+                 "albo wpisz czas ręcznie po nauce (Sesja → „Dodaj czas ręcznie” — z tematem i 3-pytaniowym testem; XP raz dziennie).", 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(6, 0))
+        przycisk(k, "▶ Otwórz Sesję nauki", lambda: self.pokaz("sesja"), "drugi").pack(anchor="w", pady=(8, 0))
+
+        # krok 3 — lekcja, zadanie, odhaczenie
+        z, k = karta(w, tytul="Krok 3 · Lekcja → zadanie → odhaczenie (codzienna pętla)")
+        z.pack(fill="x", padx=28, pady=(12, 0))
+        for t in ("1. Panel → „Dzisiaj”: Mentor wybiera zadanie dnia (pon–czw zadania 1–4, piątek zadanie tygodnia, sobota quiz, niedziela wolne).",
+                  "2. Lekcje → przeczytaj lekcję dnia: cel, wyjaśnienie, przykład (przelicz sam!), pułapki, 3 zadania, pytania, test 3 pytania.",
+                  "3. Plan → zadanie → rozwiń „Jak to zrobić” — kroki są kompletne, od „otwórz…” do „zapisz jako…”. Wykonujesz w katalogu projektu.",
+                  "4. Plan → zaznacz ✔ przy zadaniu → +10 XP (zadanie tygodnia +25). Odznaki i seria dni rosną same.",
+                  "5. Dziennik → jedno zdanie „czego się dziś nauczyłem” (+3 XP). Po każdym etapie — Checklista (co masz umieć), w sobotę — Quiz."):
+            etykieta(k, t, 10, wrap=W).pack(fill="x", pady=(0, 3))
+        r = tk.Frame(k, bg=K["karta"])
+        r.pack(fill="x", pady=(8, 0))
+        if P.lekcje:
+            przycisk(r, "📖 Lekcja wprowadzająca", lambda: self.pokaz_lekcje(P.lekcje[0]["id"]), "drugi").pack(side="left")
+        przycisk(r, f"📅 Plan — tydzień {P.tygodnie[0]['tydzien']}", lambda: self.pokaz_tydzien(P.tygodnie[0]["tydzien"]), "drugi").pack(side="left", padx=8)
+
+        # krok 4 — asystent
+        z, k = karta(w, tytul="Krok 4 · Asystent — nauczyciel, nie wykonawca")
+        z.pack(fill="x", padx=28, pady=(12, 0))
+        etykieta(k, "Trzy karty w zakładce Asystent: Subskrypcja (Claude Code w terminalu — pełny model), API (własny klucz, rozmowa w Mentorze), "
+                 "Offline (wbudowany, bez internetu: „uczę się [temat]”, „co to jest [pojęcie]”, „zadaj mi 3 pytania”, „quiz z tygodnia 2”, „odpytaj mnie jak rekruter”). "
+                 "Zasada we wszystkich: najpierw 15 minut własnej walki, potem pytanie o podpowiedź — nie o wynik. Gotowe prompty: zakładka Prompty.", 10, wrap=W).pack(fill="x")
+        przycisk(k, "🤖 Otwórz Asystenta", lambda: self.pokaz("asystent"), "drugi").pack(anchor="w", pady=(8, 0))
+
+        # zakładki
+        z, k = karta(w, tytul="Co jest w pasku bocznym")
+        z.pack(fill="x", padx=28, pady=(12, 0))
+        opisy = {"panel": "start dnia: zadanie na dziś, seria, XP, etapy, wskazówka", "plan": "wszystkie tygodnie i zadania z instrukcją „Jak to zrobić”; tu odhaczasz",
+                 "sesja": "timer 4 faz z promptami do każdej fazy; ręczny wpis czasu z testem", "lekcje": "krótka lekcja do każdego zagadnienia + test",
+                 "projekt": "Twój katalog: wykryte pliki, Git, CLAUDE.md", "prompty": "gotowe prompty i szablony dokumentów do skopiowania",
+                 "asystent": "Subskrypcja / API / Offline — pomoc w nauce", "quiz": "quiz tygodnia (sobota) i powtórki błędnych pytań",
+                 "dziennik": "notatki z nauki, nastrój, pytania na później", "checklista": "co masz umieć po każdym etapie — odhaczasz sam",
+                 "sciaga": "najważniejsze liczby, komendy, terminy i linki", "ustawienia": "imię, program nauczania, motyw, czcionki, eksport postępów"}
+        for klucz, ikona, tekst in self.WIDOKI:
+            r = tk.Frame(k, bg=K["karta"])
+            r.pack(fill="x", pady=1)
+            tk.Label(r, text=f"{ikona} {tekst}", font=czc(10, "bold"), bg=K["jasny"], fg=K["tekst"], width=18, anchor="w", padx=8, pady=2).pack(side="left")
+            etykieta(r, "  " + opisy.get(klucz, ""), 10).pack(side="left")
+
+        # FAQ
+        z, k = karta(w, tytul="Co, jeśli…")
+        z.pack(fill="x", padx=28, pady=(12, 0))
+        for p, o in (("…nie wiem, co dziś robić?", "Panel → karta „Dzisiaj”. Zawsze jest jedno zadanie i jedna lekcja na dziś."),
+                     ("…nie rozumiem lekcji?", "Przelicz przykład sam, zadaj pytanie Asystentowi („wytłumacz [temat] inaczej”), zapisz pytanie w Dzienniku i wróć jutro — zadanie i tak możesz robić."),
+                     ("…miałem przerwę?", "Nic nie przepada. Panel pokaże, ile dni minęło i od czego zacząć. Seria liczy się od nowa, XP i odznaki zostają."),
+                     ("…chcę się uczyć czegoś innego?", "Ustawienia → Program nauczania: przełączasz między programami, postępy każdego są osobno."),
+                     ("…nie mam 90 minut?", "Ustawienia → skala sesji 50% (45 min) albo wpis ręczny. Lepiej 30 minut codziennie niż 3 godziny raz w tygodniu.")):
+            etykieta(k, p, 10, bold=True).pack(fill="x", pady=(4, 0))
+            etykieta(k, o, 10, wrap=W).pack(fill="x")
+
+        r = tk.Frame(w, bg=K["tlo"])
+        r.pack(fill="x", padx=28, pady=(16, 24))
+
+        def gotowe():
+            self.stan.d.setdefault("przewodnik", {})[P.id] = True
+            if imie.get().strip():
+                self.stan.d["imie"] = imie.get().strip()
+            self.stan.zapisz()
+            self.pokaz("panel")
+
+        przycisk(r, "✔ Rozumiem — pokaż Panel", gotowe).pack(side="left")
+        etykieta(r, "  Przewodnik nie otworzy się już sam; zawsze jest pod „Jak zacząć” na Panelu.", 9, kolor=K["szary"]).pack(side="left")
+
     def widok_panel(self):
         w = self._strona("")
         for ch in w.winfo_children():
@@ -723,8 +827,30 @@ class Mentor(tk.Tk):
         d = dzis()
         godz = dt.datetime.now().hour
         powitanie = "Dzień dobry" if godz < 12 else ("Dobry wieczór" if godz >= 18 else "Cześć")
-        tk.Label(w, text=f"{powitanie}, {imie}!", font=czc(22, "bold"), bg=K["tlo"], fg=K["tekst"], anchor="w").pack(fill="x", padx=28, pady=(24, 0))
+        gora = tk.Frame(w, bg=K["tlo"])
+        gora.pack(fill="x", padx=28, pady=(24, 0))
+        tk.Label(gora, text=f"{powitanie}, {imie}!", font=czc(22, "bold"), bg=K["tlo"], fg=K["tekst"], anchor="w").pack(side="left")
+        przycisk(gora, "❓ Jak zacząć", lambda: self.pokaz("start"), "drugi").pack(side="right")
         tk.Label(w, text=data_pl(d), font=czc(11), bg=K["tlo"], fg=K["szary"], anchor="w").pack(fill="x", padx=28)
+
+        # pierwsze kroki — dopóki nie ma ani jednego zadania i sesji w tym programie
+        if s["zadania_ukonczone"] == 0 and s["dni_nauki"] == 0:
+            z, k = karta(w, bg=K["nieb_tlo"])
+            z.pack(fill="x", padx=28, pady=(14, 0))
+            etykieta(k, "Pierwsze kroki w tym programie", 12, bold=True, bg=K["nieb_tlo"], kolor=K["nieb"]).pack(fill="x")
+            lekcja0 = P.lekcje[0] if P.lekcje else None
+            kroki = [("1", "Przeczytaj lekcję wprowadzającą (10 min)", "📖 Otwórz lekcję", (lambda: self.pokaz_lekcje(lekcja0["id"])) if lekcja0 else None),
+                     ("2", f"Wskaż katalog projektu (proponowana nazwa: {P.katalog_projektu})", "📂 Mój projekt", lambda: self.pokaz("projekt")),
+                     ("3", "Zobacz zadanie na dziś i rozwiń „Jak to zrobić”", "📅 Plan — tydzień 0", lambda: self.pokaz_tydzien(P.tygodnie[0]["tydzien"])),
+                     ("4", "Uruchom sesję nauki — 4 fazy, timer prowadzi", "▶ Sesja nauki", lambda: self.pokaz("sesja"))]
+            for nr, opis, tekst, cmd in kroki:
+                r = tk.Frame(k, bg=K["nieb_tlo"])
+                r.pack(fill="x", pady=2)
+                tk.Label(r, text=nr, font=czc(11, "bold"), bg=K["nieb"], fg=K["btn_tekst"], width=3).pack(side="left", padx=(0, 8))
+                etykieta(r, opis, 10, bg=K["nieb_tlo"]).pack(side="left")
+                if cmd:
+                    przycisk(r, tekst, cmd, "drugi").pack(side="right")
+            etykieta(k, "Pełny przewodnik po aplikacji: przycisk „Jak zacząć” u góry. Ta karta zniknie po pierwszym zadaniu lub sesji.", 9, kolor=K["szary"], bg=K["nieb_tlo"], wrap=860).pack(fill="x", pady=(6, 0))
 
         # powrót po przerwie
         dni = self.stan.dni_od_ostatniej_sesji()
@@ -817,8 +943,8 @@ class Mentor(tk.Tk):
                     "Jeśli naprawdę chcesz — przejrzyj dziennik albo zrób quiz powtórkowy.", None, tydz)
         if d == 5:
             return (f"Sobota — quiz z tygodnia {tydz} + poprawki + README (45 min)",
-                    "Bez nowej teorii. Quiz w zakładce Quiz (albo z Claude: „Zrób mi 10-pytaniowy quiz…”), poprawki po recenzji, "
-                    "README do projektu tygodnia. " + (f"Zostało Ci jeszcze {len(nie)} zadań z tego tygodnia." if nie else "Tydzień masz zaliczony — brawo."),
+                    "Bez nowej teorii. Quiz w zakładce Quiz (albo z Asystentem: „quiz z tygodnia N”), poprawki po recenzji, "
+                    "porządek w katalogu projektu i wpis w Dzienniku. " + (f"Zostało Ci jeszcze {len(nie)} zadań z tego tygodnia." if nie else "Tydzień masz zaliczony — brawo."),
                     None, tydz)
         if not nie:
             if all(self.stan.tydzien_ukonczony(x) for x in P.tygodnie):
@@ -1367,8 +1493,8 @@ class Mentor(tk.Tk):
         self.pokaz("lekcje")
 
     def widok_lekcje(self):
-        self._naglowek(self.tresc, "Lekcje", "Krótka lekcja do każdego zagadnienia programu: wyjaśnienie, przykład, 3 zadania, pułapki i test. "
-                       "Czytaj przed zadaniem dnia; test sprawdza, czy zostało.")
+        self._naglowek(self.tresc, "Lekcje", "Jedna lekcja dziennie, przed zadaniem: cel → wyjaśnienie → przykład → pułapki → zadania → pytania → test. "
+                       "Pierwszy raz tutaj? Zacznij od pierwszej lekcji na liście — to wprowadzenie do programu. ✔ oznacza zaliczony test.")
         cialo = tk.Frame(self.tresc, bg=K["tlo"])
         cialo.pack(fill="both", expand=True, padx=28, pady=(0, 20))
         lewa = Przewijane(cialo, K["tlo"])
@@ -1405,30 +1531,54 @@ class Mentor(tk.Tk):
             etykieta(prawa.wnetrze, "Ten program nie ma lekcji.", 11, kolor=K["szary"]).pack(fill="x")
             return
         W = 600
+        idx = [x["id"] for x in P.lekcje]
+        poz = idx.index(l["id"]) if l["id"] in idx else 0
         z, k = karta(prawa.wnetrze)
         z.pack(fill="x")
-        plakietka(k, f"TYDZIEŃ {l['tydzien']}", K["nieb_tlo"], K["nieb"]).pack(anchor="w")
-        etykieta(k, l["nazwa"], 15, bold=True, wrap=W).pack(fill="x", pady=(6, 8))
+        r0 = tk.Frame(k, bg=K["karta"])
+        r0.pack(fill="x")
+        plakietka(r0, f"TYDZIEŃ {l['tydzien']}", K["nieb_tlo"], K["nieb"]).pack(side="left")
+        plakietka(r0, f"lekcja {poz + 1} z {len(idx)}", K["jasny"], K["szary"]).pack(side="left", padx=6)
+        if l.get("czas_min"):
+            plakietka(r0, f"≈ {l['czas_min']} min", K["jasny"], K["szary"]).pack(side="left")
+        etykieta(k, l["nazwa"], 15, bold=True, wrap=W).pack(fill="x", pady=(6, 4))
+        if l.get("cel"):
+            etykieta(k, "🎯 Po tej lekcji: " + l["cel"], 10, bold=True, kolor=K["ziel"], wrap=W).pack(fill="x", pady=(0, 6))
+        etykieta(k, "Jak pracować z lekcją:  1 przeczytaj wyjaśnienie  →  2 przelicz przykład sam  →  3 zrób zadania  →  4 odpowiedz na pytania na głos  →  5 test (2/3 zalicza)",
+                 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(0, 8))
+        etykieta(k, "1 · Wyjaśnienie", 11, bold=True).pack(fill="x", pady=(4, 4))
         for akapit in l["wyjasnienie"].split("\n"):
-            if akapit.strip():
-                etykieta(k, akapit, 10, wrap=W).pack(fill="x", pady=(0, 6))
+            a = akapit.strip()
+            if not a:
+                continue
+            if a.startswith("## "):
+                etykieta(k, a[3:], 10, bold=True, kolor=K["akcent"], wrap=W).pack(fill="x", pady=(6, 2))
+            elif a.startswith(("- ", "• ")):
+                etykieta(k, "• " + a[2:], 10, wrap=W).pack(fill="x", padx=(12, 0), pady=(0, 2))
+            else:
+                etykieta(k, a, 10, wrap=W).pack(fill="x", pady=(0, 6))
         if l.get("przyklad"):
-            etykieta(k, "Przykład", 10, bold=True).pack(fill="x", pady=(6, 2))
+            etykieta(k, "2 · Przykład — przelicz lub prześledź sam, zanim spojrzysz na wynik", 11, bold=True).pack(fill="x", pady=(8, 4))
             tk.Label(k, text=l["przyklad"], font=czc(10, mono=True), bg=K["jasny"], fg=K["tekst"], anchor="w", justify="left",
-                     padx=12, pady=8).pack(fill="x")
+                     padx=12, pady=8, wraplength=W).pack(fill="x")
+        if l.get("w_praktyce"):
+            z2, k2 = karta(prawa.wnetrze, tytul="W praktyce — jak to robisz w firmie, krok po kroku")
+            z2.pack(fill="x", pady=(8, 0))
+            for i, kr in enumerate(l["w_praktyce"], 1):
+                etykieta(k2, f"{i}. {kr}", 10, wrap=W).pack(fill="x", pady=(0, 3))
         if l.get("pulapki"):
             z2, k2 = karta(prawa.wnetrze, bg=K["zolty"])
             z2.pack(fill="x", pady=(8, 0))
-            etykieta(k2, "⚠ Pułapki", 10, bold=True, bg=K["zolty"], kolor=K["pomar"]).pack(fill="x")
+            etykieta(k2, "3 · ⚠ Pułapki — zapisz do dziennika", 10, bold=True, bg=K["zolty"], kolor=K["pomar"]).pack(fill="x")
             for pu in l["pulapki"]:
                 etykieta(k2, "• " + pu, 10, bg=K["zolty"], wrap=W).pack(fill="x", pady=(2, 0))
         if l.get("zadania"):
-            z2, k2 = karta(prawa.wnetrze, tytul="3 zadania — bez rozwiązań")
+            z2, k2 = karta(prawa.wnetrze, tytul=f"4 · {len(l['zadania'])} zadania — zrób w katalogu projektu, bez rozwiązań")
             z2.pack(fill="x", pady=(8, 0))
             for i, zd in enumerate(l["zadania"], 1):
                 etykieta(k2, f"{i}. {zd}", 10, wrap=W).pack(fill="x", pady=(0, 4))
         if l.get("pytania"):
-            z2, k2 = karta(prawa.wnetrze, tytul="Pytania sprawdzające (odpowiedz na głos, potem rozwiń)")
+            z2, k2 = karta(prawa.wnetrze, tytul="5 · Pytania sprawdzające — odpowiedz na głos, potem kliknij, by rozwinąć")
             z2.pack(fill="x", pady=(8, 0))
             for pq, odp in l["pytania"]:
                 r = tk.Frame(k2, bg=K["karta"])
@@ -1443,7 +1593,7 @@ class Mentor(tk.Tk):
         r = tk.Frame(k2, bg=K["karta"])
         r.pack(fill="x")
         if l.get("test"):
-            przycisk(r, f"Sprawdź się — test ({len(l['test'])} pytania)", lambda: self._test_lekcji(l)).pack(side="left")
+            przycisk(r, f"6 · Sprawdź się — test ({len(l['test'])} pytania)", lambda: self._test_lekcji(l)).pack(side="left")
         if zal:
             plakietka(r, f"ostatni wynik {zal['wynik']}/{zal['max']} · {zal['data']}", K["ziel_tlo"] if zal["wynik"] / max(zal["max"], 1) >= 0.67 else K["czerw_tlo"],
                       K["ziel"] if zal["wynik"] / max(zal["max"], 1) >= 0.67 else K["czerw"]).pack(side="left", padx=10)
@@ -1451,6 +1601,12 @@ class Mentor(tk.Tk):
         tydz_zad = [z for z in P.tydzien(l["tydzien"])["zadania"]]
         if tydz_zad:
             przycisk(r, f"Zadania tygodnia {l['tydzien']}", lambda: self.pokaz_tydzien(l["tydzien"]), "drugi").pack(side="left")
+        nav = tk.Frame(k2, bg=K["karta"])
+        nav.pack(fill="x", pady=(10, 0))
+        if poz > 0:
+            przycisk(nav, "← " + P.lekcje[poz - 1]["nazwa"][:38], lambda: self.pokaz_lekcje(P.lekcje[poz - 1]["id"]), "drugi").pack(side="left")
+        if poz + 1 < len(idx):
+            przycisk(nav, P.lekcje[poz + 1]["nazwa"][:38] + " →", lambda: self.pokaz_lekcje(P.lekcje[poz + 1]["id"]), "drugi").pack(side="right")
 
     def _test_lekcji(self, l):
         pytania = [(f"L{l['id']}-{i}", q) for i, q in enumerate(l["test"])]

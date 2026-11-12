@@ -24,7 +24,7 @@ TYGODNIE_1 = [
     {"tydzien": 0, "etap": 0, "tytul": "Warsztat kadrowca: narzędzia, źródła, firma ćwiczeniowa",
      "tematy": "Źródła prawa (KP, ustawa systemowa, zasiłkowa, PIT), ISAP i Dziennik Ustaw, eZUS/PUE, Płatnik, e-Urząd Skarbowy, wskaźniki 2026, organizacja katalogu projektu",
      "rola_asystenta": "Przewodnik po narzędziach. Każdy skrót (DRA, RCA, ZUA, PIT-4R) ma wytłumaczyć, zanim pójdziesz dalej. Nie wierz mu na słowo w kwotach — każdą stawkę sprawdzasz w źródle (ZUS, podatki.gov.pl, Dz.U.).",
-     "lekcje": ["zrodla_prawa", "narzedzia_kadrowca", "wskazniki_2026"],
+     "lekcje": ["start_jak_sie_uczyc", "zrodla_prawa", "narzedzia_kadrowca", "wskazniki_2026"],
      "zadania": [
          {"id": "k0z1", "tytul": "Katalog projektu i karta firmy ćwiczeniowej", "opis": "Folder kadry-praktyka z plikiem FIRMA.md opisującym firmę, na której będziesz ćwiczyć przez 12 tygodni.",
           "czas_min": 45, "pliki": ["FIRMA.md"], "xp": 10,

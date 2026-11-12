@@ -19,6 +19,7 @@ import tresc            # noqa: E402
 import wiedza           # noqa: E402
 from jak import JAK     # noqa: E402
 from lekcje_extra import LEKCJE_TYDZIEN_0, TESTY  # noqa: E402
+from cele import CELE  # noqa: E402
 
 
 def zbuduj():
@@ -27,7 +28,11 @@ def zbuduj():
         l = dict(l)
         l.setdefault("test", TESTY.get(l["id"], []))
         l["pytania"] = [list(p) for p in l.get("pytania", [])]
+        if l["id"] in CELE:
+            l["cel"] = CELE[l["id"]]
         lekcje.append(l)
+    brak = [l["id"] for l in lekcje if not l.get("cel")]
+    assert not brak, f"lekcje bez celu: {brak}"
     id_lekcji = {l["id"] for l in lekcje}
     lekcje_tygodnia = {}
     for l in lekcje:

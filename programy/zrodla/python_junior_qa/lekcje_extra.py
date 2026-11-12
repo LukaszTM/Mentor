@@ -5,6 +5,58 @@ TESTY: klucz = id lekcji (z wiedza.TEMATY lub stąd). Używane przy ręcznym wpi
 """
 
 LEKCJE_TYDZIEN_0 = [
+    {"id": "start_jak_sie_uczyc", "tydzien": 0, "czas_min": 15,
+     "nazwa": "Start: jak uczyć się z tego programu (przeczytaj najpierw)",
+     "cel": "wiesz, co robić każdego dnia, gdzie co jest w Mentorze, jak czytać lekcję i jak odhaczać postępy.",
+     "slowa": ["jak zacząć", "jak zaczac", "od czego zacząć", "start", "wprowadzeni", "jak się uczyć", "jak sie uczyc", "jak działa program", "mentor"],
+     "wyjasnienie":
+         "## Co to za program i dla kogo\n"
+         "13 tygodni (0–12): Python od zera, Git, testy automatyczne (pytest, Selenium) i projekt portfolio na GitHubie — pod rolę Junior QA. "
+         "Zaczynasz bez żadnej wiedzy o programowaniu; potrzebujesz komputera z Windows/macOS/Linux, 90 minut dziennie i cierpliwości na pierwsze dwa tygodnie, "
+         "gdy wszystko jest nowe (terminal, pliki .py, commit). Uczysz się z asystentem AI na zasadzie 70/30: 70% kodu piszesz sam.\n"
+         "## Jak wygląda dzień nauki\n"
+         "- Panel → karta „Dzisiaj”: Mentor pokazuje zadanie dnia i lekcję do niego (pon–czw zadania 1–4, piątek — zadanie tygodnia, sobota — quiz, niedziela — wolne).\n"
+         "- Lekcje → czytasz lekcję dnia (15–25 min): cel, wyjaśnienie, przykład kodu, pułapki, 3 zadania, pytania, test.\n"
+         "- Plan → zadanie dnia → rozwijasz „Jak to zrobić”: kompletne kroki (co wpisać w terminal, jak nazwać plik, jak sprawdzić, że działa).\n"
+         "- Sesja nauki → timer 4 faz: nowy temat 20 min → kodowanie 50 → recenzja 15 → podsumowanie 5; sam zapisuje czas i serię.\n"
+         "- Plan → ✔ przy zadaniu, gdy kod działa i jest w commicie (+10 XP; zadanie tygodnia +25). Dziennik → zdanie, czego się nauczyłeś (+3 XP).\n"
+         "- Sobota: Quiz tygodnia. Po każdym etapie: Checklista — co masz umieć.\n"
+         "## Twój warsztat: katalog projektu\n"
+         "Folder „nauka-python” (tworzysz w tygodniu 0, wskazujesz w Ustawieniach lub w Mój projekt). Tam są wszystkie pliki .py, CLAUDE.md z zasadami pracy "
+         "asystenta i repozytorium Git. Mentor wykrywa pliki z zadań i pokazuje liczbę commitów — to Twój dowód postępu.\n"
+         "## Jak czytać lekcję (5 kroków)\n"
+         "- 1. Cel — jeśli już to umiesz, od razu test.\n"
+         "- 2. Wyjaśnienie — czytaj z otwartym PyCharmem i przepisuj (nie kopiuj!) fragmenty kodu, uruchamiaj je.\n"
+         "- 3. Przykład — zanim przeczytasz do końca, zgadnij, co wypisze; potem uruchom i porównaj.\n"
+         "- 4. Pułapki — zapisz w dzienniku; to błędy, które każdy robi w pierwszym miesiącu.\n"
+         "- 5. Zadania (w katalogu projektu, bez rozwiązań), pytania na głos, test 3 pytań (2/3 zalicza).\n"
+         "## Asystent — nauczyciel, nie wykonawca\n"
+         "Trzy karty: Subskrypcja (Claude Code w terminalu — pełny model, czyta Twoje pliki), API (własny klucz), Offline (wbudowany: „uczę się pętli”, "
+         "„przejrzyj @plik.py”, „utknąłem… błąd: …”, „uruchom @plik.py”, „zadaj mi 3 pytania”, „quiz z tygodnia 2”). Zasada: 15 minut własnej walki, potem "
+         "prośba o podpowiedź, nie o rozwiązanie; każdy kod od asystenta przepisujesz ręcznie. Gotowe prompty — zakładka Prompty.\n"
+         "## Jeśli coś nie idzie\n"
+         "- Nie wiesz, co dziś robić → Panel → „Dzisiaj”.\n"
+         "- Błąd, którego nie rozumiesz → skopiuj ostatnią linię (np. „TypeError: …”) do Asystenta: „utknąłem: [błąd]” — wytłumaczy, nie poprawi.\n"
+         "- Brak czasu → Ustawienia → skala sesji 50%; wpis ręczny czasu z testem. 30 minut dziennie bije 3 godziny w weekend.\n"
+         "- Przerwa → Panel pokaże, ile dni minęło; XP i odznaki zostają, seria rusza od nowa.",
+     "przyklad":
+         "Dzień 1 (tydzień 0):\n"
+         "1. Panel → „Dzisiaj”: „Zainstaluj Pythona, Gita, PyCharm i Claude Code”.\n"
+         "2. Lekcje → ta lekcja → test.  3. Plan → tydzień 0 → zadanie 1 → „Jak to zrobić” (krok po kroku, z komendami do skopiowania).\n"
+         "4. Sesja nauki → start timera.  5. Plan → ✔ (+10 XP).  6. Dziennik: „Zainstalowałem Pythona; python --version działa; nie rozumiem jeszcze, co to PATH”.",
+     "zadania": ["Otwórz każdą zakładkę w pasku bocznym i zapisz w dzienniku jednym zdaniem, do czego służy.",
+                 "Ustaw imię i katalog projektu; sprawdź w Mój projekt, czy Mentor go widzi.",
+                 "Uruchom Sesję nauki na 2 minuty i zatrzymaj — zobacz na Panelu zapisany czas."],
+     "pytania": [["Gdzie sprawdzisz, co masz dziś zrobić?", "Panel → „Dzisiaj”: zadanie, „Jak to zrobić” i lekcja."],
+                 ["Co oznacza zasada 70/30?", "70% czasu piszę kod sam, 30% rozmawiam z asystentem o tym, co napisałem."],
+                 ["Kiedy odhaczasz zadanie?", "Gdy kod działa (uruchomiony) i jest w commicie — nie po przeczytaniu."]],
+     "pulapki": ["Kopiowanie kodu od asystenta zamiast przepisywania — po tygodniu nie umiesz napisać pętli bez pomocy.",
+                 "Czytanie lekcji bez uruchamiania przykładów — Python uczy się palcami, nie oczami."],
+     "test": [
+         {"p": "Ile zadań ma tydzień i które jest „zadaniem tygodnia”?", "o": ["3 — ostatnie", "5 — piąte (piątek), +25 XP", "7", "Zależy od tygodnia"], "odp": 1, "w": "Zadania 1–4 pon–czw, 5 — piątek."},
+         {"p": "Gdzie jest kompletna instrukcja wykonania zadania?", "o": ["W lekcji", "Plan → zadanie → „Jak to zrobić”", "W Ściądze", "W Quizie"], "odp": 1, "w": "Lekcja tłumaczy temat, Plan mówi, co zrobić."},
+         {"p": "Co robisz z kodem, który pokazał asystent?", "o": ["Kopiuję do pliku", "Przepisuję ręcznie i tłumaczę sobie każdą linię", "Ignoruję", "Wysyłam do Gita"], "odp": 1, "w": "Zasada z CLAUDE.md i rytmu dnia."},
+     ]},
     {"id": "terminal", "tydzien": 0, "nazwa": "Terminal i katalogi — pierwsze kroki",
      "slowa": ["terminal", "powershell", "cd ", "pwd", "katalog", "folder", "ścieżk", "sciezk"],
      "wyjasnienie":

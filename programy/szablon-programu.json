@@ -73,12 +73,18 @@
    "id": "lekcja-1",
    "tydzien": 0,
    "nazwa": "Nazwa lekcji",
+   "cel": "po tej lekcji uczeń potrafi… (jedno zdanie)",
+   "czas_min": 20,
    "slowa": [
     "słowa",
     "kluczowe",
     "do rozpoznania w promptach"
    ],
-   "wyjasnienie": "Krótka lekcja: 2–4 akapity z przykładami z życia ucznia.",
+   "wyjasnienie": "## Nagłówek sekcji\nKrótka lekcja: 2–4 akapity z przykładami z życia ucznia.\n- punkt listy\n- drugi punkt",
+   "w_praktyce": [
+    "Krok 1 — jak to robisz naprawdę.",
+    "Krok 2."
+   ],
    "przyklad": "kod lub przykład krok po kroku",
    "zadania": [
     "Zadanie łatwe.",

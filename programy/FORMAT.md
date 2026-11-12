@@ -56,7 +56,11 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
  "test": [{"p": "pytanie?", "o": ["A", "B", "C", "D"], "odp": 1, "w": "wyjaśnienie"}]}
 ```
 
-- `slowa` — po nich Asystent Offline rozpoznaje temat w promptach („uczę się zmiennych”).
+- `cel` (zalecane) — jedno zdanie „po tej lekcji potrafisz…”; wyświetlane na górze lekcji.
+- `czas_min` — orientacyjny czas lekcji; `w_praktyce` — lista kroków „jak to robisz naprawdę” (osobna karta).
+- W `wyjasnienie` linia zaczynająca się od `## ` to nagłówek sekcji, od `- ` — punkt listy; `\n` rozdziela akapity.
+- Pierwsza lekcja na liście jest traktowana jako **wprowadzająca** (Panel → „Pierwsze kroki”, przewodnik „Jak zacząć”) — opisz w niej, jak uczyć się z programu.
+- `slowa` — po nich Asystent Offline rozpoznaje temat w promptach („uczę się zmiennych”; odmiana słów jest tolerowana).
 - `test` — 3–4 pytania zamknięte; używane w zakładce Lekcje („Sprawdź się”) i przy ręcznym wpisie czasu nauki
   (uczeń wybiera temat = lekcję i odpowiada na pytania z jej testu). `odp` to indeks poprawnej odpowiedzi od 0.
 

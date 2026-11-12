@@ -19,16 +19,24 @@ from tygodnie_3 import TYGODNIE_3                 # noqa: E402
 from lekcje_1 import LEKCJE_1                     # noqa: E402
 from lekcje_2 import LEKCJE_2                     # noqa: E402
 from lekcje_3 import LEKCJE_3                     # noqa: E402
+from lekcja_start import LEKCJA_START             # noqa: E402
+from cele import CELE                             # noqa: E402
+from czytelnosc import uczytelnij                 # noqa: E402
 import reszta                                     # noqa: E402
 
 
 def zbuduj():
     lekcje = []
-    for l in LEKCJE_1 + LEKCJE_2 + LEKCJE_3:
+    for l in [LEKCJA_START] + LEKCJE_1 + LEKCJE_2 + LEKCJE_3:
         l = dict(l)
         l["pytania"] = [list(p) for p in l.get("pytania", [])]
         l.setdefault("test", [])
+        if l["id"] in CELE:
+            l.update(CELE[l["id"]])
+        l["wyjasnienie"] = uczytelnij(l["wyjasnienie"])
+        assert l.get("cel"), f"lekcja {l['id']} bez celu"
         lekcje.append(l)
+    assert set(CELE) <= {l["id"] for l in lekcje}, set(CELE) - {l["id"] for l in lekcje}
     id_lekcji = {l["id"] for l in lekcje}
     assert len(id_lekcji) == len(lekcje), "powtórzone id lekcji"
 

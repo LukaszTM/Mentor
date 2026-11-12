@@ -61,10 +61,18 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
   albo `przyklad_plik` — ścieżka w materiałach kursu; `stdin` — dane dla `input()` przy „Uruchom” (uczeń może zmienić).
   `sprawdzenie.rodzaj`: `uruchom_bez_bledu` (kod wyjścia 0), `wyjscie_zawiera` (wszystkie `tekst` w stdout, żaden z `nie_zawiera`,
   co najmniej `min_linii` linii), `pytest` (uruchamia `python -m pytest <plik_testu|plik>` w PRACA — zielone = zaliczone),
-  `plik_istnieje` (domyślne; daje status „Plik istnieje — wymaga sprawdzenia”, **nie** „Zaliczone”). `{rok}` = bieżący rok.
+  `test_zewnetrzny` (**niezależne testy z paczki kursu**: `plik_testu` — ścieżka w materiałach paczki, np. `WERYFIKATORY/test_zachowania.py`;
+  `wybor` — wyrażenie `pytest -k`, np. nazwa testu; `sha256` — suma pliku testu (gdy brak, Mentor bierze ją z `INTEGRITY.json` paczki; bez żadnej sumy
+  test nie jest uruchamiany); opcjonalnie `pliki_dodatkowe`. Mentor kopiuje test do katalogu tymczasowego tylko do odczytu, uruchamia pytest interpreterem kursu
+  z limitem czasu i zmienną `MENTOR_WORKSPACE` = katalog roboczy ucznia; zaliczenie wyłącznie po zielonych testach),
+  `plik_istnieje` (domyślne; daje status „Plik istnieje — wymaga sprawdzenia”, **nie** „Zaliczone”, i otwiera **rubrykę oceny własnej**:
+  kryteria z pola `rubryka` zadania/ćwiczenia albo zdania z `sprawdz`, plus pole dowodów; odhaczenie dopiero po potwierdzeniu wszystkich kryteriów).
+  Zadania bez pliku `.py`, ale z `pliki` i `sprawdz`, dostają przycisk „Oceń wg rubryki”. `{rok}` = bieżący rok.
   Plik zawierający tylko komentarze (sam szablon) nigdy nie zalicza; `uruchom_bez_bledu` wymaga co najmniej 1 linii wyjścia; program, który pyta o więcej
   danych niż `stdin` (EOFError), dostaje „wymaga sprawdzenia ręcznego”, nie „błąd”. Zbuduj kurs tak, by `stdin` odpowiadał kolejności pytań z kroków zadania.
-  Kod ucznia uruchamia **interpreter kursu** (`.venv` kursu, nigdy Python Mentora) z limitem czasu i przyciskiem Anuluj.
+  Kod ucznia uruchamia **interpreter kursu** (`.venv` kursu, nigdy Python Mentora) z limitem czasu i przyciskiem Anuluj. W jego środowisku są zmienne:
+  `MENTOR_WORKSPACE` (katalog roboczy), `MENTOR_COURSE_ROOT` (materiały paczki), `MENTOR_SANDBOX_HTML` (strona z `srodowisko.sandbox_html`, domyślnie
+  `srodowiska/qa_sandbox.html`, gdy istnieje), `MENTOR_API_URL` (adres lokalnego API, gdy kurs je deklaruje) — także w terminalu „Otwórz terminal tutaj”.
 
 ## Lekcja
 
@@ -126,7 +134,7 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `diagnoza` | lista pytań jak w `test` + `lekcja` (id) — zadanie diagnostyczne na start (Panel → Pierwsze kroki, Quiz, „Jak zacząć”); nie blokuje nauki, nie daje XP; wynik i lekcje do powtórki w `stan["diagnoza"]` |
 | `pytania_dziennika` | lista pytań pomocniczych pokazywanych w zakładce Dziennik (domyślnie ogólne) |
 | `materialy` | ścieżka (informacyjna) paczki materiałów; Mentor szuka jej w `kursy/<id>/paczka/` (kurs z ZIP) albo `programy/materialy/<id>/` i udostępnia „Skopiuj materiały kursu do katalogu projektu” (bez nadpisywania) |
-| `srodowisko` | **wymagania środowiska** kursu, które Mentor sprawdza i instaluje w zakładce Środowisko: `{"python": ">=3.11,<3.14", "pakiety": ["pytest", "requests", "selenium", "flask"], "lock": "programy/zaleznosci/requirements.lock", "narzedzia_wymagane": [], "narzedzia_opcjonalne": {"git": 0, "claude": 0}, "przegladarka": "edge", "przegladarka_od_tygodnia": 8, "sprawdzenia": [{"kind": "python_import", "module": "pytest"}, {"kind": "pytest_sample"}, {"kind": "local_api"}, {"kind": "selenium_browser", "optional": true}], "uwagi": ["…"]}`. `narzedzia_opcjonalne` to `{nazwa: od_tygodnia}` — Mentor ich nie instaluje, pokazuje tylko status (Brak dopiero od danego tygodnia). Pakiety spoza zaufanej listy (pytest, requests, selenium, flask) wymagają locka z sumami SHA-256 w paczce. Brak pola = kurs działa w samym Mentorze (bez zakładki środowiska). |
+| `srodowisko` | **wymagania środowiska** kursu, które Mentor sprawdza i instaluje w zakładce Środowisko: `{"python": ">=3.11,<3.14", "pakiety": ["pytest", "requests", "selenium", "flask"], "lock": "programy/zaleznosci/requirements.lock", "narzedzia_wymagane": [], "narzedzia_opcjonalne": {"git": 0, "claude": 0}, "przegladarka": "edge", "przegladarka_od_tygodnia": 8, "sprawdzenia": [{"kind": "python_import", "module": "pytest"}, {"kind": "pytest_sample"}, {"kind": "local_api"}, {"kind": "selenium_browser", "optional": true}], "uwagi": ["…"]}`. `narzedzia_opcjonalne` to `{nazwa: od_tygodnia}` — Mentor ich nie instaluje, pokazuje tylko status (Brak dopiero od danego tygodnia). Pakiety spoza zaufanej listy (pytest, requests, selenium, flask) wymagają locka z sumami SHA-256 w paczce. `api_lokalne`: `{"skrypt": "srodowiska/api_sandbox.py", "port": 8765, "health": "/health", "sha256": "…", "opis": "…"}` — edukacyjny serwer z paczki, który Mentor uruchamia **tylko przyciskiem** (Środowisko → „Lokalny serwer API kursu” → Uruchom / Zatrzymaj / Sprawdź API) po weryfikacji sumy skryptu, interpreterem kursu, na 127.0.0.1. `sandbox_html`: lokalna strona do Selenium. Brak pola = kurs działa w samym Mentorze (bez zakładki środowiska). |
 | `quizy[...][i].lekcja` | id lekcji do powtórki po błędnej odpowiedzi — pokazywane na ekranie wyniku quizu |
 | `poziom`, `system`, `wymagania_wstepne`, `umiejetnosci_koncowe` | metadane kursu dla START_TUTAJ.md i przewodnika (STANDARD §2) |
 | `stan_prawny` / `firma` | dowolne metadane programu (np. „listopad 2026”, opis firmy ćwiczeniowej) |
@@ -162,6 +170,10 @@ wymagania są brane z pola `srodowisko`, z `requirements.txt`/`requirements.lock
 ```
 
 - `course_id` i `version` muszą zgadzać się z `id`/`wersja` w pliku programu (sprzeczność = odrzucenie paczki).
+- `requirements.python_packages` — lista pakietów (nazwy lub `{name, version}`); gdy jej nie ma, Mentor bierze pakiety z locka wskazanego w manifeście,
+  a dalej z pola `srodowisko` programu. Pola `srodowisko` programu uzupełniają wszystko, czego manifest nie podaje.
+- `local_api` (`{script, port, health_path, sha256, description}`), `sandbox_html`, `external_tests` (`[{path, sha256, runner, tasks}]`) — jak w polu `srodowisko`;
+  `INTEGRITY.json` w korzeniu paczki (`{"ścieżka": "sha256"}`) służy do weryfikacji plików, które Mentor uruchamia (testy, serwer API).
 - `requirements.lock` — format pip z hashami: `nazwa==wersja [; marker] \` + linie `--hash=sha256:…` (tylko taka składnia jest akceptowana;
   bez `-e`, `--index-url`, nieprzypiętych wersji). Bez locka Mentor użyje własnego (`programy/zaleznosci/requirements.lock`) dla zaufanych pakietów.
 - Zabronione w archiwum: ścieżki z `..`, bezwzględne, dowiązania symboliczne; limity: 20 000 plików, 2 GB po rozpakowaniu, 512 MB na plik.

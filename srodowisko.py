@@ -14,6 +14,7 @@ Zasady:
   i sprzątaniem procesów. „GOTOWE” pojawia się dopiero po przejściu testu, nie po samym imporcie biblioteki.
 """
 
+import atexit
 import datetime as dt
 import hashlib
 import json
@@ -988,15 +989,35 @@ class Srodowisko:
         plik = Path(plik)
         return self.uruchom_w_srodowisku(["-X", "utf8", str(plik)], cwd=plik.parent, wejscie=wejscie, limit=limit, anuluj=anuluj)
 
-    def uruchom_w_srodowisku(self, argumenty, cwd, wejscie="", limit=20, anuluj=None):
+    def env_ucznia(self, cwd=None):
+        """Zmienne, które kurs może odczytać w kodzie ucznia (os.environ): MENTOR_WORKSPACE (katalog roboczy), MENTOR_COURSE_ROOT (materiały paczki),
+        MENTOR_SANDBOX_HTML (lokalna strona do Selenium), MENTOR_API_URL (adres lokalnego API kursu, gdy kurs je deklaruje)."""
+        env = {}
+        if cwd:
+            env["MENTOR_WORKSPACE"] = str(cwd)
+        mat = katalog_materialow(self.id)
+        if mat:
+            env["MENTOR_COURSE_ROOT"] = str(mat)
+            html = self.wym.get("sandbox_html") or "srodowiska/qa_sandbox.html"
+            if (Path(mat) / html).exists():
+                env["MENTOR_SANDBOX_HTML"] = str(Path(mat) / html)
+        api = self.wym.get("api_lokalne")
+        if api:
+            env["MENTOR_API_URL"] = f"http://127.0.0.1:{api['port']}"
+        return env
+
+    def uruchom_w_srodowisku(self, argumenty, cwd, wejscie="", limit=20, anuluj=None, env_extra=None):
         """`python <argumenty>` interpreterem kursu w katalogu cwd, z limitem czasu i możliwością anulowania (Event).
         Proces potomny nie dziedziczy zmiennych Mentora/PyInstallera. Zwraca (kod, stdout, stderr); kod -1 = limit/anulowano, -2 = nie uruchomiono."""
         pv, _ = self.interpreter_ucznia()
         if not pv:
             return -2, "", "Brak Pythona do uruchomienia pliku — przygotuj środowisko w zakładce Środowisko."
+        env = _env_czysty(self.env_ucznia(cwd))
+        if env_extra:
+            env.update(env_extra)
         try:
             p = subprocess.Popen([str(pv)] + [str(a) for a in argumenty], cwd=str(cwd), stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                 stderr=subprocess.PIPE, env=_env_czysty(), **_flagi())
+                                 stderr=subprocess.PIPE, env=env, **_flagi())
         except OSError as e:
             return -2, "", str(e)
         wynik = {}
@@ -1026,6 +1047,127 @@ class Srodowisko:
         if powod:
             return -1, out, (err + "\n" if err else "") + powod
         return p.returncode, out, err
+
+
+    # --- pliki paczki: weryfikacja sum ------------------------------------------
+    def plik_paczki(self, wzgledna, sha256=None):
+        """Zwraca (ścieżka, suma) pliku z materiałów paczki po weryfikacji SHA-256 (podana jawnie albo z INTEGRITY.json paczki).
+        Bez sumy do porównania → RuntimeError: Mentor nie uruchamia z paczki niczego, czego nie da się zweryfikować."""
+        mat = katalog_materialow(self.id)
+        if not mat:
+            raise RuntimeError("Kurs nie ma materiałów paczki.")
+        wzgledna = str(wzgledna).replace("\\", "/").lstrip("/")
+        if ".." in Path(wzgledna).parts or Path(wzgledna).is_absolute():
+            raise RuntimeError(f"Niedozwolona ścieżka w definicji kursu: {wzgledna}")
+        p = Path(mat) / wzgledna
+        if not p.is_file():
+            raise RuntimeError(f"W materiałach kursu nie ma pliku {wzgledna}.")
+        oczekiwana = sha256
+        if not oczekiwana:
+            integ = Path(mat) / "INTEGRITY.json"
+            if integ.is_file():
+                try:
+                    oczekiwana = (json.loads(integ.read_text(encoding="utf-8")) or {}).get(wzgledna)
+                except (OSError, ValueError):
+                    oczekiwana = None
+        if not oczekiwana:
+            raise RuntimeError(f"Plik {wzgledna} nie ma sumy kontrolnej w manifeście ani w INTEGRITY.json paczki — Mentor go nie uruchomi.")
+        rzeczywista = _sha256(p)
+        if rzeczywista.lower() != str(oczekiwana).lower():
+            raise RuntimeError(f"Suma SHA-256 pliku {wzgledna} nie zgadza się z zadeklarowaną — plik zmieniony lub paczka uszkodzona; zaimportuj kurs ponownie.")
+        return p, rzeczywista
+
+    # --- lokalne API kursu (serwer edukacyjny z paczki) --------------------------
+    def api_lokalne(self):
+        return self.wym.get("api_lokalne")
+
+    def api_stan(self):
+        """{'dziala': bool, 'url': str, 'health': str|None, 'pid': int|None}."""
+        api = self.api_lokalne()
+        if not api:
+            return {"dziala": False, "url": "", "health": None, "pid": None}
+        proc = API_PROCESY.get(self.id)
+        url = f"http://127.0.0.1:{api['port']}"
+        dziala = proc is not None and proc.poll() is None
+        return {"dziala": dziala, "url": url, "health": url + api["health"], "pid": proc.pid if dziala else None}
+
+    def api_sprawdz(self, timeout=5):
+        """Realne żądanie GET na health — (kod, treść) albo (None, komunikat błędu)."""
+        st = self.api_stan()
+        if not st["health"]:
+            return None, "Kurs nie deklaruje lokalnego API."
+        try:
+            with urllib.request.urlopen(urllib.request.Request(st["health"], headers={"User-Agent": "Mentor"}), timeout=timeout) as r:
+                return r.status, r.read(2000).decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            return e.code, e.read(2000).decode("utf-8", "replace")
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            return None, str(getattr(e, "reason", e))
+
+    def api_uruchom(self, log=None):
+        """Uruchamia serwer z paczki interpreterem kursu — po weryfikacji sumy skryptu, na 127.0.0.1, tylko na żądanie ucznia. Zwraca (ok, komunikat)."""
+        api = self.api_lokalne()
+        if not api:
+            return False, "Kurs nie deklaruje lokalnego API."
+        st = self.api_stan()
+        if st["dziala"]:
+            return True, f"Serwer już działa: {st['url']}"
+        pv, opis = self.interpreter_ucznia()
+        if not pv:
+            return False, "Brak interpretera kursu — najpierw przygotuj środowisko."
+        try:
+            skrypt, suma = self.plik_paczki(api["skrypt"], api.get("sha256"))
+        except RuntimeError as e:
+            return False, str(e)
+        with socket.socket() as sk:
+            if sk.connect_ex(("127.0.0.1", api["port"])) == 0:
+                return False, f"Port {api['port']} jest już zajęty przez inny program — zamknij go albo zatrzymaj poprzedni serwer."
+        try:
+            proc = subprocess.Popen([str(pv), "-X", "utf8", "-I", str(skrypt)], cwd=str(skrypt.parent), stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                                    stderr=subprocess.PIPE, env=_env_czysty(self.env_ucznia()), **_flagi())
+        except OSError as e:
+            return False, f"Nie udało się uruchomić serwera: {e}"
+        API_PROCESY[self.id] = proc
+        for _ in range(60):
+            time.sleep(0.25)
+            if proc.poll() is not None:
+                err = proc.stderr.read().decode("utf-8", "replace")[-600:] if proc.stderr else ""
+                API_PROCESY.pop(self.id, None)
+                return False, "Serwer zakończył się od razu:\n" + err
+            with socket.socket() as sk:
+                if sk.connect_ex(("127.0.0.1", api["port"])) == 0:
+                    break
+        kod, tresc = self.api_sprawdz()
+        msg = f"Serwer działa: {self.api_stan()['url']} (skrypt {api['skrypt']}, SHA-256 {suma[:12]}…, {opis}); health: {kod} {tresc[:80]}"
+        self.loguj("API: " + msg)
+        if log:
+            log(msg)
+        return True, msg
+
+    def api_zatrzymaj(self):
+        proc = API_PROCESY.pop(self.id, None)
+        if proc is None:
+            return False, "Serwer nie był uruchomiony."
+        if proc.poll() is None:
+            _zabij(proc)
+        self.loguj("API: zatrzymano serwer")
+        return True, "Serwer zatrzymany."
+
+
+API_PROCESY = {}
+
+
+def _zatrzymaj_wszystkie_api():
+    for proc in list(API_PROCESY.values()):
+        try:
+            if proc.poll() is None:
+                _zabij(proc)
+        except OSError:
+            pass
+    API_PROCESY.clear()
+
+
+atexit.register(_zatrzymaj_wszystkie_api)
 
 
 class TestPominiety(RuntimeError):

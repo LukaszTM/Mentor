@@ -91,6 +91,10 @@ def zbuduj(app, parent):
     st["przyciski"] = r
     _przyciski(app, r, sr)
 
+    # --- lokalny serwer API kursu (gdy kurs go deklaruje)
+    if sr.api_lokalne():
+        _karta_api(app, parent, sr)
+
     # --- tabela statusów
     z, k = M.karta(parent, tytul="Składniki środowiska — statusy z realnych uruchomień, nie z PATH")
     z.pack(fill="x", padx=28, pady=(12, 0))
@@ -125,6 +129,72 @@ def zbuduj(app, parent):
     M.przycisk(r, "Pokaż szczegóły (pełny log)", lambda: _pokaz_log(app), "drugi").pack(side="left")
     if st.get("watek") and st["watek"].is_alive() and not st.get("poll"):
         _poll(app)
+
+
+def _karta_api(app, parent, sr):
+    """Lokalny serwer API z paczki: uruchamiany TYLKO przyciskiem, po weryfikacji sumy skryptu, na 127.0.0.1; Zatrzymaj; Sprawdź API (realne GET /health)."""
+    M = _M()
+    K = M.K
+    st = _stan(app)
+    api = sr.api_lokalne()
+    z, k = M.karta(parent, tytul="Lokalny serwer API kursu")
+    z.pack(fill="x", padx=28, pady=(12, 0))
+    M.etykieta(k, f"Skrypt z paczki: {api['skrypt']} · adres: http://127.0.0.1:{api['port']} · tylko ten komputer (127.0.0.1), uruchamiany interpreterem kursu "
+                  "po sprawdzeniu sumy SHA-256 z manifestu/INTEGRITY.json — nigdy automatycznie." + (f"\n{api['opis']}" if api.get("opis") else ""), 9, kolor=K["szary"], wrap=860).pack(fill="x")
+    lbl = M.etykieta(k, "", 10, bold=True)
+    lbl.pack(fill="x", pady=(6, 0))
+    st["api_lbl"] = lbl
+
+    def odswiez():
+        s_ = sr.api_stan()
+        if s_["dziala"]:
+            lbl.configure(text=f"● DZIAŁA — {s_['url']} (PID {s_['pid']})", fg=K["ziel"])
+        else:
+            lbl.configure(text="○ nie uruchomiony", fg=K["szary"])
+
+    def uruchom():
+        if sr.api_stan()["dziala"]:
+            odswiez()
+            return
+        try:
+            sk, suma = sr.plik_paczki(api["skrypt"], api.get("sha256"))
+        except RuntimeError as e:
+            messagebox.showerror("Lokalne API", str(e), parent=app)
+            return
+        if not messagebox.askyesno("Uruchomić lokalne API kursu?",
+                                   f"Mentor uruchomi skrypt z paczki kursu interpreterem kursu:\n{sk}\nSHA-256: {suma[:16]}… (zgodna z paczką)\n\n"
+                                   f"Serwer będzie dostępny tylko lokalnie: http://127.0.0.1:{api['port']} — do ćwiczeń z HTTP/API. "
+                                   "Zatrzymasz go przyciskiem „Zatrzymaj” (zatrzymuje się też przy zamknięciu Mentora).", parent=app):
+            return
+        ok, msg = sr.api_uruchom(log=lambda t: _dodaj_log(app, t))
+        (messagebox.showinfo if ok else messagebox.showerror)("Lokalne API", msg, parent=app)
+        odswiez()
+
+    def zatrzymaj():
+        ok, msg = sr.api_zatrzymaj()
+        _dodaj_log(app, "API: " + msg)
+        odswiez()
+
+    def sprawdz():
+        kod, tresc = sr.api_sprawdz()
+        s_ = sr.api_stan()
+        if kod is None:
+            messagebox.showwarning("Sprawdź API", f"GET {s_['health']} nie odpowiada: {tresc}\n\nUruchom serwer przyciskiem „Uruchom”.", parent=app)
+        else:
+            messagebox.showinfo("Sprawdź API", f"GET {s_['health']}\nkod odpowiedzi: {kod}\ntreść: {tresc[:300]}", parent=app)
+        _dodaj_log(app, f"API: GET {s_['health']} → {kod} {tresc[:80]}")
+        odswiez()
+
+    def w_przegladarce():
+        import webbrowser
+        webbrowser.open(sr.api_stan()["health"])
+    r = tk.Frame(k, bg=K["karta"])
+    r.pack(fill="x", pady=(8, 0))
+    M.przycisk(r, "▶ Uruchom", uruchom, "glowny").pack(side="left")
+    M.przycisk(r, "■ Zatrzymaj", zatrzymaj, "drugi").pack(side="left", padx=8)
+    M.przycisk(r, "Sprawdź API (GET /health)", sprawdz, "drugi").pack(side="left")
+    M.przycisk(r, "Otwórz w przeglądarce", w_przegladarce, "drugi").pack(side="left", padx=8)
+    odswiez()
 
 
 def _przyciski(app, r, sr):

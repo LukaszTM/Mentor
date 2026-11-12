@@ -22,6 +22,7 @@ Zadanie bez pola „cwiczenie”, ale z plikiem .py w „pliki”, dostaje pasek
 import datetime as dt
 import os
 import queue
+import re
 import shutil
 import subprocess
 import sys
@@ -36,10 +37,11 @@ import srodowisko as S
 from program import P, katalog_materialow
 
 WINDOWS = sys.platform.startswith("win")
-RODZAJE = ("uruchom_bez_bledu", "wyjscie_zawiera", "pytest", "plik_istnieje")
+RODZAJE = ("uruchom_bez_bledu", "wyjscie_zawiera", "pytest", "plik_istnieje", "test_zewnetrzny")
 STATUS_ZALICZONE = "zaliczone"
 STATUS_WYMAGA = "wymaga_sprawdzenia"
 STATUS_BLAD = "blad"
+STATUS_OCENA = "ocena_reczna"       # uczeń ocenił wg rubryki i zapisał dowody — nie jest to „zaliczone automatycznie"
 
 
 def _M():
@@ -58,8 +60,13 @@ def definicja(zad):
     if not plik or not isinstance(plik, str) or "/" in plik or "\\" in plik or plik.startswith("."):
         return None
     spr = (c or {}).get("sprawdzenie") or {"rodzaj": "plik_istnieje"}
+    if isinstance(spr, dict) and spr.get("rodzaj") in ("testy_zewnetrzne", "test_zewnetrzny"):
+        spr = dict(spr, rodzaj="test_zewnetrzny")
     if not isinstance(spr, dict) or spr.get("rodzaj") not in RODZAJE:
         spr = {"rodzaj": "plik_istnieje"}
+    rubryka = (c or {}).get("rubryka") or zad.get("rubryka")
+    if not isinstance(rubryka, list):
+        rubryka = None
     return {
         "plik": plik,
         "alternatywy": [p for p in pliki_py if p != plik],
@@ -69,6 +76,7 @@ def definicja(zad):
         "podpowiedz": (c or {}).get("podpowiedz"),
         "stdin": (c or {}).get("stdin") or spr.get("stdin") or "",
         "sprawdzenie": spr,
+        "rubryka": rubryka,
     }
 
 
@@ -304,6 +312,8 @@ def wykonaj_sprawdzenie(sr, d, plik, anuluj=None):
     if rodzaj == "plik_istnieje":
         return {"status": STATUS_WYMAGA, "opis": "Plik istnieje — wymaga sprawdzenia", "szczegoly": "To zadanie nie ma automatycznego testu: porównaj wynik z „Gotowe, gdy” i odhacz samodzielnie.", "data": teraz}
     limit = int(spr.get("limit_s") or 20)
+    if rodzaj == "test_zewnetrzny":
+        return _test_zewnetrzny(sr, d, plik, spr, max(limit, 60), anuluj, teraz)
     if rodzaj == "pytest":
         cel = plik.parent / (spr.get("plik_testu") or plik.name)
         if "/" in str(spr.get("plik_testu") or "") or ".." in str(spr.get("plik_testu") or ""):
@@ -349,17 +359,79 @@ def wykonaj_sprawdzenie(sr, d, plik, anuluj=None):
     return {"status": STATUS_ZALICZONE, "opis": "Zaliczone — program działa bez błędu" + (f" (dane: {wejscie.strip().replace(chr(10), ', ')})" if wejscie.strip() else ""), "szczegoly": szcz, "data": teraz}
 
 
+def _test_zewnetrzny(sr, d, plik, spr, limit, anuluj, teraz):
+    """Niezależny test zachowania z paczki kursu (np. WERYFIKATORY/test_zachowania.py): plik testu jest weryfikowany sumą SHA-256
+    (manifest/INTEGRITY.json), kopiowany do tymczasowego katalogu tylko do odczytu i uruchamiany pytestem w środowisku kursu z limitem czasu.
+    Katalog roboczy ucznia trafia do testu przez MENTOR_WORKSPACE. Zaliczenie wyłącznie po przejściu wybranych testów."""
+    import stat
+    import tempfile
+    try:
+        zrodlo, suma = sr.plik_paczki(spr.get("plik_testu") or "", spr.get("sha256"))
+    except RuntimeError as e:
+        return {"status": STATUS_BLAD, "opis": "Test z paczki nie może być uruchomiony: " + str(e), "szczegoly": "", "data": teraz}
+    wybor = str(spr.get("wybor") or spr.get("test") or "").strip()
+    with tempfile.TemporaryDirectory(prefix="mentor_test_") as td:
+        cel = Path(td) / zrodlo.name
+        shutil.copy2(zrodlo, cel)
+        try:
+            cel.chmod(stat.S_IREAD)
+        except OSError:
+            pass
+        for dodatkowy in spr.get("pliki_dodatkowe") or []:
+            try:
+                z2, _ = sr.plik_paczki(dodatkowy)
+                shutil.copy2(z2, Path(td) / Path(dodatkowy).name)
+            except RuntimeError as e:
+                return {"status": STATUS_BLAD, "opis": "Test z paczki nie może być uruchomiony: " + str(e), "szczegoly": "", "data": teraz}
+        args = ["-X", "utf8", "-m", "pytest", "-q", "-p", "no:cacheprovider", "--rootdir", td, "-o", "addopts=", cel.name]
+        if wybor:
+            args += ["-k", wybor]
+        kod, out, err = sr.uruchom_w_srodowisku(args, cwd=td, limit=limit, anuluj=anuluj, env_extra={"MENTOR_WORKSPACE": str(plik.parent), "PYTHONDONTWRITEBYTECODE": "1"})
+    tekst = (out + "\n" + err).strip()
+    ostatnia = out.strip().splitlines()[-1][:100] if out.strip() else ""
+    opis_testu = f"{Path(spr.get('plik_testu')).name}" + (f" -k {wybor}" if wybor else "")
+    if kod == 0 and "passed" in out and "failed" not in ostatnia:
+        return {"status": STATUS_ZALICZONE, "opis": f"Zaliczone — niezależne testy z paczki ({opis_testu}): {ostatnia}", "szczegoly": f"SHA-256 testu: {suma}\n" + tekst[-2500:], "data": teraz}
+    if kod == -2 or "No module named pytest" in err:
+        return {"status": STATUS_BLAD, "opis": "pytest nie jest dostępny w środowisku kursu — zakładka Środowisko → Zainstaluj brakujące", "szczegoly": tekst[-2000:], "data": teraz}
+    if kod == -1:
+        return {"status": STATUS_BLAD, "opis": "Testy przerwane (limit czasu lub anulowanie)", "szczegoly": tekst[-3000:], "data": teraz}
+    brak = re.search(r"AssertionError: Brak pliku .*?([\w.-]+\.py)", out)
+    if brak:
+        return {"status": STATUS_BLAD, "opis": f"Testy nie znalazły pliku {brak.group(1)} w katalogu roboczym", "szczegoly": tekst[-2000:], "data": teraz}
+    m = re.search(r"AssertionError: Brak funkcji (\w+)", out)
+    if m:
+        return {"status": STATUS_BLAD, "opis": f"W pliku brakuje funkcji {m.group(1)} (nazwa z kontraktu zadania)", "szczegoly": tekst[-3000:], "data": teraz}
+    if "failed" in ostatnia or "error" in ostatnia.lower():
+        m2 = re.search(r"(\d+) failed", ostatnia)
+        return {"status": STATUS_BLAD, "opis": f"Niezależne testy nie przechodzą ({opis_testu}): " + (f"{m2.group(1)} przypadków czerwonych — " if m2 else "") + "zobacz szczegóły (dane wejściowe → oczekiwany wynik)", "szczegoly": tekst[-4000:], "data": teraz}
+    if "no tests ran" in out or ("deselected" in ostatnia and "passed" not in ostatnia):
+        return {"status": STATUS_BLAD, "opis": f"Nie znaleziono testów dla tego zadania ({opis_testu}) — błąd definicji kursu", "szczegoly": tekst[-2000:], "data": teraz}
+    return {"status": STATUS_BLAD, "opis": f"Niezależne testy nie przechodzą ({opis_testu}): {ostatnia}", "szczegoly": tekst[-4000:], "data": teraz}
+
+
+def _rubryka(zad, d):
+    """Kryteria ręcznej oceny: jawna „rubryka” albo zdania z „Gotowe, gdy”."""
+    if d.get("rubryka"):
+        return [str(x) for x in d["rubryka"] if str(x).strip()]
+    tekst = (zad.get("sprawdz") or "").strip()
+    czesci = [c.strip(" .;") for c in re.split(r"(?<=[.;])\s+(?=[A-ZĄĆĘŁŃÓŚŹŻ„0-9])", tekst) if c.strip(" .;")]
+    return czesci or ["Zadanie wykonane zgodnie z opisem"]
+
+
 # ============================================================ pasek przy zadaniu
 def zbuduj_pasek(app, parent, zad, bg, wrap):
     """Dodaje do karty zadania pasek „Ćwiczenie w Mentorze”. Zwraca True, gdy zadanie ma ćwiczenie."""
     M = _M()
     K = M.K
     d = definicja(zad)
-    if not d:
-        return False
     sr = S.srodowisko_programu(P)
     if not sr.wymaga_srodowiska():
         return False
+    if not d:
+        if not (zad.get("pliki") or zad.get("rubryka")) or not zad.get("sprawdz"):
+            return False
+        return _pasek_rubryki(app, parent, zad, bg, wrap)
     box = tk.Frame(parent, bg=bg)
     box.pack(fill="x", padx=(26, 0), pady=(8, 0))
     praca = katalog_pracy(app)
@@ -375,8 +447,9 @@ def zbuduj_pasek(app, parent, zad, bg, wrap):
     tk.Label(g, text="🧪 Ćwiczenie w Mentorze · " + d["plik"], font=M.czc(9, "bold"), bg=bg, fg=K["akcent"], anchor="w").pack(side="left")
     wynik = (app.stan.d.get("sprawdzenia") or {}).get(zad["id"])
     if wynik:
-        kol = {STATUS_ZALICZONE: ("ziel_tlo", "ziel"), STATUS_WYMAGA: ("zolty", "pomar"), STATUS_BLAD: ("czerw_tlo", "czerw")}.get(wynik["status"], ("jasny", "szary"))
-        pl = M.plakietka(g, {STATUS_ZALICZONE: "✔ ZALICZONE AUTOMATYCZNIE", STATUS_WYMAGA: "PLIK ISTNIEJE — WYMAGA SPRAWDZENIA", STATUS_BLAD: "✖ SPRAWDZENIE NIE PRZESZŁO"}.get(wynik["status"], wynik["status"]) + f" · {wynik['data'][:16].replace('T', ' ')}", K[kol[0]], K[kol[1]])
+        kol = {STATUS_ZALICZONE: ("ziel_tlo", "ziel"), STATUS_WYMAGA: ("zolty", "pomar"), STATUS_BLAD: ("czerw_tlo", "czerw"), STATUS_OCENA: ("nieb_tlo", "nieb")}.get(wynik["status"], ("jasny", "szary"))
+        pl = M.plakietka(g, {STATUS_ZALICZONE: "✔ ZALICZONE AUTOMATYCZNIE", STATUS_WYMAGA: "PLIK ISTNIEJE — WYMAGA SPRAWDZENIA", STATUS_BLAD: "✖ SPRAWDZENIE NIE PRZESZŁO",
+                             STATUS_OCENA: ("✔ OCENA WŁASNA WG RUBRYKI" if wynik.get("wszystkie") else "OCENA WŁASNA — CZĘŚCIOWO")}.get(wynik["status"], wynik["status"]) + f" · {wynik['data'][:16].replace('T', ' ')}", K[kol[0]], K[kol[1]])
         pl.pack(side="left", padx=8)
         pl.bind("<Button-1>", lambda e, w=wynik: _pokaz_szczegoly(app, zad, w))
         pl.configure(cursor="hand2")
@@ -393,11 +466,37 @@ def zbuduj_pasek(app, parent, zad, bg, wrap):
     r.pack(fill="x")
     M.przycisk(r, "▶ Uruchom", lambda: uruchom(app, zad, d), "glowny").pack(side="left", padx=(0, 6), pady=2)
     M.przycisk(r, "✔ Sprawdź wynik", lambda: sprawdz(app, zad, d), "drugi").pack(side="left", padx=(0, 6), pady=2)
-    opis_spr = {"plik_istnieje": "bez automatycznego testu — „Sprawdź wynik” potwierdzi tylko, że plik istnieje",
+    opis_spr = {"plik_istnieje": "bez automatycznego testu — „Sprawdź wynik” potwierdza istnienie pliku i otwiera rubrykę oceny własnej z polem dowodów",
                 "uruchom_bez_bledu": "test: program musi zakończyć się bez błędu",
                 "wyjscie_zawiera": "test: program musi wypisać oczekiwane wartości" + (" dla danych: " + _rok(d["sprawdzenie"].get("stdin") or d["stdin"]).strip().replace("\n", ", ") if (d["sprawdzenie"].get("stdin") or d["stdin"]) else ""),
-                "pytest": "test: pytest w środowisku kursu musi być zielony"}[d["sprawdzenie"]["rodzaj"]]
+                "pytest": "test: pytest w środowisku kursu musi być zielony",
+                "test_zewnetrzny": "test: niezależne testy zachowania z paczki kursu (" + str(d["sprawdzenie"].get("plik_testu", "")) + (", " + str(d["sprawdzenie"].get("wybor")) if d["sprawdzenie"].get("wybor") else "") + ") — weryfikowane sumą SHA-256, uruchamiane w izolacji"}[d["sprawdzenie"]["rodzaj"]]
     tk.Label(box, text=opis_spr + " · uruchamianie: interpreter kursu, limit czasu, bez terminala", font=M.czc(8), bg=bg, fg=K["szary"], anchor="w", wraplength=max(200, wrap - 40), justify="left").pack(fill="x", pady=(2, 0))
+    return True
+
+
+def _pasek_rubryki(app, parent, zad, bg, wrap):
+    """Zadanie bez pliku .py (notatki, dokumenty, konfiguracja): ocena własna wg „Gotowe, gdy” z polem dowodów — bez automatycznego zaliczenia."""
+    M = _M()
+    K = M.K
+    box = tk.Frame(parent, bg=bg)
+    box.pack(fill="x", padx=(26, 0), pady=(8, 0))
+    g = tk.Frame(box, bg=bg)
+    g.pack(fill="x")
+    tk.Label(g, text="📋 Ocena własna · " + ", ".join(zad.get("pliki") or [])[:60], font=M.czc(9, "bold"), bg=bg, fg=K["akcent"], anchor="w").pack(side="left")
+    wynik = (app.stan.d.get("sprawdzenia") or {}).get(zad["id"])
+    if wynik and wynik.get("status") == STATUS_OCENA:
+        pl = M.plakietka(g, ("✔ OCENA WŁASNA WG RUBRYKI" if wynik.get("wszystkie") else "OCENA WŁASNA — CZĘŚCIOWO") + f" · {wynik['data'][:16].replace('T', ' ')}", K["nieb_tlo"], K["nieb"])
+        pl.pack(side="left", padx=8)
+        pl.bind("<Button-1>", lambda e, w=wynik: _pokaz_szczegoly(app, zad, w))
+        pl.configure(cursor="hand2")
+    r = tk.Frame(box, bg=bg)
+    r.pack(fill="x", pady=(4, 0))
+    d = {"rubryka": zad.get("rubryka") if isinstance(zad.get("rubryka"), list) else None}
+    w0 = {"opis": "To zadanie nie ma automatycznego testu — oceń je sam według kryteriów i zapisz dowody.", "status": STATUS_WYMAGA}
+    M.przycisk(r, "📋 Oceń wg rubryki (kryteria + dowody)", lambda: _ocena_wlasna(app, zad, d, w0), "drugi").pack(side="left", padx=(0, 6), pady=2)
+    if app.stan.d.get("projekt"):
+        M.przycisk(r, "Otwórz katalog roboczy", lambda: app._otworz_folder(app.stan.d["projekt"]), "drugi").pack(side="left", pady=2)
     return True
 
 
@@ -531,6 +630,9 @@ def sprawdz(app, zad, d):
             okno.after(100, poll)
             return
         okno.destroy()
+        if w["status"] == STATUS_WYMAGA:
+            _ocena_wlasna(app, zad, d, w)
+            return
         app.stan.d.setdefault("sprawdzenia", {})[zad["id"]] = w
         if w["status"] == STATUS_ZALICZONE and not app.stan.zrobione(zad["id"]):
             app.stan.oznacz(zad, True)
@@ -545,6 +647,66 @@ def sprawdz(app, zad, d):
     okno.after(100, poll)
 
 
+def _ocena_wlasna(app, zad, d, w):
+    """Rubryka ręcznej oceny z polem dowodów — dla zadań bez niezależnego testu. Zapis oceny nie jest „zaliczeniem automatycznym”;
+    odhaczenie zadania następuje tylko, gdy uczeń potwierdzi WSZYSTKIE kryteria i wpisze, skąd wie, że działa."""
+    M = _M()
+    K = M.K
+    kryteria = _rubryka(zad, d)
+    poprzednia = (app.stan.d.get("sprawdzenia") or {}).get(zad["id"]) or {}
+    okno = tk.Toplevel(app)
+    okno.title("Ocena własna — " + zad["tytul"][:60])
+    okno.configure(bg=K["tlo"])
+    okno.geometry("760x560")
+    okno.transient(app)
+    tk.Label(okno, text=w["opis"], font=M.czc(11, "bold"), bg=K["tlo"], fg=K["pomar"], anchor="w", wraplength=720, justify="left").pack(fill="x", padx=12, pady=(12, 2))
+    tk.Label(okno, text="To zadanie nie ma niezależnego testu. Zaznacz tylko te kryteria, które SPRAWDZIŁEŚ (uruchomiłeś, porównałeś wynik), i opisz dowód — "
+                        "co zrobiłeś, jaki był wynik, gdzie to widać (plik, zrzut, commit). Zadanie odhacza się dopiero przy wszystkich kryteriach i wpisanym dowodzie.",
+             font=M.czc(9), bg=K["tlo"], fg=K["szary"], anchor="w", wraplength=720, justify="left").pack(fill="x", padx=12, pady=(0, 8))
+    ramka = tk.Frame(okno, bg=K["karta"], highlightbackground=K["ramka"], highlightthickness=1)
+    ramka.pack(fill="x", padx=12)
+    zmienne = []
+    zaznaczone = set((poprzednia.get("kryteria") or {}).keys()) if isinstance(poprzednia.get("kryteria"), dict) else set()
+    for kr in kryteria:
+        v = tk.BooleanVar(value=bool((poprzednia.get("kryteria") or {}).get(kr)))
+        zmienne.append((kr, v))
+        tk.Checkbutton(ramka, text=kr, variable=v, bg=K["karta"], activebackground=K["karta"], fg=K["tekst"], selectcolor=K["jasny"], anchor="w",
+                       justify="left", wraplength=680, font=M.czc(10), cursor="hand2").pack(fill="x", padx=10, pady=3)
+    tk.Label(okno, text="Dowody (co zrobiłem · jaki wynik · skąd wiem, że działa):", font=M.czc(9, "bold"), bg=K["tlo"], fg=K["tekst"], anchor="w").pack(fill="x", padx=12, pady=(10, 2))
+    dow = scrolledtext.ScrolledText(okno, height=7, font=M.czc(10), bg=K["karta"], fg=K["tekst"], relief="flat", wrap="word", highlightthickness=1, highlightbackground=K["ramka"])
+    dow.pack(fill="both", expand=True, padx=12)
+    dow.insert("1.0", poprzednia.get("dowody") or "")
+    r = tk.Frame(okno, bg=K["tlo"])
+    r.pack(fill="x", padx=12, pady=12)
+
+    def zapisz(odhacz):
+        kryt = {kr: bool(v.get()) for kr, v in zmienne}
+        dowody = dow.get("1.0", "end-1c").strip()
+        wszystkie = all(kryt.values())
+        if odhacz and not wszystkie:
+            messagebox.showwarning("Ocena własna", "Żeby odhaczyć zadanie, zaznacz wszystkie kryteria — albo zapisz ocenę częściową i wróć później.", parent=okno)
+            return
+        if odhacz and len(dowody) < 10:
+            messagebox.showwarning("Ocena własna", "Wpisz dowód (co najmniej jedno zdanie: co zrobiłeś i skąd wiesz, że działa).", parent=okno)
+            return
+        wynik = {"status": STATUS_OCENA, "opis": ("Ocena własna: wszystkie kryteria potwierdzone" if wszystkie else f"Ocena własna: {sum(kryt.values())}/{len(kryt)} kryteriów"),
+                 "szczegoly": "Kryteria:\n" + "\n".join(("[x] " if ok else "[ ] ") + k for k, ok in kryt.items()) + "\n\nDowody:\n" + dowody,
+                 "kryteria": kryt, "dowody": dowody, "wszystkie": wszystkie, "data": dt.datetime.now().isoformat(timespec="minutes")}
+        app.stan.d.setdefault("sprawdzenia", {})[zad["id"]] = wynik
+        if odhacz and not app.stan.zrobione(zad["id"]):
+            app.stan.oznacz(zad, True)
+            app._odznaki_popup() if hasattr(app, "_odznaki_popup") else None
+        app.stan.zapisz()
+        okno.destroy()
+        try:
+            app.pokaz_tydzien(next(t["tydzien"] for t in P.tygodnie if zad in t["zadania"]))
+        except StopIteration:
+            pass
+    M.przycisk(r, "✔ Zapisz ocenę i odhacz zadanie", lambda: zapisz(True), "glowny").pack(side="left")
+    M.przycisk(r, "Zapisz ocenę częściową", lambda: zapisz(False), "drugi").pack(side="left", padx=8)
+    M.przycisk(r, "Anuluj", okno.destroy, "drugi").pack(side="right")
+
+
 def _pokaz_szczegoly(app, zad, w):
     M = _M()
     K = M.K
@@ -553,10 +715,10 @@ def _pokaz_szczegoly(app, zad, w):
     okno.configure(bg=K["tlo"])
     okno.geometry("760x480")
     okno.transient(app)
-    kol = {STATUS_ZALICZONE: K["ziel"], STATUS_WYMAGA: K["pomar"], STATUS_BLAD: K["czerw"]}.get(w["status"], K["tekst"])
+    kol = {STATUS_ZALICZONE: K["ziel"], STATUS_WYMAGA: K["pomar"], STATUS_BLAD: K["czerw"], STATUS_OCENA: K["nieb"]}.get(w["status"], K["tekst"])
     tk.Label(okno, text=w["opis"], font=M.czc(11, "bold"), bg=K["tlo"], fg=kol, anchor="w", wraplength=720, justify="left").pack(fill="x", padx=12, pady=(12, 2))
     tk.Label(okno, text=f"{w['data'].replace('T', ' ')} · " + {STATUS_ZALICZONE: "zadanie odhaczone automatycznie", STATUS_WYMAGA: "odhacz samodzielnie, gdy wynik zgadza się z „Gotowe, gdy”",
-                                                           STATUS_BLAD: "popraw i kliknij „Sprawdź wynik” ponownie"}.get(w["status"], ""), font=M.czc(9), bg=K["tlo"], fg=K["szary"], anchor="w").pack(fill="x", padx=12)
+                                                           STATUS_BLAD: "popraw i kliknij „Sprawdź wynik” ponownie", STATUS_OCENA: "ocena własna wg rubryki — kliknij „Sprawdź wynik”, żeby ją zmienić"}.get(w["status"], ""), font=M.czc(9), bg=K["tlo"], fg=K["szary"], anchor="w").pack(fill="x", padx=12)
     t = scrolledtext.ScrolledText(okno, font=M.czc(9, mono=True), bg=K["karta"], fg=K["tekst"], relief="flat", highlightthickness=1, highlightbackground=K["ramka"])
     t.pack(fill="both", expand=True, padx=12, pady=8)
     t.insert("1.0", w.get("szczegoly") or "(brak dodatkowych informacji)")

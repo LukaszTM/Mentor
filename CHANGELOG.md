@@ -1,5 +1,27 @@
 # Zmiany w Mentorze
 
+## 2.7.2 — paczki z niezależnymi testami, lokalne API kursu, rubryka oceny własnej (na podstawie paczki AI Developer Lab 1.5)
+
+- **`sprawdzenie.rodzaj = "test_zewnetrzny"`**: niezależne testy zachowania z paczki kursu (np. `WERYFIKATORY/test_zachowania.py`, wybór testu przez `wybor` = `pytest -k`).
+  Plik testu jest weryfikowany sumą SHA-256 (z definicji zadania, manifestu lub `INTEGRITY.json` paczki — bez sumy nie jest uruchamiany), kopiowany do katalogu
+  tymczasowego tylko do odczytu i uruchamiany pytestem interpreterem kursu z limitem czasu; katalog roboczy ucznia trafia do testu przez `MENTOR_WORKSPACE`.
+  Zaliczenie wyłącznie po zielonych testach; czytelne komunikaty: brak pliku, brak funkcji z kontraktu, liczba czerwonych przypadków, zmieniony plik testu.
+- **Lokalny serwer API kursu** (`srodowisko.api_lokalne` / manifest `local_api`): karta w zakładce Środowisko — Uruchom (po potwierdzeniu; Mentor pokazuje skrypt
+  i sumę SHA-256), Zatrzymaj, Sprawdź API (prawdziwe GET /health), Otwórz w przeglądarce. Skrypt z paczki uruchamiany interpreterem kursu, tylko 127.0.0.1,
+  nigdy automatycznie; zatrzymywany przy zamknięciu Mentora.
+- **Zmienne dla kodu ucznia** przy każdym uruchomieniu i w terminalu z Mentora: `MENTOR_WORKSPACE`, `MENTOR_COURSE_ROOT`, `MENTOR_SANDBOX_HTML`, `MENTOR_API_URL`
+  — kurs trzymany poza PRACA (Dokumenty\Mentor\<kurs>\PRACA) może wskazać swoje materiały bez zgadywania ścieżek.
+- **Rubryka oceny własnej z dowodami**: zadania bez niezależnego testu („Plik istnieje — wymaga sprawdzenia”) i zadania bez pliku `.py` dostają dialog z kryteriami
+  (pole `rubryka` albo zdania z „Gotowe, gdy”) i polem dowodów; odhaczenie dopiero po potwierdzeniu wszystkich kryteriów i wpisaniu dowodu; status „ocena własna”
+  jest odróżniony od „zaliczone automatycznie”.
+- Manifest: `requirements.python_packages`, `local_api`, `sandbox_html`, `external_tests`; pole `srodowisko` programu uzupełnia manifest; priorytet pakietów:
+  manifest → lock paczki → `srodowisko` programu → requirements.
+- Testy: `testy/test_paczka_zaawansowana.py` (pakiety z manifestu, weryfikacja sum, test_zewnetrzny: zaliczenie/porażka/brak funkcji/zmieniony test/zły wybór,
+  start/stop/health lokalnego API, odrzucenie skryptu ze złą sumą, rubryka).
+- **Paczka AI Developer Lab 1.5 → 1.5.1** (dostarczona osobno): 12 ćwiczeń z kontraktem używa `test_zewnetrzny`, zadeklarowane lokalne API i sandbox HTML, ścieżki
+  do sandboxu przez `MENTOR_SANDBOX_HTML` (przykłady, szablony, lekcje, rozwiązania), teksty dopasowane do zakładek Mentora („Plan nauki”, karta API), manifest 1.5.1,
+  `INTEGRITY.json` przeliczony. Zweryfikowano: import, środowisko, 12 testów zielonych dla rozwiązań referencyjnych z paczki i czerwonych dla szablonów, API start/health/POST/stop.
+
 ## 2.7.1 — kurs Python → Junior QA dostosowany do środowiska w Mentorze
 
 - **Tydzień 0 przepisany**: zadanie 1 to „Środowisko kursu w Mentorze + Git” (Sprawdź ponownie → Zainstaluj brakujące → plan → zgoda → testy; Git z git-scm.com;

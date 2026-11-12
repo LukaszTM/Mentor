@@ -2085,6 +2085,7 @@ class Mentor(tk.Tk):
         if pv:
             env["PATH"] = str(pv.parent) + os.pathsep + env.get("PATH", "")
             env["VIRTUAL_ENV"] = str(sr.venv)
+        env.update(sr.env_ucznia(sciezka))     # MENTOR_WORKSPACE, MENTOR_COURSE_ROOT, MENTOR_SANDBOX_HTML, MENTOR_API_URL
         try:
             if WINDOWS:
                 subprocess.Popen(["cmd", "/k", "title Mentor - terminal kursu && echo Katalog roboczy: " + sciezka + " && " +

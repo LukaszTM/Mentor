@@ -141,14 +141,42 @@ def _parsuj_requirements(tekst):
     return pakiety, hashe, bledy
 
 
+def _api_lokalne(d):
+    """Deklaracja lokalnego serwera API kursu: {skrypt, port, health, sha256} albo None. Mentor uruchamia go TYLKO na żądanie ucznia,
+    interpreterem kursu, po weryfikacji sumy skryptu (manifest lub INTEGRITY.json) — nigdy przy imporcie."""
+    if not isinstance(d, dict) or not d:
+        return None
+    skrypt = d.get("skrypt") or d.get("script")
+    if not skrypt or not isinstance(skrypt, str):
+        return None
+    try:
+        skrypt = _sprawdz_nazwe(skrypt)
+    except BladPaczki:
+        return None
+    try:
+        port = int(d.get("port") or 8765)
+    except (TypeError, ValueError):
+        port = 8765
+    return {"skrypt": skrypt, "port": port, "health": str(d.get("health") or d.get("health_path") or "/health"), "sha256": d.get("sha256"),
+            "opis": str(d.get("opis") or d.get("description") or "")}
+
+
 def _wymagania_z_manifestu(man):
     r = man.get("requirements") or {}
     narz_opc = r.get("optional_tools") or []
+    pak = []
+    for x in r.get("python_packages") or []:
+        if isinstance(x, str):
+            pak.append({"nazwa": x.lower(), "wersja": None})
+        elif isinstance(x, dict) and x.get("name"):
+            pak.append({"nazwa": str(x["name"]).lower(), "wersja": x.get("version")})
     wym = {
         "zrodlo": "manifest",
         "python": r.get("python") or None,
         "lock": r.get("python_packages_lock") or None,
-        "pakiety": [],
+        "pakiety": pak,
+        "api_lokalne": _api_lokalne(man.get("local_api") or r.get("local_api")),
+        "sandbox_html": (str(man.get("sandbox_html")) if man.get("sandbox_html") else None),
         "narzedzia_wymagane": [str(x).lower() for x in (r.get("required_tools") or [])],
         "narzedzia_opcjonalne": [{"nazwa": str(x).lower(), "od_tygodnia": None} if isinstance(x, str) else {"nazwa": str(x.get("name", "")).lower(), "od_tygodnia": x.get("from_week")} for x in narz_opc],
         "przegladarka": (r.get("browser") or None),
@@ -173,6 +201,8 @@ def _wymagania_z_programu(dane):
         "pakiety": [{"nazwa": p, "wersja": None} if isinstance(p, str) else p for p in (s.get("pakiety") or [])],
         "narzedzia_wymagane": list(s.get("narzedzia_wymagane") or []),
         "narzedzia_opcjonalne": opc,
+        "api_lokalne": _api_lokalne(s.get("api_lokalne")),
+        "sandbox_html": s.get("sandbox_html"),
         "przegladarka": s.get("przegladarka"),
         "przegladarka_od_tygodnia": s.get("przegladarka_od_tygodnia"),
         "sprawdzenia": list(s.get("sprawdzenia") or []),
@@ -203,6 +233,17 @@ def wymagania_kursu(dane, manifest=None, requirements_txt=None, requirements_loc
     """Zaufana synteza wymagań: manifest → pole „srodowisko” programu → requirements(.lock/.txt) → heurystyka."""
     if manifest:
         wym = _wymagania_z_manifestu(manifest)
+        if not wym["pakiety"] and wym.get("lock") and requirements_lock:
+            pak, hashe, bledy = _parsuj_requirements(requirements_lock)
+            if hashe and pak:
+                wym["pakiety"] = pak        # manifest wskazuje lock paczki — lista pakietów z niego
+        z_programu = _wymagania_z_programu(dane) or {}
+        # manifest ma pierwszeństwo, ale pole „srodowisko” programu uzupełnia to, czego manifest nie podaje
+        for k in ("pakiety", "api_lokalne", "sandbox_html", "przegladarka", "przegladarka_od_tygodnia", "python", "sprawdzenia", "narzedzia_opcjonalne"):
+            if not wym.get(k) and z_programu.get(k):
+                wym[k] = z_programu[k]
+        if z_programu.get("uwagi"):
+            wym["uwagi"] = list(wym.get("uwagi") or []) + [u for u in z_programu["uwagi"] if u not in (wym.get("uwagi") or [])]
     else:
         wym = _wymagania_z_programu(dane)
     if wym is None:

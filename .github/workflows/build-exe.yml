@@ -1,0 +1,68 @@
+name: Build Mentor.exe
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Zainstaluj PyInstaller
+        run: pip install pyinstaller==6.11.1
+      - name: Zbuduj programy (ze źródeł, dla pewności)
+        run: python programy/zrodla/python_junior_qa/zbuduj.py
+      - name: Test importu i walidacji programu
+        run: python -c "import program; print(program.wczytaj('programy/python-junior-qa.json') or 'program OK')"
+      - name: PyInstaller
+        run: pyinstaller --clean --noconfirm mentor.spec
+      - name: Test uruchomienia exe (smoke)
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath "dist\Mentor.exe" -PassThru
+          Start-Sleep -Seconds 8
+          if ($p.HasExited) { Write-Error "Mentor.exe zakonczyl sie z kodem $($p.ExitCode)"; exit 1 }
+          Stop-Process -Id $p.Id -Force
+          Write-Host "Mentor.exe uruchamia sie poprawnie"
+      - name: Spakuj
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path pakiet\Mentor | Out-Null
+          Copy-Item dist\Mentor.exe pakiet\Mentor\
+          Copy-Item README.md pakiet\Mentor\
+          Copy-Item -Recurse programy pakiet\Mentor\programy
+          Remove-Item -Recurse -Force pakiet\Mentor\programy\zrodla\python_junior_qa\__pycache__ -ErrorAction SilentlyContinue
+          Compress-Archive -Path pakiet\Mentor -DestinationPath Mentor-windows.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Mentor-windows
+          path: |
+            dist/Mentor.exe
+            Mentor-windows.zip
+      - name: Release (najnowsza wersja)
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || 'latest' }}
+          name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || 'Mentor — najnowsza wersja' }}
+          prerelease: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+          body: |
+            **Mentor.exe** — interaktywny nauczyciel (Windows 10/11, 64-bit, bez instalacji).
+
+            Pobierz `Mentor.exe` (sam program; przy pierwszym uruchomieniu rozpakuje wbudowany program nauki do folderu `programy/` obok siebie)
+            albo `Mentor-windows.zip` (exe + README + programy ze źródłami).
+
+            Windows SmartScreen może ostrzec przy pierwszym uruchomieniu (plik bez podpisu): „Więcej informacji” → „Uruchom mimo to”.
+            Dane zapisują się w `mentor_dane.json` obok exe.
+          files: |
+            dist/Mentor.exe
+            Mentor-windows.zip

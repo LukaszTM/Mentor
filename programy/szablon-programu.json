@@ -1,0 +1,165 @@
+{
+ "format": "mentor-program/1",
+ "id": "moj-program",
+ "nazwa": "Mój program nauki",
+ "podtytul": "np. 4 tygodnie · czego i po co",
+ "opis": "Jedno–dwa zdania: co uczeń potrafi po ukończeniu.",
+ "autor": "",
+ "wersja": "1.0",
+ "katalog_projektu": "moj-projekt",
+ "czas_dziennie_min": 60,
+ "zasady": [
+  "Najpierw próbujesz sam, potem pytasz.",
+  "Przepisuj, nie kopiuj."
+ ],
+ "etapy": [
+  {
+   "nr": 0,
+   "nazwa": "Podstawy",
+   "tygodnie": [
+    0,
+    1
+   ],
+   "cel": "Co uczeń umie po etapie."
+  }
+ ],
+ "tygodnie": [
+  {
+   "tydzien": 0,
+   "etap": 0,
+   "tytul": "Tytuł tygodnia",
+   "tematy": "temat A, temat B",
+   "rola_asystenta": "Co asystent może, a czego nie może robić w tym tygodniu.",
+   "lekcje": [
+    "lekcja-1"
+   ],
+   "zadania": [
+    {
+     "id": "t0z1",
+     "tytul": "Nazwa zadania",
+     "opis": "Jedno zdanie, co ma powstać.",
+     "kroki": [
+      "Krok 1 — konkretnie, z komendami/kliknięciami.",
+      "Krok 2.",
+      "Krok 3."
+     ],
+     "sprawdz": "Jak samemu sprawdzić, że gotowe.",
+     "problemy": [
+      "Typowy problem → co zrobić."
+     ],
+     "pliki": [
+      "plik_do_wykrycia.py"
+     ],
+     "xp": 10,
+     "czas_min": 45
+    },
+    {
+     "id": "t0z2",
+     "tytul": "Zadanie tygodnia (większe)",
+     "opis": "",
+     "kroki": [
+      "…"
+     ],
+     "sprawdz": "",
+     "pliki": [],
+     "xp": 25,
+     "czas_min": 90
+    }
+   ]
+  }
+ ],
+ "lekcje": [
+  {
+   "id": "lekcja-1",
+   "tydzien": 0,
+   "nazwa": "Nazwa lekcji",
+   "slowa": [
+    "słowa",
+    "kluczowe",
+    "do rozpoznania w promptach"
+   ],
+   "wyjasnienie": "Krótka lekcja: 2–4 akapity z przykładami z życia ucznia.",
+   "przyklad": "kod lub przykład krok po kroku",
+   "zadania": [
+    "Zadanie łatwe.",
+    "Średnie.",
+    "Trudniejsze."
+   ],
+   "pytania": [
+    [
+     "Pytanie otwarte?",
+     "Wzorcowa odpowiedź."
+    ]
+   ],
+   "pulapki": [
+    "Na co uważać."
+   ],
+   "test": [
+    {
+     "p": "Pytanie zamknięte?",
+     "o": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "odp": 1,
+     "w": "Wyjaśnienie poprawnej odpowiedzi."
+    }
+   ]
+  }
+ ],
+ "quizy": {
+  "0": [
+   {
+    "p": "Pytanie z tygodnia 0?",
+    "o": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "odp": 0,
+    "w": "Dlaczego A."
+   }
+  ]
+ },
+ "checklista": [
+  {
+   "po": "Po tygodniu 0",
+   "punkty": [
+    "Umiem X bez pomocy."
+   ]
+  }
+ ],
+ "prompty": [
+  {
+   "nazwa": "Nowy temat",
+   "kiedy": "Początek dnia",
+   "tresc": "Uczę się [temat]. Wytłumacz i daj 3 zadania bez rozwiązań."
+  }
+ ],
+ "sciaga": [
+  {
+   "tytul": "Skróty",
+   "pozycje": [
+    [
+     "komenda",
+     "co robi"
+    ]
+   ]
+  }
+ ],
+ "linki": [
+  [
+   "Dokumentacja",
+   "https://example.org"
+  ]
+ ],
+ "wskazowki": [
+  "Jedna zasada nauki dziennie."
+ ],
+ "motywacja_powrot": [
+  "Dobrze, że jesteś."
+ ]
+}

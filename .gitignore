@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+mentor_dane.json
+build/
+dist/
+*_z_bledem.py
+cwiczenie_debug.py
+.venv/

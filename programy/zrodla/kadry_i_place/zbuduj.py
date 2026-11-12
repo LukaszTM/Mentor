@@ -88,9 +88,9 @@ def zbuduj():
         "opis": "Po 12 tygodniach samodzielnie prowadzisz kadry i płace firmy zatrudniającej kilkadziesiąt osób: zawierasz i rozwiązujesz umowy, "
                 "rozliczasz czas pracy i urlopy, liczysz listę płac od brutto do netto, zasiłki, ekwiwalenty i potrącenia, składasz dokumenty do ZUS, US, PFRON, "
                 "prowadzisz ZFŚS i PPK, wdrażasz procedury wymagane w 2026 r. (staż z zleceń, kontrola L4, mobbing, jawność wynagrodzeń, sygnaliści) "
-                "i przygotowujesz firmę do kontroli PIP/ZUS. Wszystko na fikcyjnej firmie AGRO-MLEKO RADZYŃ, z liczbami obowiązującymi w 2026 r. "
+                "i przygotowujesz firmę do kontroli PIP/ZUS. Wszystko na fikcyjnej firmie AGRO-MLEKO, z liczbami obowiązującymi w 2026 r. "
                 "i podstawą prawną przy każdej liczbie. Uczysz się z asystentem AI (Claude Code, API albo tryb offline): kazusy rozwiązujesz sam, asystent pyta i wskazuje przepisy.",
-        "autor": "Łukasz + Claude",
+        "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude, stan prawny XI 2026)",
         "wersja": "1.0",
         "jezyk": "pl",
         "katalog_projektu": "kadry-praktyka",

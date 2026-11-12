@@ -839,14 +839,14 @@ class Mentor(tk.Tk):
         w = self._strona("")
         for ch in w.winfo_children():
             ch.destroy()
-        imie = self.stan.d["imie"] or "programisto"
+        imie = self.stan.d["imie"]
         s = self.stan.statystyki()
         d = dzis()
         godz = dt.datetime.now().hour
         powitanie = "Dzień dobry" if godz < 12 else ("Dobry wieczór" if godz >= 18 else "Cześć")
         gora = tk.Frame(w, bg=K["tlo"])
         gora.pack(fill="x", padx=28, pady=(24, 0))
-        tk.Label(gora, text=f"{powitanie}, {imie}!", font=czc(22, "bold"), bg=K["tlo"], fg=K["tekst"], anchor="w").pack(side="left")
+        tk.Label(gora, text=f"{powitanie}, {imie}!" if imie else f"{powitanie}!", font=czc(22, "bold"), bg=K["tlo"], fg=K["tekst"], anchor="w").pack(side="left")
         przycisk(gora, "❓ Jak zacząć", lambda: self.pokaz("start"), "drugi").pack(side="right")
         tk.Label(w, text=data_pl(d), font=czc(11), bg=K["tlo"], fg=K["szary"], anchor="w").pack(fill="x", padx=28)
 

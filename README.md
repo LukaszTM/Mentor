@@ -10,7 +10,7 @@ Własny program robisz w JSON (Ustawienia → „Zapisz pusty szablon programu�
 ## Uruchomienie
 
 1. Zainstaluj Pythona 3.10+ z python.org (zaznacz **Add Python to PATH**) — to i tak zadanie 1 z tygodnia 0.
-2. Rozpakuj folder `mentor_claude` gdziekolwiek (np. `C:\Users\Łukasz\mentor_claude`).
+2. Rozpakuj folder `mentor_claude` gdziekolwiek (np. `C:\Users\<użytkownik>\mentor_claude`).
 3. Kliknij dwukrotnie **`start_mentor.bat`** albo w terminalu:
 
    ```

@@ -770,7 +770,7 @@ def BUDUJ_zus(app, parent):
         m = f2.get("miesiac").strip()
         rca, rsa = rca_wiersze(), rsa_wiersze()
         s = kadry.dra_sumy(rca, rsa, par)
-        linie = [f"KOMPLET {f2.get('ident')} {m[5:7]} {m[:4]} — płatnik AGRO-MLEKO RADZYŃ sp. z o.o. (termin: 15. dnia następnego miesiąca)", "",
+        linie = [f"KOMPLET {f2.get('ident')} {m[5:7]} {m[:4]} — płatnik AGRO-MLEKO sp. z o.o. (termin: 15. dnia następnego miesiąca)", "",
                  "ZUS RCA (imienne raporty składkowe):", f"{'Osoba':<22}{'Kod':<7}{'Podst. ER':>10}{'Podst. CH':>10}{'Emer.':>9}{'Rent.':>8}{'Chor.':>8}{'Wyp.':>8}{'Zdrow.':>9}"]
         for x in rca:
             linie.append(f"{x['osoba'][:21]:<22}{x['kod']:<7}{kadry.fmt(x['podstawa_er']):>10}{kadry.fmt(x['podstawa_ch']):>10}{kadry.fmt(x['emer'] + x['emer_p']):>9}{kadry.fmt(x['rent'] + x['rent_p']):>8}{kadry.fmt(x['chor']):>8}{kadry.fmt(x['wyp']):>8}{kadry.fmt(x['zdr']):>9}")
@@ -910,7 +910,7 @@ def BUDUJ_pit(app, parent):
         zwol = s("zwolnione")
         skl = s("emer") + s("rent") + s("chor")
         linie = [f"PIT-11 za {f.get('rok')} — INFORMACJA O PRZYCHODACH Z INNYCH ŹRÓDEŁ ORAZ O DOCHODACH I POBRANYCH ZALICZKACH (wersja ćwiczeniowa)",
-                 f"Płatnik: AGRO-MLEKO RADZYŃ sp. z o.o.      Podatnik: {os_}   PESEL {o.get('pesel', '')}", f"Miesięcy z wypłatą: {len(ww)}  ({', '.join(x['miesiac'] for x in ww)})", "",
+                 f"Płatnik: AGRO-MLEKO sp. z o.o.      Podatnik: {os_}   PESEL {o.get('pesel', '')}", f"Miesięcy z wypłatą: {len(ww)}  ({', '.join(x['miesiac'] for x in ww)})", "",
                  "E. DOCHODY PODATNIKA, POBRANE ZALICZKI ORAZ SKŁADKI",
                  f"  Należności ze stosunku pracy — przychód: {kadry.fmt(kadry.zl(przych - zwol)):>12}   KUP: {kadry.fmt(s('kup')):>10}   dochód: {kadry.fmt(kadry.zl(przych - zwol - s('kup'))):>12}",
                  f"  Zasiłki pieniężne z ubezpieczenia społecznego (inne źródła): {kadry.fmt(s('zasilek')):>12}",
@@ -926,7 +926,7 @@ def BUDUJ_pit(app, parent):
         if not ww:
             _ustaw(txt, "Brak wierszy w kartotece za ten rok.")
             return
-        linie = [f"PIT-4R za {f.get('rok')} — DEKLARACJA ROCZNA O ZALICZKACH NA PODATEK DOCHODOWY (wersja ćwiczeniowa)", "Płatnik: AGRO-MLEKO RADZYŃ sp. z o.o.", "",
+        linie = [f"PIT-4R za {f.get('rok')} — DEKLARACJA ROCZNA O ZALICZKACH NA PODATEK DOCHODOWY (wersja ćwiczeniowa)", "Płatnik: AGRO-MLEKO sp. z o.o.", "",
                  f"{'Miesiąc':<12}{'Liczba podatników':>18}{'Zaliczka należna':>18}{'Termin wpłaty':>16}"]
         razem = 0.0
         for m in sorted({x["miesiac"] for x in ww}):

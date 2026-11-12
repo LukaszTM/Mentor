@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Kadry i płace — tygodnie 0–3 (warsztat, zatrudnienie, czas pracy, urlopy). Stan prawny: listopad 2026."""
 
-FIRMA = ("Firma ćwiczeniowa: AGRO-MLEKO RADZYŃ sp. z o.o. — mleczarnia, 62 pracowników etatowych (produkcja 3-zmianowa, "
+FIRMA = ("Firma ćwiczeniowa: AGRO-MLEKO sp. z o.o. — mleczarnia, 62 pracowników etatowych (produkcja 3-zmianowa, "
          "logistyka, biuro), 6 zleceniobiorców, 2 osoby na umowie o dzieło, 1 pracownik z orzeczeniem o niepełnosprawności, "
          "wypłata do 10. dnia następnego miesiąca, okres rozliczeniowy 1 miesiąc dla biura i 3 miesiące dla produkcji "
          "(system równoważny do 12 h). Wszystkie ćwiczenia robisz na tej firmie.")
@@ -42,7 +42,7 @@ TYGODNIE_1 = [
           "kroki": [
               "Wejdź na zus.pl → zaloguj do eZUS (dawny PUE ZUS) przez profil zaufany lub bankowość. Obejrzyj zakładki: Ubezpieczony, Płatnik (jeśli masz firmę), Świadczeniobiorca. W panelu Ubezpieczony znajdź swoje zgłoszenia i zwolnienia e-ZLA — tak wygląda to, co widzi pracownik.",
               "Wejdź na podatki.gov.pl → e-Urząd Skarbowy → zaloguj profilem zaufanym. Znajdź „Twój e-PIT” i „Deklaracje” — tu pracodawca składa PIT-4R, PIT-11 (przez e-Deklaracje/Twój e-PIT dla płatnika). Zapisz, gdzie co jest.",
-              "Pobierz program Płatnik ze strony zus.pl (zakładka Płatnik) i zainstaluj. Przy pierwszym uruchomieniu utwórz NOWĄ bazę ćwiczeniową (nie podłączaj do prawdziwego płatnika) z danymi firmy ćwiczeniowej: AGRO-MLEKO RADZYŃ, NIP testowy 000-000-00-00 nie przejdzie walidacji — użyj generatora poprawnego NIP/REGON do testów (wyszukaj „generator NIP testowy”). To baza offline, nic nie wysyłasz.",
+              "Pobierz program Płatnik ze strony zus.pl (zakładka Płatnik) i zainstaluj. Przy pierwszym uruchomieniu utwórz NOWĄ bazę ćwiczeniową (nie podłączaj do prawdziwego płatnika) z danymi firmy ćwiczeniowej: AGRO-MLEKO, NIP testowy 000-000-00-00 nie przejdzie walidacji — użyj generatora poprawnego NIP/REGON do testów (wyszukaj „generator NIP testowy”). To baza offline, nic nie wysyłasz.",
               "Dodaj w Płatniku 3 pierwszych pracowników z FIRMA.md jako ubezpieczonych (Rejestr ubezpieczonych → Dodaj) — na razie bez dokumentów zgłoszeniowych; to zrobisz w tygodniu 8.",
               "Zapisz w dostepy.md: co gdzie się loguje, jakie uprawnienia potrzebuje pracownik kadr w prawdziwej firmie (pełnomocnictwo ZUS PEL, upoważnienie UPL-1 do e-Deklaracji) i gdzie są formularze PEL i UPL-1.",
           ],

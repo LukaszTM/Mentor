@@ -94,7 +94,7 @@ LEKCJE_1 = [
          "Fragment ogłoszenia 2026:\n"
          "Stanowisko: osoba na stanowisko operatora linii produkcyjnej (praca 3-zmianowa, system równoważny do 12 h)\n"
          "Wynagrodzenie: 5 200–6 100 zł brutto (zasadnicze, zależnie od doświadczenia) + dodatek za pracę w nocy (20% stawki godz. z minimalnej) + premia regulaminowa do 10% wg regulaminu wynagradzania z 1.03.2025\n"
-         "Klauzula: Administratorem danych jest AGRO-MLEKO RADZYŃ sp. z o.o. … podstawa: art. 22¹ KP i art. 6 ust. 1 lit. b, c RODO … dane przechowujemy do zakończenia rekrutacji, a za Twoją zgodą 12 miesięcy …",
+         "Klauzula: Administratorem danych jest AGRO-MLEKO sp. z o.o. … podstawa: art. 22¹ KP i art. 6 ust. 1 lit. b, c RODO … dane przechowujemy do zakończenia rekrutacji, a za Twoją zgodą 12 miesięcy …",
      "zadania": ["Przepisz 3 pytania zakazane na rozmowie na wersje dozwolone.",
                  "Napisz klauzulę RODO dla rekrutacji z retencją 12 miesięcy za zgodą.",
                  "Sprawdź 3 ogłoszenia z pracuj.pl pod kątem widełek i neutralności — zapisz wnioski."],

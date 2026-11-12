@@ -8,7 +8,7 @@ LEKCJA_START = {
     "slowa": ["jak zacząć", "jak zaczac", "od czego zacząć", "start", "wprowadzeni", "jak się uczyć", "jak sie uczyc", "jak działa program", "jak dziala program", "mentor"],
     "wyjasnienie":
         "## Co to za kurs i dla kogo\n"
-        "12 tygodni (0–11), pięć zadań tygodniowo, jedna krótka lekcja dziennie. Uczysz się na fikcyjnej firmie AGRO-MLEKO RADZYŃ (62 pracowników, produkcja "
+        "12 tygodni (0–11), pięć zadań tygodniowo, jedna krótka lekcja dziennie. Uczysz się na fikcyjnej firmie AGRO-MLEKO (62 pracowników, produkcja "
         "3-zmianowa, zleceniobiorcy, umowy o dzieło) — każdy kazus, lista płac i pismo dotyczą jej pracowników. Nie musisz znać prawa pracy ani księgowości. "
         "Potrzebujesz: 60–90 minut dziennie i jednego folderu na dysku. Nic więcej — kalkulatory, symulatory ZUS/US i przepisy są wbudowane w Mentora (zakładka Warsztat).\n"
         "## Jak wygląda dzień nauki\n"

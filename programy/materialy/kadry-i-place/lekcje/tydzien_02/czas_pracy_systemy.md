@@ -1,5 +1,5 @@
 # Czas pracy: normy, systemy, okresy rozliczeniowe, odpoczynek
-Tydzień 2 · lekcja 9 z 45 · ≈ 30 min
+Tydzień 2 · lekcja 9 z 46 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** liczysz wymiar czasu pracy miesiąca, dobierasz system i okres rozliczeniowy oraz układasz grafik z 11/35 h odpoczynku.
 
@@ -11,14 +11,48 @@ Tydzień 2 · lekcja 9 z 45 · ≈ 30 min
 - Pojęcia: norma (8 h / 40 h), wymiar (ile godzin w konkretnym miesiącu), okres rozliczeniowy, odpoczynek dobowy 11 h i tygodniowy 35 h.
 
 ## 1 · Wyjaśnienie od podstaw
-### Normy
-8 h na dobę i przeciętnie 40 h w przeciętnie 5-dniowym tygodniu w okresie rozliczeniowym do 4 miesięcy (art. 129); wydłużenie do 12 miesięcy — z obiektywnych przyczyn, w układzie/porozumieniu i z zawiadomieniem PIP. Wymiar (art. 130): tygodnie × 40 + dni pon–pt × 8 − 8 za święto w dniu innym niż niedziela (także sobotnie święto obniża wymiar). Doba pracownicza: 24 h od rozpoczęcia pracy — drugie rozpoczęcie w tej samej dobie to nadgodzina (chyba że ruchomy czas pracy z art. 140¹). Odpoczynek: 11 h dobowy (wyjątki: zarządzający, akcje ratownicze — z równoważnym odpoczynkiem), 35 h tygodniowy (24 h przy zmianie pory w zmianowym), obejmujący niedzielę (lub inny dzień w pracy dozwolonej w niedziele).
-### Systemy
-podstawowy (8 h), równoważny (do 12 h — a przy dozorze urządzeń/pogotowiu do 16 h, przy pilnowaniu do 24 h; okres 1 mies., wyjątkowo 3–4), zadaniowy (bez ewidencji godzin, ale wymiar zadań realny w normach), przerywany (jedna przerwa do 5 h, 60% wynagrodzenia za przerwę — tylko w układzie/porozumieniu), skrócony tydzień i weekendowy (na wniosek, do 12 h), ruchomy (przedziały rozpoczynania lub różne godziny), praca w ruchu ciągłym (do 43 h średnio), indywidualny rozkład na wniosek. System i okres ustala regulamin/układ/obwieszczenie; harmonogram (grafik) na co najmniej 1 miesiąc, przekazany 1 tydzień przed (art. 129 §3), chyba że rozkład wynika z regulaminu/umowy.
-- Praca w niedziele i święta dozwolona tylko w przypadkach z art. 151¹⁰ (ruch ciągły, zmianowa, handel ograniczony, usługi…)
-- rekompensata: dzień wolny w 6 dniach przed/po (niedziela) lub w okresie (święto), inaczej 100%
-- raz na 4 tygodnie wolna niedziela
-Przerwy: 15 min przy ≥ 6 h, 30 min (drugie 15) przy > 9 h, 45 min przy > 16 h (od 2023) — wliczane do czasu pracy; przerwa niewliczana do 60 min (lunch) — w regulaminie. Niepełnosprawni: 7 h/35 h (umiarkowany/znaczny), dodatkowe 15 min, zakaz nocnej i nadgodzin bez zgody lekarza.
+### Normy (art. 129)
+8 godzin na dobę. Przeciętnie 40 godzin w przeciętnie 5-dniowym tygodniu. Liczysz w okresie rozliczeniowym do 4 miesięcy.
+Okres do 12 miesięcy — tylko z obiektywnych przyczyn, w układzie lub porozumieniu i z zawiadomieniem PIP.
+### Wymiar czasu pracy (art. 130)
+Wymiar = pełne tygodnie × 40 h + dni od poniedziałku do piątku poza tygodniami × 8 h − 8 h za każde święto w dniu innym niż niedziela.
+Święto w sobotę też obniża wymiar.
+### Doba pracownicza
+Doba to 24 godziny od rozpoczęcia pracy. Drugie rozpoczęcie pracy w tej samej dobie to nadgodzina. Wyjątek: ruchomy czas pracy z art. 140¹.
+### Odpoczynek
+| Odpoczynek | Wymiar | Uwagi |
+|---|---|---|
+| dobowy | 11 h | wyjątki: zarządzający, akcje ratownicze — z równoważnym odpoczynkiem |
+| tygodniowy | 35 h | 24 h przy zmianie pory w pracy zmianowej; obejmuje niedzielę (lub inny dzień, gdy praca w niedziele jest dozwolona) |
+### Systemy czasu pracy
+| System | Dobowy wymiar | Zasady |
+|---|---|---|
+| podstawowy | 8 h | — |
+| równoważny | do 12 h | dozór urządzeń, pogotowie — do 16 h; pilnowanie — do 24 h; okres 1 miesiąc, wyjątkowo 3–4 |
+| zadaniowy | — | bez ewidencji godzin; wymiar zadań musi być realny w normach |
+| przerywany | — | jedna przerwa do 5 h, 60% wynagrodzenia za przerwę; tylko w układzie lub porozumieniu |
+| skrócony tydzień, weekendowy | do 12 h | na wniosek pracownika |
+| ruchomy | — | przedziały rozpoczynania albo różne godziny |
+| ruch ciągły | — | do 43 h średnio |
+| indywidualny rozkład | — | na wniosek |
+System i okres rozliczeniowy ustala regulamin, układ albo obwieszczenie.
+Harmonogram (grafik) sporządzasz na co najmniej 1 miesiąc. Przekazujesz go 1 tydzień przed (art. 129 §3). Wyjątek: rozkład wynika z regulaminu lub umowy.
+### Niedziele i święta
+Praca dozwolona tylko w przypadkach z art. 151¹⁰: ruch ciągły, praca zmianowa, handel w ograniczonym zakresie, usługi i inne wymienione.
+| Praca w | Rekompensata |
+|---|---|
+| niedzielę | dzień wolny w 6 dniach przed lub po; inaczej dodatek 100% |
+| święto | dzień wolny w okresie rozliczeniowym; inaczej dodatek 100% |
+Raz na 4 tygodnie pracownik ma wolną niedzielę.
+### Przerwy
+| Dobowy czas pracy | Przerwa wliczana do czasu pracy |
+|---|---|
+| co najmniej 6 h | 15 min |
+| ponad 9 h | 30 min (drugie 15 min) |
+| ponad 16 h | 45 min (od 2023) |
+Przerwa niewliczana do czasu pracy (lunch): do 60 min, zapisana w regulaminie.
+### Pracownicy z niepełnosprawnością
+Stopień umiarkowany i znaczny: 7 h na dobę, 35 h tygodniowo. Dodatkowe 15 min przerwy. Zakaz pracy nocnej i nadgodzin bez zgody lekarza.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Wymiar grudnia 2026 z art. 130 KP — dwie metody, jeden wynik**

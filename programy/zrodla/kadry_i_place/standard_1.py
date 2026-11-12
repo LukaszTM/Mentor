@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Bloki standardu lekcji (STANDARD_KURSOW.md §3) — tygodnie 0–3.
+"""Bloki standardu lekcji (STANDARD_KURSOW.md §3) — dawne tygodnie 0–3 (harmonogram: plan_tygodni.py).
 
 Każda lekcja dostaje: po_co, wymagania, demonstracja (tytul, kroki = omówienie przykładu krok po kroku, wynik),
 jak_uruchomic, cwiczenia (prowadzone + samodzielne; 3 wskazówki + rozwiązanie + wynik), typowe_bledy, podsumowanie.
@@ -37,7 +37,7 @@ STANDARD_1 = {
                            "Jeśli przycisk kopiowania mówi „Najpierw wskaż katalog projektu” — kliknij Tak i wybierz folder; potem kliknij kopiowanie jeszcze raz."],
              "rozwiazanie": "1. Panel → „Jak zacząć” → Krok 1: imię → Zapisz.\n2. „Wybierz katalog…” → wskaż C:\\Users\\<Ty>\\Dokumenty\\kadry-praktyka (utwórz, jeśli nie istnieje).\n3. „Skopiuj materiały kursu do katalogu projektu” → Tak.\n4. Mój projekt → lista plików zawiera START_TUTAJ.md, cwiczenia, przyklady, rozwiazania, pomoc.\n5. Otwórz START_TUTAJ.md i zrób „Pierwsze 30 minut”."},
             {"rodzaj": "samodzielne",
-             "tresc": "Wykonaj zadanie 1 tygodnia 0 (Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”): utwórz plik FIRMA.md z kartą firmy AGRO-MLEKO. Decyzja należy do Ciebie: skorzystaj z Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu” ALBO napisz plik ręcznie z szablonu cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md. Potem odhacz zadanie i zrób wpis w Dzienniku. Czas: 30 minut.",
+             "tresc": "Wykonaj zadanie 1 tygodnia 0 (Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”): utwórz plik FIRMA.md z kartą firmy AGRO-MLEKO. Decyzja należy do Ciebie: skorzystaj z Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu” ALBO napisz plik ręcznie z szablonu cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md. Potem odhacz zadanie i zrób wpis w Dzienniku. Czas: 45 minut (to jest zadanie 1 tygodnia 0 — liczone raz, w zadaniu).",
              "wynik": "Plan → Tydzień 0 → zadanie 1 ma ✔ i Mentor pokazuje „plik wykryty: FIRMA.md”; Panel pokazuje +10 XP i 1 wpis w dzienniku.",
              "wskazowki": ["Co musi być w karcie firmy, żeby następne lekcje mogły z niej korzystać? (Liczba osób, systemy czasu pracy, termin wypłaty, kto wypłaca zasiłki.)",
                            "Warsztat → Firma ćwiczeniowa ma wszystkie te dane i przycisk zapisu; szablon ręczny ma te same nagłówki do uzupełnienia.",

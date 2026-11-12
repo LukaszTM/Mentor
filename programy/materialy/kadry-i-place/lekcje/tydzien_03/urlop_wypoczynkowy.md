@@ -1,5 +1,5 @@
 # Urlop wypoczynkowy w praktyce: wymiar, proporcja, na żądanie, zaległy
-Tydzień 3 · lekcja 12 z 45 · ≈ 25 min
+Tydzień 3 · lekcja 12 z 46 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** liczysz wymiar urlopu (20/26, proporcja, pierwsza praca, niepełny etat) i udzielasz go zgodnie z zasadami (plan, 14 dni, na żądanie, zaległy).
 
@@ -11,16 +11,50 @@ Tydzień 3 · lekcja 12 z 45 · ≈ 25 min
 - Pojęcia: staż urlopowy (zatrudnienie + nauka: szkoła wyższa 8 lat, średnia 4–5 lat, zasadnicza 3; od 2026 także zlecenia i działalność), proporcja (art. 155¹), urlop na żądanie (4 dni z puli), zaległy (do 30 września następnego roku).
 
 ## 1 · Wyjaśnienie od podstaw
-### Wymiar
-20 dni (staż < 10 lat) lub 26 dni (≥ 10 lat) — art. 154; do stażu wlicza się okresy zatrudnienia (u wszystkich pracodawców) i nauki (ZSZ 3, średnia zawodowa 5, średnia ogólnokształcąca 4, policealna 6, wyższe 8 lat — bez sumowania, korzystniejszy; nauka równoległa z pracą — korzystniejsze), a od 2026 także zlecenia/działalność (lekcja o stażu). Urlop udzielany w dni robocze pracownika, w godzinach: 1 dzień = 8 h (7 h dla umiarkowanej/znacznej niepełnosprawności; godzinowo liczysz tylko część dnia, gdy pozostała część urlopu jest mniejsza niż dobowy wymiar). Niepełny etat: wymiar proporcjonalny, zaokrąglany w górę do pełnego dnia (1/2 × 26 = 13; 3/4 × 20 = 15).
+### Wymiar (art. 154)
+| Staż pracy | Wymiar |
+|---|---|
+| mniej niż 10 lat | 20 dni |
+| co najmniej 10 lat | 26 dni |
+### Co wlicza się do stażu urlopowego
+Okresy zatrudnienia u wszystkich pracodawców. Od 2026 także zlecenia i działalność (lekcja o stażu).
+Okresy nauki — bez sumowania, liczysz korzystniejszy:
+| Szkoła | Lata do stażu |
+|---|---|
+| zasadnicza zawodowa | 3 |
+| średnia zawodowa | 5 |
+| średnia ogólnokształcąca | 4 |
+| policealna | 6 |
+| wyższa | 8 |
+Nauka równoległa z pracą — liczysz korzystniejszy z okresów.
+### Dni i godziny
+Urlopu udzielasz w dni robocze pracownika, w godzinach. 1 dzień = 8 h (7 h przy umiarkowanej lub znacznej niepełnosprawności).
+Godzinowo rozliczasz tylko część dnia — gdy pozostała część urlopu jest mniejsza niż dobowy wymiar.
+Niepełny etat: wymiar proporcjonalny, zaokrąglany w górę do pełnego dnia. Przykłady: 1/2 × 26 = 13; 3/4 × 20 = 15.
 ### Pierwsza praca w życiu (art. 153)
-z dołu, 1/12 wymiaru za każdy przepracowany miesiąc, bez zaokrąglania w górę; od następnego roku kalendarzowego — z góry, cały wymiar 1 stycznia. Proporcjonalny (art. 155¹): przy zmianie pracodawcy w roku — u dotychczasowego za okres do ustania (po zaokrągleniu miesięcy — niepełny miesiąc u pierwszego pracodawcy liczy się za pełny), u nowego za resztę; przy powrocie po urlopie bezpłatnym > 1 miesiąc, wychowawczym, służbie — proporcja. Zaokrąglenia dni w górę.
-Urlop na żądanie:
-- 4 dni w roku (w puli 20/26), zgłoszenie najpóźniej w dniu, przed rozpoczęciem pracy
-- odmowa tylko wyjątkowo (interes pracodawcy — SN)
-- niewykorzystany na żądanie przechodzi na rok następny jako zwykły zaległy
+W pierwszym roku: z dołu, 1/12 wymiaru za każdy przepracowany miesiąc, bez zaokrąglania w górę.
+Od następnego roku kalendarzowego: z góry, cały wymiar 1 stycznia.
+### Urlop proporcjonalny (art. 155¹)
+- Zmiana pracodawcy w roku: u dotychczasowego za okres do ustania, u nowego za resztę.
+- Niepełny miesiąc u pierwszego pracodawcy liczy się za pełny.
+- Powrót po urlopie bezpłatnym dłuższym niż 1 miesiąc, po wychowawczym albo służbie — proporcja.
+- Dni zaokrąglasz w górę.
+### Urlop na żądanie
+4 dni w roku, w puli 20/26. Zgłoszenie najpóźniej w dniu urlopu, przed rozpoczęciem pracy.
+Odmowa tylko wyjątkowo — interes pracodawcy (SN).
+Niewykorzystany urlop na żądanie przechodzi na rok następny jako zwykły zaległy.
 ### Zasady udzielania
-plan urlopów (lub uzgodnienie indywidualne, gdy brak związków i uzgodniono), co najmniej jedna część 14 kolejnych dni kalendarzowych (art. 162), zaległy do 30 września następnego roku (urlop zaległy w okresie wypowiedzenia można narzucić — art. 167¹; poza tym SN dopuszcza polecenie wykorzystania zaległego po 30.09), przesunięcie i odwołanie z urlopu (art. 164–167: zwrot kosztów), przerwanie przez chorobę, ekwiwalent tylko przy ustaniu zatrudnienia (art. 171). Przedawnienie roszczeń: 3 lata od końca roku, w którym stał się wymagalny (od 1.10 następnego roku).
+| Zasada | Podstawa |
+|---|---|
+| plan urlopów albo uzgodnienie indywidualne (gdy brak związków i tak uzgodniono) | — |
+| co najmniej jedna część to 14 kolejnych dni kalendarzowych | art. 162 |
+| zaległy do 30 września następnego roku | — |
+| zaległy w okresie wypowiedzenia można narzucić | art. 167¹ |
+| polecenie wykorzystania zaległego po 30.09 | SN dopuszcza |
+| przesunięcie i odwołanie z urlopu — zwrot kosztów | art. 164–167 |
+| choroba przerywa urlop | — |
+| ekwiwalent tylko przy ustaniu zatrudnienia | art. 171 |
+Przedawnienie roszczeń: 3 lata od końca roku, w którym urlop stał się wymagalny (od 1.10 następnego roku).
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Pracownica 1/2 etatu, staż 11 lat, zatrudniona 15.03.2026 — wymiar u nowego pracodawcy**

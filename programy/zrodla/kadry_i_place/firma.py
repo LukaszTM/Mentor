@@ -44,4 +44,4 @@ FIRMA_REGULAMINY = [
 ]
 
 PARAMETRY = dict(kadry.DOMYSLNE, rok=2026, wypadkowa=1.20)
-NARZEDZIA = ["firma", "place", "zasilki", "urlopy", "czas", "potracenia", "zus", "pit", "przepisy"]
+NARZEDZIA = ["firma", "place", "zasilki", "urlopy", "czas", "potracenia", "delegacje", "zus", "pit", "przepisy"]

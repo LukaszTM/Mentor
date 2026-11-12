@@ -1,16 +1,16 @@
 # START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2026)
 
-**Wersja kursu:** 2.0 · stan prawny: listopad 2026 · format `mentor-program/1`
+**Wersja kursu:** 2.1 · stan prawny: listopad 2026 · format `mentor-program/1`
 **Poziom:** od podstaw — bez znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych.
-**Czas:** 12 tygodni × 5 dni × 60–90 minut.
+**Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 130 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
 **System:** Windows 10/11 (Mentor.exe); działa też z Pythonem 3.10+ na innych systemach.
-**Potrzebujesz:** 60–90 minut dziennie przez 12 tygodni; jeden folder na dysku na pliki ćwiczeń; Mentor (ten program) — nic więcej: żadnych kont, instalacji ani arkuszy; internet niepotrzebny.
+**Potrzebujesz:** ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) przez 16 tygodni — razem ok. 130 godzin; każdy tydzień mieści się w 9 godzinach; jeden folder na dysku na pliki ćwiczeń; Mentor (ten program) — nic więcej: żadnych kont, instalacji ani arkuszy; internet niepotrzebny.
 **Nie potrzebujesz:** internetu (kurs i Asystent offline działają bez sieci), kont w eZUS/e-Urzędzie (w Mentorze są symulatory), Excela, Pythona, żadnych instalacji poza samym Mentorem.
 
 ## Co będziesz umieć po kursie
 - zawrzeć i rozwiązać umowę o pracę z kompletem dokumentów i w terminach
 - policzyć wymiar czasu pracy, nadgodziny, nocne, urlop i pensję za część miesiąca
-- sporządzić i skontrolować listę płac od brutto do netto (PPK, chorobowe, zasiłek, benefity, potrącenia)
+- sporządzić i skontrolować listę płac od brutto do netto (PPK, chorobowe, zasiłek, benefity, delegacje, potrącenia)
 - ustalić podstawę zasiłku, rozliczyć zleceniobiorcę, przygotować komplet DRA/RCA/RSA i korektę
 - zamknąć rok (PIT-4R, PIT-11, ZFŚS, PFRON) i przygotować firmę do kontroli PIP/ZUS z procedurami 2026/2027
 

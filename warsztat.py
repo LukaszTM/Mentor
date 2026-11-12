@@ -20,7 +20,7 @@ from program import P
 NARZEDZIA = [
     ("firma", "🏭", "Firma ćwiczeniowa"), ("place", "💰", "Lista płac"), ("zasilki", "🩺", "Zasiłki i chorobowe"),
     ("urlopy", "🏖", "Urlopy i ekwiwalent"), ("czas", "⏰", "Czas pracy"), ("potracenia", "⚖", "Potrącenia"),
-    ("zus", "📨", "eZUS / Płatnik"), ("pit", "🧾", "e-Urząd: PIT"), ("przepisy", "📚", "Przepisy"),
+    ("delegacje", "🚚", "Delegacje i diety"), ("zus", "📨", "eZUS / Płatnik"), ("pit", "🧾", "e-Urząd: PIT"), ("przepisy", "📚", "Przepisy"),
 ]
 NAZWY = {k: n for k, _, n in NARZEDZIA}
 MIESIACE = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"]
@@ -98,13 +98,25 @@ def zapisz_do_projektu(app, podkatalog, nazwa, tresc, status=None):
     return p
 
 
-def _formatuj_kroki(tytul, kroki, szer=78):
+def _formatuj_kroki(tytul, kroki, szer=78, zawijaj=False):
+    """Kroki obliczeń: opis ...... wartość. zawijaj=True — długi opis łamie się na kilka linii (szerokość szer), wartość na końcu."""
+    import textwrap
     linie = [tytul, "=" * len(tytul)]
     for opis, wartosc in kroki:
         w = kadry.fmt(wartosc) if isinstance(wartosc, (int, float)) else str(wartosc)
         if len(opis) + len(w) + 3 > szer:
-            linie.append(opis)
-            linie.append(" " * (szer - len(w)) + w)
+            if zawijaj:
+                cz = textwrap.wrap(opis, szer - 4) or [""]
+                linie.extend(cz[:-1])
+                ost = cz[-1]
+                if len(ost) + len(w) + 3 > szer:
+                    linie.append(ost)
+                    linie.append(" " * (szer - len(w)) + w)
+                else:
+                    linie.append(ost + " " + "." * (szer - len(ost) - len(w) - 2) + " " + w)
+            else:
+                linie.append(opis)
+                linie.append(" " * (szer - len(w)) + w)
         else:
             linie.append(opis + " " + "." * (szer - len(opis) - len(w) - 2) + " " + w)
     return "\n".join(linie)
@@ -605,6 +617,126 @@ def BUDUJ_potracenia(app, parent):
     M.przycisk(r, "Policz", policz).pack(side="left")
     M.przycisk(r, "Zapisz do projektu", lambda: zapisz_do_projektu(app, "04-place", "potracenie.md", "```\n" + txt.get("1.0", "end") + "```\n", st), "drugi").pack(side="left", padx=8)
     txt.pack_forget(); txt.pack(fill="both", expand=True, pady=(8, 0)); st.pack_forget(); st.pack(fill="x")
+
+
+# ============================================================ DELEGACJE I DIETY
+def _dt_z_pol(d, g):
+    """Data (RRRR-MM-DD / DD.MM.RRRR) + godzina (HH:MM) → datetime albo None."""
+    data = _data(d)
+    if not data:
+        return None
+    try:
+        h, m = (g or "0:00").strip().split(":")
+        return dt.datetime(data.year, data.month, data.day, int(h), int(m))
+    except ValueError:
+        return None
+
+
+def BUDUJ_delegacje(app, parent):
+    M = _M()
+    par = P.parametry or {}
+    D = kadry.DELEGACJE
+    k = _karta(parent, f"Podróż krajowa — dieta {kadry.fmt(D['dieta_krajowa'])} zł (rozporządzenie z 29.01.2013)")
+    M.etykieta(k, "Podaj wyjazd i powrót z godzinami — kalkulator liczy doby jak rozporządzenie (do 8 h / 8–12 h / ponad 12 h), pomniejsza diety za "
+                  "zapewnione posiłki (25/50/25% pełnej diety), dolicza ryczałty i kilometrówkę. Projekt diety 60 zł (od 1.01.2027) to nadal projekt — nie licz nim.", 9, wrap=820).pack(fill="x", pady=(0, 6))
+    f = Formularz(k, 2)
+    f.pole("d1", "Wyjazd (data)", "2026-11-16", 11)
+    f.pole("g1", "godz.", "06:00", 6)
+    f.pole("d2", "Powrót (data)", "2026-11-17", 11)
+    f.pole("g2", "godz.", "18:30", 6)
+    f.pole("sn", "Śniadania zapewnione", "0", 4)
+    f.pole("ob", "Obiady", "0", 4)
+    f.pole("ko", "Kolacje", "0", 4)
+    f.pole("nr", "Noclegi bez rachunku", "0", 4)
+    f.pole("nk", "Noclegi z rachunku (zł)", "0", 8)
+    f.pole("nn", "— liczba", "0", 4)
+    f.pole("doj", "Doby z ryczałtem na dojazdy", "", 4)
+    f.pole("km", "Km autem prywatnym", "0", 6)
+    f.pole("poj", "Pojazd", "osobowy powyżej 900 cm³", 22, opcje=list(D["km"]), podpowiedz="readonly")
+    f.pole("bil", "Bilety (zł)", "0", 8)
+    f.pole("inne", "Inne wydatki (zł)", "0", 8)
+    f.pole("zal", "Zaliczka (zł)", "0", 8)
+    f.pole("dfirm", "Dieta wg regulaminu (gdy wyższa)", "", 6)
+    M.etykieta(k, "Doby z ryczałtem na dojazdy: puste = wszystkie rozpoczęte doby, 0 = brak (auto prywatne lub służbowe). Noclegi bez rachunku = ryczałt 150% diety.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(4, 0))
+    txt = _wynik(k, 20)
+    st = _status(k)
+    ostatni = {}
+
+    def policz():
+        a, b = _dt_z_pol(f.get("d1"), f.get("g1")), _dt_z_pol(f.get("d2"), f.get("g2"))
+        if not a or not b:
+            _ustaw(txt, "Podaj daty RRRR-MM-DD i godziny HH:MM.")
+            return
+        doj = f.get("doj").strip()
+        w = kadry.delegacja_krajowa(a, b, int(f.liczba("sn")), int(f.liczba("ob")), int(f.liczba("ko")), int(f.liczba("nr")), f.liczba("nk"), int(f.liczba("nn")),
+                                    int(_liczba(doj)) if doj != "" else None, f.liczba("km"), f.get("poj"), f.liczba("bil"), f.liczba("inne"), f.liczba("zal"),
+                                    f.liczba("dfirm") or None, par)
+        linie = [_formatuj_kroki("Rozliczenie krajowej podróży służbowej", w["kroki"], 76, zawijaj=True)]
+        if w["ostrzezenia"]:
+            linie += ["", "UWAGA: " + "; ".join(w["ostrzezenia"])]
+        linie += ["", f"Zwolnione z PIT i składek do limitów z rozporządzenia (art. 21 ust. 1 pkt 16 lit. a PIT; § 2 ust. 1 pkt 15 rozp. składkowego)"
+                      + (f"; NADWYŻKA {kadry.fmt(w['nadwyzka'])} zł → lista płac" if w["nadwyzka"] else "")]
+        ostatni["tekst"] = "\n".join(linie)
+        _ustaw(txt, ostatni["tekst"])
+
+    r = tk.Frame(k, bg=M.K["karta"])
+    r.pack(fill="x", pady=(6, 0))
+    M.przycisk(r, "Policz", policz).pack(side="left")
+    M.przycisk(r, "Zapisz do projektu", lambda: zapisz_do_projektu(app, "04-place", "delegacja_krajowa.md", "```\n" + ostatni.get("tekst", txt.get("1.0", "end")) + "\n```\n", st), "drugi").pack(side="left", padx=8)
+    txt.pack_forget(); txt.pack(fill="both", expand=True, pady=(8, 0)); st.pack_forget(); st.pack(fill="x")
+
+    k = _karta(parent, "Podróż zagraniczna — dieta i limit noclegu wg załącznika (§ 13–21)")
+    M.etykieta(k, "Czas za granicą liczysz od przekroczenia granicy (lądowa: w drodze za granicę; lot: od startu z ostatniego lotniska w kraju). "
+                  "Niepełna doba: do 8 h = 1/3, ponad 8 do 12 h = 1/2, ponad 12 h = cała dieta. Część krajowa (do granicy / z lotniska) — jak podróż krajowa.", 9, wrap=820).pack(fill="x", pady=(0, 6))
+    f2 = Formularz(k, 2)
+    f2.pole("kraj", "Kraj", "Niemcy", 16, opcje=list(D["zagraniczne"]), podpowiedz="readonly")
+    f2.pole("h", "Godziny za granicą", "30", 6)
+    f2.pole("hk", "Godziny części krajowej", "0", 6)
+    f2.pole("kurs", "Kurs NBP z dnia zaliczki", "4,30", 7)
+    f2.pole("sn", "Śniadania", "0", 4)
+    f2.pole("ob", "Obiady", "0", 4)
+    f2.pole("ko", "Kolacje", "0", 4)
+    f2.pole("pw", "całodzienne wyżywienie", False, check=True)
+    f2.pole("nr", "Noclegi bez rachunku", "0", 4)
+    f2.pole("nk", "Noclegi z rachunku (waluta)", "0", 8)
+    f2.pole("nn", "— liczba", "0", 4)
+    f2.pole("dw", "Dojazdy dworzec/lotnisko (0–2)", "2", 4, opcje=["0", "1", "2"], podpowiedz="readonly")
+    f2.pole("dk", "Doby z ryczałtem na komunikację", "", 4)
+    f2.pole("zal", "Zaliczka (waluta)", "0", 8)
+    M.etykieta(k, "Dojazdy dworzec/lotnisko: 2 = w obie strony (1 dieta), 1 = w jedną (50% diety), 0 = brak. Doby z ryczałtem na komunikację: puste = wszystkie rozpoczęte. Noclegi bez rachunku = ryczałt 25% limitu.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(4, 0))
+    txt2 = _wynik(k, 20)
+    st2 = _status(k)
+    ostatni2 = {}
+
+    def policz2():
+        dk = f2.get("dk").strip()
+        w = kadry.delegacja_zagraniczna(f2.get("kraj"), f2.liczba("h"), int(f2.liczba("sn")), int(f2.liczba("ob")), int(f2.liczba("ko")), f2.bool("pw"), int(f2.liczba("nr")),
+                                        f2.liczba("nk"), int(f2.liczba("nn")), int(f2.liczba("dw", 2)), int(_liczba(dk)) if dk != "" else None, f2.liczba("kurs", 1.0),
+                                        f2.liczba("zal"), f2.liczba("hk"), par)
+        linie = [_formatuj_kroki(f"Rozliczenie zagranicznej podróży służbowej — {f2.get('kraj')} ({w['waluta']})", w["kroki"], 76, zawijaj=True)]
+        if w["ostrzezenia"]:
+            linie += ["", "UWAGA: " + "; ".join(w["ostrzezenia"])]
+        linie += ["", "Zwolnione z PIT i składek do limitów z rozporządzenia; kwota w PLN po średnim kursie NBP z dnia wypłaty zaliczki (§ 20 ust. 3)."]
+        ostatni2["tekst"] = "\n".join(linie)
+        _ustaw(txt2, ostatni2["tekst"])
+
+    r2 = tk.Frame(k, bg=M.K["karta"])
+    r2.pack(fill="x", pady=(6, 0))
+    M.przycisk(r2, "Policz", policz2).pack(side="left")
+    M.przycisk(r2, "Zapisz do projektu", lambda: zapisz_do_projektu(app, "04-place", "delegacja_zagraniczna.md", "```\n" + ostatni2.get("tekst", txt2.get("1.0", "end")) + "\n```\n", st2), "drugi").pack(side="left", padx=8)
+    txt2.pack_forget(); txt2.pack(fill="both", expand=True, pady=(8, 0)); st2.pack_forget(); st2.pack(fill="x")
+
+    k = _karta(parent, "Stawki i limity — stan prawny XI 2026")
+    tab = [f"{'Krajowa':<38}{'kwota':>10}   podstawa", f"{'dieta za dobę':<38}{kadry.fmt(D['dieta_krajowa']):>10}   § 7 ust. 1 (od 1.01.2023); projekt 60 zł od 1.01.2027 — NIE obowiązuje",
+           f"{'ryczałt za nocleg (150% diety)':<38}{kadry.fmt(1.5 * D['dieta_krajowa']):>10}   § 8 ust. 3", f"{'limit noclegu z rachunku (20 diet)':<38}{kadry.fmt(20 * D['dieta_krajowa']):>10}   § 8 ust. 1",
+           f"{'ryczałt na dojazdy (20% diety / doba)':<38}{kadry.fmt(0.2 * D['dieta_krajowa']):>10}   § 9", ""]
+    tab += [f"{'Kilometrówka (max, od 17.01.2023)':<38}{'zł/km':>10}   rozp. MI z 25.03.2002, Dz.U. 2023 poz. 5"] + [f"{n:<38}{s:>10.2f}" for n, s in D["km"].items()] + [""]
+    tab += [f"{'Zagraniczna':<20}{'waluta':<8}{'dieta':>8}{'limit noclegu':>15}"] + [f"{kr:<20}{w:<8}{d:>8g}{l:>15g}" for kr, (w, d, l) in D["zagraniczne"].items()]
+    tab += ["", "Zagraniczna: nocleg ryczałt 25% limitu; dojazd z/do dworca 1 dieta (50% w jedną stronę); komunikacja miejscowa 10% diety/doba; posiłki −15/−30/−30%; całodzienne wyżywienie → 25% diety.",
+            "Pełny załącznik (wszystkie państwa): Warsztat → Przepisy → „podróże służbowe”."]
+    t3 = _wynik(k, 24)
+    _ustaw(t3, "\n".join(tab))
+    t3.configure(state="disabled")
 
 
 # ============================================================ eZUS / PŁATNIK

@@ -543,3 +543,183 @@ def dra_sumy(rca, rsa, par=None):
     s["spoleczne"] = zl(s["emer"] + s["rent"] + s["chor"] + s["wyp"])
     s["do_zaplaty"] = zl(s["spoleczne"] + s["zdr"] + s["fp"] + s["fgsp"] - s["zasilki"])
     return s
+
+
+# ============================================================ PODRÓŻE SŁUŻBOWE (DELEGACJE)
+DELEGACJE = {
+    # § 7 ust. 1 rozporządzenia MPiPS z 29.01.2013 r. w sprawie należności z tytułu podróży służbowej (t.j. Dz.U. 2023 poz. 2190); stawka od 1.01.2023.
+    # Projekt z 21.05.2026 (dieta 60 zł od 1.01.2027) — do dnia stanu prawnego kursu (XI 2026) NIE ogłoszony w Dz.U.
+    "dieta_krajowa": 45.0,
+    # rozporządzenie MI z 25.03.2002 r. w brzmieniu Dz.U. 2023 poz. 5 — stawki maksymalne od 17.01.2023
+    "km": {"osobowy do 900 cm³": 0.89, "osobowy powyżej 900 cm³": 1.15, "motocykl": 0.69, "motorower": 0.42},
+    # załącznik do rozporządzenia: waluta, dieta za dobę, limit na nocleg (stan XI 2026)
+    "zagraniczne": {
+        "Niemcy": ("EUR", 49.0, 170.0), "Czechy": ("EUR", 41.0, 120.0), "Słowacja": ("EUR", 47.0, 132.0), "Litwa": ("EUR", 45.0, 150.0),
+        "Holandia": ("EUR", 50.0, 150.0), "Francja": ("EUR", 55.0, 200.0), "Austria": ("EUR", 57.0, 150.0), "Włochy": ("EUR", 53.0, 192.0),
+        "Wielka Brytania": ("GBP", 45.0, 220.0), "USA": ("USD", 59.0, 200.0),
+    },
+}
+
+
+def _doby(n):
+    n = int(n)
+    if n == 1:
+        return "1 pełna doba"
+    if 2 <= n <= 4:
+        return f"{n} pełne doby"
+    return f"{n} pełnych dób"
+
+
+def _godziny(wyjazd, powrot):
+    """Czas podróży w godzinach (float) z dwóch datetime; ujemny → 0."""
+    return max(0.0, (powrot - wyjazd).total_seconds() / 3600.0)
+
+
+def diety_krajowe_jednostki(godziny):
+    """Liczba diet (w jednostkach: 1 = pełna, 0,5 = połowa) za podróż krajową — § 7 ust. 2 rozporządzenia.
+    Do 24 h: < 8 h → 0; 8–12 h → 0,5; > 12 h → 1. Ponad dobę: każda pełna doba → 1; rozpoczęta doba do 8 h → 0,5, ponad 8 h → 1."""
+    if godziny <= 0:
+        return 0.0, "podróż nie rozpoczęta"
+    if godziny <= 24:
+        if godziny < 8:
+            return 0.0, f"{godziny:.1f} h — mniej niż 8 h: dieta nie przysługuje"
+        if godziny <= 12:
+            return 0.5, f"{godziny:.1f} h — od 8 do 12 h: 50% diety"
+        return 1.0, f"{godziny:.1f} h — ponad 12 h: pełna dieta"
+    doby = int(godziny // 24)
+    reszta = godziny - doby * 24
+    if reszta <= 0.0001:
+        return float(doby), _doby(doby)
+    if reszta <= 8:
+        return doby + 0.5, f"{_doby(doby)} + rozpoczęta doba {reszta:.1f} h (do 8 h) = 50% diety"
+    return doby + 1.0, f"{_doby(doby)} + rozpoczęta doba {reszta:.1f} h (ponad 8 h) = pełna dieta"
+
+
+def diety_zagraniczne_jednostki(godziny):
+    """Liczba diet za podróż zagraniczną — § 13 ust. 3: pełna doba → 1; niepełna: do 8 h → 1/3, ponad 8 do 12 h → 1/2, ponad 12 h → 1."""
+    if godziny <= 0:
+        return 0.0, "brak czasu za granicą"
+    doby = int(godziny // 24)
+    reszta = godziny - doby * 24
+    if reszta <= 0.0001:
+        return float(doby), _doby(doby)
+    if reszta <= 8:
+        return doby + 1 / 3, f"{_doby(doby)} + niepełna doba {reszta:.1f} h (do 8 h) = 1/3 diety"
+    if reszta <= 12:
+        return doby + 0.5, f"{_doby(doby)} + niepełna doba {reszta:.1f} h (ponad 8 do 12 h) = 1/2 diety"
+    return doby + 1.0, f"{_doby(doby)} + niepełna doba {reszta:.1f} h (ponad 12 h) = pełna dieta"
+
+
+def delegacja_krajowa(wyjazd, powrot, sniadania=0, obiady=0, kolacje=0, noclegi_ryczalt=0, noclegi_rachunek=0.0, noclegi_rachunek_n=0,
+                      dojazdy_doby=None, km=0.0, pojazd="osobowy powyżej 900 cm³", bilety=0.0, inne=0.0, zaliczka=0.0,
+                      dieta_firmy=None, par=None):
+    """Rozliczenie krajowej podróży służbowej (rozdział 2 rozporządzenia). Zwraca kroki, sumę, kwotę do wypłaty i nadwyżkę ponad limity
+    (ta nadwyżka jest przychodem ze stosunku pracy — składki i PIT; w granicach limitów: wolne od PIT — art. 21 ust. 1 pkt 16 lit. a
+    ustawy o PIT — i wyłączone z podstawy składek — § 2 ust. 1 pkt 15 rozporządzenia składkowego)."""
+    p = dict(DELEGACJE, **(par or {}))
+    dieta = float(p.get("dieta_krajowa", 45.0))
+    kroki = []
+    godziny = _godziny(wyjazd, powrot)
+    jedn, opis = diety_krajowe_jednostki(godziny)
+    kroki.append((f"Czas podróży: {wyjazd:%d.%m.%Y %H:%M} → {powrot:%d.%m.%Y %H:%M} = {godziny:.1f} h; {opis}", jedn))
+    diety = zl(jedn * dieta)
+    kroki.append((f"Diety: {jedn:g} × {fmt(dieta)} zł (§ 7 ust. 1–2)", diety))
+    pomn = zl(sniadania * 0.25 * dieta + obiady * 0.5 * dieta + kolacje * 0.25 * dieta)
+    if pomn:
+        kroki.append((f"Pomniejszenie za bezpłatne posiłki: śniadania {sniadania} × 25% + obiady {obiady} × 50% + kolacje {kolacje} × 25% pełnej diety (§ 7 ust. 4)", -pomn))
+    diety_po = zl(max(0.0, diety - pomn))
+    if pomn:
+        kroki.append(("Diety po pomniejszeniu (nie mniej niż 0)", diety_po))
+    ryczalt_nocleg = zl(noclegi_ryczalt * 1.5 * dieta)
+    if noclegi_ryczalt:
+        kroki.append((f"Ryczałt za nocleg bez rachunku: {noclegi_ryczalt} × 150% diety = {noclegi_ryczalt} × {fmt(1.5 * dieta)} (§ 8 ust. 3; nocleg ≥ 6 h między 21:00 a 7:00)", ryczalt_nocleg))
+    limit_nocleg = 20 * dieta
+    rach = zl(noclegi_rachunek)
+    ostrzezenia = []
+    if rach:
+        kroki.append((f"Noclegi z rachunku: {noclegi_rachunek_n or 1} × (limit {fmt(limit_nocleg)} zł = 20 diet, § 8 ust. 1)", rach))
+        if noclegi_rachunek_n and rach / noclegi_rachunek_n > limit_nocleg + 0.005:
+            ostrzezenia.append(f"nocleg {fmt(rach / noclegi_rachunek_n)} zł przekracza limit {fmt(limit_nocleg)} zł — zwrot ponad limit tylko w uzasadnionym przypadku za zgodą pracodawcy (§ 8 ust. 2)")
+    if dojazdy_doby is None:
+        dojazdy_doby = int(godziny // 24) + (1 if godziny % 24 > 0.0001 else 0)
+    ryczalt_dojazdy = zl(dojazdy_doby * 0.2 * dieta)
+    if dojazdy_doby:
+        kroki.append((f"Ryczałt na dojazdy komunikacją miejscową: {dojazdy_doby} rozpoczęte doby × 20% diety = {dojazdy_doby} × {fmt(0.2 * dieta)} (§ 9; nie przysługuje, gdy pracownik nie ponosi kosztów)", ryczalt_dojazdy))
+    przejazd = 0.0
+    if km:
+        stawka = p["km"].get(pojazd, 0.0)
+        przejazd = zl(km * stawka)
+        kroki.append((f"Przejazd samochodem prywatnym: {km:g} km × {stawka:.2f} zł ({pojazd}; § 3 ust. 4 + rozp. MI, Dz.U. 2023 poz. 5)", przejazd))
+    if bilety:
+        kroki.append(("Bilety / przejazdy udokumentowane", zl(bilety)))
+    if inne:
+        kroki.append(("Inne udokumentowane wydatki (opłaty, parking, bagaż — § 4)", zl(inne)))
+    suma = zl(diety_po + ryczalt_nocleg + rach + ryczalt_dojazdy + przejazd + bilety + inne)
+    kroki.append(("Razem należności", suma))
+    if zaliczka:
+        kroki.append((f"Pobrana zaliczka (§ 11)", -zl(zaliczka)))
+    do_wyplaty = zl(suma - zaliczka)
+    kroki.append(("Do wypłaty (ujemna = pracownik zwraca)", do_wyplaty))
+    nadwyzka = 0.0
+    if dieta_firmy and dieta_firmy > dieta:
+        nadwyzka = zl((dieta_firmy - dieta) * jedn)
+        kroki.append((f"Firma płaci dietę {fmt(dieta_firmy)} zł: nadwyżka {fmt(dieta_firmy - dieta)} × {jedn:g} = PRZYCHÓD ze stosunku pracy (składki + PIT w liście płac)", nadwyzka))
+    kroki.append(("Rozliczenie: w 14 dni od zakończenia podróży (§ 5 ust. 1); brak rachunku → oświadczenie pracownika (§ 5 ust. 2)", ""))
+    return {"godziny": godziny, "jednostki": jedn, "diety": diety_po, "noclegi": zl(ryczalt_nocleg + rach), "dojazdy": ryczalt_dojazdy, "przejazd": przejazd,
+            "suma": suma, "do_wyplaty": do_wyplaty, "nadwyzka": nadwyzka, "ostrzezenia": ostrzezenia, "kroki": kroki}
+
+
+def delegacja_zagraniczna(kraj, godziny_za_granica, sniadania=0, obiady=0, kolacje=0, pelne_wyzywienie=False, noclegi_ryczalt=0,
+                          noclegi_rachunek=0.0, noclegi_rachunek_n=0, dojazd_dworzec=2, doby_komunikacja=None, kurs=1.0,
+                          zaliczka_waluta=0.0, godziny_krajowe=0.0, par=None):
+    """Rozliczenie zagranicznej podróży służbowej (rozdział 3). Dieta i limit noclegu wg załącznika; czas za granicą liczy się od
+    przekroczenia granicy (§ 12). Część krajowa (dojazd do granicy / z lotniska) — jak podróż krajowa (§ 21). Kwoty w walucie i w PLN
+    po kursie (§ 20 ust. 3: średni kurs NBP z dnia wypłaty zaliczki)."""
+    p = dict(DELEGACJE, **(par or {}))
+    waluta, dieta, limit = p["zagraniczne"].get(kraj, ("EUR", 0.0, 0.0))
+    kroki = []
+    jedn, opis = diety_zagraniczne_jednostki(godziny_za_granica)
+    kroki.append((f"Czas za granicą {godziny_za_granica:.1f} h (§ 12 — od przekroczenia granicy): {opis}", round(jedn, 4)))
+    diety = zl(jedn * dieta)
+    kroki.append((f"Diety: {jedn:.4g} × {dieta:g} {waluta} ({kraj}, załącznik)", diety))
+    if pelne_wyzywienie:
+        diety_po = zl(0.25 * diety)
+        kroki.append(("Bezpłatne całodzienne wyżywienie → przysługuje 25% diety (§ 14 ust. 3)", diety_po))
+    else:
+        pomn = zl((sniadania * 0.15 + obiady * 0.30 + kolacje * 0.30) * dieta)
+        if pomn:
+            kroki.append((f"Pomniejszenie: śniadania {sniadania} × 15% + obiady {obiady} × 30% + kolacje {kolacje} × 30% diety (§ 14 ust. 2)", -pomn))
+        diety_po = zl(max(0.0, diety - pomn))
+        if pomn:
+            kroki.append(("Diety po pomniejszeniu", diety_po))
+    ryczalt_nocleg = zl(noclegi_ryczalt * 0.25 * limit)
+    if noclegi_ryczalt:
+        kroki.append((f"Ryczałt za nocleg: {noclegi_ryczalt} × 25% limitu {limit:g} {waluta} (§ 16 ust. 2)", ryczalt_nocleg))
+    ostrzezenia = []
+    rach = zl(noclegi_rachunek)
+    if rach:
+        kroki.append((f"Noclegi z rachunku (limit {limit:g} {waluta} za dobę hotelową, § 16 ust. 1)", rach))
+        if noclegi_rachunek_n and rach / noclegi_rachunek_n > limit + 0.005:
+            ostrzezenia.append(f"nocleg {fmt(rach / noclegi_rachunek_n)} {waluta} ponad limit {limit:g} — tylko w uzasadnionym przypadku za zgodą pracodawcy (§ 16 ust. 3)")
+    dworzec = zl({0: 0.0, 1: 0.5, 2: 1.0}.get(dojazd_dworzec, 1.0) * dieta)
+    if dworzec:
+        kroki.append((f"Ryczałt na dojazd z/do dworca lub lotniska: {'1 dieta' if dojazd_dworzec == 2 else '50% diety (jedna strona)'} (§ 17 ust. 1–2)", dworzec))
+    if doby_komunikacja is None:
+        doby_komunikacja = int(godziny_za_granica // 24) + (1 if godziny_za_granica % 24 > 0.0001 else 0)
+    komunikacja = zl(doby_komunikacja * 0.1 * dieta)
+    if doby_komunikacja:
+        kroki.append((f"Ryczałt na komunikację miejscową: {doby_komunikacja} rozpoczęte doby × 10% diety (§ 17 ust. 3)", komunikacja))
+    suma_w = zl(diety_po + ryczalt_nocleg + rach + dworzec + komunikacja)
+    kroki.append((f"Razem w walucie ({waluta})", suma_w))
+    if zaliczka_waluta:
+        kroki.append((f"Zaliczka w walucie (§ 20 — obowiązkowa, na wniosek może być w PLN)", -zl(zaliczka_waluta)))
+    do_wyplaty_w = zl(suma_w - zaliczka_waluta)
+    kroki.append((f"Do wypłaty w walucie ({waluta})", do_wyplaty_w))
+    kroki.append((f"Przeliczenie na PLN po kursie {kurs:.4f} (średni NBP z dnia wypłaty zaliczki, § 20 ust. 3)", zl(do_wyplaty_w * kurs)))
+    krajowa = 0.0
+    if godziny_krajowe:
+        j, o = diety_krajowe_jednostki(godziny_krajowe)
+        krajowa = zl(j * p["dieta_krajowa"])
+        kroki.append((f"Część krajowa podróży {godziny_krajowe:.1f} h: {o} → {j:g} × {fmt(p['dieta_krajowa'])} zł (§ 21)", krajowa))
+    return {"waluta": waluta, "jednostki": jedn, "diety": diety_po, "suma_waluta": suma_w, "do_wyplaty_waluta": do_wyplaty_w,
+            "do_wyplaty_pln": zl(do_wyplaty_w * kurs), "krajowa_pln": krajowa, "ostrzezenia": ostrzezenia, "kroki": kroki}

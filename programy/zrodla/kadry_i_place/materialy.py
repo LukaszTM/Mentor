@@ -137,7 +137,7 @@ START_TUTAJ = """# START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2
 
 **Wersja kursu:** {wersja} · stan prawny: {stan_prawny} · format `mentor-program/1`
 **Poziom:** {poziom}.
-**Czas:** 12 tygodni × 5 dni × 60–90 minut.
+**Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 130 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
 **System:** {system}.
 **Potrzebujesz:** {wymagania}.
 **Nie potrzebujesz:** internetu (kurs i Asystent offline działają bez sieci), kont w eZUS/e-Urzędzie (w Mentorze są symulatory), Excela, Pythona, żadnych instalacji poza samym Mentorem.

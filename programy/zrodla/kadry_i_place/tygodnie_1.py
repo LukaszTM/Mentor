@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Kadry i płace — tygodnie 0–3 (warsztat, zatrudnienie, czas pracy, urlopy). Stan prawny: listopad 2026."""
+"""Kadry i płace — dawne tygodnie 0–3 (harmonogram: plan_tygodni.py; warsztat, zatrudnienie, czas pracy, urlopy). Stan prawny: listopad 2026."""
 
 FIRMA = ("Firma ćwiczeniowa: AGRO-MLEKO sp. z o.o. — mleczarnia, 62 pracowników etatowych (produkcja 3-zmianowa, "
          "logistyka, biuro), 6 zleceniobiorców, 2 osoby na umowie o dzieło, 1 pracownik z orzeczeniem o niepełnosprawności, "
@@ -26,7 +26,7 @@ TYGODNIE_1 = [
      "rola_asystenta": "Przewodnik po narzędziach. Każdy skrót (DRA, RCA, ZUA, PIT-4R) ma wytłumaczyć, zanim pójdziesz dalej. Nie wierz mu na słowo w kwotach — każdą stawkę sprawdzasz w źródle (ZUS, podatki.gov.pl, Dz.U.).",
      "lekcje": ["start_jak_sie_uczyc", "zrodla_prawa", "narzedzia_kadrowca", "wskazniki_2026"],
      "zadania": [
-         {"id": "k0z1", "tytul": "Katalog projektu i karta firmy ćwiczeniowej", "opis": "Folder kadry-praktyka z plikiem FIRMA.md opisującym firmę, na której będziesz ćwiczyć przez 12 tygodni.",
+         {"id": "k0z1", "tytul": "Katalog projektu i karta firmy ćwiczeniowej", "opis": "Folder kadry-praktyka z plikiem FIRMA.md opisującym firmę, na której będziesz ćwiczyć przez 16 tygodni.",
           "czas_min": 45, "pliki": ["FIRMA.md"], "xp": 10,
           "kroki": [
               "Utwórz folder kadry-praktyka (np. w Dokumentach) i wskaż go w Mentorze: Mój projekt → Wybierz katalog. Wewnątrz utwórz podfoldery: 01-zatrudnienie, 02-czas-pracy, 03-urlopy, 04-place, 05-zus-us, 06-zakonczenie, 07-procedury, 99-notatki.",
@@ -43,7 +43,7 @@ TYGODNIE_1 = [
               "Wejdź na zus.pl → zaloguj do eZUS (dawny PUE ZUS) przez profil zaufany lub bankowość. Obejrzyj zakładki: Ubezpieczony, Płatnik (jeśli masz firmę), Świadczeniobiorca. W panelu Ubezpieczony znajdź swoje zgłoszenia i zwolnienia e-ZLA — tak wygląda to, co widzi pracownik.",
               "Wejdź na podatki.gov.pl → e-Urząd Skarbowy → zaloguj profilem zaufanym. Znajdź „Twój e-PIT” i „Deklaracje” — tu pracodawca składa PIT-4R, PIT-11 (przez e-Deklaracje/Twój e-PIT dla płatnika). Zapisz, gdzie co jest.",
               "Pobierz program Płatnik ze strony zus.pl (zakładka Płatnik) i zainstaluj. Przy pierwszym uruchomieniu utwórz NOWĄ bazę ćwiczeniową (nie podłączaj do prawdziwego płatnika) z danymi firmy ćwiczeniowej: AGRO-MLEKO, NIP testowy 000-000-00-00 nie przejdzie walidacji — użyj generatora poprawnego NIP/REGON do testów (wyszukaj „generator NIP testowy”). To baza offline, nic nie wysyłasz.",
-              "Dodaj w Płatniku 3 pierwszych pracowników z FIRMA.md jako ubezpieczonych (Rejestr ubezpieczonych → Dodaj) — na razie bez dokumentów zgłoszeniowych; to zrobisz w tygodniu 8.",
+              "Dodaj w Płatniku 3 pierwszych pracowników z FIRMA.md jako ubezpieczonych (Rejestr ubezpieczonych → Dodaj) — na razie bez dokumentów zgłoszeniowych; to zrobisz w tygodniu 10.",
               "Zapisz w dostepy.md: co gdzie się loguje, jakie uprawnienia potrzebuje pracownik kadr w prawdziwej firmie (pełnomocnictwo ZUS PEL, upoważnienie UPL-1 do e-Deklaracji) i gdzie są formularze PEL i UPL-1.",
           ],
           "sprawdz": "Logujesz się do eZUS i e-US; Płatnik ma bazę ćwiczeniową z firmą i 3 ubezpieczonymi; dostepy.md opisuje PEL i UPL-1.",
@@ -190,7 +190,7 @@ TYGODNIE_1 = [
           "czas_min": 60, "pliki": ["ewidencja_czasu_pracy.xlsx", "ewidencja.md"], "xp": 10,
           "kroki": [
               "Lekcja „Ewidencja czasu pracy i nieobecności”. Zbuduj kartę ewidencji (plik .md z tabelą, szablon: cwiczenia/tydzien_02/ewidencja_czasu_1.md) z kolumnami dla każdego dnia: godzina rozpoczęcia i zakończenia, liczba godzin, w tym nadgodziny, w porze nocnej, w niedzielę/święto, dyżur (miejsce, godziny), dni wolne (z oznaczeniem tytułu: W5 — wolna z 5-dniowego tygodnia, WN — niedziela, WŚ — święto), rodzaj i wymiar nieobecności (urlop, choroba, opieka, siła wyższa, urlop opiekuńczy), zwolnienia od pracy z zachowaniem/bez wynagrodzenia.",
-              "Wypełnij dla operatora za grudzień 2026 z grafiku z zadania 2 (z 1 dniem urlopu, 2 dniami L4 i 4 nadgodzinami). Suma ma się zgadzać z listą płac w tygodniu 5.",
+              "Wypełnij dla operatora za grudzień 2026 z grafiku z zadania 2 (z 1 dniem urlopu, 2 dniami L4 i 4 nadgodzinami). Suma ma się zgadzać z listą płac w tygodniu 6.",
               "Dla pracownika zadaniowego i kierownika wyodrębnionej komórki: nie ewidencjonujesz godzin (art. 149 §2), ale ewidencjonujesz nieobecności i dni wolne — dodaj drugą, uproszczoną kartę.",
               "Dokumenty towarzyszące (trzymane razem z ewidencją): wnioski o czas wolny za nadgodziny, zgody na nadgodziny opiekuna dziecka do 8 lat, wnioski o wyjścia prywatne (odpracowanie nie jest nadgodziną), polecenia nadgodzin, harmonogramy. Okres przechowywania: jak akta (10 lat po ustaniu).",
               "Praca zdalna: ewidencja nadal obowiązuje (pracownik zdalny raportuje godziny), okazjonalna 24 dni/rok — osobna kolumna.",

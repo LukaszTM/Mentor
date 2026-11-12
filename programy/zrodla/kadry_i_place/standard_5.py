@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Bloki standardu lekcji — tygodnie 10–11 (ustanie zatrudnienia, compliance 2026/2027, kontrola)."""
+"""Bloki standardu lekcji — dawne tygodnie 10–11 (ustanie zatrudnienia, compliance 2026/2027, kontrola)."""
 
 STANDARD_5 = {
     # ------------------------------------------------------------------ tydzień 10
@@ -127,7 +127,7 @@ STANDARD_5 = {
                           "Oczekiwany wynik: świadectwo, lista końcowa z bilansem i ZWUA z UPP; checklista offboardingu z 20 pozycjami odhaczona."],
         "cwiczenia": [
             {"rodzaj": "prowadzone",
-             "tresc": "Marek Zieliński odchodzi 30.11.2026 za porozumieniem stron z przyczyn ekonomicznych (inicjatywa firmy). W 2026: urlop wykorzystany 15 dni (w tym 2 na żądanie), zostaje 5 dni (40 h); chorował 12 + 12 + 15 dni (lekcja tygodnia 6); urlop bezpłatny 2–3.11; zajęcie komornicze niealimentacyjne (sygn. KM 123/26) 391,56/mies. Przygotuj jak w demonstracji: treść świadectwa (ust. 1–8), ZWUA, listę końcową (pensja listopadowa pomniejszona o chorobę 15 dni i bezpłatny 24 h, ekwiwalent 40 h, odprawa) i wskaż, co w PIT. Plik: cwiczenia/tydzien_10/swiadectwo_rozliczenie_1.md. Czas: 25 minut.",
+             "tresc": "Marek Zieliński odchodzi 30.11.2026 za porozumieniem stron z przyczyn ekonomicznych (inicjatywa firmy). W 2026: urlop wykorzystany 15 dni (w tym 2 na żądanie), zostaje 5 dni (40 h); chorował 12 + 12 + 15 dni (lekcja tygodnia 7); urlop bezpłatny 2–3.11; zajęcie komornicze niealimentacyjne (sygn. KM 123/26) 391,56/mies. Przygotuj jak w demonstracji: treść świadectwa (ust. 1–8), ZWUA, listę końcową (pensja listopadowa pomniejszona o chorobę 15 dni i bezpłatny 24 h, ekwiwalent 40 h, odprawa) i wskaż, co w PIT. Plik: cwiczenia/tydzien_10/swiadectwo_rozliczenie_1.md. Czas: 25 minut.",
              "wynik": "świadectwo 30.11: okres 1.03.2025–30.11.2026, operator linii, pełny etat, art. 30 §1 pkt 1 KP (porozumienie), urlop 2026: 20 dni (15 wykorzystane + 5 ekwiwalent), w tym 2 na żądanie; bezpłatny 2–3.11.2026; niezdolność z wynagrodzeniem chorobowym: 33 dni; okresy nieskładkowe: 25–30.11.2026 (zasiłek); zajęcie: komornik …, KM 123/26, potrącono do 30.11 …; ZWUA 1.12.2026, kod 100, tryb 1; lista 10.12: pensja 5 400 − 2 700 (choroba) − 810 (bezpłatny) = 1 890 + chorobowe 1 201,14 + zasiłek 800,76 + ekwiwalent 1 290,80 + odprawa 1 × 5 400 (staż < 2 lata; bez ZUS) − potrącenie komornicze na zasadach art. 87 od łącznego netto (odprawa jest świadczeniem ze stosunku pracy i podlega potrąceniu z kwotą wolną); PIT: bez 300 zł (po ustaniu), KUP 250; PIT-11 do 28.02.2027.",
              "wskazowki": ["Co wpisujesz w świadectwie jako urlop „wykorzystany” — tylko dni faktycznie wzięte czy także te, za które wypłacono ekwiwalent?",
                            "Demonstracja, kroki 1 i 5; Warsztat → Lista płac (zasadnicze 1 890, chorobowe 1 201,14, zasiłek 800,76, PIT-2 0, pensja wg umowy 5 400) + Ekwiwalent 40 h.",
@@ -156,7 +156,7 @@ STANDARD_5 = {
              "poprawka": "Wydaj natychmiast; obiegówka to osobny proces (roszczenia o mienie — sąd)."},
         ],
         "podsumowanie": "Wydać świadectwo w dniu ustania z pełną treścią (bez przyczyny), rozliczyć pracownika końcowo (pensja za część miesiąca, ekwiwalent, odprawa, potrącenia, PIT bez oświadczeń) i obsłużyć sprostowanie w terminach.",
-        "zadania": ["Wypełnij świadectwo pracy dla przypadku z zadania tygodnia 10 (wzór z Prompty → Szablony) z wszystkimi pozycjami.",
+        "zadania": ["Wypełnij świadectwo pracy dla przypadku z zadania tygodnia 13 (wzór z Prompty → Szablony) z wszystkimi pozycjami.",
                     "Rozlicz końcowo pracownika (pensja, ekwiwalent, odprawa, ZUS, PIT) w Warsztat → Lista płac i zapisz listę miesiąca.",
                     "Zbuduj checklistę offboardingu z 20 pozycjami i terminami (szablon w Prompty)."],
     },
@@ -319,7 +319,7 @@ STANDARD_5 = {
 
     "kontrola_pip_zus": {
         "po_co": "inspektor PIP może wejść bez zapowiedzi, a ZUS i US — po 7-dniowym zawiadomieniu; to, co pokażesz w pierwszych 30 minutach (regulaminy, ewidencja, listy), decyduje o skali kontroli, a 7 dni na zastrzeżenia do protokołu to jedyna szansa na sprostowanie.",
-        "wymagania": ["Wszystkie lekcje kursu — kontrola sprawdza ich efekty; teczka kontrolna z zadania tygodnia 11.",
+        "wymagania": ["Wszystkie lekcje kursu — kontrola sprawdza ich efekty; teczka kontrolna z zadania tygodnia 15.",
                       "Warsztat → Przepisy: „Kontrola PIP, środki prawne, wykroczenia (art. 281–283 KP)” (ustawa o PIP), „Odsetki, przedawnienie, korekty, sankcje” (ZUS).",
                       "Prompty → Szablony → „Instrukcja dla recepcji: wizyta inspektora”, „Zastrzeżenia do protokołu”, „Odpowiedź na wystąpienie”.",
                       "Pojęcia: legitymacja i upoważnienie (PIP — upoważnienie może być doręczone do 7 dni po rozpoczęciu), książka kontroli, protokół (PIP: zastrzeżenia 7 dni; ZUS: 14 dni), nakaz płacowy (wykonalny natychmiast), nakaz BHP, wystąpienie (odpowiedź 30 dni), mandat (do 2 000; 5 000 przy recydywie), wniosek do sądu (grzywna do 30 000), decyzja ZUS (odwołanie 1 miesiąc do sądu)."],
@@ -367,7 +367,7 @@ STANDARD_5 = {
              "poprawka": "Lista dodatkowa: wynagrodzenie oskładkowane + odsetki osobno (bez ZUS/PIT); RPA, jeśli inny rok."},
         ],
         "podsumowanie": "Przygotować firmę do kontroli (teczka, instrukcja, audyt), przeprowadzić ją bez błędów proceduralnych, właściwie zareagować na protokół, nakaz, mandat i wystąpienie oraz rozliczyć wyrównania z odsetkami.",
-        "zadania": ["Przeprowadź audyt wewnętrzny 60 pytań (zadanie tygodnia 11) i sporządź plan naprawczy z priorytetami.",
+        "zadania": ["Przeprowadź audyt wewnętrzny 60 pytań (zadanie tygodnia 15) i sporządź plan naprawczy z priorytetami.",
                     "Skompletuj „teczkę kontrolną” — lista 40 dokumentów z datą ostatniej aktualizacji (szablon w ćwiczeniu 1).",
                     "Napisz instrukcję dla recepcji/kierowników: co robić, gdy przychodzi inspektor (PIP vs ZUS vs UODO)."],
     },

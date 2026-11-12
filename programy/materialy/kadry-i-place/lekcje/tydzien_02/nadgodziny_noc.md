@@ -1,5 +1,5 @@
 # Nadgodziny, dyżur, praca w nocy — rozliczenie
-Tydzień 2 · lekcja 10 z 45 · ≈ 30 min
+Tydzień 2 · lekcja 10 z 46 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** rozliczasz nadgodziny dobowe i średniotygodniowe (50/100%, czas wolny 1:1 / 1:1,5), dodatek nocny i dyżur.
 
@@ -11,17 +11,45 @@ Tydzień 2 · lekcja 10 z 45 · ≈ 30 min
 - Pojęcia: nadgodziny dobowe (ponad 8 h / ponad przedłużony dobowy wymiar w równoważnym), średniotygodniowe (ponad przeciętnie 40 h w okresie), normalne wynagrodzenie (za każdą nadgodzinę) + dodatek 50% lub 100%.
 
 ## 1 · Wyjaśnienie od podstaw
-Nadgodziny (art. 151) tylko z konieczności akcji ratowniczej lub szczególnych potrzeb pracodawcy; limit 150 h rocznie (regulamin/umowa może podnieść — do 416 h przy zachowaniu 48 h tygodniowo średnio), zakaz dla ciężarnych, młodocianych, niepełnosprawnych (bez zgody lekarza), a opiekun dziecka do 8 lat — tylko za zgodą. Rodzaje: dobowe (przekroczenie 8 h lub przedłużonego wymiaru z grafiku w danym dniu) — rozliczane co miesiąc; średniotygodniowe (po zakończeniu okresu rozliczeniowego: przepracowane − wymiar − nadgodziny dobowe już policzone).
+### Kiedy wolno zlecić nadgodziny (art. 151)
+Tylko z dwóch powodów: akcja ratownicza albo szczególne potrzeby pracodawcy.
+Limit: 150 h rocznie. Regulamin lub umowa może go podnieść — do 416 h, przy zachowaniu średnio 48 h tygodniowo.
+| Kto | Nadgodziny |
+|---|---|
+| ciężarne, młodociani | zakaz |
+| pracownicy z niepełnosprawnością | zakaz bez zgody lekarza |
+| opiekun dziecka do 8 lat | tylko za zgodą pracownika |
+### Dwa rodzaje nadgodzin
+| Rodzaj | Kiedy powstaje | Kiedy rozliczasz |
+|---|---|---|
+| dobowe | przekroczenie 8 h albo przedłużonego wymiaru z grafiku w danym dniu | co miesiąc |
+| średniotygodniowe | przepracowane − wymiar − nadgodziny dobowe już policzone | po zakończeniu okresu rozliczeniowego |
 ### Rekompensata
-normalne wynagrodzenie za każdą nadgodzinę (stawka godzinowa = wynagrodzenie zasadnicze + stałe składniki / wymiar miesiąca) + dodatek: 100% za nadgodziny w nocy, w niedziele i święta niebędące dniami pracy wg rozkładu, w dniu wolnym udzielonym za niedzielę/święto, oraz za przekroczenie normy średniotygodniowej; 50% w pozostałych (dobowe w dzień roboczy). Praca w dniu wolnym z 5-dniowego tygodnia (sobota) → najpierw inny dzień wolny do końca okresu (art. 151³); jeśli nieudzielony — nadgodziny średniotygodniowe 100%. Zamiast dodatku: czas wolny 1:1 na wniosek pracownika (także w kolejnym okresie), 1:1,5 bez wniosku w tym samym okresie — bez obniżenia wynagrodzenia. Ryczałt za nadgodziny — tylko dla stale pracujących poza zakładem, odpowiadający przewidywanemu wymiarowi. Kadra zarządzająca i kierownicy komórek — bez prawa do dodatku (poza niedzielą/świętem bez dnia wolnego dla kierowników).
+Za każdą nadgodzinę: normalne wynagrodzenie + dodatek.
+Stawka godzinowa = (wynagrodzenie zasadnicze + stałe składniki) / wymiar miesiąca.
+| Dodatek | Za nadgodziny |
+|---|---|
+| 100% | w nocy; w niedziele i święta niebędące dniami pracy wg rozkładu; w dniu wolnym udzielonym za niedzielę lub święto; za przekroczenie normy średniotygodniowej |
+| 50% | pozostałe — dobowe w dzień roboczy |
+### Praca w dniu wolnym z 5-dniowego tygodnia (sobota)
+Najpierw dajesz inny dzień wolny do końca okresu rozliczeniowego (art. 151³).
+Jeśli dnia wolnego nie udzieliłeś — to nadgodziny średniotygodniowe z dodatkiem 100%.
+### Czas wolny zamiast dodatku
+| Na czyj wniosek | Przelicznik | Kiedy |
+|---|---|---|
+| pracownika | 1:1 | także w kolejnym okresie rozliczeniowym |
+| bez wniosku (decyzja pracodawcy) | 1:1,5 | w tym samym okresie, bez obniżenia wynagrodzenia |
+### Wyjątki
+- Ryczałt za nadgodziny — tylko dla stale pracujących poza zakładem; odpowiada przewidywanemu wymiarowi.
+- Kadra zarządzająca i kierownicy komórek — bez prawa do dodatku. Wyjątek dla kierowników: niedziela lub święto bez dnia wolnego.
 ### Pora nocna
-- 8 h między 21:00 a 7:00 (regulamin)
-- dodatek 20% stawki godzinowej z minimalnego wynagrodzenia (4 806 / wymiar miesiąca) za każdą godzinę
-- pracujący w nocy (≥ 3 h nocnych na dobę lub ≥ 1/4 czasu w okresie) — max 8 h przy pracach niebezpiecznych
-Dyżur (art. 151⁵):
-- poza godzinami, w zakładzie lub domu
-- czas dyżuru w zakładzie bez pracy — czas wolny lub wynagrodzenie (nie dla domowego)
-- nie może naruszać odpoczynków
+8 godzin między 21:00 a 7:00 — wskazuje regulamin.
+Dodatek nocny: 20% stawki godzinowej z minimalnego wynagrodzenia (4 806 / wymiar miesiąca) za każdą godzinę.
+Pracujący w nocy (≥ 3 h nocne na dobę albo ≥ 1/4 czasu w okresie) — przy pracach niebezpiecznych maksymalnie 8 h na dobę.
+### Dyżur (art. 151⁵)
+Dyżur jest poza godzinami pracy, w zakładzie albo w domu.
+Dyżur w zakładzie bez wykonywania pracy: czas wolny albo wynagrodzenie. Za dyżur domowy — nie.
+Dyżur nie może naruszać odpoczynków.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Biuro, 6 000 zł, czerwiec 2026 — wtorek 12 h i sobota 8 h**

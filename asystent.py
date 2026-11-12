@@ -581,9 +581,31 @@ class EmulatorOffline:
         return [("ostrz", f"Nieznana komenda /{cmd}. Lista: /help")]
 
     # ---------------------------------------------------------------- tematy
+    @staticmethod
+    def _tekst_lekcji(wyjasnienie):
+        """Wyjaśnienie lekcji do okna czatu: tabele Markdown (| a | b |) zamienia na listę „a: b — c”, nagłówki „## ” na linię z „▸”."""
+        out, naglowek = [], None
+        for linia in (wyjasnienie or "").split("\n"):
+            a = linia.strip()
+            if not a:
+                continue
+            if a.startswith("|"):
+                kom = [c.strip() for c in a.strip("|").split("|")]
+                if all(set(c) <= set("-: ") for c in kom):
+                    continue
+                if naglowek is None:
+                    naglowek = kom
+                    continue
+                reszta = " — ".join(f"{(naglowek[i] + ': ') if i < len(naglowek) and naglowek[i] and len(kom) > 2 else ''}{c}" for i, c in enumerate(kom[1:], 1) if c)
+                out.append(f"• {kom[0]}: {reszta}" if len(kom) > 1 else f"• {kom[0]}")
+                continue
+            naglowek = None
+            out.append(("▸ " + a[3:]) if a.startswith("## ") else a)
+        return "\n".join(out)
+
     def _wyjasnij_temat(self, temat):
         self.ostatni_temat = temat
-        out = [("naglowek", f"{temat['nazwa']}  (tydzień {temat['tydzien']})"), ("tekst", temat["wyjasnienie"]),
+        out = [("naglowek", f"{temat['nazwa']}  (tydzień {temat['tydzien']})"), ("tekst", self._tekst_lekcji(temat["wyjasnienie"])),
                ("tekst", "Przykład:"), ("kod", temat["przyklad"])]
         if temat.get("pulapki"):
             out.append(("ostrz", "Pułapki: " + " ".join(temat["pulapki"])))
@@ -674,7 +696,7 @@ class EmulatorOffline:
         temat = self._temat(tekst) or self.ostatni_temat
         if temat:
             return [("tekst", f"„Dlaczego” to dobre pytanie — ale offline nie mam odpowiedzi na dowolne „dlaczego”. Mam wyjaśnienie tematu "
-                              f"„{temat['nazwa']}” i jego pułapki:"), ("tekst", temat["wyjasnienie"]),
+                              f"„{temat['nazwa']}” i jego pułapki:"), ("tekst", self._tekst_lekcji(temat["wyjasnienie"])),
                     ("ostrz", "Pułapki: " + " ".join(temat.get("pulapki", []))),
                     ("pytanie", "Jeśli po tym nadal nie jest oczywiste — zapisz pytanie w Dzienniku; w trybie API lub Claude Code zadasz je modelowi.")]
         return [("tekst", "Nie wiem, o który temat chodzi. Napisz np. „dlaczego input zwraca napis” — dopasuję temat.")]

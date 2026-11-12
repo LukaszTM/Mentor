@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Bloki standardu lekcji — tygodnie 6–7 (choroba i zasiłki, kontrola L4, umowy cywilne, PPK, cudzoziemcy i B2B)."""
+"""Bloki standardu lekcji — dawne tygodnie 6–7 (choroba i zasiłki, kontrola L4, umowy cywilne, PPK, cudzoziemcy i B2B)."""
 
 STANDARD_3 = {
     # ------------------------------------------------------------------ tydzień 6
@@ -52,7 +52,7 @@ STANDARD_3 = {
              "poprawka": "Za dzień pracy — wynagrodzenie; e-ZLA koryguje lekarz; ZUS może wydać decyzję o braku prawa."},
         ],
         "podsumowanie": "Rozpisać zwolnienia roku na wynagrodzenie chorobowe i zasiłek (33/14), policzyć kwoty ze stawki dziennej, rozpoznać nowy okres zasiłkowy (przerwa > 60 dni) i wskazać, kto wypłaca i jak wykazać w RSA/DRA.",
-        "zadania": ["Rozlicz 3 przypadki z zadania tygodnia 6 (pula 33 dni, okres zasiłkowy, kto płaci) — sprawdź w Warsztat → Zasiłki → karta B.",
+        "zadania": ["Rozlicz 3 przypadki z zadania tygodnia 7 (pula 33 dni, okres zasiłkowy, kto płaci) — sprawdź w Warsztat → Zasiłki → karta B.",
                     "Ustal dla firmy z FIRMA.md, kto wypłaca zasiłki w 2026 (stan na 30.11.2025) i pobierz e-ZLA z symulatora (Warsztat → eZUS/Płatnik → e-ZLA → „Pobierz do RSA”).",
                     "Policz zasiłek za pobyt w szpitalu 12 dni przy podstawie 4 147,10 (Katarzyna Wójcik)."],
     },

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Kadry i płace — tygodnie 4–7 (płace: lista płac, składniki, chorobowe i zasiłki, umowy cywilnoprawne i PPK)."""
+"""Kadry i płace — dawne tygodnie 4–7 (harmonogram: plan_tygodni.py; płace: lista płac, składniki, chorobowe i zasiłki, umowy cywilnoprawne i PPK)."""
 
 TYGODNIE_2 = [
     # ------------------------------------------------------------------ TYDZIEŃ 4
@@ -52,13 +52,13 @@ TYGODNIE_2 = [
           ],
           "sprawdz": "Budżet roczny 8 osób z rozbiciem na składniki; wypadkowa z właściwego PKD; 3 scenariusze porównane kwotowo.",
           "problemy": ["FP dla wszystkich → zwolnienia wiekowe i po urlopach rodzicielskich; pilnuj daty urodzenia w kartotece."]},
-         {"id": "k4z5", "tytul": "Zadanie tygodnia: lista płac za listopad 2026 z paskami i przelewami", "opis": "Pełna lista płac firmy ćwiczeniowej (8 osób) z nadgodzinami i nocnymi z tygodnia 2, paskami wynagrodzeń i plikiem przelewów.",
+         {"id": "k4z5", "tytul": "Zadanie tygodnia: lista płac za listopad 2026 z paskami i przelewami", "opis": "Pełna lista płac firmy ćwiczeniowej (8 osób) z nadgodzinami i nocnymi z tygodni 2–3, paskami wynagrodzeń i plikiem przelewów.",
           "czas_min": 120, "pliki": ["lista_plac_11_2026.xlsx", "paski_11_2026.md"], "xp": 25,
           "kroki": [
-              "Weź arkusz z zadania 2. Dodaj składniki za listopad: nadgodziny i dodatek nocny z audytu czasu pracy (tydzień 2), premię regulaminową 10% dla 3 osób, zasiłek? (nie — chorobowe w tygodniu 6; na razie wszyscy pełny miesiąc). Wszystkie składniki wchodzą do podstawy składek i podatku.",
+              "Weź arkusz z zadania 2. Dodaj składniki za listopad: nadgodziny i dodatek nocny z audytu czasu pracy (tydzień 2), premię regulaminową 10% dla 3 osób, zasiłek? (nie — chorobowe w tygodniach 7–8; na razie wszyscy pełny miesiąc). Wszystkie składniki wchodzą do podstawy składek i podatku.",
               "Pasek wynagrodzeń dla każdego (format: składniki brutto → składki → podatek → PPK → potrącenia → netto → dni/godz. przepracowane, urlop wykorzystany/pozostały). Pasek nie jest obowiązkowy, ale na żądanie pracownika musisz udostępnić dokumenty, na podstawie których obliczono wynagrodzenie (art. 85 §5).",
               "Plik przelewów (CSV: nazwisko, konto, kwota netto, tytuł „Wynagrodzenie 11/2026”) z datą 10.12.2026 — termin stały, z dołu, nie później niż 10. dnia następnego miesiąca (art. 85); jeśli 10. to dzień wolny — dzień wcześniej.",
-              "Zestawienie dla księgowości: suma brutto, składki pracownika, składki pracodawcy wg funduszy, zaliczka PIT (do US do 20 grudnia), PPK (do instytucji do 15 grudnia), zdrowotna — kwoty do DRA (tydzień 8). Zgodność sum: suma netto + potrącenia + składki prac. + zaliczka = suma brutto.",
+              "Zestawienie dla księgowości: suma brutto, składki pracownika, składki pracodawcy wg funduszy, zaliczka PIT (do US do 20 grudnia), PPK (do instytucji do 15 grudnia), zdrowotna — kwoty do DRA (tydzień 10). Zgodność sum: suma netto + potrącenia + składki prac. + zaliczka = suma brutto.",
               "Asystent: „Oto moja lista płac (wklej 2 wiersze). Zadaj mi 5 pytań kontrolnych, które zadałby audytor.” Odpowiedz w notatkach. Sobota: quiz 4.",
           ],
           "sprawdz": "Lista bilansuje się (brutto = netto + wszystkie obciążenia pracownika); paski 8 osób; CSV przelewów; zestawienie dla księgowości z terminami US/ZUS/PPK.",
@@ -87,7 +87,7 @@ TYGODNIE_2 = [
           "kroki": [
               "Ekwiwalent (rozwiązanie umowy 31.12.2026, 7 dni = 56 h niewykorzystane, 6 000 zł stałe + zmienne z 3 mies. średnio 400 zł/mies.): podstawa = 6 000 + 400 = 6 400; stawka dzienna = 6 400 / 20,92 = 305,93; stawka godz. = 305,93 / 8 = 38,24; ekwiwalent = 38,24 × 56 = 2 141,44 zł. Składniki za okresy > 1 miesiąca (premia kwartalna) — średnia z 12 miesięcy wchodzi do ekwiwalentu.",
               "1/2 etatu, 2 500 zł, 4 dni (32 h — dzień urlopu niepełnoetatowca to również 8 h): współczynnik 10,46 → stawka dzienna 2 500 / 10,46 = 239,01; godz. = 29,88; ekwiwalent 32 × 29,88 = 956,16. Od 27.01.2026 wypłata w terminie wypłaty wynagrodzenia (a gdy ten wypada przed ustaniem — do 10 dni od ustania).",
-              "Część miesiąca — choroba: pensja stała 6 000, L4 10 dni w listopadzie (30 dni kalendarzowych): 6 000 / 30 × 10 = 2 000 do odjęcia → 4 000 za pracę + wynagrodzenie chorobowe (tydzień 6). ZAWSZE dzielisz przez 30, niezależnie od długości miesiąca.",
+              "Część miesiąca — choroba: pensja stała 6 000, L4 10 dni w listopadzie (30 dni kalendarzowych): 6 000 / 30 × 10 = 2 000 do odjęcia → 4 000 za pracę + wynagrodzenie chorobowe (tydzień 7). ZAWSZE dzielisz przez 30, niezależnie od długości miesiąca.",
               "Część miesiąca — inna nieobecność (bezpłatny 3 dni, 24 h) w listopadzie (wymiar 160 h): 6 000 / 160 × 24 = 900 do odjęcia → 5 100. Dzielisz przez wymiar z danego miesiąca.",
               "Zatrudnienie od 16.11: 6 000 / 160 × godziny przepracowane (dni robocze od 16 do 30.11 × 8). Policz. Zbierz trzy metody w tabeli z podstawą prawną (§11, §12 rozporządzenia o wynagrodzeniu).",
           ],
@@ -161,7 +161,7 @@ TYGODNIE_2 = [
           "kroki": [
               "Lekcja „Zasiłki w dokumentach ZUS”. e-ZLA: lekarz wystawia, pracodawca widzi na eZUS (profil płatnika) — pracownik nie dostarcza papieru; obowiązek pracownika: poinformować o nieobecności (regulamin: do 2. dnia). Sprawdzasz: kod literowy (A — ta sama choroba do 60 dni, B — ciąża, C — alkohol: 5 dni bez zasiłku, D — gruźlica, E — po ustaniu), „może chodzić/leżeć”, okres.",
               "Kto wypłaca: płatnik zgłaszający > 20 ubezpieczonych na 30.11 poprzedniego roku — sam wypłaca zasiłki (i rozlicza w DRA jako pomniejszenie składek); ≤ 20 — ZUS, a płatnik składa Z-3 (pracownicy) / Z-3a (zleceniobiorcy) / Z-3b (przedsiębiorca) przez eZUS w 7 dni. Firma ćwiczeniowa: sama wypłaca; ale po ustaniu zatrudnienia pracownika — Z-3 do ZUS.",
-              "Wypełnij Z-3 (formularz z eZUS — przejdź przez niego) dla pracownika D z tygodnia 5, który choruje od 5.01.2027 po rozwiązaniu umowy 31.12 (zasiłek po ustaniu tytułu — do 30 dni od ustania, max 91 dni, chyba że ma inny tytuł lub prawo do emerytury): 12 miesięcy przychodu, składniki, okresy nieobecności, liczba ubezpieczonych.",
+              "Wypełnij Z-3 (formularz z eZUS — przejdź przez niego) dla pracownika D z zadania „Miesiąc z nieobecnościami” (tydzień 7), który choruje od 5.01.2027 po rozwiązaniu umowy 31.12 (zasiłek po ustaniu tytułu — do 30 dni od ustania, max 91 dni, chyba że ma inny tytuł lub prawo do emerytury): 12 miesięcy przychodu, składniki, okresy nieobecności, liczba ubezpieczonych.",
               "W ewidencji i liście płac: kod RSA 331 (wynagrodzenie chorobowe), 313 (zasiłek chorobowy), 151 (okres nieobecności usprawiedliwionej bez prawa do wynagrodzenia — np. wyczekiwanie), 152 (nieusprawiedliwiona); kwoty zasiłków wypłaconych wykazujesz w RSA i pomniejszasz składki w DRA (blok IV/V). Termin wypłaty zasiłku przez płatnika — w terminie wypłaty wynagrodzeń; przez ZUS — 30 dni od dokumentów.",
               "Napisz procedurę 1 strona „Pracownik na L4” od powiadomienia po RSA, z terminami i osobami.",
           ],
@@ -247,7 +247,7 @@ TYGODNIE_2 = [
               "Dopisz do FIRMA.md 6 zleceniobiorców (student, emeryt, 2 z etatem gdzie indziej, 2 bez tytułu — jeden z nich jeździ wg grafiku jak kierowca) i 2 osoby na dziele (grafik etykiet; „dzieło” na comiesięczne raporty jakości — podejrzane).",
               "Dla każdej umowy cywilnoprawnej: schemat składek, czy stawka ≥ 31,40 zł/h, ewidencja godzin, ryzyko przekwalifikowania (skala 1–3 z uzasadnieniem), czy złożono RUD, PPK (zleceniobiorcy z obowiązkowymi składkami emerytalno-rentowymi też podlegają PPK — tak!).",
               "Wylicz skutek przekwalifikowania 2 najbardziej ryzykownych umów przez ZUS za 3 lata wstecz: składki pracodawcy + pracownika (których nie da się już potrącić — koszt firmy) + odsetki; i przez PIP/sąd: urlop, nadgodziny, odprawa.",
-              "Rekomendacje: które umowy zamienić na etat (koszt roczny z tygodnia 4), które zostawić, co poprawić (ewidencja godzin, oświadczenia o innych tytułach, RUD), kalendarz PPK dla zleceniobiorców.",
+              "Rekomendacje: które umowy zamienić na etat (koszt roczny z tygodnia 5), które zostawić, co poprawić (ewidencja godzin, oświadczenia o innych tytułach, RUD), kalendarz PPK dla zleceniobiorców.",
               "Asystent: „Oceń @audyt_form_zatrudnienia.md jak kontroler ZUS i inspektor PIP — czy zgadzasz się z moją skalą ryzyka?”. Sobota: quiz 7 i CHECKLISTA etapu 2.",
           ],
           "sprawdz": "Tabela 8 umów z ryzykiem i brakami; kalkulacja skutków dla 2 umów; rekomendacje z kosztami.",

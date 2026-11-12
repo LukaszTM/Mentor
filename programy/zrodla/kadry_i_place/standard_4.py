@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Bloki standardu lekcji — tygodnie 8–9 (ZUS: zgłoszenia, rozliczenia, korekty; PIT roczny, ZFŚS/PFRON, kalendarz)."""
+"""Bloki standardu lekcji — dawne tygodnie 8–9 (ZUS: zgłoszenia, rozliczenia, korekty; PIT roczny, ZFŚS/PFRON, kalendarz)."""
 
 STANDARD_4 = {
     # ------------------------------------------------------------------ tydzień 8
@@ -52,7 +52,7 @@ STANDARD_4 = {
              "poprawka": "Data = ustanie + 1 dzień; kod 100; dla pracownika tryb i podstawa prawna."},
         ],
         "podsumowanie": "Zgłosić, wyrejestrować i zmienić zgłoszenie każdej osoby właściwym dokumentem, kodem i datą w 7 dni, przejść weryfikację jak w Płatniku i rozpoznać skutki złego kodu.",
-        "zadania": ["Przygotuj komplet zgłoszeń dla 5 osób z FIRMA.md (zadanie tygodnia 8) — kody, daty, dokumenty, UPP z symulatora.",
+        "zadania": ["Przygotuj komplet zgłoszeń dla 5 osób z FIRMA.md (zadanie tygodnia 10) — kody, daty, dokumenty, UPP z symulatora.",
                     "Popraw błędne zgłoszenie: zleceniobiorca zgłoszony 01 10 — jaka sekwencja dokumentów? Wykonaj ją w symulatorze.",
                     "Wyrejestruj w symulatorze pracownika z trybem rozwiązania i podstawą prawną (ZWUA) i zapisz Rejestr do projektu."],
     },
@@ -60,7 +60,7 @@ STANDARD_4 = {
     "zus_rozliczenia": {
         "po_co": "do 15. każdego miesiąca spółka wysyła komplet DRA/RCA/RSA i płaci składki — spóźnienie to odsetki i utrata prawa do zasiłku z dobrowolnego chorobowego, a niezgodność RCA z listą płac wychodzi przy każdej kontroli ZUS.",
         "wymagania": ["Warsztat → Lista płac → lista miesiąca (zapisana) — RCA powstaje z niej; Warsztat → eZUS / Płatnik → karta „Rozliczenie DRA/RCA/RSA” (Dodaj RSA, Pokaż komplet, Weryfikuj, Wyślij, identyfikator).",
-                      "Lekcje tygodnia 6 (kody RSA, zasiłki do odliczenia).",
+                      "Lekcje tygodnia 8 (kody RSA, zasiłki do odliczenia).",
                       "Pojęcia: DRA (deklaracja zbiorcza), RCA (raport imienny — podstawy i składki każdej osoby), RSA (raport o przerwach i świadczeniach — za miesiąc, w którym była przerwa), RPA (przychód za inny rok), zasada kasowa (składki za miesiąc WYPŁATY), identyfikator 01 MM RRRR, NRS (numer rachunku składkowego), termin 15. (osoby prawne) / 20. (pozostali)."],
         "demonstracja": {
             "tytul": "Komplet 01 12 2026 AGRO-MLEKO: wypłata za listopad 10.12 — kto trafia do RCA, co do RSA, ile do zapłaty",
@@ -157,7 +157,7 @@ STANDARD_4 = {
              "poprawka": "Lista dodatkowa: przychód = zwrot; zdrowotna + zaliczka (bez składek społecznych)."},
         ],
         "podsumowanie": "Przeprowadzić korektę ZUS (zgłoszenia + komplet 02 z DRA), rozliczyć nadpłatę/niedopłatę w części pracownika i pracodawcy z odsetkami, i ująć skutki w PIT.",
-        "zadania": ["Wykonaj 3 korekty z zadania tygodnia 8 (student, 30-krotność, zbieg) z pełnym rozliczeniem PIT — komplety 02 w symulatorze.",
+        "zadania": ["Wykonaj 3 korekty z zadania tygodnia 10 (student, 30-krotność, zbieg) z pełnym rozliczeniem PIT — komplety 02 w symulatorze.",
                     "Wyślij w symulatorze komplet pierwotny 01 i korygujący 02 za ten sam miesiąc; spróbuj wysłać 02 dwa razy — zapisz komunikaty.",
                     "Napisz pismo do pracownika o zwrocie nadpłaconych składek z informacją o PIT (Prompty → Szablony)."],
     },
@@ -315,7 +315,7 @@ STANDARD_4 = {
              "poprawka": "Dodaj wiersz: 5.11.2026 wejście; 5.05.2027 procedura w regulaminie; właściciel; status."},
         ],
         "podsumowanie": "Zbudować kalendarz miesięczny, roczny, cykliczny i zdarzeniowy z podstawą, właścicielem i alertem, stosować właściwe przesunięcia terminów i wiedzieć, które obowiązki zależą od liczebności, a które od formy prawnej.",
-        "zadania": ["Zbuduj roczny kalendarz firmy (zadanie tygodnia 9): 60+ pozycji z terminem, podstawą, właścicielem — w pliku kalendarz_2027.md.",
+        "zadania": ["Zbuduj roczny kalendarz firmy (zadanie tygodnia 12): 60+ pozycji z terminem, podstawą, właścicielem — w pliku kalendarz_2027.md.",
                     "Wypisz alerty na 7 dni przed każdym terminem miesięcznym w formie listy kontrolnej na jeden miesiąc (np. luty 2027) z przesunięciami.",
                     "Wypisz, które terminy zmieniłyby się dla osoby fizycznej prowadzącej firmę (ZUS do 20.) i dla firmy 18-osobowej."],
     },

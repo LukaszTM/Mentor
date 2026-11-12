@@ -1,5 +1,5 @@
 # Narzędzia: eZUS/PUE, Płatnik, e-Urząd Skarbowy, program kadrowy
-Tydzień 0 · lekcja 3 z 45 · ≈ 20 min
+Tydzień 0 · lekcja 3 z 46 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** wiesz, do czego służą eZUS, Płatnik, e-Urząd Skarbowy i program kadrowy, kto podpisuje PEL/UPL-1 i jak wygląda miesięczny obieg dokumentów.
 
@@ -11,12 +11,35 @@ Tydzień 0 · lekcja 3 z 45 · ≈ 20 min
 - Pojęcia: PEL (pełnomocnictwo w ZUS), UPL-1 (pełnomocnictwo do podpisywania deklaracji podatkowych), KEDU (plik z dokumentami ZUS eksportowany z programu kadrowego), UPP/UPO (urzędowe potwierdzenia odbioru).
 
 ## 1 · Wyjaśnienie od podstaw
-Cztery systemy, bez których nie da się pracować. eZUS (dawniej PUE ZUS) — portal ZUS: jako płatnik widzisz ubezpieczonych, e-ZLA pracowników, saldo składek, składasz wnioski (Z-3, US-3 → A1, zaświadczenie o niezaleganiu), odbierasz pisma. Dostęp dla pracownika kadr daje pełnomocnictwo PEL podpisane przez zarząd. Płatnik — program desktopowy ZUS do dokumentów zgłoszeniowych (ZUA, ZZA, ZWUA, ZCNA) i rozliczeniowych (DRA, RCA, RSA, RPA), z weryfikacją i wysyłką z certyfikatem kwalifikowanym; małe firmy mogą użyć ePłatnika w eZUS. W praktyce dokumenty generuje program kadrowo-płacowy (Symfonia, Optima, enova, Gratyfikant…) i eksportuje do Płatnika (plik KEDU) — ale rozumieć musisz, co jest w środku, bo to Ty odpowiadasz za błędy.
-e-Urząd Skarbowy / e-Deklaracje — PIT-4R, PIT-11, PIT-8AR, IFT składasz elektronicznie; podpisuje osoba z pełnomocnictwem UPL-1 (zgłoszonym do US). Zaliczki PIT wpłacasz na mikrorachunek podatkowy firmy (NIP). Program kadrowy generuje PIT-11, ale kartoteka przychodów musi być prowadzona poprawnie przez cały rok — PIT-11 to tylko jej suma.
-### Pozostałe
-praca.gov.pl (powiadomienia o cudzoziemcach, PUP), e-PFRON2 (DEK, Wn-D), portal sprawozdawczy GUS, platforma PPK instytucji finansowej (zapisy, wpłaty — plik), e-Doręczenia (od 2025 obowiązkowe dla firm — pisma urzędowe). Zasada bezpieczeństwa: oddzielne konto i uprawnienia dla każdej osoby, rejestr pełnomocnictw, odwołanie przy odejściu pracownika kadr tego samego dnia.
+### Cztery systemy, bez których nie da się pracować
+| System | Do czego służy | Kto ma dostęp |
+|---|---|---|
+| eZUS (dawniej PUE ZUS) | portal ZUS: ubezpieczeni, e-ZLA pracowników, saldo składek, wnioski (Z-3, US-3 → A1, zaświadczenie o niezaleganiu), pisma z ZUS | pracownik kadr z pełnomocnictwem PEL podpisanym przez zarząd |
+| Płatnik | program ZUS do dokumentów zgłoszeniowych (ZUA, ZZA, ZWUA, ZCNA) i rozliczeniowych (DRA, RCA, RSA, RPA); weryfikacja i wysyłka z certyfikatem kwalifikowanym | małe firmy mogą użyć ePłatnika w eZUS |
+| e-Urząd Skarbowy / e-Deklaracje | PIT-4R, PIT-11, PIT-8AR, IFT składasz elektronicznie | osoba z pełnomocnictwem UPL-1 zgłoszonym do US |
+| program kadrowo-płacowy (Symfonia, Optima, enova, Gratyfikant…) | generuje listy płac, dokumenty ZUS (eksport do Płatnika — plik KEDU) i PIT-11 | kadry i płace |
+Program liczy, ale Ty odpowiadasz za błędy. Dlatego musisz rozumieć, co jest w środku każdego dokumentu.
+Zaliczki PIT wpłacasz na mikrorachunek podatkowy firmy (NIP).
+PIT-11 to tylko suma kartoteki przychodów. Kartotekę prowadzisz poprawnie przez cały rok.
+### Pozostałe portale
+- praca.gov.pl — powiadomienia o cudzoziemcach, PUP.
+- e-PFRON2 — DEK, Wn-D.
+- portal sprawozdawczy GUS.
+- platforma PPK instytucji finansowej — zapisy, wpłaty (plik).
+- e-Doręczenia — od 2025 obowiązkowe dla firm; tu przychodzą pisma urzędowe.
+### Bezpieczeństwo dostępów
+- Każda osoba ma oddzielne konto i własne uprawnienia.
+- Prowadzisz rejestr pełnomocnictw.
+- Gdy pracownik kadr odchodzi, odwołujesz jego pełnomocnictwa tego samego dnia.
 ### W tym kursie: Warsztat zamiast kont
-Żadnego z tych systemów nie musisz zakładać ani instalować. Zakładka Warsztat w Mentorze ma ich symulatory: „eZUS / Płatnik” (rejestr ubezpieczonych, dokumenty zgłoszeniowe z weryfikacją jak w Płatniku, komplety DRA/RCA/RSA, skrzynka e-ZLA, rejestr z numerami UPP), „e-Urząd: PIT” (PIT-11 i PIT-4R z Twojej kartoteki, UPO) oraz kalkulatory (lista płac, zasiłki, urlopy, czas pracy, potrącenia) i bibliotekę przepisów. Ekrany i komunikaty odpowiadają prawdziwym, więc po kursie przesiadka na eZUS i Płatnika to kwestia logowania, nie nauki od nowa.
+Żadnego z tych systemów nie musisz zakładać ani instalować. Zakładka Warsztat w Mentorze ma ich symulatory.
+| Narzędzie Warsztatu | Co odpowiada prawdziwemu systemowi |
+|---|---|
+| eZUS / Płatnik | rejestr ubezpieczonych, dokumenty zgłoszeniowe z weryfikacją jak w Płatniku, komplety DRA/RCA/RSA, skrzynka e-ZLA, rejestr z numerami UPP |
+| e-Urząd: PIT | PIT-11 i PIT-4R z Twojej kartoteki, UPO |
+| kalkulatory | lista płac, zasiłki, urlopy, czas pracy, potrącenia, delegacje |
+| Przepisy | biblioteka przepisów offline |
+Ekrany i komunikaty odpowiadają prawdziwym. Po kursie przesiadka na eZUS i Płatnika to kwestia logowania, nie nauki od nowa.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Miesięczny obieg dokumentów w firmie 62-osobowej — co, gdzie, do kiedy**

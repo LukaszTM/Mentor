@@ -1,5 +1,5 @@
 # Umowa o pracę: rodzaje, limity 33/3, treść art. 29
-Tydzień 1 · lekcja 7 z 45 · ≈ 25 min
+Tydzień 1 · lekcja 7 z 46 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** dobierasz rodzaj umowy, pilnujesz limitów 33/3 i okresu próbnego oraz sporządzasz umowę z wszystkimi elementami art. 29.
 
@@ -11,24 +11,42 @@ Tydzień 1 · lekcja 7 z 45 · ≈ 25 min
 - Szablon umowy: Prompty → Szablony → „Umowa o pracę” (gotowe pola do wypełnienia).
 
 ## 1 · Wyjaśnienie od podstaw
-### Trzy rodzaje
-na okres próbny, na czas określony, na czas nieokreślony (art. 25).
-Próbna:
-- maksymalnie 3 miesiące
-- jeśli po niej planujesz umowę na czas określony krótszą niż 6 miesięcy — próbna max 1 miesiąc, 6–12 miesięcy — max 2 miesiące (i musisz w umowie wpisać planowany okres kolejnej umowy)
-- można przedłużyć o urlop/usprawiedliwioną nieobecność, jeśli umowa to przewiduje
-- ponowna próbna z tym samym pracownikiem — tylko na inny rodzaj pracy
-Umowa na czas określony: łączny limit 33 miesiące i 3 umowy (art. 25¹) — czwarta umowa lub przekroczenie 33 miesięcy przekształca ją z mocy prawa w nieokreśloną; wyjątki: zastępstwo, praca dorywcza/sezonowa, kadencja, obiektywne przyczyny leżące po stronie pracodawcy (wtedy zapis w umowie + zawiadomienie PIP w 5 dni roboczych). Od 26.04.2023 wypowiedzenie umowy na czas określony wymaga uzasadnienia i konsultacji związkowej jak nieokreślonej.
-### Treść (art. 29 §1)
-- strony, adres siedziby/miejsce zamieszkania pracodawcy, rodzaj umowy, data zawarcia, rodzaj pracy, miejsce lub miejsca wykonywania pracy, wynagrodzenie ze wskazaniem składników, wymiar czasu pracy, dzień rozpoczęcia pracy
-- przy próbnej — czas trwania (i ewentualne przedłużenie o nieobecności, planowana kolejna umowa)
-- przy określonej — czas trwania/termin
-Umowę zawierasz na piśmie; jeśli nie — przed dopuszczeniem do pracy potwierdzasz pisemnie strony, rodzaj i warunki (art. 29 §2). Brak umowy na piśmie przed dopuszczeniem = wykroczenie.
+### Trzy rodzaje umów (art. 25)
+| Rodzaj | Najważniejsze zasady |
+|---|---|
+| na okres próbny | maksymalnie 3 miesiące; ponowna próbna z tym samym pracownikiem — tylko na inny rodzaj pracy |
+| na czas określony | łączny limit 33 miesiące i 3 umowy (art. 25¹) |
+| na czas nieokreślony | bez limitów |
+### Umowa na okres próbny — długość zależy od planów
+| Planowana kolejna umowa na czas określony | Maksymalna próbna |
+|---|---|
+| krótsza niż 6 miesięcy | 1 miesiąc |
+| od 6 do 12 miesięcy | 2 miesiące |
+| dłuższa albo nieokreślona | 3 miesiące |
+Planowany okres kolejnej umowy wpisujesz do umowy próbnej.
+Próbną można przedłużyć o urlop i usprawiedliwioną nieobecność, jeśli umowa to przewiduje.
+### Umowa na czas określony — limit 33/3
+Czwarta umowa albo przekroczenie 33 miesięcy przekształca umowę z mocy prawa w nieokreśloną.
+Wyjątki od limitu: zastępstwo, praca dorywcza lub sezonowa, kadencja, obiektywne przyczyny po stronie pracodawcy.
+Przy obiektywnych przyczynach: zapis w umowie i zawiadomienie PIP w 5 dni roboczych.
+Od 26.04.2023 wypowiedzenie umowy na czas określony wymaga uzasadnienia i konsultacji związkowej — jak przy nieokreślonej.
+### Treść umowy (art. 29 §1)
+- strony, adres siedziby lub miejsce zamieszkania pracodawcy,
+- rodzaj umowy, data zawarcia,
+- rodzaj pracy, miejsce lub miejsca wykonywania pracy,
+- wynagrodzenie ze wskazaniem składników,
+- wymiar czasu pracy, dzień rozpoczęcia pracy,
+- przy próbnej — czas trwania, ewentualne przedłużenie o nieobecności, planowana kolejna umowa,
+- przy określonej — czas trwania lub termin.
+### Forma
+Umowę zawierasz na piśmie. Jeśli nie — przed dopuszczeniem do pracy potwierdzasz pisemnie strony, rodzaj i warunki (art. 29 §2).
+Brak umowy na piśmie przed dopuszczeniem = wykroczenie.
 ### Praktyka
-- wynagrodzenie na pełny etat ≥ 4 806 zł (proporcjonalnie na część), premia uznaniowa nie może „uzupełniać” do minimalnej w sposób niepewny — od 2027 projekt UC62 ma wyłączyć dodatki z minimalnej
-- miejsce pracy: konkretne (zakład, obszar dla mobilnych — „terytorium RP” PIP kwestionuje)
-- zmiana warunków: porozumienie (aneks) albo wypowiedzenie zmieniające
-- umowa w języku polskim (cudzoziemiec — tłumaczenie)
+- Wynagrodzenie na pełny etat ≥ 4 806 zł; na część etatu proporcjonalnie.
+- Premia uznaniowa nie może „uzupełniać” do minimalnej w sposób niepewny. Od 2027 projekt UC62 ma wyłączyć dodatki z minimalnej.
+- Miejsce pracy: konkretne — zakład albo obszar dla mobilnych. Zapis „terytorium RP” PIP kwestionuje.
+- Zmiana warunków: porozumienie (aneks) albo wypowiedzenie zmieniające.
+- Umowa w języku polskim; dla cudzoziemca — tłumaczenie.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Trzy umowy jednego pracownika — kiedy limit 33 miesięcy / 3 umów się wyczerpuje**

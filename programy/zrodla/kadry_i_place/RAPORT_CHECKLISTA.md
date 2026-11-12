@@ -1,16 +1,16 @@
 # Raport zgodności ze STANDARDEM TWORZENIA KURSÓW v1.0 — „Kadry i płace — kurs zaawansowany (praktyka 2026)”
 
-Wersja kursu: 2.0 · Mentor 2.5.0 · data raportu: 12.11.2026 · autor raportu: zespół kursu (Claude) — **raport uczciwy: status końcowy poniżej**
+Wersja kursu: 2.1 · Mentor 2.6.0 · data raportu: 12.11.2026 (aktualizacja po przeglądzie czasu, czytelności i delegacji) · autor raportu: zespół kursu (Claude) — **raport uczciwy: status końcowy poniżej**
 
 ## A. Testy jakości (STANDARD §10)
 
 | Test | Wynik | Jak sprawdzono |
 |---|---|---|
-| Import | ✅ TAK | `program.wczytaj_plik` → 0 błędów; CI: walidacja obu JSON; smoke w aplikacji: 12 etapów/tygodni, 45 lekcji, 60 zadań, 12 quizów, diagnoza widoczne i działające (`smoke_hr.py`, `smoke_standard.py`, `smoke_start.py`, `smoke_warsztat.py`, `smoke5.py`, `smoke2.py` — wszystkie OK) |
+| Import | ✅ TAK | `program.wczytaj_plik` → 0 błędów; CI: walidacja obu JSON; smoke w aplikacji: 16 tygodni, 46 lekcji, 60 zadań, 16 quizów, diagnoza, tabele w lekcjach i karta Delegacje widoczne i działające (`smoke_hr.py`, `smoke_standard.py`, `smoke_start.py`, `smoke_warsztat.py`, `smoke5.py`, `smoke2.py` — wszystkie OK) |
 | Świeży komputer / środowisko | ⚠️ CZĘŚCIOWO | Mentor.exe budowany i uruchamiany na czystym `windows-latest` w GitHub Actions (proces startuje, 8 s bez błędu). Skrypty `SPRAWDZ_SRODOWISKO.bat`, `INSTALACJA.bat`, `URUCHOM_KURS.bat` napisane i przejrzane, ale **nie były uruchomione na fizycznym Windows w tej sesji** (środowisko autora to Linux). Do wykonania przez osobę testującą (poniżej, pkt 12). |
 | Offline | ✅ TAK | Żadne zadanie ani ćwiczenie nie wymaga sieci: symulatory i kalkulatory w Warsztacie, przepisy offline, Asystent offline bez konta. Kod aplikacji nie wykonuje połączeń sieciowych poza trybem API Asystenta (opcjonalny, jawnie oznaczony jako płatny). |
 | Przejście ucznia (pierwsze 2 zadania) | ⚠️ CZĘŚCIOWO | Wykonane przez autora w roli ucznia na podstawie samej treści aplikacji (Panel → Jak zacząć → zadanie 1 i 2). Punkty zgadywania znalezione i usunięte: (1) zadanie 1 kazało „przepisać” firmę i wymyślić 8 osób, podczas gdy Warsztat ma gotowy plik — dodano krok „Zapisz FIRMA.md z Warsztatu” lub szablon; (2) brak kroku kopiowania materiałów — dodano do zadania 1, przewodnika i Panelu; (3) „zobacz 14 kroków” — liczba kroków zależy od danych — usunięto liczbę; (4) problem „wynagrodzenia z pracuj.pl” — zastąpiono danymi z Warsztatu; (5) `.txt` doklejane przez Notatnik — dodano do „Problemy” i FAQ. **Nie wykonano przez osobę niebędącą autorem.** |
-| Ćwiczenia | ✅ TAK | 90 ćwiczeń (45 lekcji × prowadzone + samodzielne) — każde z oczekiwanym wynikiem, 3 podpowiedziami i rozwiązaniem; liczby w rozwiązaniach policzone silnikiem `kadry.py` (tym samym, który liczy Warsztat) i sprawdzone ręcznie; `testy/sprawdz_kurs.py` → OK (struktura JSON, 293 pliki, sumy SHA-256 z `manifest.json`) |
+| Ćwiczenia | ✅ TAK | 92 ćwiczenia (46 lekcji × prowadzone + samodzielne) — każde z oczekiwanym wynikiem, 3 podpowiedziami i rozwiązaniem; liczby w rozwiązaniach policzone silnikiem `kadry.py` (tym samym, który liczy Warsztat) i sprawdzone ręcznie; `testy/sprawdz_kurs.py` → OK (struktura JSON, 300 plików, sumy SHA-256 z `manifest.json`) |
 | Błędy | ✅ TAK (w zakresie, który dotyczy) | Brak zależności: nie dotyczy (brak zależności). Błędna ścieżka: Mentor pokazuje „Nie wybrano. Wskaż katalog…”, przycisk kopiowania materiałów pyta o katalog; kopiowanie nie nadpisuje. Niewłaściwa wersja: nie dotyczy (exe samodzielny; wariant źródłowy wymaga Python ≥ 3.10 — komunikat w `SPRAWDZ_SRODOWISKO.bat`). Zajęty port: nie dotyczy. Brak internetu: kurs działa; tryb API Asystenta zgłasza błąd połączenia i wskazuje tryb offline. Każda lekcja ma sekcję „Typowe błędy i naprawa” (komunikat, przyczyna, diagnoza, poprawka); komunikaty weryfikacji symulatorów opisane w `pomoc/KOMUNIKATY_WARSZTATU.md`. |
 | Dostępność | ✅ TAK | Polskie instrukcje; kod/przykłady w ramkach monospace; 18 motywów (w tym wysoki kontrast) i skalowanie czcionek w Ustawieniach; wyniki quizów oznaczone znakiem (✔/✘) i tekstem, nie tylko kolorem; sesje 30/45/90 min; lekcje 15–45 min. |
 | Aktualizacja | ✅ TAK | `id` zadań i lekcji stabilne (40 dotychczasowych bez zmian; 5 powtórek to nowe id); postępy w `mentor_dane.json` pod `id` programu; procedura kopii i przywrócenia w `pomoc/ODZYSKIWANIE.md` i START_TUTAJ.md; ponowny import pliku kursu nie kasuje postępów. |
@@ -20,10 +20,10 @@ Wersja kursu: 2.0 · Mentor 2.5.0 · data raportu: 12.11.2026 · autor raportu: 
 
 | # | Kryterium | Status | Dowód |
 |---|---|---|---|
-| 1 | Uczeń od razu wie, co będzie umiał po kursie i ile czasu nauka zajmie | ✅ TAK | START_TUTAJ.md (poziom, czas, system, umiejętności końcowe), lekcja wprowadzająca „Co będziesz umieć po kursie”, pola `poziom`/`wymagania_wstepne`/`umiejetnosci_koncowe` w JSON |
-| 2 | Każda lekcja wyjaśnia nowy temat, pokazuje działający przykład i omawia go krok po kroku | ✅ TAK | 45/45 lekcji: `wyjasnienie` + `przyklad` + `demonstracja.kroki` (asercje w `zbuduj.py`) |
+| 1 | Uczeń od razu wie, co będzie umiał po kursie i ile czasu nauka zajmie | ✅ TAK | START_TUTAJ.md (poziom, czas, system, umiejętności końcowe), lekcja wprowadzająca „Co będziesz umieć po kursie”, pola `poziom`/`wymagania_wstepne`/`umiejetnosci_koncowe` w JSON; **czas policzony z treści** (lekcja: czytanie + demonstracja + ćwiczenia + test; `zbuduj.py` odrzuca build, gdy tydzień przekracza 9 h) — obietnica „90 min pn–pt + do 90 min w sobotę przez 16 tygodni” zgadza się z sumą 131,7 h |
+| 2 | Każda lekcja wyjaśnia nowy temat, pokazuje działający przykład i omawia go krok po kroku | ✅ TAK | 46/46 lekcji: `wyjasnienie` + `przyklad` + `demonstracja.kroki` (asercje w `zbuduj.py`) |
 | 3 | Żadne zadanie nie wymaga umiejętności, których wcześniej nie pokazano | ✅ TAK | kolejność etapów: warsztat → prawo pracy → płace → ZUS/US → ustanie; każde zadanie tygodnia odwołuje się do lekcji tego lub wcześniejszych tygodni; `wymagania` lekcji wskazują poprzednie lekcje; nowe pojęcia objaśniane w lekcji (sekcja „Pojęcia” w `wymagania`) |
-| 4 | Wszystkie obowiązkowe pliki startowe, dane, przykłady i rozwiązania są w paczce | ✅ TAK | 90 plików `cwiczenia/`, 90 `rozwiazania/`, 45 `przyklady/` + 7 plików danych, 45 `lekcje/`, `projekty/`, `pomoc/`, `testy/`; `manifest.json` (293 pliki) |
+| 4 | Wszystkie obowiązkowe pliki startowe, dane, przykłady i rozwiązania są w paczce | ✅ TAK | 92 pliki `cwiczenia/`, 92 `rozwiazania/`, 46 `przyklady/` + 7 plików danych, 46 `lekcje/`, `projekty/`, `pomoc/`, `testy/`; `manifest.json` (300 plików) |
 | 5 | Narzędzia i zależności dołączone legalnie lub pobierane z dokładnie wskazanego oficjalnego źródła | ✅ TAK | brak zależności (Mentor.exe samodzielny); opcjonalny Python — `instalatory/README.md` z oficjalnym adresem i wersją |
 | 6 | Uczeń potrafi zainstalować lub uruchomić środowisko według instrukcji, także gdy pojawi się typowy błąd | ⚠️ CZĘŚCIOWO | START_TUTAJ.md + 3 skrypty .bat + `pomoc/ODZYSKIWANIE.md` (SmartScreen, antywirus, uprawnienia, ścieżki ze spacjami); skrypty .bat **nieprzetestowane na Windows przez osobę testującą** |
 | 7 | W każdym zadaniu jest oczekiwany wynik, instrukcja sprawdzenia i stopniowane podpowiedzi | ✅ TAK | ćwiczenia: `wynik` + „Jak sprawdzić” + 3 `wskazowki` + `rozwiazanie`; zadania tygodnia: `kroki`, `sprawdz`, `problemy`; podpowiedzi także w Asystencie offline (`podpowiedź`) |
@@ -35,11 +35,20 @@ Wersja kursu: 2.0 · Mentor 2.5.0 · data raportu: 12.11.2026 · autor raportu: 
 
 ## C. Status
 
-**DO POPRAWY** — 9 kryteriów TAK, 2 CZĘŚCIOWO (6, 9), 1 NIE (12). Treść, aplikacja i paczka są kompletne; brakuje jednego testu, którego nie da się wykonać bez drugiej osoby i fizycznego Windows:
+**DO POPRAWY** — 9 kryteriów TAK, 2 CZĘŚCIOWO (6, 9), 1 NIE (12). Treść, aplikacja i paczka są kompletne (po przeglądzie: realny harmonogram, czytelne wyjaśnienia, delegacje); brakuje jednego testu, którego nie da się wykonać bez drugiej osoby i fizycznego Windows:
 
 1. Osoba niebędąca autorem: rozpakować `Mentor-windows.zip` na Windows 10/11, uruchomić `SPRAWDZ_SRODOWISKO.bat`, `URUCHOM_KURS.bat` (lub Mentor.exe), przejść przewodnik, skopiować materiały (przycisk lub `INSTALACJA.bat`), zrobić diagnozę, lekcję 1, zadania 1 i 2 — zapisując każdy moment, w którym musiała zgadywać lub szukać poza paczką.
 2. Zgłosić wynik; po usunięciu znalezionych punktów zgadywania (i ewentualnych poprawkach skryptów .bat) kurs może otrzymać status **GOTOWY**.
 
-## D. Co ze standardem w kursie „Python od zera → Junior QA”
+## D. Zmiany po przeglądzie (12.11.2026, wersja kursu 2.1)
+
+| Zarzut z przeglądu | Co zrobiono | Dowód |
+|---|---|---|
+| czas nie zgadzał się z obietnicą (107 h deklarowane, każdy tydzień > 7,5 h, tydzień 11 = 12,6 h; etykiety lekcji 20–35 min zaniżone) | harmonogram 16 tygodni (`plan_tygodni.py`), 3–4 zadania tygodniowo, dawny tydzień 11 rozbity na trzy (13–15); czas lekcji liczony z objętości treści (45–75 min); obietnica zmieniona na „ok. 90 min pn–pt + do 90 min w sobotę, każdy tydzień ≤ 9 h, razem ok. 130 h” | tabela czasu w `zbuduj.py` (maks. 535 min/tydzień), asercja `LIMIT_TYGODNIA_MIN = 540` |
+| gęstość tekstu (zdania z nawiasami w nawiasach, komentarz do kodeksu) | wyjaśnienia 39 lekcji przepisane ręcznie wg zasady „jedna reguła — jedno zdanie”: nagłówki, punkty, 126 tabel porównawczych w 39 lekcjach (+ 5 w lekcji o delegacjach) (tryby rozwiązania umowy, kody ZUS, składniki w podstawie zasiłku, systemy czasu pracy, zbiegi tytułów, urlopy, PIT-2, kontrola PIP/ZUS…); renderer tabel w aplikacji, konwersja tabel na listy w Asystencie offline | `wyjasnienia.py`; strażnik faktów w `zbuduj.py` (zbiór liczb i odwołań „art./§” przed i po przepisaniu — bez ubytków) |
+| brak podróży służbowych i diet | nowa lekcja „Podróże służbowe: diety, ryczałty, kilometrówka — krajowe i zagraniczne” (tydzień 7, 12 elementów standardu, 2 ćwiczenia, 5 typowych błędów, 4 pytania testu, 2 pytania quizu), 9 przepisów w bibliotece, kalkulator Warsztat → Delegacje i diety (krajowa: doby, posiłki 25/50/25%, nocleg rachunek/ryczałt, dojazdy, kilometrówka, zaliczka, nadwyżka ponad limit; zagraniczna: 10 państw, 1/3–1/2–1 diety, posiłki 15/30/30%, ryczałty, kurs NBP) | `lekcja_delegacje.py`, `kadry.delegacja_krajowa/zagraniczna`, `warsztat.BUDUJ_delegacje`; stan prawny zweryfikowany 12.11.2026: dieta 45 zł (t.j. Dz.U. 2023 poz. 2190), kilometrówka 0,89/1,15 (Dz.U. 2023 poz. 5), projekt 60 zł od 1.01.2027 — nieogłoszony, oznaczony jako projekt |
+| niski próg zaliczenia testu lekcji (3 pytania, 2/3) | bez zmian w tej iteracji (poza standardem przeglądu) | — |
+
+## E. Co ze standardem w kursie „Python od zera → Junior QA”
 
 Kurs Python ma lekcję wprowadzającą, cele lekcji i instrukcje „Jak to zrobić”, ale **nie ma bloków standardu** (demonstracja z omówieniem, ćwiczenia prowadzone/samodzielne z 3 podpowiedziami i rozwiązaniami, typowe błędy per lekcja, powtórki etapów, diagnoza, paczka ZIP z plikami startowymi) i wymaga zewnętrznych narzędzi (Python, PyCharm/VS Code, Git — bez gotowego, kontrolowanego instalatora w paczce). Status: **DO POPRAWY**. Mentor renderuje go w układzie klasycznym; wdrożenie standardu dla tego kursu to osobna praca (ok. 33 lekcje × bloki + materiały + instalator Pythona ze wskazaniem oficjalnego źródła i sumą kontrolną).

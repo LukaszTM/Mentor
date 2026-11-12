@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Bloki standardu lekcji — tygodnie 4–5 (lista płac, PIT, koszt, urlopowe, potrącenia, benefity)."""
+"""Bloki standardu lekcji — dawne tygodnie 4–5 (lista płac, PIT, koszt, urlopowe, potrącenia, benefity)."""
 
 STANDARD_2 = {
     # ------------------------------------------------------------------ tydzień 4
@@ -33,7 +33,7 @@ STANDARD_2 = {
                            "Częściowy rachunek: 5 773,75 × 9,76% = 563,52; × 1,5% = 86,61; × 2,45% = 141,46 → 791,59; zdrowotna 9% × 4 982,16 = 448,39; PPK pracod. 86,61; podstawa 5 773,75 + 86,61 − 791,59 − 250 = 4 818,77 → 4 819…"],
              "rozwiazanie": "Brutto = 5 200 + 573,75 = 5 773,75\nEmerytalna 563,52; rentowa 86,61; chorobowa 141,46 → społeczne 791,59\nPodstawa zdrowotnej 5 773,75 − 791,59 = 4 982,16 → zdrowotna 448,39\nPPK pracodawcy 1,5% = 86,61 (przychód)\nPodstawa PIT = 5 773,75 + 86,61 − 791,59 − 250 = 4 818,77 → 4 819\nPodatek 12% = 578,28 − 300 = 278,28 → zaliczka 278\nPPK pracownika 2% = 115,48\nNetto = 5 773,75 − 791,59 − 448,39 − 278 − 115,48 = 4 140,29 zł\nBilans: 4 140,29 + 791,59 + 448,39 + 278 + 115,48 = 5 773,75 ✔\nKoszt pracodawcy (wypadkowa 1,20%): 5 773,75 + 563,52 + 375,29 + 69,29 + 141,46 + 5,77 + 86,61 = 7 015,69"},
             {"rodzaj": "samodzielne",
-             "tresc": "Na liście za listopad Marek Zieliński (5 400) chorował 10 dni (wynagrodzenie chorobowe 1 334,60 — policzysz je w tygodniu 6; teraz przyjmij tę kwotę). Zdecyduj, które kroki rachunku zmienia wynagrodzenie chorobowe (składki społeczne? zdrowotna? PIT? FP?), policz pensję za przepracowaną część i netto. Plik: cwiczenia/tydzien_04/lista_plac_krok_2.md. Czas: 20 minut.",
+             "tresc": "Na liście za listopad Marek Zieliński (5 400) chorował 10 dni (wynagrodzenie chorobowe 1 334,60 — policzysz je w tygodniu 7; teraz przyjmij tę kwotę). Zdecyduj, które kroki rachunku zmienia wynagrodzenie chorobowe (składki społeczne? zdrowotna? PIT? FP?), policz pensję za przepracowaną część i netto. Plik: cwiczenia/tydzien_04/lista_plac_krok_2.md. Czas: 20 minut.",
              "wynik": "pensja za część miesiąca 5 400 − 5 400/30 × 10 = 3 600; składki społeczne tylko od 3 600 (351,36 + 54,00 + 88,20 = 493,56); zdrowotna od 3 600 − 493,56 + 1 334,60 = 4 441,04 → 399,69; PIT: przychód 3 600 + 1 334,60 + 54,00 (PPK) − 493,56 − 250 = 4 245,04 → 4 245 → 509,40 − 300 → 209; PPK pracownika 72,00 (od 3 600); netto 3 600 + 1 334,60 − 493,56 − 399,69 − 209 − 72 = 3 760,35; FP/FGŚP należne (pensja umowna 5 400 ≥ minimalne).",
              "wskazowki": ["Które obciążenie NIE dotyczy wynagrodzenia chorobowego: składki społeczne, zdrowotna czy PIT?",
                            "Lekcja, sekcja „Zaokrąglenia”: chorobowe — podstawa zdrowotnej i PIT, bez społecznych; Warsztat → Lista płac ma osobne pole „Wynagrodzenie chorobowe”.",
@@ -195,7 +195,7 @@ STANDARD_2 = {
              "wskazowki": ["Które nieobecności liczysz w dniach kalendarzowych, a które w godzinach z grafiku?",
                            "Demonstracja kroki 4–5; Warsztat: trzecia karta (pensja 5400, dni choroby 6, godz. innych 24, wymiar 160).",
                            "Szkic: 5 400/30 = 180 × 6 = 1 080; 5 400/160 = 33,75 × 24 = 810; 5 400 − 1 080 − 810 = …"],
-             "rozwiazanie": "Choroba (§11 rozp. urlopowego): 5 400 / 30 × 6 = 1 080,00 — dzielnik 30 zawsze, dni KALENDARZOWE niezdolności (e-ZLA obejmuje 2–7.11 łącznie z weekendem 7.11 — sobotą; za każdy dzień L4 przysługuje wynagrodzenie chorobowe, więc za każdy pomniejszasz pensję).\nUrlop bezpłatny (§12): 5 400 / 160 h (wymiar XI 2026) × 24 h (dwa dni po 12 h z grafiku) = 810,00.\nPensja za przepracowaną część: 5 400 − 1 080 − 810 = 3 510,00 zł; do tego wynagrodzenie chorobowe 6 × stawka dzienna (lekcja tygodnia 6) i ewentualne zmienne.\nSkładki społeczne i PPK od 3 510 (+ zmienne); zdrowotna i PIT także od chorobowego; RSA: 331 (2–7.11) i 111 (urlop bezpłatny)."},
+             "rozwiazanie": "Choroba (§11 rozp. urlopowego): 5 400 / 30 × 6 = 1 080,00 — dzielnik 30 zawsze, dni KALENDARZOWE niezdolności (e-ZLA obejmuje 2–7.11 łącznie z weekendem 7.11 — sobotą; za każdy dzień L4 przysługuje wynagrodzenie chorobowe, więc za każdy pomniejszasz pensję).\nUrlop bezpłatny (§12): 5 400 / 160 h (wymiar XI 2026) × 24 h (dwa dni po 12 h z grafiku) = 810,00.\nPensja za przepracowaną część: 5 400 − 1 080 − 810 = 3 510,00 zł; do tego wynagrodzenie chorobowe 6 × stawka dzienna (lekcja tygodnia 7) i ewentualne zmienne.\nSkładki społeczne i PPK od 3 510 (+ zmienne); zdrowotna i PIT także od chorobowego; RSA: 331 (2–7.11) i 111 (urlop bezpłatny)."},
         ],
         "typowe_bledy": [
             {"komunikat": "Ekwiwalent policzony ze współczynnika 20,92 u pracownika na 3/4 etatu.",

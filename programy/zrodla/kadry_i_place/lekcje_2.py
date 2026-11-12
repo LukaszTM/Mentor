@@ -15,7 +15,7 @@ LEKCJE_2 = [
          "Marzec: stawka dzienna 172,58 × 80% = 138,06; 10 dni × 138,06 = 1 380,60 (wynagrodzenie chorobowe; pula 23 dni).\n"
          "Czerwiec: 23 dni chorobowe (23 × 138,06 = 3 175,38) + 1 dzień zasiłek (138,06) — od 25.06 zasiłek; przerwa marzec–czerwiec 74 dni → nowy okres zasiłkowy od 2.06 (dni: 24).\n"
          "Październik: od 1. dnia zasiłek (pula 33 wyczerpana); przerwa od 25.06 do 1.10 = 97 dni → nowy okres zasiłkowy. Pensja za czerwiec: 6 000 − 6 000/30 × 24 = 1 200 + chorobowe + zasiłek.",
-     "zadania": ["Rozlicz 3 przypadki z zadania tygodnia 6 (pula 33 dni, okres zasiłkowy, kto płaci).",
+     "zadania": ["Rozlicz 3 przypadki z zadania tygodnia 7 (pula 33 dni, okres zasiłkowy, kto płaci).",
                  "Ustal dla firmy z FIRMA.md, kto wypłaca zasiłki w 2026 (stan na 30.11.2025) i sprawdź w eZUS, jak wygląda e-ZLA.",
                  "Policz zasiłek za pobyt w szpitalu 12 dni przy podstawie 4 147,10."],
      "pytania": [["Jak liczysz 33 dni?", "Dni kalendarzowe niezdolności w roku kalendarzowym, łącznie ze wszystkimi zwolnieniami i u poprzedniego pracodawcy w tym roku."],
@@ -38,7 +38,7 @@ LEKCJE_2 = [
          "Niezdolność od 10.11.2026; okres XI 2025–X 2026. Pensja 6 000 stałe + premia miesięczna (pomniejszana za chorobę) + dodatek stażowy 300 (wypłacany w pełni także za chorobę → pomijasz).\n"
          "Miesiące: 10 pełnych (6 000 + premie: łącznie 68 400 brutto), marzec 2026: chorował 20 dni roboczych z 22 (mniej niż połowa) → wyłączasz; czerwiec: chorował 6 dni roboczych z 21 → uzupełniasz stałe do 6 000, premię zmienną 380 za 15 dni → 380/15 × 21 = 532.\n"
          "Suma 11 miesięcy (po 13,71%): (68 400 + 6 532) × 0,8629 = 64 658,82 / 11 = 5 878,07 → stawka dzienna 195,94 → 80% = 156,75 zł/dzień.",
-     "zadania": ["Policz podstawę z kartoteki 12 miesięcy z zadania tygodnia 6 (z premią kwartalną i miesiącem do uzupełnienia).",
+     "zadania": ["Policz podstawę z kartoteki 12 miesięcy z zadania „Podstawa wymiaru zasiłku” (tydzień 8; z premią kwartalną i miesiącem do uzupełnienia).",
                  "Ustal podstawę dla pracownika zatrudnionego 15.09.2026, chorego od 3.11.2026.",
                  "Sprawdź w regulaminie wynagradzania (z zadania) które składniki są pomniejszane i wypisz, co wliczasz."],
      "pytania": [["Jaki jest warunek wliczenia premii do podstawy zasiłku?", "Premia jest pomniejszana za okres niezdolności (regulamin nie gwarantuje jej w pełnej wysokości za czas choroby)."],
@@ -169,7 +169,7 @@ LEKCJE_2 = [
          "Praktyka: program kadrowy generuje KEDU → Płatnik (weryfikacja z danymi ZUS — czerwone błędy blokują, zielone ostrzeżenia sprawdź) → wysyłka z podpisem; potwierdzenie (UPP) — zachowaj; w eZUS sprawdzaj „Ubezpieczeni” (czy zgłoszenie dotarło) i „Dokumenty i wiadomości”. ZUS wysyła zawiadomienia o błędach — odpowiadaj w terminie (7 dni). Najczęstsze błędy: zły kod (01 10 zamiast 04 11), zła data (zawarcie umowy zamiast rozpoczęcia pracy), brak ZWUA, nieaktualny adres (korespondencja ZUS do pracownika), ZCNA zapomniane po ślubie/urodzeniu, zgłoszenie studenta.",
      "przyklad":
          "Pracownik zatrudniony 16.11.2026 (umowa podpisana 10.11, praca od 16.11), ma rentę, umiarkowany stopień: ZUA do 23.11 z kodem 01 10 2 2, data powstania obowiązku 16.11.2026 (wszystkie ubezpieczenia), NFZ lubelski. Żona bez pracy: ZCNA do 7 dni od oświadczenia (kod 01 — małżonek). Umowa kończy się 31.03.2027 (upływ czasu): ZWUA do 7.04.2027, data 1.04.2027, kod 100, tryb: upływ czasu — art. 30 §1 pkt 4 KP. Premia roczna wypłacona 15.05.2027 → RCA 05/2027 z kodem 30 00.",
-     "zadania": ["Przygotuj komplet zgłoszeń dla 5 osób z FIRMA.md (zadanie tygodnia 8) — kody, daty, dokumenty.",
+     "zadania": ["Przygotuj komplet zgłoszeń dla 5 osób z FIRMA.md (zadanie tygodnia 10) — kody, daty, dokumenty.",
                  "Popraw błędne zgłoszenie: zleceniobiorca zgłoszony 01 10 — jaka sekwencja dokumentów?",
                  "Sprawdź w Płatniku, jak wygląda ZWUA pracownika z kodem trybu i podstawy prawnej."],
      "pytania": [["Jaka data w ZWUA, gdy umowa kończy się 30.11?", "1.12 — dzień następny po ustaniu tytułu."],
@@ -191,7 +191,7 @@ LEKCJE_2 = [
      "przyklad":
          "AGRO-MLEKO (sp. z o.o. → do 15.), wypłata za listopad 10.12.2026, 62 pracowników + 6 zleceniobiorców (3 ze zbiegiem — tylko zdrowotna, 1 student — poza ZUS), 1 osoba na wychowawczym (12 11), 1 na macierzyńskim (zasiłek od płatnika — RSA 327, kwota w DRA do odliczenia), nadgodziny listopadowe i trzynastka za 2025 wypłacona w grudniu (RPA — przychód za inny rok dla 62 osób).\n"
          "Komplet 01 12 2026: DRA + 68 RCA (62 × 01 10, 5 × 04 11, 1 × 12 11; student bez raportu) + RSA (chorobowe 331, zasiłki 313/312, macierzyński 327, bezpłatny 111 — za okresy GRUDNIOWE) + RPA (trzynastka). Wysyłka i przelew na NRS do 15.01.2027 (do zapłaty = składki − zasiłki wypłacone). Zasiłki za listopad wypłacone 10.12 — rozliczane w DRA 12/2026.",
-     "zadania": ["Zbuduj komplet DRA/RCA/RSA dla 8 osób z zadania tygodnia 8 i sprawdź sumy.",
+     "zadania": ["Zbuduj komplet DRA/RCA/RSA dla 8 osób z zadania tygodnia 10 i sprawdź sumy.",
                  "Ustal, które sytuacje z listy wymagają RPA.",
                  "Policz odsetki za 10 dni zwłoki od 50 000 zł składek (stopa z podatki.gov.pl) i sprawdź próg 1% minimalnej."],
      "pytania": [["Za który miesiąc składasz RCA z pensją listopadową wypłaconą 10 grudnia?", "Za grudzień (zasada kasowa — miesiąc wypłaty)."],
@@ -212,7 +212,7 @@ LEKCJE_2 = [
          "Inne typowe korekty: (1) zleceniobiorca-student zgłoszony z pełnymi składkami → ZWUA, korekty RCA, zwrot; (2) zbieg — pełne składki zamiast tylko zdrowotnej (lub odwrotnie — po zmianie etatu u innego pracodawcy: NIEDOPŁATA 5 lat wstecz, odsetki, część pracownika można potrącić za zgodą lub dochodzić); (3) nieuwzględnione świadczenie (benefit, ZFŚS bez kryterium) — dopłata; (4) wynagrodzenie chorobowe zamiast zasiłku (błędna pula 33 dni) — RSA i rozliczenie zasiłku z ZUS; (5) wypłata po ustaniu zatrudnienia bez kodu 30 00; (6) zły kod przerwy. Nadpłata: ZUS zalicza na przyszłe składki lub zwraca w 30 dni na wniosek RZS-P (eZUS); niedopłata: wpłata z odsetkami (nalicz kalkulatorem ZUS); problemy z płynnością — wniosek o układ ratalny (RSR) lub odroczenie — po zawarciu nie ma odsetek, jest opłata prolongacyjna. PIT po korekcie składek: zwrot składek społecznych pracownikowi → przychód w roku zwrotu (PIT-11 za ten rok, pozycja składki pomniejszona), zwrot zdrowotnej — od 2022 nie wpływa na podatek (nieodliczalna); zwrot składek byłemu pracownikowi (brak wypłat) → PIT-11 z przychodem ze stosunku pracy, zaliczka potrącona ze zwrotu. Dokumentuj każdą korektę (uzasadnienie, obliczenia, pisma do pracownika) — ZUS może pytać po latach.",
      "przyklad":
          "Dyrektor 28 000 zł brutto/mies.; limit 282 600: po 10 miesiącach podstawa 280 000; listopad: do limitu 2 600 (emerytalna/rentowa od 2 600), od 25 400 tylko chorobowa, wypadkowa; grudzień — od całości bez emerytalno-rentowej. Kadry nie zauważyły i naliczyły pełne składki w listopadzie: korekta 02 12 2026 (RCA listopad wypłacony w grudniu): nadpłata pracownika 11,26% × 25 400 = 2 860,04 (zwrot), pracodawcy 16,26% × 25 400 = 4 130,04 (zaliczenie); zdrowotna wzrośnie o 9% × 2 860,04 = 257,40, podatek o 32% × 2 860,04 ≈ 915 → pracownik dostaje netto ok. 1 687,64; zwrot wykazujesz jako przychód w miesiącu wypłaty zwrotu.",
-     "zadania": ["Wykonaj 3 korekty z zadania tygodnia 8 (student, 30-krotność, zbieg) z pełnym rozliczeniem PIT.",
+     "zadania": ["Wykonaj 3 korekty z zadania tygodnia 10 (student, 30-krotność, zbieg) z pełnym rozliczeniem PIT.",
                  "Złóż (na próbę w Płatniku testowym) komplet korygujący 02 i sprawdź identyfikatory.",
                  "Napisz pismo do pracownika o zwrocie nadpłaconych składek z informacją o PIT."],
      "pytania": [["Jaki identyfikator ma pierwsza korekta za listopad 2026?", "02 11 2026 (pierwotny 01 11 2026)."],

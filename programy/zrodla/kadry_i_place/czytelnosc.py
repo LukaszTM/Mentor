@@ -51,7 +51,7 @@ def uczytelnij(wyjasnienie):
         a = akapit.strip()
         if not a:
             continue
-        if a.startswith(("## ", "- ", "• ")):
+        if a.startswith(("## ", "- ", "• ", "|")):
             out.append(a)
             continue
         naglowek, a = _naglowek(a)

@@ -229,7 +229,7 @@ CHECKLISTA = [
     {"po": "Po tygodniu 0 — warsztat", "punkty": [
         "Mam tabelę 25 wskaźników 2026 z linkami do źródeł",
         "Znajduję przepis w Warsztat → Przepisy i wiem, czym jest tekst ujednolicony w ISAP",
-        "Znam 9 narzędzi Warsztatu i wiem, do czego służą PEL i UPL-1 w prawdziwym eZUS/e-Deklaracjach",
+        "Znam 10 narzędzi Warsztatu i wiem, do czego służą PEL i UPL-1 w prawdziwym eZUS/e-Deklaracjach",
         "Mam katalog kadry-praktyka z FIRMA.md i dziennik.md (commit w Git)"]},
     {"po": "Po etapie 1 — prawo pracy (tyg. 1–3)", "punkty": [
         "Piszę ogłoszenie zgodne z jawnością wynagrodzeń i klauzulę RODO",

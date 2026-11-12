@@ -1,5 +1,5 @@
 # Onboarding i akta osobowe: badania, BHP, ZUS, informacja art. 29 §3, dokumentacja A–E
-Tydzień 1 · lekcja 8 z 45 · ≈ 25 min
+Tydzień 1 · lekcja 8 z 46 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** prowadzisz onboarding w terminach (badania, BHP, ZUA, informacja 29 §3) i wiesz, co trafia do części A–E akt i na jak długo.
 
@@ -12,15 +12,39 @@ Tydzień 1 · lekcja 8 z 45 · ≈ 25 min
 
 ## 1 · Wyjaśnienie od podstaw
 ### Przed dopuszczeniem do pracy
-wstępne badania lekarskie (skierowanie ze wskazaniem czynników szkodliwych; orzeczenie do akt A; zwolnieni: ponownie przyjmowani do tej samej pracy w 30 dni oraz osoby z aktualnym orzeczeniem od innego pracodawcy na te same warunki — poza pracami szczególnie niebezpiecznymi), umowa, szkolenie BHP wstępne (instruktaż ogólny i stanowiskowy — karta do akt B; dla administracyjno-biurowych wstępne zawsze, okresowe można pominąć przy niskim ryzyku), zapoznanie z regulaminem pracy i oceną ryzyka, informacja o monitoringu. Do 7 dni od dopuszczenia: informacja o warunkach zatrudnienia (art. 29 §3 — od 2023 rozszerzona: normy czasu pracy, przerwy, odpoczynki, nadgodziny i rekompensata, zasady zmian, składniki wynagrodzenia i świadczenia, urlop, procedura rozwiązania umowy, szkolenia, układ, ZUS), zgłoszenie ZUS ZUA (7 dni od powstania obowiązku ubezpieczenia = dzień rozpoczęcia pracy), oświadczenia: PIT-2, KUP, PPK, numer konta, dane kontaktowe. Do 3 miesięcy: umowa o prowadzenie PPK.
-### Akta osobowe (rozporządzenie z 10.12.2018)
-A — ubieganie się o zatrudnienie (kwestionariusz kandydata, skierowanie i orzeczenie wstępne, kwalifikacje), B — nawiązanie i przebieg (umowa, kwestionariusz pracownika, informacja 29 §3, BHP, potwierdzenia zapoznania, PIT-2/PPK/RODO, aneksy, badania okresowe, uprawnienia rodzicielskie, wnioski o zmianę etatu, oświadczenia o stażu i zaświadczenie ZUS o stażu), C — ustanie (wypowiedzenie, świadectwo, dokumenty rozliczenia, wniosek o sprostowanie), D — kary porządkowe (usuwane po roku nienagannej pracy), E — kontrola trzeźwości (rok). Każda część: chronologia, numeracja, wykaz. Odrębnie: dokumentacja czasu pracy, urlopowa, lista płac/karty wynagrodzeń, odzież.
+| Krok | Szczegóły |
+|---|---|
+| wstępne badania lekarskie | skierowanie ze wskazaniem czynników szkodliwych; orzeczenie do akt A |
+| kto jest zwolniony z badań wstępnych | ponownie przyjmowani do tej samej pracy w 30 dni; osoby z aktualnym orzeczeniem od innego pracodawcy na te same warunki — poza pracami szczególnie niebezpiecznymi |
+| umowa o pracę | na piśmie, przed dopuszczeniem |
+| szkolenie BHP wstępne | instruktaż ogólny i stanowiskowy; karta do akt B |
+| BHP dla administracyjno-biurowych | wstępne zawsze; okresowe można pominąć przy niskim ryzyku |
+| zapoznanie | regulamin pracy, ocena ryzyka, informacja o monitoringu |
+### Do 7 dni od dopuszczenia
+- Informacja o warunkach zatrudnienia (art. 29 §3). Od 2023 rozszerzona: normy czasu pracy, przerwy, odpoczynki, nadgodziny i rekompensata, zasady zmian, składniki wynagrodzenia i świadczenia, urlop, procedura rozwiązania umowy, szkolenia, układ, ZUS.
+- Zgłoszenie ZUS ZUA — 7 dni od powstania obowiązku ubezpieczenia, czyli od dnia rozpoczęcia pracy.
+- Oświadczenia: PIT-2, KUP, PPK, numer konta, dane kontaktowe.
+Do 3 miesięcy: umowa o prowadzenie PPK.
+### Akta osobowe A–E (rozporządzenie z 10.12.2018)
+| Część | Co zawiera |
+|---|---|
+| A — ubieganie się o zatrudnienie | kwestionariusz kandydata, skierowanie i orzeczenie wstępne, kwalifikacje |
+| B — nawiązanie i przebieg | umowa, kwestionariusz pracownika, informacja art. 29 §3, BHP, potwierdzenia zapoznania, PIT-2/PPK/RODO, aneksy, badania okresowe, uprawnienia rodzicielskie, wnioski o zmianę etatu, oświadczenia o stażu i zaświadczenie ZUS o stażu |
+| C — ustanie | wypowiedzenie, świadectwo, dokumenty rozliczenia, wniosek o sprostowanie |
+| D — kary porządkowe | usuwane po roku nienagannej pracy |
+| E — kontrola trzeźwości | przechowywana rok |
+Każda część: chronologia, numeracja, wykaz.
+Odrębnie prowadzisz: dokumentację czasu pracy, urlopową, listy płac i karty wynagrodzeń, ewidencję odzieży.
 ### Przechowywanie
-10 lat od końca roku ustania zatrudnienia (zatrudnieni od 1.01.2019; starsi — 50 lat, chyba że ZUS OSW + RIA).
-- Postać papierowa lub elektroniczna (równoważne)
-- przejście na e-akta: skan z podpisem kwalifikowanym/pieczęcią, informacja dla pracowników, 30 dni na odbiór papieru
-- wymogi: integralność, metadane, kopie, możliwość wydruku
-Pracownik ma prawo do kopii całości lub części akt (wniosek).
+| Zatrudnieni | Okres |
+|---|---|
+| od 1.01.2019 | 10 lat od końca roku ustania zatrudnienia |
+| wcześniej | 50 lat, chyba że złożono ZUS OSW i RIA |
+### Postać papierowa albo elektroniczna
+Obie są równoważne.
+Przejście na e-akta: skan z podpisem kwalifikowanym lub pieczęcią, informacja dla pracowników, 30 dni na odbiór papieru.
+Wymogi e-akt: integralność, metadane, kopie, możliwość wydruku.
+Pracownik ma prawo do kopii całości lub części akt — na wniosek.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Nowy operator od 1.12.2026 — każdy dokument we właściwej części akt i w terminie**

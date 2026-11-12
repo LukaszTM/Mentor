@@ -2,7 +2,7 @@
 Tydzień 0 · lekcja `start_jak_sie_uczyc` · plik: `cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md`
 
 ## Zadanie
-Wykonaj zadanie 1 tygodnia 0 (Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”): utwórz plik FIRMA.md z kartą firmy AGRO-MLEKO. Decyzja należy do Ciebie: skorzystaj z Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu” ALBO napisz plik ręcznie z szablonu cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md. Potem odhacz zadanie i zrób wpis w Dzienniku. Czas: 30 minut.
+Wykonaj zadanie 1 tygodnia 0 (Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”): utwórz plik FIRMA.md z kartą firmy AGRO-MLEKO. Decyzja należy do Ciebie: skorzystaj z Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu” ALBO napisz plik ręcznie z szablonu cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md. Potem odhacz zadanie i zrób wpis w Dzienniku. Czas: 45 minut (to jest zadanie 1 tygodnia 0 — liczone raz, w zadaniu).
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
 Plan → Tydzień 0 → zadanie 1 ma ✔ i Mentor pokazuje „plik wykryty: FIRMA.md”; Panel pokazuje +10 XP i 1 wpis w dzienniku.

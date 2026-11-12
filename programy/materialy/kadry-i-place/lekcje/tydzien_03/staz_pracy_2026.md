@@ -1,5 +1,5 @@
 # Staż pracy 2026: zlecenia i działalność w stażu, zaświadczenie ZUS
-Tydzień 3 · lekcja 13 z 45 · ≈ 20 min
+Tydzień 3 · lekcja 13 z 46 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** wliczasz do stażu zlecenia i działalność po nowelizacji 2026, wiesz, jakie dokumenty przyjąć i co przeliczyć w firmie.
 
@@ -11,17 +11,41 @@ Tydzień 3 · lekcja 13 z 45 · ≈ 20 min
 - Pojęcia: staż ogólny (do urlopu, nagród jubileuszowych wg regulaminu), staż zakładowy (okres wypowiedzenia, odprawa), zaświadczenie ZUS o okresach ubezpieczenia.
 
 ## 1 · Wyjaśnienie od podstaw
-### Nowelizacja KP (art. 302¹ i n.)
-do stażu pracy, od którego zależą uprawnienia pracownicze (wymiar urlopu, okres wypowiedzenia u tego samego pracodawcy, odprawy, dodatki stażowe i nagrody jubileuszowe wg regulaminów), wlicza się okresy: umów zlecenia i o świadczenie usług objętych ubezpieczeniem emerytalno-rentowym (a dla studentów do 26 lat bez ubezpieczenia — na podstawie umowy), umów agencyjnych, pozarolniczej działalności gospodarczej z opłaconymi składkami (także ulga na start; zawieszenie — tylko na opiekę nad dzieckiem), współpracy z przedsiębiorcą, pobierania zasiłków z tych tytułów, członkostwa w spółdzielniach rolniczych, pracy za granicą w innych formach niż umowa o pracę. Nie wlicza się: umów o dzieło, praktyk, wolontariatu, działalności nierejestrowanej, zawieszenia (poza opieką). Okresy nakładające się liczysz raz (korzystniejszy). Wejście w życie: 1.01.2026 — sektor finansów publicznych, 1.05.2026 — pozostali pracodawcy.
-### Dokumentowanie
-- zaświadczenie ZUS o okresach ubezpieczenia — wniosek elektroniczny przez eZUS (bez załączników), może obejmować wszystkie tytuły lub wybrany
-- gdy ZUS nie ma danych — decyzja odmowna i postępowanie wyjaśniające z dowodami (umowy, faktury, zaświadczenia)
-- zleceniodawca nie ma obowiązku wystawiać potwierdzeń (może)
-Dokumenty zagraniczne z tłumaczeniem. Pracownicy już zatrudnieni mają 24 miesiące (od 1.01 lub 1.05.2026) na dostarczenie dokumentów; uprawnienia od dnia nabycia (np. urlop uzupełniający od dnia przedstawienia zaświadczenia — jeśli wymiar rośnie z 20 na 26, przysługuje różnica w roku bieżącym), nie wcześniej niż od wejścia w życie. Spory — sąd pracy.
-### Dla kadr
-- komunikat do pracowników, wzór wniosku, miejsce w aktach (B), aktualizacja w programie (staż ogólny vs zakładowy), przeliczenie urlopu i — jeśli regulamin przewiduje — dodatków stażowych
-- okres wypowiedzenia wydłuża tylko zlecenie u TEGO pracodawcy
-- limity umów na czas określony — nie zmieniają się (dotyczą tylko umów o pracę)
+### Co się zmieniło (art. 302¹ i n. KP)
+Do stażu pracy wlicza się teraz okresy pracy poza umową o pracę. Od stażu zależą: wymiar urlopu, okres wypowiedzenia u tego samego pracodawcy, odprawy, dodatki stażowe i nagrody jubileuszowe wg regulaminów.
+| Wlicza się | Nie wlicza się |
+|---|---|
+| umowy zlecenia i o świadczenie usług objęte ubezpieczeniem emerytalno-rentowym | umowy o dzieło |
+| umowy studentów do 26 lat bez ubezpieczenia — na podstawie umowy | praktyki, wolontariat |
+| umowy agencyjne | działalność nierejestrowana |
+| pozarolnicza działalność gospodarcza z opłaconymi składkami (także ulga na start) | zawieszenie działalności (poza opieką nad dzieckiem) |
+| współpraca z przedsiębiorcą | — |
+| zasiłki pobierane z tych tytułów | — |
+| członkostwo w spółdzielniach rolniczych | — |
+| praca za granicą w innych formach niż umowa o pracę | — |
+Okresy nakładające się liczysz raz — korzystniejszy.
+### Od kiedy
+| Pracodawca | Wejście w życie |
+|---|---|
+| sektor finansów publicznych | 1.01.2026 |
+| pozostali | 1.05.2026 |
+### Jak pracownik dokumentuje staż
+- Zaświadczenie ZUS o okresach ubezpieczenia — wniosek elektroniczny przez eZUS, bez załączników. Może obejmować wszystkie tytuły albo wybrany.
+- Gdy ZUS nie ma danych — decyzja odmowna i postępowanie wyjaśniające z dowodami: umowy, faktury, zaświadczenia.
+- Zleceniodawca nie ma obowiązku wystawiać potwierdzeń. Może.
+- Dokumenty zagraniczne — z tłumaczeniem.
+### Terminy i skutki
+Pracownicy już zatrudnieni mają 24 miesiące (od 1.01 albo 1.05.2026) na dostarczenie dokumentów.
+Uprawnienia nabywa się od dnia przedstawienia dokumentów, nie wcześniej niż od wejścia w życie.
+Przykład: wymiar urlopu rośnie z 20 na 26 dni → w roku bieżącym przysługuje różnica (urlop uzupełniający) od dnia przedstawienia zaświadczenia.
+Spory rozstrzyga sąd pracy.
+### Co robi dział kadr
+- Komunikat do pracowników i wzór wniosku.
+- Dokumenty do akt — część B.
+- Aktualizacja w programie: staż ogólny i staż zakładowy osobno.
+- Przeliczenie urlopu i — jeśli regulamin przewiduje — dodatków stażowych.
+- Okres wypowiedzenia wydłuża tylko zlecenie u TEGO pracodawcy.
+- Limity umów na czas określony nie zmieniają się — dotyczą tylko umów o pracę.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Pracownik od 2022 r. z zleceniem, działalnością i dziełem w przeszłości — co wchodzi do stażu po nowelizacji**

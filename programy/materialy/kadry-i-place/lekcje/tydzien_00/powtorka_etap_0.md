@@ -1,5 +1,5 @@
 # Powtórka etapu 0: warsztat kadrowca — źródła, narzędzia, wskaźniki
-Tydzień 0 · lekcja 5 z 45 · ≈ 30 min
+Tydzień 0 · lekcja 5 z 46 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** bez zaglądania do notatek rozkładasz pytanie kadrowe na przepis → kwotę → dzielnik → rachunek, wiesz, które narzędzie w Warsztacie do czego służy, i liczysz minimalne brutto → netto → koszt.
 

@@ -1,5 +1,5 @@
 # Wskaźniki 2026 — liczby, które musisz znać
-Tydzień 0 · lekcja 4 z 45 · ≈ 25 min
+Tydzień 0 · lekcja 4 z 46 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** znasz z pamięci kluczowe liczby 2026 (minimalne, składki, progi PIT, limity) i umiesz je sprawdzić u źródła w styczniu każdego roku.
 
@@ -11,24 +11,53 @@ Tydzień 0 · lekcja 4 z 45 · ≈ 25 min
 - Kartka i kalkulator — pierwsze obliczenie robisz ręcznie, Warsztat służy do sprawdzenia.
 
 ## 1 · Wyjaśnienie od podstaw
-### Minimalne wynagrodzenie 2026
-4 806 zł brutto (pełny etat), minimalna stawka godzinowa 31,40 zł (zlecenia, usługi) — rozporządzenie RM z 11.09.2025. Na 2027: 4 950 zł i 32,30 zł (rozporządzenie z 14.09.2026, Dz.U. 2026 poz. 1213). Od minimalnej zależą: dodatek nocny (20% stawki godzinowej z minimalnej), kwoty wolne od potrąceń (minimalne netto), maksymalna odprawa (15× = 72 090 zł), odszkodowanie za mobbing (6× = 28 836 zł), wynagrodzenie za przestój, minimalna podstawa zasiłku, obniżona wpłata PPK (≤ 120% = 5 767,20 zł).
+### Minimalne wynagrodzenie
+| Rok | Minimalne (pełny etat) | Stawka godzinowa (zlecenia, usługi) | Podstawa |
+|---|---|---|---|
+| 2026 | 4 806 zł brutto | 31,40 zł | rozporządzenie RM z 11.09.2025 |
+| 2027 | 4 950 zł | 32,30 zł | rozporządzenie z 14.09.2026, Dz.U. 2026 poz. 1213 |
+Od minimalnej zależą inne kwoty:
+- dodatek nocny — 20% stawki godzinowej z minimalnej,
+- kwoty wolne od potrąceń — minimalne netto,
+- maksymalna odprawa — 15× minimalnej = 72 090 zł,
+- odszkodowanie za mobbing — 6× minimalnej = 28 836 zł,
+- wynagrodzenie za przestój,
+- minimalna podstawa zasiłku,
+- obniżona wpłata PPK — przy wynagrodzeniu ≤ 120% minimalnej = 5 767,20 zł.
 ### Składki ZUS (stopy od lat niezmienne)
-emerytalna 19,52% (9,76 pracownik + 9,76 pracodawca), rentowa 8% (1,5 + 6,5), chorobowa 2,45% (pracownik), wypadkowa 1,67% dla płatników do 9 ubezpieczonych, inaczej wg PKD (0,67–3,33%), zdrowotna 9% (pracownik, od podstawy po składkach społecznych), FP 2,45% (w tym FS 1,45%) i FGŚP 0,10% (pracodawca), FEP 1,5% (prace szczególne). Pracownik oddaje 13,71% brutto na społeczne; pracodawca dokłada ~20,48% (przy wypadkowej 1,67). Roczny limit podstawy emerytalno-rentowej 2026: 282 600 zł (30 × prognozowane 9 420 zł).
+| Składka | Pracownik | Pracodawca | Razem |
+|---|---|---|---|
+| emerytalna | 9,76% | 9,76% | 19,52% |
+| rentowa | 1,5% | 6,5% | 8% |
+| chorobowa | 2,45% | — | 2,45% |
+| wypadkowa | — | 1,67% do 9 ubezpieczonych; inaczej wg PKD (0,67–3,33%) | — |
+| zdrowotna | 9% od podstawy po składkach społecznych | — | 9% |
+| FP (w tym FS 1,45%) | — | 2,45% | 2,45% |
+| FGŚP | — | 0,10% | 0,10% |
+| FEP (prace szczególne) | — | 1,5% | 1,5% |
+Pracownik oddaje 13,71% brutto na składki społeczne. Pracodawca dokłada ok. 20,48% (przy wypadkowej 1,67%).
+Roczny limit podstawy emerytalno-rentowej 2026: 282 600 zł (30 × prognozowane 9 420 zł).
 ### PIT 2026
-- skala 12% do 120 000 zł dochodu, 32% od nadwyżki
-- kwota wolna 30 000 zł → kwota zmniejszająca 3 600 zł rocznie = 300 zł miesięcznie (PIT-2)
-- KUP 250 zł (300 zł dojeżdżający), 20% zlecenia, 50% autorskie
-- ulga dla młodych (do 26 lat) do 85 528 zł przychodu
-- danina solidarnościowa 4% ponad 1 mln
-Projekt od 2027: próg 130 000, stawka 24% do 150 000 — uchwalony przez Sejm X 2026, w Senacie; sprawdzaj.
-### Inne
-- współczynnik ekwiwalentu 2026 — 20,92 (251 dni roboczych)
-- odpis ZFŚS 2 943,23 zł (37,5% × 7 848,60)
-- PPK 2% + 1,5% (+250 powitalna, +240 rocznie)
-- zasiłek chorobowy 80% (100% ciąża/wypadek w drodze), wynagrodzenie chorobowe 33 dni (14 dla 50+) nadal od pracodawcy (XI 2026)
-- okres zasiłkowy 182/270 dni
-- urlop 20/26 dni, opiekuńczy 5, siła wyższa 2 dni/16 h
+| Element | Wartość |
+|---|---|
+| skala | 12% do 120 000 zł dochodu, 32% od nadwyżki |
+| kwota wolna | 30 000 zł → kwota zmniejszająca 3 600 zł rocznie = 300 zł miesięcznie (PIT-2) |
+| KUP | 250 zł (300 zł dojeżdżający); 20% zlecenia; 50% autorskie |
+| ulga dla młodych (do 26 lat) | do 85 528 zł przychodu |
+| danina solidarnościowa | 4% ponad 1 mln |
+Projekt od 2027: próg 130 000 zł, stawka 24% do 150 000 zł. Uchwalony przez Sejm w X 2026, w Senacie. To projekt — sprawdzaj.
+### Inne wskaźniki
+| Wskaźnik | 2026 |
+|---|---|
+| współczynnik ekwiwalentu | 20,92 (251 dni roboczych) |
+| odpis ZFŚS | 2 943,23 zł (37,5% × 7 848,60) |
+| PPK | 2% pracownik + 1,5% pracodawca (+250 zł powitalna, +240 zł rocznie) |
+| zasiłek chorobowy | 80% (100% ciąża, wypadek w drodze) |
+| wynagrodzenie chorobowe | 33 dni (14 dla 50+) — nadal od pracodawcy (XI 2026) |
+| okres zasiłkowy | 182/270 dni |
+| urlop wypoczynkowy | 20/26 dni |
+| urlop opiekuńczy | 5 dni |
+| siła wyższa | 2 dni / 16 h |
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Minimalne wynagrodzenie 4 806 zł od brutto do netto i do kosztu pracodawcy — każdy wskaźnik w akcji**

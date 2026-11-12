@@ -1,5 +1,5 @@
 # Źródła prawa pracy i gdzie sprawdzać stan prawny
-Tydzień 0 · lekcja 2 z 45 · ≈ 20 min
+Tydzień 0 · lekcja 2 z 46 · ≈ 45 min
 
 **Po tej lekcji potrafisz:** znajdujesz właściwy przepis w ISAP/Dz.U., rozróżniasz ustawę, rozporządzenie i regulamin oraz wiesz, który dokument wygrywa, gdy się różnią.
 
@@ -11,20 +11,40 @@ Tydzień 0 · lekcja 2 z 45 · ≈ 20 min
 - Pojęcia: ustawa (uchwala Sejm), rozporządzenie (wydaje rząd/minister na podstawie ustawy), obwieszczenie (ogłasza kwotę wyliczoną z ustawy), regulamin (pracodawca).
 
 ## 1 · Wyjaśnienie od podstaw
-### Kadrowiec nie uczy się przepisów na pamięć
-uczy się, gdzie są i jak je czytać. Hierarchia: Konstytucja → ustawy (Kodeks pracy, ustawa o systemie ubezpieczeń społecznych, zasiłkowa, PIT, ZFŚS, PPK, o zwolnieniach grupowych) → rozporządzenia (wykonawcze: o dokumentacji pracowniczej, o wynagrodzeniu urlopowym, o minimalnym wynagrodzeniu, składkowe) → akty wewnątrzzakładowe (układ zbiorowy, regulamin pracy i wynagradzania — nie mogą być mniej korzystne niż ustawa) → umowa o pracę (nie może być mniej korzystna niż regulamin). Zasada uprzywilejowania pracownika (art. 18 KP): postanowienie mniej korzystne jest nieważne, w jego miejsce wchodzi przepis.
+### Czego uczy się kadrowiec
+Kadrowiec nie uczy się przepisów na pamięć. Uczy się, gdzie przepisy są i jak je czytać.
+### Hierarchia źródeł — co jest ważniejsze
+| Poziom | Przykłady | Zasada |
+|---|---|---|
+| Konstytucja | — | najwyżej |
+| Ustawy | Kodeks pracy, ustawa o systemie ubezpieczeń społecznych, zasiłkowa, PIT, ZFŚS, PPK, o zwolnieniach grupowych | podstawa wszystkiego |
+| Rozporządzenia wykonawcze | o dokumentacji pracowniczej, o wynagrodzeniu urlopowym, o minimalnym wynagrodzeniu, składkowe | uszczegóławiają ustawę |
+| Akty wewnątrzzakładowe | układ zbiorowy, regulamin pracy, regulamin wynagradzania | nie mogą być mniej korzystne niż ustawa |
+| Umowa o pracę | — | nie może być mniej korzystna niż regulamin |
+Zasada uprzywilejowania pracownika (art. 18 KP): postanowienie mniej korzystne niż przepis jest nieważne. W jego miejsce wchodzi przepis.
 ### Gdzie czytać
-- ISAP (isap.sejm.gov.pl) — teksty ujednolicone z polem „stan prawny na dzień”
-- Dziennik Ustaw (dziennikustaw.gov.pl) — ogłoszone akty, w tym nowelizacje
-- Monitor Polski — obwieszczenia (limit 30-krotności, kwoty ZFŚS)
-- zus.pl i podatki.gov.pl — wskaźniki, formularze, objaśnienia MF
-- PIP (pip.gov.pl) — poradniki i stanowiska
-- orzecznictwo SN (sn.pl) — gdy przepis jest nieostry (np. „ciężkie naruszenie”)
-Portale (Infor, Gofin, Lex) to komentarze — pomagają, ale źródłem jest akt.
-### Nawyki
-- każdą liczbę sprawdzasz u źródła raz w roku i po nowelizacji
-- czytając przepis, patrzysz na datę wejścia w życie i przepisy przejściowe — w 2026 wiele zmian działa od różnych dat (staż: 1.01 publiczny / 1.05 prywatny; mobbing: 5.11.2026 z procedurami do 5.05.2027; jawność w rekrutacji: 24.12.2025; kontrola L4: 13.04.2026)
-- rozróżniasz „obowiązuje” od „projekt” — w tym kursie każda taka informacja ma oznaczenie.
+| Źródło | Co tam znajdziesz |
+|---|---|
+| ISAP (isap.sejm.gov.pl) | teksty ujednolicone z polem „stan prawny na dzień” |
+| Dziennik Ustaw (dziennikustaw.gov.pl) | ogłoszone akty, w tym nowelizacje |
+| Monitor Polski | obwieszczenia: limit 30-krotności, kwoty ZFŚS |
+| zus.pl, podatki.gov.pl | wskaźniki, formularze, objaśnienia MF |
+| PIP (pip.gov.pl) | poradniki i stanowiska |
+| orzecznictwo SN (sn.pl) | gdy przepis jest nieostry (np. „ciężkie naruszenie”) |
+| portale Infor, Gofin, Lex | komentarze — pomagają, ale źródłem jest akt |
+### Trzy nawyki
+- Każdą liczbę sprawdzasz u źródła raz w roku i po każdej nowelizacji.
+- Czytając przepis, patrzysz na datę wejścia w życie i na przepisy przejściowe.
+- Rozróżniasz „obowiązuje” od „projekt”. W tym kursie każda taka informacja ma oznaczenie.
+### Dlaczego daty są ważne — zmiany 2025/2026
+| Zmiana | Od kiedy |
+|---|---|
+| jawność wynagrodzeń w rekrutacji | 24.12.2025 |
+| staż pracy z umów zlecenia — sektor publiczny | 1.01.2026 |
+| staż pracy z umów zlecenia — sektor prywatny | 1.05.2026 |
+| kontrola zwolnień lekarskich (L4) | 13.04.2026 |
+| mobbing i dyskryminacja — nowe przepisy | 5.11.2026 |
+| procedury antymobbingowe w firmach | do 5.05.2027 |
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Jedno pytanie, cztery źródła: ile wynosi dodatek za godzinę pracy w nocy w listopadzie 2026?**

@@ -1,5 +1,5 @@
 # Rekrutacja: dane kandydata, jawność wynagrodzeń, RODO
-Tydzień 1 · lekcja 6 z 45 · ≈ 20 min
+Tydzień 1 · lekcja 6 z 46 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** piszesz ogłoszenie z widełkami, wiesz, o co nie wolno pytać kandydata, i prowadzisz rekrutację zgodnie z RODO.
 
@@ -11,16 +11,32 @@ Tydzień 1 · lekcja 6 z 45 · ≈ 20 min
 - Pojęcia: administrator danych (firma), podstawa przetwarzania (art. 6 RODO), retencja (jak długo przechowujesz CV).
 
 ## 1 · Wyjaśnienie od podstaw
-### Od kandydata możesz żądać tylko danych z art. 22¹ §1 KP
-imię i nazwisko, data urodzenia, dane kontaktowe, a gdy są niezbędne do pracy na stanowisku — wykształcenie, kwalifikacje, przebieg zatrudnienia. Od 24.12.2025 (Dz.U. 2025 poz. 807) wprost zakazane jest żądanie informacji o wynagrodzeniu w obecnej i poprzednich pracach (art. 22¹ §1 pkt 6) — ani pytaniem, ani przez dokumenty. Inne dane (np. niekaralność) — tylko gdy przepis szczególny tego wymaga. Dane „wrażliwe” (zdrowie, związki) — nie; wyjątek: na wniosek pracodawcy orzeczenie o niepełnosprawności podaje sam kandydat, jeśli chce.
+### Jakich danych możesz żądać od kandydata (art. 22¹ §1 KP)
+Zawsze: imię i nazwisko, data urodzenia, dane kontaktowe.
+Tylko gdy są niezbędne do pracy na stanowisku: wykształcenie, kwalifikacje, przebieg zatrudnienia.
+Inne dane (np. niekaralność) — tylko gdy przepis szczególny tego wymaga.
+Dane „wrażliwe” (zdrowie, związki) — nie. Wyjątek: orzeczenie o niepełnosprawności kandydat podaje sam, na wniosek pracodawcy, jeśli chce.
+### Zakaz pytania o wynagrodzenie (od 24.12.2025, Dz.U. 2025 poz. 807)
+Nie wolno żądać informacji o wynagrodzeniu w obecnej i poprzednich pracach (art. 22¹ §1 pkt 6). Ani pytaniem, ani przez dokumenty.
 ### Jawność wynagrodzeń w rekrutacji (art. 18³ᶜᵃ KP, od 24.12.2025)
-kandydat musi dostać informację o początkowym wynagrodzeniu lub jego przedziale (ustalonym obiektywnie, neutralnie płciowo) oraz o postanowieniach układu/regulaminu wynagradzania, jeśli mają zastosowanie — najpóźniej w ogłoszeniu, a jeśli nie było ogłoszenia lub go tam nie podano, przed pierwszą rozmową; gdy rozmów nie ma — przed nawiązaniem stosunku pracy. Forma: papierowa lub elektroniczna, z wyprzedzeniem. Ogłoszenia mają być neutralne płciowo. Sankcja: grzywna 1 000–30 000 zł (art. 281) i odszkodowanie za dyskryminację (nie mniej niż minimalne wynagrodzenie, art. 18³ᵈ). Pełne wdrożenie dyrektywy 2023/970 (prawo do informacji o średnich płacach, raport luki) to projekt UC127 — jeszcze nieuchwalony (XI 2026).
-### RODO
-- podstawa to art. 22¹ KP (obowiązek prawny) i działania przed zawarciem umowy
-- na dane ponadstandardowe w CV — zgoda przez samo ich podanie (ale nie wolno ich żądać)
-- klauzula informacyjna w ogłoszeniu lub przy pierwszym kontakcie
-- retencja: do zakończenia rekrutacji (+ okres ewentualnych roszczeń, ale UODO: niezwłocznie), do 12 miesięcy na przyszłe rekrutacje za zgodą
-Testy, sprawdzanie referencji — tylko w zakresie art. 22¹ i za zgodą kandydata na kontakt z referentem.
+Kandydat dostaje dwie informacje: o początkowym wynagrodzeniu lub jego przedziale oraz o postanowieniach układu/regulaminu wynagradzania, jeśli mają zastosowanie.
+Przedział ustalasz obiektywnie i neutralnie płciowo. Ogłoszenia mają być neutralne płciowo.
+| Sytuacja | Kiedy najpóźniej kandydat dostaje informację |
+|---|---|
+| jest ogłoszenie | w ogłoszeniu |
+| nie było ogłoszenia albo nie podano w nim wynagrodzenia | przed pierwszą rozmową |
+| rozmów nie ma | przed nawiązaniem stosunku pracy |
+Forma: papierowa lub elektroniczna, z wyprzedzeniem.
+Sankcje: grzywna 1 000–30 000 zł (art. 281) i odszkodowanie za dyskryminację — nie mniej niż minimalne wynagrodzenie (art. 18³ᵈ).
+Pełne wdrożenie dyrektywy 2023/970 (prawo do informacji o średnich płacach, raport luki) to projekt UC127. W XI 2026 jeszcze nieuchwalony.
+### RODO w rekrutacji
+| Element | Zasada |
+|---|---|
+| podstawa przetwarzania | art. 22¹ KP (obowiązek prawny) i działania przed zawarciem umowy |
+| dane ponadstandardowe w CV | zgoda przez samo ich podanie; nie wolno ich żądać |
+| klauzula informacyjna | w ogłoszeniu lub przy pierwszym kontakcie |
+| retencja | do zakończenia rekrutacji (+ okres ewentualnych roszczeń, ale UODO: niezwłocznie); do 12 miesięcy na przyszłe rekrutacje — za zgodą |
+| testy, referencje | tylko w zakresie art. 22¹ i za zgodą kandydata na kontakt z referentem |
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Fragment ogłoszenia na operatora linii — co w nim jest i dlaczego**

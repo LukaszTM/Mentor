@@ -340,6 +340,71 @@ def odznaki():
 # ---------------------------------------------------------------------------
 # Pomocnicze widżety
 # ---------------------------------------------------------------------------
+def tabela_md(parent, wiersze, W=600, bg=None):
+    """Tabela Markdown (| a | b |) jako siatka etykiet: nagłówek pogrubiony, komórki zawijane, szerokość dzielona po równo."""
+    bg = bg or K["karta"]
+    dane = []
+    for w in wiersze:
+        kom = [c.strip() for c in w.strip().strip("|").split("|")]
+        if kom and all(set(c) <= set("-: ") for c in kom):
+            continue                      # wiersz separatora |---|---|
+        dane.append(kom)
+    if not dane:
+        return None
+    n = max(len(r) for r in dane)
+    # szerokość kolumn proporcjonalna do ilości tekstu (kolumna „Zasady” szersza niż „Kto”), min. 1/8 szerokości
+    dl = [max(12, sum(len(r[j]) if j < len(r) else 0 for r in dane[1:]) / max(1, len(dane) - 1)) for j in range(n)]
+    dl = [min(x, 160) for x in dl]
+    # mieszanka: 55% proporcjonalnie do tekstu + 45% po równo — wąskie kolumny nie łamią słów
+    wagi = [max(1, round(100 * (0.55 * x / sum(dl) + 0.45 / n))) for x in dl]
+    ramka = tk.Frame(parent, bg=K["ramka"], padx=1, pady=1)
+    ramka.pack(fill="x", pady=(2, 8))
+    komorki = []
+    for i, r in enumerate(dane):
+        for j in range(n):
+            txt = r[j] if j < len(r) else ""
+            lbl = tk.Label(ramka, text=txt, font=czc(9, "bold" if i == 0 else "normal"), bg=K["jasny"] if i == 0 else bg, fg=K["tekst"], anchor="nw", justify="left",
+                           wraplength=max(60, int((W - 8 * n) * wagi[j] / sum(wagi)) - 14), padx=6, pady=3)
+            lbl.grid(row=i, column=j, sticky="nsew", padx=1, pady=1)
+            komorki.append((j, lbl))
+    for j in range(n):
+        ramka.grid_columnconfigure(j, weight=wagi[j], minsize=90)
+
+    def dopasuj(e, n=n, komorki=komorki, wagi=wagi):
+        # zawijanie wg faktycznej szerokości kolumny (zmiana rozmiaru okna, czcionki, paska bocznego)
+        dost = e.width - 2 - 2 * n
+        for j, lbl in komorki:
+            lbl.configure(wraplength=max(76, int(dost * wagi[j] / sum(wagi)) - 14))
+    ramka.bind("<Configure>", dopasuj)
+    return ramka
+
+
+def renderuj_tekst(parent, tekst, W=600, bg=None):
+    """Lekki Markdown lekcji: „## ” nagłówek, „- ” punkt, „| ” tabela, reszta akapit."""
+    bg = bg or K["karta"]
+    linie = [x.rstrip() for x in (tekst or "").split("\n")]
+    i = 0
+    while i < len(linie):
+        a = linie[i].strip()
+        if not a:
+            i += 1
+            continue
+        if a.startswith("|"):
+            blok = []
+            while i < len(linie) and linie[i].strip().startswith("|"):
+                blok.append(linie[i])
+                i += 1
+            tabela_md(parent, blok, W, bg)
+            continue
+        if a.startswith("## "):
+            etykieta(parent, a[3:], 10, bold=True, kolor=K["akcent"], bg=bg, wrap=W).pack(fill="x", pady=(6, 2))
+        elif a.startswith(("- ", "• ")):
+            etykieta(parent, "• " + a[2:], 10, bg=bg, wrap=W).pack(fill="x", padx=(12, 0), pady=(0, 2))
+        else:
+            etykieta(parent, a, 10, bg=bg, wrap=W).pack(fill="x", pady=(0, 6))
+        i += 1
+
+
 class Przewijane(tk.Frame):
     """Ramka z pionowym paskiem przewijania. Zawartość wkładaj do .wnetrze."""
 
@@ -1593,16 +1658,7 @@ class Mentor(tk.Tk):
                      if pelna else "Jak pracować z lekcją:  1 przeczytaj wyjaśnienie  →  2 przelicz przykład sam  →  3 zrób zadania  →  4 odpowiedz na pytania na głos  →  5 test (2/3 zalicza)"),
                  9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(6, 8))
         etykieta(k, "1 · Wyjaśnienie od podstaw", 11, bold=True).pack(fill="x", pady=(4, 4))
-        for akapit in l["wyjasnienie"].split("\n"):
-            a = akapit.strip()
-            if not a:
-                continue
-            if a.startswith("## "):
-                etykieta(k, a[3:], 10, bold=True, kolor=K["akcent"], wrap=W).pack(fill="x", pady=(6, 2))
-            elif a.startswith(("- ", "• ")):
-                etykieta(k, "• " + a[2:], 10, wrap=W).pack(fill="x", padx=(12, 0), pady=(0, 2))
-            else:
-                etykieta(k, a, 10, wrap=W).pack(fill="x", pady=(0, 6))
+        renderuj_tekst(k, l["wyjasnienie"], W)
         # 2 · demonstracja kompletna z omówieniem krok po kroku
         dem = l.get("demonstracja")
         if dem or l.get("przyklad"):

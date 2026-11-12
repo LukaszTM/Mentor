@@ -1,5 +1,5 @@
 # Start: jak uczyć się z tego programu (przeczytaj najpierw)
-Tydzień 0 · lekcja 1 z 45 · ≈ 15 min
+Tydzień 0 · lekcja 1 z 46 · ≈ 40 min
 
 **Po tej lekcji potrafisz:** wiesz, co robić każdego dnia, gdzie co jest w Mentorze, jak czytać lekcję i jak odhaczać postępy.
 
@@ -12,22 +12,22 @@ Tydzień 0 · lekcja 1 z 45 · ≈ 15 min
 
 ## 1 · Wyjaśnienie od podstaw
 ### Co to za kurs i dla kogo
-12 tygodni (0–11), pięć zadań tygodniowo, jedna krótka lekcja dziennie. Uczysz się na fikcyjnej firmie AGRO-MLEKO (62 pracowników, produkcja 3-zmianowa, zleceniobiorcy, umowy o dzieło) — każdy kazus, lista płac i pismo dotyczą jej pracowników. Nie musisz znać prawa pracy ani księgowości. Poziom: od podstaw (nie musisz znać prawa pracy, księgowości ani Excela). Potrzebujesz: 60–90 minut dziennie, Windows z Mentorem i jednego folderu na dysku. Nic więcej — kalkulatory, symulatory ZUS/US, przepisy i wszystkie pliki ćwiczeń są w Mentorze i w paczce materiałów (kopiujesz je jednym przyciskiem). Internet nie jest potrzebny; Asystent w trybie offline działa bez konta i bez opłat (tryby API/Subskrypcja są opcjonalne i płatne).
+16 tygodni (0–15), trzy–cztery zadania tygodniowo, jedna lekcja (ok. godziny) co drugi dzień. Uczysz się na fikcyjnej firmie AGRO-MLEKO (62 pracowników, produkcja 3-zmianowa, zleceniobiorcy, umowy o dzieło) — każdy kazus, lista płac i pismo dotyczą jej pracowników. Nie musisz znać prawa pracy ani księgowości. Poziom: od podstaw (nie musisz znać prawa pracy, księgowości ani Excela). Potrzebujesz: ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) — każdy tydzień mieści się w 9 godzinach, cały kurs to ok. 130 godzin; do tego Windows z Mentorem i jeden folder na dysku. Nic więcej — kalkulatory, symulatory ZUS/US, przepisy i wszystkie pliki ćwiczeń są w Mentorze i w paczce materiałów (kopiujesz je jednym przyciskiem). Internet nie jest potrzebny; Asystent w trybie offline działa bez konta i bez opłat (tryby API/Subskrypcja są opcjonalne i płatne).
 ### Co będziesz umieć po kursie
 - zawrzeć i rozwiązać umowę o pracę z kompletem dokumentów i w terminach (ZUA, świadectwo, ekwiwalent),
 - policzyć wymiar czasu pracy, nadgodziny, nocne, urlop i pensję za część miesiąca,
-- sporządzić listę płac od brutto do netto z PPK, chorobowym, zasiłkiem, benefitem i potrąceniem — i skontrolować ją bilansem,
+- sporządzić listę płac od brutto do netto z PPK, chorobowym, zasiłkiem, benefitem, delegacją i potrąceniem — i skontrolować ją bilansem,
 - ustalić podstawę zasiłku, rozliczyć zleceniobiorcę i studenta, przygotować komplet DRA/RCA/RSA i korektę,
 - zamknąć rok (PIT-4R, PIT-11, ZFŚS, PFRON) i przygotować firmę do kontroli PIP/ZUS z procedurami 2026/2027.
 ### Jak wygląda dzień nauki
-- Panel → karta „Dzisiaj”: Mentor pokazuje zadanie dnia i lekcję do niego (pon–czw zadania 1–4, piątek — większe zadanie tygodnia, sobota — quiz, niedziela — wolne).
-- Lekcje → czytasz lekcję dnia (15–25 min). Zawsze ta sama budowa: cel → po co → czego potrzebujesz → wyjaśnienie od podstaw → demonstracja omówiona krok po kroku → jak to uruchomić → ćwiczenie prowadzone → ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → typowe błędy → sprawdzenie → test.
+- Panel → karta „Dzisiaj”: Mentor pokazuje zadanie dnia i lekcję do niego (pon–pt zadania tygodnia i lekcje na przemian, sobota — quiz, powtórka i dokończenie, niedziela — wolne).
+- Lekcje → czytasz lekcję (ok. 45–75 min z ćwiczeniami; czas podany przy każdej lekcji jest policzony z jej treści). Zawsze ta sama budowa: cel → po co → czego potrzebujesz → wyjaśnienie od podstaw → demonstracja omówiona krok po kroku → jak to uruchomić → ćwiczenie prowadzone → ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → typowe błędy → sprawdzenie → test.
 - Plan → zadanie dnia → rozwijasz „Jak to zrobić”: kompletne kroki (co otworzyć, co policzyć, jak nazwać plik). Robisz je w swoim katalogu projektu.
 - Sesja nauki → timer prowadzi Cię przez 4 fazy (nowy temat 20 min → kazus w Warsztacie 50 → weryfikacja u źródła 15 → wpis do dziennika 5) i sam zapisuje czas.
 - Plan → zaznaczasz ✔ przy zadaniu (+10 XP; zadanie tygodnia +25). Dziennik → jedno zdanie, czego się nauczyłeś (+3 XP).
-- Sobota: Quiz tygodnia (5 pytań). Po każdym etapie: Checklista — co masz umieć, odhaczasz sam.
+- Sobota: Quiz tygodnia (4–5 pytań) i powtórka. Po każdym etapie: Checklista — co masz umieć, odhaczasz sam.
 ### Wszystko w Mentorze: Warsztat
-Kurs nie wymaga żadnych kont zewnętrznych, instalowania programów ani arkusza kalkulacyjnego. Zakładka Warsztat ma 9 narzędzi: Firma ćwiczeniowa (12 osób z danymi), Lista płac (brutto → netto krok po kroku, z „Trybem ćwiczenia”), Zasiłki i chorobowe, Urlopy i ekwiwalent, Czas pracy, Potrącenia, eZUS / Płatnik (symulator zgłoszeń, kompletów DRA/RCA/RSA, e-ZLA — z weryfikacją i numerami UPP), e-Urząd: PIT (PIT-11, PIT-4R, UPO) i Przepisy (48 streszczeń offline). Każde narzędzie ma przycisk „Zapisz do projektu” — wynik trafia do Twojego katalogu jako plik .md/.csv. Zasada: najpierw liczysz na kartce, potem sprawdzasz w Warsztacie.
+Kurs nie wymaga żadnych kont zewnętrznych, instalowania programów ani arkusza kalkulacyjnego. Zakładka Warsztat ma 10 narzędzi: Firma ćwiczeniowa (12 osób z danymi), Lista płac (brutto → netto krok po kroku, z „Trybem ćwiczenia”), Zasiłki i chorobowe, Urlopy i ekwiwalent, Czas pracy, Potrącenia, Delegacje i diety, eZUS / Płatnik (symulator zgłoszeń, kompletów DRA/RCA/RSA, e-ZLA — z weryfikacją i numerami UPP), e-Urząd: PIT (PIT-11, PIT-4R, UPO) i Przepisy (48 streszczeń offline). Każde narzędzie ma przycisk „Zapisz do projektu” — wynik trafia do Twojego katalogu jako plik .md/.csv. Zasada: najpierw liczysz na kartce, potem sprawdzasz w Warsztacie.
 ### Twój warsztat: katalog projektu
 Folder „kadry-praktyka” (nazwę proponuje Mentor; wskazujesz go w Ustawieniach lub w zakładce Mój projekt). Trafiają tam: FIRMA.md (karta firmy — zadanie 1 tygodnia 0), dziennik.md (Twoje notatki), listy płac i dokumenty ZUS/PIT zapisane z Warsztatu (.md/.csv), pisma w plikach .md. Mentor wykrywa te pliki i podpowiada, czy zadanie ma już efekt. Git jest opcjonalny — zadanie tygodnia 0 pokaże, jak zapisywać wersje; jeśli nie chcesz, pomijasz „commit” w krokach.
 ### Jak czytać lekcję (7 kroków, 20–40 minut)
@@ -39,11 +39,9 @@ Folder „kadry-praktyka” (nazwę proponuje Mentor; wskazujesz go w Ustawienia
 - 6. Typowe błędy i pułapki — przepisz jeden do dziennika; to są błędy, za które płaci się w kontroli.
 - 7. Sprawdzenie i test — pytania mówisz na głos, potem test 3 pytań: 2/3 zalicza, możesz powtarzać.
 ### Asystent — nauczyciel, nie wykonawca
-### Zakładka Asystent ma trzy karty
-Subskrypcja (Claude Code w terminalu), API (własny klucz, rozmowa w Mentorze) i Offline (wbudowany, bez internetu — rozumie: „uczę się [temat]”, „co to jest [pojęcie]”, „zadaj mi 3 pytania”, „quiz z tygodnia 4”, „odpytaj mnie jak rekruter”, „utknąłem: [problem]”). Zasada we wszystkich trybach: najpierw własna próba (podpowiedzi w lekcji odkrywasz po kolei), potem pytanie o podpowiedź — nie o gotowy wynik; gdy nie wiesz nawet, jak zacząć, pytaj od razu — nie ma obowiązku „walczyć” przez określony czas. W trybie offline działa też komenda „podpowiedź” (kolejna wskazówka do ćwiczenia z ostatniej lekcji). Gotowe prompty do każdej sytuacji: zakładka Prompty.
+Zakładka Asystent ma trzy karty: Subskrypcja (Claude Code w terminalu), API (własny klucz, rozmowa w Mentorze) i Offline (wbudowany, bez internetu — rozumie: „uczę się [temat]”, „co to jest [pojęcie]”, „zadaj mi 3 pytania”, „quiz z tygodnia 4”, „odpytaj mnie jak rekruter”, „utknąłem: [problem]”). Zasada we wszystkich trybach: najpierw własna próba (podpowiedzi w lekcji odkrywasz po kolei), potem pytanie o podpowiedź — nie o gotowy wynik; gdy nie wiesz nawet, jak zacząć, pytaj od razu — nie ma obowiązku „walczyć” przez określony czas. W trybie offline działa też komenda „podpowiedź” (kolejna wskazówka do ćwiczenia z ostatniej lekcji). Gotowe prompty do każdej sytuacji: zakładka Prompty.
 ### Skąd liczby i czy są aktualne
-### Stan prawny
-listopad 2026. Każda stawka, limit i termin ma w lekcji podstawę prawną (artykuł, Dz.U., obwieszczenie). To, co jest dopiero projektem (np. pełna jawność wynagrodzeń, PIT 2027), jest tak oznaczone. Raz w roku — w styczniu — odświeżasz tabelę wskaźników (zadanie 4 tygodnia 0 pokazuje, gdzie sprawdzić każdą liczbę). Umiejętność sprawdzania u źródła jest ważniejsza niż zapamiętanie kwoty.
+Stan prawny: listopad 2026. Każda stawka, limit i termin ma w lekcji podstawę prawną (artykuł, Dz.U., obwieszczenie). To, co jest dopiero projektem (np. pełna jawność wynagrodzeń, PIT 2027), jest tak oznaczone. Raz w roku — w styczniu — odświeżasz tabelę wskaźników (zadanie 4 tygodnia 0 pokazuje, gdzie sprawdzić każdą liczbę). Umiejętność sprawdzania u źródła jest ważniejsza niż zapamiętanie kwoty.
 ### Jeśli coś nie idzie
 - Nie wiesz, co dziś robić → Panel → „Dzisiaj”.
 - Nie rozumiesz lekcji → przelicz przykład, zapytaj Asystenta „wytłumacz [temat] inaczej”, zapisz pytanie w Dzienniku, zrób zadanie dnia i wróć do lekcji jutro.
@@ -86,7 +84,7 @@ Przygotuj swoje miejsce pracy dokładnie jak w demonstracji: (1) wpisz imię, (2
 ✔ Poprawny wynik wygląda tak: Mój projekt pokazuje zielony napis z Twoim folderem; w folderze są START_TUTAJ.md i cztery podkatalogi; Panel wita Cię imieniem.
 
 ## 5 · Ćwiczenie samodzielne
-Wykonaj zadanie 1 tygodnia 0 (Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”): utwórz plik FIRMA.md z kartą firmy AGRO-MLEKO. Decyzja należy do Ciebie: skorzystaj z Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu” ALBO napisz plik ręcznie z szablonu cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md. Potem odhacz zadanie i zrób wpis w Dzienniku. Czas: 30 minut.
+Wykonaj zadanie 1 tygodnia 0 (Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”): utwórz plik FIRMA.md z kartą firmy AGRO-MLEKO. Decyzja należy do Ciebie: skorzystaj z Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu” ALBO napisz plik ręcznie z szablonu cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md. Potem odhacz zadanie i zrób wpis w Dzienniku. Czas: 45 minut (to jest zadanie 1 tygodnia 0 — liczone raz, w zadaniu).
 
 📄 Plik startowy: `cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md` · rozwiązanie: `rozwiazania/tydzien_00/start_jak_sie_uczyc_2.md`
 ✔ Poprawny wynik wygląda tak: Plan → Tydzień 0 → zadanie 1 ma ✔ i Mentor pokazuje „plik wykryty: FIRMA.md”; Panel pokazuje +10 XP i 1 wpis w dzienniku.

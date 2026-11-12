@@ -123,7 +123,7 @@ POWTORKI = [
             {"komunikat": "Aneks wydłużający umowę określoną „nie liczy się do limitu”.", "przyczyna": "Art. 25¹ §2 — aneks to nowa umowa.", "diagnoza": "Policz miesiące i umowy po aneksie.", "poprawka": "Nowa umowa w limicie albo nieokreślona."},
         ],
         "pulapki": ["Powtórkę rób na własnych plikach z zadań — porównaj, czy dziś policzyłbyś tak samo.", "Jedna lekcja etapu z testem < 2/3 → wróć do niej przed quizem tygodnia 3."],
-        "zadania": ["Powtórz testy 10 lekcji etapu 1 bez notatek; wynotuj tematy do powtórki.", "Zbilansuj ponownie kartę ewidencji z zadania tygodnia 2 — czy suma = wymiar?", "Przelicz urlopy 8 osób z zadania tygodnia 3 w Warsztacie i znajdź różnice."],
+        "zadania": ["Powtórz testy 10 lekcji etapu 1 bez notatek; wynotuj tematy do powtórki.", "Zbilansuj ponownie kartę ewidencji z zadania tygodnia 3 — czy suma = wymiar?", "Przelicz urlopy 8 osób z zadania tygodnia 3 w Warsztacie i znajdź różnice."],
         "pytania": [["Od czego zależy maksymalna długość umowy próbnej?", "Od planowanej długości kolejnej umowy określonej: < 6 mies. → 1 mies.; 6–12 → 2; inaczej 3."],
                     ["Jaki dzielnik stosujesz do pensji przy chorobie, a jaki przy urlopie bezpłatnym?", "Choroba — 30; inne nieobecności — wymiar godzin miesiąca."],
                     ["Ile tygodni rodzicielskiego może wziąć matka, jeśli ojciec jest ubezpieczony?", "32 (41 − 9 nieprzenoszalnych tygodni ojca)."]],
@@ -290,7 +290,7 @@ POWTORKI = [
             "7. PIT-4R = przelewy? → różnica 470 → 2 listy dodatkowe nieujęte → korekta.\n"
             "8. ZFŚS kryterium, PFRON wskaźnik? → paczki po równo → regulamin z progami; PFRON 2,0/3,51 etatu → plan zatrudnienia.\n"
             "9. Procedury: mobbing (do 5.05.2027), sygnaliści, zdalna, trzeźwość? → brak 3 z 4 → harmonogram wdrożeń.\n"
-            "10. Teczka kontrolna i kalendarz? → brak → zbudowane w tygodniu 9 i 11.",
+            "10. Teczka kontrolna i kalendarz? → brak → zbudowane w tygodniach 12 i 15.",
         "demonstracja": {
             "tytul": "Audyt firmy — jak z 60 pytań zrobić plan naprawczy, który obroni się przed PIP i ZUS",
             "kroki": ["Pytania grupujesz wg obszarów = etapów kursu (zatrudnienie, czas pracy, płace, zasiłki, ZUS/US, ZFŚS/PFRON, ustanie, compliance); każde pytanie ma podstawę prawną i dowód (dokument), który pokazałbyś inspektorowi.",
@@ -320,10 +320,10 @@ POWTORKI = [
         "typowe_bledy": [
             {"komunikat": "Audyt pełen „raczej tak”.", "przyczyna": "Brak dowodu przy odpowiedzi.", "diagnoza": "Czy przy każdym TAK jest nazwa dokumentu?", "poprawka": "TAK tylko z dokumentem; inaczej NIE/CZĘŚCIOWO."},
             {"komunikat": "Plan naprawczy bez kwot.", "przyczyna": "Zarząd nie podejmie decyzji bez liczb.", "diagnoza": "Policz w Warsztacie (listy, składki, odsetki).", "poprawka": "Każde ryzyko w złotych z terminem przedawnienia."},
-            {"komunikat": "Świadectwo z przyczyną, pismo bez pouczenia — w pliku z zadania tygodnia 10.", "przyczyna": "Powtórka nie objęła własnych plików.", "diagnoza": "Przejrzyj pisma z zadań pod kątem listy kontrolnej (tryb, podstawa, przyczyna, okres, data, pouczenie, podpis).", "poprawka": "Popraw wzory w katalogu projektu — będą Twoimi szablonami w pracy."},
+            {"komunikat": "Świadectwo z przyczyną, pismo bez pouczenia — w pliku z zadania tygodnia 13.", "przyczyna": "Powtórka nie objęła własnych plików.", "diagnoza": "Przejrzyj pisma z zadań pod kątem listy kontrolnej (tryb, podstawa, przyczyna, okres, data, pouczenie, podpis).", "poprawka": "Popraw wzory w katalogu projektu — będą Twoimi szablonami w pracy."},
         ],
         "pulapki": ["Powtórka końcowa to audyt — nie czytanie; każda lekcja kursu ma w nim jedno pytanie.", "Jeśli nie wiesz, gdzie w Warsztacie sprawdzić daną liczbę — wróć do lekcji „Narzędzia kadrowca”."],
-        "zadania": ["Powtórz testy 7 lekcji etapu 4 i 4 powtórek etapów 0–3.", "Wykonaj projekt końcowy: audyt 60 pytań + raport dla zarządu (zadanie tygodnia 11).", "Odpytaj się w Asystencie: „odpytaj mnie jak rekruter” — 10 pytań; zapisz, na które nie odpowiedziałeś pewnie."],
+        "zadania": ["Powtórz testy 7 lekcji etapu 4 i 4 powtórek etapów 0–3.", "Wykonaj projekt końcowy: audyt 60 pytań + raport dla zarządu (zadanie tygodnia 15).", "Odpytaj się w Asystencie: „odpytaj mnie jak rekruter” — 10 pytań; zapisz, na które nie odpowiedziałeś pewnie."],
         "pytania": [["Jaki środek PIP jest wykonalny natychmiast i co grozi za jego niewykonanie?", "Nakaz wypłaty wynagrodzenia — odwołanie nie wstrzymuje; grzywna w celu przymuszenia i wykroczenie."],
                     ["Co musi wykazać pracodawca, by nie odpowiadać za mobbing kierownika?", "Że rzeczywiście przeciwdziałał: procedura, szkolenia, reakcja na zgłoszenie — udokumentowane."],
                     ["Od czego zależy, czy zwolnienie 9 + 4 osób jest grupowe?", "Czy porozumienia z inicjatywy pracodawcy liczą się (≥ 5) i czy suma w 30 dniach ≥ 10 (firma < 100)."]],

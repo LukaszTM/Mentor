@@ -140,7 +140,7 @@
   - jak sprawdzić: Czy na liście płac jest osobna pozycja „dodatek nocny”?
   - poprawka: Wypłacaj osobno: godziny nocne × 20% stawki z minimalnego; ryczałt dopuszczalny tylko dla stale pracujących w nocy i nie niższy.
 
-## Ewidencja czasu pracy i nieobecności (tydzień 2)
+## Ewidencja czasu pracy i nieobecności (tydzień 3)
 - ✘ **Ewidencja „8 h” bez godzin od–do.**
   - przyczyna: Stary wzór sprzed 2019 r.; §6 wymaga liczby godzin ORAZ godziny rozpoczęcia i zakończenia.
   - jak sprawdzić: Czy z karty da się odczytać, o której pracownik zaczął i skończył?
@@ -182,7 +182,7 @@
   - jak sprawdzić: Czy pracownik był zatrudniony cały rok? Jeśli tak — pełne 6 dni.
   - poprawka: 26 − 20 = 6 dni od dnia nabycia (proporcja tylko, gdy zatrudnienie w roku trwało część roku).
 
-## Urlopy rodzicielskie 2026: macierzyński, rodzicielski, ojcowski, wychowawczy, ochrona (tydzień 3)
+## Urlopy rodzicielskie 2026: macierzyński, rodzicielski, ojcowski, wychowawczy, ochrona (tydzień 4)
 - ✘ **Rodzicielski matki zaplanowany na 41 tygodni.**
   - przyczyna: Pominięto 9 nieprzenoszalnych tygodni ojca (art. 182¹ᵃ §4).
   - jak sprawdzić: Czy ojciec jest uprawniony (ubezpieczony)? Jeśli tak — matka max 32 tyg.
@@ -196,7 +196,7 @@
   - jak sprawdzić: Jaki jest rodzaj umowy — zwykła określona czy na zastępstwo?
   - poprawka: Umowa na zastępstwo kończy się w terminie; zasiłek macierzyński od ZUS, jeśli poród po ustaniu w okresie ubezpieczenia.
 
-## Inne nieobecności i elastyczna organizacja pracy (tydzień 3)
+## Inne nieobecności i elastyczna organizacja pracy (tydzień 4)
 - ✘ **Urlop opiekuńczy (art. 173¹) rozliczony jako płatny 100%.**
   - przyczyna: Pomylenie z art. 188 (opieka nad zdrowym dzieckiem — płatna) lub z zasiłkiem opiekuńczym (ZUS, 80%).
   - jak sprawdzić: Kto jest podopiecznym i jaki przepis we wniosku? Art. 173¹ = bezpłatny.
@@ -210,7 +210,7 @@
   - jak sprawdzić: Data wpływu wniosku + 7 dni.
   - poprawka: Odpowiedz w 7 dni; brak odpowiedzi nie oznacza zgody, ale jest wykroczeniem (art. 281 §1 pkt 5b).
 
-## Powtórka etapu 1: od ogłoszenia do urlopu — prawo pracy w praktyce (tydzień 3)
+## Powtórka etapu 1: od ogłoszenia do urlopu — prawo pracy w praktyce (tydzień 4)
 - ✘ **Urlop proporcjonalny 21,67 zaokrąglony do 21.**
   - przyczyna: Niepełny dzień zaokrągla się w górę (art. 155³).
   - jak sprawdzić: Warsztat → Urlopy.
@@ -224,7 +224,7 @@
   - jak sprawdzić: Policz miesiące i umowy po aneksie.
   - poprawka: Nowa umowa w limicie albo nieokreślona.
 
-## Lista płac krok po kroku: od brutto do netto (tydzień 4)
+## Lista płac krok po kroku: od brutto do netto (tydzień 5)
 - ✘ **Tryb ćwiczenia: „Różnica równa się kwocie: PPK pracodawcy 1.5%”.**
   - przyczyna: Odjęto wpłatę pracodawcy od netto (nie jest wypłacana) albo nie dodano jej do podstawy PIT.
   - jak sprawdzić: Czy w podstawie PIT jest brutto + 1,5%? Czy w netto odjęto tylko 2%?
@@ -238,7 +238,7 @@
   - jak sprawdzić: „Pokaż listę miesiąca” → wiersz RAZEM → porównaj z przelewem.
   - poprawka: Każda wypłata w miesiącu (także dodatkowa) trafia na listę; zaliczka do US = suma wszystkich.
 
-## Zaliczka na PIT: PIT-2, KUP, próg 32%, ulgi i zwolnienia (tydzień 4)
+## Zaliczka na PIT: PIT-2, KUP, próg 32%, ulgi i zwolnienia (tydzień 5)
 - ✘ **Zaliczka 1 145 w listopadzie u pracownika z dochodem 120 410 narastająco.**
   - przyczyna: Pole „Dochód narastająco” = 0 — kalkulator (i program kadrowy) nie wie o progu bez narastania.
   - jak sprawdzić: Czy dochód narastająco w kartotece jest aktualizowany co miesiąc?
@@ -252,7 +252,7 @@
   - jak sprawdzić: Data wypłaty > data ustania?
   - poprawka: Zaliczka bez 300 zł; KUP 250 nadal.
 
-## Koszt pracodawcy i składka wypadkowa (tydzień 4)
+## Koszt pracodawcy i składka wypadkowa (tydzień 5)
 - ✘ **Koszt roczny bez ZFŚS, badań i BHP.**
   - przyczyna: Budżet liczony tylko z listy płac.
   - jak sprawdzić: Czy w kalkulacji są pozycje poza ZUS: ZFŚS 2 943,23/etat, PPK, badania, szkolenia, odzież?
@@ -266,7 +266,7 @@
   - jak sprawdzić: Czy pracownik ma inne tytuły (oświadczenie)? Jeśli nie i 2 500 < 4 806 — bez FP/FGŚP.
   - poprawka: W Warsztacie pole „Pensja wg umowy” = 2 500 → krok „FP/FGŚP nienależne”.
 
-## Wynagrodzenie za urlop i ekwiwalent (tydzień 5)
+## Wynagrodzenie za urlop i ekwiwalent (tydzień 6)
 - ✘ **Ekwiwalent policzony ze współczynnika 20,92 u pracownika na 3/4 etatu.**
   - przyczyna: Współczynnik nie obniżony proporcjonalnie do etatu (§19 ust. 2).
   - jak sprawdzić: Etat < 1? Współczynnik × etat (20,92 × 0,75 = 15,69).
@@ -280,7 +280,7 @@
   - jak sprawdzić: Czy nieobecność ma e-ZLA? Jeśli tak — /30 × dni kalendarzowe.
   - poprawka: 5 400/30 × 6.
 
-## Potrącenia z wynagrodzenia: art. 87–91 KP (tydzień 5)
+## Potrącenia z wynagrodzenia: art. 87–91 KP (tydzień 6)
 - ✘ **Potrącono 1/2 netto, mimo że pracownik zarabia 4 300.**
   - przyczyna: Pominięto kwotę wolną — przy niskich pensjach to ona wiąże, nie 1/2.
   - jak sprawdzić: Czy po potrąceniu zostało ≥ minimalne netto dla tego pracownika?
@@ -294,91 +294,7 @@
   - jak sprawdzić: Czy nadpłata wynikła z nieobecności nieuwzględnionej w poprzednim miesiącu?
   - poprawka: Jeśli tak — art. 87 §7 w najbliższym terminie; jeśli nie — pisemna zgoda pracownika lub pozew.
 
-## Świadczenia pozapłacowe i ZFŚS w liście płac (tydzień 5)
-- ✘ **Ryczałt za auto 400 zł dodany do netto pracownika.**
-  - przyczyna: Świadczenie w naturze to przychód, nie wypłata — dolicza się do podstaw, nie do przelewu.
-  - jak sprawdzić: Czy pracownik dostał 400 zł gotówki? Nie — dostał auto.
-  - poprawka: Warsztat: pole „Świadczenia w naturze” 400; netto liczone z 6 000 gotówki.
-- ✘ **Karta sportowa za 1 zł wyłączona z PIT.**
-  - przyczyna: Wyłączenie współfinansowania dotyczy tylko ZUS; PIT — przychód 149 zł.
-  - jak sprawdzić: Sprawdź oba akty: rozporządzenie składkowe (tak) i ustawa o PIT (brak zwolnienia).
-  - poprawka: Dolicz 149 do podstawy PIT w miesiącu otrzymania karty.
-- ✘ **Świadczenie z ZFŚS 1 200 zł w całości bez PIT.**
-  - przyczyna: Zwolnienie z art. 21 ust. 1 pkt 67 ma limit 1 000 zł rocznie (łącznie ze wszystkimi świadczeniami ZFŚS w roku).
-  - jak sprawdzić: Suma świadczeń ZFŚS pracownika w roku > 1 000?
-  - poprawka: Opodatkuj nadwyżkę (200 zł → zaliczka 12%); bez ZUS nadal.
-
-## Wynagrodzenie chorobowe i zasiłek chorobowy: 33/14 dni, okres zasiłkowy, e-ZLA (tydzień 6)
-- ✘ **Pula 33 dni „zerowana” u nowego pracodawcy albo po przerwie > 60 dni.**
-  - przyczyna: Pomylenie puli (rok kalendarzowy, u wszystkich pracodawców łącznie) z okresem zasiłkowym (przerwa 60 dni).
-  - jak sprawdzić: Ze świadectwa pracy poprzedniego pracodawcy: ile dni chorobowego w tym roku?
-  - poprawka: Pula 33/14 — licznik roczny; okres 182 — licznik z regułą 60 dni.
-- ✘ **Wynagrodzenie chorobowe z potrąconymi składkami społecznymi.**
-  - przyczyna: Chorobowe nie jest podstawą składek społecznych (§2 ust. 1 pkt 24 rozp. składkowego), ale podlega zdrowotnej i PIT.
-  - jak sprawdzić: Na liście płac — czy chorobowe jest w polu „Wynagrodzenie chorobowe” (bez społecznych), a nie w „Zasadnicze”?
-  - poprawka: Osobna pozycja; zasiłek — jeszcze inna (tylko PIT, bez KUP).
-- ✘ **Zasiłek wypłacony za dzień, w którym pracownik był w pracy (nakładanie e-ZLA).**
-  - przyczyna: Dwa zwolnienia na nakładające się okresy lub e-ZLA „wstecz”.
-  - jak sprawdzić: Warsztat → e-ZLA: porównaj okresy; w ewidencji — dni pracy vs dni L4.
-  - poprawka: Za dzień pracy — wynagrodzenie; e-ZLA koryguje lekarz; ZUS może wydać decyzję o braku prawa.
-
-## Podstawa wymiaru zasiłku: 12 miesięcy, uzupełnianie, składniki, minimum (tydzień 6)
-- ✘ **Średnia podzielona przez 12, choć jeden miesiąc wyłączono.**
-  - przyczyna: Dzielnik = liczba miesięcy UWZGLĘDNIONYCH (art. 38 ust. 2).
-  - jak sprawdzić: Policz miesiące ze statusem „pełny” lub „uzupełniony” w wyniku Warsztatu.
-  - poprawka: Suma / 11.
-- ✘ **Dodatek stażowy wliczony do podstawy.**
-  - przyczyna: Regulamin AGRO-MLEKO wypłaca go w pełnej wysokości także za chorobę → pracownik go nie traci → nie wchodzi (art. 41).
-  - jak sprawdzić: Warsztat → Firma ćwiczeniowa → Regulaminy: „NIE wlicza się do podstawy zasiłku”.
-  - poprawka: Usuń z kolumny zmienne/stałe; premia pomniejszana — zostaje.
-- ✘ **Premia kwartalna „z ostatnich 3 miesięcy” w pełnej kwocie.**
-  - przyczyna: Składniki za okresy kwartalne wliczasz w 1/12 kwot z 4 kwartałów poprzedzających (art. 42 ust. 2).
-  - jak sprawdzić: Jaki okres obejmuje premia? Miesiąc / kwartał / rok?
-  - poprawka: Kwartalna: suma z 4 kwartałów / 12 do każdego miesiąca; roczna: 1/12 z roku poprzedniego.
-
-## Zasiłek opiekuńczy, macierzyński, wypadkowy, świadczenie rehabilitacyjne — dokumenty i kody RSA (tydzień 6)
-- ✘ **Zasiłek opiekuńczy na 9-letnie dziecko z powodu zamknięcia szkoły.**
-  - przyczyna: Opieka nad ZDROWYM dzieckiem (zamknięcie placówki) przysługuje do 8. roku życia; nad chorym — do 14.
-  - jak sprawdzić: Zdrowe czy chore? Wiek?
-  - poprawka: Brak zasiłku; pracownik może wziąć urlop lub art. 188 (2 dni).
-- ✘ **Protokół powypadkowy „po świętach”, zasiłek 80%.**
-  - przyczyna: Bez protokołu uznającego wypadek ZUS nie wypłaci 100% z ubezpieczenia wypadkowego.
-  - jak sprawdzić: Data zawiadomienia + 14 dni; czy zespół powołany?
-  - poprawka: Protokół w 14 dni; do czasu uznania — wypłata 80% z korektą do 100% po protokole.
-- ✘ **Zasiłek macierzyński w RSA z kodem 313.**
-  - przyczyna: Kody: 327 (macierzyński za urlop macierzyński), 319 (rodzicielski), 325 (ojcowski).
-  - jak sprawdzić: Jaki urlop? Sprawdź Warsztat → Przepisy / tabela kodów w Ściądze.
-  - poprawka: Popraw kod w RSA; kwota do odliczenia w DRA bez zmian.
-
-## Kontrola zwolnień lekarskich po reformie 2026 (tydzień 6)
-- ✘ **Protokół zawiera zdanie „pracownik wyglądał na zdrowego”.**
-  - przyczyna: Ocena stanu zdrowia — poza kompetencją kontrolujących; podważa protokół.
-  - jak sprawdzić: Czy każde zdanie protokołu opisuje fakt obserwowalny (co robił, gdzie, kiedy)?
-  - poprawka: Usuń oceny; zostaw fakty; wątpliwości co do choroby → wniosek do ZUS o badanie.
-- ✘ **Wstrzymano zasiłek (nie wynagrodzenie chorobowe) decyzją kadr.**
-  - przyczyna: O prawie do zasiłku z ZUS decyduje ZUS; pracodawca-płatnik przekazuje protokół i wstrzymuje wypłatę do decyzji.
-  - jak sprawdzić: Dzień naruszenia — w okresie 33 dni (wynagrodzenie chorobowe) czy później (zasiłek)?
-  - poprawka: Wynagrodzenie chorobowe — decyzja pracodawcy; zasiłek — informacja do ZUS i decyzja ZUS.
-- ✘ **Kontrola w dziale pakowania „wszystkich na L4 w tym tygodniu”.**
-  - przyczyna: Brak kryteriów typowania → zarzut nękania/dyskryminacji.
-  - jak sprawdzić: Czy procedura ma kryteria wyboru?
-  - poprawka: Typowanie wg obiektywnych kryteriów, udokumentowane.
-
-## Umowa zlecenia i o dzieło: składki, zbiegi, PIT, minimalna stawka, RUD (tydzień 7)
-- ✘ **Symulator: „Uczeń/student do 26 lat na zleceniu nie podlega ubezpieczeniom — nie zgłaszasz go wcale”.**
-  - przyczyna: Próba ZUA/ZZA dla studenta.
-  - jak sprawdzić: Czy osoba ma status studenta i < 26 lat? Jeśli tak — brak tytułu.
-  - poprawka: Nie zgłaszasz; po utracie statusu — ZUA od następnego dnia.
-- ✘ **Zleceniobiorca ze zbiegiem zgłoszony ZUA z pełnymi składkami.**
-  - przyczyna: Brak oświadczenia o innych tytułach lub jego zignorowanie.
-  - jak sprawdzić: Oświadczenie: etat ≥ minimalne u innego? Działalność? Inne zlecenia (sumowanie do minimalnej)?
-  - poprawka: ZWUA + ZZA (tylko zdrowotna, 04 11); korekta RCA; nadpłata do rozliczenia.
-- ✘ **Stawka 25 zł/h w umowie zlecenia „bo tak uzgodniono”.**
-  - przyczyna: Minimalna stawka 31,40 zł jest bezwzględna; zapis niższy jest nieważny.
-  - jak sprawdzić: Kwota / potwierdzone godziny ≥ 31,40?
-  - poprawka: Aneks do stawki lub limit godzin; ewidencja godzin podpisywana co miesiąc.
-
-## PPK: zapisy, wpłaty, rezygnacje, autozapis 2027 (tydzień 7)
+## PPK: zapisy, wpłaty, rezygnacje, autozapis 2027 (tydzień 6)
 - ✘ **Wpłata PPK naliczona od zasiłku chorobowego.**
   - przyczyna: Podstawa wpłat = podstawa składek emerytalno-rentowych; zasiłek nią nie jest.
   - jak sprawdzić: Warsztat → Lista płac: PPK liczone od „Przychód oskładkowany” — bez chorobowego i zasiłku.
@@ -392,7 +308,113 @@
   - jak sprawdzić: Czy jest papierowa deklaracja z podpisem?
   - poprawka: Pobierz wzór (Prompty → Szablony), podpis, data wpływu; przechowuj w aktach B.
 
-## Cudzoziemcy (ustawa 2025), delegowanie, B2B i ryzyko art. 22 KP (tydzień 7)
+## Świadczenia pozapłacowe i ZFŚS w liście płac (tydzień 7)
+- ✘ **Ryczałt za auto 400 zł dodany do netto pracownika.**
+  - przyczyna: Świadczenie w naturze to przychód, nie wypłata — dolicza się do podstaw, nie do przelewu.
+  - jak sprawdzić: Czy pracownik dostał 400 zł gotówki? Nie — dostał auto.
+  - poprawka: Warsztat: pole „Świadczenia w naturze” 400; netto liczone z 6 000 gotówki.
+- ✘ **Karta sportowa za 1 zł wyłączona z PIT.**
+  - przyczyna: Wyłączenie współfinansowania dotyczy tylko ZUS; PIT — przychód 149 zł.
+  - jak sprawdzić: Sprawdź oba akty: rozporządzenie składkowe (tak) i ustawa o PIT (brak zwolnienia).
+  - poprawka: Dolicz 149 do podstawy PIT w miesiącu otrzymania karty.
+- ✘ **Świadczenie z ZFŚS 1 200 zł w całości bez PIT.**
+  - przyczyna: Zwolnienie z art. 21 ust. 1 pkt 67 ma limit 1 000 zł rocznie (łącznie ze wszystkimi świadczeniami ZFŚS w roku).
+  - jak sprawdzić: Suma świadczeń ZFŚS pracownika w roku > 1 000?
+  - poprawka: Opodatkuj nadwyżkę (200 zł → zaliczka 12%); bez ZUS nadal.
+
+## Podróże służbowe: diety, ryczałty, kilometrówka — krajowe i zagraniczne (tydzień 7)
+- ✘ **Rozliczenie: 2 dni kalendarzowe = 2 diety, choć podróż trwała 11 h (20:00 → 7:00).**
+  - przyczyna: Dieta zależy od godzin podróży, nie od liczby dni w kalendarzu.
+  - jak sprawdzić: Policz godziny od wyjazdu do powrotu: 11 h → od 8 do 12 h → 50%.
+  - poprawka: Warsztat → Delegacje: wpisz godziny wyjazdu i powrotu; kalkulator pokazuje doby i procent.
+- ✘ **Obiad pomniejszony o 11,25 zł, bo „za tę dobę była połowa diety”.**
+  - przyczyna: Pomniejszenie liczy się od pełnej diety (45 zł), niezależnie od tego, ile diety przysługuje za dobę.
+  - jak sprawdzić: Sprawdź § 7 ust. 4: „obiad — 50% diety”, bez „diety należnej za dobę”. Wynik nie może być ujemny.
+  - poprawka: Obiad = 22,50 zł; jeśli dieta za dobę to 22,50 → po pomniejszeniu 0,00.
+- ✘ **Ryczałt 9 zł na dojazdy doliczony pracownikowi, który jechał własnym autem.**
+  - przyczyna: Ryczałt na komunikację miejscową przysługuje tylko wtedy, gdy pracownik ponosi koszty dojazdów.
+  - jak sprawdzić: Czy pracownik płacił za tramwaj/autobus w miejscu delegacji? Nie — miał auto.
+  - poprawka: Pole „Doby z ryczałtem na dojazdy” = 0.
+- ✘ **Dieta regulaminowa 70 zł wypłacona w całości poza listą płac, bez PIT i ZUS.**
+  - przyczyna: Zwolnienie z PIT i wyłączenie ze składek sięgają tylko do 45 zł; nadwyżka to przychód ze stosunku pracy.
+  - jak sprawdzić: Porównaj dietę z regulaminu z dietą z rozporządzenia; różnica × liczba diet.
+  - poprawka: Nadwyżkę dolicz do listy płac miesiąca (składki + PIT); kalkulator: pole „Dieta wg regulaminu firmy”.
+- ✘ **Kierowca w transporcie międzynarodowym rozliczony dietami jak handlowiec.**
+  - przyczyna: Od 2.02.2022 kierowca w przewozie międzynarodowym nie jest w podróży służbowej (art. 21b).
+  - jak sprawdzić: Sprawdź rodzaj przewozu i datę; dla międzynarodowego szukaj art. 26f (60 EUR składki / 20 EUR PIT).
+  - poprawka: Kierowcy krajowi — delegacja; międzynarodowi — wyłączenia z art. 26f w liście płac.
+
+## Wynagrodzenie chorobowe i zasiłek chorobowy: 33/14 dni, okres zasiłkowy, e-ZLA (tydzień 7)
+- ✘ **Pula 33 dni „zerowana” u nowego pracodawcy albo po przerwie > 60 dni.**
+  - przyczyna: Pomylenie puli (rok kalendarzowy, u wszystkich pracodawców łącznie) z okresem zasiłkowym (przerwa 60 dni).
+  - jak sprawdzić: Ze świadectwa pracy poprzedniego pracodawcy: ile dni chorobowego w tym roku?
+  - poprawka: Pula 33/14 — licznik roczny; okres 182 — licznik z regułą 60 dni.
+- ✘ **Wynagrodzenie chorobowe z potrąconymi składkami społecznymi.**
+  - przyczyna: Chorobowe nie jest podstawą składek społecznych (§2 ust. 1 pkt 24 rozp. składkowego), ale podlega zdrowotnej i PIT.
+  - jak sprawdzić: Na liście płac — czy chorobowe jest w polu „Wynagrodzenie chorobowe” (bez społecznych), a nie w „Zasadnicze”?
+  - poprawka: Osobna pozycja; zasiłek — jeszcze inna (tylko PIT, bez KUP).
+- ✘ **Zasiłek wypłacony za dzień, w którym pracownik był w pracy (nakładanie e-ZLA).**
+  - przyczyna: Dwa zwolnienia na nakładające się okresy lub e-ZLA „wstecz”.
+  - jak sprawdzić: Warsztat → e-ZLA: porównaj okresy; w ewidencji — dni pracy vs dni L4.
+  - poprawka: Za dzień pracy — wynagrodzenie; e-ZLA koryguje lekarz; ZUS może wydać decyzję o braku prawa.
+
+## Podstawa wymiaru zasiłku: 12 miesięcy, uzupełnianie, składniki, minimum (tydzień 8)
+- ✘ **Średnia podzielona przez 12, choć jeden miesiąc wyłączono.**
+  - przyczyna: Dzielnik = liczba miesięcy UWZGLĘDNIONYCH (art. 38 ust. 2).
+  - jak sprawdzić: Policz miesiące ze statusem „pełny” lub „uzupełniony” w wyniku Warsztatu.
+  - poprawka: Suma / 11.
+- ✘ **Dodatek stażowy wliczony do podstawy.**
+  - przyczyna: Regulamin AGRO-MLEKO wypłaca go w pełnej wysokości także za chorobę → pracownik go nie traci → nie wchodzi (art. 41).
+  - jak sprawdzić: Warsztat → Firma ćwiczeniowa → Regulaminy: „NIE wlicza się do podstawy zasiłku”.
+  - poprawka: Usuń z kolumny zmienne/stałe; premia pomniejszana — zostaje.
+- ✘ **Premia kwartalna „z ostatnich 3 miesięcy” w pełnej kwocie.**
+  - przyczyna: Składniki za okresy kwartalne wliczasz w 1/12 kwot z 4 kwartałów poprzedzających (art. 42 ust. 2).
+  - jak sprawdzić: Jaki okres obejmuje premia? Miesiąc / kwartał / rok?
+  - poprawka: Kwartalna: suma z 4 kwartałów / 12 do każdego miesiąca; roczna: 1/12 z roku poprzedniego.
+
+## Zasiłek opiekuńczy, macierzyński, wypadkowy, świadczenie rehabilitacyjne — dokumenty i kody RSA (tydzień 8)
+- ✘ **Zasiłek opiekuńczy na 9-letnie dziecko z powodu zamknięcia szkoły.**
+  - przyczyna: Opieka nad ZDROWYM dzieckiem (zamknięcie placówki) przysługuje do 8. roku życia; nad chorym — do 14.
+  - jak sprawdzić: Zdrowe czy chore? Wiek?
+  - poprawka: Brak zasiłku; pracownik może wziąć urlop lub art. 188 (2 dni).
+- ✘ **Protokół powypadkowy „po świętach”, zasiłek 80%.**
+  - przyczyna: Bez protokołu uznającego wypadek ZUS nie wypłaci 100% z ubezpieczenia wypadkowego.
+  - jak sprawdzić: Data zawiadomienia + 14 dni; czy zespół powołany?
+  - poprawka: Protokół w 14 dni; do czasu uznania — wypłata 80% z korektą do 100% po protokole.
+- ✘ **Zasiłek macierzyński w RSA z kodem 313.**
+  - przyczyna: Kody: 327 (macierzyński za urlop macierzyński), 319 (rodzicielski), 325 (ojcowski).
+  - jak sprawdzić: Jaki urlop? Sprawdź Warsztat → Przepisy / tabela kodów w Ściądze.
+  - poprawka: Popraw kod w RSA; kwota do odliczenia w DRA bez zmian.
+
+## Kontrola zwolnień lekarskich po reformie 2026 (tydzień 8)
+- ✘ **Protokół zawiera zdanie „pracownik wyglądał na zdrowego”.**
+  - przyczyna: Ocena stanu zdrowia — poza kompetencją kontrolujących; podważa protokół.
+  - jak sprawdzić: Czy każde zdanie protokołu opisuje fakt obserwowalny (co robił, gdzie, kiedy)?
+  - poprawka: Usuń oceny; zostaw fakty; wątpliwości co do choroby → wniosek do ZUS o badanie.
+- ✘ **Wstrzymano zasiłek (nie wynagrodzenie chorobowe) decyzją kadr.**
+  - przyczyna: O prawie do zasiłku z ZUS decyduje ZUS; pracodawca-płatnik przekazuje protokół i wstrzymuje wypłatę do decyzji.
+  - jak sprawdzić: Dzień naruszenia — w okresie 33 dni (wynagrodzenie chorobowe) czy później (zasiłek)?
+  - poprawka: Wynagrodzenie chorobowe — decyzja pracodawcy; zasiłek — informacja do ZUS i decyzja ZUS.
+- ✘ **Kontrola w dziale pakowania „wszystkich na L4 w tym tygodniu”.**
+  - przyczyna: Brak kryteriów typowania → zarzut nękania/dyskryminacji.
+  - jak sprawdzić: Czy procedura ma kryteria wyboru?
+  - poprawka: Typowanie wg obiektywnych kryteriów, udokumentowane.
+
+## Umowa zlecenia i o dzieło: składki, zbiegi, PIT, minimalna stawka, RUD (tydzień 9)
+- ✘ **Symulator: „Uczeń/student do 26 lat na zleceniu nie podlega ubezpieczeniom — nie zgłaszasz go wcale”.**
+  - przyczyna: Próba ZUA/ZZA dla studenta.
+  - jak sprawdzić: Czy osoba ma status studenta i < 26 lat? Jeśli tak — brak tytułu.
+  - poprawka: Nie zgłaszasz; po utracie statusu — ZUA od następnego dnia.
+- ✘ **Zleceniobiorca ze zbiegiem zgłoszony ZUA z pełnymi składkami.**
+  - przyczyna: Brak oświadczenia o innych tytułach lub jego zignorowanie.
+  - jak sprawdzić: Oświadczenie: etat ≥ minimalne u innego? Działalność? Inne zlecenia (sumowanie do minimalnej)?
+  - poprawka: ZWUA + ZZA (tylko zdrowotna, 04 11); korekta RCA; nadpłata do rozliczenia.
+- ✘ **Stawka 25 zł/h w umowie zlecenia „bo tak uzgodniono”.**
+  - przyczyna: Minimalna stawka 31,40 zł jest bezwzględna; zapis niższy jest nieważny.
+  - jak sprawdzić: Kwota / potwierdzone godziny ≥ 31,40?
+  - poprawka: Aneks do stawki lub limit godzin; ewidencja godzin podpisywana co miesiąc.
+
+## Cudzoziemcy (ustawa 2025), delegowanie, B2B i ryzyko art. 22 KP (tydzień 9)
 - ✘ **Powiadomienie o obywatelu Ukrainy złożone listownie / po 20 dniach.**
   - przyczyna: Tylko elektronicznie (praca.gov.pl) i tylko w 14 dni — po terminie praca jest nielegalna.
   - jak sprawdzić: Data podjęcia pracy + 14 dni; potwierdzenie z praca.gov.pl?
@@ -406,7 +428,7 @@
   - jak sprawdzić: Test 8 cech ≥ 4 pracowniczych?
   - poprawka: Zmień na etat albo usuń realne cechy podporządkowania (nie tylko z papieru).
 
-## Powtórka etapu 2: płace od brutto do netto — lista, PIT, zasiłki, umowy cywilne, PPK (tydzień 7)
+## Powtórka etapu 2: płace od brutto do netto — lista, PIT, zasiłki, umowy cywilne, PPK (tydzień 9)
 - ✘ **KUP odjęte od zasiłku.**
   - przyczyna: Zasiłek — przychód z innych źródeł.
   - jak sprawdzić: Warsztat → pole „Zasiłek” — kroki pokazują „+ zasiłki” po KUP.
@@ -420,7 +442,7 @@
   - jak sprawdzić: Warsztat → Potrącenia z PPK 2.
   - poprawka: Kwota wolna z parametrami pracownika.
 
-## Dokumenty zgłoszeniowe ZUS: ZUA, ZZA, ZWUA, ZCNA, ZIUA, kody tytułu (tydzień 8)
+## Dokumenty zgłoszeniowe ZUS: ZUA, ZZA, ZWUA, ZCNA, ZIUA, kody tytułu (tydzień 10)
 - ✘ **Symulator: „Niepoprawny PESEL (błąd sumy kontrolnej lub długości)”.**
   - przyczyna: Literówka w PESEL członka rodziny lub osoby.
   - jak sprawdzić: Policz znaki (11) i porównaj z dokumentem; suma kontrolna — ostatnia cyfra.
@@ -434,7 +456,7 @@
   - jak sprawdzić: Umowa kończy się 31.03 → data w ZWUA 1.04.
   - poprawka: Data = ustanie + 1 dzień; kod 100; dla pracownika tryb i podstawa prawna.
 
-## Rozliczenia miesięczne: DRA, RCA, RSA, RPA, terminy, NRS, zasada kasowa (tydzień 8)
+## Rozliczenia miesięczne: DRA, RCA, RSA, RPA, terminy, NRS, zasada kasowa (tydzień 10)
 - ✘ **Symulator: „RCA …: osoba nie figuruje w rejestrze ubezpieczonych (brak ZUA/ZZA)”.**
   - przyczyna: Osoba na liście płac bez przyjętego zgłoszenia.
   - jak sprawdzić: Karta „Ubezpieczeni” — status osoby.
@@ -448,7 +470,7 @@
   - jak sprawdzić: Kiedy była przerwa, kiedy wypłata świadczenia?
   - poprawka: RSA z okresem przerwy; w komplecie za miesiąc wypłaty świadczenia; przerwy bez świadczeń (111, 151) — za miesiąc przerwy.
 
-## Korekty ZUS: po błędzie, po 30-krotności, po kontroli; nadpłaty i zwroty (tydzień 8)
+## Korekty ZUS: po błędzie, po 30-krotności, po kontroli; nadpłaty i zwroty (tydzień 10)
 - ✘ **Symulator: „Korekta (02+) bez wcześniejszego kompletu pierwotnego (01)”.**
   - przyczyna: Komplet pierwotny nie został wysłany (tylko przygotowany) albo ma inny miesiąc.
   - jak sprawdzić: Karta Rejestr — czy jest 01 za ten miesiąc ze statusem przyjęty?
@@ -462,7 +484,7 @@
   - jak sprawdzić: Czy od zwrotu naliczono 9% zdrowotnej i zaliczkę?
   - poprawka: Lista dodatkowa: przychód = zwrot; zdrowotna + zaliczka (bez składek społecznych).
 
-## Rozliczenie roczne płatnika: PIT-4R, PIT-8AR, PIT-11, IFT-1R, korekty (tydzień 9)
+## Rozliczenie roczne płatnika: PIT-4R, PIT-8AR, PIT-11, IFT-1R, korekty (tydzień 11)
 - ✘ **Pensja za grudzień 2026 (wypłata 10.01.2027) w PIT-11 za 2026.**
   - przyczyna: Ujęcie memoriałowe zamiast kasowego.
   - jak sprawdzić: Data wypłaty > 31.12? Jeśli tak — rok następny.
@@ -476,7 +498,7 @@
   - jak sprawdzić: Kwota należności z umowy ≤ 200 i osoba spoza etatu?
   - poprawka: PIT-8AR; podatnik nie wykazuje w zeznaniu.
 
-## ZFŚS i PFRON: odpisy, terminy, regulamin, DEK/Wn-D, uprawnienia niepełnosprawnych (tydzień 9)
+## ZFŚS i PFRON: odpisy, terminy, regulamin, DEK/Wn-D, uprawnienia niepełnosprawnych (tydzień 12)
 - ✘ **Odpis liczony od 62 osób zamiast 58,5 etatu.**
   - przyczyna: Niepełnoetatowcy liczeni jako pełne osoby.
   - jak sprawdzić: Suma wymiarów etatów z kartoteki (0,5 + 0,75 …).
@@ -490,7 +512,7 @@
   - jak sprawdzić: Data przelewu vs 31.05 / 30.09.
   - poprawka: Alert w kalendarzu 7 dni przed; przy spóźnieniu — przelew natychmiast (odsetek ustawa nie przewiduje, ale grzywna tak).
 
-## Kalendarz kadrowo-płacowy: miesięczny, roczny, cykliczny (tydzień 9)
+## Kalendarz kadrowo-płacowy: miesięczny, roczny, cykliczny (tydzień 12)
 - ✘ **Wypłata przesunięta na poniedziałek, gdy 10. wypada w niedzielę.**
   - przyczyna: Art. 85 §3 KP — wypłata w dniu POPRZEDZAJĄCYM dzień wolny.
   - jak sprawdzić: Czy przelew dotarł najpóźniej w piątek 8.?
@@ -504,7 +526,7 @@
   - jak sprawdzić: Czy jest sekcja „zmiany prawa” z datą wejścia i terminem wdrożenia?
   - poprawka: Dodaj wiersz: 5.11.2026 wejście; 5.05.2027 procedura w regulaminie; właściciel; status.
 
-## Powtórka etapu 3: ZUS, US, ZFŚS, PFRON i kalendarz — zamknięcie miesiąca i roku (tydzień 9)
+## Powtórka etapu 3: ZUS, US, ZFŚS, PFRON i kalendarz — zamknięcie miesiąca i roku (tydzień 12)
 - ✘ **Komplet „za grudzień” wysłany z wypłatą styczniową.**
   - przyczyna: Miesiąc kompletu = miesiąc wypłaty.
   - jak sprawdzić: Data wypłaty 8.01 → komplet 01 2027.
@@ -518,7 +540,7 @@
   - jak sprawdzić: Umowy ≤ 200 zł z osobami spoza etatu?
   - poprawka: Przenieś do PIT-8AR.
 
-## Rozwiązanie umowy o pracę: tryby, okresy, przyczyna, ochrona, art. 52/53 (tydzień 10)
+## Rozwiązanie umowy o pracę: tryby, okresy, przyczyna, ochrona, art. 52/53 (tydzień 13)
 - ✘ **Wypowiedzenie umowy na czas określony „bez podawania przyczyny”.**
   - przyczyna: Od 26.04.2023 przyczyna i konsultacja związkowa dotyczą także umów terminowych.
   - jak sprawdzić: Czy w piśmie jest konkretna przyczyna?
@@ -532,7 +554,7 @@
   - jak sprawdzić: Kiedy osoba uprawniona (lub jej bezpośredni informator) się dowiedziała?
   - poprawka: Po terminie — tylko wypowiedzenie z przyczyną (art. 52 wadliwy).
 
-## Zwolnienia grupowe i indywidualne, odprawy, przejście zakładu (art. 23¹) (tydzień 10)
+## Zwolnienia grupowe i indywidualne, odprawy, przejście zakładu (art. 23¹) (tydzień 13)
 - ✘ **Odprawa oskładkowana i policzona od pensji zasadniczej bez zmiennych.**
   - przyczyna: Odprawa jest zwolniona ze składek; podstawa liczona jak ekwiwalent (ze zmiennymi).
   - jak sprawdzić: Warsztat → Lista płac: odprawa nie wchodzi w „Zasadnicze”; policz podstawę jak ekwiwalent.
@@ -546,7 +568,7 @@
   - jak sprawdzić: Czy zostają pracownicy na tych samych stanowiskach?
   - poprawka: Jeśli tak — kryteria (staż, kwalifikacje, dyscyplina, sytuacja osobista) w piśmie.
 
-## Świadectwo pracy i rozliczenie końcowe pracownika (tydzień 10)
+## Świadectwo pracy i rozliczenie końcowe pracownika (tydzień 13)
 - ✘ **W świadectwie wpisano „przyczyna: kradzież”.**
   - przyczyna: Świadectwo zawiera tryb i podstawę prawną, nie przyczynę.
   - jak sprawdzić: Czy ust. 4 (sposób ustania) ma tylko: tryb + artykuł?
@@ -560,7 +582,7 @@
   - jak sprawdzić: Czy świadectwo wydano w dniu ustania?
   - poprawka: Wydaj natychmiast; obiegówka to osobny proces (roszczenia o mienie — sąd).
 
-## Mobbing po nowelizacji (5.11.2026), dyskryminacja, procedura wewnętrzna (tydzień 11)
+## Mobbing po nowelizacji (5.11.2026), dyskryminacja, procedura wewnętrzna (tydzień 14)
 - ✘ **Zgłoszenie mobbingu „załatwione” rozmową kierownika z obiema stronami, bez protokołu.**
   - przyczyna: Brak postępowania — pracodawca nie wykaże przeciwdziałania.
   - jak sprawdzić: Czy jest wpis w rejestrze i protokół?
@@ -574,7 +596,7 @@
   - jak sprawdzić: Data raportu + 14 dni.
   - poprawka: Decyzja o karze w 7 dni od raportu; wysłuchanie pracownika przed karą (art. 109 §2).
 
-## Jawność wynagrodzeń: co obowiązuje (2025), co nadchodzi (dyrektywa 2023/970), audyt luki płacowej (tydzień 11)
+## Jawność wynagrodzeń: co obowiązuje (2025), co nadchodzi (dyrektywa 2023/970), audyt luki płacowej (tydzień 14)
 - ✘ **Luka policzona na całej firmie: „tylko 3%, nie ma problemu”.**
   - przyczyna: Łączenie kategorii maskuje różnice (np. kobiety w biurze, mężczyźni na produkcji); dyrektywa i art. 18³ᶜ porównują w ramach tej samej pracy/wartości.
   - jak sprawdzić: Czy porównywane osoby wykonują jednakową pracę?
@@ -588,7 +610,7 @@
   - jak sprawdzić: Czy jest Dz.U. z ustawą? Jeśli nie — PROJEKT.
   - poprawka: Oznacz: OBOWIĄZUJE (widełki, zakaz pytań) / PROJEKT (informacja, raport, luka > 5%).
 
-## Sygnaliści, praca zdalna, RODO i monitoring w kadrach (tydzień 11)
+## Sygnaliści, praca zdalna, RODO i monitoring w kadrach (tydzień 14)
 - ✘ **Ryczałt 200 zł „dla wszystkich zdalnych” bez kalkulacji.**
   - przyczyna: Bez kalkulacji nie da się wykazać, że ryczałt odpowiada kosztom — nadwyżka to przychód (PIT, ZUS).
   - jak sprawdzić: Czy jest dokument z normami zużycia i cenami?
@@ -602,7 +624,7 @@
   - jak sprawdzić: Kto jest wyznaczony do przyjmowania i działań następczych?
   - poprawka: Tylko osoba/komórka z procedury; kierownik dostaje informację o naruszeniu, nie o zgłaszającym.
 
-## Kontrola PIP, ZUS, US i UODO — przygotowanie, przebieg, sankcje (tydzień 11)
+## Kontrola PIP, ZUS, US i UODO — przygotowanie, przebieg, sankcje (tydzień 15)
 - ✘ **Recepcja odmawia wejścia inspektorowi PIP „bo nie było zawiadomienia 7 dni wcześniej”.**
   - przyczyna: Zawiadomienie dotyczy ZUS/US (Prawo przedsiębiorców), nie PIP (wyłączenie z art. 48 ust. 11).
   - jak sprawdzić: Jaki organ? PIP — bez zapowiedzi, legitymacja + upoważnienie (do 7 dni).
@@ -616,7 +638,7 @@
   - jak sprawdzić: Czy kwota to zaległe wynagrodzenie (tak → ZUS/PIT) czy odsetki (nie)?
   - poprawka: Lista dodatkowa: wynagrodzenie oskładkowane + odsetki osobno (bez ZUS/PIT); RPA, jeśli inny rok.
 
-## Powtórka etapu 4 i całego kursu: ustanie zatrudnienia, compliance, kontrola — audyt firmy (tydzień 11)
+## Powtórka etapu 4 i całego kursu: ustanie zatrudnienia, compliance, kontrola — audyt firmy (tydzień 15)
 - ✘ **Audyt pełen „raczej tak”.**
   - przyczyna: Brak dowodu przy odpowiedzi.
   - jak sprawdzić: Czy przy każdym TAK jest nazwa dokumentu?
@@ -625,7 +647,7 @@
   - przyczyna: Zarząd nie podejmie decyzji bez liczb.
   - jak sprawdzić: Policz w Warsztacie (listy, składki, odsetki).
   - poprawka: Każde ryzyko w złotych z terminem przedawnienia.
-- ✘ **Świadectwo z przyczyną, pismo bez pouczenia — w pliku z zadania tygodnia 10.**
+- ✘ **Świadectwo z przyczyną, pismo bez pouczenia — w pliku z zadania tygodnia 13.**
   - przyczyna: Powtórka nie objęła własnych plików.
   - jak sprawdzić: Przejrzyj pisma z zadań pod kątem listy kontrolnej (tryb, podstawa, przyczyna, okres, data, pouczenie, podpis).
   - poprawka: Popraw wzory w katalogu projektu — będą Twoimi szablonami w pracy.

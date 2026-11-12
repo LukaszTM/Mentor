@@ -815,10 +815,12 @@ class Mentor(tk.Tk):
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(8, 0))
         proj = self.stan.d["projekt"]
-        etykieta(r, "Katalog projektu: " + (proj if proj else "jeszcze nie wybrany"), 10, bold=bool(proj), kolor=K["tekst"] if proj else K["czerw"]).pack(side="left")
+        etykieta(r, "Katalog roboczy: " + (proj if proj else "jeszcze nie wybrany"), 10, bold=bool(proj), kolor=K["tekst"] if proj else K["czerw"]).pack(side="left")
+        if not proj:
+            przycisk(r, "📁 Utwórz katalog roboczy kursu", lambda: (cwiczenia.zapewnij_prace(self) and self.pokaz("start")), "glowny").pack(side="left", padx=8)
         przycisk(r, "Wybierz katalog…", self._wybierz_projekt, "drugi").pack(side="left", padx=8)
-        etykieta(k, f"To zwykły folder na dysku (proponowana nazwa: {P.katalog_projektu}). Trafiają do niego wszystkie pliki z zadań — Mentor sprawdza, "
-                 "czy powstały (zakładka Mój projekt), a Asystent może je czytać. Jeśli folderu nie ma, utwórz go w Eksploratorze i wskaż tutaj.", 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(6, 0))
+        etykieta(k, f"To zwykły folder na dysku: Mentor może go założyć sam ({paczki.katalog_pracy(P.id)}) albo wskazujesz własny (proponowana nazwa: {P.katalog_projektu}). "
+                 "Trafiają do niego wszystkie pliki z zadań — Mentor sprawdza, czy powstały (zakładka Mój projekt), a Asystent może je czytać.", 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(6, 0))
         if katalog_materialow(P.id):
             r = tk.Frame(k, bg=K["karta"])
             r.pack(fill="x", pady=(8, 0))
@@ -981,7 +983,7 @@ class Mentor(tk.Tk):
             etykieta(k, "Pierwsze kroki w tym programie", 12, bold=True, bg=K["nieb_tlo"], kolor=K["nieb"]).pack(fill="x")
             lekcja0 = P.lekcje[0] if P.lekcje else None
             kroki = [("1", "Przeczytaj lekcję wprowadzającą (10 min)", "📖 Otwórz lekcję", (lambda: self.pokaz_lekcje(lekcja0["id"])) if lekcja0 else None),
-                     ("2", f"Wskaż katalog projektu (proponowana nazwa: {P.katalog_projektu})" + (" i skopiuj do niego materiały kursu" if katalog_materialow(P.id) else ""), "📂 Mój projekt", lambda: self.pokaz("projekt")),
+                     ("2", f"Utwórz katalog roboczy kursu albo wskaż własny (np. {P.katalog_projektu})" + (" i skopiuj do niego materiały kursu" if katalog_materialow(P.id) else ""), "📂 Mój projekt", lambda: self.pokaz("projekt")),
                      ("3", "Zobacz zadanie na dziś i rozwiń „Jak to zrobić”", "📅 Plan — tydzień 0", lambda: self.pokaz_tydzien(P.tygodnie[0]["tydzien"])),
                      ("4", "Uruchom sesję nauki — 4 fazy, timer prowadzi", "▶ Sesja nauki", lambda: self.pokaz("sesja"))]
             if P.diagnoza and not (self.stan.d.get("diagnoza") or {}).get("wynik") is not None:
@@ -1875,14 +1877,19 @@ class Mentor(tk.Tk):
         sciezka = self.stan.d["projekt"]
         z, k = karta(w, tytul="Katalog projektu")
         z.pack(fill="x", padx=28)
-        etykieta(k, sciezka or "Nie wybrano. Wskaż katalog nauka-python.", 10, mono=bool(sciezka), kolor=K["tekst"] if sciezka else K["czerw"]).pack(fill="x")
+        etykieta(k, sciezka or "Nie wybrano — utwórz katalog roboczy kursu albo wskaż własny.", 10, mono=bool(sciezka), kolor=K["tekst"] if sciezka else K["czerw"]).pack(fill="x")
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(8, 0))
+        if not sciezka:
+            przycisk(r, "📁 Utwórz katalog roboczy kursu", self._utworz_prace, "glowny").pack(side="left", padx=(0, 8))
+            etykieta(k, f"Mentor założy katalog {paczki.katalog_pracy(P.id)} i będzie w nim tworzyć pliki ćwiczeń. Albo wskaż własny katalog (np. {P.katalog_projektu}).",
+                     9, kolor=K["szary"], wrap=820).pack(fill="x", pady=(6, 0))
         przycisk(r, "Wybierz katalog…", self._wybierz_projekt, "drugi").pack(side="left")
         if sciezka:
             przycisk(r, "Odśwież", lambda: (self._pliki_cache.clear(), self.pokaz("projekt")), "drugi").pack(side="left", padx=8)
+            przycisk(r, "Otwórz folder", lambda: self._otworz_folder(sciezka), "drugi").pack(side="left")
+            przycisk(r, "⌨ Otwórz terminal tutaj", self.otworz_terminal, "drugi").pack(side="left", padx=8)
             przycisk(r, "Otwórz Claude Code tutaj", self.otworz_claude, "ciemny").pack(side="left")
-            przycisk(r, "Otwórz folder", lambda: self._otworz_folder(sciezka), "drugi").pack(side="left", padx=8)
         if katalog_materialow(P.id):
             r = tk.Frame(k, bg=K["karta"])
             r.pack(fill="x", pady=(8, 0))
@@ -2062,6 +2069,38 @@ class Mentor(tk.Tk):
             if k.exists():
                 return str(k)
         return None
+
+    def _utworz_prace(self):
+        if cwiczenia.zapewnij_prace(self):
+            self.pokaz("projekt")
+
+    def otworz_terminal(self):
+        """Terminal w katalogu roboczym z interpreterem kursu na początku PATH — `python`, `pip` i `pytest` to środowisko kursu, nie Mentor.exe."""
+        sciezka = self.stan.d["projekt"] or str(KATALOG)
+        env = dict(os.environ)
+        for k in ("PYTHONHOME", "PYTHONPATH", "_MEIPASS2", "TCL_LIBRARY", "TK_LIBRARY"):
+            env.pop(k, None)
+        sr = widok_srodowisko.srodowisko_biezace()
+        pv = sr.python_venv()
+        if pv:
+            env["PATH"] = str(pv.parent) + os.pathsep + env.get("PATH", "")
+            env["VIRTUAL_ENV"] = str(sr.venv)
+        try:
+            if WINDOWS:
+                subprocess.Popen(["cmd", "/k", "title Mentor - terminal kursu && echo Katalog roboczy: " + sciezka + " && " +
+                                  ("echo Python kursu (srodowisko .venv) jest pierwszy w PATH: && python --version" if pv else "echo Brak srodowiska kursu - przygotuj je w zakladce Srodowisko")],
+                                 cwd=sciezka, env=env, creationflags=subprocess.CREATE_NEW_CONSOLE)
+            elif sys.platform == "darwin":
+                subprocess.Popen(["osascript", "-e", f'tell app "Terminal" to do script "cd \"{sciezka}\"' + (f' && export PATH=\"{pv.parent}:$PATH\"' if pv else "") + '"'])
+            else:
+                for term in (["x-terminal-emulator", "-e"], ["gnome-terminal", "--"], ["konsole", "-e"], ["xterm", "-e"]):
+                    if shutil.which(term[0]):
+                        subprocess.Popen([*term, "bash", "-c", f'cd "{sciezka}"; exec bash'], env=env)
+                        break
+                else:
+                    raise OSError("brak terminala")
+        except OSError as e:
+            messagebox.showwarning("Terminal", f"Nie udało się otworzyć terminala ({e}).\nOtwórz PowerShell sam i wpisz: cd \"{sciezka}\"", parent=self)
 
     def otworz_claude(self):
         sciezka = self.stan.d["projekt"] or str(KATALOG)

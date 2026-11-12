@@ -62,6 +62,8 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
   `sprawdzenie.rodzaj`: `uruchom_bez_bledu` (kod wyjścia 0), `wyjscie_zawiera` (wszystkie `tekst` w stdout, żaden z `nie_zawiera`,
   co najmniej `min_linii` linii), `pytest` (uruchamia `python -m pytest <plik_testu|plik>` w PRACA — zielone = zaliczone),
   `plik_istnieje` (domyślne; daje status „Plik istnieje — wymaga sprawdzenia”, **nie** „Zaliczone”). `{rok}` = bieżący rok.
+  Plik zawierający tylko komentarze (sam szablon) nigdy nie zalicza; `uruchom_bez_bledu` wymaga co najmniej 1 linii wyjścia; program, który pyta o więcej
+  danych niż `stdin` (EOFError), dostaje „wymaga sprawdzenia ręcznego”, nie „błąd”. Zbuduj kurs tak, by `stdin` odpowiadał kolejności pytań z kroków zadania.
   Kod ucznia uruchamia **interpreter kursu** (`.venv` kursu, nigdy Python Mentora) z limitem czasu i przyciskiem Anuluj.
 
 ## Lekcja

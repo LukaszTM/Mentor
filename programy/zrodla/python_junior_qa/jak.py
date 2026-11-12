@@ -11,78 +11,90 @@ Klucz = id zadania z tresc.py. Pola:
 JAK = {
     # ------------------------------------------------------------------ TYDZIEŃ 0
     "t0z1": {
-        "czas": 90,
+        "czas": 60,
         "kroki": [
-            "PYTHON. Wejdź na python.org → Downloads → kliknij żółty przycisk „Download Python 3.x”. Uruchom pobrany plik. "
-            "W PIERWSZYM oknie instalatora, na samym dole, zaznacz kwadracik „Add python.exe to PATH” (bez tego komenda python nie zadziała w terminalu). "
-            "Potem „Install Now”. Poczekaj na „Setup was successful”.",
-            "GIT. Wejdź na git-scm.com → „Download for Windows” → uruchom instalator. We wszystkich oknach zostaw domyślne ustawienia i klikaj „Next”, "
-            "a na końcu „Install”. Instalator zainstaluje też „Git Bash” — terminal, którego używa Claude Code.",
-            "PYCHARM. Wejdź na jetbrains.com/pycharm/download → przewiń do „PyCharm Community Edition” (darmowy) → Download → zainstaluj z domyślnymi ustawieniami. "
-            "Przy pierwszym uruchomieniu zaakceptuj warunki i wybierz motyw — to tylko wygląd.",
-            "SPRAWDZENIE. Zamknij wszystkie okna terminala, jeśli były otwarte (PATH odświeża się dopiero w nowym oknie). Kliknij Start, wpisz „PowerShell”, otwórz. "
-            "Wpisz:  python --version  i Enter → powinno pokazać np. „Python 3.12.6”. Potem:  git --version  → np. „git version 2.47”.",
-            "CLAUDE CODE (tylko gdy masz plan Pro/Max — inaczej pomiń ten krok i używaj zakładki Asystent → Offline lub API). W PowerShell wpisz:\n"
-            "irm https://claude.ai/install.ps1 | iex\nPoczekaj na koniec instalacji, ZAMKNIJ PowerShell, otwórz go ponownie i wpisz:  claude --version.",
-            "Jeśli zainstalowałeś Claude Code: wpisz  claude doctor  — pokaże listę kontrolną. Wszystko ma być na zielono lub „OK”. "
-            "Potem w pustym folderze wpisz  claude  — przy pierwszym uruchomieniu otworzy przeglądarkę do zalogowania; zaloguj się tym samym kontem co na claude.ai.",
+            "ŚRODOWISKO W MENTORZE. Zakładka Środowisko (pasek po lewej) → „Sprawdź ponownie”. Tabela pokazuje, co NAPRAWDĘ działa na Twoim komputerze: "
+            "Python, środowisko kursu (.venv), biblioteki (pytest, requests, selenium, flask), Git, Claude Code, przeglądarka Edge. Statusy: GOTOWE / BRAK / OPCJONALNE. "
+            "Na czystym komputerze zobaczysz sporo „BRAK” — to normalne, nic jeszcze nie rób ręcznie.",
+            "Kliknij „Zainstaluj brakujące”. Mentor pokaże LISTĘ kroków, zanim cokolwiek zrobi: co pobierze, skąd (python.org/GitHub, PyPI), ile MB, czy potrzebny internet "
+            "i jakie uprawnienia (żadne — wszystko trafia do katalogu Twojego użytkownika, bez administratora). Przeczytaj, potwierdź. "
+            "Jeśli w systemie nie ma Pythona, Mentor pobierze Pythona 3.12 (ok. 46 MB) tylko dla kursów; jeśli jest — użyje go.",
+            "Czekaj i patrz na pasek postępu i log (kilka minut). Mentor działa w tle — możesz w tym czasie czytać lekcję. Przyciski „Anuluj” i „Ponów” są pod paskiem; "
+            "„Pokaż szczegóły” otwiera pełny log. Po zakończeniu Mentor sam uruchamia testy końcowe: interpreter, biblioteki, przykładowy pytest, lokalne API. "
+            "Selenium (przeglądarka) będzie potrzebne dopiero w tygodniu 8 — może być „pominięto”.",
+            "GIT (Mentor go nie instaluje — to oficjalny instalator). Wejdź na git-scm.com → „Download for Windows” → uruchom. We wszystkich oknach zostaw domyślne ustawienia i klikaj „Next”, "
+            "na końcu „Install”. Potem w Mentorze: Środowisko → „Sprawdź ponownie” → Git ma status GOTOWE z numerem wersji.",
+            "EDYTOR (opcjonalnie teraz, polecany od tygodnia 4). W tygodniach 0–3 wystarczy Notatnik: przycisk „Otwórz w edytorze” pod zadaniem otworzy plik w VS Code lub PyCharm, "
+            "jeśli są, a jeśli nie — w Notatniku. Gdy chcesz kolorowanie i podpowiedzi: jetbrains.com/pycharm/download → „PyCharm Community Edition” (darmowy) → zainstaluj z domyślnymi ustawieniami.",
+            "CLAUDE CODE (tylko gdy masz plan Pro/Max — inaczej pomiń i używaj zakładki Asystent → Offline lub API). Start → wpisz „PowerShell” → otwórz → wpisz:\n"
+            "irm https://claude.ai/install.ps1 | iex\nPo instalacji ZAMKNIJ PowerShell. W Mentorze: Środowisko → „Sprawdź ponownie” → Claude Code GOTOWE. "
+            "Potem Mój projekt → „Otwórz Claude Code tutaj” — przy pierwszym uruchomieniu zaloguj się w przeglądarce tym samym kontem co na claude.ai.",
         ],
-        "sprawdz": "W NOWYM oknie PowerShell trzy komendy dają numery wersji: python --version, git --version, claude --version (ostatnia tylko jeśli masz subskrypcję). "
-                   "Zakładka Mój projekt → Narzędzia pokazuje OK przy Python i Git.",
+        "sprawdz": "Zakładka Środowisko: Python, Środowisko kursu (.venv), pytest, requests, selenium, flask i Git mają GOTOWE; testy „interpreter”, „import bibliotek”, „pytest” i „lokalne API” zielone "
+                   "(Selenium może być „pominięto” do tygodnia 8). Panel pokazuje plakietkę „środowisko gotowe”.",
         "problemy": [
-            "„python nie jest rozpoznawany jako polecenie” → nie zaznaczyłeś „Add to PATH”. Uruchom instalator Pythona ponownie → Modify → Next → zaznacz „Add Python to environment variables” → Install. Potem NOWE okno terminala.",
-            "python --version otwiera Microsoft Store → Start → „Zarządzaj aliasami wykonywania aplikacji” → wyłącz oba przełączniki „python”.",
-            "git --version nie działa → odinstaluj i zainstaluj Git ponownie, w oknie „Adjusting your PATH” wybierz środkową opcję „Git from the command line and also from 3rd-party software”.",
+            "„Brak połączenia z internetem” → Mentor nie pobierze Pythona ani bibliotek; lekcje działają. Podłącz sieć i kliknij „Ponów”.",
+            "Python ma status BRAK, choć „coś” było zainstalowane → skrót ze Sklepu Windows nie jest prawdziwym Pythonem (Mentor go pomija). Po prostu pozwól Mentorowi pobrać własnego Pythona 3.12.",
+            "Git po instalacji dalej BRAK → kliknij „Sprawdź ponownie”; jeśli nadal — zamknij i otwórz Mentora (nowe programy pojawiają się w PATH dopiero w nowo uruchomionych aplikacjach).",
+            "Instalacja przerwana z błędem → „Pokaż szczegóły”, skopiuj ostatnie linie logu do Asystenta: „utknąłem: [tekst]”. Najczęściej: brak miejsca na dysku (potrzeba ok. 400 MB) albo antywirus blokujący pobieranie.",
+            "Windows SmartScreen przy instalatorze Gita → „Więcej informacji” → „Uruchom mimo to” (instalator pobrany z git-scm.com jest podpisany).",
         ],
     },
     "t0z2": {
         "czas": 30,
         "kroki": [
-            "Utwórz folder na projekty: w Eksploratorze Windows wejdź do Dokumenty, prawy przycisk → Nowy → Folder → nazwij go  nauka-python  (małe litery, myślnik, bez spacji i polskich znaków — terminal i Git lubią proste nazwy).",
-            "Otwórz PowerShell i wejdź do tego folderu komendą:  cd $HOME\\Documents\\nauka-python   (Enter). Sprawdź, gdzie jesteś:  pwd  — ma pokazać ścieżkę kończącą się na nauka-python.",
-            "Wariant z Claude Code: wpisz  claude  → po uruchomieniu wpisz  /init  → Claude utworzy plik CLAUDE.md. Potem otwórz go w PyCharm i DOPISZ na końcu zasady nauki (zakładka Prompty → „Treść pliku CLAUDE.md” → Kopiuj).",
-            "Wariant bez Claude Code: w Mentorze zakładka Mój projekt → „Wybierz katalog…” → wskaż nauka-python → kliknij „Utwórz CLAUDE.md z zasadami”. Albo w Asystencie Offline wpisz  /init.",
-            "Otwórz folder w PyCharm: File → Open → wskaż nauka-python → „Trust Project”. Po lewej zobaczysz drzewo plików z CLAUDE.md.",
-            "W Mentorze: Mój projekt → Wybierz katalog → nauka-python. Od teraz Mentor widzi Twoje pliki i commity.",
+            "KATALOG ROBOCZY. Zakładka Mój projekt → „Utwórz katalog roboczy kursu”. Mentor założy folder Dokumenty\\Mentor\\python-junior-qa\\PRACA i od teraz tu będą powstawać Twoje pliki. "
+            "Wolisz własną nazwę (np. nauka-python w Dokumentach)? Utwórz folder w Eksploratorze (małe litery, myślnik, bez spacji i polskich znaków) i wskaż go przyciskiem „Wybierz katalog…”.",
+            "CLAUDE.md. W Mój projekt kliknij „Utwórz CLAUDE.md z zasadami” — powstanie plik z zasadami nauki, które asystent czyta na starcie (nie pisz rozwiązań za mnie, pytaj przed kodem, po polsku…). "
+            "Kliknij „Otwórz folder” i obejrzyj plik (prawy przycisk → Otwórz w → Notatnik).",
+            "Wariant z Claude Code: Mój projekt → „Otwórz Claude Code tutaj” → wpisz  /init  → Claude utworzy CLAUDE.md. Potem DOPISZ na końcu zasady nauki (zakładka Prompty → „Treść pliku CLAUDE.md” → Kopiuj).",
+            "Opcjonalnie PyCharm: File → Open → wskaż katalog roboczy → „Trust Project”. Po lewej zobaczysz drzewo plików z CLAUDE.md. Gdy PyCharm pyta o interpreter — wskaż Python z zakładki Środowisko "
+            "(ścieżka .venv kursu jest wypisana w nagłówku zakładki) albo zostaw na później.",
+            "Sprawdź w Mentorze: Mój projekt pokazuje ścieżkę katalogu i „CLAUDE.md z zasadami nauki — OK”. Od teraz Mentor widzi Twoje pliki i (po zadaniu 4) commity.",
         ],
-        "sprawdz": "W PyCharm w drzewie projektu jest CLAUDE.md, a w środku 5 zasad (nie pisz rozwiązań za mnie, pytaj przed kodem, po polsku, pokazuj różnicę…). Mój projekt → Narzędzia: „CLAUDE.md z zasadami nauki — OK”.",
+        "sprawdz": "Mój projekt pokazuje ścieżkę katalogu roboczego i „CLAUDE.md z zasadami nauki — OK”; w pliku jest 5 zasad (nie pisz rozwiązań za mnie, pytaj przed kodem, po polsku, pokazuj różnicę…).",
         "problemy": [
-            "cd mówi „Nie można odnaleźć ścieżki” → folder jest gdzie indziej. W Eksploratorze kliknij pasek adresu folderu, skopiuj ścieżkę i wpisz:  cd \"wklejona ścieżka\"  (w cudzysłowie, gdy są spacje).",
-            "PyCharm pyta o interpreter → wybierz zainstalowanego Pythona 3.x z listy; venv zrobisz w tygodniu 5.",
+            "„Utwórz katalog roboczy kursu” nie działa → brak uprawnień do Dokumentów (np. OneDrive w trybie tylko do odczytu). Wskaż inny folder przyciskiem „Wybierz katalog…”.",
+            "Nie widzisz pliku CLAUDE.md w Eksploratorze → Widok → zaznacz „Rozszerzenia nazw plików”; plik nazywa się dokładnie CLAUDE.md, nie CLAUDE.md.txt.",
         ],
     },
     "t0z3": {
         "czas": 45,
         "kroki": [
-            "Najpierw teoria na 10 minut. W Asystencie (lub Claude Code) wklej prompt: „Wytłumacz mi, czym jest terminal, katalog roboczy i plik .py — jak dziesięciolatkowi.” "
-            "W trybie Offline: wpisz  co to jest terminal , potem  co to jest katalog roboczy ,  co to jest plik .py. Przeczytaj, powiedz własnymi słowami.",
-            "W PyCharm: prawy przycisk na folderze nauka-python (w drzewie po lewej) → New → Python File → wpisz  hello  → Enter. Powstanie hello.py (PyCharm sam doda rozszerzenie).",
-            "Wpisz w pliku (sam, nie wklejaj):\nprint(\"Cześć, tu Łukasz\")\nZamiast Łukasz — Twoje imię. Zapisz: Ctrl+S.",
-            "Uruchom z terminala: w PyCharm na dole kliknij „Terminal” (albo Alt+F12). Wpisz  python hello.py  → Enter. Powinno wypisać Twoje zdanie. To jest TEN moment: pierwszy program.",
-            "Dodaj datę. Na górze pliku dopisz linię  import datetime , a na dole:\nprint(\"Dziś jest\", datetime.date.today())\nZapisz, uruchom ponownie. Jeśli nie rozumiesz, co robi import — zapytaj Asystenta: „co to jest moduł”.",
-            "Zepsuj celowo: usuń jeden cudzysłów i uruchom. Przeczytaj komunikat błędu OD DOŁU (ostatnia linia mówi CO, wyżej GDZIE). Napraw. Tak wygląda 50% programowania.",
+            "Najpierw teoria na 10 minut. W Asystencie (lub Claude Code) wklej prompt: „Wytłumacz mi, czym jest plik .py, interpreter i katalog roboczy — jak dziesięciolatkowi.” "
+            "W trybie Offline: wpisz  co to jest plik .py , potem  co to jest interpreter ,  co to jest katalog roboczy. Przeczytaj, powiedz własnymi słowami.",
+            "Plan → tydzień 0 → to zadanie → pod opisem jest pasek „Ćwiczenie w Mentorze · hello.py”. Kliknij „Utwórz plik ćwiczenia” — Mentor zapisze hello.py w katalogu roboczym (z komentarzem na górze) "
+            "i otworzy go w edytorze (Notatnik, VS Code albo PyCharm — co masz).",
+            "Wpisz w pliku pod komentarzem (sam, nie wklejaj):\nprint(\"Cześć, tu Łukasz\")\nZamiast Łukasz — Twoje imię. Zapisz: Ctrl+S (w Notatniku: Plik → Zapisz; nie zmieniaj nazwy ani rozszerzenia).",
+            "Wróć do Mentora i kliknij „▶ Uruchom”. Otworzy się okno z wyjściem programu — powinno być Twoje zdanie i „kod wyjścia 0”. To jest TEN moment: pierwszy program. "
+            "Mentor uruchomił go interpreterem kursu (tym z zakładki Środowisko).",
+            "Dodaj datę. Na górze pliku dopisz linię  import datetime , a na dole:\nprint(\"Dziś jest\", datetime.date.today())\nZapisz, kliknij „▶ Uruchom” ponownie. Jeśli nie rozumiesz, co robi import — zapytaj Asystenta: „co to jest moduł”.",
+            "Kliknij „✔ Sprawdź wynik”. Mentor uruchamia program i sprawdza, czy wypisał co najmniej 2 linie i bieżący rok — gdy tak, zadanie odhacza się samo („ZALICZONE AUTOMATYCZNIE”).",
+            "Zepsuj celowo: usuń jeden cudzysłów, zapisz, „▶ Uruchom”. W oknie zobaczysz czerwony komunikat i wyjaśnienie po polsku. Przeczytaj go OD DOŁU (ostatnia linia mówi CO, wyżej GDZIE). Napraw. Tak wygląda 50% programowania.",
+            "Wariant terminalowy (poznasz go w tygodniu 4, teraz tylko spróbuj): Mój projekt → „Otwórz terminal tutaj” → wpisz  python hello.py  → Enter. To ta sama komenda, którą Mentor wykonuje za Ciebie przyciskiem.",
         ],
-        "sprawdz": "python hello.py wypisuje Twoje imię i dzisiejszą datę, bez czerwonego tekstu. W Planie przy zadaniu świeci „✔ wykryto hello.py”.",
+        "sprawdz": "„▶ Uruchom” pokazuje Twoje imię i dzisiejszą datę bez czerwonego tekstu; „✔ Sprawdź wynik” daje „Zaliczone”. W Planie przy zadaniu świeci „✔ wykryto hello.py”.",
         "problemy": [
             "„SyntaxError” z strzałką → sprawdź cudzysłowy i nawiasy w tej linii; muszą być parami.",
-            "„python: can't open file 'hello.py'” → terminal stoi w innym folderze. Wpisz  cd  i ścieżkę do nauka-python, albo w PyCharm otwórz terminal ponownie (otwiera się w folderze projektu).",
-            "Polskie znaki wyświetlają się krzywo w terminalu → wpisz  chcp 65001  i uruchom program ponownie.",
+            "„Nic nie wypisał — brak print()?” → zapisałeś plik? (Ctrl+S). Notatnik zapisał jako hello.py.txt? → w oknie zapisu wybierz „Wszystkie pliki” i nazwę hello.py.",
+            "Polskie znaki wyświetlają się krzywo → zapisz plik w kodowaniu UTF-8 (Notatnik: Plik → Zapisz jako → Kodowanie: UTF-8). Mentor uruchamia programy w UTF-8.",
+            "„Brak Pythona do uruchomienia pliku” → wróć do zadania 1: zakładka Środowisko → Zainstaluj brakujące.",
         ],
     },
     "t0z4": {
         "czas": 60,
         "kroki": [
             "Załóż konto na github.com (jeśli nie masz): Sign up → e-mail → hasło → nazwa użytkownika (np. LukaszTM) → potwierdź e-mail.",
-            "Przedstaw się Gitowi (raz na komputer). W terminalu PyCharm:\ngit config --global user.name \"Łukasz Nazwisko\"\ngit config --global user.email \"twoj@email.pl\"\n(ten sam e-mail co na GitHubie).",
+            "Otwórz terminal w katalogu roboczym: Mój projekt → „Otwórz terminal tutaj” (albo Terminal w PyCharm). Przedstaw się Gitowi (raz na komputer):\ngit config --global user.name \"Imię Nazwisko\"\ngit config --global user.email \"twoj@email.pl\"\n(ten sam e-mail co na GitHubie).",
             "Zamień folder w repozytorium:  git init  (Enter). Odpowiedź: „Initialized empty Git repository”. W folderze powstał ukryty podfolder .git — nie ruszaj go.",
             "Zobacz, co Git widzi:  git status  → pokaże CLAUDE.md i hello.py na czerwono jako „untracked” (nieśledzone). Dodaj je:  git add .  (kropka = wszystko). Jeszcze raz git status → na zielono.",
             "Zrób pierwszy commit (zdjęcie projektu z podpisem):  git commit -m \"dzień 1: hello.py i CLAUDE.md\"  . Odpowiedź z liczbą plików i linii. Sprawdź historię:  git log --oneline.",
             "Na GitHubie: zielony przycisk „New” (albo plus w prawym górnym rogu → New repository) → Repository name: nauka-python → Public → NIE zaznaczaj „Add a README” (masz już pliki) → Create repository.",
-            "GitHub pokaże komendy „…or push an existing repository from the command line”. Wpisz w terminalu PyCharm dokładnie te trzy linie (zaczynają się od git remote add origin …, git branch -M main, git push -u origin main). "
+            "GitHub pokaże komendy „…or push an existing repository from the command line”. Wpisz w terminalu dokładnie te trzy linie (zaczynają się od git remote add origin …, git branch -M main, git push -u origin main). "
             "Przy pushu przeglądarka poprosi o zalogowanie do GitHuba — zaloguj, wróć do terminala.",
             "Odśwież stronę repozytorium na GitHubie — widzisz hello.py i CLAUDE.md. Od teraz koniec każdego dnia to: git add . → git commit -m \"dzień N: temat\" → git push.",
         ],
-        "sprawdz": "Strona github.com/TwojaNazwa/nauka-python pokazuje Twoje pliki i commit „dzień 1…”. Mentor → Mój projekt → Git: „zdalne repo: tak”, „commity łącznie: 1”.",
+        "sprawdz": "Strona github.com/TwojaNazwa/nauka-python pokazuje Twoje pliki i commit „dzień 1…”. Mentor → Mój projekt → Git: „zdalne repo: tak”, „commity łącznie: 1”. (Nazwa repozytorium może być inna niż katalogu PRACA — to bez znaczenia.)",
         "problemy": [
             "„Please tell me who you are” → zrób krok 2 (git config).",
             "„remote origin already exists” → wpisałeś komendę remote dwa razy; to nie błąd, przejdź do git push.",
@@ -94,15 +106,15 @@ JAK = {
         "czas": 45,
         "kroki": [
             "Wklej do Asystenta prompt: „Wytłumacz mi, co to jest zmienna, funkcja i pętla — bez kodu, na przykładach z gospodarstwa.” (Offline:  co to jest zmienna ,  co to jest funkcja ,  co to jest pętla ).",
-            "W PyCharm: prawy przycisk na folderze → New → File → nazwa  notatki.md  (md = Markdown, zwykły tekst z nagłówkami). Nagłówek robisz znakiem #: pierwsza linia  # Notatki z nauki.",
+            "Nowy plik notatki.md w katalogu roboczym (md = Markdown, zwykły tekst z nagłówkami): w PyCharm prawy przycisk na folderze → New → File; bez PyCharma: Mój projekt → „Otwórz folder” → prawy przycisk → Nowy → Dokument tekstowy → nazwa  notatki.md  (potwierdź zmianę rozszerzenia). Nagłówek robisz znakiem #: pierwsza linia  # Notatki z nauki.",
             "Pod nagłówkiem  ## Tydzień 0  napisz trzy akapity WŁASNYMI słowami: „Zmienna to…”, „Funkcja to…”, „Pętla to…”. Każdy z przykładem z Twojego gospodarstwa (np. zmienna = tabliczka z wagą krowy). "
             "Nie kopiuj z Asystenta — jeśli nie umiesz napisać sam, jeszcze nie rozumiesz; zapytaj „dlaczego” i spróbuj ponownie.",
-            "Dopisz sekcję  ## Czego się nauczyłem w tygodniu 0  z listą (każda linia zaczyna się od myślnika): terminal, cd, python plik.py, git add/commit/push.",
+            "Dopisz sekcję  ## Czego się nauczyłem w tygodniu 0  z listą (każda linia zaczyna się od myślnika): Środowisko w Mentorze, plik .py i interpreter, ▶ Uruchom / python plik.py, git add/commit/push.",
             "Commit i push:  git add .  →  git commit -m \"dzień 5: notatki — zmienna, funkcja, pętla\"  →  git push. Potem w Mentorze: Sesja → zapisz minuty; Plan → odhacz; Dziennik → 2 zdania.",
             "Sobota: zakładka Quiz → tydzień 0. Potem Checklista → „Po tygodniu 0” — odhacz tylko to, co robisz bez zaglądania do notatek.",
         ],
         "sprawdz": "notatki.md jest na GitHubie i zawiera trzy definicje własnymi słowami z przykładami. Quiz z tygodnia 0 ≥ 60%.",
-        "problemy": ["Markdown nie wygląda „ładnie” w PyCharm → kliknij ikonę podglądu w prawym górnym rogu edytora (albo po prostu patrz na GitHubie — tam renderuje się sam)."],
+        "problemy": ["Markdown nie wygląda „ładnie” w edytorze → w PyCharm kliknij ikonę podglądu w prawym górnym rogu; w Notatniku to zwykły tekst — na GitHubie renderuje się sam."],
     },
 
     # ------------------------------------------------------------------ TYDZIEŃ 1
@@ -110,10 +122,10 @@ JAK = {
         "czas": 60,
         "kroki": [
             "Lekcja: zakładka Lekcje → „Zmienne i typy danych” (10 min). Potem prompt „Nowy temat” z tematem „zmienne i typy”.",
-            "Nowy plik zmienne.py. Utwórz 5 zmiennych opisujących jedno zwierzę, każda innego typu: imie (str, w cudzysłowie), waga_kg (float, z kropką), wiek_lat (int), rasa (str), czy_zdrowe (bool: True/False).",
+            "Plan → „Utwórz plik ćwiczenia” (zmienne.py). Utwórz 5 zmiennych opisujących jedno zwierzę, każda innego typu: imie (str, w cudzysłowie), waga_kg (float, z kropką), wiek_lat (int), rasa (str), czy_zdrowe (bool: True/False).",
             "Dla każdej zmiennej jedna linia:  print(imie, type(imie))  — zobaczysz wartość i typ, np. <class 'str'>.",
             "Eksperyment: dopisz  print(waga_kg + 10)  oraz  print(imie + 10). Drugie wywali TypeError — przeczytaj komunikat, potem popraw na  print(imie + str(10)). Zapisz w notatkach, dlaczego.",
-            "Uruchom: python zmienne.py. Commit: „dzień 6: zmienne i typy”.",
+            "„▶ Uruchom” (albo python zmienne.py w terminalu). Commit: „dzień 6: zmienne i typy”.",
         ],
         "sprawdz": "Program wypisuje 5 linii z czterema różnymi typami (str, float, int, bool) i nie kończy się błędem.",
         "problemy": ["NameError: name 'True' is not defined → True i False z wielkiej litery.", "Polskie znaki w nazwach zmiennych (waga_kg, nie waga_kilogramów) — unikaj."],
@@ -122,12 +134,13 @@ JAK = {
         "czas": 75,
         "kroki": [
             "Lekcja „print i input” + „Instrukcje warunkowe”. Zapisz w notatkach jedno zdanie: co zwraca input().",
-            "kalkulator.py: trzy pytania przez input(): pierwsza liczba, działanie (+ - * /), druga liczba. Pamiętaj: input() zwraca napis — zamień liczby przez float().",
+            "kalkulator.py: trzy pytania przez input() W TEJ KOLEJNOŚCI: pierwsza liczba, działanie (+ - * /), druga liczba. Pamiętaj: input() zwraca napis — zamień liczby przez float(). "
+            "Program z input() uruchamiasz w Mentorze tak samo: „▶ Uruchom” — w oknie jest pole „Dane dla input()”, każda linia to jedna odpowiedź (np. 6, *, 3).",
             "Cztery gałęzie if/elif/elif/elif — każda dla innego działania — i else wypisujące „Nieznane działanie”. Porównanie działania:  if dzialanie == \"+\":  (podwójny znak równości).",
             "W gałęzi dzielenia, PRZED dzieleniem, sprawdź  if b == 0:  i wypisz komunikat zamiast dzielić. Przetestuj ręcznie: 5 / 0.",
             "Testuj jak tester: wpisz literę zamiast liczby — program się wywali (ValueError). To normalne na tym etapie; zapisz w notatkach, że obsłużysz to w tygodniu 3 (try/except).",
         ],
-        "sprawdz": "Cztery działania dają poprawne wyniki; 5 / 0 wypisuje komunikat, nie traceback; „x” jako działanie daje „Nieznane działanie”.",
+        "sprawdz": "Cztery działania dają poprawne wyniki; 5 / 0 wypisuje komunikat, nie traceback; „x” jako działanie daje „Nieznane działanie”. „✔ Sprawdź wynik” podaje 6, *, 3 i szuka 18.",
         "problemy": ["Wynik „53” zamiast 8 dla 5+3 → nie zamieniłeś input() na liczbę.", "IndentationError → wszystkie linie pod if wcięte dokładnie 4 spacjami."],
     },
     "t1z3": {
@@ -206,7 +219,7 @@ JAK = {
             "Dodatkowo: liczba słów  len(tekst.split())  i najdłuższe słowo (pętla po tekst.split() z porównaniem len).",
             "Pułapka do sprawdzenia: wpisz zdanie ze spacjami na początku — czy strip() pomógł? Usuń strip() i zobacz różnicę w len().",
         ],
-        "sprawdz": "„Krowa je trawę” → KROWA JE TRAWĘ, ęwart ej aworK, 15 znaków, 6 samogłosek, 3 słowa, najdłuższe „trawę”.",
+        "sprawdz": "„Krowa je trawę” → KROWA JE TRAWĘ, ęwart ej aworK, 14 znaków (ze spacjami), 5 samogłosek (o, a, e, a, ę), 3 słowa, najdłuższe „Krowa” lub „trawę” (oba mają 5 liter — Twój program wybierze pierwsze lub ostatnie; zapisz w notatkach, które i dlaczego).",
     },
     "t2z5": {
         "czas": 90,
@@ -358,11 +371,13 @@ JAK = {
     "t5z3": {
         "czas": 45,
         "kroki": [
-            "Lekcja „venv, pip, requirements.txt, .gitignore”. W terminalu PyCharm, w głównym folderze projektu:  python -m venv .venv  (powstanie folder .venv — kilkadziesiąt MB).",
+            "Lekcja „venv, pip, requirements.txt, .gitignore”. Mentor ma już SWOJE środowisko kursu (zakładka Środowisko) — teraz tworzysz WŁASNE, w projekcie, bo tak robi się w pracy: "
+            "Mój projekt → „Otwórz terminal tutaj” (albo Terminal w PyCharm), w głównym folderze projektu:  python -m venv .venv  (powstanie folder .venv — kilkadziesiąt MB).",
             "Aktywuj:  .venv\\Scripts\\activate  (Windows; jeśli PowerShell odmawia: wpisz  Set-ExecutionPolicy -Scope CurrentUser RemoteSigned , potwierdź T, spróbuj ponownie). Przed ścieżką pojawi się (.venv).",
             "pip install requests  → zobaczysz pobieranie.  pip list  → requests na liście.  pip freeze > requirements.txt  → plik z nazwami i wersjami.",
             "Utwórz .gitignore (plik zaczynający się od kropki) z liniami:  .venv/  ,  __pycache__/  ,  *.pyc . git status → .venv NIE pojawia się na liście. Commit requirements.txt i .gitignore.",
-            "PyCharm: Settings → Project → Python Interpreter → upewnij się, że wskazuje .venv\\Scripts\\python.exe (zwykle wykryje sam i zapyta).",
+            "PyCharm: Settings → Project → Python Interpreter → upewnij się, że wskazuje .venv\\Scripts\\python.exe (zwykle wykryje sam i zapyta). "
+            "Uwaga: przycisk „▶ Uruchom” w Mentorze nadal używa środowiska KURSU (ma requests) — terminal z aktywnym (.venv) używa Twojego. Oba to osobne „szafki” z bibliotekami.",
         ],
         "sprawdz": "git status nie pokazuje .venv; requirements.txt zawiera requests==x.y.z; w terminalu widać (.venv).",
         "problemy": ["pip nie jest rozpoznawany → venv nieaktywny; aktywuj albo użyj  python -m pip install requests."],
@@ -447,7 +462,7 @@ JAK = {
     "t7z1": {
         "czas": 60,
         "kroki": [
-            "Lekcja „pytest: assert, nazewnictwo, uruchamianie”. (.venv) pip install pytest; pip freeze > requirements.txt.",
+            "Lekcja „pytest: assert, nazewnictwo, uruchamianie”. W swoim venv: (.venv) pip install pytest; pip freeze > requirements.txt. (Środowisko kursu w Mentorze ma już pytest — „✔ Sprawdź wynik” uruchomi nim Twoje testy.)",
             "Obok funkcje.py utwórz test_funkcje.py. Na górze: from funkcje import pole_prostokata, czy_parzysta, maksimum, odwroc, silnia. (Jeśli funkcje.py ma printy na najwyższym poziomie — wykonają się przy imporcie; przenieś je pod if __name__ == \"__main__\".)",
             "5 funkcji testowych: def test_pole_3_na_4(): assert pole_prostokata(3, 4) == 12 … po jednej na funkcję. Nazwa testu mówi, CO sprawdza.",
             "Uruchom:  pytest -v  → 5 zielonych PASSED. Zepsuj funkcję silnia (zwróć n zamiast wyniku) → pytest → czerwony FAILED z pokazaniem obu wartości. Przeczytaj ten komunikat uważnie — to Twoje narzędzie pracy. Napraw.",

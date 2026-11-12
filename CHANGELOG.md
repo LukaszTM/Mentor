@@ -1,5 +1,22 @@
 # Zmiany w Mentorze
 
+## 2.7.1 — kurs Python → Junior QA dostosowany do środowiska w Mentorze
+
+- **Tydzień 0 przepisany**: zadanie 1 to „Środowisko kursu w Mentorze + Git” (Sprawdź ponownie → Zainstaluj brakujące → plan → zgoda → testy; Git z git-scm.com;
+  PyCharm i Claude Code opcjonalne), zadanie 2 — katalog roboczy PRACA i CLAUDE.md przyciskami w Mój projekt, zadanie 3 — hello.py w całości przyciskami
+  (Utwórz plik ćwiczenia → ▶ Uruchom → ✔ Sprawdź wynik → celowe zepsucie i czytanie błędu po polsku; terminal tylko jako wariant), zadania 4–5 — terminal z Mentora.
+  Lekcja „Narzędzia” przepisana (co robi Mentor, co robisz sam, czym jest osobne środowisko kursu, PATH), lekcje „Start” i „Terminal” uzupełnione, quiz, checklista,
+  cel etapu 0 i cele lekcji zaktualizowane.
+- **Każde zadanie z ćwiczeniem** dostaje ostatni krok „W Mentorze (bez terminala)” generowany z definicji sprawdzenia (jakie dane podaje test, co musi być w wyjściu / pytest),
+  a zadania tygodni 1–5 — przykłady w innym kontekście i podpowiedzi. Nowa ściąga „Mentor — środowisko i ćwiczenia”.
+- **Poprawki merytoryczne**: „Krowa je trawę” ma 14 znaków i 5 samogłosek (kurs podawał 15 i 6 — test zadania by nie przechodził); kolejność danych w kalkulatorze
+  (liczba, działanie, liczba) zapisana wprost; lekcja venv odnosi się do środowiska kursu Mentora; zadanie venv tłumaczy, że to drugie, własne środowisko.
+- **Sprawdzanie ćwiczeń**: plik zawierający tylko szablon (komentarze) nigdy nie zalicza; `uruchom_bez_bledu` wymaga co najmniej jednej linii wyjścia;
+  program, który pyta o więcej danych niż test (EOFError), dostaje „wymaga sprawdzenia ręcznego” zamiast „błąd”; wszystkie sprawdzenia zweryfikowane na wzorcowych
+  rozwiązaniach napisanych według kroków zadania (zaliczają) i na samych szablonach (nie zaliczają).
+- **Mentor**: Mój projekt i przewodnik „Jak zacząć” mają „Utwórz katalog roboczy kursu”; „Otwórz terminal tutaj” otwiera terminal w katalogu roboczym z Pythonem kursu
+  na początku PATH; teksty Panelu/przewodnika mówią o katalogu roboczym zamiast o konkretnej nazwie folderu.
+
 ## 2.7.0 — środowiska kursów, import paczek ZIP, ćwiczenia w Mentorze
 
 Cel (specyfikacja „instalacja środowisk”): osoba na czystym Windows uruchamia `Mentor.exe`, importuje kurs, przygotowuje wymagane

@@ -23,6 +23,24 @@ from cele import CELE  # noqa: E402
 from cwiczenia import CWICZENIA, SRODOWISKO  # noqa: E402
 
 
+def krok_mentora(z):
+    """Ostatni krok każdego zadania z ćwiczeniem: jak wykonać je przyciskami w Mentorze (bez terminala) i co sprawdza „Sprawdź wynik”."""
+    c = z["cwiczenie"]
+    spr = c.get("sprawdzenie") or {"rodzaj": "plik_istnieje"}
+    stdin = (spr.get("stdin") or c.get("stdin") or "").strip().replace("\n", ", ")
+    opis = {
+        "plik_istnieje": "„✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie.",
+        "uruchom_bez_bledu": "„✔ Sprawdź wynik” uruchamia program" + (f" z danymi: {stdin}" if stdin else "") + " i zalicza, gdy kończy się bez błędu"
+                             + (f" i wypisuje co najmniej {spr['min_linii']} linii" if spr.get("min_linii") else "") + ".",
+        "wyjscie_zawiera": "„✔ Sprawdź wynik” uruchamia program" + (f" z danymi: {stdin}" if stdin else "") + " i zalicza, gdy w wyjściu są: "
+                           + ", ".join(spr.get("tekst", [])).replace("{rok}", "bieżący rok") + ".",
+        "pytest": "„✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku " + (spr.get("plik_testu") or c.get("plik", "")) + " — zielone = zaliczone.",
+    }[spr["rodzaj"]]
+    return ("W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” "
+            "(dane dla input() w polu nad wyjściem, linia = odpowiedź). " + opis
+            + (" „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst." if c.get("przyklad") or c.get("przyklad_plik") else ""))
+
+
 def zbuduj():
     lekcje = []
     for l in LEKCJE_TYDZIEN_0 + wiedza.TEMATY:
@@ -57,6 +75,8 @@ def zbuduj():
             z["tytul"] = z["tytul"].replace("Piątek: ", "", 1)
             if z["id"] in CWICZENIA:
                 z["cwiczenie"] = CWICZENIA[z["id"]]
+                if z["id"] != "t0z3":          # hello.py ma własną, rozpisaną instrukcję przycisków Mentora
+                    z["kroki"] = list(z["kroki"]) + [krok_mentora(z)]
             zadania.append(z)
         w["zadania"] = zadania
         tygodnie.append(w)
@@ -98,7 +118,8 @@ def zbuduj():
         "claude_md": tresc.CLAUDE_MD,
         "szablony": {"bug_raport": tresc.BUG_RAPORT_SZABLON},
         "checklista": tresc.CHECKLISTA,
-        "sciaga": [{"tytul": "Claude Code", "pozycje": [list(x) for x in tresc.SCIAGA]},
+        "sciaga": [{"tytul": "Mentor — środowisko i ćwiczenia", "pozycje": [list(x) for x in tresc.SCIAGA_MENTOR]},
+                   {"tytul": "Claude Code", "pozycje": [list(x) for x in tresc.SCIAGA]},
                    {"tytul": "Git — codzienne komendy", "pozycje": [list(x) for x in tresc.SCIAGA_GIT]}],
         "linki": [["Dokumentacja Claude Code", "https://code.claude.com/docs"],
                   ["Kurs Claude Code 101 (Anthropic)", "https://anthropic.skilljar.com/claude-code-in-action"],

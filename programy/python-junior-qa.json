@@ -85,7 +85,7 @@
    "tygodnie": [
     0
    ],
-   "cel": "Działający terminal, Python, Git, PyCharm i Claude Code. Pusty projekt nauka-python na GitHubie."
+   "cel": "Gotowe środowisko kursu w Mentorze (Python + biblioteki), Git, katalog roboczy z CLAUDE.md, pierwszy program uruchomiony w Mentorze i pierwszy commit na GitHubie."
   },
   {
    "nr": 1,
@@ -133,75 +133,79 @@
    "tydzien": 0,
    "etap": 0,
    "tytul": "Konfiguracja",
-   "tematy": "Terminal, Python, Git, PyCharm, Claude Code, pierwszy commit",
+   "tematy": "Środowisko kursu w Mentorze (Python + biblioteki), Git, edytor, pierwszy program, pierwszy commit",
    "zadania": [
     {
      "id": "t0z1",
-     "tytul": "Zainstaluj Pythona, Gita, PyCharm i Claude Code",
-     "opis": "python --version, git --version, claude --version, a potem claude doctor bez błędów. Na Windows przy instalacji Pythona zaznacz „Add Python to PATH”.",
+     "tytul": "Środowisko kursu w Mentorze + Git (PyCharm i Claude Code opcjonalnie)",
+     "opis": "Zakładka Środowisko: Mentor sam sprawdza i instaluje Pythona z bibliotekami kursu (za Twoją zgodą, bez terminala). Ty instalujesz Git z oficjalnej strony. Edytor i Claude Code — opcjonalnie.",
      "pliki": [],
      "xp": 10,
-     "czas_min": 90,
+     "czas_min": 60,
      "kroki": [
-      "PYTHON. Wejdź na python.org → Downloads → kliknij żółty przycisk „Download Python 3.x”. Uruchom pobrany plik. W PIERWSZYM oknie instalatora, na samym dole, zaznacz kwadracik „Add python.exe to PATH” (bez tego komenda python nie zadziała w terminalu). Potem „Install Now”. Poczekaj na „Setup was successful”.",
-      "GIT. Wejdź na git-scm.com → „Download for Windows” → uruchom instalator. We wszystkich oknach zostaw domyślne ustawienia i klikaj „Next”, a na końcu „Install”. Instalator zainstaluje też „Git Bash” — terminal, którego używa Claude Code.",
-      "PYCHARM. Wejdź na jetbrains.com/pycharm/download → przewiń do „PyCharm Community Edition” (darmowy) → Download → zainstaluj z domyślnymi ustawieniami. Przy pierwszym uruchomieniu zaakceptuj warunki i wybierz motyw — to tylko wygląd.",
-      "SPRAWDZENIE. Zamknij wszystkie okna terminala, jeśli były otwarte (PATH odświeża się dopiero w nowym oknie). Kliknij Start, wpisz „PowerShell”, otwórz. Wpisz:  python --version  i Enter → powinno pokazać np. „Python 3.12.6”. Potem:  git --version  → np. „git version 2.47”.",
-      "CLAUDE CODE (tylko gdy masz plan Pro/Max — inaczej pomiń ten krok i używaj zakładki Asystent → Offline lub API). W PowerShell wpisz:\nirm https://claude.ai/install.ps1 | iex\nPoczekaj na koniec instalacji, ZAMKNIJ PowerShell, otwórz go ponownie i wpisz:  claude --version.",
-      "Jeśli zainstalowałeś Claude Code: wpisz  claude doctor  — pokaże listę kontrolną. Wszystko ma być na zielono lub „OK”. Potem w pustym folderze wpisz  claude  — przy pierwszym uruchomieniu otworzy przeglądarkę do zalogowania; zaloguj się tym samym kontem co na claude.ai."
+      "ŚRODOWISKO W MENTORZE. Zakładka Środowisko (pasek po lewej) → „Sprawdź ponownie”. Tabela pokazuje, co NAPRAWDĘ działa na Twoim komputerze: Python, środowisko kursu (.venv), biblioteki (pytest, requests, selenium, flask), Git, Claude Code, przeglądarka Edge. Statusy: GOTOWE / BRAK / OPCJONALNE. Na czystym komputerze zobaczysz sporo „BRAK” — to normalne, nic jeszcze nie rób ręcznie.",
+      "Kliknij „Zainstaluj brakujące”. Mentor pokaże LISTĘ kroków, zanim cokolwiek zrobi: co pobierze, skąd (python.org/GitHub, PyPI), ile MB, czy potrzebny internet i jakie uprawnienia (żadne — wszystko trafia do katalogu Twojego użytkownika, bez administratora). Przeczytaj, potwierdź. Jeśli w systemie nie ma Pythona, Mentor pobierze Pythona 3.12 (ok. 46 MB) tylko dla kursów; jeśli jest — użyje go.",
+      "Czekaj i patrz na pasek postępu i log (kilka minut). Mentor działa w tle — możesz w tym czasie czytać lekcję. Przyciski „Anuluj” i „Ponów” są pod paskiem; „Pokaż szczegóły” otwiera pełny log. Po zakończeniu Mentor sam uruchamia testy końcowe: interpreter, biblioteki, przykładowy pytest, lokalne API. Selenium (przeglądarka) będzie potrzebne dopiero w tygodniu 8 — może być „pominięto”.",
+      "GIT (Mentor go nie instaluje — to oficjalny instalator). Wejdź na git-scm.com → „Download for Windows” → uruchom. We wszystkich oknach zostaw domyślne ustawienia i klikaj „Next”, na końcu „Install”. Potem w Mentorze: Środowisko → „Sprawdź ponownie” → Git ma status GOTOWE z numerem wersji.",
+      "EDYTOR (opcjonalnie teraz, polecany od tygodnia 4). W tygodniach 0–3 wystarczy Notatnik: przycisk „Otwórz w edytorze” pod zadaniem otworzy plik w VS Code lub PyCharm, jeśli są, a jeśli nie — w Notatniku. Gdy chcesz kolorowanie i podpowiedzi: jetbrains.com/pycharm/download → „PyCharm Community Edition” (darmowy) → zainstaluj z domyślnymi ustawieniami.",
+      "CLAUDE CODE (tylko gdy masz plan Pro/Max — inaczej pomiń i używaj zakładki Asystent → Offline lub API). Start → wpisz „PowerShell” → otwórz → wpisz:\nirm https://claude.ai/install.ps1 | iex\nPo instalacji ZAMKNIJ PowerShell. W Mentorze: Środowisko → „Sprawdź ponownie” → Claude Code GOTOWE. Potem Mój projekt → „Otwórz Claude Code tutaj” — przy pierwszym uruchomieniu zaloguj się w przeglądarce tym samym kontem co na claude.ai."
      ],
-     "sprawdz": "W NOWYM oknie PowerShell trzy komendy dają numery wersji: python --version, git --version, claude --version (ostatnia tylko jeśli masz subskrypcję). Zakładka Mój projekt → Narzędzia pokazuje OK przy Python i Git.",
+     "sprawdz": "Zakładka Środowisko: Python, Środowisko kursu (.venv), pytest, requests, selenium, flask i Git mają GOTOWE; testy „interpreter”, „import bibliotek”, „pytest” i „lokalne API” zielone (Selenium może być „pominięto” do tygodnia 8). Panel pokazuje plakietkę „środowisko gotowe”.",
      "problemy": [
-      "„python nie jest rozpoznawany jako polecenie” → nie zaznaczyłeś „Add to PATH”. Uruchom instalator Pythona ponownie → Modify → Next → zaznacz „Add Python to environment variables” → Install. Potem NOWE okno terminala.",
-      "python --version otwiera Microsoft Store → Start → „Zarządzaj aliasami wykonywania aplikacji” → wyłącz oba przełączniki „python”.",
-      "git --version nie działa → odinstaluj i zainstaluj Git ponownie, w oknie „Adjusting your PATH” wybierz środkową opcję „Git from the command line and also from 3rd-party software”."
+      "„Brak połączenia z internetem” → Mentor nie pobierze Pythona ani bibliotek; lekcje działają. Podłącz sieć i kliknij „Ponów”.",
+      "Python ma status BRAK, choć „coś” było zainstalowane → skrót ze Sklepu Windows nie jest prawdziwym Pythonem (Mentor go pomija). Po prostu pozwól Mentorowi pobrać własnego Pythona 3.12.",
+      "Git po instalacji dalej BRAK → kliknij „Sprawdź ponownie”; jeśli nadal — zamknij i otwórz Mentora (nowe programy pojawiają się w PATH dopiero w nowo uruchomionych aplikacjach).",
+      "Instalacja przerwana z błędem → „Pokaż szczegóły”, skopiuj ostatnie linie logu do Asystenta: „utknąłem: [tekst]”. Najczęściej: brak miejsca na dysku (potrzeba ok. 400 MB) albo antywirus blokujący pobieranie.",
+      "Windows SmartScreen przy instalatorze Gita → „Więcej informacji” → „Uruchom mimo to” (instalator pobrany z git-scm.com jest podpisany)."
      ]
     },
     {
      "id": "t0z2",
-     "tytul": "Katalog nauka-python z plikiem CLAUDE.md",
-     "opis": "Uruchom claude w katalogu, wpisz /init, a potem dopisz zasady nauki (zakładka Prompty → CLAUDE.md).",
+     "tytul": "Katalog roboczy PRACA z plikiem CLAUDE.md",
+     "opis": "Mój projekt → „Utwórz katalog roboczy kursu” (albo wskaż własny) → „Utwórz CLAUDE.md z zasadami”. Z Claude Code: claude w katalogu, /init, dopisz zasady nauki (zakładka Prompty → CLAUDE.md).",
      "pliki": [
       "CLAUDE.md"
      ],
      "xp": 10,
      "czas_min": 30,
      "kroki": [
-      "Utwórz folder na projekty: w Eksploratorze Windows wejdź do Dokumenty, prawy przycisk → Nowy → Folder → nazwij go  nauka-python  (małe litery, myślnik, bez spacji i polskich znaków — terminal i Git lubią proste nazwy).",
-      "Otwórz PowerShell i wejdź do tego folderu komendą:  cd $HOME\\Documents\\nauka-python   (Enter). Sprawdź, gdzie jesteś:  pwd  — ma pokazać ścieżkę kończącą się na nauka-python.",
-      "Wariant z Claude Code: wpisz  claude  → po uruchomieniu wpisz  /init  → Claude utworzy plik CLAUDE.md. Potem otwórz go w PyCharm i DOPISZ na końcu zasady nauki (zakładka Prompty → „Treść pliku CLAUDE.md” → Kopiuj).",
-      "Wariant bez Claude Code: w Mentorze zakładka Mój projekt → „Wybierz katalog…” → wskaż nauka-python → kliknij „Utwórz CLAUDE.md z zasadami”. Albo w Asystencie Offline wpisz  /init.",
-      "Otwórz folder w PyCharm: File → Open → wskaż nauka-python → „Trust Project”. Po lewej zobaczysz drzewo plików z CLAUDE.md.",
-      "W Mentorze: Mój projekt → Wybierz katalog → nauka-python. Od teraz Mentor widzi Twoje pliki i commity."
+      "KATALOG ROBOCZY. Zakładka Mój projekt → „Utwórz katalog roboczy kursu”. Mentor założy folder Dokumenty\\Mentor\\python-junior-qa\\PRACA i od teraz tu będą powstawać Twoje pliki. Wolisz własną nazwę (np. nauka-python w Dokumentach)? Utwórz folder w Eksploratorze (małe litery, myślnik, bez spacji i polskich znaków) i wskaż go przyciskiem „Wybierz katalog…”.",
+      "CLAUDE.md. W Mój projekt kliknij „Utwórz CLAUDE.md z zasadami” — powstanie plik z zasadami nauki, które asystent czyta na starcie (nie pisz rozwiązań za mnie, pytaj przed kodem, po polsku…). Kliknij „Otwórz folder” i obejrzyj plik (prawy przycisk → Otwórz w → Notatnik).",
+      "Wariant z Claude Code: Mój projekt → „Otwórz Claude Code tutaj” → wpisz  /init  → Claude utworzy CLAUDE.md. Potem DOPISZ na końcu zasady nauki (zakładka Prompty → „Treść pliku CLAUDE.md” → Kopiuj).",
+      "Opcjonalnie PyCharm: File → Open → wskaż katalog roboczy → „Trust Project”. Po lewej zobaczysz drzewo plików z CLAUDE.md. Gdy PyCharm pyta o interpreter — wskaż Python z zakładki Środowisko (ścieżka .venv kursu jest wypisana w nagłówku zakładki) albo zostaw na później.",
+      "Sprawdź w Mentorze: Mój projekt pokazuje ścieżkę katalogu i „CLAUDE.md z zasadami nauki — OK”. Od teraz Mentor widzi Twoje pliki i (po zadaniu 4) commity."
      ],
-     "sprawdz": "W PyCharm w drzewie projektu jest CLAUDE.md, a w środku 5 zasad (nie pisz rozwiązań za mnie, pytaj przed kodem, po polsku, pokazuj różnicę…). Mój projekt → Narzędzia: „CLAUDE.md z zasadami nauki — OK”.",
+     "sprawdz": "Mój projekt pokazuje ścieżkę katalogu roboczego i „CLAUDE.md z zasadami nauki — OK”; w pliku jest 5 zasad (nie pisz rozwiązań za mnie, pytaj przed kodem, po polsku, pokazuj różnicę…).",
      "problemy": [
-      "cd mówi „Nie można odnaleźć ścieżki” → folder jest gdzie indziej. W Eksploratorze kliknij pasek adresu folderu, skopiuj ścieżkę i wpisz:  cd \"wklejona ścieżka\"  (w cudzysłowie, gdy są spacje).",
-      "PyCharm pyta o interpreter → wybierz zainstalowanego Pythona 3.x z listy; venv zrobisz w tygodniu 5."
+      "„Utwórz katalog roboczy kursu” nie działa → brak uprawnień do Dokumentów (np. OneDrive w trybie tylko do odczytu). Wskaż inny folder przyciskiem „Wybierz katalog…”.",
+      "Nie widzisz pliku CLAUDE.md w Eksploratorze → Widok → zaznacz „Rozszerzenia nazw plików”; plik nazywa się dokładnie CLAUDE.md, nie CLAUDE.md.txt."
      ]
     },
     {
      "id": "t0z3",
      "tytul": "hello.py wypisuje Twoje imię i dzisiejszą datę",
-     "opis": "Poproś Claude: „Wytłumacz mi, czym jest terminal, katalog roboczy i plik .py — jak dziesięciolatkowi. Potem poprowadź mnie krok po kroku. Nie twórz pliku za mnie.”",
+     "opis": "Pierwszy program — w Mentorze: Plan → pasek „Ćwiczenie w Mentorze” → Utwórz plik ćwiczenia → ▶ Uruchom → ✔ Sprawdź wynik. Asystentowi: „Wytłumacz mi, czym jest plik .py i interpreter — jak dziesięciolatkowi. Nie twórz pliku za mnie.”",
      "pliki": [
       "hello.py"
      ],
      "xp": 10,
      "czas_min": 45,
      "kroki": [
-      "Najpierw teoria na 10 minut. W Asystencie (lub Claude Code) wklej prompt: „Wytłumacz mi, czym jest terminal, katalog roboczy i plik .py — jak dziesięciolatkowi.” W trybie Offline: wpisz  co to jest terminal , potem  co to jest katalog roboczy ,  co to jest plik .py. Przeczytaj, powiedz własnymi słowami.",
-      "W PyCharm: prawy przycisk na folderze nauka-python (w drzewie po lewej) → New → Python File → wpisz  hello  → Enter. Powstanie hello.py (PyCharm sam doda rozszerzenie).",
-      "Wpisz w pliku (sam, nie wklejaj):\nprint(\"Cześć, tu Łukasz\")\nZamiast Łukasz — Twoje imię. Zapisz: Ctrl+S.",
-      "Uruchom z terminala: w PyCharm na dole kliknij „Terminal” (albo Alt+F12). Wpisz  python hello.py  → Enter. Powinno wypisać Twoje zdanie. To jest TEN moment: pierwszy program.",
-      "Dodaj datę. Na górze pliku dopisz linię  import datetime , a na dole:\nprint(\"Dziś jest\", datetime.date.today())\nZapisz, uruchom ponownie. Jeśli nie rozumiesz, co robi import — zapytaj Asystenta: „co to jest moduł”.",
-      "Zepsuj celowo: usuń jeden cudzysłów i uruchom. Przeczytaj komunikat błędu OD DOŁU (ostatnia linia mówi CO, wyżej GDZIE). Napraw. Tak wygląda 50% programowania."
+      "Najpierw teoria na 10 minut. W Asystencie (lub Claude Code) wklej prompt: „Wytłumacz mi, czym jest plik .py, interpreter i katalog roboczy — jak dziesięciolatkowi.” W trybie Offline: wpisz  co to jest plik .py , potem  co to jest interpreter ,  co to jest katalog roboczy. Przeczytaj, powiedz własnymi słowami.",
+      "Plan → tydzień 0 → to zadanie → pod opisem jest pasek „Ćwiczenie w Mentorze · hello.py”. Kliknij „Utwórz plik ćwiczenia” — Mentor zapisze hello.py w katalogu roboczym (z komentarzem na górze) i otworzy go w edytorze (Notatnik, VS Code albo PyCharm — co masz).",
+      "Wpisz w pliku pod komentarzem (sam, nie wklejaj):\nprint(\"Cześć, tu Łukasz\")\nZamiast Łukasz — Twoje imię. Zapisz: Ctrl+S (w Notatniku: Plik → Zapisz; nie zmieniaj nazwy ani rozszerzenia).",
+      "Wróć do Mentora i kliknij „▶ Uruchom”. Otworzy się okno z wyjściem programu — powinno być Twoje zdanie i „kod wyjścia 0”. To jest TEN moment: pierwszy program. Mentor uruchomił go interpreterem kursu (tym z zakładki Środowisko).",
+      "Dodaj datę. Na górze pliku dopisz linię  import datetime , a na dole:\nprint(\"Dziś jest\", datetime.date.today())\nZapisz, kliknij „▶ Uruchom” ponownie. Jeśli nie rozumiesz, co robi import — zapytaj Asystenta: „co to jest moduł”.",
+      "Kliknij „✔ Sprawdź wynik”. Mentor uruchamia program i sprawdza, czy wypisał co najmniej 2 linie i bieżący rok — gdy tak, zadanie odhacza się samo („ZALICZONE AUTOMATYCZNIE”).",
+      "Zepsuj celowo: usuń jeden cudzysłów, zapisz, „▶ Uruchom”. W oknie zobaczysz czerwony komunikat i wyjaśnienie po polsku. Przeczytaj go OD DOŁU (ostatnia linia mówi CO, wyżej GDZIE). Napraw. Tak wygląda 50% programowania.",
+      "Wariant terminalowy (poznasz go w tygodniu 4, teraz tylko spróbuj): Mój projekt → „Otwórz terminal tutaj” → wpisz  python hello.py  → Enter. To ta sama komenda, którą Mentor wykonuje za Ciebie przyciskiem."
      ],
-     "sprawdz": "python hello.py wypisuje Twoje imię i dzisiejszą datę, bez czerwonego tekstu. W Planie przy zadaniu świeci „✔ wykryto hello.py”.",
+     "sprawdz": "„▶ Uruchom” pokazuje Twoje imię i dzisiejszą datę bez czerwonego tekstu; „✔ Sprawdź wynik” daje „Zaliczone”. W Planie przy zadaniu świeci „✔ wykryto hello.py”.",
      "problemy": [
       "„SyntaxError” z strzałką → sprawdź cudzysłowy i nawiasy w tej linii; muszą być parami.",
-      "„python: can't open file 'hello.py'” → terminal stoi w innym folderze. Wpisz  cd  i ścieżkę do nauka-python, albo w PyCharm otwórz terminal ponownie (otwiera się w folderze projektu).",
-      "Polskie znaki wyświetlają się krzywo w terminalu → wpisz  chcp 65001  i uruchom program ponownie."
+      "„Nic nie wypisał — brak print()?” → zapisałeś plik? (Ctrl+S). Notatnik zapisał jako hello.py.txt? → w oknie zapisu wybierz „Wszystkie pliki” i nazwę hello.py.",
+      "Polskie znaki wyświetlają się krzywo → zapisz plik w kodowaniu UTF-8 (Notatnik: Plik → Zapisz jako → Kodowanie: UTF-8). Mentor uruchamia programy w UTF-8.",
+      "„Brak Pythona do uruchomienia pliku” → wróć do zadania 1: zakładka Środowisko → Zainstaluj brakujące."
      ],
      "cwiczenie": {
       "plik": "hello.py",
@@ -228,15 +232,15 @@
      "czas_min": 60,
      "kroki": [
       "Załóż konto na github.com (jeśli nie masz): Sign up → e-mail → hasło → nazwa użytkownika (np. LukaszTM) → potwierdź e-mail.",
-      "Przedstaw się Gitowi (raz na komputer). W terminalu PyCharm:\ngit config --global user.name \"Łukasz Nazwisko\"\ngit config --global user.email \"twoj@email.pl\"\n(ten sam e-mail co na GitHubie).",
+      "Otwórz terminal w katalogu roboczym: Mój projekt → „Otwórz terminal tutaj” (albo Terminal w PyCharm). Przedstaw się Gitowi (raz na komputer):\ngit config --global user.name \"Imię Nazwisko\"\ngit config --global user.email \"twoj@email.pl\"\n(ten sam e-mail co na GitHubie).",
       "Zamień folder w repozytorium:  git init  (Enter). Odpowiedź: „Initialized empty Git repository”. W folderze powstał ukryty podfolder .git — nie ruszaj go.",
       "Zobacz, co Git widzi:  git status  → pokaże CLAUDE.md i hello.py na czerwono jako „untracked” (nieśledzone). Dodaj je:  git add .  (kropka = wszystko). Jeszcze raz git status → na zielono.",
       "Zrób pierwszy commit (zdjęcie projektu z podpisem):  git commit -m \"dzień 1: hello.py i CLAUDE.md\"  . Odpowiedź z liczbą plików i linii. Sprawdź historię:  git log --oneline.",
       "Na GitHubie: zielony przycisk „New” (albo plus w prawym górnym rogu → New repository) → Repository name: nauka-python → Public → NIE zaznaczaj „Add a README” (masz już pliki) → Create repository.",
-      "GitHub pokaże komendy „…or push an existing repository from the command line”. Wpisz w terminalu PyCharm dokładnie te trzy linie (zaczynają się od git remote add origin …, git branch -M main, git push -u origin main). Przy pushu przeglądarka poprosi o zalogowanie do GitHuba — zaloguj, wróć do terminala.",
+      "GitHub pokaże komendy „…or push an existing repository from the command line”. Wpisz w terminalu dokładnie te trzy linie (zaczynają się od git remote add origin …, git branch -M main, git push -u origin main). Przy pushu przeglądarka poprosi o zalogowanie do GitHuba — zaloguj, wróć do terminala.",
       "Odśwież stronę repozytorium na GitHubie — widzisz hello.py i CLAUDE.md. Od teraz koniec każdego dnia to: git add . → git commit -m \"dzień N: temat\" → git push."
      ],
-     "sprawdz": "Strona github.com/TwojaNazwa/nauka-python pokazuje Twoje pliki i commit „dzień 1…”. Mentor → Mój projekt → Git: „zdalne repo: tak”, „commity łącznie: 1”.",
+     "sprawdz": "Strona github.com/TwojaNazwa/nauka-python pokazuje Twoje pliki i commit „dzień 1…”. Mentor → Mój projekt → Git: „zdalne repo: tak”, „commity łącznie: 1”. (Nazwa repozytorium może być inna niż katalogu PRACA — to bez znaczenia.)",
      "problemy": [
       "„Please tell me who you are” → zrób krok 2 (git config).",
       "„remote origin already exists” → wpisałeś komendę remote dwa razy; to nie błąd, przejdź do git push.",
@@ -255,15 +259,15 @@
      "czas_min": 45,
      "kroki": [
       "Wklej do Asystenta prompt: „Wytłumacz mi, co to jest zmienna, funkcja i pętla — bez kodu, na przykładach z gospodarstwa.” (Offline:  co to jest zmienna ,  co to jest funkcja ,  co to jest pętla ).",
-      "W PyCharm: prawy przycisk na folderze → New → File → nazwa  notatki.md  (md = Markdown, zwykły tekst z nagłówkami). Nagłówek robisz znakiem #: pierwsza linia  # Notatki z nauki.",
+      "Nowy plik notatki.md w katalogu roboczym (md = Markdown, zwykły tekst z nagłówkami): w PyCharm prawy przycisk na folderze → New → File; bez PyCharma: Mój projekt → „Otwórz folder” → prawy przycisk → Nowy → Dokument tekstowy → nazwa  notatki.md  (potwierdź zmianę rozszerzenia). Nagłówek robisz znakiem #: pierwsza linia  # Notatki z nauki.",
       "Pod nagłówkiem  ## Tydzień 0  napisz trzy akapity WŁASNYMI słowami: „Zmienna to…”, „Funkcja to…”, „Pętla to…”. Każdy z przykładem z Twojego gospodarstwa (np. zmienna = tabliczka z wagą krowy). Nie kopiuj z Asystenta — jeśli nie umiesz napisać sam, jeszcze nie rozumiesz; zapytaj „dlaczego” i spróbuj ponownie.",
-      "Dopisz sekcję  ## Czego się nauczyłem w tygodniu 0  z listą (każda linia zaczyna się od myślnika): terminal, cd, python plik.py, git add/commit/push.",
+      "Dopisz sekcję  ## Czego się nauczyłem w tygodniu 0  z listą (każda linia zaczyna się od myślnika): Środowisko w Mentorze, plik .py i interpreter, ▶ Uruchom / python plik.py, git add/commit/push.",
       "Commit i push:  git add .  →  git commit -m \"dzień 5: notatki — zmienna, funkcja, pętla\"  →  git push. Potem w Mentorze: Sesja → zapisz minuty; Plan → odhacz; Dziennik → 2 zdania.",
       "Sobota: zakładka Quiz → tydzień 0. Potem Checklista → „Po tygodniu 0” — odhacz tylko to, co robisz bez zaglądania do notatek."
      ],
      "sprawdz": "notatki.md jest na GitHubie i zawiera trzy definicje własnymi słowami z przykładami. Quiz z tygodnia 0 ≥ 60%.",
      "problemy": [
-      "Markdown nie wygląda „ładnie” w PyCharm → kliknij ikonę podglądu w prawym górnym rogu edytora (albo po prostu patrz na GitHubie — tam renderuje się sam)."
+      "Markdown nie wygląda „ładnie” w edytorze → w PyCharm kliknij ikonę podglądu w prawym górnym rogu; w Notatniku to zwykły tekst — na GitHubie renderuje się sam."
      ]
     }
    ],
@@ -293,10 +297,11 @@
      "czas_min": 60,
      "kroki": [
       "Lekcja: zakładka Lekcje → „Zmienne i typy danych” (10 min). Potem prompt „Nowy temat” z tematem „zmienne i typy”.",
-      "Nowy plik zmienne.py. Utwórz 5 zmiennych opisujących jedno zwierzę, każda innego typu: imie (str, w cudzysłowie), waga_kg (float, z kropką), wiek_lat (int), rasa (str), czy_zdrowe (bool: True/False).",
+      "Plan → „Utwórz plik ćwiczenia” (zmienne.py). Utwórz 5 zmiennych opisujących jedno zwierzę, każda innego typu: imie (str, w cudzysłowie), waga_kg (float, z kropką), wiek_lat (int), rasa (str), czy_zdrowe (bool: True/False).",
       "Dla każdej zmiennej jedna linia:  print(imie, type(imie))  — zobaczysz wartość i typ, np. <class 'str'>.",
       "Eksperyment: dopisz  print(waga_kg + 10)  oraz  print(imie + 10). Drugie wywali TypeError — przeczytaj komunikat, potem popraw na  print(imie + str(10)). Zapisz w notatkach, dlaczego.",
-      "Uruchom: python zmienne.py. Commit: „dzień 6: zmienne i typy”."
+      "„▶ Uruchom” (albo python zmienne.py w terminalu). Commit: „dzień 6: zmienne i typy”.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy w wyjściu są: <class 'str'>, <class 'float'>, <class 'int'>, <class 'bool'>. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Program wypisuje 5 linii z czterema różnymi typami (str, float, int, bool) i nie kończy się błędem.",
      "problemy": [
@@ -307,6 +312,7 @@
       "plik": "zmienne.py",
       "szablon": "# zmienne.py — 5 zmiennych różnych typów opisujących jedno zwierzę\n# imie (str), waga_kg (float), wiek_lat (int), rasa (str), czy_zdrowe (bool)\n# dla każdej: print(zmienna, type(zmienna))\n\n",
       "przyklad": "tytul = \"Mentor\"          # str\nwersja = 2.7             # float\nlekcji = 60              # int\ndarmowy = True           # bool\n\nprint(tytul, type(tytul))\nprint(wersja, type(wersja))\nprint(lekcji, type(lekcji))\nprint(darmowy, type(darmowy))\n",
+      "podpowiedz": "Napis w cudzysłowie, float z kropką (612.5), int bez kropki, bool to True/False (wielka litera). print(zmienna, type(zmienna)) wypisze wartość i <class '…'>. „Sprawdź wynik” oczekuje co najmniej 5 linii i czterech typów: str, float, int, bool.",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
        "tekst": [
@@ -330,12 +336,13 @@
      "czas_min": 75,
      "kroki": [
       "Lekcja „print i input” + „Instrukcje warunkowe”. Zapisz w notatkach jedno zdanie: co zwraca input().",
-      "kalkulator.py: trzy pytania przez input(): pierwsza liczba, działanie (+ - * /), druga liczba. Pamiętaj: input() zwraca napis — zamień liczby przez float().",
+      "kalkulator.py: trzy pytania przez input() W TEJ KOLEJNOŚCI: pierwsza liczba, działanie (+ - * /), druga liczba. Pamiętaj: input() zwraca napis — zamień liczby przez float(). Program z input() uruchamiasz w Mentorze tak samo: „▶ Uruchom” — w oknie jest pole „Dane dla input()”, każda linia to jedna odpowiedź (np. 6, *, 3).",
       "Cztery gałęzie if/elif/elif/elif — każda dla innego działania — i else wypisujące „Nieznane działanie”. Porównanie działania:  if dzialanie == \"+\":  (podwójny znak równości).",
       "W gałęzi dzielenia, PRZED dzieleniem, sprawdź  if b == 0:  i wypisz komunikat zamiast dzielić. Przetestuj ręcznie: 5 / 0.",
-      "Testuj jak tester: wpisz literę zamiast liczby — program się wywali (ValueError). To normalne na tym etapie; zapisz w notatkach, że obsłużysz to w tygodniu 3 (try/except)."
+      "Testuj jak tester: wpisz literę zamiast liczby — program się wywali (ValueError). To normalne na tym etapie; zapisz w notatkach, że obsłużysz to w tygodniu 3 (try/except).",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: 6, *, 3 i zalicza, gdy w wyjściu są: 18. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
-     "sprawdz": "Cztery działania dają poprawne wyniki; 5 / 0 wypisuje komunikat, nie traceback; „x” jako działanie daje „Nieznane działanie”.",
+     "sprawdz": "Cztery działania dają poprawne wyniki; 5 / 0 wypisuje komunikat, nie traceback; „x” jako działanie daje „Nieznane działanie”. „✔ Sprawdź wynik” podaje 6, *, 3 i szuka 18.",
      "problemy": [
       "Wynik „53” zamiast 8 dla 5+3 → nie zamieniłeś input() na liczbę.",
       "IndentationError → wszystkie linie pod if wcięte dokładnie 4 spacjami."
@@ -368,7 +375,8 @@
       "wiek.py: zapytaj o rok urodzenia (int(input(...))). Pobierz bieżący rok:  import datetime  i  rok = datetime.date.today().year.",
       "Policz wiek = rok − rok_urodzenia. Wypisz f-stringiem:  print(f\"Masz {wiek} lat\").",
       "if wiek >= 18: wypisz „pełnoletni”, else „niepełnoletni”. Dodaj trzeci przypadek elif dla wieku ujemnego (ktoś wpisał rok z przyszłości): „to jeszcze nie ten rok”.",
-      "Commit: „dzień 8: wiek i warunki”."
+      "Commit: „dzień 8: wiek i warunki”.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: 2000 i zalicza, gdy w wyjściu są: pełnoletni. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Rok 2000 → poprawny wiek i „pełnoletni”; rok 2015 → „niepełnoletni”; rok 2099 → komunikat o przyszłości.",
      "problemy": [],
@@ -376,6 +384,7 @@
       "plik": "wiek.py",
       "szablon": "# wiek.py — rok urodzenia → wiek i pełnoletniość\n# int(input(...)); import datetime; rok = datetime.date.today().year\n\n",
       "przyklad": "import datetime\n\nrok_zakupu = int(input(\"Rok zakupu ciągnika: \"))\nlata = datetime.date.today().year - rok_zakupu\nif lata < 0:\n    print(\"to jeszcze nie ten rok\")\nelif lata >= 10:\n    print(f\"Ciągnik ma {lata} lat — czas na przegląd\")\nelse:\n    print(f\"Ciągnik ma {lata} lat\")\n",
+      "podpowiedz": "Bieżący rok: datetime.date.today().year (po import datetime). Trzy gałęzie: wiek < 0 → „to jeszcze nie ten rok”; wiek >= 18 → „pełnoletni”; else → „niepełnoletni”. „Sprawdź wynik” podaje rok 2000 i oczekuje słowa „pełnoletni” (a nie „niepełnoletni”).",
       "stdin": "2000\n",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
@@ -403,7 +412,8 @@
       "Przelicz litry na kilogramy: 1 litr mleka ≈ 1.03 kg → kg = litry * 1.03.",
       "Trzy progi ceny za litr przez if/elif/else: tłuszcz > 4.0 → 2.10 zł; > 3.5 → 1.90; inaczej 1.70. Zwróć uwagę na KOLEJNOŚĆ warunków — od najwyższego progu.",
       "Wypisz: kilogramy (zaokrąglone round(kg, 1)), cenę za litr i wartość dostawy (litry * cena) z dwoma miejscami po przecinku: f\"{wartosc:.2f} zł\".",
-      "Test graniczny jak tester: tłuszcz dokładnie 4.0 — który próg? Czy to zgodne z zamiarem (> czy >=)? Zapisz decyzję w komentarzu nad if-em."
+      "Test graniczny jak tester: tłuszcz dokładnie 4.0 — który próg? Czy to zgodne z zamiarem (> czy >=)? Zapisz decyzję w komentarzu nad if-em.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: 500, 4.2 i zalicza, gdy w wyjściu są: 515, 2.1, 1050. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Dla 500 l i 4.2% → ok. 515 kg, 2.10 zł/l, 1050.00 zł. Dla 3.5% → 1.70 (bo > 3.5 jest fałszywe).",
      "problemy": [
@@ -412,6 +422,8 @@
      "cwiczenie": {
       "plik": "litry.py",
       "szablon": "# litry.py — litry mleka i % tłuszczu → kilogramy, cena za litr, wartość dostawy\n# kg = litry * 1.03; progi: > 4.0 → 2.10, > 3.5 → 1.90, inaczej 1.70\n\n",
+      "przyklad": "kg_ziarna = float(input(\"Ile kg ziarna? \"))\nwilgotnosc = float(input(\"Wilgotność w %: \"))\nif wilgotnosc > 20:\n    cena = 0.70\nelif wilgotnosc > 15:\n    cena = 0.85\nelse:\n    cena = 0.95\nprint(f\"Cena za kg: {cena:.2f} zł\")\nprint(f\"Wartość: {kg_ziarna * cena:.2f} zł\")\n",
+      "podpowiedz": "Progi sprawdzaj od NAJWYŻSZEGO (if tłuszcz > 4.0 … elif > 3.5 … else). Zaokrąglenie: round(kg, 1); dwa miejsca po przecinku w f-stringu: f\"{wartosc:.2f}\". „Sprawdź wynik” podaje 500 i 4.2 i szuka 515, 2.1 i 1050.",
       "stdin": "500\n4.2\n",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
@@ -439,13 +451,16 @@
       "BMI = waga / (wzrost * wzrost). Kategorie if/elif/else: < 18.5 niedowaga; < 25 norma; < 30 nadwaga; else otyłość. Wypisz BMI z jednym miejscem po przecinku i kategorię.",
       "Obsługa błędnego wpisu bez try/except (to tydzień 3): sprawdź if-em, czy wzrost > 0 i waga > 0 — jeśli nie, wypisz „Podaj wartości większe od zera” i NIE licz BMI. Wskazówka: najpierw walidacja, potem obliczenie — jak w każdym programie, który dostaje dane od człowieka.",
       "Testuj jak tester i zapisz wyniki w notatkach jako tabelę: wzrost, waga, oczekiwana kategoria, co wyszło. Minimum 5 przypadków, w tym wzrost 0 i wzrost podany w cm (180 → BMI ~0.002 — program „działa”, ale wynik bez sensu; dodaj ostrzeżenie if wzrost > 3).",
-      "Recenzja: „przejrzyj @bmi.py jak cierpliwy mentor”. Wdróż uwagi. Commit: „dzień 10: kalkulator BMI”. Push. Odhacz. Sobota: quiz z tygodnia 1."
+      "Recenzja: „przejrzyj @bmi.py jak cierpliwy mentor”. Wdróż uwagi. Commit: „dzień 10: kalkulator BMI”. Push. Odhacz. Sobota: quiz z tygodnia 1.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: 1.80, 75 i zalicza, gdy w wyjściu są: 23.1, norma. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "1.80 / 75 → 23.1, norma. 1.80 / 50 → niedowaga. 0 / 75 → komunikat. 180 / 75 → ostrzeżenie o jednostkach.",
      "problemy": [],
      "cwiczenie": {
       "plik": "bmi.py",
       "szablon": "# bmi.py — wzrost (m) i waga (kg) → BMI i kategoria\n# walidacja: wzrost > 0 i waga > 0, inaczej komunikat i brak obliczeń\n\n",
+      "przyklad": "dlugosc = float(input(\"Długość pola w m: \"))\nszerokosc = float(input(\"Szerokość pola w m: \"))\nif dlugosc <= 0 or szerokosc <= 0:\n    print(\"Podaj wartości większe od zera\")\nelse:\n    ary = dlugosc * szerokosc / 100\n    print(f\"Powierzchnia: {ary:.1f} a\")\n    if ary < 10:\n        print(\"małe pole\")\n    elif ary < 100:\n        print(\"średnie pole\")\n    else:\n        print(\"duże pole\")\n",
+      "podpowiedz": "Najpierw walidacja (wzrost > 0 i waga > 0), potem obliczenie — w else. BMI z jednym miejscem po przecinku: f\"{bmi:.1f}\". „Sprawdź wynik” podaje 1.80 i 75 i szuka 23.1 oraz słowa „norma”.",
       "stdin": "1.80\n75\n",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
@@ -484,7 +499,8 @@
       "Lekcja „Pętle for i while”. Zapisz w notatkach: range(1, 11) daje 1…10 — dlaczego 11?",
       "tabliczka.py: pętla  for i in range(1, 11):  i w środku  print(f\"{i} x 7 = {i * 7}\")  — najpierw tabliczka dla jednej liczby.",
       "Wersja pełna: pętla w pętli — zewnętrzna po a (1–10), wewnętrzna po b (1–10), print(f\"{a} x {b} = {a*b}\"). Po wewnętrznej pętli wypisz pustą linię print(), żeby oddzielić bloki.",
-      "Wersja tabelki (opcjonalnie): print(f\"{a*b:4}\", end=\"\") w wewnętrznej, print() w zewnętrznej — zobaczysz siatkę 10×10. Zapytaj Asystenta, co robi end=\"\" i :4."
+      "Wersja tabelki (opcjonalnie): print(f\"{a*b:4}\", end=\"\") w wewnętrznej, print() w zewnętrznej — zobaczysz siatkę 10×10. Zapytaj Asystenta, co robi end=\"\" i :4.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy w wyjściu są: 100. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Wypisanych 100 działań (lub siatka 10×10), ostatnie to 10 x 10 = 100.",
      "problemy": [],
@@ -492,6 +508,7 @@
       "plik": "tabliczka.py",
       "szablon": "# tabliczka.py — tabliczka mnożenia 1–10 pętlą for (potem pętla w pętli)\n\n",
       "przyklad": "for dzien in range(1, 8):\n    print(f\"Dzień {dzien}: {dzien * 20} minut nauki\")\nprint()\nfor rzad in range(1, 4):\n    for kol in range(1, 4):\n        print(f\"{rzad * kol:3}\", end=\"\")\n    print()\n",
+      "podpowiedz": "range(1, 11) daje 1…10 (koniec jest wyłączony). Pętla w pętli: zewnętrzna po a, wewnętrzna po b, w środku print(f\"{a} x {b} = {a*b}\"). „Sprawdź wynik” oczekuje co najmniej 10 linii i liczby 100 w wyjściu.",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
        "tekst": [
@@ -514,7 +531,8 @@
       "Lekcja „Listy”. lista_zakupow.py: zacznij od listy 5 napisów: zakupy = [\"pasza\", \"gwoździe\", ...].",
       "Funkcji jeszcze nie znasz — zrób pętlę  while True:  z menu: wypisz „1 dodaj, 2 usuń, 3 wypisz, 0 koniec”, wczytaj wybór input().",
       "1: input() nazwy → zakupy.append(nazwa). 2: input() nazwy → if nazwa in zakupy: zakupy.remove(nazwa) else komunikat „nie ma na liście”. 3: for nr, produkt in enumerate(zakupy, start=1): print(nr, produkt). 0: break.",
-      "Przetestuj: usuń coś, czego nie ma. Dodaj pusty napis (sam Enter) — co się dzieje? Dodaj if, który nie pozwala dodać pustego."
+      "Przetestuj: usuń coś, czego nie ma. Dodaj pusty napis (sam Enter) — co się dzieje? Dodaj if, który nie pozwala dodać pustego.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Menu działa w pętli; usunięcie nieistniejącego produktu daje komunikat, nie błąd; wypisanie numeruje od 1.",
      "problemy": [
@@ -540,13 +558,16 @@
       "suma.py: pusta lista  liczby = []  i pętla while True, która pyta o liczbę (float), a przy 0 → break; inaczej liczby.append(x).",
       "Po pętli: if len(liczby) == 0: wypisz „nic nie podano” — inaczej dzielenie przez zero przy średniej. To Twój pierwszy świadomy przypadek brzegowy.",
       "Wypisz sumę (sum(liczby)), średnią (sum/len) i maksimum (max(liczby)). Potem zrób to samo BEZ sum() i max(): własną pętlą for z akumulatorem suma += x i porównaniem if x > najwieksza.",
-      "Zapisz w notatkach: czym jest akumulator (zmienna, która „zbiera” wynik w pętli)."
+      "Zapisz w notatkach: czym jest akumulator (zmienna, która „zbiera” wynik w pętli).",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: 5, 10, 15, 0 i zalicza, gdy w wyjściu są: 30, 10, 15. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Dane 5, 10, 15, 0 → suma 30, średnia 10, max 15. Od razu 0 → komunikat, nie ZeroDivisionError.",
      "problemy": [],
      "cwiczenie": {
       "plik": "suma.py",
       "szablon": "# suma.py — pętla while: liczby do wpisania 0 → suma, średnia, maksimum\n# len(liczby) == 0 → komunikat, nie ZeroDivisionError\n\n",
+      "przyklad": "udoje = []\nwhile True:\n    litry = float(input(\"Udój w litrach (0 = koniec): \"))\n    if litry == 0:\n        break\n    udoje.append(litry)\nif len(udoje) == 0:\n    print(\"nic nie podano\")\nelse:\n    najmniejszy = udoje[0]\n    for u in udoje:\n        if u < najmniejszy:\n            najmniejszy = u\n    print(\"udojów:\", len(udoje), \"najmniejszy:\", najmniejszy)\n",
+      "podpowiedz": "Pętla while True z break przy 0; po pętli NAJPIERW sprawdź, czy lista nie jest pusta (inaczej dzielenie przez zero przy średniej). „Sprawdź wynik” podaje 5, 10, 15, 0 i szuka 30, 10 i 15.",
       "stdin": "5\n10\n15\n0\n",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
@@ -573,21 +594,24 @@
       "Wypisz: tekst.upper(), tekst[::-1] (od tyłu), len(tekst).",
       "Samogłoski: licznik = 0; for litera in tekst.lower(): if litera in \"aeiouyąęó\": licznik += 1. Wypisz licznik.",
       "Dodatkowo: liczba słów  len(tekst.split())  i najdłuższe słowo (pętla po tekst.split() z porównaniem len).",
-      "Pułapka do sprawdzenia: wpisz zdanie ze spacjami na początku — czy strip() pomógł? Usuń strip() i zobacz różnicę w len()."
+      "Pułapka do sprawdzenia: wpisz zdanie ze spacjami na początku — czy strip() pomógł? Usuń strip() i zobacz różnicę w len().",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: Krowa je trawę i zalicza, gdy w wyjściu są: KROWA JE TRAWĘ, 14, 5, 3. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
-     "sprawdz": "„Krowa je trawę” → KROWA JE TRAWĘ, ęwart ej aworK, 15 znaków, 6 samogłosek, 3 słowa, najdłuższe „trawę”.",
+     "sprawdz": "„Krowa je trawę” → KROWA JE TRAWĘ, ęwart ej aworK, 14 znaków (ze spacjami), 5 samogłosek (o, a, e, a, ę), 3 słowa, najdłuższe „Krowa” lub „trawę” (oba mają 5 liter — Twój program wybierze pierwsze lub ostatnie; zapisz w notatkach, które i dlaczego).",
      "problemy": [],
      "cwiczenie": {
       "plik": "napisy.py",
       "szablon": "# napisy.py — tekst = input(...).strip(); upper(), [::-1], len(), samogłoski, słowa, najdłuższe słowo\n\n",
       "stdin": "Krowa je trawę\n",
+      "przyklad": "zdanie = input(\"Zdanie: \").strip()\nprint(zdanie.lower())          # małymi literami\nprint(zdanie.replace(\" \", \"_\"))  # spacje na podkreślenia\nspolgloski = 0\nfor litera in zdanie.lower():\n    if litera in \"bcdfghjklmnprstwz\":\n        spolgloski += 1\nprint(\"spółgłosek:\", spolgloski)\nprint(\"słów:\", len(zdanie.split()))\n",
+      "podpowiedz": "Metody napisu nie zmieniają zmiennej — zwracają NOWY napis (tekst.upper() trzeba wypisać albo przypisać). Od tyłu: tekst[::-1]. „Sprawdź wynik” podaje „Krowa je trawę” i oczekuje: KROWA JE TRAWĘ, 14 (znaków ze spacjami), 5 (samogłosek), 3 (słowa).",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
        "stdin": "Krowa je trawę\n",
        "tekst": [
         "KROWA JE TRAWĘ",
-        "15",
-        "6",
+        "14",
+        "5",
         "3"
        ]
       }
@@ -609,7 +633,8 @@
       "Pętla while True: wczytaj zgadywaną liczbę (int), proby += 1. if < sekret: „za mało”; elif > sekret: „za dużo”; else: wypisz „Brawo, w {proby} próbach” i break.",
       "Ranking: PRZED pętlą gry lista  wyniki = []  i zewnętrzna pętla „czy grasz jeszcze raz? (t/n)”. Po każdej grze wyniki.append(proby); wyniki.sort(); wypisz 3 najlepsze: wyniki[:3].",
       "Przypadek brzegowy: liczba spoza 1–100 → komunikat i NIE licz próby (continue przed proby += 1 albo if z pominięciem). Litera zamiast liczby → na razie program padnie; zapisz w notatkach jako „do naprawy w tygodniu 3”.",
-      "Recenzja Asystenta, poprawki, commit „dzień 15: gra zgadnij liczbę”, push, odhacz. Sobota: quiz z tygodnia 2 i README do gry (co robi, jak uruchomić, przykładowa rozgrywka)."
+      "Recenzja Asystenta, poprawki, commit „dzień 15: gra zgadnij liczbę”, push, odhacz. Sobota: quiz z tygodnia 2 i README do gry (co robi, jak uruchomić, przykładowa rozgrywka).",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Da się wygrać i zagrać ponownie; ranking pokazuje najmniejsze liczby prób jako pierwsze; 0 lub 150 nie zwiększa licznika prób.",
      "problemy": [],
@@ -647,7 +672,8 @@
       "Lekcja „Funkcje”. funkcje.py. Każda funkcja: def nazwa(argumenty): → docstring w \"\"\" \"\"\" → ciało → return. ŻADNEGO input() ani print() w środku — funkcja zwraca, program główny wypisuje.",
       "pole_prostokata(a, b) → a * b.  czy_parzysta(n) → n % 2 == 0 (zwraca bool).  maksimum(lista) → własna pętla z akumulatorem, bez max().  odwroc(napis) → napis[::-1].  silnia(n) → pętla for mnożąca od 1 do n.",
       "Na dole pliku blok wywołań: print(pole_prostokata(3, 4)), print(czy_parzysta(7)) itd. Potem spróbuj: help(silnia) — zobaczysz swój docstring.",
-      "Przypadki brzegowe w notatkach: silnia(0) powinna dać 1 — czy daje? maksimum([]) — co robi? (Na razie może dać błąd; zapisz.)"
+      "Przypadki brzegowe w notatkach: silnia(0) powinna dać 1 — czy daje? maksimum([]) — co robi? (Na razie może dać błąd; zapisz.)",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy w wyjściu są: 12, 120, tok. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "pole 3×4=12, 7 nieparzyste, maksimum([3,9,2])=9, odwroc(\"kot\")=\"tok\", silnia(5)=120, silnia(0)=1.",
      "problemy": [
@@ -658,6 +684,7 @@
       "plik": "funkcje.py",
       "szablon": "# funkcje.py — 5 funkcji z docstringami, bez input()/print() w środku\n\n\ndef pole_prostokata(a, b):\n    \"\"\"Zwraca pole prostokąta o bokach a i b.\"\"\"\n    ...\n\n\n# czy_parzysta(n), maksimum(lista), odwroc(napis), silnia(n)\n\n\nif __name__ == \"__main__\":\n    print(pole_prostokata(3, 4))\n",
       "przyklad": "def srednia(lista):\n    \"\"\"Zwraca średnią arytmetyczną listy liczb (0 dla pustej listy).\"\"\"\n    if not lista:\n        return 0\n    suma = 0\n    for x in lista:\n        suma += x\n    return suma / len(lista)\n\n\nif __name__ == \"__main__\":\n    print(srednia([2, 4, 6]))\n    help(srednia)\n",
+      "podpowiedz": "Funkcja ZWRACA (return), program główny WYPISUJE (print na dole pliku). silnia: wynik = 1; for i in range(1, n + 1): wynik *= i. „Sprawdź wynik” oczekuje w wyjściu 12 (pole 3×4), 120 (silnia 5) i tok (odwroc kot) — wypisz te wywołania na dole pliku.",
       "sprawdzenie": {
        "rodzaj": "wyjscie_zawiera",
        "tekst": [
@@ -681,15 +708,23 @@
       "Lekcja „Słowniki i krotki”. slownik.py: wagi = {\"Krasula\": 612, \"Mućka\": 580}.",
       "Cztery funkcje: dodaj(wagi, imie, waga) (wagi[imie] = waga), zmien (to samo, ale najpierw if imie in wagi), usun (del wagi[imie] po sprawdzeniu), wypisz_posortowane (for imie, waga in sorted(wagi.items(), key=lambda p: p[1])).",
       "Menu w pętli jak w liście zakupów, ale operacje wołają funkcje. Zapytaj Asystenta o lambda, jeśli nie rozumiesz key= — albo najpierw zrób wersję bez sortowania.",
-      "Test: usuń zwierzę, którego nie ma → komunikat, nie KeyError. Dodaj drugi raz to samo imię → co się dzieje ze starą wagą? Zapisz."
+      "Test: usuń zwierzę, którego nie ma → komunikat, nie KeyError. Dodaj drugi raz to samo imię → co się dzieje ze starą wagą? Zapisz.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: 2, Niema, 3, 0 i zalicza, gdy w wyjściu są: Krasula, Mućka. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Wypisanie posortowane rosnąco po wadze; brak KeyError przy nieistniejącym imieniu.",
      "problemy": [],
      "cwiczenie": {
       "plik": "slownik.py",
+      "przyklad": "ceny = {\"pasza\": 120, \"siano\": 80}\n\n\ndef dodaj_cene(ceny, produkt, cena):\n    \"\"\"Dodaje lub nadpisuje cenę produktu.\"\"\"\n    ceny[produkt] = cena\n\n\ndef usun_cene(ceny, produkt):\n    \"\"\"Usuwa produkt, jeśli jest w słowniku.\"\"\"\n    if produkt in ceny:\n        del ceny[produkt]\n    else:\n        print(\"nie ma takiego produktu\")\n\n\ndodaj_cene(ceny, \"otręby\", 95)\nusun_cene(ceny, \"sól\")\nfor produkt, cena in sorted(ceny.items(), key=lambda para: para[1]):\n    print(produkt, cena)\n",
+      "podpowiedz": "Przed del i przed odczytem sprawdź: if imie in wagi. Sortowanie po wartości: sorted(wagi.items(), key=lambda p: p[1]). Menu jak w liście zakupów: 1 dodaj, 2 usuń, 3 wypisz, 0 koniec. „Sprawdź wynik” podaje: 2, Niema (usunięcie nieistniejącego — bez KeyError), 3 (wypisanie), 0 i szuka w wyjściu Krasula i Mućka.",
+      "stdin": "2\nNiema\n3\n0\n",
       "sprawdzenie": {
-       "rodzaj": "uruchom_bez_bledu",
-       "stdin": "Krasula\nNiema\n"
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "2\nNiema\n3\n0\n",
+       "tekst": [
+        "Krasula",
+        "Mućka"
+       ]
       }
      }
     },
@@ -706,16 +741,23 @@
       "Lekcja „Obsługa błędów try / except”. bledy.py: funkcja wczytaj_liczbe(komunikat), która w pętli while True próbuje float(input(komunikat)) w bloku try i zwraca wynik; except ValueError: print(\"To nie liczba\") i pętla kręci się dalej.",
       "Użyj jej: a = wczytaj_liczbe(\"Pierwsza: \"), b = wczytaj_liczbe(\"Druga: \"). Dzielenie a / b w try z except ZeroDivisionError.",
       "Wróć do kalkulator.py, bmi.py i zgadnij.py z poprzednich tygodni: zamień input() na wczytaj_liczbe(). Masz ten sam kod w 3 plikach — zapisz w notatkach, że to problem (rozwiążesz modułem w tygodniu 5).",
-      "Eksperyment: zamień except ValueError na gołe except: i w try zrób literówkę w nazwie zmiennej. Zobacz, jak błąd znika — i dlaczego to źle. Przywróć ValueError."
+      "Eksperyment: zamień except ValueError na gołe except: i w try zrób literówkę w nazwie zmiennej. Zobacz, jak błąd znika — i dlaczego to źle. Przywróć ValueError.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program z danymi: abc, 5, 0 i zalicza, gdy w wyjściu są: nie. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Litera zamiast liczby → komunikat i ponowne pytanie, program nie kończy się. Dzielenie przez 0 → komunikat.",
      "problemy": [],
      "cwiczenie": {
       "plik": "bledy.py",
+      "przyklad": "def wczytaj_calkowita(komunikat):\n    \"\"\"Pyta tak długo, aż użytkownik poda liczbę całkowitą.\"\"\"\n    while True:\n        try:\n            return int(input(komunikat))\n        except ValueError:\n            print(\"To nie jest liczba całkowita, spróbuj jeszcze raz\")\n\n\nsztuk = wczytaj_calkowita(\"Ile sztuk bydła? \")\nprint(\"Zapisano:\", sztuk)\n",
+      "podpowiedz": "Funkcja wczytaj_liczbe: while True → try: return float(input(komunikat)) → except ValueError: komunikat. Dzielenie a / b w try z except ZeroDivisionError. „Sprawdź wynik” podaje: abc, 5, 0 — program musi przeżyć literę i zero (bez tracebacku) i wypisać komunikaty (np. „To nie liczba”, „Nie dzielimy przez zero”).",
       "stdin": "abc\n5\n0\n",
       "sprawdzenie": {
-       "rodzaj": "uruchom_bez_bledu",
-       "stdin": "abc\n5\n0\n7\n"
+       "rodzaj": "wyjscie_zawiera",
+       "stdin": "abc\n5\n0\n",
+       "tekst": [
+        "nie"
+       ],
+       "min_linii": 1
       }
      }
     },
@@ -732,12 +774,15 @@
       "Lekcja „Moduły random i datetime”. losowanie.py: lista 8 imion zwierząt.",
       "import random; do_kontroli = random.sample(stado, 3) — trzy RÓŻNE (sample), nie choice trzy razy (mógłby się powtórzyć; sprawdź to doświadczalnie w pętli).",
       "import datetime; dzis = datetime.date.today(); termin = dzis + datetime.timedelta(days=7). Wypisz termin.strftime(\"%d.%m.%Y\") i dzień tygodnia: termin.strftime(\"%A\").",
-      "Dodatkowo: policz, ile dni zostało do 1 stycznia przyszłego roku (datetime.date(dzis.year + 1, 1, 1) - dzis).days."
+      "Dodatkowo: policz, ile dni zostało do 1 stycznia przyszłego roku (datetime.date(dzis.year + 1, 1, 1) - dzis).days.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy kończy się bez błędu i wypisuje co najmniej 2 linii. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "Trzy różne imiona i data za tydzień w formacie DD.MM.RRRR.",
      "problemy": [],
      "cwiczenie": {
       "plik": "losowanie.py",
+      "przyklad": "import datetime\nimport random\n\npola = [\"Łąka\", \"Pod lasem\", \"Za stodołą\", \"Przy drodze\", \"Górka\"]\ndo_koszenia = random.sample(pola, 2)      # dwa RÓŻNE pola\nprint(\"Do koszenia:\", do_koszenia)\ndzis = datetime.date.today()\nza_miesiac = dzis + datetime.timedelta(days=30)\nprint(\"Następny przegląd:\", za_miesiac.strftime(\"%d.%m.%Y\"))\n",
+      "podpowiedz": "random.sample(lista, 3) daje 3 różne elementy; random.choice daje jeden (może się powtórzyć). Data za tydzień: dzis + datetime.timedelta(days=7); format: .strftime(\"%d.%m.%Y\"). „Sprawdź wynik” wymaga uruchomienia bez błędu i co najmniej 2 linii.",
       "sprawdzenie": {
        "rodzaj": "uruchom_bez_bledu",
        "min_linii": 2
@@ -761,7 +806,8 @@
       "Funkcja menu() z pętlą while True: wypisuje opcje, wczytuje wybór przez wczytaj_liczbe (skopiuj z bledy.py), woła odpowiednią funkcję, wypisuje wynik. 0 kończy.",
       "Walidacja numeru zadania: nr poza zakresem → komunikat, nie IndexError. Pusty tytuł → nie dodawaj.",
       "Na dole: if __name__ == \"__main__\": menu(). Zapytaj Asystenta, po co ta linia (przyda się w tygodniu 7 przy testach).",
-      "Recenzja → poprawki → commit „dzień 20: menedżer zadań” → push → odhacz. Sobota: quiz tygodnia 3, README, i CHECKLISTA etapu 1 — uczciwie."
+      "Recenzja → poprawki → commit „dzień 20: menedżer zadań” → push → odhacz. Sobota: quiz tygodnia 3, README, i CHECKLISTA etapu 1 — uczciwie.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Dodanie, oznaczenie i usunięcie działają; zły numer i litera nie wywalają programu; każda operacja to osobna funkcja.",
      "problemy": [],
@@ -821,12 +867,15 @@
       "Lekcja „Pliki: open, read, write, with”. zapis.py: lista 5 imion.",
       "Wersja 1 (bez with): f = open(\"stado.txt\", \"w\", encoding=\"utf-8\"); pętla f.write(imie + \"\\n\"); f.close(). Potem f = open(\"stado.txt\", encoding=\"utf-8\"); for linia in f: print(linia.strip()); f.close().",
       "Wersja 2 (z with): to samo w blokach  with open(...) as f:  — bez close(). Porównaj: która wersja zamknie plik, gdy w pętli wystąpi błąd? (Dopisz w środku 1/0 i sprawdź — a potem usuń).",
-      "Otwórz stado.txt w PyCharm i zobacz, co jest w środku. Usuń \"\\n\" z write i zobacz jeszcze raz. Zapisz wniosek."
+      "Otwórz stado.txt w PyCharm i zobacz, co jest w środku. Usuń \"\\n\" z write i zobacz jeszcze raz. Zapisz wniosek.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy kończy się bez błędu i wypisuje co najmniej 5 linii. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "stado.txt ma 5 linii; odczyt wypisuje je bez pustych linii między nimi (strip()).",
      "problemy": [],
      "cwiczenie": {
       "plik": "zapis.py",
+      "przyklad": "zadania = [\"nakarmić\", \"zważyć\", \"wyczyścić boks\"]\nwith open(\"zadania.txt\", \"w\", encoding=\"utf-8\") as f:\n    for z in zadania:\n        f.write(z + \"\\n\")\n\nwith open(\"zadania.txt\", encoding=\"utf-8\") as f:\n    for nr, linia in enumerate(f, start=1):\n        print(nr, linia.strip())\n",
+      "podpowiedz": "Zapis: open(\"stado.txt\", \"w\", encoding=\"utf-8\") i f.write(imie + \"\\n\"); odczyt: for linia in f: print(linia.strip()). Z with nie potrzebujesz close(). „Sprawdź wynik” wymaga uruchomienia bez błędu i co najmniej 5 linii (odczyt).",
       "sprawdzenie": {
        "rodzaj": "uruchom_bez_bledu",
        "min_linii": 5
@@ -847,7 +896,8 @@
       "csv_odczyt.py: import csv; with open(\"stado.csv\", encoding=\"utf-8\", newline=\"\") as f: wiersze = list(csv.DictReader(f)). Wypisz wiersze[0] — zobacz, że to słownik z kluczami z nagłówka.",
       "wagi = [float(w[\"waga\"]) for w in wiersze]  (to list comprehension — krótszy zapis pętli; zapytaj Asystenta, jeśli nowe). Średnia = sum/len. Wypisz z 1 miejscem po przecinku.",
       "Dodatkowo: wypisz imię najcięższego (max(wiersze, key=lambda w: float(w[\"waga\"]))[\"imie\"]) i liczbę zwierząt każdej rasy (słownik licznikowy z pętli).",
-      "Zepsuj dane: w jednym wierszu wpisz „abc” jako wagę → ValueError. Obsłuż: pomiń wiersz z komunikatem, nie przerywaj."
+      "Zepsuj dane: w jednym wierszu wpisz „abc” jako wagę → ValueError. Obsłuż: pomiń wiersz z komunikatem, nie przerywaj.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Średnia liczona poprawnie; wiersz ze złą wagą jest pomijany z ostrzeżeniem.",
      "problemy": [],
@@ -890,7 +940,8 @@
       "dziennik_stada.py. Funkcje: wczytaj(sciezka) → lista słowników z CSV (waga jako float); zapisz_zwierze(sciezka, nr, imie, rasa, waga) → dopisuje wiersz (tryb \"a\", csv.writer, newline=\"\"); statystyki(zwierzeta) → zwraca słownik {liczba, srednia, najciezsze}; po_rasie(zwierzeta, rasa) → lista.",
       "Menu w pętli: 1 dodaj zwierzę (z walidacją wagi > 0), 2 statystyki, 3 szukaj po rasie (bez względu na wielkość liter: .lower() po obu stronach), 0 koniec. Każdy wybór woła funkcję i wypisuje wynik.",
       "Przypadki brzegowe: pusty plik (tylko nagłówek) → statystyki nie dzielą przez zero; brak pliku → utwórz go z nagłówkiem przy pierwszym zapisie (try FileNotFoundError).",
-      "Zrób to na gałęzi feature/dziennik i scal przez pull request — jak w zadaniu 1. Recenzja, commit, push, odhacz. Sobota: quiz 4, README."
+      "Zrób to na gałęzi feature/dziennik i scal przez pull request — jak w zadaniu 1. Recenzja, commit, push, odhacz. Sobota: quiz 4, README.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Po dodaniu 2 zwierząt plik ma 2 nowe wiersze (sprawdź w PyCharm), statystyki się zgadzają, szukanie „hf” znajduje „HF”.",
      "problemy": [],
@@ -928,7 +979,8 @@
       "Lekcja „Klasy i obiekty”. zwierze.py: class Zwierze: z __init__(self, imie, rasa, waga) ustawiającym self.imie, self.rasa, self.waga.",
       "Metoda opis(self) → zwraca f\"{self.imie} ({self.rasa}), {self.waga} kg\". Metoda przybierz(self, kg) → self.waga += kg.",
       "Na dole: 3 obiekty (krasula = Zwierze(\"Krasula\", \"HF\", 612) …), wywołaj przybierz na jednym, wypisz opisy wszystkich w pętli po liście [krasula, mucka, laciata].",
-      "Eksperyment: wypisz krasula — zobaczysz <__main__.Zwierze object at 0x…>. Dodaj metodę __str__(self) zwracającą opis() i wypisz ponownie. Zapytaj Asystenta, co się zmieniło."
+      "Eksperyment: wypisz krasula — zobaczysz <__main__.Zwierze object at 0x…>. Dodaj metodę __str__(self) zwracającą opis() i wypisz ponownie. Zapytaj Asystenta, co się zmieniło.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy kończy się bez błędu i wypisuje co najmniej 1 linii. „Otwórz przykład” — ta sama konstrukcja w innym kontekście; przepisz ideę, nie tekst."
      ],
      "sprawdz": "print(krasula) wypisuje czytelny opis; po przybierz(8) waga w opisie jest o 8 większa.",
      "problemy": [
@@ -936,8 +988,11 @@
      ],
      "cwiczenie": {
       "plik": "zwierze.py",
+      "przyklad": "class Maszyna:\n    def __init__(self, nazwa, rok, motogodziny):\n        self.nazwa = nazwa\n        self.rok = rok\n        self.motogodziny = motogodziny\n\n    def pracuj(self, godziny):\n        self.motogodziny += godziny\n\n    def __str__(self):\n        return f\"{self.nazwa} ({self.rok}), {self.motogodziny} mth\"\n\n\nciagnik = Maszyna(\"Ursus\", 1998, 4200)\nciagnik.pracuj(6)\nprint(ciagnik)\n",
+      "podpowiedz": "Każda metoda ma self jako pierwszy parametr; __init__ ustawia self.imie, self.rasa, self.waga; __str__ zwraca napis, który print pokaże zamiast <object at 0x…>. „Sprawdź wynik” wymaga uruchomienia bez błędu — wypisz opisy obiektów na dole pliku.",
       "sprawdzenie": {
-       "rodzaj": "uruchom_bez_bledu"
+       "rodzaj": "uruchom_bez_bledu",
+       "min_linii": 1
       }
      }
     },
@@ -955,7 +1010,8 @@
       "Lekcja „Podział kodu na moduły”. Nowy folder menedzer/ w projekcie. Trzy pliki: zadania.py (funkcje dodaj/usun/oznacz/lista_tekstem — przenieś z tygodnia 3), plik.py (zapisz(zadania, sciezka) i wczytaj(sciezka) do pliku JSON: import json; json.dump / json.load), main.py (menu i if __name__ == \"__main__\":).",
       "W main.py:  from zadania import dodaj, usun, oznacz, lista_tekstem  oraz  from plik import zapisz, wczytaj. Przy starcie wczytaj z zadania.json (jeśli jest), przy wyjściu zapisz.",
       "Uruchom: python main.py z folderu menedzer/. Dodaj zadanie, wyjdź, uruchom ponownie — zadanie ma zostać.",
-      "Test podziału: uruchom  python zadania.py  — nic nie powinno się wypisać (bo nie ma tam kodu startowego). Jeśli coś się wypisuje — przenieś to do main.py."
+      "Test podziału: uruchom  python zadania.py  — nic nie powinno się wypisać (bo nie ma tam kodu startowego). Jeśli coś się wypisuje — przenieś to do main.py.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Trzy pliki, każdy z jedną rolą; zadania przeżywają restart programu (plik zadania.json).",
      "problemy": [
@@ -979,11 +1035,11 @@
      "xp": 10,
      "czas_min": 45,
      "kroki": [
-      "Lekcja „venv, pip, requirements.txt, .gitignore”. W terminalu PyCharm, w głównym folderze projektu:  python -m venv .venv  (powstanie folder .venv — kilkadziesiąt MB).",
+      "Lekcja „venv, pip, requirements.txt, .gitignore”. Mentor ma już SWOJE środowisko kursu (zakładka Środowisko) — teraz tworzysz WŁASNE, w projekcie, bo tak robi się w pracy: Mój projekt → „Otwórz terminal tutaj” (albo Terminal w PyCharm), w głównym folderze projektu:  python -m venv .venv  (powstanie folder .venv — kilkadziesiąt MB).",
       "Aktywuj:  .venv\\Scripts\\activate  (Windows; jeśli PowerShell odmawia: wpisz  Set-ExecutionPolicy -Scope CurrentUser RemoteSigned , potwierdź T, spróbuj ponownie). Przed ścieżką pojawi się (.venv).",
       "pip install requests  → zobaczysz pobieranie.  pip list  → requests na liście.  pip freeze > requirements.txt  → plik z nazwami i wersjami.",
       "Utwórz .gitignore (plik zaczynający się od kropki) z liniami:  .venv/  ,  __pycache__/  ,  *.pyc . git status → .venv NIE pojawia się na liście. Commit requirements.txt i .gitignore.",
-      "PyCharm: Settings → Project → Python Interpreter → upewnij się, że wskazuje .venv\\Scripts\\python.exe (zwykle wykryje sam i zapyta)."
+      "PyCharm: Settings → Project → Python Interpreter → upewnij się, że wskazuje .venv\\Scripts\\python.exe (zwykle wykryje sam i zapyta). Uwaga: przycisk „▶ Uruchom” w Mentorze nadal używa środowiska KURSU (ma requests) — terminal z aktywnym (.venv) używa Twojego. Oba to osobne „szafki” z bibliotekami."
      ],
      "sprawdz": "git status nie pokazuje .venv; requirements.txt zawiera requests==x.y.z; w terminalu widać (.venv).",
      "problemy": [
@@ -1003,7 +1059,8 @@
       "Lekcja „Biblioteka requests i API”. W przeglądarce otwórz: https://api.open-meteo.com/v1/forecast?latitude=51.78&longitude=22.62&daily=temperature_2m_min,temperature_2m_max&timezone=Europe/Warsaw — zobacz surowy JSON. To jest to, co dostanie Twój program.",
       "api.py: import requests; odp = requests.get(url, timeout=10); print(odp.status_code) → 200. dane = odp.json(); print(type(dane)) → dict. print(dane.keys()).",
       "Wypisz 3 pola: dane[\"daily\"][\"time\"][0], dane[\"daily\"][\"temperature_2m_min\"][0], dane[\"daily\"][\"temperature_2m_max\"][0]. Dojdź do nich po kolei, wypisując po drodze print(dane[\"daily\"]) itd.",
-      "Obsłuż błędy: try/except requests.exceptions.RequestException (brak internetu — wyłącz Wi‑Fi i sprawdź) i if odp.status_code != 200. Zepsuj URL (literówka) → jaki kod?"
+      "Obsłuż błędy: try/except requests.exceptions.RequestException (brak internetu — wyłącz Wi‑Fi i sprawdź) i if odp.status_code != 200. Zepsuj URL (literówka) → jaki kod?",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy kończy się bez błędu."
      ],
      "sprawdz": "Wypisana data i dwie temperatury; bez internetu — komunikat, nie traceback.",
      "problemy": [],
@@ -1029,7 +1086,8 @@
       "main: pobierz → wypisz tabelkę → zapisz do pogoda.csv → jeśli ostrzeżenia: wypisz „PRZYMROZEK: daty” wyraźnie (np. wielkimi literami).",
       "Tryb planowania najpierw: w Asystencie „chcę zbudować program pogodowy…” (Offline: /plan pogoda) — wypełnij szkielet PLAN.md, dopiero potem koduj.",
       "Przypadki brzegowe: API nie odpowiada → komunikat i wyjście z kodem 1 (import sys; sys.exit(1)); pogoda.csv nie istnieje → utwórz z nagłówkiem.",
-      "requirements.txt aktualny (pip freeze), .gitignore ok, README z instrukcją (venv → pip install -r requirements.txt → python pogoda.py). Commit, push, odhacz. Sobota: quiz 5."
+      "requirements.txt aktualny (pip freeze), .gitignore ok, README z instrukcją (venv → pip install -r requirements.txt → python pogoda.py). Commit, push, odhacz. Sobota: quiz 5.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia program i zalicza, gdy kończy się bez błędu."
      ],
      "sprawdz": "Dwa uruchomienia → pogoda.csv ma 6 wierszy z datą pobrania; dla ujemnej tmin pojawia się ostrzeżenie.",
      "problemy": [],
@@ -1165,11 +1223,12 @@
      "xp": 10,
      "czas_min": 60,
      "kroki": [
-      "Lekcja „pytest: assert, nazewnictwo, uruchamianie”. (.venv) pip install pytest; pip freeze > requirements.txt.",
+      "Lekcja „pytest: assert, nazewnictwo, uruchamianie”. W swoim venv: (.venv) pip install pytest; pip freeze > requirements.txt. (Środowisko kursu w Mentorze ma już pytest — „✔ Sprawdź wynik” uruchomi nim Twoje testy.)",
       "Obok funkcje.py utwórz test_funkcje.py. Na górze: from funkcje import pole_prostokata, czy_parzysta, maksimum, odwroc, silnia. (Jeśli funkcje.py ma printy na najwyższym poziomie — wykonają się przy imporcie; przenieś je pod if __name__ == \"__main__\".)",
       "5 funkcji testowych: def test_pole_3_na_4(): assert pole_prostokata(3, 4) == 12 … po jednej na funkcję. Nazwa testu mówi, CO sprawdza.",
       "Uruchom:  pytest -v  → 5 zielonych PASSED. Zepsuj funkcję silnia (zwróć n zamiast wyniku) → pytest → czerwony FAILED z pokazaniem obu wartości. Przeczytaj ten komunikat uważnie — to Twoje narzędzie pracy. Napraw.",
-      "Dodaj test przypadku brzegowego: silnia(0) == 1 i maksimum([]) — co ma zwrócić? Zdecyduj (None? błąd?), napisz test, dopasuj funkcję."
+      "Dodaj test przypadku brzegowego: silnia(0) == 1 i maksimum([]) — co ma zwrócić? Zdecyduj (None? błąd?), napisz test, dopasuj funkcję.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku test_funkcje.py — zielone = zaliczone."
      ],
      "sprawdz": "pytest -v pokazuje ≥ 6 PASSED; celowe zepsucie funkcji daje FAILED.",
      "problemy": [
@@ -1178,7 +1237,8 @@
      ],
      "cwiczenie": {
       "plik": "test_funkcje.py",
-      "szablon": "# test_funkcje.py — 5 testów funkcji z funkcje.py\nfrom funkcje import pole_prostokata\n\n\ndef test_pole_prostokata():\n    assert pole_prostokata(3, 4) == 12\n",
+      "szablon": "# test_funkcje.py — 5 testów funkcji z funkcje.py (ten sam katalog)\nfrom funkcje import pole_prostokata\n\n\ndef test_pole_prostokata():\n    assert pole_prostokata(3, 4) == 12\n",
+      "podpowiedz": "Plik test_*.py, funkcje def test_*, jeden assert z konkretną wartością. funkcje.py musi leżeć w tym samym katalogu i nie może wywoływać input() przy imporcie (kod startowy pod if __name__ == \"__main__\":). „Sprawdź wynik” uruchamia pytest w środowisku kursu — zielone = zaliczone.",
       "sprawdzenie": {
        "rodzaj": "pytest"
       }
@@ -1196,7 +1256,8 @@
      "kroki": [
       "Lekcja „parametrize i fixtures”. test_bmi.py: from bmi import oblicz_bmi, kategoria (z refaktoru tygodnia 6).",
       "@pytest.mark.parametrize(\"wzrost, waga, oczekiwana\", [(1.80, 50, \"niedowaga\"), (1.80, 60, \"norma\"), (1.80, 75, \"norma\"), (1.80, 85, \"nadwaga\"), (1.80, 100, \"otyłość\"), (1.60, 47, \"niedowaga\")]) nad def test_kategoria(wzrost, waga, oczekiwana): assert kategoria(oblicz_bmi(wzrost, waga)) == oczekiwana.",
-      "pytest -v → 6 linii test_kategoria[1.8-50-niedowaga] … Każdy przypadek osobno. Dodaj przypadek GRANICZNY: BMI dokładnie 25.0 (wzrost 2.0, waga 100) — norma czy nadwaga? Sprawdź, co mówi Twoja funkcja, i czy to zgodne z zamiarem."
+      "pytest -v → 6 linii test_kategoria[1.8-50-niedowaga] … Każdy przypadek osobno. Dodaj przypadek GRANICZNY: BMI dokładnie 25.0 (wzrost 2.0, waga 100) — norma czy nadwaga? Sprawdź, co mówi Twoja funkcja, i czy to zgodne z zamiarem.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku test_bmi.py — zielone = zaliczone."
      ],
      "sprawdz": "7 parametryzowanych przypadków, wszystkie zielone, w tym graniczny.",
      "problemy": [],
@@ -1222,7 +1283,8 @@
       "W folderze menedzer/: test_zadania.py. Fixture: @pytest.fixture def menedzer(): z = []; dodaj(z, \"nakarmić\"); dodaj(z, \"zważyć\"); dodaj(z, \"szczepienie\"); return z.",
       "4 testy przyjmujące menedzer jako argument: test_dodaj_zwieksza_liste(menedzer) (len == 4 po dodaniu), test_usun(menedzer), test_oznacz_ustawia_zrobione(menedzer), test_lista_tekstem_zawiera_numeracje(menedzer).",
       "Sprawdź izolację: w pierwszym teście dodaj zadanie — czy drugi test widzi 3 czy 4? (Powinien 3 — fixture tworzy świeżą listę dla każdego testu.) Zapisz w notatkach, dlaczego to ważne.",
-      "Przenieś fixture do conftest.py w tym samym folderze — testy nadal działają bez importu. Zapytaj Asystenta, jak pytest ją znajduje."
+      "Przenieś fixture do conftest.py w tym samym folderze — testy nadal działają bez importu. Zapytaj Asystenta, jak pytest ją znajduje.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku test_menedzer.py — zielone = zaliczone."
      ],
      "sprawdz": "pytest -v: 4 PASSED; fixture w conftest.py; każdy test zaczyna z 3 zadaniami.",
      "problemy": [],
@@ -1263,7 +1325,8 @@
       "Cel: ≥ 15 testów łącznie dla menedżera zadań i dziennika stada (test_zadania.py + test_dziennik.py). Lista przypadków brzegowych do pokrycia: pusta lista (statystyki, lista_tekstem), zły typ (dodaj(z, 123) — co ma się stać? zdecyduj i przetestuj), duplikat (dodanie tego samego tytułu dwa razy), zły numer (usun(z, 99) → brak zmian, nie błąd), wiersz CSV z błędną wagą → pominięty.",
       "Każdy test: jedna rzecz, nazwa mówiąca co sprawdza, assert z konkretną wartością. Testy wyjątków: with pytest.raises(ValueError): … — jeśli zdecydujesz, że funkcja ma rzucać.",
       "pytest -v z folderu głównego: wszystkie zielone. pytest --collect-only | wc -l (PowerShell: Measure-Object) → policz, ile masz.",
-      "Recenzja testów: „przejrzyj @test_dziennik.py”. Commit „dzień 35: 15 testów z przypadkami brzegowymi”. Sobota: quiz 7."
+      "Recenzja testów: „przejrzyj @test_dziennik.py”. Commit „dzień 35: 15 testów z przypadkami brzegowymi”. Sobota: quiz 7.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku test_dziennik.py — zielone = zaliczone."
      ],
      "sprawdz": "pytest -v wypisuje ≥ 15 PASSED; co najmniej 5 testów dotyczy przypadków brzegowych.",
      "problemy": [],
@@ -1302,7 +1365,8 @@
       "saucedemo.py: from selenium import webdriver; from selenium.webdriver.common.by import By; driver = webdriver.Chrome(); driver.get(\"https://www.saucedemo.com\"). Uruchom — otworzy się Chrome z napisem „Chrome is being controlled by automated test software”. Zamknie się po końcu skryptu (dodaj input(\"Enter…\") na końcu, żeby zobaczyć).",
       "W Chrome na saucedemo: F12 → zakładka Elements → kliknij strzałkę (lewy górny róg) → kliknij pole login → zobacz id=\"user-name\". Tak samo hasło i przycisk.",
       "driver.find_element(By.ID, \"user-name\").send_keys(\"standard_user\"); …password → \"secret_sauce\"; …login-button → .click(). driver.save_screenshot(\"po_logowaniu.png\"); driver.quit().",
-      "Sprawdź po_logowaniu.png — widać sklep? Zmień hasło na błędne i zrób drugi zrzut — widać czerwony komunikat?"
+      "Sprawdź po_logowaniu.png — widać sklep? Zmień hasło na błędne i zrób drugi zrzut — widać czerwony komunikat?",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Skrypt loguje się bez klikania ręcznego i zostawia zrzut ekranu ze sklepem.",
      "problemy": [
@@ -1330,7 +1394,8 @@
       "Dla każdego znajdź trzema sposobami: By.ID (jeśli ma id), By.CSS_SELECTOR (#username, button[type='submit'], h2, a[href*='elemental']), By.XPATH (//input[@id='username'], //button[contains(., 'Login')], //h2).",
       "Wypisz dla każdego: element.tag_name, element.text lub get_attribute(\"placeholder\"). Jeśli trzy sposoby dają ten sam element — tekst się zgadza.",
       "Sprawdzaj selektory PRZED kodem w konsoli Chrome (F12 → Console): document.querySelector(\"#username\") dla CSS, $x(\"//h2\") dla XPath. Jeśli null — selektor zły.",
-      "W notatkach tabela: element | id | CSS | XPath | który najstabilniejszy i dlaczego."
+      "W notatkach tabela: element | id | CSS | XPath | który najstabilniejszy i dlaczego.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Skrypt wypisuje 5 elementów × 3 sposoby bez NoSuchElementException; tabela w notatkach.",
      "problemy": [],
@@ -1354,7 +1419,8 @@
       "Lekcja „WebDriverWait i Page Object Model” (część o Wait). formularz.py: the-internet.herokuapp.com/login → wpisz tomsmith / SuperSecretPassword! → kliknij Login.",
       "Po kliknięciu strona przeładowuje się — komunikat „You logged into a secure area!” pojawia się z opóźnieniem. BEZ time.sleep: from selenium.webdriver.support.ui import WebDriverWait; from selenium.webdriver.support import expected_conditions as EC; wait = WebDriverWait(driver, 10); komunikat = wait.until(EC.visibility_of_element_located((By.ID, \"flash\"))).text.",
       "assert \"secure area\" in komunikat — pierwszy assert w Selenium. Potem wersja z błędnym hasłem i assert \"invalid\" in komunikat.lower().",
-      "Eksperyment: ustaw WebDriverWait(driver, 0.01) → TimeoutException. Przeczytaj, zapisz: co się stało i dlaczego sleep(5) nie jest odpowiedzią."
+      "Eksperyment: ustaw WebDriverWait(driver, 0.01) → TimeoutException. Przeczytaj, zapisz: co się stało i dlaczego sleep(5) nie jest odpowiedzią.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Oba scenariusze (dobre i złe hasło) kończą się bez wyjątku, asserty przechodzą, zero time.sleep w pliku.",
      "problemy": [],
@@ -1378,7 +1444,8 @@
       "Lekcja — część o POM. Folder meridianbank_tests/ (albo w projekcie MeridianBank, jeśli masz). Jeśli MeridianBank nie istnieje — użyj saucedemo.com z tymi samymi metodami.",
       "pages/login_page.py: class LoginPage z stałymi lokatorów jako krotki (USER = (By.ID, \"…\")), __init__(self, driver) z self.wait = WebDriverWait(driver, 10), open() → driver.get(URL), login(user, haslo) → send_keys + click, error_text() → wait.until(visibility…).text.",
       "pages/__init__.py (pusty plik — żeby folder był pakietem). Skrypt próbny: page = LoginPage(driver); page.open(); page.login(\"zly\", \"zle\"); print(page.error_text()).",
-      "Zasada POM: w klasie strony NIE ma assertów; w testach NIE ma find_element. Sprawdź swój kod pod tym kątem."
+      "Zasada POM: w klasie strony NIE ma assertów; w testach NIE ma find_element. Sprawdź swój kod pod tym kątem.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "LoginPage ma 3 metody i lokatory w jednym miejscu; skrypt próbny wypisuje komunikat błędu przez page.error_text().",
      "problemy": [],
@@ -1404,7 +1471,8 @@
       "Page Objects: LoginPage (masz), DashboardPage (saldo(), wyloguj(), przejdz_do_przelewu()), TransferPage (wykonaj(odbiorca, kwota), komunikat()). Każda strona: lokatory + akcje, zero assertów.",
       "test_meridianbank.py — 5 testów: test_logowanie_poprawne (po login widać dashboard), test_bledne_haslo (error_text zawiera „invalid”/„błędn”), test_przelew (saldo przed − kwota == saldo po), test_saldo_wyswietla_liczbe, test_wylogowanie (po wyloguj widać formularz logowania). Każdy test: 3–8 linii, czyta się jak scenariusz.",
       "pytest -v: 5 PASSED. Zepsuj jeden lokator w LoginPage → wszystkie testy logowania czerwone → napraw w JEDNYM miejscu. To jest wartość POM — zapisz.",
-      "README folderu: jak uruchomić (venv, requirements, pytest), zrzut z konsoli. Commit, push, odhacz. Sobota: quiz 8."
+      "README folderu: jak uruchomić (venv, requirements, pytest), zrzut z konsoli. Commit, push, odhacz. Sobota: quiz 8.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku test_meridianbank.py — zielone = zaliczone."
      ],
      "sprawdz": "5 testów E2E zielonych; żaden test nie zawiera find_element; żadna strona nie zawiera assert.",
      "problemy": [],
@@ -1563,7 +1631,8 @@
       "baza.py: polacz(sciezka=\"stado.db\") → connection z CREATE TABLE IF NOT EXISTS dla obu tabel (zdarzenia z FOREIGN KEY(zwierze_id) REFERENCES zwierzeta(id)). Włącz klucze obce: con.execute(\"PRAGMA foreign_keys = ON\").",
       "Funkcje: dodaj_zwierze(con, imie, rasa, data_ur, waga) → zwraca nowe id (cursor.lastrowid); pobierz_zwierzeta(con) → lista krotek; usun_zwierze(con, id); dodaj_zdarzenie(con, zwierze_id, data, typ, opis); pobierz_zdarzenia(con, zwierze_id) → posortowane po dacie. ZAWSZE parametry przez ?, nigdy f-string w SQL.",
       "Skrypt próbny na dole pod if __name__: dodaj 2 zwierzęta, 1 zdarzenie, wypisz. Uruchom dwa razy — czy dane się dublują? (Tak — baza trwa. Usuń stado.db między próbami albo zrób funkcję wyczysc.) Dodaj stado.db do .gitignore.",
-      "Obejrzyj bazę: PyCharm → View → Tool Windows → Database → + → Data Source → SQLite → wskaż stado.db. Zobacz tabele i dane."
+      "Obejrzyj bazę: PyCharm → View → Tool Windows → Database → + → Data Source → SQLite → wskaż stado.db. Zobacz tabele i dane.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Po skrypcie próbnym w stado.db są 2 zwierzęta i 1 zdarzenie (widać w PyCharm Database); usunięcie zwierzęcia z zdarzeniami daje błąd klucza obcego (zapisz, co z tym zrobisz).",
      "problemy": [],
@@ -1587,7 +1656,8 @@
       "stado.py — logika BEZ SQL i BEZ input/print: class Stado z con w __init__. zarejestruj(imie, rasa, data_ur, waga) → walidacja (imie niepuste, waga > 0, data w formacie RRRR-MM-DD przez datetime.date.fromisoformat) → ValueError z komunikatem albo baza.dodaj_zwierze.",
       "dodaj_zdarzenie(zwierze_id, data, typ, opis) → typ tylko z listy TYPY = (\"szczepienie\", \"wycielenie\", \"leczenie\", \"wazenie\") — inaczej ValueError; zwierze_id musi istnieć.",
       "zdarzenia_po_dacie(od, do=None) → lista zdarzeń wszystkich zwierząt w zakresie dat, posortowana; nadchodzace_szczepienia(dni=30) — jeśli ostatnie szczepienie > 365 dni temu.",
-      "Zasada: stado.py woła baza.py, nigdy odwrotnie; main.py woła stado.py. Narysuj te trzy klocki ze strzałkami w PLAN.md."
+      "Zasada: stado.py woła baza.py, nigdy odwrotnie; main.py woła stado.py. Narysuj te trzy klocki ze strzałkami w PLAN.md.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Stado(con).zarejestruj(\"\", \"HF\", \"2020-01-01\", 600) rzuca ValueError; poprawne dane zwracają id; zdarzenie z typem „inne” rzuca ValueError.",
      "problemy": [],
@@ -1612,7 +1682,8 @@
       "conftest.py: @pytest.fixture def con(tmp_path): c = baza.polacz(tmp_path / \"test.db\"); yield c; c.close(). Każdy test ma CZYSTĄ bazę w katalogu tymczasowym — nigdy Twój stado.db.",
       "test_baza.py (≥ 6): dodanie zwraca rosnące id, pobierz po dodaniu ma 1 element, usunięcie usuwa, zdarzenia posortowane po dacie, zdarzenie dla nieistniejącego zwierzęcia → błąd (sqlite3.IntegrityError), pusta baza → pusta lista.",
       "test_stado.py (≥ 8): walidacje (puste imię, waga 0, zła data, zły typ zdarzenia) przez pytest.raises(ValueError), zdarzenia_po_dacie zwraca tylko zakres, nadchodzace_szczepienia dla zwierzęcia bez szczepień i ze starym szczepieniem.",
-      "pytest -v → wszystko zielone. pip install pytest; requirements.txt; tests.yml jak w tygodniu 9 → Actions zielone od pierwszego pusha testów."
+      "pytest -v → wszystko zielone. pip install pytest; requirements.txt; tests.yml jak w tygodniu 9 → Actions zielone od pierwszego pusha testów.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku test_baza.py — zielone = zaliczone."
      ],
      "sprawdz": "≥ 14 testów zielonych lokalnie i w Actions; żaden test nie dotyka stado.db (sprawdź: usuń stado.db i uruchom pytest — nadal zielone).",
      "problemy": [],
@@ -1665,7 +1736,8 @@
       "app.py: from flask import Flask, render_template; app = Flask(__name__); @app.route(\"/\") def lista(): con = baza.polacz(); return render_template(\"lista.html\", zwierzeta=baza.pobierz_zwierzeta(con)). Na dole if __name__: app.run(debug=True).",
       "Folder templates/ i lista.html: minimalny HTML (<!doctype html>, <h1>Stado</h1>, <table>) z pętlą Jinja: {% for z in zwierzeta %}<tr><td>{{ z[1] }}</td><td>{{ z[2] }}</td></tr>{% endfor %}. Zapytaj Asystenta, czym jest szablon Jinja.",
       "python app.py → w przeglądarce http://127.0.0.1:5000 → tabela ze zwierzętami z bazy. Zmień coś w HTML, odśwież (debug=True przeładowuje sam). Ctrl+C zatrzymuje serwer.",
-      "F12 → Elements: obejrzyj HTML, który wygenerował Flask — tydzień później będziesz pisać do niego lokatory, więc nadaj tabeli id=\"zwierzeta\" już teraz."
+      "F12 → Elements: obejrzyj HTML, który wygenerował Flask — tydzień później będziesz pisać do niego lokatory, więc nadaj tabeli id=\"zwierzeta\" już teraz.",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” potwierdzi tylko, że plik istnieje — to zadanie sprawdzasz sam według „Gotowe, gdy” i odhaczasz ręcznie."
      ],
      "sprawdz": "Strona główna pokazuje tabelę zwierząt z bazy; dodanie zwierzęcia przez main.py i odświeżenie strony pokazuje nowe.",
      "problemy": [
@@ -1725,7 +1797,8 @@
       "pages/: ListaPage (open(), imiona() → lista tekstów z tabeli #zwierzeta, kliknij_dodaj(), otworz_historie(imie)), DodajPage (wypelnij(imie, rasa, data, waga), zapisz(), blad()), HistoriaPage (naglowek(), zdarzenia() → lista wierszy).",
       "conftest.py: fixture serwer — uruchamia Flask w osobnym wątku lub procesie na porcie 5001 z bazą tymczasową (podaj ścieżkę przez zmienną środowiskową, np. STADO_DB; app.py czyta os.environ.get(\"STADO_DB\", \"stado.db\")); yield; zatrzymaj. Fixture driver z --headless=new. To najtrudniejszy kawałek tygodnia — zapytaj Asystenta: „jak uruchomić Flask w tle na czas testów pytest” (Offline: /temat flask + własna próba; API/Claude Code: pełna pomoc, ale tłumacz każdą linię).",
       "3 testy: test_lista_pokazuje_zwierzeta (dodaj przez bazę → otwórz → imię na liście), test_dodanie_przez_formularz (wypełnij → zapisz → na liście), test_historia (zdarzenie przez bazę → otwórz historię → widać typ).",
-      "tests.yml: krok setup-chrome, STADO_DB w env, pytest tests/ -v. Push → Actions zielone (jednostkowe + Selenium). Czerwone w CI, zielone lokalnie? Czytaj log: zwykle brak headless albo serwer nie zdążył wstać (dodaj pętlę czekania na odpowiedź HTTP, max 10 s)."
+      "tests.yml: krok setup-chrome, STADO_DB w env, pytest tests/ -v. Push → Actions zielone (jednostkowe + Selenium). Czerwone w CI, zielone lokalnie? Czytaj log: zwykle brak headless albo serwer nie zdążył wstać (dodaj pętlę czekania na odpowiedź HTTP, max 10 s).",
+      "W Mentorze (bez terminala): pasek „Ćwiczenie w Mentorze” pod zadaniem → „Utwórz plik ćwiczenia” → pisz, zapisuj (Ctrl+S) → „▶ Uruchom” (dane dla input() w polu nad wyjściem, linia = odpowiedź). „✔ Sprawdź wynik” uruchamia pytest w środowisku kursu na pliku test_web.py — zielone = zaliczone."
      ],
      "sprawdz": "3 testy Selenium zielone lokalnie i w Actions obok testów jednostkowych.",
      "problemy": [],
@@ -1873,11 +1946,11 @@
     "jak działa program",
     "mentor"
    ],
-   "wyjasnienie": "## Co to za program i dla kogo\n13 tygodni (0–12): Python od zera, Git, testy automatyczne (pytest, Selenium) i projekt portfolio na GitHubie — pod rolę Junior QA. Zaczynasz bez żadnej wiedzy o programowaniu; potrzebujesz komputera z Windows/macOS/Linux, 90 minut dziennie i cierpliwości na pierwsze dwa tygodnie, gdy wszystko jest nowe (terminal, pliki .py, commit). Uczysz się z asystentem AI na zasadzie 70/30: 70% kodu piszesz sam.\n## Jak wygląda dzień nauki\n- Panel → karta „Dzisiaj”: Mentor pokazuje zadanie dnia i lekcję do niego (pon–czw zadania 1–4, piątek — zadanie tygodnia, sobota — quiz, niedziela — wolne).\n- Lekcje → czytasz lekcję dnia (15–25 min): cel, wyjaśnienie, przykład kodu, pułapki, 3 zadania, pytania, test.\n- Plan → zadanie dnia → rozwijasz „Jak to zrobić”: kompletne kroki (co wpisać w terminal, jak nazwać plik, jak sprawdzić, że działa).\n- Sesja nauki → timer 4 faz: nowy temat 20 min → kodowanie 50 → recenzja 15 → podsumowanie 5; sam zapisuje czas i serię.\n- Plan → ✔ przy zadaniu, gdy kod działa i jest w commicie (+10 XP; zadanie tygodnia +25). Dziennik → zdanie, czego się nauczyłeś (+3 XP).\n- Sobota: Quiz tygodnia. Po każdym etapie: Checklista — co masz umieć.\n## Twój warsztat: katalog projektu\nFolder „nauka-python” (tworzysz w tygodniu 0, wskazujesz w Ustawieniach lub w Mój projekt). Tam są wszystkie pliki .py, CLAUDE.md z zasadami pracy asystenta i repozytorium Git. Mentor wykrywa pliki z zadań i pokazuje liczbę commitów — to Twój dowód postępu.\n## Jak czytać lekcję (5 kroków)\n- 1. Cel — jeśli już to umiesz, od razu test.\n- 2. Wyjaśnienie — czytaj z otwartym PyCharmem i przepisuj (nie kopiuj!) fragmenty kodu, uruchamiaj je.\n- 3. Przykład — zanim przeczytasz do końca, zgadnij, co wypisze; potem uruchom i porównaj.\n- 4. Pułapki — zapisz w dzienniku; to błędy, które każdy robi w pierwszym miesiącu.\n- 5. Zadania (w katalogu projektu, bez rozwiązań), pytania na głos, test 3 pytań (2/3 zalicza).\n## Asystent — nauczyciel, nie wykonawca\nTrzy karty: Subskrypcja (Claude Code w terminalu — pełny model, czyta Twoje pliki), API (własny klucz), Offline (wbudowany: „uczę się pętli”, „przejrzyj @plik.py”, „utknąłem… błąd: …”, „uruchom @plik.py”, „zadaj mi 3 pytania”, „quiz z tygodnia 2”). Zasada: 15 minut własnej walki, potem prośba o podpowiedź, nie o rozwiązanie; każdy kod od asystenta przepisujesz ręcznie. Gotowe prompty — zakładka Prompty.\n## Jeśli coś nie idzie\n- Nie wiesz, co dziś robić → Panel → „Dzisiaj”.\n- Błąd, którego nie rozumiesz → skopiuj ostatnią linię (np. „TypeError: …”) do Asystenta: „utknąłem: [błąd]” — wytłumaczy, nie poprawi.\n- Brak czasu → Ustawienia → skala sesji 50%; wpis ręczny czasu z testem. 30 minut dziennie bije 3 godziny w weekend.\n- Przerwa → Panel pokaże, ile dni minęło; XP i odznaki zostają, seria rusza od nowa.",
-   "przyklad": "Dzień 1 (tydzień 0):\n1. Panel → „Dzisiaj”: „Zainstaluj Pythona, Gita, PyCharm i Claude Code”.\n2. Lekcje → ta lekcja → test.  3. Plan → tydzień 0 → zadanie 1 → „Jak to zrobić” (krok po kroku, z komendami do skopiowania).\n4. Sesja nauki → start timera.  5. Plan → ✔ (+10 XP).  6. Dziennik: „Zainstalowałem Pythona; python --version działa; nie rozumiem jeszcze, co to PATH”.",
+   "wyjasnienie": "## Co to za program i dla kogo\n13 tygodni (0–12): Python od zera, Git, testy automatyczne (pytest, Selenium) i projekt portfolio na GitHubie — pod rolę Junior QA. Zaczynasz bez żadnej wiedzy o programowaniu; potrzebujesz komputera z Windows/macOS/Linux, 90 minut dziennie i cierpliwości na pierwsze dwa tygodnie, gdy wszystko jest nowe (pliki .py, uruchamianie, commit). Pythona i biblioteki przygotowuje Mentor (zakładka Środowisko) — nie musisz niczego szukać ani instalować z terminala. Uczysz się z asystentem AI na zasadzie 70/30: 70% kodu piszesz sam.\n## Jak wygląda dzień nauki\n- Panel → karta „Dzisiaj”: Mentor pokazuje zadanie dnia i lekcję do niego (pon–czw zadania 1–4, piątek — zadanie tygodnia, sobota — quiz, niedziela — wolne).\n- Lekcje → czytasz lekcję dnia (15–25 min): cel, wyjaśnienie, przykład kodu, pułapki, 3 zadania, pytania, test.\n- Plan → zadanie dnia → rozwijasz „Jak to zrobić”: kompletne kroki (jak nazwać plik, co wpisać, jak sprawdzić, że działa). Pod zadaniem z plikiem .py jest pasek „Ćwiczenie w Mentorze”: Utwórz plik ćwiczenia → ▶ Uruchom → ✔ Sprawdź wynik — kod uruchamia się przyciskiem, bez terminala, a wynik sprawdza test zadania.\n- Sesja nauki → timer 4 faz: nowy temat 20 min → kodowanie 50 → recenzja 15 → podsumowanie 5; sam zapisuje czas i serię.\n- Plan → ✔ przy zadaniu, gdy kod działa i jest w commicie (+10 XP; zadanie tygodnia +25). Zadania z testem odhaczają się same po „Sprawdź wynik”; bez testu Mentor mówi „Plik istnieje — wymaga sprawdzenia” i odhaczasz sam. Dziennik → zdanie, czego się nauczyłeś (+3 XP).\n- Sobota: Quiz tygodnia. Po każdym etapie: Checklista — co masz umieć.\n## Twój warsztat: Środowisko i katalog roboczy\nZakładka Środowisko: Mentor sprawdza, czy Python, biblioteki (pytest, requests, selenium, flask), Git i przeglądarka naprawdę działają, i instaluje brakujące za Twoją zgodą — do osobnego środowiska kursu, bez uprawnień administratora. „Gotowe” pojawia się dopiero, gdy testy końcowe przejdą.\nKatalog roboczy (Mój projekt → „Utwórz katalog roboczy kursu”, domyślnie Dokumenty\\Mentor\\python-junior-qa\\PRACA, albo własny „nauka-python”): tam są wszystkie pliki .py, CLAUDE.md z zasadami pracy asystenta i repozytorium Git. Mentor wykrywa pliki z zadań i pokazuje liczbę commitów — to Twój dowód postępu.\n## Jak czytać lekcję (5 kroków)\n- 1. Cel — jeśli już to umiesz, od razu test.\n- 2. Wyjaśnienie — czytaj z otwartym edytorem i przepisuj (nie kopiuj!) fragmenty kodu, uruchamiaj je (▶ Uruchom w Mentorze albo python plik.py).\n- 3. Przykład — zanim przeczytasz do końca, zgadnij, co wypisze; potem uruchom i porównaj.\n- 4. Pułapki — zapisz w dzienniku; to błędy, które każdy robi w pierwszym miesiącu.\n- 5. Zadania (w katalogu projektu, bez rozwiązań), pytania na głos, test 3 pytań (2/3 zalicza).\n## Asystent — nauczyciel, nie wykonawca\nTrzy karty: Subskrypcja (Claude Code w terminalu — pełny model, czyta Twoje pliki), API (własny klucz), Offline (wbudowany: „uczę się pętli”, „przejrzyj @plik.py”, „utknąłem… błąd: …”, „uruchom @plik.py”, „zadaj mi 3 pytania”, „quiz z tygodnia 2”). Zasada: 15 minut własnej walki, potem prośba o podpowiedź, nie o rozwiązanie; każdy kod od asystenta przepisujesz ręcznie. Gotowe prompty — zakładka Prompty.\n## Jeśli coś nie idzie\n- Nie wiesz, co dziś robić → Panel → „Dzisiaj”.\n- Błąd, którego nie rozumiesz → skopiuj ostatnią linię (np. „TypeError: …”) do Asystenta: „utknąłem: [błąd]” — wytłumaczy, nie poprawi.\n- Brak czasu → Ustawienia → skala sesji 50%; wpis ręczny czasu z testem. 30 minut dziennie bije 3 godziny w weekend.\n- Przerwa → Panel pokaże, ile dni minęło; XP i odznaki zostają, seria rusza od nowa.",
+   "przyklad": "Dzień 1 (tydzień 0):\n1. Panel → „Dzisiaj”: „Środowisko kursu w Mentorze + Git”.\n2. Lekcje → ta lekcja → test.  3. Plan → tydzień 0 → zadanie 1 → „Jak to zrobić”: Środowisko → Sprawdź ponownie → Zainstaluj brakujące → zgoda → Git z git-scm.com.\n4. Sesja nauki → start timera.  5. Plan → ✔ (+10 XP).  6. Dziennik: „Mentor pobrał Pythona i biblioteki; Git zainstalowałem sam; nie rozumiem jeszcze, co to .venv”.",
    "zadania": [
-    "Otwórz każdą zakładkę w pasku bocznym i zapisz w dzienniku jednym zdaniem, do czego służy.",
-    "Ustaw imię i katalog projektu; sprawdź w Mój projekt, czy Mentor go widzi.",
+    "Otwórz każdą zakładkę w pasku bocznym (także Środowisko) i zapisz w dzienniku jednym zdaniem, do czego służy.",
+    "Ustaw imię i katalog roboczy (Mój projekt → „Utwórz katalog roboczy kursu”); sprawdź, czy Mentor go widzi.",
     "Uruchom Sesję nauki na 2 minuty i zatrzymaj — zobacz na Panelu zapisany czas."
    ],
    "pytania": [
@@ -1891,7 +1964,7 @@
     ],
     [
      "Kiedy odhaczasz zadanie?",
-     "Gdy kod działa (uruchomiony) i jest w commicie — nie po przeczytaniu."
+     "Gdy kod działa (uruchomiony — „▶ Uruchom” lub terminal) i jest w commicie — nie po przeczytaniu. Zadania z testem odhacza „Sprawdź wynik”."
     ]
    ],
    "pulapki": [
@@ -1948,12 +2021,12 @@
     "ścieżk",
     "sciezk"
    ],
-   "wyjasnienie": "Terminal to okno, w którym rozmawiasz z komputerem tekstem: wpisujesz komendę, naciskasz Enter, komputer odpowiada. Na Windows otwierasz go tak: Start → wpisz „PowerShell” → Enter. Zobaczysz ścieżkę, np. C:\\Users\\Lukasz> — to katalog roboczy, czyli folder, w którym terminal „stoi”. Wszystko, co uruchamiasz, dzieje się w tym folderze.\nTrzy komendy wystarczą na początek: pwd (gdzie jestem), ls (co tu jest — lista plików), cd nazwa (wejdź do folderu; cd .. — wyjdź poziom wyżej). Klawisz Tab dopełnia nazwy — wpisz „cd Doc” i Tab → „cd Documents”. Strzałka w górę przywołuje poprzednią komendę. Ctrl+C przerywa program, który się zapętlił.\nTerminal w PyCharm (zakładka Terminal na dole) to to samo okno, tylko otwarte od razu w folderze projektu — używaj go najczęściej.",
+   "wyjasnienie": "Terminal to okno, w którym rozmawiasz z komputerem tekstem: wpisujesz komendę, naciskasz Enter, komputer odpowiada. Na Windows otwierasz go tak: Start → wpisz „PowerShell” → Enter. Zobaczysz ścieżkę, np. C:\\Users\\Lukasz> — to katalog roboczy, czyli folder, w którym terminal „stoi”. Wszystko, co uruchamiasz, dzieje się w tym folderze.\nTrzy komendy wystarczą na początek: pwd (gdzie jestem), ls (co tu jest — lista plików), cd nazwa (wejdź do folderu; cd .. — wyjdź poziom wyżej). Klawisz Tab dopełnia nazwy — wpisz „cd Doc” i Tab → „cd Documents”. Strzałka w górę przywołuje poprzednią komendę. Ctrl+C przerywa program, który się zapętlił.\nTerminal w PyCharm (zakładka Terminal na dole) to to samo okno, tylko otwarte od razu w folderze projektu. W Mentorze: Mój projekt → „Otwórz terminal tutaj” — otwiera się w katalogu roboczym i ma na początku PATH Pythona z zakładki Środowisko, więc  python plik.py  i  pytest  działają od razu.\nW tygodniach 0–3 terminal nie jest konieczny: przycisk „▶ Uruchom” pod zadaniem robi dokładnie to, co komenda python plik.py. Od tygodnia 4 (Git) terminal staje się codziennym narzędziem — dlatego ćwiczysz go już teraz.",
    "przyklad": "PS C:\\Users\\Lukasz> cd Documents\nPS C:\\Users\\Lukasz\\Documents> ls\n    nauka-python\nPS C:\\Users\\Lukasz\\Documents> cd nauka-python\nPS C:\\Users\\Lukasz\\Documents\\nauka-python> python hello.py\nCześć, tu Łukasz\nPS ...> cd ..        # wracasz do Documents",
    "zadania": [
     "Otwórz PowerShell, wejdź do Dokumentów (cd Documents), wypisz zawartość (ls), wróć (cd ..). Powtórz 3 razy bez patrzenia w notatki.",
     "Utwórz folder z terminala: mkdir proba, wejdź do niego, sprawdź pwd, wyjdź, usuń: rmdir proba.",
-    "W PyCharm otwórz Terminal (Alt+F12) i sprawdź pwd — czy to folder projektu?"
+    "Mój projekt → „Otwórz terminal tutaj” → sprawdź pwd (czy to katalog roboczy?) i python --version (czy to Python z zakładki Środowisko?)."
    ],
    "pytania": [
     [
@@ -2008,83 +2081,87 @@
      "w": "Ctrl+C przerywa bieżący program."
     }
    ],
-   "cel": "otwierasz terminal, przechodzisz między katalogami (cd, pwd, ls/dir) i uruchamiasz plik Pythona z terminala."
+   "cel": "otwierasz terminal (także z Mentora: Mój projekt → „Otwórz terminal tutaj”), przechodzisz między katalogami (cd, pwd, ls/dir) i uruchamiasz plik Pythona z terminala."
   },
   {
    "id": "instalacja",
    "tydzien": 0,
-   "nazwa": "Instalacja narzędzi: Python, Git, PyCharm, Claude Code",
+   "nazwa": "Narzędzia: środowisko kursu w Mentorze, Git, edytor, Claude Code",
    "slowa": [
     "instal",
+    "środowisko",
+    "srodowisko",
+    "venv",
     "python.org",
     "path",
     "pycharm",
     "git-scm",
     "claude doctor",
-    "wersj"
+    "wersj",
+    "zainstaluj brakujące"
    ],
-   "wyjasnienie": "Cztery narzędzia, każde do czegoś innego. PYTHON — interpreter, czyli program, który czyta Twoje pliki .py i je wykonuje; bez niego kod to tylko tekst. GIT — dziennik zmian w projekcie (zdjęcia stanu plików, do których możesz wrócić) i most do GitHuba. PYCHARM — edytor: koloruje kod, podpowiada, podkreśla błędy, ma wbudowany terminal i debugger. CLAUDE CODE — asystent w terminalu (wymaga płatnego planu; bez niego używasz zakładki Asystent w Mentorze).\nNajważniejsze kliknięcie całej instalacji: w instalatorze Pythona zaznacz „Add python.exe to PATH”. PATH to lista folderów, w których Windows szuka programów, gdy wpisujesz komendę. Bez tego „python” w terminalu da „nie jest rozpoznawany”.\nKażdą instalację sprawdzasz tak samo: NOWE okno terminala → komenda --version → numer wersji. Jeśli numer jest — działa. Jeśli błąd — patrz „Pułapki”.",
-   "przyklad": "PS> python --version\nPython 3.12.6\nPS> git --version\ngit version 2.47.0.windows.1\nPS> claude --version        # tylko z subskrypcją\n1.0.xx (Claude Code)\nPS> claude doctor           # lista kontrolna instalacji",
+   "wyjasnienie": "Do kursu potrzebujesz czterech rzeczy, ale tylko jedną instalujesz sam. PYTHON — interpreter, czyli program, który czyta Twoje pliki .py i je wykonuje; bez niego kod to tylko tekst. BIBLIOTEKI — gotowe moduły (pytest, requests, selenium, flask), których użyjesz od tygodnia 5. GIT — dziennik zmian w projekcie i most do GitHuba. EDYTOR — Notatnik wystarczy na start; PyCharm/VS Code kolorują kod, podpowiadają i mają terminal. CLAUDE CODE — asystent w terminalu (wymaga płatnego planu; bez niego używasz zakładki Asystent).\nPythona i biblioteki przygotowuje MENTOR: zakładka Środowisko sprawdza, co naprawdę działa (uruchamia python --version, importuje biblioteki, pyta git --version — nie wierzy samej liście PATH), pokazuje plan instalacji (co, skąd, ile MB) i po Twojej zgodzie tworzy OSOBNE środowisko kursu (.venv) w katalogu Twojego użytkownika, bez uprawnień administratora. Gdy w systemie nie ma Pythona, pobiera oficjalną wersję 3.12 tylko dla kursów. Na końcu uruchamia testy: interpreter, importy, przykładowy pytest, lokalne API — dopiero wtedy mówi „Gotowe”.\nDlaczego osobne środowisko? Bo biblioteki różnych projektów nie mogą się mieszać (poznasz to w tygodniu 5 jako venv). Python „z Windows Store” to tylko skrót — Mentor go pomija.\nGit instalujesz sam z git-scm.com (domyślne ustawienia). Sprawdzasz tak samo jak wszystko: Środowisko → „Sprawdź ponownie” → GOTOWE z numerem wersji. PATH to lista folderów, w których Windows szuka programów wpisywanych w terminalu; Mentor nie potrzebuje PATH, bo zna pełne ścieżki — ale terminal już tak, dlatego nowo zainstalowany program widać dopiero w NOWYM oknie terminala.",
+   "przyklad": "Zakładka Środowisko po „Sprawdź ponownie” na czystym komputerze:\n  BRAK     Python                — Mentor może pobrać Python 3.12 do swojego katalogu\n  BRAK     Środowisko kursu (.venv)\n  BRAK     pytest · requests · selenium · flask\n  BRAK     Git (od tygodnia 0)   — oficjalny instalator: git-scm.com\n  OPCJON.  Microsoft Edge (Selenium od tygodnia 8)\n„Zainstaluj brakujące” → plan: Python 3.12 (46 MB, github.com/astral-sh), .venv (15 MB), biblioteki z PyPI (15–25 MB), testy → Tak.\nPo kilku minutach: GOTOWE przy Pythonie, .venv i bibliotekach; testy zielone; Git nadal BRAK — instalujesz sam → Sprawdź ponownie → GOTOWE.",
    "zadania": [
-    "Zainstaluj Pythona z zaznaczonym PATH, zamknij terminal, otwórz nowy, sprawdź python --version.",
-    "Zainstaluj Git z domyślnymi ustawieniami i sprawdź git --version.",
-    "Zainstaluj PyCharm Community, otwórz folder nauka-python jako projekt i otwórz w nim Terminal."
+    "Zakładka Środowisko → „Sprawdź ponownie” → zapisz w dzienniku, co było BRAK. Potem „Zainstaluj brakujące” i przeczytaj plan, zanim klikniesz Tak.",
+    "Zainstaluj Git z domyślnymi ustawieniami; Środowisko → „Sprawdź ponownie” → numer wersji Gita.",
+    "Mój projekt → „Otwórz terminal tutaj” → python --version i git --version — porównaj z tym, co pokazuje zakładka Środowisko."
    ],
    "pytania": [
     [
-     "Po co zaznaczać „Add Python to PATH”?",
-     "Żeby komenda python działała w terminalu z dowolnego folderu."
+     "Dlaczego Mentor uruchamia programy, zamiast patrzeć na PATH?",
+     "Bo wpis w PATH nie gwarantuje, że program działa (np. skrót ze Store); dopiero python --version z wynikiem to dowód."
     ],
     [
-     "Dlaczego po instalacji trzeba otworzyć NOWE okno terminala?",
-     "Stare okno ma starą listę PATH; nowe wczytuje ją od nowa."
+     "Co to jest środowisko kursu (.venv)?",
+     "Osobny folder z Pythonem i bibliotekami tylko dla tego kursu — nie miesza się z innymi projektami ani z systemem."
     ],
     [
-     "Który z czterech programów wykonuje kod Pythona?",
-     "Interpreter Pythona (python.exe); PyCharm tylko go wywołuje."
+     "Kiedy Mentor pokazuje „Gotowe”?",
+     "Dopiero gdy testy końcowe (interpreter, importy, pytest, API) przejdą — nie po samej instalacji."
     ]
    ],
    "pulapki": [
-    "python --version otwiera Microsoft Store → wyłącz aliasy aplikacji w ustawieniach Windows.",
-    "PyCharm Professional jest płatny — pobierz Community.",
+    "Python ze Sklepu Windows to skrót, nie interpreter — Mentor go pomija; pozwól mu pobrać własnego.",
+    "Git zainstalowany, a Mentor dalej BRAK → „Sprawdź ponownie”, w ostateczności zamknij i otwórz Mentora.",
     "Claude Code bez planu Pro/Max nie zaloguje się — to nie błąd instalacji; użyj Asystenta Offline/API."
    ],
    "test": [
     {
-     "p": "Co oznacza komunikat „python nie jest rozpoznawany jako polecenie”?",
+     "p": "Kto instaluje Pythona i biblioteki kursu?",
      "o": [
-      "Python jest zepsuty",
-      "Pythona nie ma w PATH (nie zaznaczono opcji przy instalacji) albo terminal jest stary",
-      "Brak internetu",
-      "Zła wersja Windows"
+      "Ty, z python.org, zaznaczając PATH",
+      "Mentor — zakładka Środowisko → „Zainstaluj brakujące”, po Twojej zgodzie",
+      "PyCharm",
+      "GitHub"
      ],
      "odp": 1,
-     "w": "Uruchom instalator → Modify → zaznacz PATH, potem nowe okno terminala."
+     "w": "Mentor pokazuje plan, pobiera oficjalne pliki i tworzy osobne środowisko kursu; Ty instalujesz tylko Git (i opcjonalnie edytor, Claude Code)."
     },
     {
-     "p": "Który program jest darmowy i wystarcza do kursu?",
+     "p": "Co oznacza status GOTOWE przy Pythonie w zakładce Środowisko?",
      "o": [
-      "PyCharm Professional",
-      "PyCharm Community",
-      "Tylko Notatnik",
-      "Visual Studio 2022 Enterprise"
+      "Jest wpis w PATH",
+      "Mentor naprawdę uruchomił interpreter i dostał numer wersji zgodny z wymaganiem kursu",
+      "Python jest w Sklepie Windows",
+      "Nic"
      ],
      "odp": 1,
-     "w": "Community ma wszystko: edytor, terminal, debugger, testy."
+     "w": "Statusy pochodzą z realnych uruchomień, nie z listy PATH."
     },
     {
      "p": "Jak sprawdzić, czy Git jest zainstalowany?",
      "o": [
-      "git --version w nowym terminalu",
+      "Środowisko → „Sprawdź ponownie” (albo git --version w nowym terminalu)",
       "Otworzyć GitHub",
       "Szukać folderu Git",
       "Uruchomić PyCharm"
      ],
      "odp": 0,
-     "w": "Każde narzędzie: nowy terminal → --version."
+     "w": "Każde narzędzie: realne uruchomienie z numerem wersji."
     }
    ],
-   "cel": "masz zainstalowane Python, Git, PyCharm i Claude Code i umiesz sprawdzić wersje komendami."
+   "cel": "masz gotowe środowisko kursu w Mentorze (Python + biblioteki, testy zielone), zainstalowany Git i rozumiesz, czym jest osobne środowisko kursu oraz PATH."
   },
   {
    "id": "git_start",
@@ -3372,7 +3449,7 @@
     "srodowisko",
     "bibliotek"
    ],
-   "wyjasnienie": "venv to osobna szafka z narzędziami dla jednego projektu — biblioteki nie mieszają się między projektami. Tworzysz: python -m venv .venv; aktywujesz (Windows: .venv\\Scripts\\activate; Linux/Mac: source .venv/bin/activate); instalujesz: pip install requests. pip freeze > requirements.txt zapisuje listę bibliotek, a pip install -r requirements.txt odtwarza ją na innym komputerze (i w CI). .venv to setki plików — do .gitignore, nie do repozytorium.",
+   "wyjasnienie": "venv to osobna szafka z narzędziami dla jednego projektu — biblioteki nie mieszają się między projektami. Znasz to już z Mentora: zakładka Środowisko utworzyła takie środowisko dla kursu (srodowiska/python-junior-qa/.venv) i zainstalowała w nim pytest, requests, selenium i flask — teraz robisz to samo ręcznie dla swojego projektu. Tworzysz: python -m venv .venv; aktywujesz (Windows: .venv\\Scripts\\activate; Linux/Mac: source .venv/bin/activate); instalujesz: pip install requests. pip freeze > requirements.txt zapisuje listę bibliotek, a pip install -r requirements.txt odtwarza ją na innym komputerze (i w CI). .venv to setki plików — do .gitignore, nie do repozytorium.",
    "przyklad": "python -m venv .venv\n.venv\\Scripts\\activate          # Windows\npip install requests\npip freeze > requirements.txt\necho .venv/ >> .gitignore",
    "zadania": [
     "Utwórz venv, zainstaluj requests, zapisz requirements.txt, dodaj .venv do .gitignore.",
@@ -4338,7 +4415,18 @@
      "Tworzy nowy plik .py"
     ],
     "odp": 1,
-    "w": "To test, czy Python jest zainstalowany i widoczny w PATH."
+    "w": "To test, czy Python jest zainstalowany i widoczny w PATH. Zakładka Środowisko w Mentorze robi dokładnie to samo (i więcej) przyciskiem „Sprawdź ponownie”."
+   },
+   {
+    "p": "Co robi przycisk „▶ Uruchom” pod zadaniem w Mentorze?",
+    "o": [
+     "Otwiera plik w przeglądarce",
+     "Uruchamia Twój plik .py interpreterem kursu (jak python plik.py) i pokazuje wyjście oraz błędy",
+     "Wysyła plik na GitHub",
+     "Sprawdza pisownię"
+    ],
+    "odp": 1,
+    "w": "To ta sama komenda, którą wpisałbyś w terminalu — Mentor dodaje limit czasu, przycisk Anuluj i wyjaśnienie błędu po polsku."
    },
    {
     "p": "Do czego służy plik CLAUDE.md w katalogu projektu?",
@@ -5119,8 +5207,9 @@
   {
    "po": "Po tygodniu 0",
    "punkty": [
-    "Otwieram terminal, przechodzę do katalogu i uruchamiam claude",
-    "Uruchamiam plik .py z terminala",
+    "Środowisko kursu w Mentorze jest GOTOWE (Python, biblioteki, Git), a ja wiem, co to osobne środowisko kursu",
+    "Tworzę plik .py w katalogu roboczym, uruchamiam go przyciskiem ▶ Uruchom i rozumiem komunikat błędu",
+    "Otwieram terminal w katalogu roboczym i uruchamiam plik .py komendą python plik.py",
     "Robię commit i push na GitHub"
    ]
   },
@@ -5161,6 +5250,51 @@
   }
  ],
  "sciaga": [
+  {
+   "tytul": "Mentor — środowisko i ćwiczenia",
+   "pozycje": [
+    [
+     "Środowisko → Sprawdź ponownie",
+     "Realna diagnoza: Python, .venv kursu, biblioteki, Git, Claude Code, przeglądarka"
+    ],
+    [
+     "Środowisko → Zainstaluj brakujące",
+     "Plan (co, skąd, ile MB) → zgoda → instalacja w tle do osobnego środowiska kursu, bez administratora"
+    ],
+    [
+     "Środowisko → Sprawdź działanie",
+     "Testy końcowe: interpreter, importy, pytest, lokalne API, Selenium (osobno); dopiero wtedy „Gotowe”"
+    ],
+    [
+     "Środowisko → Napraw środowisko",
+     "Usuwa .venv kursu i buduje je od nowa (pliki w PRACA i postępy zostają)"
+    ],
+    [
+     "Mój projekt → Utwórz katalog roboczy kursu",
+     "Dokumenty\\Mentor\\<kurs>\\PRACA — tu powstają Twoje pliki"
+    ],
+    [
+     "Mój projekt → Otwórz terminal tutaj",
+     "Terminal w katalogu roboczym z Pythonem kursu w PATH (python, pip, pytest działają od razu)"
+    ],
+    [
+     "Plan → Utwórz plik ćwiczenia",
+     "Szablon pliku zadania w katalogu roboczym, otwarty w edytorze (nie nadpisuje istniejącego bez pytania)"
+    ],
+    [
+     "Plan → ▶ Uruchom",
+     "python plik.py interpreterem kursu: wyjście, błędy po polsku, pole danych dla input(), limit czasu, Anuluj"
+    ],
+    [
+     "Plan → ✔ Sprawdź wynik",
+     "Test zadania (bez błędu / oczekiwane wyjście / pytest) → zalicza sam; bez testu: „Plik istnieje — wymaga sprawdzenia”"
+    ],
+    [
+     "Ustawienia → Importuj kurs ZIP…",
+     "Podgląd paczki (wymagania, rozmiar, skrypty — nieuruchamiane) → import → Środowisko"
+    ]
+   ]
+  },
   {
    "tytul": "Claude Code",
    "pozycje": [
@@ -5503,7 +5637,6 @@
   "Git i GitHub — pierwszy commit i push",
   "Git: gałęzie, diff, log, cofanie, pull request",
   "GitHub Actions i pytest-html",
-  "Instalacja narzędzi: Python, Git, PyCharm, Claude Code",
   "Instrukcje warunkowe if / elif / else",
   "Jak uczyć się z asystentem AI, żeby to Ty umiał programować",
   "Klasy i obiekty",
@@ -5511,6 +5644,7 @@
   "Moduł csv",
   "Moduły random i datetime",
   "Napisy i ich metody",
+  "Narzędzia: środowisko kursu w Mentorze, Git, edytor, Claude Code",
   "Obsługa błędów try / except",
   "Pliki: open, read, write, with",
   "Podział kodu na moduły",

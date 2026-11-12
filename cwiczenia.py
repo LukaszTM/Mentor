@@ -294,6 +294,13 @@ def wykonaj_sprawdzenie(sr, d, plik, anuluj=None):
         return {"status": STATUS_BLAD, "opis": f"Brak pliku {plik.name}", "szczegoly": f"Oczekiwany: {plik}", "data": teraz}
     if plik.stat().st_size == 0:
         return {"status": STATUS_BLAD, "opis": f"Plik {plik.name} jest pusty", "szczegoly": "", "data": teraz}
+    try:
+        tresc = plik.read_text(encoding="utf-8", errors="replace")
+    except OSError as e:
+        return {"status": STATUS_BLAD, "opis": f"Nie można odczytać pliku: {e}", "szczegoly": "", "data": teraz}
+    kod_linie = [l for l in tresc.splitlines() if l.strip() and not l.strip().startswith("#")]
+    if not kod_linie:
+        return {"status": STATUS_BLAD, "opis": "Plik zawiera tylko szablon (komentarze) — nie ma jeszcze kodu", "szczegoly": "Wpisz rozwiązanie pod komentarzami i zapisz plik (Ctrl+S).", "data": teraz}
     if rodzaj == "plik_istnieje":
         return {"status": STATUS_WYMAGA, "opis": "Plik istnieje — wymaga sprawdzenia", "szczegoly": "To zadanie nie ma automatycznego testu: porównaj wynik z „Gotowe, gdy” i odhacz samodzielnie.", "data": teraz}
     limit = int(spr.get("limit_s") or 20)
@@ -319,10 +326,14 @@ def wykonaj_sprawdzenie(sr, d, plik, anuluj=None):
     if kod == -1:
         return {"status": STATUS_BLAD, "opis": f"Program nie skończył się w {limit} s (pętla? input() bez danych?)", "szczegoly": szcz, "data": teraz}
     if kod != 0:
+        if "EOFError" in err:
+            # program chce więcej danych, niż podaje test — to nie błąd ucznia, tylko granica automatycznego sprawdzenia
+            return {"status": STATUS_WYMAGA, "opis": "Program pyta o więcej danych, niż podaje test — wymaga sprawdzenia ręcznego",
+                    "szczegoly": "Uruchom program przyciskiem „▶ Uruchom”, wpisz dane w polu „Dane dla input()” i porównaj wynik z „Gotowe, gdy”. Potem odhacz samodzielnie.\n\n" + szcz, "data": teraz}
         w = asystent.wyjasnij_traceback(err)
         opis = "Program kończy się błędem" + (f": {w['typ']}" + (f" (linia {w['linia']})" if w.get("linia") else "") if w else "")
         return {"status": STATUS_BLAD, "opis": opis, "szczegoly": szcz, "data": teraz}
-    min_linii = int(spr.get("min_linii") or 0)
+    min_linii = int(spr.get("min_linii") or (1 if rodzaj == "uruchom_bez_bledu" else 0))   # program „bez błędu”, który nic nie wypisuje, nie zalicza
     linie = [l for l in out.splitlines() if l.strip()]
     if min_linii and len(linie) < min_linii:
         return {"status": STATUS_BLAD, "opis": f"Program wypisał {len(linie)} linii, oczekiwano co najmniej {min_linii}", "szczegoly": szcz, "data": teraz}

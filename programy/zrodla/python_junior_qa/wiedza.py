@@ -377,7 +377,8 @@ TEMATY = [
     {"id": "venv", "tydzien": 5, "nazwa": "venv, pip, requirements.txt, .gitignore",
      "slowa": ["venv", "pip", "requirements", "gitignore", "środowisko", "srodowisko", "bibliotek"],
      "wyjasnienie":
-         "venv to osobna szafka z narzędziami dla jednego projektu — biblioteki nie mieszają się między projektami. "
+         "venv to osobna szafka z narzędziami dla jednego projektu — biblioteki nie mieszają się między projektami. Znasz to już z Mentora: zakładka Środowisko "
+         "utworzyła takie środowisko dla kursu (srodowiska/python-junior-qa/.venv) i zainstalowała w nim pytest, requests, selenium i flask — teraz robisz to samo ręcznie dla swojego projektu. "
          "Tworzysz: python -m venv .venv; aktywujesz (Windows: .venv\\Scripts\\activate; Linux/Mac: source .venv/bin/activate); "
          "instalujesz: pip install requests. pip freeze > requirements.txt zapisuje listę bibliotek, "
          "a pip install -r requirements.txt odtwarza ją na innym komputerze (i w CI). "

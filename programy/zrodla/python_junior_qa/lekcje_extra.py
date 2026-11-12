@@ -13,20 +13,25 @@ LEKCJE_TYDZIEN_0 = [
          "## Co to za program i dla kogo\n"
          "13 tygodni (0–12): Python od zera, Git, testy automatyczne (pytest, Selenium) i projekt portfolio na GitHubie — pod rolę Junior QA. "
          "Zaczynasz bez żadnej wiedzy o programowaniu; potrzebujesz komputera z Windows/macOS/Linux, 90 minut dziennie i cierpliwości na pierwsze dwa tygodnie, "
-         "gdy wszystko jest nowe (terminal, pliki .py, commit). Uczysz się z asystentem AI na zasadzie 70/30: 70% kodu piszesz sam.\n"
+         "gdy wszystko jest nowe (pliki .py, uruchamianie, commit). Pythona i biblioteki przygotowuje Mentor (zakładka Środowisko) — nie musisz niczego szukać ani instalować z terminala. "
+         "Uczysz się z asystentem AI na zasadzie 70/30: 70% kodu piszesz sam.\n"
          "## Jak wygląda dzień nauki\n"
          "- Panel → karta „Dzisiaj”: Mentor pokazuje zadanie dnia i lekcję do niego (pon–czw zadania 1–4, piątek — zadanie tygodnia, sobota — quiz, niedziela — wolne).\n"
          "- Lekcje → czytasz lekcję dnia (15–25 min): cel, wyjaśnienie, przykład kodu, pułapki, 3 zadania, pytania, test.\n"
-         "- Plan → zadanie dnia → rozwijasz „Jak to zrobić”: kompletne kroki (co wpisać w terminal, jak nazwać plik, jak sprawdzić, że działa).\n"
+         "- Plan → zadanie dnia → rozwijasz „Jak to zrobić”: kompletne kroki (jak nazwać plik, co wpisać, jak sprawdzić, że działa). Pod zadaniem z plikiem .py jest pasek "
+         "„Ćwiczenie w Mentorze”: Utwórz plik ćwiczenia → ▶ Uruchom → ✔ Sprawdź wynik — kod uruchamia się przyciskiem, bez terminala, a wynik sprawdza test zadania.\n"
          "- Sesja nauki → timer 4 faz: nowy temat 20 min → kodowanie 50 → recenzja 15 → podsumowanie 5; sam zapisuje czas i serię.\n"
-         "- Plan → ✔ przy zadaniu, gdy kod działa i jest w commicie (+10 XP; zadanie tygodnia +25). Dziennik → zdanie, czego się nauczyłeś (+3 XP).\n"
+         "- Plan → ✔ przy zadaniu, gdy kod działa i jest w commicie (+10 XP; zadanie tygodnia +25). Zadania z testem odhaczają się same po „Sprawdź wynik”; "
+         "bez testu Mentor mówi „Plik istnieje — wymaga sprawdzenia” i odhaczasz sam. Dziennik → zdanie, czego się nauczyłeś (+3 XP).\n"
          "- Sobota: Quiz tygodnia. Po każdym etapie: Checklista — co masz umieć.\n"
-         "## Twój warsztat: katalog projektu\n"
-         "Folder „nauka-python” (tworzysz w tygodniu 0, wskazujesz w Ustawieniach lub w Mój projekt). Tam są wszystkie pliki .py, CLAUDE.md z zasadami pracy "
-         "asystenta i repozytorium Git. Mentor wykrywa pliki z zadań i pokazuje liczbę commitów — to Twój dowód postępu.\n"
+         "## Twój warsztat: Środowisko i katalog roboczy\n"
+         "Zakładka Środowisko: Mentor sprawdza, czy Python, biblioteki (pytest, requests, selenium, flask), Git i przeglądarka naprawdę działają, i instaluje brakujące za Twoją zgodą "
+         "— do osobnego środowiska kursu, bez uprawnień administratora. „Gotowe” pojawia się dopiero, gdy testy końcowe przejdą.\n"
+         "Katalog roboczy (Mój projekt → „Utwórz katalog roboczy kursu”, domyślnie Dokumenty\\Mentor\\python-junior-qa\\PRACA, albo własny „nauka-python”): tam są wszystkie pliki .py, "
+         "CLAUDE.md z zasadami pracy asystenta i repozytorium Git. Mentor wykrywa pliki z zadań i pokazuje liczbę commitów — to Twój dowód postępu.\n"
          "## Jak czytać lekcję (5 kroków)\n"
          "- 1. Cel — jeśli już to umiesz, od razu test.\n"
-         "- 2. Wyjaśnienie — czytaj z otwartym PyCharmem i przepisuj (nie kopiuj!) fragmenty kodu, uruchamiaj je.\n"
+         "- 2. Wyjaśnienie — czytaj z otwartym edytorem i przepisuj (nie kopiuj!) fragmenty kodu, uruchamiaj je (▶ Uruchom w Mentorze albo python plik.py).\n"
          "- 3. Przykład — zanim przeczytasz do końca, zgadnij, co wypisze; potem uruchom i porównaj.\n"
          "- 4. Pułapki — zapisz w dzienniku; to błędy, które każdy robi w pierwszym miesiącu.\n"
          "- 5. Zadania (w katalogu projektu, bez rozwiązań), pytania na głos, test 3 pytań (2/3 zalicza).\n"
@@ -41,15 +46,15 @@ LEKCJE_TYDZIEN_0 = [
          "- Przerwa → Panel pokaże, ile dni minęło; XP i odznaki zostają, seria rusza od nowa.",
      "przyklad":
          "Dzień 1 (tydzień 0):\n"
-         "1. Panel → „Dzisiaj”: „Zainstaluj Pythona, Gita, PyCharm i Claude Code”.\n"
-         "2. Lekcje → ta lekcja → test.  3. Plan → tydzień 0 → zadanie 1 → „Jak to zrobić” (krok po kroku, z komendami do skopiowania).\n"
-         "4. Sesja nauki → start timera.  5. Plan → ✔ (+10 XP).  6. Dziennik: „Zainstalowałem Pythona; python --version działa; nie rozumiem jeszcze, co to PATH”.",
-     "zadania": ["Otwórz każdą zakładkę w pasku bocznym i zapisz w dzienniku jednym zdaniem, do czego służy.",
-                 "Ustaw imię i katalog projektu; sprawdź w Mój projekt, czy Mentor go widzi.",
+         "1. Panel → „Dzisiaj”: „Środowisko kursu w Mentorze + Git”.\n"
+         "2. Lekcje → ta lekcja → test.  3. Plan → tydzień 0 → zadanie 1 → „Jak to zrobić”: Środowisko → Sprawdź ponownie → Zainstaluj brakujące → zgoda → Git z git-scm.com.\n"
+         "4. Sesja nauki → start timera.  5. Plan → ✔ (+10 XP).  6. Dziennik: „Mentor pobrał Pythona i biblioteki; Git zainstalowałem sam; nie rozumiem jeszcze, co to .venv”.",
+     "zadania": ["Otwórz każdą zakładkę w pasku bocznym (także Środowisko) i zapisz w dzienniku jednym zdaniem, do czego służy.",
+                 "Ustaw imię i katalog roboczy (Mój projekt → „Utwórz katalog roboczy kursu”); sprawdź, czy Mentor go widzi.",
                  "Uruchom Sesję nauki na 2 minuty i zatrzymaj — zobacz na Panelu zapisany czas."],
      "pytania": [["Gdzie sprawdzisz, co masz dziś zrobić?", "Panel → „Dzisiaj”: zadanie, „Jak to zrobić” i lekcja."],
                  ["Co oznacza zasada 70/30?", "70% czasu piszę kod sam, 30% rozmawiam z asystentem o tym, co napisałem."],
-                 ["Kiedy odhaczasz zadanie?", "Gdy kod działa (uruchomiony) i jest w commicie — nie po przeczytaniu."]],
+                 ["Kiedy odhaczasz zadanie?", "Gdy kod działa (uruchomiony — „▶ Uruchom” lub terminal) i jest w commicie — nie po przeczytaniu. Zadania z testem odhacza „Sprawdź wynik”."]],
      "pulapki": ["Kopiowanie kodu od asystenta zamiast przepisywania — po tygodniu nie umiesz napisać pętli bez pomocy.",
                  "Czytanie lekcji bez uruchamiania przykładów — Python uczy się palcami, nie oczami."],
      "test": [
@@ -65,7 +70,9 @@ LEKCJE_TYDZIEN_0 = [
          "czyli folder, w którym terminal „stoi”. Wszystko, co uruchamiasz, dzieje się w tym folderze.\n"
          "Trzy komendy wystarczą na początek: pwd (gdzie jestem), ls (co tu jest — lista plików), cd nazwa (wejdź do folderu; cd .. — wyjdź poziom wyżej). "
          "Klawisz Tab dopełnia nazwy — wpisz „cd Doc” i Tab → „cd Documents”. Strzałka w górę przywołuje poprzednią komendę. Ctrl+C przerywa program, który się zapętlił.\n"
-         "Terminal w PyCharm (zakładka Terminal na dole) to to samo okno, tylko otwarte od razu w folderze projektu — używaj go najczęściej.",
+         "Terminal w PyCharm (zakładka Terminal na dole) to to samo okno, tylko otwarte od razu w folderze projektu. W Mentorze: Mój projekt → „Otwórz terminal tutaj” — "
+         "otwiera się w katalogu roboczym i ma na początku PATH Pythona z zakładki Środowisko, więc  python plik.py  i  pytest  działają od razu.\n"
+         "W tygodniach 0–3 terminal nie jest konieczny: przycisk „▶ Uruchom” pod zadaniem robi dokładnie to, co komenda python plik.py. Od tygodnia 4 (Git) terminal staje się codziennym narzędziem — dlatego ćwiczysz go już teraz.",
      "przyklad":
          "PS C:\\Users\\Lukasz> cd Documents\n"
          "PS C:\\Users\\Lukasz\\Documents> ls\n"
@@ -76,7 +83,7 @@ LEKCJE_TYDZIEN_0 = [
          "PS ...> cd ..        # wracasz do Documents",
      "zadania": ["Otwórz PowerShell, wejdź do Dokumentów (cd Documents), wypisz zawartość (ls), wróć (cd ..). Powtórz 3 razy bez patrzenia w notatki.",
                  "Utwórz folder z terminala: mkdir proba, wejdź do niego, sprawdź pwd, wyjdź, usuń: rmdir proba.",
-                 "W PyCharm otwórz Terminal (Alt+F12) i sprawdź pwd — czy to folder projektu?"],
+                 "Mój projekt → „Otwórz terminal tutaj” → sprawdź pwd (czy to katalog roboczy?) i python --version (czy to Python z zakładki Środowisko?)."],
      "pytania": [("Co pokazuje komenda pwd?", "Katalog roboczy — folder, w którym terminal teraz stoi."),
                  ("Jak wyjść o jeden folder wyżej?", "cd .."),
                  ("Co robi klawisz Tab w terminalu?", "Dopełnia nazwę pliku lub folderu.")],
@@ -90,36 +97,43 @@ LEKCJE_TYDZIEN_0 = [
           "odp": 1, "w": "Ctrl+C przerywa bieżący program."},
      ]},
 
-    {"id": "instalacja", "tydzien": 0, "nazwa": "Instalacja narzędzi: Python, Git, PyCharm, Claude Code",
-     "slowa": ["instal", "python.org", "path", "pycharm", "git-scm", "claude doctor", "wersj"],
+    {"id": "instalacja", "tydzien": 0, "nazwa": "Narzędzia: środowisko kursu w Mentorze, Git, edytor, Claude Code",
+     "slowa": ["instal", "środowisko", "srodowisko", "venv", "python.org", "path", "pycharm", "git-scm", "claude doctor", "wersj", "zainstaluj brakujące"],
      "wyjasnienie":
-         "Cztery narzędzia, każde do czegoś innego. PYTHON — interpreter, czyli program, który czyta Twoje pliki .py i je wykonuje; bez niego kod to tylko tekst. "
-         "GIT — dziennik zmian w projekcie (zdjęcia stanu plików, do których możesz wrócić) i most do GitHuba. PYCHARM — edytor: koloruje kod, podpowiada, "
-         "podkreśla błędy, ma wbudowany terminal i debugger. CLAUDE CODE — asystent w terminalu (wymaga płatnego planu; bez niego używasz zakładki Asystent w Mentorze).\n"
-         "Najważniejsze kliknięcie całej instalacji: w instalatorze Pythona zaznacz „Add python.exe to PATH”. PATH to lista folderów, w których Windows szuka programów, "
-         "gdy wpisujesz komendę. Bez tego „python” w terminalu da „nie jest rozpoznawany”.\n"
-         "Każdą instalację sprawdzasz tak samo: NOWE okno terminala → komenda --version → numer wersji. Jeśli numer jest — działa. Jeśli błąd — patrz „Pułapki”.",
+         "Do kursu potrzebujesz czterech rzeczy, ale tylko jedną instalujesz sam. PYTHON — interpreter, czyli program, który czyta Twoje pliki .py i je wykonuje; bez niego kod to tylko tekst. "
+         "BIBLIOTEKI — gotowe moduły (pytest, requests, selenium, flask), których użyjesz od tygodnia 5. GIT — dziennik zmian w projekcie i most do GitHuba. "
+         "EDYTOR — Notatnik wystarczy na start; PyCharm/VS Code kolorują kod, podpowiadają i mają terminal. CLAUDE CODE — asystent w terminalu (wymaga płatnego planu; bez niego używasz zakładki Asystent).\n"
+         "Pythona i biblioteki przygotowuje MENTOR: zakładka Środowisko sprawdza, co naprawdę działa (uruchamia python --version, importuje biblioteki, pyta git --version — nie wierzy samej liście PATH), "
+         "pokazuje plan instalacji (co, skąd, ile MB) i po Twojej zgodzie tworzy OSOBNE środowisko kursu (.venv) w katalogu Twojego użytkownika, bez uprawnień administratora. "
+         "Gdy w systemie nie ma Pythona, pobiera oficjalną wersję 3.12 tylko dla kursów. Na końcu uruchamia testy: interpreter, importy, przykładowy pytest, lokalne API — dopiero wtedy mówi „Gotowe”.\n"
+         "Dlaczego osobne środowisko? Bo biblioteki różnych projektów nie mogą się mieszać (poznasz to w tygodniu 5 jako venv). Python „z Windows Store” to tylko skrót — Mentor go pomija.\n"
+         "Git instalujesz sam z git-scm.com (domyślne ustawienia). Sprawdzasz tak samo jak wszystko: Środowisko → „Sprawdź ponownie” → GOTOWE z numerem wersji. "
+         "PATH to lista folderów, w których Windows szuka programów wpisywanych w terminalu; Mentor nie potrzebuje PATH, bo zna pełne ścieżki — ale terminal już tak, dlatego nowo zainstalowany program widać dopiero w NOWYM oknie terminala.",
      "przyklad":
-         "PS> python --version\nPython 3.12.6\n"
-         "PS> git --version\ngit version 2.47.0.windows.1\n"
-         "PS> claude --version        # tylko z subskrypcją\n1.0.xx (Claude Code)\n"
-         "PS> claude doctor           # lista kontrolna instalacji",
-     "zadania": ["Zainstaluj Pythona z zaznaczonym PATH, zamknij terminal, otwórz nowy, sprawdź python --version.",
-                 "Zainstaluj Git z domyślnymi ustawieniami i sprawdź git --version.",
-                 "Zainstaluj PyCharm Community, otwórz folder nauka-python jako projekt i otwórz w nim Terminal."],
-     "pytania": [("Po co zaznaczać „Add Python to PATH”?", "Żeby komenda python działała w terminalu z dowolnego folderu."),
-                 ("Dlaczego po instalacji trzeba otworzyć NOWE okno terminala?", "Stare okno ma starą listę PATH; nowe wczytuje ją od nowa."),
-                 ("Który z czterech programów wykonuje kod Pythona?", "Interpreter Pythona (python.exe); PyCharm tylko go wywołuje.")],
-     "pulapki": ["python --version otwiera Microsoft Store → wyłącz aliasy aplikacji w ustawieniach Windows.",
-                 "PyCharm Professional jest płatny — pobierz Community.",
+         "Zakładka Środowisko po „Sprawdź ponownie” na czystym komputerze:\n"
+         "  BRAK     Python                — Mentor może pobrać Python 3.12 do swojego katalogu\n"
+         "  BRAK     Środowisko kursu (.venv)\n"
+         "  BRAK     pytest · requests · selenium · flask\n"
+         "  BRAK     Git (od tygodnia 0)   — oficjalny instalator: git-scm.com\n"
+         "  OPCJON.  Microsoft Edge (Selenium od tygodnia 8)\n"
+         "„Zainstaluj brakujące” → plan: Python 3.12 (46 MB, github.com/astral-sh), .venv (15 MB), biblioteki z PyPI (15–25 MB), testy → Tak.\n"
+         "Po kilku minutach: GOTOWE przy Pythonie, .venv i bibliotekach; testy zielone; Git nadal BRAK — instalujesz sam → Sprawdź ponownie → GOTOWE.",
+     "zadania": ["Zakładka Środowisko → „Sprawdź ponownie” → zapisz w dzienniku, co było BRAK. Potem „Zainstaluj brakujące” i przeczytaj plan, zanim klikniesz Tak.",
+                 "Zainstaluj Git z domyślnymi ustawieniami; Środowisko → „Sprawdź ponownie” → numer wersji Gita.",
+                 "Mój projekt → „Otwórz terminal tutaj” → python --version i git --version — porównaj z tym, co pokazuje zakładka Środowisko."],
+     "pytania": [("Dlaczego Mentor uruchamia programy, zamiast patrzeć na PATH?", "Bo wpis w PATH nie gwarantuje, że program działa (np. skrót ze Store); dopiero python --version z wynikiem to dowód."),
+                 ("Co to jest środowisko kursu (.venv)?", "Osobny folder z Pythonem i bibliotekami tylko dla tego kursu — nie miesza się z innymi projektami ani z systemem."),
+                 ("Kiedy Mentor pokazuje „Gotowe”?", "Dopiero gdy testy końcowe (interpreter, importy, pytest, API) przejdą — nie po samej instalacji.")],
+     "pulapki": ["Python ze Sklepu Windows to skrót, nie interpreter — Mentor go pomija; pozwól mu pobrać własnego.",
+                 "Git zainstalowany, a Mentor dalej BRAK → „Sprawdź ponownie”, w ostateczności zamknij i otwórz Mentora.",
                  "Claude Code bez planu Pro/Max nie zaloguje się — to nie błąd instalacji; użyj Asystenta Offline/API."],
      "test": [
-         {"p": "Co oznacza komunikat „python nie jest rozpoznawany jako polecenie”?", "o": ["Python jest zepsuty", "Pythona nie ma w PATH (nie zaznaczono opcji przy instalacji) albo terminal jest stary", "Brak internetu", "Zła wersja Windows"],
-          "odp": 1, "w": "Uruchom instalator → Modify → zaznacz PATH, potem nowe okno terminala."},
-         {"p": "Który program jest darmowy i wystarcza do kursu?", "o": ["PyCharm Professional", "PyCharm Community", "Tylko Notatnik", "Visual Studio 2022 Enterprise"],
-          "odp": 1, "w": "Community ma wszystko: edytor, terminal, debugger, testy."},
-         {"p": "Jak sprawdzić, czy Git jest zainstalowany?", "o": ["git --version w nowym terminalu", "Otworzyć GitHub", "Szukać folderu Git", "Uruchomić PyCharm"],
-          "odp": 0, "w": "Każde narzędzie: nowy terminal → --version."},
+         {"p": "Kto instaluje Pythona i biblioteki kursu?", "o": ["Ty, z python.org, zaznaczając PATH", "Mentor — zakładka Środowisko → „Zainstaluj brakujące”, po Twojej zgodzie", "PyCharm", "GitHub"],
+          "odp": 1, "w": "Mentor pokazuje plan, pobiera oficjalne pliki i tworzy osobne środowisko kursu; Ty instalujesz tylko Git (i opcjonalnie edytor, Claude Code)."},
+         {"p": "Co oznacza status GOTOWE przy Pythonie w zakładce Środowisko?", "o": ["Jest wpis w PATH", "Mentor naprawdę uruchomił interpreter i dostał numer wersji zgodny z wymaganiem kursu", "Python jest w Sklepie Windows", "Nic"],
+          "odp": 1, "w": "Statusy pochodzą z realnych uruchomień, nie z listy PATH."},
+         {"p": "Jak sprawdzić, czy Git jest zainstalowany?", "o": ["Środowisko → „Sprawdź ponownie” (albo git --version w nowym terminalu)", "Otworzyć GitHub", "Szukać folderu Git", "Uruchomić PyCharm"],
+          "odp": 0, "w": "Każde narzędzie: realne uruchomienie z numerem wersji."},
      ]},
 
     {"id": "git_start", "tydzien": 0, "nazwa": "Git i GitHub — pierwszy commit i push",

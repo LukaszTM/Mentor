@@ -10,7 +10,7 @@ pytania do quizu albo własne szablony promptów.
 # ---------------------------------------------------------------------------
 ETAPY = [
     {"nr": 0, "nazwa": "Konfiguracja", "tygodnie": [0],
-     "cel": "Działający terminal, Python, Git, PyCharm i Claude Code. Pusty projekt nauka-python na GitHubie."},
+     "cel": "Gotowe środowisko kursu w Mentorze (Python + biblioteki), Git, katalog roboczy z CLAUDE.md, pierwszy program uruchomiony w Mentorze i pierwszy commit na GitHubie."},
     {"nr": 1, "nazwa": "Podstawy Pythona", "tygodnie": [1, 2, 3],
      "cel": "Piszesz bez pomocy program na 50–100 linii z funkcjami, pętlami i listami i rozumiesz każdą linię."},
     {"nr": 2, "nazwa": "Git, struktura projektu, prawdziwe programy", "tygodnie": [4, 5, 6],
@@ -29,19 +29,20 @@ ETAPY = [
 PROGRAM = [
     {
         "tydzien": 0, "etap": 0, "tytul": "Konfiguracja",
-        "tematy": "Terminal, Python, Git, PyCharm, Claude Code, pierwszy commit",
+        "tematy": "Środowisko kursu w Mentorze (Python + biblioteki), Git, edytor, pierwszy program, pierwszy commit",
         "rola_claude": "Przewodnik po narzędziach. Każdą komendę ma wytłumaczyć, zanim ją uruchomicie.",
         "zadania": [
-            {"id": "t0z1", "tytul": "Zainstaluj Pythona, Gita, PyCharm i Claude Code",
-             "opis": "python --version, git --version, claude --version, a potem claude doctor bez błędów. "
-                     "Na Windows przy instalacji Pythona zaznacz „Add Python to PATH”.",
+            {"id": "t0z1", "tytul": "Środowisko kursu w Mentorze + Git (PyCharm i Claude Code opcjonalnie)",
+             "opis": "Zakładka Środowisko: Mentor sam sprawdza i instaluje Pythona z bibliotekami kursu (za Twoją zgodą, bez terminala). "
+                     "Ty instalujesz Git z oficjalnej strony. Edytor i Claude Code — opcjonalnie.",
              "pliki": [], "xp": 10},
-            {"id": "t0z2", "tytul": "Katalog nauka-python z plikiem CLAUDE.md",
-             "opis": "Uruchom claude w katalogu, wpisz /init, a potem dopisz zasady nauki (zakładka Prompty → CLAUDE.md).",
+            {"id": "t0z2", "tytul": "Katalog roboczy PRACA z plikiem CLAUDE.md",
+             "opis": "Mój projekt → „Utwórz katalog roboczy kursu” (albo wskaż własny) → „Utwórz CLAUDE.md z zasadami”. "
+                     "Z Claude Code: claude w katalogu, /init, dopisz zasady nauki (zakładka Prompty → CLAUDE.md).",
              "pliki": ["CLAUDE.md"], "xp": 10},
             {"id": "t0z3", "tytul": "hello.py wypisuje Twoje imię i dzisiejszą datę",
-             "opis": "Poproś Claude: „Wytłumacz mi, czym jest terminal, katalog roboczy i plik .py — jak dziesięciolatkowi. "
-                     "Potem poprowadź mnie krok po kroku. Nie twórz pliku za mnie.”",
+             "opis": "Pierwszy program — w Mentorze: Plan → pasek „Ćwiczenie w Mentorze” → Utwórz plik ćwiczenia → ▶ Uruchom → ✔ Sprawdź wynik. "
+                     "Asystentowi: „Wytłumacz mi, czym jest plik .py i interpreter — jak dziesięciolatkowi. Nie twórz pliku za mnie.”",
              "pliki": ["hello.py"], "xp": 10},
             {"id": "t0z4", "tytul": "Repozytorium nauka-python na GitHubie z pierwszym commitem",
              "opis": "„Poprowadź mnie przez git init, pierwszy commit i wypchnięcie na GitHub — tłumacz każdą komendę.”",
@@ -398,6 +399,19 @@ SCIAGA = [
     ("claude doctor", "Sprawdza, czy instalacja jest poprawna"),
 ]
 
+SCIAGA_MENTOR = [
+    ("Środowisko → Sprawdź ponownie", "Realna diagnoza: Python, .venv kursu, biblioteki, Git, Claude Code, przeglądarka"),
+    ("Środowisko → Zainstaluj brakujące", "Plan (co, skąd, ile MB) → zgoda → instalacja w tle do osobnego środowiska kursu, bez administratora"),
+    ("Środowisko → Sprawdź działanie", "Testy końcowe: interpreter, importy, pytest, lokalne API, Selenium (osobno); dopiero wtedy „Gotowe”"),
+    ("Środowisko → Napraw środowisko", "Usuwa .venv kursu i buduje je od nowa (pliki w PRACA i postępy zostają)"),
+    ("Mój projekt → Utwórz katalog roboczy kursu", "Dokumenty\\Mentor\\<kurs>\\PRACA — tu powstają Twoje pliki"),
+    ("Mój projekt → Otwórz terminal tutaj", "Terminal w katalogu roboczym z Pythonem kursu w PATH (python, pip, pytest działają od razu)"),
+    ("Plan → Utwórz plik ćwiczenia", "Szablon pliku zadania w katalogu roboczym, otwarty w edytorze (nie nadpisuje istniejącego bez pytania)"),
+    ("Plan → ▶ Uruchom", "python plik.py interpreterem kursu: wyjście, błędy po polsku, pole danych dla input(), limit czasu, Anuluj"),
+    ("Plan → ✔ Sprawdź wynik", "Test zadania (bez błędu / oczekiwane wyjście / pytest) → zalicza sam; bez testu: „Plik istnieje — wymaga sprawdzenia”"),
+    ("Ustawienia → Importuj kurs ZIP…", "Podgląd paczki (wymagania, rozmiar, skrypty — nieuruchamiane) → import → Środowisko"),
+]
+
 SCIAGA_GIT = [
     ("git status", "Co jest zmienione, a co nie trafiło jeszcze do commita"),
     ("git add .", "Dodaje wszystkie zmiany do następnego commita"),
@@ -415,8 +429,9 @@ SCIAGA_GIT = [
 # ---------------------------------------------------------------------------
 CHECKLISTA = [
     {"po": "Po tygodniu 0", "punkty": [
-        "Otwieram terminal, przechodzę do katalogu i uruchamiam claude",
-        "Uruchamiam plik .py z terminala",
+        "Środowisko kursu w Mentorze jest GOTOWE (Python, biblioteki, Git), a ja wiem, co to osobne środowisko kursu",
+        "Tworzę plik .py w katalogu roboczym, uruchamiam go przyciskiem ▶ Uruchom i rozumiem komunikat błędu",
+        "Otwieram terminal w katalogu roboczym i uruchamiam plik .py komendą python plik.py",
         "Robię commit i push na GitHub"]},
     {"po": "Po etapie 1 (tydzień 3)", "punkty": [
         "Piszę program z if, pętlą for, listą i dwiema funkcjami bez zaglądania do notatek",
@@ -446,7 +461,10 @@ QUIZ = {
     0: [
         {"p": "Co robi komenda python --version?",
          "o": ["Uruchamia ostatni program", "Pokazuje zainstalowaną wersję Pythona", "Instaluje Pythona", "Tworzy nowy plik .py"],
-         "odp": 1, "w": "To test, czy Python jest zainstalowany i widoczny w PATH."},
+         "odp": 1, "w": "To test, czy Python jest zainstalowany i widoczny w PATH. Zakładka Środowisko w Mentorze robi dokładnie to samo (i więcej) przyciskiem „Sprawdź ponownie”."},
+        {"p": "Co robi przycisk „▶ Uruchom” pod zadaniem w Mentorze?",
+         "o": ["Otwiera plik w przeglądarce", "Uruchamia Twój plik .py interpreterem kursu (jak python plik.py) i pokazuje wyjście oraz błędy", "Wysyła plik na GitHub", "Sprawdza pisownię"],
+         "odp": 1, "w": "To ta sama komenda, którą wpisałbyś w terminalu — Mentor dodaje limit czasu, przycisk Anuluj i wyjaśnienie błędu po polsku."},
         {"p": "Do czego służy plik CLAUDE.md w katalogu projektu?",
          "o": ["Przechowuje hasła", "Zawiera zasady i kontekst projektu, które Claude Code czyta na starcie", "Jest kodem programu", "To lista commitów"],
          "odp": 1, "w": "Claude Code czyta CLAUDE.md automatycznie — to tam wpisujesz „nie pisz rozwiązań za mnie”."},

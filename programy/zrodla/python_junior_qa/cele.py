@@ -2,8 +2,8 @@
 """Cel każdej lekcji („po tej lekcji potrafisz…”) — doklejany w zbuduj.py."""
 
 CELE = {
-    "terminal": "otwierasz terminal, przechodzisz między katalogami (cd, pwd, ls/dir) i uruchamiasz plik Pythona z terminala.",
-    "instalacja": "masz zainstalowane Python, Git, PyCharm i Claude Code i umiesz sprawdzić wersje komendami.",
+    "terminal": "otwierasz terminal (także z Mentora: Mój projekt → „Otwórz terminal tutaj”), przechodzisz między katalogami (cd, pwd, ls/dir) i uruchamiasz plik Pythona z terminala.",
+    "instalacja": "masz gotowe środowisko kursu w Mentorze (Python + biblioteki, testy zielone), zainstalowany Git i rozumiesz, czym jest osobne środowisko kursu oraz PATH.",
     "git_start": "tworzysz repozytorium, robisz commit i push na GitHub oraz rozumiesz, po co to robisz codziennie.",
     "nauka_z_asystentem": "używasz asystenta AI tak, że to Ty uczysz się programować: 70/30, 15 minut walki, przepisywanie zamiast kopiowania.",
     "zmienne": "tworzysz zmienne różnych typów (int, float, str, bool), sprawdzasz typ i konwertujesz między typami.",

@@ -10,10 +10,16 @@ LEKCJA_START = {
         "## Co to za kurs i dla kogo\n"
         "12 tygodni (0–11), pięć zadań tygodniowo, jedna krótka lekcja dziennie. Uczysz się na fikcyjnej firmie AGRO-MLEKO (62 pracowników, produkcja "
         "3-zmianowa, zleceniobiorcy, umowy o dzieło) — każdy kazus, lista płac i pismo dotyczą jej pracowników. Nie musisz znać prawa pracy ani księgowości. "
-        "Potrzebujesz: 60–90 minut dziennie i jednego folderu na dysku. Nic więcej — kalkulatory, symulatory ZUS/US i przepisy są wbudowane w Mentora (zakładka Warsztat).\n"
+        "Poziom: od podstaw (nie musisz znać prawa pracy, księgowości ani Excela). Potrzebujesz: 60–90 minut dziennie, Windows z Mentorem i jednego folderu na dysku. Nic więcej — kalkulatory, symulatory ZUS/US, przepisy i wszystkie pliki ćwiczeń są w Mentorze i w paczce materiałów (kopiujesz je jednym przyciskiem). Internet nie jest potrzebny; Asystent w trybie offline działa bez konta i bez opłat (tryby API/Subskrypcja są opcjonalne i płatne).\n"
+        "## Co będziesz umieć po kursie\n"
+        "- zawrzeć i rozwiązać umowę o pracę z kompletem dokumentów i w terminach (ZUA, świadectwo, ekwiwalent),\n"
+        "- policzyć wymiar czasu pracy, nadgodziny, nocne, urlop i pensję za część miesiąca,\n"
+        "- sporządzić listę płac od brutto do netto z PPK, chorobowym, zasiłkiem, benefitem i potrąceniem — i skontrolować ją bilansem,\n"
+        "- ustalić podstawę zasiłku, rozliczyć zleceniobiorcę i studenta, przygotować komplet DRA/RCA/RSA i korektę,\n"
+        "- zamknąć rok (PIT-4R, PIT-11, ZFŚS, PFRON) i przygotować firmę do kontroli PIP/ZUS z procedurami 2026/2027.\n"
         "## Jak wygląda dzień nauki\n"
         "- Panel → karta „Dzisiaj”: Mentor pokazuje zadanie dnia i lekcję do niego (pon–czw zadania 1–4, piątek — większe zadanie tygodnia, sobota — quiz, niedziela — wolne).\n"
-        "- Lekcje → czytasz lekcję dnia (15–25 min). Zawsze ta sama budowa: cel, wyjaśnienie, przykład liczbowy, pułapki, 3 zadania, pytania, test.\n"
+        "- Lekcje → czytasz lekcję dnia (15–25 min). Zawsze ta sama budowa: cel → po co → czego potrzebujesz → wyjaśnienie od podstaw → demonstracja omówiona krok po kroku → jak to uruchomić → ćwiczenie prowadzone → ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → typowe błędy → sprawdzenie → test.\n"
         "- Plan → zadanie dnia → rozwijasz „Jak to zrobić”: kompletne kroki (co otworzyć, co policzyć, jak nazwać plik). Robisz je w swoim katalogu projektu.\n"
         "- Sesja nauki → timer prowadzi Cię przez 4 fazy (nowy temat 20 min → kazus w Warsztacie 50 → weryfikacja u źródła 15 → wpis do dziennika 5) i sam zapisuje czas.\n"
         "- Plan → zaznaczasz ✔ przy zadaniu (+10 XP; zadanie tygodnia +25). Dziennik → jedno zdanie, czego się nauczyłeś (+3 XP).\n"
@@ -24,16 +30,18 @@ LEKCJA_START = {
         "Folder „kadry-praktyka” (nazwę proponuje Mentor; wskazujesz go w Ustawieniach lub w zakładce Mój projekt). Trafiają tam: FIRMA.md (karta firmy — "
         "zadanie 1 tygodnia 0), dziennik.md (Twoje notatki), listy płac i dokumenty ZUS/PIT zapisane z Warsztatu (.md/.csv), pisma w plikach .md. Mentor wykrywa te pliki i podpowiada, czy zadanie "
         "ma już efekt. Git jest opcjonalny — zadanie tygodnia 0 pokaże, jak zapisywać wersje; jeśli nie chcesz, pomijasz „commit” w krokach.\n"
-        "## Jak czytać lekcję (5 kroków, ok. 20 minut)\n"
-        "- 1. Cel — zdanie „po tej lekcji potrafisz…”. Jeśli już to umiesz, przejdź od razu do testu.\n"
-        "- 2. Wyjaśnienie — czytaj z otwartym ISAP (isap.sejm.gov.pl) i sprawdzaj wymienione artykuły; nie zapamiętuj wszystkiego — ściąga i słowniczek są w aplikacji.\n"
-        "- 3. Przykład — zakryj wynik i przelicz sam na kartce, potem sprawdź w Warsztacie. Dopiero potem porównaj z wynikiem w lekcji. To najważniejszy krok.\n"
-        "- 4. Pułapki — przepisz do dziennika jednym zdaniem; to są błędy, za które płaci się w kontroli.\n"
-        "- 5. Zadania i pytania — zadania robisz w katalogu projektu (bez rozwiązań w lekcji — pyta się Asystenta o podpowiedź), pytania mówisz na głos i rozwijasz odpowiedź; test 3 pytań: 2/3 zalicza, możesz powtarzać.\n"
+        "## Jak czytać lekcję (7 kroków, 20–40 minut)\n"
+        "- 1. Cel i „po co mi to” — jeśli już to umiesz, zrób od razu ćwiczenie samodzielne i test.\n"
+        "- 2. Wyjaśnienie od podstaw — każde pojęcie jest objaśnione w lekcji; przepisy sprawdzasz w Warsztat → Przepisy (ISAP tylko dla pogłębienia).\n"
+        "- 3. Demonstracja — kompletny przykład z omówieniem każdego kroku; zakryj wynik, przelicz sam, potem porównaj. To najważniejszy krok.\n"
+        "- 4. Jak to uruchomić — dokładne kliknięcia w Warsztacie lub plik z paczki materiałów i oczekiwany wynik.\n"
+        "- 5. Ćwiczenie prowadzone (podobne do demonstracji) i samodzielne (wymaga decyzji) — każde ma 3 stopniowane podpowiedzi (pytanie → gdzie szukać → częściowy przykład) i pełne rozwiązanie na końcu; plik startowy jest w cwiczenia/, rozwiązanie w rozwiazania/.\n"
+        "- 6. Typowe błędy i pułapki — przepisz jeden do dziennika; to są błędy, za które płaci się w kontroli.\n"
+        "- 7. Sprawdzenie i test — pytania mówisz na głos, potem test 3 pytań: 2/3 zalicza, możesz powtarzać.\n"
         "## Asystent — nauczyciel, nie wykonawca\n"
         "Zakładka Asystent ma trzy karty: Subskrypcja (Claude Code w terminalu), API (własny klucz, rozmowa w Mentorze) i Offline (wbudowany, bez internetu — "
         "rozumie: „uczę się [temat]”, „co to jest [pojęcie]”, „zadaj mi 3 pytania”, „quiz z tygodnia 4”, „odpytaj mnie jak rekruter”, „utknąłem: [problem]”). "
-        "Zasada we wszystkich trybach: najpierw 15 minut własnej pracy, potem pytanie o podpowiedź — nigdy o gotowy wynik. Gotowe prompty do każdej sytuacji: zakładka Prompty.\n"
+        "Zasada we wszystkich trybach: najpierw własna próba (podpowiedzi w lekcji odkrywasz po kolei), potem pytanie o podpowiedź — nie o gotowy wynik; gdy nie wiesz nawet, jak zacząć, pytaj od razu — nie ma obowiązku „walczyć” przez określony czas. W trybie offline działa też komenda „podpowiedź” (kolejna wskazówka do ćwiczenia z ostatniej lekcji). Gotowe prompty do każdej sytuacji: zakładka Prompty.\n"
         "## Skąd liczby i czy są aktualne\n"
         "Stan prawny: listopad 2026. Każda stawka, limit i termin ma w lekcji podstawę prawną (artykuł, Dz.U., obwieszczenie). To, co jest dopiero projektem "
         "(np. pełna jawność wynagrodzeń, PIT 2027), jest tak oznaczone. Raz w roku — w styczniu — odświeżasz tabelę wskaźników (zadanie 4 tygodnia 0 "
@@ -51,18 +59,18 @@ LEKCJA_START = {
         "3. Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić” (5 kroków): tworzysz folder kadry-praktyka, plik FIRMA.md, wskazujesz folder w Mentorze.\n"
         "4. Sesja nauki → start timera; fazy 2–3 to praca nad zadaniem i sprawdzenie.\n"
         "5. Plan → ✔ przy zadaniu 1 (+10 XP).  6. Dziennik → „Dziś: utworzyłem katalog i FIRMA.md; nie wiem jeszcze, co to PEL” (+3 XP).\n"
-        "Jutro: Panel pokaże zadanie 2 (eZUS, e-Urząd, Płatnik) i lekcję „Narzędzia kadrowca”.",
+        "Jutro: Panel pokaże zadanie 2 (symulatory eZUS/Płatnika i e-Urzędu w Warsztacie) i lekcję „Narzędzia kadrowca”.",
     "zadania": ["Otwórz po kolei każdą zakładkę w pasku bocznym i zapisz w dziennik.md jednym zdaniem, do czego służy.",
                 "W Ustawieniach wpisz imię i wskaż katalog projektu; w zakładce Mój projekt sprawdź, czy Mentor go widzi.",
                 "Uruchom Sesję nauki, odczekaj 2 minuty i zatrzymaj — zobacz na Panelu, że czas i seria się zapisały."],
     "pytania": [["Gdzie sprawdzisz, co masz dziś zrobić?", "Panel → karta „Dzisiaj” — zadanie dnia, przycisk „Jak to zrobić” i lekcja."],
-                ["Co robisz z przykładem w lekcji?", "Zakrywam wynik i liczę sam (kalkulator/arkusz), dopiero potem porównuję."],
-                ["Kiedy odhaczasz zadanie w Planie?", "Gdy efekt (plik, arkusz, pismo) jest w katalogu projektu i działa — nie po samym przeczytaniu."]],
+                ["Co robisz z przykładem w lekcji?", "Zakrywam wynik i liczę sam na kartce, potem sprawdzam w Warsztacie, dopiero potem porównuję."],
+                ["Kiedy odhaczasz zadanie w Planie?", "Gdy efekt (plik z Warsztatu, pismo, tabela) jest w katalogu projektu i potrafię go wyjaśnić — nie po samym przeczytaniu."]],
     "pulapki": ["Czytanie wszystkich lekcji naraz bez zadań — po tygodniu nic nie zostaje. Jedna lekcja + jedno zadanie dziennie.",
                 "Pomijanie testu lekcji — to 2 minuty i jedyny sygnał, że temat „siedzi”; Mentor zaznacza ✔ dopiero po 2/3."],
     "test": [
         {"p": "Ile zadań ma każdy tydzień i które jest „zadaniem tygodnia”?", "o": ["3 — ostatnie", "5 — piąte (piątek), większe, +25 XP", "7 — po jednym dziennie", "Zależy od tygodnia"], "odp": 1, "w": "Zadania 1–4 to pon–czw, zadanie 5 to piątek."},
         {"p": "Gdzie znajdziesz kompletną instrukcję wykonania zadania?", "o": ["W lekcji", "Plan → zadanie → „Jak to zrobić”", "W Ściądze", "W Dzienniku"], "odp": 1, "w": "Lekcja tłumaczy temat; Plan mówi, co dokładnie zrobić."},
-        {"p": "Na czym polega zasada pracy z Asystentem?", "o": ["Prosisz o gotowy wynik i przepisujesz", "Najpierw 15 min własnej pracy, potem pytanie o podpowiedź", "Używasz tylko w sobotę", "Asystent odhacza zadania"], "odp": 1, "w": "Asystent uczy, nie wyręcza — także w trybie offline."},
+        {"p": "Na czym polega zasada pracy z Asystentem?", "o": ["Prosisz o gotowy wynik i przepisujesz", "Najpierw własna próba i podpowiedzi po kolei, potem pytanie o wskazówkę — nie o wynik", "Używasz tylko w sobotę", "Asystent odhacza zadania"], "odp": 1, "w": "Asystent uczy, nie wyręcza — także w trybie offline; gdy nie wiesz, jak zacząć, pytasz od razu."},
     ],
 }

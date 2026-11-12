@@ -12,8 +12,8 @@ LEKCJE_2 = [
      "przyklad":
          "Operator (42 lata), 6 000 zł, podstawa zasiłku 5 177,40 (6 000 − 13,71%), stawka dzienna 172,58.\n"
          "Zwolnienia 2026: 10–19.03 (10 dni), 2–25.06 (24 dni; przerwa > 60 dni, ale dni liczą się do 33 w roku), 1–20.10 (20 dni).\n"
-         "Marzec: 10 dni × 172,58 × 80% = 1 380,64 (wynagrodzenie chorobowe; pula 23 dni).\n"
-         "Czerwiec: 23 dni chorobowe (3 175,47) + 1 dzień zasiłek (138,06) — od 25.06 zasiłek; przerwa marzec–czerwiec 74 dni → nowy okres zasiłkowy od 2.06 (dni: 24).\n"
+         "Marzec: stawka dzienna 172,58 × 80% = 138,06; 10 dni × 138,06 = 1 380,60 (wynagrodzenie chorobowe; pula 23 dni).\n"
+         "Czerwiec: 23 dni chorobowe (23 × 138,06 = 3 175,38) + 1 dzień zasiłek (138,06) — od 25.06 zasiłek; przerwa marzec–czerwiec 74 dni → nowy okres zasiłkowy od 2.06 (dni: 24).\n"
          "Październik: od 1. dnia zasiłek (pula 33 wyczerpana); przerwa od 25.06 do 1.10 = 97 dni → nowy okres zasiłkowy. Pensja za czerwiec: 6 000 − 6 000/30 × 24 = 1 200 + chorobowe + zasiłek.",
      "zadania": ["Rozlicz 3 przypadki z zadania tygodnia 6 (pula 33 dni, okres zasiłkowy, kto płaci).",
                  "Ustal dla firmy z FIRMA.md, kto wypłaca zasiłki w 2026 (stan na 30.11.2025) i sprawdź w eZUS, jak wygląda e-ZLA.",
@@ -59,8 +59,8 @@ LEKCJE_2 = [
          "Dokumentacja dla ZUS (gdy ZUS wypłaca): Z-3 (pracownik) z informacją o składnikach 12 mies., Z-3a (zleceniobiorca), Z-3b (działalność), wysyłane w eZUS; ZAS-12 — zaświadczenie płatnika w szczególnych przypadkach; ZUS ustala i wypłaca w 30 dni. Raport RSA — kody przerw (wybór): 111 urlop bezpłatny, 121 urlop wychowawczy, 151 usprawiedliwiona nieobecność bez wynagrodzenia (np. opiekuńczy art. 173¹), 152 nieusprawiedliwiona, 155 niezdolność bez prawa do wynagrodzenia (wyczekiwanie), 311 zasiłek macierzyński (obecnie rozbity: 327 — za urlop macierzyński, 319 — rodzicielski, 325 — ojcowski), 312 zasiłek opiekuńczy, 313 zasiłek chorobowy z ubezpieczenia chorobowego, 314 zasiłek chorobowy z ubezpieczenia wypadkowego, 321 świadczenie rehabilitacyjne, 331 wynagrodzenie za czas niezdolności finansowane przez pracodawcę. W RSA: okres od–do, liczba dni, kwota (dla zasiłków wypłaconych przez płatnika). Aktualny wykaz kodów: zus.pl → „Kody wykorzystywane przy wypełnianiu dokumentów”.",
      "przyklad":
          "Pracownica, podstawa 5 177,40; dziecko (5 lat) chore 3–9.11.2026 (7 dni): e-ZLA + Z-15A (oświadczenie: mąż pracuje na zmiany, brak innego opiekuna).\n"
-         "Zasiłek: 172,58 × 7 × 80% = 966,45 zł; pensja za listopad pomniejszona o 6 000/30 × 7 = 1 400.\n"
-         "RSA: kod 312, 03.11–09.11.2026, 7 dni, 966,45. RCA: składki od 4 600 (6 000 − 1 400); zasiłek — tylko PIT 12% na liście (116 zł, bez KUP; kwota zmniejszająca już wykorzystana przy pensji).",
+         "Zasiłek: 172,58 × 80% = 138,06 zł/dzień; 7 × 138,06 = 966,42 zł; pensja za listopad pomniejszona o 6 000/30 × 7 = 1 400.\n"
+         "RSA: kod 312, 03.11–09.11.2026, 7 dni, 966,42. RCA: składki od 4 600 (6 000 − 1 400); zasiłek — tylko PIT 12% na liście (116 zł, bez KUP; kwota zmniejszająca już wykorzystana przy pensji).",
      "zadania": ["Wypełnij Z-15A dla przypadku z zadania tygodnia i ustal limit dni dla rodziny.",
                  "Sporządź listę kroków po wypadku przy pracy z terminami (zespół, protokół, ZUS, GUS, PIP).",
                  "Zakoduj w RSA miesiąc z: chorobowym pracodawcy 10 dni, zasiłkiem 5 dni, urlopem bezpłatnym 2 dni."],

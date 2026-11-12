@@ -34,15 +34,45 @@ def _rozpakuj_wbudowane():
         return
     try:
         KATALOG_PROGRAMOW.mkdir(exist_ok=True)
-        for f in zrodlo.iterdir():
-            cel = KATALOG_PROGRAMOW / f.name
+        for f in zrodlo.rglob("*"):
+            cel = KATALOG_PROGRAMOW / f.relative_to(zrodlo)
             if f.is_file() and not cel.exists():
+                cel.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy(f, cel)
     except OSError:
         pass
 
 
 _rozpakuj_wbudowane()
+
+
+def katalog_materialow(program_id):
+    """Katalog z materiałami kursu (START_TUTAJ.md, cwiczenia/, przyklady/, rozwiazania/, pomoc/) albo None."""
+    if not program_id:
+        return None
+    k = KATALOG_PROGRAMOW / "materialy" / program_id
+    return k if k.is_dir() else None
+
+
+def skopiuj_materialy(program_id, cel):
+    """Kopiuje materiały kursu do katalogu projektu bez nadpisywania istniejących plików.
+    Zwraca (skopiowane, pominięte) — liczby plików."""
+    zrodlo = katalog_materialow(program_id)
+    if not zrodlo:
+        return 0, 0
+    cel = Path(cel)
+    skopiowane = pominiete = 0
+    for f in sorted(zrodlo.rglob("*")):
+        if not f.is_file():
+            continue
+        c = cel / f.relative_to(zrodlo)
+        if c.exists():
+            pominiete += 1
+            continue
+        c.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(f, c)
+        skopiowane += 1
+    return skopiowane, pominiete
 
 DOMYSLNE = {
     "podtytul": "", "opis": "", "autor": "", "wersja": "1.0", "jezyk": "pl",
@@ -52,6 +82,7 @@ DOMYSLNE = {
     "sciaga": [], "linki": [], "wskazowki": [], "motywacja_powrot": [], "pojecia": {}, "bledy": {},
     "pytania_rekrutacyjne": [], "tematy_wpisu": [], "stanowisko": "", "stan_prawny": "",
     "narzedzia": [], "parametry": {}, "firma": "", "firma_osoby": [], "firma_regulaminy": [], "przepisy": [],
+    "diagnoza": [], "pytania_dziennika": [], "materialy": "",
     "rytm_dnia": [
         {"nazwa": "Nowy temat", "minuty": 20, "ikona": "📖", "opis": "Lekcja i przykłady.", "prompt": "Uczę się [temat]. Wytłumacz na 2 przykładach i daj 3 zadania bez rozwiązań."},
         {"nazwa": "Ćwiczenie", "minuty": 50, "ikona": "⌨", "opis": "Samodzielna praca nad zadaniem.", "prompt": "Utknąłem na zadaniu [opis]. Nie podawaj rozwiązania — zadaj pytanie naprowadzające."},
@@ -180,10 +211,32 @@ def waliduj(dane):
         for q in l.get("test", []):
             if not (isinstance(q.get("odp"), int) and 0 <= q["odp"] < len(q.get("o", []))):
                 bledy.append(f"Lekcja {l.get('id')}: pytanie testowe z błędnym „odp”: {q.get('p', '')[:40]}")
+        # bloki standardu (opcjonalne) — jeśli są, muszą mieć właściwy kształt
+        dem = l.get("demonstracja")
+        if dem is not None and not (isinstance(dem, dict) and isinstance(dem.get("kroki", []), list)):
+            bledy.append(f"Lekcja {l.get('id')}: „demonstracja” musi być obiektem z listą „kroki”.")
+        for i, cw in enumerate(l.get("cwiczenia", []) or []):
+            if not isinstance(cw, dict) or not cw.get("tresc"):
+                bledy.append(f"Lekcja {l.get('id')}: ćwiczenie nr {i + 1} bez treści.")
+                continue
+            cw.setdefault("rodzaj", "samodzielne")
+            cw.setdefault("wskazowki", [])
+            cw.setdefault("rozwiazanie", "")
+            cw.setdefault("wynik", "")
+        for i, b in enumerate(l.get("typowe_bledy", []) or []):
+            if not isinstance(b, dict) or not b.get("komunikat"):
+                bledy.append(f"Lekcja {l.get('id')}: typowy błąd nr {i + 1} bez „komunikat”.")
     for nr, qs in dane.get("quizy", {}).items():
         for q in qs:
             if not (isinstance(q.get("odp"), int) and 0 <= q["odp"] < len(q.get("o", []))):
                 bledy.append(f"Quiz tygodnia {nr}: pytanie z błędnym „odp”: {q.get('p', '')[:40]}")
+            if q.get("lekcja") and q["lekcja"] not in lekcje_ids:
+                bledy.append(f"Quiz tygodnia {nr}: pytanie wskazuje nieistniejącą lekcję „{q['lekcja']}”.")
+    for i, q in enumerate(dane.get("diagnoza", []) or []):
+        if not (isinstance(q, dict) and isinstance(q.get("odp"), int) and 0 <= q["odp"] < len(q.get("o", []))):
+            bledy.append(f"Diagnoza: pytanie nr {i + 1} z błędnym „odp”.")
+        elif q.get("lekcja") and q["lekcja"] not in lekcje_ids:
+            bledy.append(f"Diagnoza: pytanie nr {i + 1} wskazuje nieistniejącą lekcję „{q['lekcja']}”.")
     for e in dane["etapy"]:
         for k in ("nr", "nazwa", "tygodnie"):
             if k not in e:

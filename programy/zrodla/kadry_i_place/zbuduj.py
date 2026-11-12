@@ -25,7 +25,76 @@ from czytelnosc import uczytelnij                 # noqa: E402
 from firma import FIRMA_OSOBY, FIRMA_REGULAMINY, PARAMETRY, NARZEDZIA  # noqa: E402
 from przepisy import PRZEPISY                     # noqa: E402
 from zadania_warsztat import NADPISZ, DOPISZ_KROK  # noqa: E402
+from standard_1 import STANDARD_1                 # noqa: E402
+from standard_2 import STANDARD_2                 # noqa: E402
+from standard_3 import STANDARD_3                 # noqa: E402
+from standard_4 import STANDARD_4                 # noqa: E402
+from standard_5 import STANDARD_5                 # noqa: E402
+from powtorki import POWTORKI                     # noqa: E402
+from diagnoza import DIAGNOZA, PYTANIA_DZIENNIKA, QUIZ_LEKCJE  # noqa: E402
+from szablony import SZABLONY_DODATKOWE           # noqa: E402
 import reszta                                     # noqa: E402
+
+STANDARD = {}
+for _m in (STANDARD_1, STANDARD_2, STANDARD_3, STANDARD_4, STANDARD_5):
+    STANDARD.update(_m)
+
+# pola, które standard nadpisuje w lekcji (zadania/w_praktyce — gdy stara wersja odsyłała poza Mentora)
+NADPISZ_W_PRAKTYCE = {
+    "narzedzia_kadrowca": ["Rozpisz kalendarz miesiąca: 5. ewidencja, 8. lista, 10. wypłata, 15. ZUS/PPK, 20. PIT/PFRON, 25. Wn-D — z właścicielem każdego terminu.",
+                           "Ustal, kto w firmie ma PEL (ZUS) i UPL-1 (US) i kto je podpisuje; wpisz do dostepy.md.",
+                           "Przejdź w symulatorze eZUS/Płatnik pełną ścieżkę dokumentu: przygotuj → weryfikuj → wyślij → UPP w Rejestrze.",
+                           "Wygeneruj w e-Urząd: PIT jeden PIT-11 i zapisz go do projektu — zobacz, które pola rozumiesz."],
+}
+
+
+def _sciezka_cw(lekcja_id, tydzien, nr):
+    return f"cwiczenia/tydzien_{tydzien:02d}/{lekcja_id}_{nr}.md"
+
+
+def _zastosuj_standard(l):
+    """Dokłada bloki standardu (po_co, wymagania, demonstracja, jak_uruchomic, cwiczenia, typowe_bledy, podsumowanie)."""
+    st = STANDARD.get(l["id"])
+    if not st:
+        return l
+    for k, v in st.items():
+        l[k] = v
+    cw = []
+    for i, c in enumerate(l.get("cwiczenia", []), 1):
+        c = dict(c)
+        c["plik"] = _sciezka_cw(l["id"], l["tydzien"], i)
+        c["rozwiazanie_plik"] = c["plik"].replace("cwiczenia/", "rozwiazania/")
+        cw.append(c)
+    l["cwiczenia"] = cw
+    if l["id"] in NADPISZ_W_PRAKTYCE:
+        l["w_praktyce"] = NADPISZ_W_PRAKTYCE[l["id"]]
+    return l
+
+
+def _dopasuj_lekcje_quizu(tydzien, idx, q, lekcje_tyg, lekcje_po_id):
+    """Przypisuje pytaniu quizu lekcję (do powtórki po błędnej odpowiedzi): ręcznie (QUIZ_LEKCJE) albo po słowach kluczowych."""
+    import re
+    if (tydzien, idx) in QUIZ_LEKCJE:
+        return QUIZ_LEKCJE[(tydzien, idx)]
+    txt = (q["p"] + " " + " ".join(q["o"]) + " " + q.get("w", "")).lower()
+    rdz = {w[:6] for w in re.findall(r"[0-9a-ząćęłńóśźż]+", txt)}
+    best, bp = None, 0
+    for lid in lekcje_tyg:
+        l = lekcje_po_id[lid]
+        if l["id"].startswith("powtorka_"):
+            continue
+        p = 0
+        for s in l.get("slowa", []):
+            if s.lower() in txt:
+                p += 2
+            elif all(c[:6] in rdz for c in re.findall(r"[0-9a-ząćęłńóśźż]+", s.lower())):
+                p += 1
+        for s in {w[:6] for w in re.findall(r"[0-9a-ząćęłńóśźż]+", l["nazwa"].lower())}:
+            if len(s) >= 5 and s in rdz:
+                p += 1
+        if p > bp:
+            best, bp = lid, p
+    return best or lekcje_tyg[0]
 
 
 def zbuduj():
@@ -38,8 +107,26 @@ def zbuduj():
             l.update(CELE[l["id"]])
         l["wyjasnienie"] = uczytelnij(l["wyjasnienie"])
         assert l.get("cel"), f"lekcja {l['id']} bez celu"
+        l = _zastosuj_standard(l)
+        assert l.get("cwiczenia") and l.get("demonstracja"), f"lekcja {l['id']} bez bloków standardu"
         lekcje.append(l)
     assert set(CELE) <= {l["id"] for l in lekcje}, set(CELE) - {l["id"] for l in lekcje}
+    assert set(STANDARD) == {l["id"] for l in lekcje}, set(STANDARD) ^ {l["id"] for l in lekcje}
+    # powtórki — po lekcjach etapu, dołączone do ostatniego tygodnia etapu
+    for pw in POWTORKI:
+        pw = dict(pw)
+        pw["pytania"] = [list(p) for p in pw.get("pytania", [])]
+        pw.setdefault("przyklad", "")
+        cw = []
+        for i, c in enumerate(pw.get("cwiczenia", []), 1):
+            c = dict(c)
+            c["plik"] = _sciezka_cw(pw["id"], pw["tydzien"], i)
+            c["rozwiazanie_plik"] = c["plik"].replace("cwiczenia/", "rozwiazania/")
+            cw.append(c)
+        pw["cwiczenia"] = cw
+        # wstaw po ostatniej lekcji tego tygodnia (nawigacja „następna lekcja” prowadzi do powtórki na końcu etapu)
+        poz = max(i for i, l in enumerate(lekcje) if l["tydzien"] == pw["tydzien"]) + 1
+        lekcje.insert(poz, pw)
     id_lekcji = {l["id"] for l in lekcje}
     assert len(id_lekcji) == len(lekcje), "powtórzone id lekcji"
 
@@ -48,6 +135,7 @@ def zbuduj():
     for w in TYGODNIE_1 + TYGODNIE_2 + TYGODNIE_3:
         w = dict(w)
         w.setdefault("rola_asystenta", "")
+        w["lekcje"] = list(w["lekcje"]) + [pw["id"] for pw in POWTORKI if pw["tydzien"] == w["tydzien"]]
         for lid in w["lekcje"]:
             assert lid in id_lekcji, f"tydzień {w['tydzien']}: brak lekcji {lid}"
         zadania = []
@@ -80,6 +168,17 @@ def zbuduj():
     assert set(NADPISZ) <= id_zadan, set(NADPISZ) - id_zadan
     assert set(DOPISZ_KROK) <= id_zadan, set(DOPISZ_KROK) - id_zadan
 
+    # quizy: każde pytanie wskazuje lekcję do powtórki
+    lekcje_po_id = {l["id"]: l for l in lekcje}
+    tyg_lekcje = {w["tydzien"]: w["lekcje"] for w in tygodnie}
+    quizy = {}
+    for t, qs in reszta.QUIZY.items():
+        quizy[str(t)] = [dict(q, lekcja=_dopasuj_lekcje_quizu(t, i, q, tyg_lekcje[t], lekcje_po_id)) for i, q in enumerate(qs)]
+    for q in DIAGNOZA:
+        assert q["lekcja"] in lekcje_po_id, q["lekcja"]
+    szablony = dict(reszta.SZABLONY)
+    szablony.update(SZABLONY_DODATKOWE)
+
     program = {
         "format": "mentor-program/1",
         "id": "kadry-i-place",
@@ -91,7 +190,7 @@ def zbuduj():
                 "i przygotowujesz firmę do kontroli PIP/ZUS. Wszystko na fikcyjnej firmie AGRO-MLEKO, z liczbami obowiązującymi w 2026 r. "
                 "i podstawą prawną przy każdej liczbie. Uczysz się z asystentem AI (Claude Code, API albo tryb offline): kazusy rozwiązujesz sam, asystent pyta i wskazuje przepisy.",
         "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude, stan prawny XI 2026)",
-        "wersja": "1.0",
+        "wersja": "2.0",
         "jezyk": "pl",
         "katalog_projektu": "kadry-praktyka",
         "stanowisko": "Specjalista ds. kadr i płac",
@@ -99,13 +198,19 @@ def zbuduj():
         "dni_w_tygodniu": [0, 1, 2, 3, 4],
         "dzien_quizu": 5,
         "dzien_wolny": 6,
+        "poziom": "od podstaw — bez znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych",
+        "system": "Windows 10/11 (Mentor.exe); działa też z Pythonem 3.10+ na innych systemach",
+        "wymagania_wstepne": ["60–90 minut dziennie przez 12 tygodni", "jeden folder na dysku na pliki ćwiczeń", "Mentor (ten program) — nic więcej: żadnych kont, instalacji ani arkuszy; internet niepotrzebny"],
+        "umiejetnosci_koncowe": ["zawrzeć i rozwiązać umowę o pracę z kompletem dokumentów i w terminach", "policzyć wymiar czasu pracy, nadgodziny, nocne, urlop i pensję za część miesiąca",
+                                 "sporządzić i skontrolować listę płac od brutto do netto (PPK, chorobowe, zasiłek, benefity, potrącenia)", "ustalić podstawę zasiłku, rozliczyć zleceniobiorcę, przygotować komplet DRA/RCA/RSA i korektę",
+                                 "zamknąć rok (PIT-4R, PIT-11, ZFŚS, PFRON) i przygotować firmę do kontroli PIP/ZUS z procedurami 2026/2027"],
         "zasady": [
             "Każda liczba ma podstawę prawną i rok obowiązywania — zapisujesz źródło obok wyniku.",
-            "Najpierw liczysz i rozstrzygasz sam (minimum 15 minut), potem pytasz asystenta o podpowiedź, nie o wynik.",
+            "Najpierw liczysz i rozstrzygasz sam, korzystając z podpowiedzi w lekcji po kolei; o wskazówkę (nie o wynik) pytasz asystenta, gdy nie wiesz, jak zacząć — bez obowiązku „walczenia” przez określony czas.",
             "Rozróżniasz: obowiązuje / projekt / nie wiem — i tak samo wymagasz od asystenta.",
             "Pracujesz wyłącznie na fikcyjnej firmie z FIRMA.md — nigdy na prawdziwych danych osobowych.",
             "Każdy kazus kończysz notatką: stan faktyczny, pytanie, podstawa, rozstrzygnięcie, ryzyka.",
-            "Wynik sprawdzasz drugą metodą (kalkulator ZUS/MF, arkusz, przepis) zanim uznasz go za gotowy.",
+            "Wynik sprawdzasz drugą metodą (Warsztat, przepis, rozwiązanie w paczce) zanim uznasz go za gotowy — i potrafisz go wyjaśnić własnymi słowami.",
             "Kończysz dzień 3 pytaniami sprawdzającymi i wpisem w dziennik.md (commit).",
             "Raz w tygodniu wracasz do ściągi wskaźników i terminów — liczby mają być w głowie, nie tylko w pliku.",
         ],
@@ -118,11 +223,14 @@ def zbuduj():
         "etapy": ETAPY,
         "tygodnie": tygodnie,
         "lekcje": lekcje,
-        "quizy": {str(k): v for k, v in reszta.QUIZY.items()},
+        "quizy": quizy,
+        "diagnoza": DIAGNOZA,
+        "pytania_dziennika": PYTANIA_DZIENNIKA,
+        "materialy": "materialy/kadry-i-place",
         "rytm_dnia": reszta.RYTM_DNIA,
         "prompty": reszta.PROMPTY,
         "claude_md": reszta.CLAUDE_MD,
-        "szablony": reszta.SZABLONY,
+        "szablony": szablony,
         "checklista": reszta.CHECKLISTA,
         "sciaga": [{"tytul": "Wskaźniki 2026", "pozycje": [list(x) for x in reszta.SCIAGA_WSKAZNIKI]},
                    {"tytul": "Terminy", "pozycje": [list(x) for x in reszta.SCIAGA_TERMINY]},
@@ -142,6 +250,19 @@ def zbuduj():
         assert len(l["test"]) >= 3, f"lekcja {l['id']} ma za mało pytań testowych"
         for q in l["test"]:
             assert 0 <= q["odp"] < len(q["o"]), (l["id"], q["p"])
+        # standard §3: 12 elementów
+        for k in ("po_co", "cel", "wymagania", "wyjasnienie", "demonstracja", "jak_uruchomic", "cwiczenia", "typowe_bledy", "pytania", "podsumowanie", "test"):
+            assert l.get(k), f"lekcja {l['id']}: brak {k}"
+        assert l["demonstracja"].get("kroki") and l["demonstracja"].get("wynik"), l["id"]
+        assert [c["rodzaj"] for c in l["cwiczenia"]] == ["prowadzone", "samodzielne"], l["id"]
+        for c in l["cwiczenia"]:
+            assert len(c["wskazowki"]) == 3 and c["rozwiazanie"] and c["wynik"] and c["plik"], (l["id"], c["rodzaj"])
+        for b in l["typowe_bledy"]:
+            assert all(b.get(k) for k in ("komunikat", "przyczyna", "diagnoza", "poprawka")), l["id"]
+    assert len(program["diagnoza"]) >= 8
+    for t, qs in program["quizy"].items():
+        for q in qs:
+            assert q["lekcja"] in {l["id"] for l in lekcje}, (t, q["p"])
     for k, qs in reszta.QUIZY.items():
         assert any(w["tydzien"] == k for w in tygodnie), f"quiz dla nieistniejącego tygodnia {k}"
         for q in qs:

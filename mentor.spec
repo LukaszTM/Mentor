@@ -13,6 +13,8 @@ a = Analysis(
         ("programy/kadry-i-place.json", "programy"),
         ("programy/szablon-programu.json", "programy"),
         ("programy/FORMAT.md", "programy"),
+        ("programy/STANDARD_KURSOW.md", "programy"),
+        ("programy/materialy", "programy/materialy"),
         ("mentor.ico", "."),
     ],
     hiddenimports=["asystent", "program", "motywy", "wiedza_ogolna", "warsztat", "kadry", "tkinter", "tkinter.ttk", "tkinter.font", "tkinter.filedialog",

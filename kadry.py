@@ -35,8 +35,11 @@ def fmt(x):
 # ============================================================ LISTA PŁAC
 def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasilek=0.0, kup=250.0, pit2=300.0,
                ppk_prac=2.0, ppk_pracod=1.5, ulga_mlodych=False, przychod_mlodych_narast=0.0, dochod_narast=0.0,
-               podstawa_er_narast=0.0, fp_zwolnienie=False, potracenia=0.0, par=None):
-    """Brutto → netto dla jednego pracownika w jednym miesiącu. Zwraca słownik z wszystkimi krokami."""
+               podstawa_er_narast=0.0, fp_zwolnienie=False, potracenia=0.0, par=None, pensja_umowna=None):
+    """Brutto → netto dla jednego pracownika w jednym miesiącu. Zwraca słownik z wszystkimi krokami.
+    pensja_umowna: wynagrodzenie za PEŁNY miesiąc wg umowy — składki na FP/FGŚP są należne, gdy podstawa „w przeliczeniu
+    na okres miesiąca” (art. 104 ust. 1 ustawy o promocji zatrudnienia) jest ≥ minimalnemu; obniżka za chorobę/część miesiąca
+    nie zwalnia z FP, zwalnia dopiero niepełny etat z pensją poniżej minimalnej (bez innych tytułów)."""
     p = dict(DOMYSLNE, **(par or {}))
     kroki = []
     przychod_oskl = zl(zasadnicze + zmienne + natura)
@@ -99,8 +102,12 @@ def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasil
     emer_p = zl(podstawa_er * p["emerytalna"] / 100)
     rent_p = zl(podstawa_er * p["rentowa_pracod"] / 100)
     wyp = zl(przychod_oskl * p["wypadkowa"] / 100)
-    fp = 0.0 if (fp_zwolnienie or przychod_oskl < p["minimalne"] * 0.999) else zl(przychod_oskl * p["fp"] / 100)
-    fgsp = 0.0 if (fp_zwolnienie or przychod_oskl < p["minimalne"] * 0.999) else zl(przychod_oskl * p["fgsp"] / 100)
+    na_miesiac = max(przychod_oskl, pensja_umowna or 0.0)
+    bez_fp = fp_zwolnienie or na_miesiac < p["minimalne"] * 0.999
+    fp = 0.0 if bez_fp else zl(przychod_oskl * p["fp"] / 100)
+    fgsp = 0.0 if bez_fp else zl(przychod_oskl * p["fgsp"] / 100)
+    if bez_fp and not fp_zwolnienie:
+        kroki.append((f"FP/FGŚP nienależne: podstawa w przeliczeniu na miesiąc ({fmt(na_miesiac)}) poniżej minimalnego {fmt(p['minimalne'])}", 0.0))
     skl_pracod = zl(emer_p + rent_p + wyp + fp + fgsp)
     koszt = zl(przychod_oskl + wyn_chorobowe + skl_pracod + ppk_pracod_kw)
     kroki.append((f"Składki pracodawcy: emerytalna {fmt(emer_p)} + rentowa {fmt(rent_p)} + wypadkowa {fmt(wyp)} + FP {fmt(fp)} + FGŚP {fmt(fgsp)}", skl_pracod))
@@ -507,7 +514,10 @@ def sprawdz_komplet(rca, rsa, ubezpieczeni, miesiac, rok, identyfikator="01", wc
         if s.get("od") and s.get("do") and s["od"] > s["do"]:
             bledy.append("RSA: data „od” późniejsza niż „do”.")
         if s.get("od") and (s["od"].month != miesiac or s["od"].year != rok):
-            ostrz.append(f"RSA {s.get('kod_przerwy')}: przerwa z innego miesiąca niż raport ({s['od']}) — RSA składa się za miesiąc przerwy.")
+            if str(s.get("kod_przerwy", ""))[:1] == "3":
+                ostrz.append(f"RSA {s.get('kod_przerwy')}: świadczenie za okres z innego miesiąca ({s['od']}) — poprawne tylko, jeśli WYPŁACONO je w miesiącu raportu (zasada kasowa).")
+            else:
+                ostrz.append(f"RSA {s.get('kod_przerwy')}: przerwa z innego miesiąca niż raport ({s['od']}) — przerwy bez świadczeń wykazuje się za miesiąc, w którym wystąpiły.")
         if s.get("kod_przerwy", "")[0] == "3" and not s.get("kwota"):
             ostrz.append(f"RSA {s['kod_przerwy']}: świadczenie bez kwoty (płatnik zasiłków wykazuje kwotę).")
     return bledy, ostrz

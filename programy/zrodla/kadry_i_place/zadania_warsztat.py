@@ -7,6 +7,19 @@ NADPISZ[id] = {pole: nowa wartość} — tylko podane pola są zastępowane w zb
 W = "Warsztat → "
 
 NADPISZ = {
+    "k0z1": {
+        "kroki": [
+            "Utwórz folder kadry-praktyka (np. w Dokumentach: prawy przycisk → Nowy → Folder) i wskaż go w Mentorze: Mój projekt → „Wybierz katalog…”. Wewnątrz utwórz podfoldery: 01-zatrudnienie, 02-czas-pracy, 03-urlopy, 04-place, 05-zus-us, 06-zakonczenie, 07-procedury, 99-notatki.",
+            "Mój projekt → „Skopiuj materiały kursu tutaj” → potwierdź. W folderze pojawią się START_TUTAJ.md oraz katalogi cwiczenia/, rozwiazania/, przyklady/, lekcje/, pomoc/ (pliki startowe do ćwiczeń z każdej lekcji; nic nie nadpisuje Twoich plików).",
+            "Utwórz FIRMA.md — najprościej: Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu” (plik z opisem firmy, 12 osobami z PESEL, parametrami 2026 i regulaminami). Alternatywa ręczna: szablon cwiczenia/tydzien_00/start_jak_sie_uczyc_2.md i dane z Warsztatu.",
+            "Otwórz FIRMA.md i sprawdź, że są w nim: opis firmy (62 pracowników, 3 zmiany, zleceniobiorcy, dzieło), tabela osób (w tym: próbna, określona, 50+, 1/2 etatu, pensja minimalna 4 806, powyżej progu 14 000, orzeczenie, do 26 lat) i sekcja Regulaminy (wypłata do 10., systemy czasu pracy, dodatek nocny, premia 10%, ZFŚS, PPK, wypadkowa 1,20%). Dopisz pod tabelą jedno zdanie: która osoba będzie „Twoim” pracownikiem do kazusów w tygodniu 1.",
+            "Zapisz w 99-notatki/notatki.md pierwszą notatkę: „Czego będę się uczył i po co” — 5 zdań; w dziennik.md (Mentor → Dziennik) jedno zdanie o dniu 1.",
+        ],
+        "sprawdz": "Mój projekt pokazuje Twój folder, START_TUTAJ.md i FIRMA.md jako wykryte; FIRMA.md ma opis firmy, tabelę osób i sekcję Regulaminy; Plan → Tydzień 0 → zadanie 1 → ✔.",
+        "problemy": ["„Skopiuj materiały” mówi „Najpierw wskaż katalog projektu” → kliknij Tak i wybierz folder; potem kliknij kopiowanie ponownie.",
+                     "FIRMA.md „nie wykryty” → Mój projekt → „Odśwież”; sprawdź, czy plik nie nazywa się FIRMA.md.txt (Eksplorator → Widok → Rozszerzenia nazw plików).",
+                     "Nie wiesz, jakie wynagrodzenia są realne → w Warsztat → Firma ćwiczeniowa są stawki 4 806–14 000 zł; w 2026 żadne nie może być niższe niż 4 806 zł na pełny etat (1/2 etatu: 2 403)."],
+    },
     # ============================================================ TYDZIEŃ 0
     "k0z2": {
         "tytul": "Narzędzia kadrowca w Warsztacie: eZUS/Płatnik, e-Urząd, kalkulatory",
@@ -15,7 +28,7 @@ NADPISZ = {
             "Otwórz zakładkę Warsztat (pasek boczny). Kliknij po kolei każde narzędzie: Firma ćwiczeniowa, Lista płac, Zasiłki i chorobowe, Urlopy i ekwiwalent, Czas pracy, Potrącenia, eZUS / Płatnik, e-Urząd: PIT, Przepisy. W każdym przeczytaj szary opis pod tytułem — mówi, co narzędzie liczy i co zapisuje.",
             "Warsztat → Firma ćwiczeniowa: przejrzyj 12 osób (8 pracowników, 3 zleceniobiorców, 1 dzieło) i założenia regulaminów. Kliknij „Zapisz FIRMA.md do projektu” — plik trafi do Twojego katalogu (uzupełnia to, co zrobiłeś w zadaniu 1).",
             "Warsztat → eZUS / Płatnik: zakładka „Ubezpieczeni” to rejestr płatnika (w prawdziwym życiu: eZUS → Płatnik → Ubezpieczeni). Wszyscy mają status NIEZGŁOSZONY — bo w symulacji nic jeszcze nie wysłałeś. Zakładka „e-ZLA” to skrzynka zwolnień lekarskich, którą w prawdziwej firmie widzisz po zalogowaniu do eZUS pełnomocnictwem PEL.",
-            "Warsztat → e-Urząd: PIT — tu w tygodniu 9 wygenerujesz PIT-11 i PIT-4R z kartoteki; w prawdziwym życiu wysyła się je przez e-Deklaracje z pełnomocnictwem UPL-1. Warsztat → Lista płac: kliknij „Policz” dla domyślnych 6 000 zł i zobacz 14 kroków obliczenia.",
+            "Warsztat → e-Urząd: PIT — tu w tygodniu 9 wygenerujesz PIT-11 i PIT-4R z kartoteki; w prawdziwym życiu wysyła się je przez e-Deklaracje z pełnomocnictwem UPL-1. Warsztat → Lista płac: kliknij „Policz” dla domyślnych 6 000 zł i prześledź kroki obliczenia (od składek do kosztu pracodawcy).",
             "Zapisz w dostepy.md (katalog 99-notatki): dla każdego z 4 prawdziwych systemów (eZUS, Płatnik, e-Urząd Skarbowy, program kadrowy) — jedno zdanie „do czego służy” i „jaki dokument daje dostęp pracownikowi kadr” (PEL do ZUS, UPL-1 do e-Deklaracji, nadanie uprawnień w programie, certyfikat kwalifikowany do Płatnika). Dopisz, które narzędzie Warsztatu go zastępuje w kursie.",
         ],
         "sprawdz": "Otworzyłeś wszystkie 9 narzędzi; FIRMA.md zapisany z Warsztatu; dostepy.md opisuje PEL i UPL-1 oraz mapuje systemy na narzędzia Warsztatu.",

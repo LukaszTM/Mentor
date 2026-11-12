@@ -64,6 +64,28 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 - `test` — 3–4 pytania zamknięte; używane w zakładce Lekcje („Sprawdź się”) i przy ręcznym wpisie czasu nauki
   (uczeń wybiera temat = lekcję i odpowiada na pytania z jej testu). `odp` to indeks poprawnej odpowiedzi od 0.
 
+### Bloki standardu lekcji (`programy/STANDARD_KURSOW.md` §3) — zalecane, renderowane, gdy są
+
+```json
+{"po_co": "jedno zdanie — zastosowanie w prawdziwym projekcie",
+ "wymagania": ["czego uczeń potrzebuje i gdzie są pliki"],
+ "demonstracja": {"tytul": "…", "kroki": ["omówienie przykładu krok po kroku — co robi, dlaczego, co się zmieni"], "wynik": "oczekiwany wynik"},
+ "jak_uruchomic": ["dokładna ścieżka/kliknięcia i oczekiwany wynik"],
+ "cwiczenia": [
+   {"rodzaj": "prowadzone", "tresc": "…", "wynik": "jak wygląda poprawny wynik", "plik": "cwiczenia/tydzien_04/id_1.md",
+    "rozwiazanie_plik": "rozwiazania/tydzien_04/id_1.md",
+    "wskazowki": ["1 pytanie naprowadzające", "2 gdzie szukać", "3 częściowy przykład"], "rozwiazanie": "pełne rozwiązanie (pokazywane na końcu)"},
+   {"rodzaj": "samodzielne", "...": "jak wyżej — niewielka zmiana wymagająca decyzji"}],
+ "typowe_bledy": [{"komunikat": "co widzi uczeń", "przyczyna": "…", "diagnoza": "jak sprawdzić", "poprawka": "…"}],
+ "podsumowanie": "odpowiedź na pytanie „co potrafię teraz zrobić bez patrzenia na przykład?”"}
+```
+
+- Gdy lekcja ma `demonstracja` lub `cwiczenia`, Mentor renderuje ją w kolejności standardu: cel → po co → wymagania → 1 wyjaśnienie → 2 demonstracja
+  (`przyklad` w ramce + `kroki` jako omówienie) → 3 jak uruchomić → 4/5 ćwiczenia z przyciskiem „Podpowiedź 1 z 3” → „Pokaż pełne rozwiązanie” →
+  typowe błędy → pułapki → dodatkowe `zadania` → sprawdzenie (`pytania` + `podsumowanie`) → test. Bez tych bloków — układ klasyczny.
+- Asystent Offline: komenda `podpowiedź` / `/podpowiedz [nr]` odkrywa kolejne `wskazowki` ćwiczenia z ostatnio otwartej lekcji, a na końcu `rozwiazanie`.
+- Powtórka etapu to zwykła lekcja (np. `id: "powtorka_etap_2"`) dołączona do ostatniego tygodnia etapu, z tymi samymi blokami.
+
 ## Pola opcjonalne (z wartościami domyślnymi)
 
 | Pole | Co to |
@@ -78,6 +100,11 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `claude_md` | treść pliku CLAUDE.md tworzonego w projekcie |
 | `szablony` | `{"klucz": "tekst"}` albo `{"klucz": {"nazwa", "kiedy", "tresc"}}` — każdy pokazuje się w zakładce Prompty |
 | `stanowisko` | nazwa roli docelowej (np. „Junior QA”) — nagłówek próbnej rozmowy rekrutacyjnej w Asystencie |
+| `diagnoza` | lista pytań jak w `test` + `lekcja` (id) — zadanie diagnostyczne na start (Panel → Pierwsze kroki, Quiz, „Jak zacząć”); nie blokuje nauki, nie daje XP; wynik i lekcje do powtórki w `stan["diagnoza"]` |
+| `pytania_dziennika` | lista pytań pomocniczych pokazywanych w zakładce Dziennik (domyślnie ogólne) |
+| `materialy` | ścieżka (informacyjna) paczki materiałów; Mentor szuka jej w `programy/materialy/<id>/` i udostępnia „Skopiuj materiały kursu do katalogu projektu” (bez nadpisywania) |
+| `quizy[...][i].lekcja` | id lekcji do powtórki po błędnej odpowiedzi — pokazywane na ekranie wyniku quizu |
+| `poziom`, `system`, `wymagania_wstepne`, `umiejetnosci_koncowe` | metadane kursu dla START_TUTAJ.md i przewodnika (STANDARD §2) |
 | `stan_prawny` / `firma` | dowolne metadane programu (np. „listopad 2026”, opis firmy ćwiczeniowej) |
 | `narzedzia` | lista narzędzi Warsztatu do włączenia: `firma`, `place`, `zasilki`, `urlopy`, `czas`, `potracenia`, `zus`, `pit`, `przepisy` (zakładka Warsztat pojawia się tylko, gdy lista nie jest pusta) |
 | `parametry` | parametry roku dla kalkulatorów (`minimalne`, `wypadkowa`, `prog`, `kwota_zmn`, `wspolczynnik`…; brakujące — z `kadry.DOMYSLNE`) |

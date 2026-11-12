@@ -95,7 +95,7 @@ RYTM_DNIA = [
      "opis": "Czytasz lekcję dnia (zakładka Lekcje) i jeden przepis z Warsztat → Przepisy. Notujesz 3 liczby/terminy, które musisz zapamiętać.",
      "prompt": "Uczę się [temat]. Wytłumacz na 2 przykładach z firmy produkcyjnej (62 pracowników), podaj podstawę prawną każdej liczby i daj mi 3 kazusy od łatwego do trudnego. Nie podawaj rozwiązań."},
     {"nazwa": "Kazus w Warsztacie", "minuty": 50, "ikona": "🧮",
-     "opis": "Rozwiązujesz zadanie dnia: liczysz na kartce i sprawdzasz w Warsztacie, piszesz pismo lub wypełniasz dokument w symulatorze. Asystenta pytasz dopiero po 15 minutach własnej walki.",
+     "opis": "Rozwiązujesz zadanie dnia: liczysz na kartce i sprawdzasz w Warsztacie, piszesz pismo lub wypełniasz dokument w symulatorze. Najpierw własna próba i podpowiedzi z lekcji po kolei; gdy nie wiesz, jak zacząć — pytasz Asystenta od razu o wskazówkę, nie o wynik.",
      "prompt": "Utknąłem na kazusie: [opis]. Oto mój tok rozumowania i liczby: [wklej]. Nie rozwiązuj za mnie — wskaż, który krok lub którą podstawę prawną sprawdzić."},
     {"nazwa": "Weryfikacja u źródła", "minuty": 15, "ikona": "🔍",
      "opis": "Sprawdzasz wynik: Warsztat → Przepisy, narzędzie Warsztatu lub druga metoda liczenia. Zapisujesz źródło przy każdej liczbie.",

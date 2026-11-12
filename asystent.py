@@ -355,6 +355,7 @@ class EmulatorOffline:
         self.ostatni_temat = None
         self._ostatnie_pytania = []
         self.ukryte = {}          # plik -> opis błędu
+        self._podpowiedz = {}     # (id lekcji, nr ćwiczenia) -> ile podpowiedzi już pokazano
 
     # ---------------------------------------------------------------- pomocnicze
     def _k(self):
@@ -367,9 +368,14 @@ class EmulatorOffline:
         return P.tydzien(self._k().get("tydzien", 0))
 
     @staticmethod
-    def _rdzenie(tekst):
-        """Słowa tekstu skrócone do 6 znaków — tak „podstawy wymiaru zasiłku” trafia w „podstawa wymiaru zasiłku” mimo odmiany."""
-        return {w[:6] for w in re.findall(r"[0-9a-ząćęłńóśźż]+", tekst.lower())}
+    def _rdzen(w):
+        """Rdzeń słowa: 6 znaków dla dłuższych, 4 dla krótkich — „podstawy”→„podsta”, „listy”/„lista”→„list”."""
+        return w[:6] if len(w) > 6 else w[:4]
+
+    @classmethod
+    def _rdzenie(cls, tekst):
+        """Rdzenie słów tekstu — tak „podstawy wymiaru zasiłku” trafia w „podstawa wymiaru zasiłku” mimo odmiany."""
+        return {cls._rdzen(w) for w in re.findall(r"[0-9a-ząćęłńóśźż]+", tekst.lower())}
 
     def _temat(self, tekst):
         t = tekst.lower()
@@ -383,7 +389,7 @@ class EmulatorOffline:
                     p += 2
                     continue
                 czesci = re.findall(r"[0-9a-ząćęłńóśźż]+", s)
-                if czesci and all(c[:6] in rdzenie for c in czesci):
+                if czesci and all(self._rdzen(c) in rdzenie for c in czesci):
                     p += 1
             if temat["nazwa"].lower() in t:
                 p += 3
@@ -438,6 +444,8 @@ class EmulatorOffline:
             return self._program_debug()
         if any(s in t for s in ("przejrzyj", "recenz", "sprawdź @", "sprawdz @", "oceń @", "ocen @")) and pliki:
             return self._recenzja(pliki[0])
+        if t.startswith(("podpowied", "wskazówk", "wskazowk", "daj podpowied", "daj wskaz", "poproszę podpowied", "prosze podpowied", "proszę podpowied")):
+            return self._podpowiedz_cwiczenia(tekst)
         if any(s in t for s in ("utknął", "utknal", "nie działa", "nie dziala", "błąd:", "blad:", "error", "traceback", "wywala")):
             return self._utknalem(tekst, pliki)
         if pliki and any(s in t for s in ("uruchom", "odpal", "wykonaj")):
@@ -499,6 +507,7 @@ class EmulatorOffline:
                     ("kod", "/temat <nazwa>        wyjaśnienie z przykładami i 3 zadaniami\n"
                             "/tematy               lista tematów z bazy wiedzy\n"
                             "/zadania              3 zadania do ostatniego tematu\n"
+                            "/podpowiedz [nr]      kolejna podpowiedź do ćwiczenia z ostatniej lekcji (1 → 2 → 3 → rozwiązanie)\n"
                             "/pytania              3 pytania sprawdzające z bieżącego tygodnia\n"
                             "/quiz [tydzień]       quiz w rozmowie (A/B/C/D)\n"
                             "/rekrutacja           pytania jak na rozmowie o pracę (" + (P.stanowisko or "stanowisko z programu") + ")\n"
@@ -528,6 +537,8 @@ class EmulatorOffline:
             return self._zadania(temat)
         if cmd == "pytania":
             return self._pytania_sprawdzajace(arg)
+        if cmd in ("podpowiedz", "podpowiedź", "wskazowka", "wskazówka"):
+            return self._podpowiedz_cwiczenia(arg)
         if cmd == "odpowiedzi":
             if not self._ostatnie_pytania:
                 return [("tekst", "Najpierw poproś o pytania: /pytania albo „zadaj mi 3 pytania”.")]
@@ -581,10 +592,64 @@ class EmulatorOffline:
 
     def _zadania(self, temat):
         self.ostatni_temat = temat
-        out = [("naglowek", "3 zadania — bez rozwiązań, 15 minut własnej walki przed pytaniem")]
-        for i, z in enumerate(temat["zadania"], 1):
-            out.append(("tekst", f"{i}. {z}"))
-        out.append(("pytanie", "Gdy skończysz: „przejrzyj @nazwa_pliku.py” — zrobię recenzję. Gdy utkniesz: „utknąłem … błąd: …”."))
+        cw = temat.get("cwiczenia") or []
+        out = []
+        if cw:
+            out.append(("naglowek", f"Ćwiczenia z lekcji ({len(cw)}) — najpierw próbujesz, podpowiedzi dostajesz stopniowo"))
+            for i, c in enumerate(cw, 1):
+                rodzaj = "prowadzone" if c.get("rodzaj") == "prowadzone" else "samodzielne"
+                out.append(("tekst", f"{i}. [{rodzaj}] {c['tresc']}"))
+            out.append(("pytanie", "Utknąłeś? Napisz „podpowiedź” (albo „podpowiedź 2” dla drugiego ćwiczenia) — dostaniesz pytanie naprowadzające, "
+                                   "potem wskazówkę gdzie szukać, potem częściowy przykład, a na końcu rozwiązanie. Nie ma obowiązku męczyć się przez określony czas."))
+        if temat.get("zadania"):
+            out.append(("naglowek", "Dodatkowe zadania — bez rozwiązań" if cw else "3 zadania — bez rozwiązań; najpierw własna próba, potem pytanie o podpowiedź"))
+            for i, z in enumerate(temat["zadania"], 1):
+                out.append(("tekst", f"{i}. {z}"))
+        out.append(("pytanie", "Gdy skończysz: „przejrzyj @nazwa_pliku” — zrobię recenzję. Gdy utkniesz: „utknąłem … błąd: …”."))
+        return out
+
+    def _podpowiedz_cwiczenia(self, tekst):
+        """Stopniowane podpowiedzi do ćwiczenia z ostatniej lekcji: pytanie naprowadzające → gdzie szukać → częściowy przykład → rozwiązanie."""
+        temat = self.ostatni_temat
+        if not temat:
+            m = re.search(r"(?:do|z)\s+(?:lekcji\s+)?(.+)$", tekst.lower())
+            temat = self._temat(m.group(1)) if m else None
+        if not temat:
+            k = self._k()
+            lekcja_id = k.get("lekcja")
+            temat = P.lekcja(lekcja_id) if lekcja_id else None
+        if not temat:
+            return [("ostrz", "Nie wiem, do którego ćwiczenia. Najpierw otwórz temat: „uczę się [temat]” albo /temat <id> — potem „podpowiedź”.")]
+        cw = temat.get("cwiczenia") or []
+        if not cw:
+            return [("tekst", f"Lekcja „{temat['nazwa']}” nie ma ćwiczeń z podpowiedziami. Zadania do niej: /zadania. "
+                              "Gdy utkniesz, opisz problem: „utknąłem: …” — zadam pytanie naprowadzające.")]
+        m = re.search(r"(\d+)", tekst)
+        nr = int(m.group(1)) if m else 1
+        if not 1 <= nr <= len(cw):
+            return [("ostrz", f"Lekcja ma {len(cw)} ćwiczeń — podaj numer 1–{len(cw)}.")]
+        c = cw[nr - 1]
+        klucz = (temat["id"], nr)
+        pokazano = self._podpowiedz.get(klucz, 0)
+        wsk = [w for w in (c.get("wskazowki") or []) if w]
+        etykiety = ("pytanie naprowadzające", "gdzie szukać", "częściowy przykład")
+        out = [("naglowek", f"Ćwiczenie {nr}: {c['tresc'][:90]}{'…' if len(c['tresc']) > 90 else ''}")]
+        if pokazano < len(wsk):
+            out.append(("tekst", f"Podpowiedź {pokazano + 1} z {len(wsk)} ({etykiety[min(pokazano, 2)]}): {wsk[pokazano]}"))
+            self._podpowiedz[klucz] = pokazano + 1
+            if pokazano + 1 < len(wsk):
+                out.append(("pytanie", "Spróbuj teraz. Jeśli dalej nie idzie — napisz „podpowiedź” jeszcze raz."))
+            else:
+                out.append(("pytanie", "To była ostatnia podpowiedź. Po własnej próbie napisz „podpowiedź” raz jeszcze — pokażę pełne rozwiązanie."))
+            return out
+        if c.get("rozwiazanie"):
+            out.append(("tekst", "Pełne rozwiązanie (po własnej próbie):"))
+            out.append(("kod", c["rozwiazanie"]))
+            if c.get("wynik"):
+                out.append(("tekst", f"Oczekiwany wynik: {c['wynik']}"))
+            out.append(("pytanie", "Wyjaśnij teraz własnymi słowami, dlaczego to działa — krok po kroku. Jeśli któryś krok jest niejasny, zapytaj „dlaczego …”."))
+        else:
+            out.append(("tekst", "Wszystkie podpowiedzi już pokazane; to ćwiczenie nie ma zapisanego rozwiązania — porównaj swój wynik z przykładem w lekcji."))
         return out
 
     def _pytania_sprawdzajace(self, tekst):

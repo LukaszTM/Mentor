@@ -12,7 +12,7 @@ ETAPY = [
     {"nr": 1, "nazwa": "Prawo pracy w praktyce kadr", "tygodnie": [1, 2, 3],
      "cel": "Zatrudniasz pracownika od ogłoszenia po akta osobowe zgodnie z przepisami 2026, planujesz i rozliczasz czas pracy, udzielasz każdego rodzaju urlopu i nieobecności."},
     {"nr": 2, "nazwa": "Płace od brutto do netto", "tygodnie": [4, 5, 6, 7],
-     "cel": "Liczysz listę płac ręcznie i w arkuszu (składki, PIT, PPK, potrącenia), wynagrodzenie za nadgodziny, urlop, chorobowe i zasiłki ZUS oraz umowy cywilnoprawne."},
+     "cel": "Liczysz listę płac ręcznie i w Warsztacie (składki, PIT, PPK, potrącenia), wynagrodzenie za nadgodziny, urlop, chorobowe i zasiłki ZUS oraz umowy cywilnoprawne."},
     {"nr": 3, "nazwa": "Rozliczenia z ZUS i US, kalendarz roczny", "tygodnie": [8, 9],
      "cel": "Składasz dokumenty zgłoszeniowe i rozliczeniowe ZUS, robisz korekty, rozliczasz PIT roczny pracowników i prowadzisz kalendarz obowiązków (ZFŚS, PFRON, GUS, badania, szkolenia)."},
     {"nr": 4, "nazwa": "Zakończenie zatrudnienia, compliance 2026/2027, projekt końcowy", "tygodnie": [10, 11],
@@ -189,7 +189,7 @@ TYGODNIE_1 = [
          {"id": "k2z4", "tytul": "Ewidencja czasu pracy: wzór, zawartość, nieobecności, 3 lata przechowywania", "opis": "Karta ewidencji dla jednego pracownika na miesiąc z pełnym zakresem z §6 rozporządzenia o dokumentacji.",
           "czas_min": 60, "pliki": ["ewidencja_czasu_pracy.xlsx", "ewidencja.md"], "xp": 10,
           "kroki": [
-              "Lekcja „Ewidencja czasu pracy i nieobecności”. Zbuduj arkusz z kolumnami dla każdego dnia: godzina rozpoczęcia i zakończenia, liczba godzin, w tym nadgodziny, w porze nocnej, w niedzielę/święto, dyżur (miejsce, godziny), dni wolne (z oznaczeniem tytułu: W5 — wolna z 5-dniowego tygodnia, WN — niedziela, WŚ — święto), rodzaj i wymiar nieobecności (urlop, choroba, opieka, siła wyższa, urlop opiekuńczy), zwolnienia od pracy z zachowaniem/bez wynagrodzenia.",
+              "Lekcja „Ewidencja czasu pracy i nieobecności”. Zbuduj kartę ewidencji (plik .md z tabelą, szablon: cwiczenia/tydzien_02/ewidencja_czasu_1.md) z kolumnami dla każdego dnia: godzina rozpoczęcia i zakończenia, liczba godzin, w tym nadgodziny, w porze nocnej, w niedzielę/święto, dyżur (miejsce, godziny), dni wolne (z oznaczeniem tytułu: W5 — wolna z 5-dniowego tygodnia, WN — niedziela, WŚ — święto), rodzaj i wymiar nieobecności (urlop, choroba, opieka, siła wyższa, urlop opiekuńczy), zwolnienia od pracy z zachowaniem/bez wynagrodzenia.",
               "Wypełnij dla operatora za grudzień 2026 z grafiku z zadania 2 (z 1 dniem urlopu, 2 dniami L4 i 4 nadgodzinami). Suma ma się zgadzać z listą płac w tygodniu 5.",
               "Dla pracownika zadaniowego i kierownika wyodrębnionej komórki: nie ewidencjonujesz godzin (art. 149 §2), ale ewidencjonujesz nieobecności i dni wolne — dodaj drugą, uproszczoną kartę.",
               "Dokumenty towarzyszące (trzymane razem z ewidencją): wnioski o czas wolny za nadgodziny, zgody na nadgodziny opiekuna dziecka do 8 lat, wnioski o wyjścia prywatne (odpracowanie nie jest nadgodziną), polecenia nadgodzin, harmonogramy. Okres przechowywania: jak akta (10 lat po ustaniu).",

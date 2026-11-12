@@ -262,6 +262,7 @@ def BUDUJ_place(app, parent):
     f.pole("er_narast", "Podst. emer.-rent. narast.", "0", 10)
     f.pole("ulga", "ulga dla młodych (do 26 lat)", False, check=True)
     f.pole("fp_zw", "zwolnienie z FP/FGŚP (55+/60+)", False, check=True)
+    f.pole("umowna", "Pensja wg umowy (pełny mies., do FP)", "0", 10)
 
     def wypelnij(*_):
         i = osoby.index(f.get("osoba")) - 1
@@ -269,6 +270,7 @@ def BUDUJ_place(app, parent):
             return
         o = w["osoby"][i]
         f.pola["zasadnicze"].set(str(o.get("zasadnicze", 0)))
+        f.pola["umowna"].set(str(o.get("zasadnicze", 0)))
         f.pola["kup"].set(str(o.get("kup", 250)))
         f.pola["pit2"].set(str(o.get("pit2", 300)))
         f.pola["ppk_prac"].set(str(par.get("ppk_prac", 2.0)) if o.get("ppk") else "0")
@@ -287,7 +289,7 @@ def BUDUJ_place(app, parent):
         wyn = kadry.lista_plac(zasadnicze=f.liczba("zasadnicze"), zmienne=f.liczba("zmienne"), natura=f.liczba("natura"), wyn_chorobowe=f.liczba("wyn_chorobowe"),
                                zasilek=f.liczba("zasilek"), kup=f.liczba("kup"), pit2=f.liczba("pit2"), ppk_prac=f.liczba("ppk_prac"), ppk_pracod=f.liczba("ppk_pracod"),
                                ulga_mlodych=f.bool("ulga"), dochod_narast=f.liczba("dochod"), podstawa_er_narast=f.liczba("er_narast"), fp_zwolnienie=f.bool("fp_zw"),
-                               potracenia=f.liczba("potracenia"), par=par)
+                               potracenia=f.liczba("potracenia"), par=par, pensja_umowna=f.liczba("umowna"))
         ostatni.clear()
         ostatni.update(wyn)
         if pokaz:
@@ -416,8 +418,10 @@ def BUDUJ_zasilki(app, parent):
     def policz():
         mies = [{"nazwa": v[0].get(), "stale": _liczba(v[1].get()), "zmienne": _liczba(v[2].get()), "dni_obow": int(_liczba(v[3].get())), "dni_przepr": int(_liczba(v[4].get()))} for v in wiersze]
         wyn = kadry.podstawa_zasilku(mies, etat=f.liczba("etat", 1.0), par=par)
-        kw = kadry.zl(wyn["dzienna"] * f.liczba("dni") * f.liczba("proc") / 100)
-        _ustaw(txt, _formatuj_kroki("Podstawa wymiaru zasiłku", wyn["kroki"]) + f"\n\nZa {f.get('dni')} dni × {f.get('proc')}%: {kadry.fmt(kw)} zł")
+        dz_proc = kadry.zl(wyn["dzienna"] * f.liczba("proc") / 100)
+        kw = kadry.zl(dz_proc * f.liczba("dni"))
+        _ustaw(txt, _formatuj_kroki("Podstawa wymiaru zasiłku", wyn["kroki"]) +
+               f"\n\nStawka dzienna × {f.get('proc')}% = {kadry.fmt(dz_proc)} zł (zaokrąglona do grosza) → za {f.get('dni')} dni: {kadry.fmt(kw)} zł")
         return wyn, kw
 
     r = tk.Frame(k, bg=M.K["karta"])
@@ -451,7 +455,8 @@ def BUDUJ_zasilki(app, parent):
         dz = f2.liczba("dzienna")
         linie = [f"Pula wynagrodzenia chorobowego: {wyn['limit']} dni, wykorzystano {wyn['uzyte']}", ""]
         for x in wyn["pozycje"]:
-            kw = f"   kwota: chorobowe {kadry.fmt(kadry.zl(dz * x['chorobowe'] * x['proc'] / 100))} + zasiłek {kadry.fmt(kadry.zl(dz * x['zasilek'] * x['proc'] / 100))}" if dz else ""
+            dzp = kadry.zl(dz * x['proc'] / 100)
+            kw = f"   kwota ({kadry.fmt(dzp)}/dzień): chorobowe {kadry.fmt(kadry.zl(dzp * x['chorobowe']))} + zasiłek {kadry.fmt(kadry.zl(dzp * x['zasilek']))}" if dz else ""
             linie.append(f"{x['od']} – {x['do']}  {x['rodzaj']:<14}{x['dni']:>3} dni  {x['proc']}%  → {x['uwaga']}{kw}")
         _ustaw(txt2, "\n".join(linie) if lista else "Brak nieobecności.")
 

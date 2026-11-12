@@ -29,7 +29,7 @@ from asystent import EmulatorOffline, KlientAPI
 from motywy import GRUPY, MOTYW_DOMYSLNY, MOTYWY, motyw
 import warsztat
 from program import (P, KATALOG_PROGRAMOW, domyslna_sciezka, importuj as importuj_program, lista_programow,
-                     wczytaj as wczytaj_program, zapisz_szablon)
+                     wczytaj as wczytaj_program, zapisz_szablon, katalog_materialow, skopiuj_materialy)
 
 KATALOG = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent
 PLIK_DANYCH = KATALOG / "mentor_dane.json"
@@ -750,6 +750,23 @@ class Mentor(tk.Tk):
         przycisk(r, "Wybierz katalog…", self._wybierz_projekt, "drugi").pack(side="left", padx=8)
         etykieta(k, f"To zwykły folder na dysku (proponowana nazwa: {P.katalog_projektu}). Trafiają do niego wszystkie pliki z zadań — Mentor sprawdza, "
                  "czy powstały (zakładka Mój projekt), a Asystent może je czytać. Jeśli folderu nie ma, utwórz go w Eksploratorze i wskaż tutaj.", 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(6, 0))
+        if katalog_materialow(P.id):
+            r = tk.Frame(k, bg=K["karta"])
+            r.pack(fill="x", pady=(8, 0))
+            przycisk(r, "📂 Skopiuj materiały kursu do katalogu projektu", self._skopiuj_materialy, "drugi").pack(side="left")
+            etykieta(r, "  START_TUTAJ.md, ćwiczenia, rozwiązania, pomoc — nic nie nadpisuje", 9, kolor=K["szary"], wrap=W - 380).pack(side="left")
+
+        # krok 1b — diagnoza (opcjonalna)
+        if P.diagnoza:
+            z, k = karta(w, tytul=f"Krok 1b · Diagnoza na start — {len(P.diagnoza)} pytań, ok. 5 minut (nie blokuje nauki)")
+            z.pack(fill="x", padx=28, pady=(12, 0))
+            dg = self.stan.d.get("diagnoza") or {}
+            if dg.get("wynik") is not None:
+                etykieta(k, f"Zrobiona {dg.get('data', '')}: {dg['wynik']}/{dg['max']}. Lekcje do powtórzenia Mentor pokazał na końcu — możesz powtórzyć diagnozę w każdej chwili.", 10, wrap=W).pack(fill="x")
+            else:
+                etykieta(k, "Kilka pytań z całego kursu. Nie ma oceny — wynik pokazuje tylko, które tematy już znasz, a przy których warto zwolnić. "
+                         "Możesz pominąć i wrócić później (Quizy → Diagnoza).", 10, wrap=W).pack(fill="x")
+            przycisk(k, "🩺 Zrób diagnozę", self.pokaz_diagnoze, "drugi").pack(anchor="w", pady=(8, 0))
 
         # krok 2 — dzień nauki
         z, k = karta(w, tytul=f"Krok 2 · Jak wygląda dzień nauki ({sum(f['minuty'] for f in P.rytm_dnia)} min, 4 fazy)")
@@ -767,7 +784,8 @@ class Mentor(tk.Tk):
         z, k = karta(w, tytul="Krok 3 · Lekcja → zadanie → odhaczenie (codzienna pętla)")
         z.pack(fill="x", padx=28, pady=(12, 0))
         for t in ("1. Panel → „Dzisiaj”: Mentor wybiera zadanie dnia (pon–czw zadania 1–4, piątek zadanie tygodnia, sobota quiz, niedziela wolne).",
-                  "2. Lekcje → przeczytaj lekcję dnia: cel, wyjaśnienie, przykład (przelicz sam!), pułapki, 3 zadania, pytania, test 3 pytania.",
+                  "2. Lekcje → przeczytaj lekcję dnia. Zawsze ta sama kolejność: cel → po co → wyjaśnienie od podstaw → demonstracja krok po kroku → "
+                  "ćwiczenie prowadzone → ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → typowe błędy → sprawdzenie → test.",
                   "3. Plan → zadanie → rozwiń „Jak to zrobić” — kroki są kompletne, od „otwórz…” do „zapisz jako…”. Wykonujesz w katalogu projektu.",
                   "4. Plan → zaznacz ✔ przy zadaniu → +10 XP (zadanie tygodnia +25). Odznaki i seria dni rosną same.",
                   "5. Dziennik → jedno zdanie „czego się dziś nauczyłem” (+3 XP). Po każdym etapie — Checklista (co masz umieć), w sobotę — Quiz."):
@@ -792,7 +810,8 @@ class Mentor(tk.Tk):
         z.pack(fill="x", padx=28, pady=(12, 0))
         etykieta(k, "Trzy karty w zakładce Asystent: Subskrypcja (Claude Code w terminalu — pełny model), API (własny klucz, rozmowa w Mentorze), "
                  "Offline (wbudowany, bez internetu: „uczę się [temat]”, „co to jest [pojęcie]”, „zadaj mi 3 pytania”, „quiz z tygodnia 2”, „odpytaj mnie jak rekruter”). "
-                 "Zasada we wszystkich: najpierw 15 minut własnej walki, potem pytanie o podpowiedź — nie o wynik. Gotowe prompty: zakładka Prompty.", 10, wrap=W).pack(fill="x")
+                 "Zasada we wszystkich: najpierw własna próba (każde ćwiczenie ma 3 stopniowane podpowiedzi), potem pytanie o podpowiedź — nie o gotowy wynik. "
+                 "Gdy nie wiesz nawet, jak zacząć, pytaj od razu — nie ma obowiązku „walczyć” przez określony czas. Gotowe prompty: zakładka Prompty.", 10, wrap=W).pack(fill="x")
         przycisk(k, "🤖 Otwórz Asystenta", lambda: self.pokaz("asystent"), "drugi").pack(anchor="w", pady=(8, 0))
 
         # zakładki
@@ -857,9 +876,11 @@ class Mentor(tk.Tk):
             etykieta(k, "Pierwsze kroki w tym programie", 12, bold=True, bg=K["nieb_tlo"], kolor=K["nieb"]).pack(fill="x")
             lekcja0 = P.lekcje[0] if P.lekcje else None
             kroki = [("1", "Przeczytaj lekcję wprowadzającą (10 min)", "📖 Otwórz lekcję", (lambda: self.pokaz_lekcje(lekcja0["id"])) if lekcja0 else None),
-                     ("2", f"Wskaż katalog projektu (proponowana nazwa: {P.katalog_projektu})", "📂 Mój projekt", lambda: self.pokaz("projekt")),
+                     ("2", f"Wskaż katalog projektu (proponowana nazwa: {P.katalog_projektu})" + (" i skopiuj do niego materiały kursu" if katalog_materialow(P.id) else ""), "📂 Mój projekt", lambda: self.pokaz("projekt")),
                      ("3", "Zobacz zadanie na dziś i rozwiń „Jak to zrobić”", "📅 Plan — tydzień 0", lambda: self.pokaz_tydzien(P.tygodnie[0]["tydzien"])),
                      ("4", "Uruchom sesję nauki — 4 fazy, timer prowadzi", "▶ Sesja nauki", lambda: self.pokaz("sesja"))]
+            if P.diagnoza and not (self.stan.d.get("diagnoza") or {}).get("wynik") is not None:
+                kroki.insert(1, ("1b", f"Opcjonalnie: diagnoza na start ({len(P.diagnoza)} pytań, 5 min) — pokaże, co już znasz", "🩺 Diagnoza", self.pokaz_diagnoze))
             for nr, opis, tekst, cmd in kroki:
                 r = tk.Frame(k, bg=K["nieb_tlo"])
                 r.pack(fill="x", pady=2)
@@ -1261,10 +1282,10 @@ class Mentor(tk.Tk):
             lab.pack(fill="x", pady=2)
             self.t_faza_etykiety.append(lab)
 
-        z, k = karta(prawa, tytul="🥊 Utknąłem — 15 min walki", bg=K["zolty"])
+        z, k = karta(prawa, tytul="🧭 Utknąłem — licznik własnej próby (opcjonalny)", bg=K["zolty"])
         z.pack(fill="x", pady=(10, 0))
-        etykieta(k, "Zasada nr 1: zanim zapytasz Claude, próbuj sam. Włącz licznik; gdy dojdzie do zera, "
-                 "masz prawo użyć promptu „Utknąłem”.", 9, bg=K["zolty"], wrap=340).pack(fill="x")
+        etykieta(k, "Wiesz, jak zacząć, ale nie wychodzi? Włącz licznik i spróbuj jeszcze chwilę sam — potem użyj podpowiedzi w lekcji "
+                 "albo promptu „Utknąłem”. Nie wiesz nawet, od czego zacząć? Nie czekaj — pytaj od razu.", 9, bg=K["zolty"], wrap=340).pack(fill="x")
         self.walka_etykieta = tk.Label(k, text=self._walka_tekst(), font=czc(20, "bold", mono=True), bg=K["zolty"], fg=K["pomar"])
         self.walka_etykieta.pack(pady=4)
         przycisk(k, "Start 15 min", self._walka_start, "ostrz").pack()
@@ -1355,8 +1376,8 @@ class Mentor(tk.Tk):
             if dt.datetime.now() >= self.walka_koniec:
                 self.walka_koniec = None
                 self.bell()
-                messagebox.showinfo("15 minut minęło", "Walczyłeś uczciwie. Teraz możesz użyć promptu „Utknąłem” — "
-                                    "ale nadal proś o pytanie naprowadzające, nie o rozwiązanie.", parent=self)
+                messagebox.showinfo("15 minut minęło", "Próbowałeś sam — teraz sięgnij po podpowiedź w lekcji (Podpowiedź 1 z 3) "
+                                    "albo prompt „Utknąłem”. Proś o pytanie naprowadzające, nie o gotowy wynik.", parent=self)
         self.after(1000, self._petla)
 
     def _walka_tekst(self):
@@ -1510,8 +1531,8 @@ class Mentor(tk.Tk):
         self.pokaz("lekcje")
 
     def widok_lekcje(self):
-        self._naglowek(self.tresc, "Lekcje", "Jedna lekcja dziennie, przed zadaniem: cel → wyjaśnienie → przykład → pułapki → zadania → pytania → test. "
-                       "Pierwszy raz tutaj? Zacznij od pierwszej lekcji na liście — to wprowadzenie do programu. ✔ oznacza zaliczony test.")
+        self._naglowek(self.tresc, "Lekcje", "Jedna lekcja dziennie, przed zadaniem: cel → po co → wyjaśnienie → demonstracja → ćwiczenia z podpowiedziami → "
+                       "typowe błędy → sprawdzenie → test. Pierwszy raz tutaj? Zacznij od pierwszej lekcji na liście — to wprowadzenie do programu. ✔ oznacza zaliczony test.")
         cialo = tk.Frame(self.tresc, bg=K["tlo"])
         cialo.pack(fill="both", expand=True, padx=28, pady=(0, 20))
         lewa = Przewijane(cialo, K["tlo"])
@@ -1560,10 +1581,18 @@ class Mentor(tk.Tk):
             plakietka(r0, f"≈ {l['czas_min']} min", K["jasny"], K["szary"]).pack(side="left")
         etykieta(k, l["nazwa"], 15, bold=True, wrap=W).pack(fill="x", pady=(6, 4))
         if l.get("cel"):
-            etykieta(k, "🎯 Po tej lekcji: " + l["cel"], 10, bold=True, kolor=K["ziel"], wrap=W).pack(fill="x", pady=(0, 6))
-        etykieta(k, "Jak pracować z lekcją:  1 przeczytaj wyjaśnienie  →  2 przelicz przykład sam  →  3 zrób zadania  →  4 odpowiedz na pytania na głos  →  5 test (2/3 zalicza)",
-                 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(0, 8))
-        etykieta(k, "1 · Wyjaśnienie", 11, bold=True).pack(fill="x", pady=(4, 4))
+            etykieta(k, "🎯 Po tej lekcji potrafisz: " + l["cel"], 10, bold=True, kolor=K["ziel"], wrap=W).pack(fill="x", pady=(0, 4))
+        if l.get("po_co"):
+            etykieta(k, "💡 Po co mi to? " + l["po_co"], 10, wrap=W).pack(fill="x", pady=(0, 4))
+        if l.get("wymagania"):
+            etykieta(k, "📦 Czego potrzebujesz:", 10, bold=True).pack(fill="x", pady=(4, 0))
+            for wm in l["wymagania"]:
+                etykieta(k, "• " + wm, 10, wrap=W).pack(fill="x", padx=(12, 0))
+        pelna = bool(l.get("demonstracja") or l.get("cwiczenia"))
+        etykieta(k, ("Jak pracować z lekcją:  1 wyjaśnienie  →  2 demonstracja (prześledź każdy krok)  →  3 ćwiczenie prowadzone  →  4 ćwiczenie samodzielne  →  5 typowe błędy  →  6 pytania  →  7 test (2/3 zalicza)"
+                     if pelna else "Jak pracować z lekcją:  1 przeczytaj wyjaśnienie  →  2 przelicz przykład sam  →  3 zrób zadania  →  4 odpowiedz na pytania na głos  →  5 test (2/3 zalicza)"),
+                 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(6, 8))
+        etykieta(k, "1 · Wyjaśnienie od podstaw", 11, bold=True).pack(fill="x", pady=(4, 4))
         for akapit in l["wyjasnienie"].split("\n"):
             a = akapit.strip()
             if not a:
@@ -1574,43 +1603,82 @@ class Mentor(tk.Tk):
                 etykieta(k, "• " + a[2:], 10, wrap=W).pack(fill="x", padx=(12, 0), pady=(0, 2))
             else:
                 etykieta(k, a, 10, wrap=W).pack(fill="x", pady=(0, 6))
-        if l.get("przyklad"):
-            etykieta(k, "2 · Przykład — przelicz lub prześledź sam, zanim spojrzysz na wynik", 11, bold=True).pack(fill="x", pady=(8, 4))
-            tk.Label(k, text=l["przyklad"], font=czc(10, mono=True), bg=K["jasny"], fg=K["tekst"], anchor="w", justify="left",
-                     padx=12, pady=8, wraplength=W).pack(fill="x")
+        # 2 · demonstracja kompletna z omówieniem krok po kroku
+        dem = l.get("demonstracja")
+        if dem or l.get("przyklad"):
+            etykieta(k, "2 · Demonstracja — kompletny przykład omówiony krok po kroku" if dem else "2 · Przykład — przelicz lub prześledź sam, zanim spojrzysz na wynik", 11, bold=True).pack(fill="x", pady=(8, 4))
+            if dem and dem.get("tytul"):
+                etykieta(k, dem["tytul"], 10, bold=True, kolor=K["akcent"], wrap=W).pack(fill="x", pady=(0, 4))
+            if l.get("przyklad"):
+                tk.Label(k, text=l["przyklad"], font=czc(10, mono=True), bg=K["jasny"], fg=K["tekst"], anchor="w", justify="left",
+                         padx=12, pady=8, wraplength=W).pack(fill="x")
+            if dem:
+                if dem.get("kroki"):
+                    etykieta(k, "Omówienie — co robi każdy krok i dlaczego:", 10, bold=True).pack(fill="x", pady=(8, 2))
+                    for i, kr in enumerate(dem["kroki"], 1):
+                        etykieta(k, f"{i}. {kr}", 10, wrap=W).pack(fill="x", padx=(12, 0), pady=(0, 3))
+                if dem.get("wynik"):
+                    etykieta(k, "✔ Oczekiwany wynik: " + dem["wynik"], 10, bold=True, kolor=K["ziel"], wrap=W).pack(fill="x", pady=(6, 0))
+        if l.get("jak_uruchomic"):
+            etykieta(k, "3 · Jak to uruchomić (dokładnie, krok po kroku)", 11, bold=True).pack(fill="x", pady=(10, 4))
+            for i, ju in enumerate(l["jak_uruchomic"], 1):
+                etykieta(k, f"{i}. {ju}", 10, wrap=W).pack(fill="x", padx=(12, 0), pady=(0, 3))
         if l.get("w_praktyce"):
             z2, k2 = karta(prawa.wnetrze, tytul="W praktyce — jak to robisz w firmie, krok po kroku")
             z2.pack(fill="x", pady=(8, 0))
             for i, kr in enumerate(l["w_praktyce"], 1):
                 etykieta(k2, f"{i}. {kr}", 10, wrap=W).pack(fill="x", pady=(0, 3))
+        # 4/5 · ćwiczenia z trzema poziomami pomocy
+        for nr, cw in enumerate(l.get("cwiczenia") or [], 4):
+            rodzaj = cw.get("rodzaj", "prowadzone")
+            tyt = f"{nr} · Ćwiczenie {'prowadzone — jak demonstracja, z podpowiedziami' if rodzaj == 'prowadzone' else 'samodzielne — Twoja decyzja, nie kopiowanie'}"
+            z2, k2 = karta(prawa.wnetrze, tytul=tyt)
+            z2.pack(fill="x", pady=(8, 0))
+            etykieta(k2, cw.get("tresc", ""), 10, wrap=W).pack(fill="x")
+            if cw.get("plik"):
+                etykieta(k2, "📄 Plik: " + cw["plik"], 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(4, 0))
+            if cw.get("wynik"):
+                etykieta(k2, "✔ Poprawny wynik wygląda tak: " + cw["wynik"], 10, kolor=K["ziel"], wrap=W).pack(fill="x", pady=(4, 0))
+            self._podpowiedzi(k2, cw, W)
+        if l.get("typowe_bledy"):
+            z2, k2 = karta(prawa.wnetrze, tytul=f"{4 + len(l.get('cwiczenia') or [])} · Typowe błędy i naprawa")
+            z2.pack(fill="x", pady=(8, 0))
+            for tb in l["typowe_bledy"]:
+                etykieta(k2, "✘ " + tb.get("komunikat", ""), 10, bold=True, kolor=K["czerw"], wrap=W).pack(fill="x", pady=(4, 0))
+                for et, kl in (("Prawdopodobna przyczyna", "przyczyna"), ("Jak sprawdzić", "diagnoza"), ("Poprawka", "poprawka")):
+                    if tb.get(kl):
+                        etykieta(k2, f"{et}: {tb[kl]}", 10, wrap=W).pack(fill="x", padx=(12, 0))
         if l.get("pulapki"):
             z2, k2 = karta(prawa.wnetrze, bg=K["zolty"])
             z2.pack(fill="x", pady=(8, 0))
-            etykieta(k2, "3 · ⚠ Pułapki — zapisz do dziennika", 10, bold=True, bg=K["zolty"], kolor=K["pomar"]).pack(fill="x")
+            etykieta(k2, "⚠ Pułapki — zapisz do dziennika", 10, bold=True, bg=K["zolty"], kolor=K["pomar"]).pack(fill="x")
             for pu in l["pulapki"]:
                 etykieta(k2, "• " + pu, 10, bg=K["zolty"], wrap=W).pack(fill="x", pady=(2, 0))
         if l.get("zadania"):
-            z2, k2 = karta(prawa.wnetrze, tytul=f"4 · {len(l['zadania'])} zadania — zrób w katalogu projektu, bez rozwiązań")
+            z2, k2 = karta(prawa.wnetrze, tytul=("Dodatkowe zadania — gdy chcesz więcej praktyki" if pelna else f"4 · {len(l['zadania'])} zadania — zrób w katalogu projektu, bez rozwiązań"))
             z2.pack(fill="x", pady=(8, 0))
             for i, zd in enumerate(l["zadania"], 1):
                 etykieta(k2, f"{i}. {zd}", 10, wrap=W).pack(fill="x", pady=(0, 4))
-        if l.get("pytania"):
-            z2, k2 = karta(prawa.wnetrze, tytul="5 · Pytania sprawdzające — odpowiedz na głos, potem kliknij, by rozwinąć")
+        if l.get("pytania") or l.get("podsumowanie"):
+            z2, k2 = karta(prawa.wnetrze, tytul=("Sprawdzenie — odpowiedz na głos, potem kliknij, by rozwinąć" if pelna else "5 · Pytania sprawdzające — odpowiedz na głos, potem kliknij, by rozwinąć"))
             z2.pack(fill="x", pady=(8, 0))
-            for pq, odp in l["pytania"]:
+            for pq, odp in l.get("pytania", []):
                 r = tk.Frame(k2, bg=K["karta"])
                 r.pack(fill="x", pady=2)
                 lab = etykieta(r, "▸ " + pq, 10, wrap=W)
                 lab.pack(fill="x")
                 lab.configure(cursor="hand2")
                 lab.bind("<Button-1>", lambda e, w_=lab, o=odp, q_=pq: w_.configure(text=f"▾ {q_}\n   → {o}", fg=K["ziel"]))
+            if l.get("podsumowanie"):
+                etykieta(k2, "Co potrafię teraz zrobić bez patrzenia na przykład?", 10, bold=True).pack(fill="x", pady=(8, 0))
+                etykieta(k2, l["podsumowanie"], 10, wrap=W).pack(fill="x")
         z2, k2 = karta(prawa.wnetrze)
         z2.pack(fill="x", pady=(8, 16))
         zal = self.stan.d.get("lekcje", {}).get(l["id"])
         r = tk.Frame(k2, bg=K["karta"])
         r.pack(fill="x")
         if l.get("test"):
-            przycisk(r, f"6 · Sprawdź się — test ({len(l['test'])} pytania)", lambda: self._test_lekcji(l)).pack(side="left")
+            przycisk(r, f"Sprawdź się — test ({len(l['test'])} pytania)", lambda: self._test_lekcji(l)).pack(side="left")
         if zal:
             plakietka(r, f"ostatni wynik {zal['wynik']}/{zal['max']} · {zal['data']}", K["ziel_tlo"] if zal["wynik"] / max(zal["max"], 1) >= 0.67 else K["czerw_tlo"],
                       K["ziel"] if zal["wynik"] / max(zal["max"], 1) >= 0.67 else K["czerw"]).pack(side="left", padx=10)
@@ -1624,6 +1692,45 @@ class Mentor(tk.Tk):
             przycisk(nav, "← " + P.lekcje[poz - 1]["nazwa"][:38], lambda: self.pokaz_lekcje(P.lekcje[poz - 1]["id"]), "drugi").pack(side="left")
         if poz + 1 < len(idx):
             przycisk(nav, P.lekcje[poz + 1]["nazwa"][:38] + " →", lambda: self.pokaz_lekcje(P.lekcje[poz + 1]["id"]), "drugi").pack(side="right")
+
+    def _podpowiedzi(self, parent, cw, W=600):
+        """Trzy poziomy pomocy: pytanie naprowadzające → wskazanie fragmentu → częściowy przykład → pełne rozwiązanie (na prośbę)."""
+        wsk = list(cw.get("wskazowki") or [])
+        roz = cw.get("rozwiazanie")
+        if not wsk and not roz:
+            return
+        pole = tk.Frame(parent, bg=K["karta"])
+        pole.pack(fill="x", pady=(6, 0))
+        stan = {"i": 0}
+        r = tk.Frame(parent, bg=K["karta"])
+        r.pack(fill="x", pady=(6, 0))
+        nazwy = ["Podpowiedź 1 — pytanie naprowadzające", "Podpowiedź 2 — gdzie szukać", "Podpowiedź 3 — częściowy przykład"]
+
+        def dalej():
+            i = stan["i"]
+            if i < len(wsk):
+                etykieta(pole, f"💡 {nazwy[i] if i < 3 else f'Podpowiedź {i + 1}'}: {wsk[i]}", 10, wrap=W, kolor=K["nieb"]).pack(fill="x", pady=(2, 0))
+                stan["i"] += 1
+                if stan["i"] < len(wsk):
+                    b.configure(text=f"Podpowiedź {stan['i'] + 1} z {len(wsk)}")
+                elif roz:
+                    b.configure(text="Pokaż pełne rozwiązanie (po własnej próbie)")
+                else:
+                    b.configure(state="disabled")
+            elif roz:
+                tk.Label(pole, text=roz, font=czc(10, mono=True), bg=K["jasny"], fg=K["tekst"], anchor="w", justify="left", padx=12, pady=8, wraplength=W).pack(fill="x", pady=(6, 0))
+                b.configure(state="disabled", text="Rozwiązanie pokazane — wyjaśnij je własnymi słowami")
+
+        b = przycisk(r, f"Podpowiedź 1 z {len(wsk)}" if wsk else "Pokaż pełne rozwiązanie (po własnej próbie)", dalej, "drugi")
+        b.pack(side="left")
+        etykieta(r, "  najpierw spróbuj sam — podpowiedzi po kolei, rozwiązanie na końcu", 9, kolor=K["szary"], wrap=W - 220).pack(side="left")
+
+    def pokaz_diagnoze(self):
+        """Zadanie diagnostyczne na start (nie blokuje nauki) — wynik wskazuje lekcje do powtórki."""
+        if not P.diagnoza:
+            return
+        pytania = [(f"D-{i}", q) for i, q in enumerate(P.diagnoza)]
+        self._uruchom_quiz(pytania, None, "Diagnoza na start — co już wiesz (nie blokuje nauki)", diagnoza=True)
 
     def _test_lekcji(self, l):
         pytania = [(f"L{l['id']}-{i}", q) for i, q in enumerate(l["test"])]
@@ -1676,6 +1783,13 @@ class Mentor(tk.Tk):
             przycisk(r, "Odśwież", lambda: (self._pliki_cache.clear(), self.pokaz("projekt")), "drugi").pack(side="left", padx=8)
             przycisk(r, "Otwórz Claude Code tutaj", self.otworz_claude, "ciemny").pack(side="left")
             przycisk(r, "Otwórz folder", lambda: self._otworz_folder(sciezka), "drugi").pack(side="left", padx=8)
+        if katalog_materialow(P.id):
+            r = tk.Frame(k, bg=K["karta"])
+            r.pack(fill="x", pady=(8, 0))
+            jest = bool(sciezka) and (Path(sciezka) / "START_TUTAJ.md").exists()
+            przycisk(r, "📂 Skopiuj materiały kursu tutaj", self._skopiuj_materialy, "drugi").pack(side="left")
+            etykieta(r, "  " + ("START_TUTAJ.md już jest — kopiowanie dołoży tylko brakujące pliki" if jest else
+                                "ćwiczenia, przykłady, rozwiązania, pomoc, START_TUTAJ.md — nic nie nadpisuje"), 9, kolor=K["szary"], wrap=520).pack(side="left")
         if not sciezka or not Path(sciezka).is_dir():
             return
 
@@ -1765,12 +1879,39 @@ class Mentor(tk.Tk):
             return ""
 
     def _wybierz_projekt(self):
-        s = filedialog.askdirectory(title="Wybierz katalog projektu (np. nauka-python)", parent=self)
+        s = filedialog.askdirectory(title=f"Wybierz katalog projektu (np. {P.katalog_projektu})", parent=self)
         if s:
             self.stan.d["projekt"] = s
             self.stan.zapisz()
             self._pliki_cache.clear()
             self.pokaz("projekt")
+
+    def _skopiuj_materialy(self):
+        """Kopiuje materiały kursu (START_TUTAJ.md, cwiczenia/, przyklady/, rozwiazania/, pomoc/) do katalogu projektu — bez nadpisywania."""
+        zrodlo = katalog_materialow(P.id)
+        if not zrodlo:
+            messagebox.showinfo("Materiały", "Ten program nie ma paczki materiałów — wszystko, czego potrzebujesz, jest w lekcjach i w Planie.", parent=self)
+            return
+        cel = self.stan.d["projekt"]
+        if not cel or not Path(cel).is_dir():
+            if not messagebox.askyesno("Katalog projektu", "Najpierw wskaż katalog projektu (zwykły folder na dysku). Wybrać go teraz?", parent=self):
+                return
+            s = filedialog.askdirectory(title=f"Wybierz katalog projektu (np. {P.katalog_projektu})", parent=self)
+            if not s:
+                return
+            self.stan.d["projekt"] = cel = s
+            self.stan.zapisz()
+        pliki = sum(1 for f in zrodlo.rglob("*") if f.is_file())
+        if not messagebox.askyesno("Skopiować materiały?", f"Skopiuję {pliki} plików kursu do:\n{cel}\n\nIstniejące pliki o tej samej nazwie zostaną pominięte (nic nie nadpisuję).", parent=self):
+            return
+        try:
+            sk, pom = skopiuj_materialy(P.id, cel)
+        except OSError as e:
+            messagebox.showerror("Materiały", f"Nie udało się skopiować: {e}", parent=self)
+            return
+        self._pliki_cache.clear()
+        messagebox.showinfo("Materiały", f"Skopiowano {sk} plików" + (f", pominięto {pom} istniejących" if pom else "") + f".\n\nZacznij od pliku START_TUTAJ.md w katalogu projektu.", parent=self)
+        self.pokaz("projekt")
 
     def _utworz_claude_md(self):
         p = Path(self.stan.d["projekt"]) / "CLAUDE.md"
@@ -1913,7 +2054,7 @@ class Mentor(tk.Tk):
         return {"projekt": self.stan.d.get("projekt", ""), "tydzien": self.stan.biezacy_tydzien(),
                 "imie": self.stan.d.get("imie", ""), "tryb_zgody": self.stan.d.get("asystent_zgoda", True),
                 "dni": len(self.stan.d["sesje"]), "przelacz_tryb": self._asystent_przelacz_tryb,
-                "zapisz_quiz": self._asystent_zapisz_quiz}
+                "zapisz_quiz": self._asystent_zapisz_quiz, "lekcja": getattr(self, "lekcja_wybrana", None)}
 
     def _asystent_przelacz_tryb(self):
         self.stan.d["asystent_zgoda"] = not self.stan.d.get("asystent_zgoda", True)
@@ -2214,6 +2355,13 @@ class Mentor(tk.Tk):
         przycisk(r, "Start", lambda: self.pokaz_quiz(int(self.q_wybor.get().split(" ")[0]))).pack(side="left", padx=8)
         n_pow = len(self.stan.d["powtorki"])
         przycisk(r, f"Powtórka ({n_pow} pytań do poprawy)" if n_pow else "Powtórka losowa (5 pytań)", self._quiz_powtorka, "ostrz").pack(side="left")
+        if P.diagnoza:
+            r = tk.Frame(k, bg=K["karta"])
+            r.pack(fill="x", pady=(8, 0))
+            dg = self.stan.d.get("diagnoza") or {}
+            przycisk(r, "🩺 Diagnoza na start", self.pokaz_diagnoze, "drugi").pack(side="left")
+            etykieta(r, "  " + (f"ostatnio {dg.get('data', '')}: {dg['wynik']}/{dg['max']}" if dg.get("wynik") is not None else
+                                f"{len(P.diagnoza)} pytań z całego kursu — pokazuje, co już znasz; nie blokuje nauki"), 9, kolor=K["szary"]).pack(side="left")
 
         z, k = karta(w, tytul="Twoje wyniki")
         z.pack(fill="x", padx=28, pady=(12, 24))
@@ -2231,7 +2379,9 @@ class Mentor(tk.Tk):
     def _quiz_powtorka(self):
         pytania = []
         for pid in self.stan.d["powtorki"]:
-            t, i = pid.split("-")
+            t, _, i = pid.partition("-")
+            if not (t.isdigit() and i.isdigit()):
+                continue   # np. pytania diagnozy lub testów lekcji — nie wracają w powtórce quizowej
             t, i = int(t), int(i)
             if str(t) in P.quizy and i < len(P.quizy[str(t)]):
                 pytania.append((pid, P.quizy[str(t)][i]))
@@ -2244,11 +2394,11 @@ class Mentor(tk.Tk):
         pytania = [(f"{tydzien}-{i}", q) for i, q in enumerate(P.quiz_tygodnia(tydzien))]
         self._uruchom_quiz(pytania, tydzien, f"Quiz: tydzień {tydzien} — {P.tydzien(tydzien)['tytul']}")
 
-    def _uruchom_quiz(self, pytania, tydzien, tytul, lekcja_id=None):
+    def _uruchom_quiz(self, pytania, tydzien, tytul, lekcja_id=None, diagnoza=False):
         self.pokaz("quiz")
         for ch in self.tresc.winfo_children():
             ch.destroy()
-        q = {"pytania": pytania, "i": 0, "wynik": 0, "tydzien": tydzien, "tytul": tytul, "sprawdzone": False, "lekcja_id": lekcja_id}
+        q = {"pytania": pytania, "i": 0, "wynik": 0, "tydzien": tydzien, "tytul": tytul, "sprawdzone": False, "lekcja_id": lekcja_id, "diagnoza": diagnoza, "bledne": []}
         self._q = q
         self._quiz_pytanie()
 
@@ -2282,13 +2432,15 @@ class Mentor(tk.Tk):
                 rb.configure(state="disabled", disabledforeground=K["ziel"] if i == p["odp"] else (K["czerw"] if i == var.get() else K["szary"]))
             if dobrze:
                 q["wynik"] += 1
-                self.stan.d["xp"] += XP_QUIZ_PYTANIE
+                if not q.get("diagnoza"):
+                    self.stan.d["xp"] += XP_QUIZ_PYTANIE
                 if pid in self.stan.d["powtorki"]:
                     self.stan.d["powtorki"].remove(pid)
                 wynik_lab.configure(text="✔ Dobrze!  " + p["w"], fg=K["ziel"])
             else:
-                if pid not in self.stan.d["powtorki"]:
+                if pid not in self.stan.d["powtorki"] and not q.get("diagnoza") and "-" in pid and pid.split("-")[0].isdigit():
                     self.stan.d["powtorki"].append(pid)
+                q.setdefault("bledne", []).append((pid, p))
                 wynik_lab.configure(text=f"✘ Nie. Poprawna odpowiedź: {p['o'][p['odp']]}\n{p['w']}", fg=K["czerw"])
             self.stan.zapisz()
             b_spr.configure(state="disabled")
@@ -2307,6 +2459,14 @@ class Mentor(tk.Tk):
         b_dalej.pack(side="left", padx=8)
         b_dalej.configure(state="disabled")
         przycisk(r, "Przerwij", lambda: self.pokaz_lekcje(q["lekcja_id"]) if q.get("lekcja_id") else self.pokaz("quiz"), "drugi").pack(side="right")
+        q["_ui"] = (var, sprawdz, dalej)   # dla testów automatycznych
+
+    def _quiz_odpowiedz(self, i):
+        """Zaznacza odpowiedź i, sprawdza i przechodzi dalej (używane w testach)."""
+        var, sprawdz, dalej = self._q["_ui"]
+        var.set(i)
+        sprawdz()
+        dalej()
 
     def _quiz_koniec(self):
         q = self._q
@@ -2319,23 +2479,57 @@ class Mentor(tk.Tk):
         if q.get("lekcja_id"):
             self.stan.d.setdefault("lekcje", {})[q["lekcja_id"]] = {"wynik": q["wynik"], "max": n, "data": str(dzis())}
         self.stan.zapisz()
-        komentarz = ("Bezbłędnie. To już Twoje." if proc == 100 else "Solidnie. Błędne pytania wrócą w powtórce." if proc >= 60
-                     else "Za nisko, żeby iść dalej spokojnie. Wróć do tematu z Claude: „Wytłumacz mi [temat] jeszcze raz, inaczej niż poprzednio.”")
-        self._odznaki_popup()
-        messagebox.showinfo("Wynik", f"{q['wynik']}/{n} ({proc}%)\n\n{komentarz}", parent=self)
-        if q.get("lekcja_id"):
-            self.pokaz_lekcje(q["lekcja_id"])
+        if q.get("diagnoza"):
+            komentarz = ("Znasz już większość tematów — lekcje poniżej przeczytaj uważniej, resztę możesz przechodzić szybciej." if q["wynik"] >= n * 0.6
+                         else "To diagnoza, nie ocena: większość tematów jest nowa — kurs zaczyna od podstaw, lekcje poniżej potraktuj jako pierwsze do zrobienia.")
         else:
-            self.pokaz("quiz")
+            komentarz = ("Bezbłędnie. To już Twoje." if proc == 100 else "Solidnie. Błędne pytania wrócą w powtórce." if proc >= 60
+                         else "Za nisko, żeby iść dalej spokojnie — wróć do lekcji poniżej, a potem spróbuj jeszcze raz.")
+        if q.get("diagnoza"):
+            self.stan.d["diagnoza"] = {"wynik": q["wynik"], "max": n, "data": str(dzis()), "lekcje": sorted({p.get("lekcja") for _, p in q.get("bledne", []) if p.get("lekcja")})}
+            self.stan.zapisz()
+        self._odznaki_popup()
+        # wynik w aplikacji (bez okienka) + lekcje do powtórzenia dla błędnych odpowiedzi
+        for ch in self.tresc.winfo_children():
+            ch.destroy()
+        w = self._strona(q["tytul"], "Wynik")
+        z, k = karta(w)
+        z.pack(fill="x", padx=28)
+        etykieta(k, f"{q['wynik']}/{n} ({proc}%)", 22, bold=True, kolor=K["ziel"] if proc >= 80 else (K["pomar"] if proc >= 60 else K["czerw"])).pack(fill="x")
+        etykieta(k, komentarz, 11, wrap=820).pack(fill="x", pady=(4, 0))
+        do_powt = []
+        for _, p in q.get("bledne", []):
+            lid = p.get("lekcja") or q.get("lekcja_id")
+            if lid and P.lekcja(lid) and lid not in do_powt:
+                do_powt.append(lid)
+        if do_powt:
+            z2, k2 = karta(w, tytul="Do powtórzenia — lekcje, z których były błędne odpowiedzi")
+            z2.pack(fill="x", padx=28, pady=(12, 0))
+            for lid in do_powt:
+                r = tk.Frame(k2, bg=K["karta"])
+                r.pack(fill="x", pady=2)
+                etykieta(r, "📖 " + P.lekcja(lid)["nazwa"], 10).pack(side="left", fill="x", expand=True)
+                przycisk(r, "Otwórz lekcję", lambda i=lid: self.pokaz_lekcje(i), "drugi").pack(side="right")
+        elif q.get("bledne"):
+            etykieta(k, "Błędne pytania trafiły do powtórki (Quiz → Powtórka).", 10, kolor=K["szary"]).pack(fill="x", pady=(6, 0))
+        r = tk.Frame(w, bg=K["tlo"])
+        r.pack(fill="x", padx=28, pady=(16, 24))
+        if q.get("lekcja_id"):
+            przycisk(r, "← Wróć do lekcji", lambda: self.pokaz_lekcje(q["lekcja_id"])).pack(side="left")
+        elif q.get("diagnoza"):
+            przycisk(r, "Dalej — Panel", lambda: self.pokaz("panel")).pack(side="left")
+        else:
+            przycisk(r, "← Quizy", lambda: self.pokaz("quiz")).pack(side="left")
+        if q.get("bledne") and not q.get("diagnoza"):
+            przycisk(r, "Powtórz błędne pytania", self._quiz_powtorka, "drugi").pack(side="left", padx=8)
 
     # =============================================================== DZIENNIK
     def widok_dziennik(self):
         w = self._strona("Dziennik nauki", "Dwa zdania dziennie: co zrozumiałem, co jeszcze nie. Pisanie o tym, czego się nauczyłeś, "
                          "utrwala mocniej niż ponowne czytanie.")
-        pytania = ["Co dziś było najtrudniejsze i jak to rozgryzłeś?", "Jaki błąd Pythona dziś zobaczyłeś i co oznaczał?",
-                   "Co byś wytłumaczył koledze bez IT z dzisiejszego tematu?", "Gdzie Claude zrobił za dużo, a gdzie pomógł w sam raz?",
-                   "Jaką jedną rzecz zrobisz jutro jako pierwszą?", "Co w Twoim kodzie jest dziś czytelniejsze niż wczoraj?",
-                   "Jak dzisiejszy temat przyda się w testowaniu?"]
+        pytania = P.pytania_dziennika or ["Co dziś było najtrudniejsze i jak to rozgryzłeś?", "Jaki błąd dziś popełniłeś i co oznaczał?",
+                                           "Co byś wytłumaczył osobie spoza branży z dzisiejszego tematu?", "Gdzie Asystent zrobił za dużo, a gdzie pomógł w sam raz?",
+                                           "Jaką jedną rzecz zrobisz jutro jako pierwszą?", "Co potrafisz dziś zrobić bez patrzenia na przykład?"]
         z, k = karta(w, tytul="Nowy wpis — " + data_pl(dzis()))
         z.pack(fill="x", padx=28)
         etykieta(k, "Pytanie mentora: " + random.choice(pytania), 10, kolor=K["akcent"], wrap=820).pack(fill="x", pady=(0, 6))

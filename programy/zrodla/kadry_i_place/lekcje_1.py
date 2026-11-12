@@ -97,7 +97,7 @@ LEKCJE_1 = [
          "Klauzula: Administratorem danych jest AGRO-MLEKO sp. z o.o. … podstawa: art. 22¹ KP i art. 6 ust. 1 lit. b, c RODO … dane przechowujemy do zakończenia rekrutacji, a za Twoją zgodą 12 miesięcy …",
      "zadania": ["Przepisz 3 pytania zakazane na rozmowie na wersje dozwolone.",
                  "Napisz klauzulę RODO dla rekrutacji z retencją 12 miesięcy za zgodą.",
-                 "Sprawdź 3 ogłoszenia z pracuj.pl pod kątem widełek i neutralności — zapisz wnioski."],
+                 "Oceń 3 ogłoszenia z pliku przyklady/tydzien_01/ogloszenia_do_oceny.md pod kątem widełek i neutralności — zapisz wnioski."],
      "pytania": [["Czy można zapytać kandydata o oczekiwania finansowe?", "Tak — zakaz dotyczy pytania o DOTYCHCZASOWE zarobki, nie o oczekiwania."],
                  ["Kiedy najpóźniej kandydat musi poznać widełki?", "W ogłoszeniu, a jeśli nie — przed pierwszą rozmową; bez rozmów — przed nawiązaniem stosunku pracy."],
                  ["Jak długo trzymasz CV odrzuconego kandydata?", "Do zakończenia rekrutacji; dłużej (do 12 mies.) tylko za zgodą na przyszłe rekrutacje."]],
@@ -334,7 +334,7 @@ LEKCJE_1 = [
          "PPK pracodawcy 108,00 (przychód) → podstawa PIT = 7 200 + 108 − 987,12 − 250 = 6 070,88 → 6 071 → 12% = 728,52 − 300 = 428,52 → 429\n"
          "PPK pracownika 144,00 → netto = 7 200 − 987,12 − 559,16 − 429 − 144 = 5 080,72 zł",
      "zadania": ["Policz ręcznie 4 806 zł w 4 wariantach (zadanie tygodnia 4, zad. 1).",
-                 "Zbuduj arkusz 8 pracowników z formułami zaokrągleń.",
+                 "Zbuduj w Warsztacie listę miesiąca dla 8 pracowników (każdy wiersz najpierw na kartce, potem „Sprawdź”) i zapisz MD + CSV.",
                  "Sprawdź, co się dzieje ze zdrowotną pracownika 1/2 etatu 2 500 zł bez PIT-2."],
      "pytania": [["Od jakiej podstawy liczysz składkę zdrowotną?", "Od podstawy składek społecznych pomniejszonej o składki społeczne pracownika (13,71%)."],
                  ["Czy wpłata pracodawcy na PPK obniża netto?", "Pośrednio — jest przychodem do PIT (zaliczka rośnie), ale nie potrąca się jej z wynagrodzenia."],

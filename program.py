@@ -51,6 +51,7 @@ DOMYSLNE = {
     "zasady": [], "quizy": {}, "prompty": [], "claude_md": "", "szablony": {}, "checklista": [],
     "sciaga": [], "linki": [], "wskazowki": [], "motywacja_powrot": [], "pojecia": {}, "bledy": {},
     "pytania_rekrutacyjne": [], "tematy_wpisu": [], "stanowisko": "", "stan_prawny": "",
+    "narzedzia": [], "parametry": {}, "firma": "", "firma_osoby": [], "firma_regulaminy": [], "przepisy": [],
     "rytm_dnia": [
         {"nazwa": "Nowy temat", "minuty": 20, "ikona": "📖", "opis": "Lekcja i przykłady.", "prompt": "Uczę się [temat]. Wytłumacz na 2 przykładach i daj 3 zadania bez rozwiązań."},
         {"nazwa": "Ćwiczenie", "minuty": 50, "ikona": "⌨", "opis": "Samodzielna praca nad zadaniem.", "prompt": "Utknąłem na zadaniu [opis]. Nie podawaj rozwiązania — zadaj pytanie naprowadzające."},

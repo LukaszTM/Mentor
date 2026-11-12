@@ -223,7 +223,7 @@ TYGODNIE_1 = [
               "Pierwsza praca w życiu: urlop „z dołu” 1/12 z 20 dni za każdy miesiąc (bez zaokrąglania w górę dni niepełnych — PIP: zaokrągla się do pełnego dnia tylko przy urlopie proporcjonalnym, nie przy pierwszym). Niepełny etat: 1/2 × 26 = 13 dni; 3/4 × 20 = 15 dni (zaokrąglenie w górę do pełnego dnia). Urlop w godzinach: dzień = 8 h (7 h dla umiarkowanej niepełnosprawności + 10 dni dodatkowego urlopu po roku od orzeczenia).",
               "Zatrudnienie w trakcie roku: proporcjonalnie 1/12 za każdy miesiąc kalendarzowy (niepełny miesiąc zaokrągla się w górę do pełnego, gdy to pierwszy pracodawca w roku; przy zmianie pracodawcy w miesiącu — tylko u jednego). Zmiana wymiaru etatu w roku — oblicz osobno za oba okresy.",
               "Policz dla 8 osób, każdy wiersz z pokazaną ścieżką (staż z czego, dni, godziny). Dodaj kolumnę „urlop zaległy” i termin wykorzystania (do 30 września następnego roku; na żądanie 4 dni nie podlega planowi).",
-              "Asystent: dla 3 najtrudniejszych przypadków poproś o pytania naprowadzające, nie o wynik. Porównaj z kalkulatorem urlopowym online — różnice wyjaśnij.",
+              "Asystent: dla 3 najtrudniejszych przypadków poproś o pytania naprowadzające, nie o wynik. Różnice między rachunkiem ręcznym a Warsztatem wyjaśnij.",
           ],
           "sprawdz": "8 obliczeń z uzasadnieniem stażu; przypadek 1/2 etatu i pierwszej pracy poprawny; termin 30.09 i 4 dni na żądanie uwzględnione.",
           "problemy": ["Sumujesz szkołę i pracę równolegle → bierzesz korzystniejszy, nie sumę.", "Zaokrąglasz 1/12 przy pierwszej pracy w górę → nie; proporcjonalny tak."]},

@@ -15,7 +15,7 @@ a = Analysis(
         ("programy/FORMAT.md", "programy"),
         ("mentor.ico", "."),
     ],
-    hiddenimports=["asystent", "program", "motywy", "wiedza_ogolna", "tkinter", "tkinter.ttk", "tkinter.font", "tkinter.filedialog",
+    hiddenimports=["asystent", "program", "motywy", "wiedza_ogolna", "warsztat", "kadry", "tkinter", "tkinter.ttk", "tkinter.font", "tkinter.filedialog",
                    "tkinter.messagebox", "tkinter.simpledialog"],
     hookspath=[],
     runtime_hooks=[],

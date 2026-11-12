@@ -34,7 +34,9 @@ LEKCJE_1 = [
      "wyjasnienie":
          "Cztery systemy, bez których nie da się pracować. eZUS (dawniej PUE ZUS) — portal ZUS: jako płatnik widzisz ubezpieczonych, e-ZLA pracowników, saldo składek, składasz wnioski (Z-3, US-3 → A1, zaświadczenie o niezaleganiu), odbierasz pisma. Dostęp dla pracownika kadr daje pełnomocnictwo PEL podpisane przez zarząd. Płatnik — program desktopowy ZUS do dokumentów zgłoszeniowych (ZUA, ZZA, ZWUA, ZCNA) i rozliczeniowych (DRA, RCA, RSA, RPA), z weryfikacją i wysyłką z certyfikatem kwalifikowanym; małe firmy mogą użyć ePłatnika w eZUS. W praktyce dokumenty generuje program kadrowo-płacowy (Symfonia, Optima, enova, Gratyfikant…) i eksportuje do Płatnika (plik KEDU) — ale rozumieć musisz, co jest w środku, bo to Ty odpowiadasz za błędy.\n"
          "e-Urząd Skarbowy / e-Deklaracje — PIT-4R, PIT-11, PIT-8AR, IFT składasz elektronicznie; podpisuje osoba z pełnomocnictwem UPL-1 (zgłoszonym do US). Zaliczki PIT wpłacasz na mikrorachunek podatkowy firmy (NIP). Program kadrowy generuje PIT-11, ale kartoteka przychodów musi być prowadzona poprawnie przez cały rok — PIT-11 to tylko jej suma.\n"
-         "Pozostałe: praca.gov.pl (powiadomienia o cudzoziemcach, PUP), e-PFRON2 (DEK, Wn-D), portal sprawozdawczy GUS, platforma PPK instytucji finansowej (zapisy, wpłaty — plik), e-Doręczenia (od 2025 obowiązkowe dla firm — pisma urzędowe). Zasada bezpieczeństwa: oddzielne konto i uprawnienia dla każdej osoby, rejestr pełnomocnictw, odwołanie przy odejściu pracownika kadr tego samego dnia.",
+         "Pozostałe: praca.gov.pl (powiadomienia o cudzoziemcach, PUP), e-PFRON2 (DEK, Wn-D), portal sprawozdawczy GUS, platforma PPK instytucji finansowej (zapisy, wpłaty — plik), e-Doręczenia (od 2025 obowiązkowe dla firm — pisma urzędowe). Zasada bezpieczeństwa: oddzielne konto i uprawnienia dla każdej osoby, rejestr pełnomocnictw, odwołanie przy odejściu pracownika kadr tego samego dnia.\n"
+         "## W tym kursie: Warsztat zamiast kont\n"
+         "Żadnego z tych systemów nie musisz zakładać ani instalować. Zakładka Warsztat w Mentorze ma ich symulatory: „eZUS / Płatnik” (rejestr ubezpieczonych, dokumenty zgłoszeniowe z weryfikacją jak w Płatniku, komplety DRA/RCA/RSA, skrzynka e-ZLA, rejestr z numerami UPP), „e-Urząd: PIT” (PIT-11 i PIT-4R z Twojej kartoteki, UPO) oraz kalkulatory (lista płac, zasiłki, urlopy, czas pracy, potrącenia) i bibliotekę przepisów. Ekrany i komunikaty odpowiadają prawdziwym, więc po kursie przesiadka na eZUS i Płatnika to kwestia logowania, nie nauki od nowa.",
      "przyklad":
          "Miesięczny obieg w firmie 62-osobowej:\n"
          "1. do 5. — zamknięcie ewidencji czasu pracy, e-ZLA z eZUS\n"
@@ -67,7 +69,7 @@ LEKCJE_1 = [
          "społeczne 469,07 + 72,09 + 117,75 = 658,91 → podstawa zdrowotnej 4 147,09 → zdrowotna 373,24\n"
          "podstawa PIT = 4 806 − 658,91 − 250 = 3 897 → 12% = 467,64 − 300 = 167,64 → 168\n"
          "netto = 4 806 − 658,91 − 373,24 − 168 = 3 605,85 zł\n"
-         "koszt pracodawcy = 4 806 × 1,2048 = 5 790,27 zł",
+         "koszt pracodawcy = 4 806 + składki pracodawcy (469,07 + 312,39 + 80,26 + 117,75 + 4,81) = 5 790,28 zł (≈ 4 806 × 1,2048)",
      "zadania": ["Zbuduj tabelę 25 wskaźników z linkami do źródeł (zadanie tygodnia 0).",
                  "Policz dodatek nocny za 1 h dla każdego miesiąca 2026 (zmienia się z wymiarem).",
                  "Policz, od którego miesiąca pracownik z pensją 14 000 zł przekroczy próg 120 000 zł dochodu."],
@@ -369,7 +371,7 @@ LEKCJE_1 = [
      "slowa": ["koszt pracodawcy", "koszt zatrudnienia", "wypadkowa", "pkd", "iwa", "fundusz pracy", "fgśp", "fgsp", "zwolnienie z fp", "budżet wynagrodzeń"],
      "wyjasnienie":
          "Składki finansowane przez pracodawcę: emerytalna 9,76%, rentowa 6,5%, wypadkowa (0,67–3,33%), FP 2,45% (w tym FS 1,45%), FGŚP 0,10%, FEP 1,5% (praca w szczególnych warunkach/charakterze — wykaz), plus PPK 1,5% (do 4%). Zwolnienia z FP i FGŚP: pracownicy — kobiety ≥ 55 lat i mężczyźni ≥ 60 lat; przez 12 miesięcy po powrocie z macierzyńskiego/rodzicielskiego/wychowawczego; przez 36 miesięcy za osoby 50+ zatrudnione z PUP (bezrobotne), 12 miesięcy za skierowanych do 30 lat; wynagrodzenie < minimalne w przeliczeniu na miesiąc (np. niepełny etat poniżej 4 806) — brak FP/FGŚP, jeśli łączna podstawa z wszystkich tytułów < minimalnej. Przy wypadkowej: płatnik zgłaszający do 9 ubezpieczonych — 1,67% (50% najwyższej stopy); ≥ 10 — stopa dla grupy PKD (załącznik do rozporządzenia; dla działu 10 „produkcja artykułów spożywczych” sprawdź aktualną), a po 3 latach składania IWA — ZUS ustala indywidualnie (zawiadomienie do 20 kwietnia) z korektą ±50% wg wskaźnika częstości wypadków; obowiązuje od 1 kwietnia do 31 marca; IWA do 31 stycznia (gdy ≥ 10 ubezpieczonych średnio, zgłoszony cały rok, w REGON).\n"
-         "Pełny koszt etatu to brutto × (1 + 9,76 + 6,5 + wypadkowa + 2,45 + 0,10)% + PPK + ZFŚS (2 943,23/rok na etat, gdy fundusz) + badania, BHP, odzież, szkolenia, sprzęt + koszt nieobecności (wynagrodzenie chorobowe 33 dni, urlop — wynagrodzenie bez pracy). Dla 4 806 zł: 4 806 × 1,2048 = 5 790,27 zł miesięcznie (bez PPK i ZFŚS). Zarząd pyta „ile kosztuje pracownik” — odpowiedź: ~1,21–1,25 × brutto + stałe.\n"
+         "Pełny koszt etatu to brutto × (1 + 9,76 + 6,5 + wypadkowa + 2,45 + 0,10)% + PPK + ZFŚS (2 943,23/rok na etat, gdy fundusz) + badania, BHP, odzież, szkolenia, sprzęt + koszt nieobecności (wynagrodzenie chorobowe 33 dni, urlop — wynagrodzenie bez pracy). Dla 4 806 zł: 4 806 × 1,2048 = 5 790,28 zł miesięcznie (bez PPK i ZFŚS). Zarząd pyta „ile kosztuje pracownik” — odpowiedź: ~1,21–1,25 × brutto + stałe.\n"
          "Porównanie form: zlecenie z pełnymi składkami kosztuje tyle samo w ZUS (bez FP/FGŚP, gdy zbieg; bez urlopu i 33 dni), B2B — bez kosztów ZUS po stronie firmy, ale ryzyko art. 22 §1¹ KP (ustalenie stosunku pracy: składki 5 lat wstecz z odsetkami, których nie potrącisz pracownikowi, urlopy, nadgodziny, PIP). Limit 30-krotności obniża koszt w końcówce roku dla wysokich pensji (brak emerytalnej/rentowej po 282 600 zł podstawy).",
      "przyklad":
          "Pracownica 56 lat, 6 000 zł, wypadkowa firmy 1,20%:\n"
@@ -380,7 +382,7 @@ LEKCJE_1 = [
                  "Porównaj koszt etat/zlecenie/B2B dla 6 000 zł."],
      "pytania": [["Kiedy nie płacisz FP i FGŚP za pracownika?", "Kobieta 55+/mężczyzna 60+, 12 mies. po urlopach rodzicielskich, 36 mies. za 50+ z PUP, wynagrodzenie poniżej minimalnej ze wszystkich tytułów."],
                  ["Od kiedy obowiązuje nowa stopa wypadkowa?", "Od 1 kwietnia do 31 marca następnego roku."],
-                 ["Ile kosztuje pracodawcę pensja minimalna 2026 (bez PPK)?", "5 790,27 zł (4 806 × 1,2048 przy wypadkowej 1,67%)."]],
+                 ["Ile kosztuje pracodawcę pensja minimalna 2026 (bez PPK)?", "5 790,28 zł (4 806 + 984,28 składek pracodawcy przy wypadkowej 1,67%; ≈ × 1,2048)."]],
      "pulapki": ["FP od pełnej kwoty u pracownika na 1/2 etatu z 2 500 zł bez innych tytułów — nie płacisz (poniżej minimalnej).", "IWA nie złożona 3 lata z rzędu — ZUS nie ustali stopy indywidualnie, ale brak IWA to wykroczenie."],
      "test": [
          {"p": "Składka wypadkowa dla płatnika zgłaszającego 62 ubezpieczonych:", "o": ["Zawsze 1,67%", "Wg grupy PKD, a po 3 latach IWA — ustalona przez ZUS", "Wg uznania płatnika", "0,67%"], "odp": 1, "w": "1,67% tylko dla płatników do 9 ubezpieczonych."},

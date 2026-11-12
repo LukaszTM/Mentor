@@ -79,6 +79,10 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `szablony` | `{"klucz": "tekst"}` albo `{"klucz": {"nazwa", "kiedy", "tresc"}}` — każdy pokazuje się w zakładce Prompty |
 | `stanowisko` | nazwa roli docelowej (np. „Junior QA”) — nagłówek próbnej rozmowy rekrutacyjnej w Asystencie |
 | `stan_prawny` / `firma` | dowolne metadane programu (np. „listopad 2026”, opis firmy ćwiczeniowej) |
+| `narzedzia` | lista narzędzi Warsztatu do włączenia: `firma`, `place`, `zasilki`, `urlopy`, `czas`, `potracenia`, `zus`, `pit`, `przepisy` (zakładka Warsztat pojawia się tylko, gdy lista nie jest pusta) |
+| `parametry` | parametry roku dla kalkulatorów (`minimalne`, `wypadkowa`, `prog`, `kwota_zmn`, `wspolczynnik`…; brakujące — z `kadry.DOMYSLNE`) |
+| `firma_osoby` / `firma_regulaminy` | osoby firmy ćwiczeniowej (`imie, nazwisko, pesel, rodzaj, kod, od, do, etat, zasadnicze, ppk, kup, pit2, student, mlody…`) i założenia regulaminów — dla narzędzi Firma, Lista płac, eZUS |
+| `przepisy` | biblioteka offline: `[{akt, art, tytul, tresc, slowa, lekcja, isap}]` |
 | `checklista` | `[{po: "Po etapie 1", punkty: ["..."]}]` |
 | `sciaga` | `[{tytul, pozycje: [["komenda", "co robi"]]}]` |
 | `linki` | `[["nazwa", "https://..."]]` |

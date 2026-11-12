@@ -92,13 +92,13 @@ QUIZY = {
 # ---------------------------------------------------------------- RYTM DNIA
 RYTM_DNIA = [
     {"nazwa": "Nowy temat", "minuty": 20, "ikona": "📖",
-     "opis": "Czytasz lekcję dnia (zakładka Lekcje) i jeden przepis źródłowy w ISAP. Notujesz 3 liczby/terminy, które musisz zapamiętać.",
+     "opis": "Czytasz lekcję dnia (zakładka Lekcje) i jeden przepis z Warsztat → Przepisy. Notujesz 3 liczby/terminy, które musisz zapamiętać.",
      "prompt": "Uczę się [temat]. Wytłumacz na 2 przykładach z firmy produkcyjnej (62 pracowników), podaj podstawę prawną każdej liczby i daj mi 3 kazusy od łatwego do trudnego. Nie podawaj rozwiązań."},
-    {"nazwa": "Kazus i arkusz", "minuty": 50, "ikona": "🧮",
-     "opis": "Rozwiązujesz zadanie dnia: liczysz w arkuszu, piszesz pismo lub wypełniasz dokument. Asystenta pytasz dopiero po 15 minutach własnej walki.",
+    {"nazwa": "Kazus w Warsztacie", "minuty": 50, "ikona": "🧮",
+     "opis": "Rozwiązujesz zadanie dnia: liczysz na kartce i sprawdzasz w Warsztacie, piszesz pismo lub wypełniasz dokument w symulatorze. Asystenta pytasz dopiero po 15 minutach własnej walki.",
      "prompt": "Utknąłem na kazusie: [opis]. Oto mój tok rozumowania i liczby: [wklej]. Nie rozwiązuj za mnie — wskaż, który krok lub którą podstawę prawną sprawdzić."},
     {"nazwa": "Weryfikacja u źródła", "minuty": 15, "ikona": "🔍",
-     "opis": "Sprawdzasz wynik: przepis (ISAP), kalkulator ZUS/MF lub druga metoda liczenia. Zapisujesz źródło przy każdej liczbie.",
+     "opis": "Sprawdzasz wynik: Warsztat → Przepisy, narzędzie Warsztatu lub druga metoda liczenia. Zapisujesz źródło przy każdej liczbie.",
      "prompt": "Oto mój wynik: [wynik] i podstawa: [przepis]. Zadaj mi 3 pytania, które wykryją, czy rozumiem, skąd wzięła się każda liczba. Nie oceniaj, tylko pytaj."},
     {"nazwa": "Wpis do dziennika", "minuty": 5, "ikona": "📝",
      "opis": "Zamykasz sesję: 3 pytania sprawdzające z lekcji, notatka „czego się nauczyłem” w kadry-praktyka/dziennik.md, commit.",
@@ -134,7 +134,7 @@ CLAUDE_MD = """# Zasady pracy — nauka kadr i płac
 - Tłumacz po polsku, prostym językiem, na przykładach z firmy produkcyjnej.
 - Gdy poprawiasz moje pismo lub obliczenie — najpierw wypunktuj, co jest nie tak, i zapytaj, czy chcę zobaczyć poprawną wersję.
 - Nie kopiuj treści przepisów w całości — cytuj fragment i podawaj artykuł.
-- Pliki w tym katalogu: FIRMA.md (dane firmy), dziennik.md (moje notatki), arkusze .xlsx/.csv (obliczenia), pisma .md.
+- Pliki w tym katalogu: FIRMA.md (dane firmy), dziennik.md (moje notatki), listy płac i dokumenty ZUS/PIT zapisane z Warsztatu (.md/.csv), pisma .md.
 - Dane osobowe w ćwiczeniach są fikcyjne. Nie wprowadzaj prawdziwych danych pracowników.
 """
 
@@ -228,8 +228,8 @@ Uwagi ubezpieczonego: [..]
 CHECKLISTA = [
     {"po": "Po tygodniu 0 — warsztat", "punkty": [
         "Mam tabelę 25 wskaźników 2026 z linkami do źródeł",
-        "Odnajduję w ISAP tekst ujednolicony KP ze stanem prawnym na dzień",
-        "Loguję się do eZUS i wiem, do czego służą PEL i UPL-1",
+        "Znajduję przepis w Warsztat → Przepisy i wiem, czym jest tekst ujednolicony w ISAP",
+        "Znam 9 narzędzi Warsztatu i wiem, do czego służą PEL i UPL-1 w prawdziwym eZUS/e-Deklaracjach",
         "Mam katalog kadry-praktyka z FIRMA.md i dziennik.md (commit w Git)"]},
     {"po": "Po etapie 1 — prawo pracy (tyg. 1–3)", "punkty": [
         "Piszę ogłoszenie zgodne z jawnością wynagrodzeń i klauzulę RODO",
@@ -237,14 +237,14 @@ CHECKLISTA = [
         "Układam grafik z zachowaniem 11/35 h i liczę nadgodziny 50/100%",
         "Liczę urlop proporcjonalny i staż z zleceniami (2026); rozpisuję urlopy rodzicielskie"]},
     {"po": "Po etapie 2 — płace (tyg. 4–7)", "punkty": [
-        "Liczę brutto→netto ręcznie w 4 wariantach i pełny koszt pracodawcy",
+        "Liczę brutto→netto ręcznie w 4 wariantach (i potwierdzam w Warsztacie) oraz pełny koszt pracodawcy",
         "Liczę wynagrodzenie urlopowe, ekwiwalent (20,92) i potrącenia komornicze z kwotą wolną",
         "Rozliczam 33 dni, podstawę zasiłku z uzupełnianiem i zasiłek opiekuńczy; znam reformę kontroli L4",
         "Rozliczam zlecenie ze zbiegiem, dzieło (RUD), PPK (2%/1,5%) i zatrudnienie cudzoziemca"]},
     {"po": "Po etapie 3 — ZUS, US, kalendarz (tyg. 8–9)", "punkty": [
-        "Składam komplet ZUA/ZWUA/ZCNA i DRA/RCA/RSA/RPA z właściwymi kodami i identyfikatorami",
+        "Składam w symulatorze eZUS/Płatnik komplet ZUA/ZWUA/ZCNA i DRA/RCA/RSA z właściwymi kodami i identyfikatorami (bez błędów weryfikacji)",
         "Robię korektę po 30-krotności z rozliczeniem PIT",
-        "Przygotowuję PIT-4R/PIT-11, odpis ZFŚS i DEK PFRON",
+        "Generuję PIT-4R/PIT-11 z kartoteki w Warsztacie, liczę odpis ZFŚS i wpłatę PFRON",
         "Mam kalendarz roczny z 60 terminami i alertami"]},
     {"po": "Po etapie 4 — zakończenie, compliance, projekt (tyg. 10–11)", "punkty": [
         "Piszę wypowiedzenie z przyczyną i pouczeniem, rozwiązanie z art. 52 w terminie 1 miesiąca",

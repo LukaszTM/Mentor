@@ -22,6 +22,9 @@ from lekcje_3 import LEKCJE_3                     # noqa: E402
 from lekcja_start import LEKCJA_START             # noqa: E402
 from cele import CELE                             # noqa: E402
 from czytelnosc import uczytelnij                 # noqa: E402
+from firma import FIRMA_OSOBY, FIRMA_REGULAMINY, PARAMETRY, NARZEDZIA  # noqa: E402
+from przepisy import PRZEPISY                     # noqa: E402
+from zadania_warsztat import NADPISZ, DOPISZ_KROK  # noqa: E402
 import reszta                                     # noqa: E402
 
 
@@ -52,6 +55,18 @@ def zbuduj():
             z = dict(z)
             assert z["id"] not in id_zadan, f"powtórzone id zadania {z['id']}"
             id_zadan.add(z["id"])
+            z.update(NADPISZ.get(z["id"], {}))        # wersja „wszystko w Mentorze” (Warsztat zamiast kont zewnętrznych)
+            if z["id"] in DOPISZ_KROK:
+                z["kroki"] = list(z.get("kroki", [])) + [DOPISZ_KROK[z["id"]]]
+            # pliki: żadnych arkuszy — wyniki w .md/.csv z Warsztatu
+            pl = []
+            for f in z.get("pliki", []):
+                f = f.replace(".xlsx", ".md")
+                if f not in pl:
+                    pl.append(f)
+            z["pliki"] = pl
+            for klucz in ("opis", "sprawdz"):
+                z[klucz] = (z.get(klucz) or "").replace("Arkusz terminów", "Rejestr terminów").replace("Jeden arkusz/strona", "Jedna strona").replace("Excel/LibreOffice: ", "")
             z.setdefault("kroki", [])
             z.setdefault("sprawdz", "")
             z.setdefault("problemy", [])
@@ -62,6 +77,8 @@ def zbuduj():
         w["zadania"] = zadania
         tygodnie.append(w)
     tygodnie.sort(key=lambda w: w["tydzien"])
+    assert set(NADPISZ) <= id_zadan, set(NADPISZ) - id_zadan
+    assert set(DOPISZ_KROK) <= id_zadan, set(DOPISZ_KROK) - id_zadan
 
     program = {
         "format": "mentor-program/1",
@@ -93,6 +110,11 @@ def zbuduj():
             "Raz w tygodniu wracasz do ściągi wskaźników i terminów — liczby mają być w głowie, nie tylko w pliku.",
         ],
         "firma": FIRMA,
+        "firma_osoby": FIRMA_OSOBY,
+        "firma_regulaminy": FIRMA_REGULAMINY,
+        "parametry": PARAMETRY,
+        "narzedzia": NARZEDZIA,
+        "przepisy": PRZEPISY,
         "etapy": ETAPY,
         "tygodnie": tygodnie,
         "lekcje": lekcje,
@@ -140,4 +162,4 @@ if __name__ == "__main__":
     cel.write_text(json.dumps(prog, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Zapisano {cel} — {len(prog['tygodnie'])} tygodni, {sum(len(w['zadania']) for w in prog['tygodnie'])} zadań, "
           f"{len(prog['lekcje'])} lekcji, {sum(len(l['test']) for l in prog['lekcje'])} pytań testowych, "
-          f"{sum(len(v) for v in prog['quizy'].values())} pytań quizowych, {len(prog['pojecia'])} pojęć")
+          f"{sum(len(v) for v in prog['quizy'].values())} pytań quizowych, {len(prog['pojecia'])} pojęć, {len(prog['przepisy'])} przepisów, {len(prog['firma_osoby'])} osób w firmie")

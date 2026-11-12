@@ -28,7 +28,7 @@ TYGODNIE_2 = [
               "Dla osoby do 26 lat: zaliczka 0 do limitu 85 528 zł przychodu (narastająco), składki normalnie. Dla osoby na 1/2 etatu z 2 500 zł: sprawdź, czy zdrowotna nie przekracza hipotetycznej zaliczki (przy niskich kwotach bez PIT-2 może) — formuła MIN.",
               "Porównaj netto każdego pracownika z 2 kalkulatorami online (np. kalkulatory.gofin.pl, wynagrodzenia.pl). Każdą różnicę wyjaśnij (zwykle PPK lub KUP). Zapisz sumę kosztów pracodawcy za miesiąc — to kwota, którą zobaczy zarząd.",
           ],
-          "sprawdz": "Arkusz liczy 8 netto zgodnych z kalkulatorami (±0,01); formuła progu 32% działa; koszt całkowity dla 4806 zł = 5 790,27 zł (bez PPK).",
+          "sprawdz": "Arkusz liczy 8 netto zgodnych z kalkulatorami (±0,01); formuła progu 32% działa; koszt całkowity dla 4806 zł = 5 790,28 zł (bez PPK).",
           "problemy": ["PPK pracodawcy pomniejsza netto → nie; tylko zwiększa podstawę PIT (podatek od niej zmniejsza netto).", "Próg liczysz od brutto → od dochodu (brutto − składki społeczne − KUP) narastająco."]},
          {"id": "k4z3", "tytul": "PIT-2, KUP, zwolnienia: oświadczenia pracownika i ich skutek w liście", "opis": "Komplet oświadczeń (PIT-2 w nowym wzorze) i tabela: które oświadczenie → jaka zmiana w obliczeniu.",
           "czas_min": 60, "pliki": ["oswiadczenia_pit.md"], "xp": 10,

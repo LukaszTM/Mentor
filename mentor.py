@@ -27,6 +27,7 @@ import tkinter.font as tkfont
 
 from asystent import EmulatorOffline, KlientAPI
 from motywy import GRUPY, MOTYW_DOMYSLNY, MOTYWY, motyw
+import warsztat
 from program import (P, KATALOG_PROGRAMOW, domyslna_sciezka, importuj as importuj_program, lista_programow,
                      wczytaj as wczytaj_program, zapisz_szablon)
 
@@ -136,9 +137,10 @@ class Stan:
         "dziennik": [],     # {"data", "tekst", "nastroj"}
         "xp": 0, "odznaki": [], "skala_sesji": 1.0,
         "przewodnik": {},   # id programu -> True, gdy uczeń zamknął „Jak zacząć”
+        "warsztat": {},     # dane Warsztatu (symulatory, kartoteka) — per program
     }
     # postępy liczone per program: klucze zależne od programu trzymamy w "programy": {id: {...}}
-    KLUCZE_PROGRAMU = ("zadania", "checklista", "quizy", "lekcje", "powtorki", "odznaki")
+    KLUCZE_PROGRAMU = ("zadania", "checklista", "quizy", "lekcje", "powtorki", "odznaki", "warsztat")
 
     def __init__(self):
         self.d = json.loads(json.dumps(self.DOMYSLNE))
@@ -417,7 +419,7 @@ def plakietka(parent, tekst, kolor_tla, kolor_tekstu):
 class Mentor(tk.Tk):
     WIDOKI = [
         ("panel", "🏠", "Panel"), ("plan", "📅", "Plan nauki"), ("sesja", "⏱", "Sesja nauki"),
-        ("lekcje", "📖", "Lekcje"), ("projekt", "📂", "Mój projekt"), ("prompty", "💬", "Prompty"), ("asystent", "🤖", "Asystent"), ("quiz", "🧠", "Quiz"),
+        ("lekcje", "📖", "Lekcje"), ("warsztat", "🧰", "Warsztat"), ("projekt", "📂", "Mój projekt"), ("prompty", "💬", "Prompty"), ("asystent", "🤖", "Asystent"), ("quiz", "🧠", "Quiz"),
         ("dziennik", "📓", "Dziennik"), ("checklista", "✅", "Checklista"), ("sciaga", "📎", "Ściąga"),
         ("ustawienia", "⚙", "Ustawienia"),
     ]
@@ -563,8 +565,9 @@ class Mentor(tk.Tk):
             tk.Frame(self.bok, bg=K["bok"], height=12).pack()
 
         # zakładki: większe, rozsunięte, pogrubione (przy dużej czcionce ciaśniej, żeby zmieściło się 10 pozycji)
-        pad_y = 11 if SKALA <= 1.15 else (8 if SKALA <= 1.3 else 5)
-        for klucz, ikona, tekst in self.WIDOKI:
+        widoki = self._widoki()
+        pad_y = (11 if len(widoki) <= 12 else 9) if SKALA <= 1.15 else (8 if SKALA <= 1.3 else 5)
+        for klucz, ikona, tekst in widoki:
             r = tk.Frame(self.bok, bg=K["bok"], cursor="hand2")
             r.pack(fill="x", pady=2, padx=6)
             etyk = [r]
@@ -602,6 +605,10 @@ class Mentor(tk.Tk):
 
         self.tresc = tk.Frame(self, bg=K["tlo"])
         self.tresc.pack(side="right", fill="both", expand=True)
+
+    def _widoki(self):
+        """Zakładki paska bocznego: Warsztat tylko wtedy, gdy program ma narzędzia."""
+        return [w for w in self.WIDOKI if w[0] != "warsztat" or P.narzedzia]
 
     def _bok_koloruj(self, klucz, bg, fg):
         for w in self.przyciski_boku.get(klucz, []):
@@ -771,6 +778,15 @@ class Mentor(tk.Tk):
             przycisk(r, "📖 Lekcja wprowadzająca", lambda: self.pokaz_lekcje(P.lekcje[0]["id"]), "drugi").pack(side="left")
         przycisk(r, f"📅 Plan — tydzień {P.tygodnie[0]['tydzien']}", lambda: self.pokaz_tydzien(P.tygodnie[0]["tydzien"]), "drugi").pack(side="left", padx=8)
 
+        # krok 3b — warsztat (programy z narzędziami)
+        if P.narzedzia:
+            z, k = karta(w, tytul="Warsztat · wszystko w jednym miejscu — bez kont, instalacji i arkuszy")
+            z.pack(fill="x", padx=28, pady=(12, 0))
+            nazwy = [n[2] for n in warsztat.NARZEDZIA if n[0] in P.narzedzia]
+            etykieta(k, "Zadania, które w prawdziwej pracy robi się w zewnętrznych systemach (eZUS, Płatnik, e-Urząd) albo w arkuszu, tu wykonujesz w zakładce Warsztat: "
+                     + ", ".join(nazwy) + ". Każde narzędzie pokazuje obliczenie krok po kroku i ma przycisk „Zapisz do projektu”. Zasada kursu: najpierw liczysz sam, potem sprawdzasz w Warsztacie.", 10, wrap=W).pack(fill="x")
+            przycisk(k, "🧰 Otwórz Warsztat", lambda: self.pokaz("warsztat"), "drugi").pack(anchor="w", pady=(8, 0))
+
         # krok 4 — asystent
         z, k = karta(w, tytul="Krok 4 · Asystent — nauczyciel, nie wykonawca")
         z.pack(fill="x", padx=28, pady=(12, 0))
@@ -787,8 +803,9 @@ class Mentor(tk.Tk):
                  "projekt": "Twój katalog: wykryte pliki, Git, CLAUDE.md", "prompty": "gotowe prompty i szablony dokumentów do skopiowania",
                  "asystent": "Subskrypcja / API / Offline — pomoc w nauce", "quiz": "quiz tygodnia (sobota) i powtórki błędnych pytań",
                  "dziennik": "notatki z nauki, nastrój, pytania na później", "checklista": "co masz umieć po każdym etapie — odhaczasz sam",
-                 "sciaga": "najważniejsze liczby, komendy, terminy i linki", "ustawienia": "imię, program nauczania, motyw, czcionki, eksport postępów"}
-        for klucz, ikona, tekst in self.WIDOKI:
+                 "sciaga": "najważniejsze liczby, komendy, terminy i linki", "ustawienia": "imię, program nauczania, motyw, czcionki, eksport postępów",
+                 "warsztat": "narzędzia wewnętrzne: kalkulatory, symulator eZUS/Płatnika i e-Urzędu, przepisy — bez kont i instalacji"}
+        for klucz, ikona, tekst in self._widoki():
             r = tk.Frame(k, bg=K["karta"])
             r.pack(fill="x", pady=1)
             tk.Label(r, text=f"{ikona} {tekst}", font=czc(10, "bold"), bg=K["jasny"], fg=K["tekst"], width=18, anchor="w", padx=8, pady=2).pack(side="left")
@@ -1613,6 +1630,38 @@ class Mentor(tk.Tk):
         random.shuffle(pytania)
         self._uruchom_quiz(pytania, None, f"Test z lekcji: {l['nazwa']}", lekcja_id=l["id"])
     # ================================================================ PROJEKT
+    # ================================================================ WARSZTAT
+    def widok_warsztat(self):
+        self._naglowek(self.tresc, "Warsztat", "Narzędzia wewnętrzne programu: liczysz, wypełniasz i „wysyłasz” tutaj — żadnych kont zewnętrznych ani instalacji. "
+                       "Wyniki zapisujesz do katalogu projektu jednym przyciskiem.")
+        cialo = tk.Frame(self.tresc, bg=K["tlo"])
+        cialo.pack(fill="both", expand=True, padx=28, pady=(0, 20))
+        lewa = tk.Frame(cialo, bg=K["tlo"], width=190)
+        lewa.pack(side="left", fill="y")
+        lewa.pack_propagate(False)
+        dostepne = [n for n in warsztat.NARZEDZIA if n[0] in P.narzedzia]
+        if not dostepne:
+            etykieta(cialo, "Ten program nie ma narzędzi Warsztatu.", 11, kolor=K["szary"]).pack(fill="x", padx=16)
+            return
+        wyb = getattr(self, "narzedzie_wybrane", None)
+        if wyb not in [n[0] for n in dostepne]:
+            wyb = dostepne[0][0]
+            self.narzedzie_wybrane = wyb
+        for klucz, ikona, nazwa in dostepne:
+            akt = klucz == wyb
+            r = tk.Frame(lewa, bg=K["akcent"] if akt else K["karta"], highlightbackground=K["ramka"], highlightthickness=1, cursor="hand2")
+            r.pack(fill="x", pady=2)
+            l = tk.Label(r, text=f"{ikona}  {nazwa}", font=czc(10, "bold" if akt else "normal"), bg=r.cget("bg"), fg=K["btn_tekst"] if akt else K["tekst"], anchor="w", padx=10, pady=7)
+            l.pack(fill="x")
+            for wdg in (r, l):
+                wdg.bind("<Button-1>", lambda e, kk=klucz: (setattr(self, "narzedzie_wybrane", kk), self.pokaz("warsztat")))
+        prawa = Przewijane(cialo, K["tlo"])
+        prawa.pack(side="left", fill="both", expand=True, padx=(16, 0))
+        try:
+            warsztat.zbuduj(self, prawa.wnetrze, wyb)
+        except Exception as e:  # narzędzie nie może blokować całej aplikacji
+            etykieta(prawa.wnetrze, f"Nie udało się zbudować narzędzia: {e}", 10, kolor=K["czerw"], wrap=700).pack(fill="x")
+
     def widok_projekt(self):
         w = self._strona("Mój projekt", "Mentor zagląda do katalogu projektu: sprawdza, czy pliki z zadań istnieją, "
                          "czy jest CLAUDE.md i co mówi Git. Nic nie zmienia bez Twojej zgody.")

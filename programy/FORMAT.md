@@ -72,7 +72,9 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `rytm_dnia` | fazy sesji `{nazwa, minuty, ikona, opis, prompt}` — domyślnie 20/50/15/5 |
 | `prompty` | szablony `{nazwa, kiedy, tresc}` do Asystenta |
 | `claude_md` | treść pliku CLAUDE.md tworzonego w projekcie |
-| `szablony` | np. `{"bug_raport": "..."}` |
+| `szablony` | `{"klucz": "tekst"}` albo `{"klucz": {"nazwa", "kiedy", "tresc"}}` — każdy pokazuje się w zakładce Prompty |
+| `stanowisko` | nazwa roli docelowej (np. „Junior QA”) — nagłówek próbnej rozmowy rekrutacyjnej w Asystencie |
+| `stan_prawny` / `firma` | dowolne metadane programu (np. „listopad 2026”, opis firmy ćwiczeniowej) |
 | `checklista` | `[{po: "Po etapie 1", punkty: ["..."]}]` |
 | `sciaga` | `[{tytul, pozycje: [["komenda", "co robi"]]}]` |
 | `linki` | `[["nazwa", "https://..."]]` |

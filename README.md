@@ -7,15 +7,7 @@ opisanymi krok po kroku, krótkie lekcje z testami, timer sesji, dziennik, quizy
 W zestawie jest program **„Python od zera → Junior QA”** (13 tygodni, 65 zadań, 32 lekcje, 96 pytań testowych).
 Własny program robisz w JSON (Ustawienia → „Zapisz pusty szablon programu”; opis formatu: `programy/FORMAT.md`).
 
-## Pobierz gotowy program (Windows)
-
-**[Releases → Mentor.exe](https://github.com/LukaszTM/Mentor/releases/latest)** — jeden plik, bez instalacji Pythona.
-Przy pierwszym uruchomieniu Windows SmartScreen może ostrzec (plik bez podpisu): „Więcej informacji” → „Uruchom mimo to”.
-Dane zapisują się w `mentor_dane.json`, a programy nauki w folderze `programy/` obok exe.
-
-Plik exe buduje się automatycznie w GitHub Actions (PyInstaller, `mentor.spec`) przy każdym pushu na `main`.
-
-## Uruchomienie ze źródeł
+## Uruchomienie
 
 1. Zainstaluj Pythona 3.10+ z python.org (zaznacz **Add Python to PATH**) — to i tak zadanie 1 z tygodnia 0.
 2. Rozpakuj folder `mentor_claude` gdziekolwiek (np. `C:\Users\Łukasz\mentor_claude`).
@@ -52,7 +44,16 @@ Twoje postępy zapisują się w `mentor_dane.json` obok programu. Skopiuj ten pl
 
 Ustawienia → **Program nauczania**: lista programów z folderu `programy/`, przełączanie (postępy każdego programu zapisują się
 osobno pod jego `id`), **„Wgraj program z pliku…”** (walidacja + kopia do `programy/`), „Zapisz pusty szablon programu”.
-Format: `programy/FORMAT.md`. Źródła wbudowanego programu w Pythonie z generatorem: `programy/zrodla/python_junior_qa/zbuduj.py`.
+Format: `programy/FORMAT.md`.
+
+Wbudowane programy (źródła w Pythonie z generatorami w `programy/zrodla/*/zbuduj.py`):
+
+| Program | Plik | Co zawiera |
+|---|---|---|
+| **Python od zera → Junior QA** | `programy/python-junior-qa.json` | 13 tygodni (0–12), 65 zadań, 32 lekcje, projekt portfolio z pytest + Selenium |
+| **Kadry i płace — kurs zaawansowany (praktyka 2026)** | `programy/kadry-i-place.json` | 12 tygodni (0–11), 60 zadań, 39 lekcji z testami, 60 pytań quizowych: prawo pracy, czas pracy, urlopy i staż 2026, lista płac brutto→netto, PIT, zasiłki i kontrola L4 po reformie 2026, zlecenia/dzieło/PPK/cudzoziemcy, ZUS (zgłoszenia, DRA/RCA/RSA, korekty), PIT roczny, ZFŚS/PFRON, kalendarz, rozwiązanie umowy, odprawy, świadectwo, mobbing (nowelizacja 2026), jawność wynagrodzeń, sygnaliści, kontrola PIP/ZUS — wszystko na fikcyjnej firmie, ze wskaźnikami 2026/2027 i podstawą prawną przy każdej liczbie (stan prawny: listopad 2026) |
+
+Przełączasz w Ustawieniach → Program nauczania → Przełącz. Każdy program ma własny katalog projektu (`nauka-python`, `kadry-praktyka`), własne prompty, ściągę, słowniczek dla Asystenta Offline i pytania rekrutacyjne.
 
 ## Mechanizmy, które mają Cię przyciągać z powrotem
 

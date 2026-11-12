@@ -844,7 +844,7 @@ class Mentor(tk.Tk):
     def widok_plan(self, tydzien=None):
         if tydzien is None:
             tydzien = self.stan.biezacy_tydzien()
-        self._naglowek(self.tresc, f"Plan — {P.liczba_tygodni()} tygodni", "Odhaczaj po wypchnięciu na GitHub — commit jest dowodem, że zadanie zrobione. "
+        self._naglowek(self.tresc, f"Plan — {P.liczba_tygodni()} tygodni", "Odhaczaj, gdy efekt zadania jest w katalogu projektu (i w commicie, jeśli używasz Gita). "
                        "Zadania 1–4 to pon–czw, zadanie 5 to piątek.")
         cialo = tk.Frame(self.tresc, bg=K["tlo"])
         cialo.pack(fill="both", expand=True, padx=28, pady=(0, 20))
@@ -1543,7 +1543,7 @@ class Mentor(tk.Tk):
             else:
                 plakietka(r, f"brak {zad['pliki'][0]}", K["jasny"], K["szary"]).pack(side="left")
             etykieta(r, f"  {zad['tytul']}" + ("  ✔ odhaczone" if self.stan.zrobione(zad["id"]) else ""), 10).pack(side="left")
-        etykieta(k, "Wykrycie pliku to podpowiedź, nie zaliczenie — zaliczasz w Planie, gdy kod działa i jest na GitHubie.", 9, kolor=K["szary"], wrap=800).pack(fill="x", pady=(8, 0))
+        etykieta(k, "Wykrycie pliku to podpowiedź, nie zaliczenie — zaliczasz w Planie, gdy zadanie naprawdę działa (i jest w commicie, jeśli używasz Gita).", 9, kolor=K["szary"], wrap=800).pack(fill="x", pady=(8, 0))
 
         # pliki .py w projekcie
         pyki = sorted(n for n in nazwy if n.endswith(".py"))
@@ -1588,22 +1588,38 @@ class Mentor(tk.Tk):
         except OSError as e:
             messagebox.showerror("Błąd", str(e), parent=self)
 
+    @staticmethod
+    def znajdz_claude():
+        """Ścieżka do komendy claude: PATH, a gdy jej tam nie ma — typowe katalogi instalatora (Windows: %USERPROFILE%\\.local\\bin, npm)."""
+        w = shutil.which("claude")
+        if w:
+            return w
+        dom = Path.home()
+        kandydaci = [dom / ".local" / "bin" / "claude.exe", dom / ".local" / "bin" / "claude",
+                     dom / "AppData" / "Roaming" / "npm" / "claude.cmd", dom / "AppData" / "Local" / "Programs" / "claude" / "claude.exe",
+                     Path("/usr/local/bin/claude"), Path("/opt/homebrew/bin/claude")]
+        for k in kandydaci:
+            if k.exists():
+                return str(k)
+        return None
+
     def otworz_claude(self):
         sciezka = self.stan.d["projekt"] or str(KATALOG)
-        if shutil.which("claude") is None:
+        claude = self.znajdz_claude()
+        if claude is None:
             if messagebox.askyesno("Claude Code", "Nie znaleziono komendy „claude” w PATH (Claude Code nie jest zainstalowany "
                                    "albo nie masz subskrypcji).\n\nOtworzyć wbudowanego Asystenta (tryb offline lub API)?", parent=self):
                 self.pokaz_asystenta("offline")
             return
         try:
             if WINDOWS:
-                subprocess.Popen(["cmd", "/k", "claude"], cwd=sciezka, creationflags=subprocess.CREATE_NEW_CONSOLE)
+                subprocess.Popen(["cmd", "/k", claude], cwd=sciezka, creationflags=subprocess.CREATE_NEW_CONSOLE)
             elif sys.platform == "darwin":
-                subprocess.Popen(["osascript", "-e", f'tell app "Terminal" to do script "cd \\"{sciezka}\\" && claude"'])
+                subprocess.Popen(["osascript", "-e", f'tell app "Terminal" to do script "cd \\"{sciezka}\\" && \\"{claude}\\""'])
             else:
                 for term in (["x-terminal-emulator", "-e"], ["gnome-terminal", "--"], ["konsole", "-e"], ["xterm", "-e"]):
                     if shutil.which(term[0]):
-                        subprocess.Popen([*term, "bash", "-c", f'cd "{sciezka}" && claude; exec bash'])
+                        subprocess.Popen([*term, "bash", "-c", f'cd "{sciezka}" && "{claude}"; exec bash'])
                         break
                 else:
                     raise OSError("brak terminala")
@@ -1623,8 +1639,14 @@ class Mentor(tk.Tk):
                         selectforeground=K["btn_tekst"], activestyle="none", highlightthickness=1, highlightbackground=K["ramka"])
         lb.pack(fill="both", expand=True)
         pozycje = [(p["nazwa"], p["kiedy"], p["tresc"]) for p in P.prompty]
-        pozycje.append(("Treść pliku CLAUDE.md", "Tydzień 0 — do każdego projektu nauki", P.claude_md))
-        pozycje.append(("Szablon bug raportu", "Tydzień 9+", P.szablony.get("bug_raport", "")))
+        if P.claude_md:
+            pozycje.append(("Treść pliku CLAUDE.md", "Tydzień 0 — do każdego projektu nauki", P.claude_md))
+        for klucz, sz in P.szablony.items():
+            if isinstance(sz, dict):
+                pozycje.append((sz.get("nazwa") or klucz, sz.get("kiedy", "Szablon dokumentu"), sz.get("tresc", "")))
+            else:
+                nazwa = {"bug_raport": "Szablon bug raportu"}.get(klucz, "Szablon: " + klucz.replace("_", " "))
+                pozycje.append((nazwa, "Szablon dokumentu — uzupełnij [nawiasy]", sz))
         for n, _, _ in pozycje:
             lb.insert("end", "  " + n)
 
@@ -1739,13 +1761,24 @@ class Mentor(tk.Tk):
                  "Co dostajesz: pełnego Claude w terminalu PyCharm — czyta Twoje pliki (@plik.py), uruchamia komendy za zgodą, "
                  "pamięta zasady z CLAUDE.md, ma tryb planowania (Shift+Tab). To wariant, dla którego napisano ten program nauki.\n"
                  "Koszt: stała opłata miesięczna za plan; Claude Code wliczony w limity planu.", 10, wrap=820).pack(fill="x")
-        ma = shutil.which("claude") is not None
+        gdzie = self.znajdz_claude()
+        ma = gdzie is not None
+        w_path = shutil.which("claude") is not None
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(10, 0))
         plakietka(r, "ZAINSTALOWANY" if ma else "NIE ZNALEZIONO", K["ziel_tlo"] if ma else K["czerw_tlo"], K["ziel"] if ma else K["czerw"]).pack(side="left")
-        etykieta(r, "  komenda claude w PATH", 10).pack(side="left")
+        etykieta(r, "  komenda claude" + (" w PATH" if w_path else (f" (poza PATH): {gdzie}" if ma else " — ani w PATH, ani w typowych katalogach instalatora")), 10).pack(side="left")
         if ma:
             przycisk(r, "Otwórz Claude Code w projekcie", self.otworz_claude, "ciemny").pack(side="left", padx=12)
+        if ma and not w_path and WINDOWS:
+            z2, k2 = karta(w, tytul="Claude jest zainstalowany, ale terminal go nie widzi")
+            z2.pack(fill="x", pady=(10, 0))
+            etykieta(k2, "Instalator wgrał claude.exe do katalogu, którego nie ma w PATH. Dodaj go raz w PowerShellu (potem otwórz NOWE okno terminala):", 9, kolor=K["szary"], wrap=820).pack(fill="x")
+            cmd = '[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$env:USERPROFILE\\.local\\bin", "User")'
+            r2 = tk.Frame(k2, bg=K["karta"])
+            r2.pack(fill="x", pady=4)
+            tk.Label(r2, text=cmd, font=czc(9, mono=True), bg=K["jasny"], fg=K["tekst"], padx=8, pady=3, wraplength=700, justify="left").pack(side="left")
+            przycisk(r2, "Kopiuj", lambda c=cmd: self.schowek(c, None), "drugi").pack(side="left", padx=8)
 
         z, k = karta(w, tytul="Instalacja (tydzień 0)")
         z.pack(fill="x", pady=(10, 0))
@@ -1810,10 +1843,11 @@ class Mentor(tk.Tk):
         gora.pack(fill="x")
         z, k = karta(gora, tytul="Offline — wbudowany emulator Claude Code")
         z.pack(fill="x")
+        przyklad_lekcji = P.lekcje[0]["nazwa"].split(":")[0].split("—")[0].strip().lower() if P.lekcje else "temat"
         etykieta(k, "Dla kogo: bez konta, bez karty, bez internetu. Co dostajesz: nie model językowy, tylko podręcznik z komendami — "
-                 "rozumie prompty z planu („uczę się pętli”, „przejrzyj @bmi.py”, „utknąłem… błąd: …”, „zadaj mi 3 pytania”, „quiz z tygodnia 2”, „commit”), "
-                 "tłumaczy 27 tematów z przykładami z gospodarstwa, recenzuje kod analizą statyczną, uruchamia pliki i tłumaczy błędy, "
-                 "wprowadza ukryte błędy do ćwiczeń, odpytuje jak rekruter. Zanim coś wykona lub zapisze — pyta o zgodę. "
+                 f"rozumie prompty z planu („uczę się {przyklad_lekcji}”, „przejrzyj @plik.py”, „utknąłem… błąd: …”, „zadaj mi 3 pytania”, „quiz z tygodnia 2”, „commit”), "
+                 f"tłumaczy {len(P.lekcje)} lekcji tego programu z przykładami, zna {len(P.pojecia)} pojęć („co to jest…”), recenzuje kod Pythona analizą statyczną, uruchamia pliki i tłumaczy błędy, "
+                 "odpytuje jak rekruter z pytań programu. Zanim coś wykona lub zapisze — pyta o zgodę. "
                  "Nie odpowie na dowolne pytanie „dlaczego” — wtedy zapisz je w Dzienniku na tryb API/Claude Code.", 10, wrap=820).pack(fill="x")
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(8, 0))
@@ -2171,7 +2205,7 @@ class Mentor(tk.Tk):
 
     # ================================================================= ŚCIĄGA
     def widok_sciaga(self):
-        w = self._strona("Ściąga", "Komendy i skróty z programu nauki. Reszta czeka pod /help w Asystencie.")
+        w = self._strona("Ściąga", "Najważniejsze liczby, komendy i skróty z programu nauki. Reszta czeka pod /help w Asystencie.")
         for sekcja in P.sciaga:
             tytul, dane = sekcja["tytul"], sekcja["pozycje"]
             z, k = karta(w, tytul=tytul)
@@ -2179,8 +2213,8 @@ class Mentor(tk.Tk):
             for cmd, opis in dane:
                 r = tk.Frame(k, bg=K["karta"])
                 r.pack(fill="x", pady=1)
-                tk.Label(r, text=cmd, font=czc(10, "bold", mono=True), bg=K["jasny"], fg=K["tekst"], width=26, anchor="w", padx=8, pady=3).pack(side="left")
-                etykieta(r, "  " + opis, 10).pack(side="left")
+                tk.Label(r, text=cmd, font=czc(10, "bold", mono=True), bg=K["jasny"], fg=K["tekst"], width=26, anchor="w", padx=8, pady=3).pack(side="left", anchor="n")
+                etykieta(r, "  " + opis, 10, wrap=600).pack(side="left", fill="x", expand=True, pady=2)
         z, k = karta(w, tytul="Linki")
         z.pack(fill="x", padx=28, pady=(0, 24))
         for n, u in P.linki:

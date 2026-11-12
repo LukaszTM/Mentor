@@ -24,9 +24,11 @@ jobs:
       - name: Zainstaluj PyInstaller
         run: pip install pyinstaller==6.11.1
       - name: Zbuduj programy (ze źródeł, dla pewności)
-        run: python programy/zrodla/python_junior_qa/zbuduj.py
+        run: |
+          python programy/zrodla/python_junior_qa/zbuduj.py
+          python programy/zrodla/kadry_i_place/zbuduj.py
       - name: Test importu i walidacji programu
-        run: python -c "import program; print(program.wczytaj('programy/python-junior-qa.json') or 'program OK')"
+        run: python -c "import program; [print(f, program.wczytaj(f) or 'OK') for f in ('programy/python-junior-qa.json', 'programy/kadry-i-place.json')]"
       - name: PyInstaller
         run: pyinstaller --clean --noconfirm mentor.spec
       - name: Test uruchomienia exe (smoke)
@@ -44,7 +46,7 @@ jobs:
           Copy-Item dist\Mentor.exe pakiet\Mentor\
           Copy-Item README.md pakiet\Mentor\
           Copy-Item -Recurse programy pakiet\Mentor\programy
-          Remove-Item -Recurse -Force pakiet\Mentor\programy\zrodla\python_junior_qa\__pycache__ -ErrorAction SilentlyContinue
+          Get-ChildItem -Recurse -Directory -Filter __pycache__ pakiet\Mentor\programy | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
           Compress-Archive -Path pakiet\Mentor -DestinationPath Mentor-windows.zip
       - uses: actions/upload-artifact@v4
         with:
@@ -62,7 +64,7 @@ jobs:
           body: |
             **Mentor.exe** — interaktywny nauczyciel (Windows 10/11, 64-bit, bez instalacji).
 
-            Pobierz `Mentor.exe` (sam program; przy pierwszym uruchomieniu rozpakuje wbudowany program nauki do folderu `programy/` obok siebie)
+            Pobierz `Mentor.exe` (sam program; przy pierwszym uruchomieniu rozpakuje wbudowane programy nauki do folderu `programy/` obok siebie)
             albo `Mentor-windows.zip` (exe + README + programy ze źródłami).
 
             Windows SmartScreen może ostrzec przy pierwszym uruchomieniu (plik bez podpisu): „Więcej informacji” → „Uruchom mimo to”.

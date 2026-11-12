@@ -366,11 +366,25 @@ class EmulatorOffline:
     def _tydzien(self):
         return P.tydzien(self._k().get("tydzien", 0))
 
+    @staticmethod
+    def _rdzenie(tekst):
+        """Słowa tekstu skrócone do 6 znaków — tak „podstawy wymiaru zasiłku” trafia w „podstawa wymiaru zasiłku” mimo odmiany."""
+        return {w[:6] for w in re.findall(r"[0-9a-ząćęłńóśźż]+", tekst.lower())}
+
     def _temat(self, tekst):
         t = tekst.lower()
+        rdzenie = self._rdzenie(t)
         najlepszy, punkty = None, 0
         for temat in P.lekcje:
-            p = sum(1 for s in temat["slowa"] if s.lower() in t)
+            p = 0
+            for s in temat["slowa"]:
+                s = s.lower()
+                if s in t:
+                    p += 2
+                    continue
+                czesci = re.findall(r"[0-9a-ząćęłńóśźż]+", s)
+                if czesci and all(c[:6] in rdzenie for c in czesci):
+                    p += 1
             if temat["nazwa"].lower() in t:
                 p += 3
             if p > punkty:
@@ -447,7 +461,7 @@ class EmulatorOffline:
             nazwa, opis = self._pojecie(tekst)
             if opis:
                 return [("naglowek", nazwa.capitalize()), ("tekst", opis),
-                        ("pytanie", "Powiedz to teraz własnymi słowami, na przykładzie z Twojego gospodarstwa. Jeśli się nie da — zapytaj „dlaczego”.")]
+                        ("pytanie", "Powiedz to teraz własnymi słowami, na przykładzie z Twojego otoczenia. Jeśli się nie da — zapytaj „dlaczego”.")]
         if any(s in t for s in ("uczę się", "ucze sie", "wytłumacz", "wytlumacz", "wyjaśnij", "wyjasnij", "naucz", "temat", "jak działa", "jak dziala")):
             temat = self._temat(tekst)
             if temat:
@@ -487,7 +501,7 @@ class EmulatorOffline:
                             "/zadania              3 zadania do ostatniego tematu\n"
                             "/pytania              3 pytania sprawdzające z bieżącego tygodnia\n"
                             "/quiz [tydzień]       quiz w rozmowie (A/B/C/D)\n"
-                            "/rekrutacja           15 pytań jak na rozmowie na Junior QA\n"
+                            "/rekrutacja           pytania jak na rozmowie o pracę (" + (P.stanowisko or "stanowisko z programu") + ")\n"
                             "/sprawdz <plik.py>    recenzja: co dobrze, co błędem, co czytelniej\n"
                             "/uruchom <plik.py> [<< dane; po; średniku]   uruchom i wytłumacz błąd\n"
                             "/blad <NazwaBłędu>    co znaczy np. TypeError i jak go szukać\n"
@@ -812,7 +826,7 @@ class EmulatorOffline:
             return [("ostrz", "Ten program nie ma pytań rekrutacyjnych.")]
         random.shuffle(pyt)
         self.rekrutacja = {"pytania": pyt, "i": 0}
-        return [("naglowek", "Próbna rozmowa rekrutacyjna — Junior QA"),
+        return [("naglowek", "Próbna rozmowa rekrutacyjna" + (f" — {P.stanowisko}" if P.stanowisko else "")),
                 ("tekst", "Odpowiadaj pełnym zdaniem, jak na rozmowie. Po każdej odpowiedzi pokażę wzorzec — porównaj sam, czego zabrakło. "
                           "„stop” kończy."),
                 ("pytanie", f"[{pyt[0][0]}] {pyt[0][1]}")]

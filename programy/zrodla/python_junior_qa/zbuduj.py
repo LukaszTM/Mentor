@@ -65,6 +65,7 @@ def zbuduj():
         "wersja": "2.0",
         "jezyk": "pl",
         "katalog_projektu": "nauka-python",
+        "stanowisko": "Junior QA",
         "czas_dziennie_min": 90,
         "dni_w_tygodniu": [0, 1, 2, 3, 4],
         "dzien_quizu": 5,

@@ -10,6 +10,7 @@ a = Analysis(
     binaries=[],
     datas=[
         ("programy/python-junior-qa.json", "programy"),
+        ("programy/kadry-i-place.json", "programy"),
         ("programy/szablon-programu.json", "programy"),
         ("programy/FORMAT.md", "programy"),
         ("mentor.ico", "."),

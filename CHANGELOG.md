@@ -1,5 +1,29 @@
 # Zmiany w Mentorze
 
+## 2.8.1 — kurs „Kadry i płace” 3.1: drugi przegląd przed wydaniem — klucze zgodne z rozwiązaniami, PIT-11 według urzędowego wzoru
+
+Przegląd wszystkich 87 ćwiczeń z kluczem (treść ↔ wynik ↔ rozwiązanie ↔ klucz), 10 formularzy i 225 pytań testowych; numeracja PIT-11 porównana z urzędowym wzorem PIT-11(29).
+
+- **Błędny klucz**: „Rozliczenia miesięczne” ćw. 1 — klucz mówił o 8 raportach RCA, a rozwiązanie o 10 (8 pracowników + 2 zleceniobiorców); teraz 10, z podpowiedziami dla 8 i 12.
+- **Symulator PIT-11** (Warsztat → e-Urząd: PIT): u podatnika do 26 lat składki od przychodów zwolnionych trafiały do poz. 95 — według wzoru PIT-11(29) to poz. 97
+  (podatnik ich nie odlicza), a składki od przychodów z wiersza 2 — poz. 96; poz. 28 pokazuje numer kwadratu (1 albo 3); nota o zasiłku macierzyńskim (wiersz 12).
+  `kadry.skladki_do_pit11()` dzieli składki tak samo jak lista płac.
+- **Lekcja o PIT-11 i formularz PIT-11**: wiersz 5 (dzieło) i wiersz 6 (zlecenie) rozdzielone, poz. 95/96/97, poz. 112, kwadraty poz. 28 z numerami jak na druku;
+  usunięte nieistniejące pole „czy zwolnienie stosowano na wniosek”.
+- **Akta osobowe**: szablon onboardingu przypisywał orzeczenia okresowe do części A — poprawnie część B (§ 3 pkt 2 rozporządzenia o dokumentacji pracowniczej);
+  część A to badania wstępne i dokumenty z rekrutacji. (Błąd wprowadziła poprzednia korekta.)
+- **Wzory ZUS**: w lekcji o rozliczeniach — rozporządzenie z 9.04.2026 (Dz.U. 2026 poz. 518), nowe RCA i DRA od rozliczenia za kwiecień 2026, brak raportu RZA
+  (za osobę zgłoszoną tylko do ubezpieczenia zdrowotnego składasz RCA).
+- **Spójność ćwiczeń** (11 miejsc): komplet RSA dla zasiłku wypłaconego 10.12 (12/2026, nie 11/2026), odsetki od dnia po terminie (17.11), terminy wypadające w niedzielę
+  (17.01.2027 → 18.01), A1 przy pracy w dwóch państwach (art. 13 i US-4 zamiast umowy ramowej), okres zwolnienia z FP po urlopie rodzicielskim, wypłata 8.01.2027,
+  staż na dzień rozwiązania umowy, liczba kompletów korygujących, koszt aneksów, zespół powypadkowy bez SIP.
+- **Klucze uczciwe wobec uczącego się**: ćwiczenie o procedurze antymobbingowej sprawdza fakty (termin 5.05.2027, kanały, skład komisji, rejestr), a nie liczby dni
+  z przykładowej procedury; luka płacowa z tolerancją zaokrąglenia; termin odpowiedzi na wniosek o pracę zdalną z jawnym założeniem o sobocie.
+- **Warsztat**: Lista płac liczy umowę o pracę — przy zleceniobiorcy i wykonawcy dzieła ostrzega i nie dodaje wiersza do listy miesiąca (z listy powstają RCA i PIT-11);
+  komplet ZUS przypomina o RCA zleceniobiorców.
+- **Panel odpowiedzi**: lista wyboru z długą opcją ma własny wiersz na całą szerokość, a etykiety zawijają się w faktycznej szerokości karty (nic nie chowa się pod polem).
+- Kurs: 87 ćwiczeń z kluczem (423 pola, 56 podpowiedzi), 10 formularzy (139 pól, 33 podpowiedzi). Test `test_skladki_do_pit11_ulga_dla_mlodych`.
+
 ## 2.8.0 — kurs „Kadry i płace” 3.0: pełny audyt merytoryczny, sprawdzanie automatyczne, prawdziwe formularze, projekt końcowy, kalendarz aktualizacji
 
 - **Sprawdzanie automatyczne ćwiczeń** (`odpowiedzi.py`, `odpowiedzi_ui.py`; pole `odpowiedzi` ćwiczenia): pod 87 z 96 ćwiczeń kursu kadrowego są pola

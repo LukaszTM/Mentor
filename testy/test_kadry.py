@@ -62,6 +62,19 @@ def test_projekt_koncowy_zgodny_z_silnikiem(firma, repo):
     assert k["wolna"] == min27["netto"] == 3703.93
 
 
+def test_skladki_do_pit11_ulga_dla_mlodych(firma):
+    """PIT-11(29): składki od przychodu zwolnionego (poz. 97) osobno od podlegających odliczeniu (poz. 95 albo 96)."""
+    zwykly = kadry.lista_plac(zasadnicze=6000, ppk_prac=0, ppk_pracod=0, par=firma)
+    assert kadry.skladki_do_pit11([zwykly, zwykly]) == (1645.2, 0.0)                      # Anna Kowalczyk: 2 × 822,60 → poz. 95
+    mlody = kadry.lista_plac(zasadnicze=4900, ulga_mlodych=True, par=firma)                 # Jakub Krawczyk: cały przychód zwolniony
+    assert mlody["zwolnione"] == mlody["przychod_pracy"] and mlody["zaliczka"] == 0
+    assert kadry.skladki_do_pit11([mlody] * 3) == (0.0, 2015.37)                            # 3 × 671,79 → poz. 97, nic do odliczenia
+    czesc = kadry.lista_plac(zasadnicze=4900, ulga_mlodych=True, przychod_mlodych_narast=83000, par=firma)   # miesiąc przekroczenia limitu 85 528 zł
+    odl, zw = kadry.skladki_do_pit11([czesc])
+    assert 0 < zw < czesc["spol"] and round(odl + zw, 2) == czesc["spol"]
+    assert kadry.skladki_do_pit11([]) == (0.0, 0.0)
+
+
 def test_czas_pracy_i_nadgodziny():
     assert kadry.wymiar(2026, 12)["godziny"] == 160 and kadry.wymiar(2027, 1)["godziny"] == 152 and kadry.wymiar(2027, 5)["godziny"] == 144
     assert kadry.nadgodziny(6000, 168, 4, 8)["razem"] == 785.62

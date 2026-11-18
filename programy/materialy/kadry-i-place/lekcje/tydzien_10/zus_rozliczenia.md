@@ -18,7 +18,8 @@ Tydzień 10 · lekcja 34 z 48 · ≈ 65 min
 | RCA | raport imienny: za każdego ubezpieczonego kod tytułu, wymiar etatu, podstawy i składki emerytalna, rentowa, chorobowa, wypadkowa, zdrowotna; informacyjnie kwota wpłaty na PPK finansowanej przez płatnika |
 | RSA | raport o przerwach i świadczeniach: kody przerw, okresy, dni, kwoty zasiłków wypłaconych przez płatnika |
 | RPA | raport o przychodach dla celów emerytalnych — składasz TYLKO, gdy wystąpiło: przychód należny za INNY rok wypłacony w tym miesiącu (trzynastka, premia roczna, wyrównanie); składnik wypłacony OBOK wynagrodzenia chorobowego lub zasiłku, od którego nie było składek, a stanowi podstawę do emerytury (dodatek stażowy w pełnej wysokości w czasie choroby); okresy pracy nauczycielskiej. Pensja za grudzień wypłacana w styczniu w zwykłym terminie wypłat NIE wymaga RPA |
-Za pracowników i zleceniobiorców składasz jeden komplet. Identyfikator dokumentu: 01 MM RRRR — pierwotny; 02–39 — kolejne korekty. Przy przekroczeniu 30-krotności — informacja ZUS i korekty.
+Za pracowników i zleceniobiorców składasz jeden komplet. Identyfikator dokumentu: 01 MM RRRR — pierwotny; 02–39 — kolejne korekty.
+Wzory: rozporządzenie MRPiPS z 9.04.2026 (Dz.U. 2026 poz. 518) — 23 dokumenty, w tym nowe ZUS RCA i ZUS DRA stosowane od rozliczenia za kwiecień 2026 (dodane pola dotyczą rocznego rozliczenia składki zdrowotnej przedsiębiorców). Odrębnego raportu ZUS RZA nie składa się od rozliczeń za styczeń 2022 r. i aktualny wykaz wzorów już go nie zawiera: także za osobę zgłoszoną tylko do ubezpieczenia zdrowotnego (ZZA — np. zleceniobiorca ze zbiegiem tytułów) składasz RCA, w którym wykazujesz samą składkę zdrowotną. Starsze poradniki mogą jeszcze odsyłać do RZA. Przy przekroczeniu 30-krotności — informacja ZUS i korekty.
 ### Zasada kasowa
 W raportach za dany miesiąc wykazujesz przychody WYPŁACONE lub postawione do dyspozycji w tym miesiącu.
 | Przykład | Gdzie |
@@ -49,7 +50,7 @@ Roczna informacja IMIR (dawniej RMUA) — do końca lutego za rok poprzedni. Mie
 - Podstawy RCA = lista płac (brutto − wyłączenia).
 - Okresy RSA = ewidencja nieobecności.
 - Zdrowotna 9% od (podstawa − składki społeczne).
-- Zleceniobiorcy ze zbiegiem: podstawa społecznych 0, zdrowotna pełna.
+- Zleceniobiorcy ze zbiegiem (zgłoszeni na ZZA): RCA z samą składką zdrowotną — bez składek społecznych.
 - Kody RCA z informacją o etacie (np. 1/1, 1/2).
 - Wychowawczy: RCA 12 11 z podstawą 60% prognozowanego (5 652 zł w 2026, minimum 75% minimalnej) finansowaną z budżetu — w DRA w osobnym bloku; zdrowotna od podstawy równej kwocie specjalnego zasiłku opiekuńczego (620 zł).
 - PPK — poza ZUS.
@@ -85,10 +86,10 @@ Komplet 01 12 2026: DRA + 67 RCA (60 × 01 10, 1 × 12 11, 1 × 12 40, 5 × 04 1
 4. Wyślij i zapłać na NRS do 15. (osoby prawne) / 20.; zachowaj UPP.
 
 ## 4 · Ćwiczenie prowadzone
-Zbuduj komplet za 12/2026 (wypłata listopadowa 10.12) dla 8 osób z zadania tygodnia jak w demonstracji: lista płac → RCA; przerwy: Zieliński (331 + 313 jak wyżej), Sobczak opieka 312 16–20.11 kwota 598,30, Nowak urlop bezpłatny 111 2–3.12 (przerwa grudniowa), Michalska — poza kompletem. Policz ręcznie sumę do zapłaty i porównaj z DRA w symulatorze. Plik: cwiczenia/tydzien_10/zus_rozliczenia_1.md. Czas: 25 minut.
+Zbuduj komplet za 12/2026 (wypłata listopadowa 10.12) dla całej firmy z FIRMA.md (12 osób) jak w demonstracji: ustal, kto ma RCA i z jakim kodem (w symulatorze z listy płac 8 pracowników powstanie 8 RCA — raporty zleceniobiorców dopisz w notatce); przerwy: Zieliński (331 + 313 jak wyżej), Sobczak opieka 312 16–20.11 kwota 598,30, Nowak urlop bezpłatny 111 2–3.12 (przerwa grudniowa), Michalska — poza kompletem. Policz ręcznie sumę do zapłaty i porównaj z DRA w symulatorze. Plik: cwiczenia/tydzien_10/zus_rozliczenia_1.md. Czas: 25 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_10/zus_rozliczenia_1.md` · rozwiązanie: `rozwiazania/tydzien_10/zus_rozliczenia_1.md`
-✔ Poprawny wynik wygląda tak: RCA: 8 wierszy (Dąbrowski-student i Michalska-dzieło poza); RSA: 331 (kwota informacyjnie, nie odliczana), 313 800,76, 312 598,30, 111 2–3.12 (bez kwoty); DRA: do zapłaty = suma składek społecznych (prac. + pracod.) + zdrowotnych + FP + FGŚP − (800,76 + 598,30); identyfikator 01 12 2026; termin 15.01.2027.
+✔ Poprawny wynik wygląda tak: RCA: 10 raportów — 8 pracowników (01 10) oraz zleceniobiorcy Pawlak i Król (04 11); Dąbrowski-student i Michalska-dzieło poza; RSA: 331 (kwota informacyjnie, nie odliczana), 313 800,76, 312 598,30, 111 2–3.12 (bez kwoty); DRA: do zapłaty = suma składek społecznych (prac. + pracod.) + zdrowotnych + FP + FGŚP − (800,76 + 598,30); identyfikator 01 12 2026; termin 15.01.2027.
 
 ## 5 · Ćwiczenie samodzielne
 W styczniu 2027 AGRO-MLEKO wypłaca (8.01 — bo 10.01 to niedziela) pensje za grudzień oraz 15.01 trzynastkę za 2026 r. dla 62 osób; ponadto 20.01 Ewa Sobczak dostaje zaległe nadgodziny za listopad 2026 (lista dodatkowa). Zdecyduj: (a) w którym komplecie i z jakim identyfikatorem rozliczasz każdą wypłatę, (b) czy potrzebujesz RPA i za kogo, (c) ile wynosi termin i co się dzieje, gdy 15.02.2027 wypada w poniedziałek, a przelew wyszedł 16.02 (kwota składek 180 000 zł, stopa odsetek za zwłokę 10,5% rocznie). Plik: cwiczenia/tydzien_10/zus_rozliczenia_2.md. Czas: 15 minut.

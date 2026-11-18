@@ -1350,7 +1350,8 @@ WYJASNIENIA["zus_rozliczenia"] = """## Komplet miesięczny
 | RCA | raport imienny: za każdego ubezpieczonego kod tytułu, wymiar etatu, podstawy i składki emerytalna, rentowa, chorobowa, wypadkowa, zdrowotna; informacyjnie kwota wpłaty na PPK finansowanej przez płatnika |
 | RSA | raport o przerwach i świadczeniach: kody przerw, okresy, dni, kwoty zasiłków wypłaconych przez płatnika |
 | RPA | raport o przychodach dla celów emerytalnych — składasz TYLKO, gdy wystąpiło: przychód należny za INNY rok wypłacony w tym miesiącu (trzynastka, premia roczna, wyrównanie); składnik wypłacony OBOK wynagrodzenia chorobowego lub zasiłku, od którego nie było składek, a stanowi podstawę do emerytury (dodatek stażowy w pełnej wysokości w czasie choroby); okresy pracy nauczycielskiej. Pensja za grudzień wypłacana w styczniu w zwykłym terminie wypłat NIE wymaga RPA |
-Za pracowników i zleceniobiorców składasz jeden komplet. Identyfikator dokumentu: 01 MM RRRR — pierwotny; 02–39 — kolejne korekty. Przy przekroczeniu 30-krotności — informacja ZUS i korekty.
+Za pracowników i zleceniobiorców składasz jeden komplet. Identyfikator dokumentu: 01 MM RRRR — pierwotny; 02–39 — kolejne korekty.
+Wzory: rozporządzenie MRPiPS z 9.04.2026 (Dz.U. 2026 poz. 518) — 23 dokumenty, w tym nowe ZUS RCA i ZUS DRA stosowane od rozliczenia za kwiecień 2026 (dodane pola dotyczą rocznego rozliczenia składki zdrowotnej przedsiębiorców). Odrębnego raportu ZUS RZA nie składa się od rozliczeń za styczeń 2022 r. i aktualny wykaz wzorów już go nie zawiera: także za osobę zgłoszoną tylko do ubezpieczenia zdrowotnego (ZZA — np. zleceniobiorca ze zbiegiem tytułów) składasz RCA, w którym wykazujesz samą składkę zdrowotną. Starsze poradniki mogą jeszcze odsyłać do RZA. Przy przekroczeniu 30-krotności — informacja ZUS i korekty.
 
 ## Zasada kasowa
 W raportach za dany miesiąc wykazujesz przychody WYPŁACONE lub postawione do dyspozycji w tym miesiącu.
@@ -1386,7 +1387,7 @@ Roczna informacja IMIR (dawniej RMUA) — do końca lutego za rok poprzedni. Mie
 - Podstawy RCA = lista płac (brutto − wyłączenia).
 - Okresy RSA = ewidencja nieobecności.
 - Zdrowotna 9% od (podstawa − składki społeczne).
-- Zleceniobiorcy ze zbiegiem: podstawa społecznych 0, zdrowotna pełna.
+- Zleceniobiorcy ze zbiegiem (zgłoszeni na ZZA): RCA z samą składką zdrowotną — bez składek społecznych.
 - Kody RCA z informacją o etacie (np. 1/1, 1/2).
 - Wychowawczy: RCA 12 11 z podstawą 60% prognozowanego (5 652 zł w 2026, minimum 75% minimalnej) finansowaną z budżetu — w DRA w osobnym bloku; zdrowotna od podstawy równej kwocie specjalnego zasiłku opiekuńczego (620 zł).
 - PPK — poza ZUS.
@@ -1451,18 +1452,18 @@ Projekt UDER105 (stan na 17.11.2026: po konsultacjach publicznych, nie trafił d
 Płatnik nie rozlicza już podatnika (PIT-40 zniesiony). Podatnik korzysta z Twój e-PIT, zasilonego Twoimi PIT-11. Błąd w PIT-11 = błąd w zeznaniu pracownika.
 
 ## Treść PIT-11
-Sprawdź numer formularza na podatki.gov.pl — od 2024 obowiązuje wersja 29 lub nowsza.
+Aktualny wzór to PIT-11 w wersji 29 — PIT-11(29). Numery pozycji poniżej sprawdzono z urzędowym formularzem z podatki.gov.pl (18.11.2026); przed wysyłką upewnij się, że nie opublikowano nowszej wersji.
 | Sekcja | Co wpisujesz |
 |---|---|
 | dane | płatnik i podatnik: PESEL/NIP, adres (zagraniczny dla nierezydentów) |
-| przychody wg źródeł (część E) | wiersz 1 — stosunek pracy: poz. 29 przychód, 30 koszty, 31 dochód, 33 zaliczka (przychody z 50% KUP osobno: poz. 34–35); wiersz 2 — to samo dla podatnika do 26 lat, gdy przychód nie korzysta z ulgi (poz. 36–40); wiersz 6 — zlecenia, czyli działalność wykonywana osobiście (poz. 58–61); wiersz 15 — inne źródła, w tym zasiłki z ubezpieczenia społecznego wypłacone przez zakład pracy (poz. 90–94) |
+| przychody wg źródeł (część E) | wiersz 1 — stosunek pracy: poz. 29 przychód, 30 koszty, 31 dochód, 33 zaliczka (przychody z 50% KUP osobno: poz. 34–35); wiersz 2 — to samo dla podatnika do 26 lat, gdy przychód nie korzysta z ulgi (poz. 36–40); wiersz 5 — działalność wykonywana osobiście poza zleceniem, np. umowa o dzieło (poz. 54–57); wiersz 6 — umowy zlecenia (poz. 58–61; zleceniobiorca do 26 lat z przychodem bez ulgi — wiersz 7); wiersz 12 — zasiłki macierzyńskie (poz. 81–83); wiersz 15 — inne źródła, w tym pozostałe zasiłki z ubezpieczenia społecznego wypłacone przez płatnika (poz. 90–94) |
 | czego tu nie ma | należności z art. 30 ust. 1 pkt 5a (ryczałt) — w PIT-8AR |
 | KUP | faktycznie zastosowane: 250/300, 20%, 50%; rodzaj kosztów pracowniczych zaznaczasz w części D (poz. 28) |
 | dochód i zaliczki | zaliczki pobrane; gdy pracownik dostał i pensję, i zasiłek, łączną zaliczkę wykazujesz w wierszu 1 (poz. 33) — w wierszu 15 tylko wtedy, gdy pobrano ją wyłącznie od zasiłków |
-| składki społeczne | poz. 95 — podlegające odliczeniu; składki od przychodów zwolnionych — osobno |
+| składki społeczne | poz. 95 — podlegające odliczeniu (od przychodów z wierszy 1, 5, 6…); poz. 96 — od opodatkowanych przychodów osób do 26 lat i osób po osiągnięciu wieku emerytalnego (wiersze 2, 3, 7, 8, 11); poz. 97 — od przychodów ZWOLNIONYCH (ulga dla młodych, na powrót, 4+, dla seniorów): tych składek podatnik nie odlicza |
 | składka zdrowotna | część G, poz. 122 — wykazujesz kwotę pobraną przez płatnika; od 2022 r. nie odlicza się jej od podatku, ale jest potrzebna m.in. do dodatkowego zwrotu ulgi na dzieci |
-| przychody ZWOLNIONE (część G) | ulga dla młodych: poz. 109 razem, w tym 110 stosunek pracy, 111 zlecenia, 113 zasiłek macierzyński; ulga na powrót, 4+, dla seniorów: poz. 114–117 i kwadraty 118–120 — zaznaczasz, które zwolnienie stosowałeś |
-| numeracja | pozycje podane dla PIT-11 w wersji 29 (obowiązującej dla wypłat od 2022 r.) — przed wysyłką sprawdź numer wersji na podatki.gov.pl |
+| przychody ZWOLNIONE (część G) | ulga dla młodych: poz. 109 razem, w tym 110 stosunek pracy, 111 zlecenia, 112 praktyki absolwenckie i staże uczniowskie, 113 zasiłek macierzyński; ulga na powrót, 4+, dla seniorów: poz. 114–117 i kwadraty 118–120 — zaznaczasz, które zwolnienie stosowałeś |
+| numeracja | pozycje według urzędowego wzoru PIT-11(29) z podatki.gov.pl — przed wysyłką sprawdź, czy nie opublikowano nowszej wersji |
 | zwolnienia przedmiotowe (ZFŚS do 1 000 zł, posiłki) | nie wykazujesz |
 | wpłaty pracodawcy na PPK | w przychodzie ze stosunku pracy |
 Zgodność: suma zaliczek z PIT-11 = PIT-4R = wpłaty na mikrorachunek. Suma przychodów = kartoteka płacowa.

@@ -8,7 +8,8 @@ from odpowiedzi_cw import TN, bl, da, kw, li, tx, wy
 WYP = ["wypełniam", "nie wypełniam"]
 KW_ZM = ["1/12 (300 zł)", "1/24 (150 zł)", "1/36 (100 zł)", "nie wypełniam"]
 PODST = ["art. 30 §1 pkt 1 KP — porozumienie stron", "art. 30 §1 pkt 2 KP — wypowiedzenie", "art. 30 §1 pkt 3 KP — bez wypowiedzenia", "art. 30 §1 pkt 4 KP — upływ czasu"]
-KUP_PIT11 = ["z jednego stosunku pracy — podstawowe", "z jednego stosunku pracy — podwyższone", "z kilku stosunków pracy — podstawowe", "z kilku stosunków pracy — podwyższone"]
+# kwadraty poz. 28 urzędowego wzoru PIT-11(29): 1 — z jednego stosunku pracy, 2 — z więcej niż jednego, 3 i 4 — to samo z kosztami podwyższonymi (dojazd z innej miejscowości)
+KUP_PIT11 = ["1 — jeden stosunek pracy", "2 — kilka stosunków pracy", "3 — jeden, podwyższone", "4 — kilka, podwyższone"]
 
 
 def s(tytul, *pola):
@@ -134,12 +135,13 @@ FORMULARZE = [
      "scenariusz": "Anna Kowalczyk pracuje od 1.10.2026 (6 000 zł, KUP 250, PIT-2: 300 zł; w 2026 r. bez PPK). Wypłaty: 10.11.2026 (za październik), 10.12.2026 (za listopad) "
                    "i 8.01.2027 (za grudzień). Z każdej listy: składki społeczne 822,60, zdrowotna 465,97, zaliczka 291. Wypełnij PIT-11 za 2026 r.",
      "sekcje": [
-         s("D. Koszty uzyskania przychodów", wy("p28", "Poz. 28 — rodzaj zastosowanych kosztów", KUP_PIT11, "z jednego stosunku pracy — podstawowe")),
+         s("D. Koszty uzyskania przychodów", wy("p28", "Poz. 28 — koszty uzyskania uwzględniono w wysokości (numer kwadratu)", KUP_PIT11, "1 — jeden stosunek pracy",
+            bledy=[bl("3 — jeden, podwyższone", "podwyższone koszty (300 zł) ma tylko osoba dojeżdżająca z innej miejscowości — Anna ma 250 zł")])),
          s("E. Wiersz 1 — należności ze stosunku pracy", kw("p29", "Poz. 29 — przychód", 12000, bledy=[bl(18000, "zasada kasowa: pensja za grudzień wypłacona 8.01.2027 to przychód roku 2027")]),
            kw("p30", "Poz. 30 — koszty uzyskania przychodów", 500),
            kw("p31", "Poz. 31 — dochód", 11500, bledy=[bl(9854.80, "w PIT-11 dochód to przychód minus koszty; składki społeczne wykazujesz osobno w poz. 95")]),
            kw("p33", "Poz. 33 — zaliczka pobrana przez płatnika", 582)),
-         s("E. Składki", kw("p95", "Poz. 95 — składki na ubezpieczenia społeczne", 1645.20)),
+         s("E. Składki", kw("p95", "Poz. 95 — składki na ubezpieczenia społeczne podlegające odliczeniu", 1645.20)),
          s("G. Informacje dodatkowe", kw("p122", "Poz. 122 — składka na ubezpieczenie zdrowotne pobrana przez płatnika", 931.94,
                                          bledy=[bl(0, "PIT-11 w wersji 29 ma pozycję 122 — wykazujesz pobraną składkę informacyjnie, choć nie odlicza się jej od podatku")])),
          s("Terminy", da("us", "Do urzędu skarbowego (elektronicznie) — ostatni dzień", "2027-02-01", bledy=[bl("2027-01-31", "31.01.2027 to niedziela — termin przesuwa się na poniedziałek")]),

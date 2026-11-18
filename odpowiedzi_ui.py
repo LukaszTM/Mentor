@@ -12,6 +12,7 @@ import odpowiedzi as O
 
 XP_KOMPLET = 2          # punkty za komplet poprawnych odpowiedzi bez podglądania klucza (raz na ćwiczenie/formularz)
 PROBY_DO_KLUCZA = 2     # po tylu próbach wolno pokazać poprawne wartości
+DLUGA_OPCJA = 30        # lista wyboru z dłuższą opcją dostaje własny wiersz na całą szerokość panelu (obok etykiety byłaby ucięta)
 
 
 def _M():
@@ -47,27 +48,50 @@ def panel(app, parent, pola, klucz, W=600, bg=None, po_sprawdzeniu=None, po_poka
     siatka.columnconfigure(0, weight=1)
     szer_pola = 190                                   # miejsce na pole wpisu (px); etykieta zawija się w reszcie szerokości
     zmienne, statusy = {}, {}
+    zawijane = []                                     # (etykieta, widżet obok albo None) — szerokość zawijania dopasowuje się do faktycznej szerokości panelu
     wiersz, sekcja = 0, None
     for p in pola:
         if p.get("sekcja") and p["sekcja"] != sekcja:          # nagłówek bloku formularza (np. „III.B. Zestawienie należnych składek…”)
             sekcja = p["sekcja"]
-            tk.Label(siatka, text=sekcja, font=M.czc(10, "bold"), bg=bg, fg=K["akcent"], anchor="w", justify="left",
-                     wraplength=max(W - 20, 220)).grid(row=wiersz, column=0, columnspan=2, sticky="w", pady=(8, 0))
+            ns = tk.Label(siatka, text=sekcja, font=M.czc(10, "bold"), bg=bg, fg=K["akcent"], anchor="w", justify="left", wraplength=max(W - 20, 220))
+            ns.grid(row=wiersz, column=0, columnspan=2, sticky="w", pady=(8, 0))
+            zawijane.append((ns, None))
             wiersz += 1
-        tk.Label(siatka, text=p.get("etykieta", ""), font=M.czc(10), bg=bg, fg=K["tekst"], anchor="w", justify="left",
-                 wraplength=max(W - szer_pola - 20, 200)).grid(row=wiersz, column=0, sticky="w", pady=(3, 0))
+        opcje = [str(o) for o in (p.get("opcje") or [])]
+        dlugie = p.get("typ") == "wybor" and max((len(o) for o in opcje), default=0) > DLUGA_OPCJA     # nie zmieści się obok etykiety → własny wiersz
+        et = tk.Label(siatka, text=p.get("etykieta", ""), font=M.czc(10), bg=bg, fg=K["tekst"], anchor="w", justify="left",
+                      wraplength=max(W - 20, 220) if dlugie else max(W - szer_pola - 20, 200))
+        et.grid(row=wiersz, column=0, columnspan=2 if dlugie else 1, sticky="w", pady=(3, 0))
         var = tk.StringVar(value=str(wpisy0.get(p["id"], "")))
         if p.get("typ") == "wybor":
-            w = ttk.Combobox(siatka, textvariable=var, values=list(p.get("opcje") or []), width=max(12, min(30, max(len(str(o)) for o in p.get("opcje") or [""]))), state="readonly")
+            w = ttk.Combobox(siatka, textvariable=var, values=opcje, width=max(12, min(DLUGA_OPCJA, max((len(o) for o in opcje), default=12))), state="readonly")
         else:
             w = tk.Entry(siatka, textvariable=var, font=M.czc(10), width=18, relief="flat", bg=K["jasny"], fg=K["tekst"], insertbackground=K["tekst"])
             w.bind("<Return>", lambda e: sprawdz())
-        w.grid(row=wiersz, column=1, sticky="e", padx=(8, 0), pady=(3, 0), ipady=3)
+        if dlugie:
+            wiersz += 1
+            w.grid(row=wiersz, column=0, columnspan=2, sticky="we", padx=(14, 0), pady=(2, 0), ipady=3)
+        else:
+            w.grid(row=wiersz, column=1, sticky="e", padx=(8, 0), pady=(3, 0), ipady=3)
+        zawijane.append((et, None if dlugie else w))
         st = tk.Label(siatka, text="", font=M.czc(9), bg=bg, fg=K["szary"], anchor="w", justify="left", wraplength=max(W - 30, 220))
         st.grid(row=wiersz + 1, column=0, columnspan=2, sticky="w", padx=(14, 0))
         wiersz += 2
         st.grid_remove()                              # wiersz statusu pojawia się dopiero po sprawdzeniu
+        zawijane.append((st, None))
         zmienne[p["id"]], statusy[p["id"]] = var, st
+
+    def _dopasuj(_e=None):
+        """Etykiety zawijają się w faktycznej szerokości panelu (karta lekcji bywa węższa niż założone W) — nic nie chowa się pod polem wpisu."""
+        szer = siatka.winfo_width()
+        if szer <= 40:
+            return
+        for lab, obok in zawijane:
+            cel = max(szer - 30, 140) if obok is None else max(szer - obok.winfo_reqwidth() - 34, 140)
+            if int(lab.cget("wraplength")) != cel:
+                lab.configure(wraplength=cel)
+
+    siatka.bind("<Configure>", _dopasuj)
     r = tk.Frame(ramka, bg=bg)
     r.pack(fill="x", pady=(6, 0))
     podsum = tk.Label(ramka, text="", font=M.czc(10, "bold"), bg=bg, fg=K["szary"], anchor="w", justify="left", wraplength=max(W - 20, 220))

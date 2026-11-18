@@ -26,18 +26,18 @@ Termin, który wypada w sobotę lub dzień ustawowo wolny, przesuwa się na najb
 Projekt UDER105 (stan na 17.11.2026: po konsultacjach publicznych, nie trafił do Sejmu): PIT-11, PIT-8C i IFT-1R podatnik dostawałby tylko na wniosek, a dane widziałby w e-Urzędzie Skarbowym; wersja z 28.04.2026 miała obowiązywać od 1.01.2027 i objąć już dochody z 2026 r. Dopóki ustawa nie jest ogłoszona — przekazujesz PIT-11 wszystkim; status sprawdź na legislacja.gov.pl przed wysyłką.
 Płatnik nie rozlicza już podatnika (PIT-40 zniesiony). Podatnik korzysta z Twój e-PIT, zasilonego Twoimi PIT-11. Błąd w PIT-11 = błąd w zeznaniu pracownika.
 ### Treść PIT-11
-Sprawdź numer formularza na podatki.gov.pl — od 2024 obowiązuje wersja 29 lub nowsza.
+Aktualny wzór to PIT-11 w wersji 29 — PIT-11(29). Numery pozycji poniżej sprawdzono z urzędowym formularzem z podatki.gov.pl (18.11.2026); przed wysyłką upewnij się, że nie opublikowano nowszej wersji.
 | Sekcja | Co wpisujesz |
 |---|---|
 | dane | płatnik i podatnik: PESEL/NIP, adres (zagraniczny dla nierezydentów) |
-| przychody wg źródeł (część E) | wiersz 1 — stosunek pracy: poz. 29 przychód, 30 koszty, 31 dochód, 33 zaliczka (przychody z 50% KUP osobno: poz. 34–35); wiersz 2 — to samo dla podatnika do 26 lat, gdy przychód nie korzysta z ulgi (poz. 36–40); wiersz 6 — zlecenia, czyli działalność wykonywana osobiście (poz. 58–61); wiersz 15 — inne źródła, w tym zasiłki z ubezpieczenia społecznego wypłacone przez zakład pracy (poz. 90–94) |
+| przychody wg źródeł (część E) | wiersz 1 — stosunek pracy: poz. 29 przychód, 30 koszty, 31 dochód, 33 zaliczka (przychody z 50% KUP osobno: poz. 34–35); wiersz 2 — to samo dla podatnika do 26 lat, gdy przychód nie korzysta z ulgi (poz. 36–40); wiersz 5 — działalność wykonywana osobiście poza zleceniem, np. umowa o dzieło (poz. 54–57); wiersz 6 — umowy zlecenia (poz. 58–61; zleceniobiorca do 26 lat z przychodem bez ulgi — wiersz 7); wiersz 12 — zasiłki macierzyńskie (poz. 81–83); wiersz 15 — inne źródła, w tym pozostałe zasiłki z ubezpieczenia społecznego wypłacone przez płatnika (poz. 90–94) |
 | czego tu nie ma | należności z art. 30 ust. 1 pkt 5a (ryczałt) — w PIT-8AR |
 | KUP | faktycznie zastosowane: 250/300, 20%, 50%; rodzaj kosztów pracowniczych zaznaczasz w części D (poz. 28) |
 | dochód i zaliczki | zaliczki pobrane; gdy pracownik dostał i pensję, i zasiłek, łączną zaliczkę wykazujesz w wierszu 1 (poz. 33) — w wierszu 15 tylko wtedy, gdy pobrano ją wyłącznie od zasiłków |
-| składki społeczne | poz. 95 — podlegające odliczeniu; składki od przychodów zwolnionych — osobno |
+| składki społeczne | poz. 95 — podlegające odliczeniu (od przychodów z wierszy 1, 5, 6…); poz. 96 — od opodatkowanych przychodów osób do 26 lat i osób po osiągnięciu wieku emerytalnego (wiersze 2, 3, 7, 8, 11); poz. 97 — od przychodów ZWOLNIONYCH (ulga dla młodych, na powrót, 4+, dla seniorów): tych składek podatnik nie odlicza |
 | składka zdrowotna | część G, poz. 122 — wykazujesz kwotę pobraną przez płatnika; od 2022 r. nie odlicza się jej od podatku, ale jest potrzebna m.in. do dodatkowego zwrotu ulgi na dzieci |
-| przychody ZWOLNIONE (część G) | ulga dla młodych: poz. 109 razem, w tym 110 stosunek pracy, 111 zlecenia, 113 zasiłek macierzyński; ulga na powrót, 4+, dla seniorów: poz. 114–117 i kwadraty 118–120 — zaznaczasz, które zwolnienie stosowałeś |
-| numeracja | pozycje podane dla PIT-11 w wersji 29 (obowiązującej dla wypłat od 2022 r.) — przed wysyłką sprawdź numer wersji na podatki.gov.pl |
+| przychody ZWOLNIONE (część G) | ulga dla młodych: poz. 109 razem, w tym 110 stosunek pracy, 111 zlecenia, 112 praktyki absolwenckie i staże uczniowskie, 113 zasiłek macierzyński; ulga na powrót, 4+, dla seniorów: poz. 114–117 i kwadraty 118–120 — zaznaczasz, które zwolnienie stosowałeś |
+| numeracja | pozycje według urzędowego wzoru PIT-11(29) z podatki.gov.pl — przed wysyłką sprawdź, czy nie opublikowano nowszej wersji |
 | zwolnienia przedmiotowe (ZFŚS do 1 000 zł, posiłki) | nie wykazujesz |
 | wpłaty pracodawcy na PPK | w przychodzie ze stosunku pracy |
 Zgodność: suma zaliczek z PIT-11 = PIT-4R = wpłaty na mikrorachunek. Suma przychodów = kartoteka płacowa.

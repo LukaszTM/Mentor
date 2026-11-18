@@ -2,10 +2,10 @@
 Tydzień 10 · lekcja `zus_rozliczenia` · plik: `cwiczenia/tydzien_10/zus_rozliczenia_1.md`
 
 ## Zadanie
-Zbuduj komplet za 12/2026 (wypłata listopadowa 10.12) dla 8 osób z zadania tygodnia jak w demonstracji: lista płac → RCA; przerwy: Zieliński (331 + 313 jak wyżej), Sobczak opieka 312 16–20.11 kwota 598,30, Nowak urlop bezpłatny 111 2–3.12 (przerwa grudniowa), Michalska — poza kompletem. Policz ręcznie sumę do zapłaty i porównaj z DRA w symulatorze. Plik: cwiczenia/tydzien_10/zus_rozliczenia_1.md. Czas: 25 minut.
+Zbuduj komplet za 12/2026 (wypłata listopadowa 10.12) dla całej firmy z FIRMA.md (12 osób) jak w demonstracji: ustal, kto ma RCA i z jakim kodem (w symulatorze z listy płac 8 pracowników powstanie 8 RCA — raporty zleceniobiorców dopisz w notatce); przerwy: Zieliński (331 + 313 jak wyżej), Sobczak opieka 312 16–20.11 kwota 598,30, Nowak urlop bezpłatny 111 2–3.12 (przerwa grudniowa), Michalska — poza kompletem. Policz ręcznie sumę do zapłaty i porównaj z DRA w symulatorze. Plik: cwiczenia/tydzien_10/zus_rozliczenia_1.md. Czas: 25 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-RCA: 8 wierszy (Dąbrowski-student i Michalska-dzieło poza); RSA: 331 (kwota informacyjnie, nie odliczana), 313 800,76, 312 598,30, 111 2–3.12 (bez kwoty); DRA: do zapłaty = suma składek społecznych (prac. + pracod.) + zdrowotnych + FP + FGŚP − (800,76 + 598,30); identyfikator 01 12 2026; termin 15.01.2027.
+RCA: 10 raportów — 8 pracowników (01 10) oraz zleceniobiorcy Pawlak i Król (04 11); Dąbrowski-student i Michalska-dzieło poza; RSA: 331 (kwota informacyjnie, nie odliczana), 313 800,76, 312 598,30, 111 2–3.12 (bez kwoty); DRA: do zapłaty = suma składek społecznych (prac. + pracod.) + zdrowotnych + FP + FGŚP − (800,76 + 598,30); identyfikator 01 12 2026; termin 15.01.2027.
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).

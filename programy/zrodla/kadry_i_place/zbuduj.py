@@ -369,7 +369,7 @@ def zbuduj():
                 "i podstawą prawną przy każdej liczbie; każda zaktualizowana lekcja ma listę sprawdzonych źródeł (Dz.U., ELI, EUR-Lex, TSUE, MOP, EU-OSHA, ACAS, CIPD) z datą dostępu. "
                 "Dwie lekcje przenoszą do polskich realiów materiały zagraniczne: koordynację ZUS i delegowanie w UE oraz procedury HR z ACAS/CIPD. Uczysz się z asystentem AI (Claude Code, API albo tryb offline): kazusy rozwiązujesz sam, asystent pyta i wskazuje przepisy.",
         "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude; pełny audyt merytoryczny ze źródłami: 18.11.2026)",
-        "wersja": "3.0",
+        "wersja": "3.1",
         "jezyk": "pl",
         "katalog_projektu": "kadry-praktyka",
         "stanowisko": "Specjalista ds. kadr i płac",

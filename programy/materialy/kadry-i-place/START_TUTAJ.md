@@ -1,6 +1,6 @@
 # START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2026)
 
-**Wersja kursu:** 3.0 · stan prawny: 18 listopada 2026 · format `mentor-program/1`
+**Wersja kursu:** 3.1 · stan prawny: 18 listopada 2026 · format `mentor-program/1`
 **Poziom:** od podstaw do poziomu samodzielnego specjalisty — bez wymaganej wcześniej znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych.
 **Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 136 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
 **System:** Windows 10/11 (Mentor.exe); działa też z Pythonem 3.10+ na innych systemach.

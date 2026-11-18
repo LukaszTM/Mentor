@@ -132,6 +132,19 @@ def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasil
     }
 
 
+def skladki_do_pit11(wiersze):
+    """Składki społeczne pracownika z wierszy kartoteki płacowej w podziale potrzebnym w PIT-11: (od przychodów opodatkowanych, od przychodów zwolnionych).
+    Składek od przychodu zwolnionego (ulga dla młodych) podatnik nie odlicza — w PIT-11(29) mają osobną pozycję 97. Miesiąc z częściowym zwolnieniem
+    dzielisz proporcjonalnie do przychodu — tak samo jak lista_plac()."""
+    odliczane = razem = 0.0
+    for x in wiersze:
+        spol = zl((x.get("emer") or 0) + (x.get("rent") or 0) + (x.get("chor") or 0))
+        razem += spol
+        zwol, przych = x.get("zwolnione") or 0, x.get("przychod_pracy") or 0
+        odliczane += spol if not zwol else (zl(spol * ((przych - zwol) / przych)) if przych else 0.0)
+    return zl(odliczane), zl(razem - odliczane)
+
+
 def minimalne_netto(kup=250.0, pit2=300.0, ppk_prac=0.0, etat=1.0, par=None):
     """Kwota wolna od potrąceń = minimalne wynagrodzenie netto przy parametrach tego pracownika (KUP, PIT-2, PPK).
     Niepełny etat: kwotę wyliczoną dla pełnego etatu zmniejsza się proporcjonalnie do wymiaru czasu pracy (art. 87¹ §2 KP)."""

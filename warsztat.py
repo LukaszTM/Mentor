@@ -336,7 +336,7 @@ def BUDUJ_formularze(app, parent):
 
     M.przycisk(r2, "Zapisz wypełniony formularz do projektu", zapisz, "drugi").pack(side="left")
     if f.get("lekcja") and P.lekcja(f["lekcja"]):
-        M.przycisk(r2, "Lekcja: " + P.lekcja(f["lekcja"])["nazwa"][:44], lambda: app.pokaz_lekcje(f["lekcja"]), "drugi").pack(side="left", padx=8)
+        M.przycisk(r2, "Otwórz lekcję do tego formularza", lambda: app.pokaz_lekcje(f["lekcja"]), "drugi").pack(side="left", padx=8)
     parent.formularz_panel = panel                     # uchwyt dla testów GUI
 
 
@@ -381,7 +381,9 @@ def BUDUJ_place(app, parent):
     w = stan(app)
     par = P.parametry or {}
     k = _karta(parent, "Lista płac: brutto → netto → koszt pracodawcy")
-    M.etykieta(k, "Wybierz osobę z firmy (pola wypełnią się same) albo wpisz własne dane. „Tryb ćwiczenia”: najpierw wpisz swoje netto, potem sprawdź.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(0, 6))
+    INFO_PLACE = "Wybierz osobę z firmy (pola wypełnią się same) albo wpisz własne dane. „Tryb ćwiczenia”: najpierw wpisz swoje netto, potem sprawdź."
+    info = M.etykieta(k, INFO_PLACE, 9, kolor=M.K["szary"], wrap=820)      # przy umowie cywilnoprawnej zamienia się w ostrzeżenie (widoczne nad formularzem)
+    info.pack(fill="x", pady=(0, 6))
     f = Formularz(k, 2)
     osoby = ["— własne dane —"] + [_osoba_etykieta(o) for o in w["osoby"]]
     f.pole("osoba", "Osoba", osoby[0], 30, opcje=osoby, podpowiedz="readonly")
@@ -427,6 +429,12 @@ def BUDUJ_place(app, parent):
         # składniki zmienne poprzedniej osoby nie mogą „przejść” na następną
         for kk in ("zmienne", "natura", "wyn_chorobowe", "zasilek", "bez_zus", "potracenia", "dochod", "er_narast"):
             f.pola[kk].set("0")
+        if o.get("rodzaj", "pracownik") != "pracownik":      # narzędzie liczy listę płac z umowy o pracę
+            info.configure(text=f"⚠ {o['imie']} {o['nazwisko']} — umowa cywilnoprawna ({o.get('rodzaj')}). To narzędzie liczy listę płac z umowy o PRACĘ (KUP 250/300, pełne składki, FP): "
+                                "zlecenie i dzieło policz ręcznie jak w lekcji o umowach zlecenia i o dzieło (KUP 20% lub 50%, zbiegi tytułów, student).", fg=M.K["pomar"])
+        else:
+            info.configure(text=INFO_PLACE, fg=M.K["szary"])
+        st.configure(text="")
 
     f.pola["osoba"].trace_add("write", wypelnij)
     r = tk.Frame(k, bg=M.K["karta"])
@@ -461,9 +469,15 @@ def BUDUJ_place(app, parent):
             _ustaw(txt, f"✘ Twoje netto {kadry.fmt(moje)} ≠ {kadry.fmt(wyn['netto'])} (różnica {kadry.fmt(moje - wyn['netto'])}).\n{pod}\n\nNie pokazuję kroków — popraw i sprawdź ponownie (albo kliknij „Policz”).")
 
     def dodaj():
-        wyn = policz(False)
         i = osoby.index(f.get("osoba")) - 1
         o = w["osoby"][i] if i >= 0 else None
+        if o and o.get("rodzaj", "pracownik") != "pracownik":
+            kom = (f"✘ Nie dodano: {o['imie']} {o['nazwisko']} ma umowę cywilnoprawną ({o.get('rodzaj')}), a z listy miesiąca powstają RCA i PIT-11 dla umów o pracę. "
+                   "Zleceniobiorców i wykonawców dzieł rozliczasz ręcznie — lekcja o umowach zlecenia i o dzieło.")
+            st.configure(text=kom, fg=M.K["czerw"])
+            info.configure(text=kom, fg=M.K["czerw"])
+            return
+        wyn = policz(False)
         wiersz = {"miesiac": f.get("miesiac").strip(), "wyplata": f.get("wyplata").strip() or f.get("miesiac").strip(),
                   "pesel": o["pesel"] if o else "", "osoba": f"{o['imie']} {o['nazwisko']}" if o else "własne dane",
                   "kod": o.get("kod", "0110") if o else "0110",
@@ -1124,6 +1138,8 @@ def BUDUJ_zus(app, parent):
             linie.append(f"{x['osoba'][:21]:<22}{x['kod']:<7}{kadry.fmt(x['podstawa_er']):>10}{kadry.fmt(x['podstawa_ch']):>10}{kadry.fmt(x['emer'] + x['emer_p']):>9}{kadry.fmt(x['rent'] + x['rent_p']):>8}{kadry.fmt(x['chor']):>8}{kadry.fmt(x['wyp']):>8}{kadry.fmt(x['zdr']):>9}")
         if not rca:
             linie.append(f"  (brak — w „Lista płac” nie ma wierszy z polem „Wypłata w miesiącu” = {m}; lista za {m} wypłacana 10. następnego miesiąca trafia do kolejnego kompletu)")
+        else:
+            linie.append("  (symulator tworzy RCA z listy płac pracowników; w firmie doszłyby RCA zleceniobiorców z kodem 04 11 — także tych z samą składką zdrowotną)")
         linie += ["", "ZUS RSA (przerwy i świadczenia):"]
         for x in rsa:
             linie.append(f"  {x['osoba']:<22}{x['kod_przerwy']} {kadry.KODY_PRZERW.get(x['kod_przerwy'], '?')[:40]:<42}{x['od']} – {x['do']}  {kadry.fmt(x.get('kwota', 0))}")
@@ -1264,20 +1280,27 @@ def BUDUJ_pit(app, parent):
         s = lambda kk: kadry.zl(sum(x.get(kk, 0) for x in ww))
         przych = s("przychod_pracy")
         zwol = s("zwolnione")
-        skl = s("emer") + s("rent") + s("chor")
+        skl_op, skl_zw = kadry.skladki_do_pit11(ww)         # (od przychodów opodatkowanych, od zwolnionych — tych podatnik nie odlicza)
         mlody = bool(zwol) or bool(o.get("mlody"))
+        kwadrat = ("kwadrat 3 — z jednego stosunku pracy, podwyższone (300 zł miesięcznie)" if any(x.get("kup") == 300 for x in ww)
+                   else "kwadrat 1 — z jednego stosunku pracy (250 zł miesięcznie)")
         w1, p_prz, p_kup, p_doch, p_zal = ("wiersz 2 (podatnik do 26 lat — przychody nieobjęte ulgą)", 36, 37, 38, 40) if mlody else ("wiersz 1", 29, 30, 31, 33)
         rok_n = int(f.get("rok") or 0) + 1
         linie = [f"PIT-11 za {f.get('rok')} — INFORMACJA O PRZYCHODACH Z INNYCH ŹRÓDEŁ ORAZ O DOCHODACH I POBRANYCH ZALICZKACH (wersja ćwiczeniowa; pozycje wg PIT-11 w wersji 29)",
                  f"Płatnik: AGRO-MLEKO sp. z o.o.      Podatnik: {os_}   PESEL {o.get('pesel', '')}", f"Wypłat w roku: {len(ww)}  (miesiące wypłat: {', '.join(sorted(_wyplata(x) for x in ww))})", "",
-                 "D. KOSZTY UZYSKANIA PRZYCHODÓW — poz. 28: z jednego stosunku pracy " + ("podwyższone (300 zł)" if any(x.get("kup") == 300 for x in ww) else "podstawowe (250 zł)"), "",
+                 "D. KOSZTY UZYSKANIA PRZYCHODÓW — poz. 28: " + kwadrat, "",
                  "E. DOCHODY PODATNIKA, POBRANE ZALICZKI ORAZ SKŁADKI",
                  f"  {w1}. Należności ze stosunku pracy",
                  f"     poz. {p_prz} przychód: {kadry.fmt(kadry.zl(przych - zwol)):>12}   poz. {p_kup} koszty: {kadry.fmt(s('kup')):>10}   poz. {p_doch} dochód: {kadry.fmt(kadry.zl(przych - zwol - s('kup'))):>12}",
                  f"     poz. {p_zal} zaliczka pobrana przez płatnika (łącznie z zaliczką od zasiłków): {kadry.fmt(s('zaliczka')):>12}",
                  f"  wiersz 15. Inne źródła — zasiłki z ubezpieczenia społecznego wypłacone przez płatnika: poz. 90 przychód: {kadry.fmt(s('zasilek')):>12}",
-                 f"  poz. 95 składki na ubezpieczenia społeczne podlegające odliczeniu: {kadry.fmt(kadry.zl(skl)):>12}", "",
-                 "G. PRZYCHODY ZWOLNIONE I INFORMACJE DODATKOWE"]
+                 "     (zasiłek macierzyński ma osobny wiersz 12, poz. 81–83 — tu go nie wpisujesz)"]
+        if mlody:           # podatnik do 26 lat: składki od przychodów z wiersza 2 → poz. 96, od przychodów zwolnionych → poz. 97 (urzędowy wzór PIT-11(29))
+            linie.append(f"  poz. 96 składki społeczne od przychodów z wiersza 2 (podlegające odliczeniu): {kadry.fmt(skl_op):>12}")
+            linie.append(f"  poz. 97 składki społeczne od przychodów zwolnionych (ulga dla młodych) — podatnik ich NIE odlicza: {kadry.fmt(skl_zw):>12}")
+        else:
+            linie.append(f"  poz. 95 składki na ubezpieczenia społeczne podlegające odliczeniu: {kadry.fmt(skl_op):>12}")
+        linie += ["", "G. PRZYCHODY ZWOLNIONE I INFORMACJE DODATKOWE"]
         if zwol:
             linie.append(f"  poz. 109 / 110 ulga dla młodych — przychody ze stosunku pracy: {kadry.fmt(zwol)}")
         linie += [f"  poz. 122 składka na ubezpieczenie zdrowotne pobrana przez płatnika: {kadry.fmt(s('zdrowotna'))} (informacyjnie — od 2022 r. bez odliczenia od podatku)", "",

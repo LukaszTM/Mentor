@@ -56,7 +56,7 @@ Zamknij luty 2027 jak w demonstracji: wypłata za styczeń 10.02 (środa), Kowal
 Audyt roczny wykazał: (1) Joanna Michalska miała 3 „dzieła” → ZUS uznał za zlecenia (decyzja prawomocna 10.01.2027); (2) w 2026 r. płacono SOD na osobę, która od września pracowała na 1/2 etatu (dofinansowanie proporcjonalne!); (3) odpis ZFŚS przelano na 60 etatów, a faktyczna średnia to 57,2. Zdecyduj dla każdego: jakie dokumenty i korekty, w jakich terminach, jakie kwoty (SOD umiarkowany 1 550; odpis 2 943,23) i gdzie w PIT. Plik: cwiczenia/tydzien_12/powtorka_etap_3_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_12/powtorka_etap_3_2.md` · rozwiązanie: `rozwiazania/tydzien_12/powtorka_etap_3_2.md`
-✔ Poprawny wynik wygląda tak: (1) ZUA 04 11 od dat umów, ZWUA po; komplety 02 za miesiące wypłat; składki 2 760,50 + odsetki; korekta PIT-11 2025/2026 (KUP 20%); termin korekt 7 dni od prawomocności (17.01); (2) SOD za IX–XII: 1 550 × 1/2 = 775/mies. → nadpłata 4 × 775 = 3 100 do zwrotu do PFRON z odsetkami (korekta Wn-D/INF-D-P); (3) korekta odpisu do 31.12: (60 − 57,2) × 2 943,23 = 8 241,04 — nadwyżkę ponad należny odpis wycofujesz albo zaliczasz na odpis 2027; bez PIT.
+✔ Poprawny wynik wygląda tak: (1) ZUA 04 11 od dat umów, ZWUA po; komplety 02 za miesiące wypłat; składki 2 760,50 + odsetki; korekta PIT-11 2025/2026 (KUP 20%); termin korekt 7 dni od prawomocności (17.01 to niedziela → 18.01); (2) SOD za IX–XII: 1 550 × 1/2 = 775/mies. → nadpłata 4 × 775 = 3 100 do zwrotu do PFRON z odsetkami (korekta Wn-D/INF-D-P); (3) korekta odpisu do 31.12: (60 − 57,2) × 2 943,23 = 8 241,04 — nadwyżkę ponad należny odpis wycofujesz albo zaliczasz na odpis 2027; bez PIT.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Komplet „za grudzień” wysłany z wypłatą styczniową.**

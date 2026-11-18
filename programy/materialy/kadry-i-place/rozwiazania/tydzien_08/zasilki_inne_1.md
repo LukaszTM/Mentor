@@ -17,7 +17,7 @@ Szkic: 4 487,08 / 30 = 149,57; × 0,8 = 119,66; × 5 = 598,30; 5 200/30 × 5 = 8
 Z-15A (ZUS): dane ubezpieczonej (Sobczak), dane dziecka (PESEL/data urodzenia — 6 lat), okres opieki 16–20.11.2026, oświadczenie: brak innego członka rodziny mogącego zapewnić opiekę (mąż pracuje w tym okresie), oświadczenie o dniach opieki wykorzystanych w 2026 r. przez wnioskodawczynię (0) i drugiego rodzica (20), numer e-ZLA.
 Zasiłek opiekuńczy: podstawa 4 487,08 → 149,57/dzień → 80% = 119,66 → 5 dni × 119,66 = 598,30 zł (od 1. dnia, nie zużywa puli 33).
 Pensja listopad: 5 200 − 5 200/30 × 5 = 4 333,33 → składki ZUS i PPK od 4 333,33 (+ zmienne).
-RSA 11/2026: kod 312, 16.11–20.11.2026, 5 dni, 598,30; DRA: zasiłek do odliczenia.
+RSA w komplecie 12/2026 (zasiłek wypłacony 10.12 — liczy się miesiąc wypłaty): kod 312, okres 16.11–20.11.2026, 5 dni, 598,30; DRA 12/2026: zasiłek do odliczenia.
 PIT od zasiłku: 598 × 12% = 71,76 → 72 (bez KUP; kwota zmniejszająca już użyta przy pensji).
 Limit rodziny (art. 33 ust. 1 pkt 1 i ust. 2): 60 dni łącznie dla obojga na dzieci do 14 lat → 60 − 20 − 5 = 35 dni do końca 2026.
 ```

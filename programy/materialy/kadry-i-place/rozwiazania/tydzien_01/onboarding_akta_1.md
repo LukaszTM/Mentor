@@ -25,7 +25,7 @@ Pierwsze wiersze: „do 29.09 | skierowanie na badania | A | art. 229 §4”; �
 | do 8.10 | ZUA kod 01 10 00, data 1.10 (symulator: UPP) | — (kopia B) | art. 36 ust. 4 ustawy systemowej |
 | do 8.10 | informacja o warunkach zatrudnienia | B | art. 29 §3 |
 | do 10.01.2027 | umowa o prowadzenie PPK (po 90 dniach — 30.12) | B | art. 16 ustawy o PPK |
-| wg orzeczenia | badania okresowe | B | art. 229 §2 |
+| wg orzeczenia | badania okresowe — skierowanie i orzeczenie | B | art. 229 §2; okresowe i kontrolne z czasu zatrudnienia → część B, wstępne → A |
 Archiwum: 10 lat od końca roku kalendarzowego, w którym ustanie stosunek pracy (art. 94 pkt 9b).
 ```
 

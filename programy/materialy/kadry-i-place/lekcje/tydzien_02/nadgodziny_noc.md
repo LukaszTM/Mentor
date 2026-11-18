@@ -1,5 +1,5 @@
 # Nadgodziny, dyżur, praca w nocy — rozliczenie
-Tydzień 2 · lekcja 10 z 46 · ≈ 55 min
+Tydzień 2 · lekcja 10 z 48 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** rozliczasz nadgodziny dobowe i średniotygodniowe (50/100%, czas wolny 1:1 / 1:1,5), dodatek nocny i dyżur.
 

@@ -1,5 +1,5 @@
 # Umowa o pracę: rodzaje, limity 33/3, treść art. 29
-Tydzień 1 · lekcja 7 z 46 · ≈ 50 min
+Tydzień 1 · lekcja 7 z 48 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** dobierasz rodzaj umowy, pilnujesz limitów 33/3 i okresu próbnego oraz sporządzasz umowę z wszystkimi elementami art. 29.
 

@@ -1,5 +1,5 @@
 # Korekty ZUS: po błędzie, po 30-krotności, po kontroli; nadpłaty i zwroty
-Tydzień 10 · lekcja 34 z 46 · ≈ 70 min
+Tydzień 10 · lekcja 35 z 48 · ≈ 70 min
 
 **Po tej lekcji potrafisz:** robisz korekty ZUS (identyfikator 02+, 30-krotność, student, zbieg) z rozliczeniem nadpłat/niedopłat i skutkami w PIT.
 
@@ -123,6 +123,11 @@ ZUS po kontroli (grudzień 2026) uznał, że umowa o dzieło Joanny Michalskiej 
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Przeprowadzić korektę ZUS (zgłoszenia + komplet 02 z DRA), rozliczyć nadpłatę/niedopłatę w części pracownika i pracodawcy z odsetkami, i ująć skutki w PIT.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Obwieszczenie MF o stawce odsetek za zwłokę od zaległości podatkowych — 10,50% od 5.03.2026 (M.P. 2026 poz. 269) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/MP/2026/269/ogl>
+- NBP — podstawowe stopy procentowe (referencyjna 3,75%, lombardowa 4,25%) (dostęp 18.11.2026) — <https://nbp.pl/polityka-pieniezna/decyzje-rpp/podstawowe-stopy-procentowe-nbp/>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Które składki naliczasz nadal po przekroczeniu 30-krotności?

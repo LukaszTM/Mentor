@@ -1,5 +1,5 @@
 # ZFŚS i PFRON: odpisy, terminy, regulamin, DEK/Wn-D, uprawnienia niepełnosprawnych
-Tydzień 12 · lekcja 36 z 46 · ≈ 60 min
+Tydzień 12 · lekcja 38 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** liczysz odpis ZFŚS i terminy, prowadzisz fundusz z kryterium socjalnym oraz rozliczasz PFRON (wpłaty DEK, dofinansowanie Wn-D, uprawnienia niepełnosprawnych).
 
@@ -149,6 +149,10 @@ Komisja socjalna zaplanowała: (1) dofinansowanie wczasów 1 500 zł „dla każ
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Policzyć odpis ZFŚS (etaty, zwiększenia, 75%/reszta, korekta), wpłatę PFRON i SOD oraz ocenić, które wydatki z funduszu są działalnością socjalną z kryterium.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- GUS — komunikaty i obwieszczenia (przeciętne wynagrodzenie do ZFŚS 7 848,60 zł, obwieszczenie z 19.02.2026) (dostęp 18.11.2026) — <https://stat.gov.pl/sygnalne/komunikaty-i-obwieszczenia/>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Odpis podstawowy na ZFŚS na jednego pracownika w 2026 r.:

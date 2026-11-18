@@ -86,6 +86,14 @@ def _md_lekcja(l, poz, n):
         o.append("")
     if l.get("podsumowanie"):
         o += ["## Co potrafię teraz zrobić bez patrzenia na przykład?", l["podsumowanie"], ""]
+    if l.get("zrodla"):
+        o += ["## Źródła — sprawdzone materiały (data dostępu w nawiasie)",
+              "Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu)."]
+        for zr in l["zrodla"]:
+            tytul, url = (zr[0], zr[1]) if len(zr) >= 2 else (zr[0], "")
+            dostep = f" ({zr[2]})" if len(zr) >= 3 and zr[2] else ""
+            o.append(f"- {tytul}{dostep}" + (f" — <{url}>" if url else ""))
+        o.append("")
     if l.get("test"):
         o += ["## Test (w Mentorze: Lekcje → Sprawdź się)"]
         for q in l["test"]:
@@ -160,6 +168,9 @@ Pierwsze działające ćwiczenie masz w ciągu 30 minut: Warsztat → Lista pła
 ## Jak wygląda każda lekcja (zawsze ta sama kolejność)
 cel → po co mi to → czego potrzebujesz → **1** wyjaśnienie od podstaw → **2** demonstracja omówiona krok po kroku → **3** jak to uruchomić → **4** ćwiczenie prowadzone → **5** ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → **6** typowe błędy i naprawa → sprawdzenie (pytania + „co potrafię bez przykładu”) → test (2/3 zalicza).
 Każde ćwiczenie ma plik startowy w `cwiczenia/tydzien_NN/` i rozwiązanie w `rozwiazania/tydzien_NN/` — te same treści są w Mentorze (Lekcje), więc możesz pracować w aplikacji albo na plikach.
+
+## Źródła i stan prawny
+Treść zaktualizowano w audycie z 18.11.2026 na podstawie sprawdzonych materiałów polskich (Dziennik Ustaw, ELI, ISAP, ZUS, MRPiPS, PIP, GUS, NBP) i zagranicznych w tłumaczeniu (EUR-Lex, TSUE, MOP/NORMLEX, EU-OSHA, ACAS, CIPD). Zaktualizowane lekcje mają na końcu sekcję **Źródła** z adresem i datą dostępu; pełna lista jest w `ZRODLA.md` i w Mentorze (Ściąga → Źródła programu). Przed zastosowaniem liczby w pracy otwórz źródło — przepisy zmieniają się częściej niż ten plik.
 
 ## Gdzie co jest w paczce
 - `kurs_mentor.json` — plik kursu (kopia `programy/kadry-i-place.json`); `manifest.json` — lista plików z sumami kontrolnymi.
@@ -552,6 +563,15 @@ def zbuduj_materialy():
     start = START_TUTAJ.format(wersja=d["wersja"], stan_prawny=d["stan_prawny"], poziom=d["poziom"], system=d["system"],
                                wymagania="; ".join(d["wymagania_wstepne"]), umiejetnosci="\n".join(f"- {u}" for u in d["umiejetnosci_koncowe"]))
     _w("START_TUTAJ.md", start)
+    zr = ["# Źródła kursu — sprawdzone materiały (audyt 18.11.2026)", "", f"Stan prawny: {d['stan_prawny']}. Każda pozycja: tytuł, adres, data dostępu. Materiały zagraniczne przetłumaczono i zestawiono z polskimi przepisami w lekcjach.", ""]
+    for z in d.get("zrodla_kursu", []):
+        zr.append(f"- {z[0]} ({z[2]}) — <{z[1]}>" if len(z) > 2 else f"- {z[0]} — <{z[1]}>")
+    zr += ["", "## Źródła wg lekcji", ""]
+    for l in lekcje:
+        if l.get("zrodla"):
+            zr.append(f"### {l['nazwa']} (tydzień {l['tydzien']})")
+            zr += [f"- {z[0]} — <{z[1]}>" for z in l["zrodla"]] + [""]
+    _w("ZRODLA.md", "\n".join(zr))
     shutil.copy(ZRODLO, CEL / "kurs_mentor.json")
     shutil.copy(TU / "RAPORT_CHECKLISTA.md", CEL / "RAPORT_CHECKLISTA.md")
     # manifest z sumami kontrolnymi (bez samego manifestu)
@@ -562,7 +582,7 @@ def zbuduj_materialy():
     manifest = {"kurs": d["id"], "nazwa": d["nazwa"], "wersja": d["wersja"], "format": d["format"], "stan_prawny": d["stan_prawny"],
                 "mentor_min": "2.5.0", "liczby": {"tygodnie": len(d["tygodnie"]), "lekcje": n, "zadania": sum(len(w["zadania"]) for w in d["tygodnie"]),
                                                   "cwiczenia": licz["cwiczenia"], "quizy": sum(len(v) for v in d["quizy"].values()), "diagnoza": len(d["diagnoza"])},
-                "struktura": ["START_TUTAJ.md", "SPRAWDZ_SRODOWISKO.bat", "INSTALACJA.bat", "URUCHOM_KURS.bat", "kurs_mentor.json", "manifest.json", "instalatory/", "lekcje/", "przyklady/", "cwiczenia/", "rozwiazania/", "projekty/", "testy/", "pomoc/"],
+                "struktura": ["START_TUTAJ.md", "ZRODLA.md", "SPRAWDZ_SRODOWISKO.bat", "INSTALACJA.bat", "URUCHOM_KURS.bat", "kurs_mentor.json", "manifest.json", "instalatory/", "lekcje/", "przyklady/", "cwiczenia/", "rozwiazania/", "projekty/", "testy/", "pomoc/"],
                 "licencja": "materiały kursu — do użytku z Mentorem; dane fikcyjne; brak plików firm trzecich, kluczy i danych prywatnych",
                 "pliki": pliki}
     _w("manifest.json", json.dumps(manifest, ensure_ascii=False, indent=1))

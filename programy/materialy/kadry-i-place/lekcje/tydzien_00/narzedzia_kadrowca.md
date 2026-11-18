@@ -1,5 +1,5 @@
 # Narzędzia: eZUS/PUE, Płatnik, e-Urząd Skarbowy, program kadrowy
-Tydzień 0 · lekcja 3 z 46 · ≈ 50 min
+Tydzień 0 · lekcja 3 z 48 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** wiesz, do czego służą eZUS, Płatnik, e-Urząd Skarbowy i program kadrowy, kto podpisuje PEL/UPL-1 i jak wygląda miesięczny obieg dokumentów.
 

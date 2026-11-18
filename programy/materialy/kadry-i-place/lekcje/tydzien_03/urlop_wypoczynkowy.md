@@ -1,5 +1,5 @@
 # Urlop wypoczynkowy w praktyce: wymiar, proporcja, na żądanie, zaległy
-Tydzień 3 · lekcja 12 z 46 · ≈ 55 min
+Tydzień 3 · lekcja 13 z 48 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** liczysz wymiar urlopu (20/26, proporcja, pierwsza praca, niepełny etat) i udzielasz go zgodnie z zasadami (plan, 14 dni, na żądanie, zaległy).
 
@@ -130,6 +130,12 @@ Halina Mazur (główna księgowa, od 2009) ma na 1.01.2026: 26 dni za 2026 + 9 d
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Policzyć wymiar urlopu dla etatu, proporcji, pierwszej pracy i kolejnego pracodawcy, pilnować 4 dni na żądanie i terminu 30 września dla zaległego oraz wiedzieć, kiedy przedawnia się roszczenie.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- TSUE, wyrok C-684/16 Max-Planck z 6.11.2018 — przepadek urlopu (dostęp 18.11.2026) — <https://curia.europa.eu/juris/liste.jsf?num=C-684/16>
+- Dyrektywa 2003/88/WE o czasie pracy (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/dir/2003/88/oj/pol>
+- Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Pracownik ze stażem 9 lat i 10 miesięcy nabywa 26 dni:

@@ -1,5 +1,5 @@
 # Lista płac krok po kroku: od brutto do netto
-Tydzień 5 · lekcja 17 z 46 · ≈ 65 min
+Tydzień 5 · lekcja 18 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** liczysz listę płac od brutto do netto w poprawnej kolejności i z poprawnymi zaokrągleniami oraz umiesz ją skontrolować.
 

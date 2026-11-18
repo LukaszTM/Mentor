@@ -1,5 +1,5 @@
 # Ewidencja czasu pracy i nieobecności
-Tydzień 3 · lekcja 11 z 46 · ≈ 60 min
+Tydzień 3 · lekcja 12 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** prowadzisz ewidencję zgodną z §6 (godziny od–do, nadgodziny, nocne, nieobecności) i wiesz, co grozi za jej brak.
 
@@ -127,6 +127,12 @@ Pracownik biura twierdzi po roku, że „codziennie zostawał do 17:30”, a fir
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Wypełnić kartę ewidencji zgodną z §6 (od–do, nocne, nadgodziny z poleceniem, kody), zbilansować ją z wymiarem i wiedzieć, co firma traci bez rzetelnej ewidencji.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- TSUE, wyrok C-55/18 CCOO z 14.05.2019 — obowiązek rejestrowania czasu pracy (dostęp 18.11.2026) — <https://curia.europa.eu/juris/liste.jsf?num=C-55/18>
+- Dyrektywa 2003/88/WE o czasie pracy (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/dir/2003/88/oj/pol>
+- Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Które dane są obowiązkowe w ewidencji od 2019 r.?

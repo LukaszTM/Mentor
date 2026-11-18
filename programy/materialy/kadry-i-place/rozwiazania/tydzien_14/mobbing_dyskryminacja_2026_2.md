@@ -4,18 +4,18 @@ Plik startowy: `cwiczenia/tydzien_14/mobbing_dyskryminacja_2026_2.md`
 Zasada: najpierw własna próba. Podpowiedzi odkrywaj po kolei — rozwiązanie dopiero na końcu.
 
 ## Podpowiedź 1 — pytanie naprowadzające
-Co pracodawca musi udowodnić, żeby uwolnić się od odpowiedzialności za mobbing ze strony kierownika? (Że rzeczywiście przeciwdziałał — procedura, szkolenia, reakcja.)
+Dlaczego procedura się opłaca, choć ustawa nie zwalnia pracodawcy z odpowiedzialności? (Szybka reakcja przerywa uporczywość, dokumentacja jest dowodem i podstawą regresu, brak regulaminu z art. 94³ᵃ to naruszenie.)
 
 ## Podpowiedź 2 — gdzie szukać
-Demonstracja, kroki 2–6; Warsztat → Przepisy → „Mobbing — nowa definicja i odszkodowanie” (obowiązki pracodawcy, termin 5.05.2027).
+Demonstracja, kroki 2–6; Warsztat → Przepisy → „Mobbing — nowa definicja i zadośćuczynienie” (obowiązki pracodawcy, termin 5.05.2027).
 
 ## Podpowiedź 3 — częściowy przykład
 Szkic 10 punktów: definicje → kanały → potwierdzenie → komisja → postępowanie z terminami → decyzja → ochrona przed odwetem → rejestr/RODO → szkolenia → wdrożenie…
 
 ## Pełne rozwiązanie
 ```
-Wady projektu prezesa: (1) jedyny kanał „pisemnie do prezesa” — pracownik nie zgłosi sprawy na prezesa, a ustne/anonimowe zgłoszenia zostaną zignorowane; nowelizacja wymaga dostępnych kanałów; (2) komisja z kierownikiem zgłaszającego — często to on jest stroną; brak bezstronności podważa całe postępowanie; (3) „bez zbędnej zwłoki” — bez terminów nie wykażesz niezwłoczności przed sądem/PIP; (4) brak rejestru — pracodawca uwalnia się od odpowiedzialności, gdy wykaże przeciwdziałanie (SN); bez dokumentacji nie ma dowodu; nowelizacja nakazuje dokumentowanie; (5) szkolenia „jak będzie czas” — obowiązek informowania pracowników i szkolenia kadry kierowniczej jest elementem przeciwdziałania.
-PROCEDURA PRZECIWDZIAŁANIA MOBBINGOWI I DYSKRYMINACJI (załącznik do regulaminu pracy; obowiązuje od 5.05.2027):
+Wady projektu prezesa: (1) jedyny kanał „pisemnie do prezesa” — pracownik nie zgłosi sprawy na prezesa, a ustne/anonimowe zgłoszenia zostaną zignorowane; nowelizacja wymaga dostępnych kanałów; (2) komisja z kierownikiem zgłaszającego — często to on jest stroną; brak bezstronności podważa całe postępowanie; (3) „bez zbędnej zwłoki” — bez terminów nie wykażesz niezwłoczności przed sądem/PIP; (4) brak rejestru — ustawa nie zwalnia pracodawcy z odpowiedzialności za samo posiadanie procedury (przepis z projektu wypadł), ale dokumentacja jest jedynym dowodem przeciwdziałania (art. 94³ §1), podstawą regresu wobec sprawcy (§12) i obroną przed zarzutem PIP z art. 94³ᵃ; bez niej nie ma dowodu; (5) szkolenia „jak będzie czas” — obowiązek informowania pracowników i szkolenia kadry kierowniczej jest elementem przeciwdziałania.
+PROCEDURA PRZECIWDZIAŁANIA MOBBINGOWI I DYSKRYMINACJI (załącznik do regulaminu pracy — art. 104¹ §1 pkt 10 — albo odrębny regulamin z art. 94³ᵃ; obowiązuje najpóźniej od 5.05.2027):
 1. Definicje: mobbing (art. 94³ §2 KP), dyskryminacja (art. 18³ᵃ), nierówne traktowanie, odwet; przykłady zachowań.
 2. Deklaracja zakazu i odpowiedzialność: każdy przełożony odpowiada za reagowanie; pracodawca — za procedurę.
 3. Kanały zgłoszeń: pisemnie (kadry), e-mail dedykowany, ustnie do specjalisty HR lub przedstawiciela załogi (sporządza notatkę), anonimowo (skrzynka) — zgłoszenia na członka zarządu kierowane do przedstawiciela załogi i pełnomocnika zewnętrznego.
@@ -29,7 +29,7 @@ PROCEDURA PRZECIWDZIAŁANIA MOBBINGOWI I DYSKRYMINACJI (załącznik do regulamin
 ```
 
 ## Oczekiwany wynik
-wady: jeden kanał (tylko pisemnie do prezesa) — wyklucza zgłoszenia na prezesa i ustne; komisja z kierownikiem strony — brak bezstronności; brak terminów — nie da się wykazać „niezwłoczności”; brak rejestru — brak dowodu przeciwdziałania (i wymóg nowelizacji: dokumentowanie działań); szkolenia odkładane — obowiązek informowania i szkolenia kadry; procedura: 1) definicje, 2) zakaz i deklaracja, 3) kanały (pisemnie, e-mail, ustnie do HR, do przedstawiciela załogi, anonimowo), 4) potwierdzenie w 3 dni, 5) komisja bezstronna (HR + osoba spoza działu + SIP; wyłączenie przy konflikcie interesów), 6) postępowanie do 21 dni (wysłuchania, dowody, protokoły, prawo do odniesienia się), 7) decyzja i sankcje w 7 dni, naprawienie skutków, 8) ochrona przed odwetem (zgłaszający i świadkowie), 9) rejestr i retencja (3 lata — przedawnienie roszczeń; RODO: dostęp ograniczony, informacja dla stron), 10) szkolenia kadry co roku, przegląd procedury, konsultacja ze związkami/przedstawicielami, podanie do wiadomości pracowników (regulamin/obwieszczenie) do 5.05.2027.
+wady: jeden kanał (tylko pisemnie do prezesa) — wyklucza zgłoszenia na prezesa i ustne; komisja z kierownikiem strony — brak bezstronności; brak terminów — nie da się wykazać „niezwłoczności”; brak rejestru — brak dowodu przeciwdziałania (i wymóg nowelizacji: dokumentowanie działań); szkolenia odkładane — obowiązek informowania i szkolenia kadry; procedura: 1) definicje, 2) zakaz i deklaracja, 3) kanały (pisemnie, e-mail, ustnie do HR, do przedstawiciela załogi, anonimowo), 4) potwierdzenie w 3 dni, 5) komisja bezstronna (HR + osoba spoza działu + SIP; wyłączenie przy konflikcie interesów), 6) postępowanie do 21 dni (wysłuchania, dowody, protokoły, prawo do odniesienia się), 7) decyzja i sankcje w 7 dni, naprawienie skutków, 8) ochrona przed odwetem (zgłaszający i świadkowie), 9) rejestr i retencja (3 lata — przedawnienie roszczeń; RODO: dostęp ograniczony, informacja dla stron), 10) szkolenia kadry co roku, przegląd procedury, konsultacja ze związkami/przedstawicielami, podanie do wiadomości pracowników (regulamin pracy albo odrębny regulamin z art. 94³ᵃ) do 5.05.2027.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

@@ -1,5 +1,5 @@
 # Rozwiązanie umowy o pracę: tryby, okresy, przyczyna, ochrona, art. 52/53
-Tydzień 13 · lekcja 39 z 46 · ≈ 65 min
+Tydzień 13 · lekcja 41 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** wybierasz tryb rozwiązania umowy, liczysz okresy wypowiedzenia, piszesz pismo z przyczyną i pouczeniem oraz sprawdzasz ochronę.
 

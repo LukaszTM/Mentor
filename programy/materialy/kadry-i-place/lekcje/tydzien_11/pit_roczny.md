@@ -1,5 +1,5 @@
 # Rozliczenie roczne płatnika: PIT-4R, PIT-8AR, PIT-11, IFT-1R, korekty
-Tydzień 11 · lekcja 35 z 46 · ≈ 65 min
+Tydzień 11 · lekcja 36 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** zamykasz rok płatnika: PIT-4R, PIT-8AR, PIT-11, IFT-1R w terminach, z poprawną treścią i uzgodnieniem z wpłatami.
 

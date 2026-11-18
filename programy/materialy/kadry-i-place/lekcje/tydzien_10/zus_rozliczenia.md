@@ -1,5 +1,5 @@
 # Rozliczenia miesięczne: DRA, RCA, RSA, RPA, terminy, NRS, zasada kasowa
-Tydzień 10 · lekcja 33 z 46 · ≈ 65 min
+Tydzień 10 · lekcja 34 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** składasz komplet DRA/RCA/RSA/RPA wg zasady kasowej, płacisz na NRS w terminie i kontrolujesz spójność z listą płac.
 

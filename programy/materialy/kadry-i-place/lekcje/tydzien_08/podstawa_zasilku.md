@@ -1,5 +1,5 @@
 # Podstawa wymiaru zasiłku: 12 miesięcy, uzupełnianie, składniki, minimum
-Tydzień 8 · lekcja 26 z 46 · ≈ 70 min
+Tydzień 8 · lekcja 27 z 48 · ≈ 70 min
 
 **Po tej lekcji potrafisz:** ustalasz podstawę wymiaru zasiłku z 12 miesięcy, uzupełniasz niepełne miesiące, wliczasz właściwe składniki i stosujesz minimum.
 

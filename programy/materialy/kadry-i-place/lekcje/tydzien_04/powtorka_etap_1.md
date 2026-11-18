@@ -1,5 +1,5 @@
 # Powtórka etapu 1: od ogłoszenia do urlopu — prawo pracy w praktyce
-Tydzień 4 · lekcja 16 z 46 · ≈ 55 min
+Tydzień 4 · lekcja 17 z 48 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** prowadzisz pracownika od ogłoszenia przez umowę, onboarding, czas pracy i ewidencję do urlopu i nieobecności — bez zaglądania do lekcji liczysz wymiar, nadgodziny, limit 33/3 i urlop.
 

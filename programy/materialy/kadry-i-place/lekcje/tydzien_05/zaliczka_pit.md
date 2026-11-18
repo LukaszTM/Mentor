@@ -1,5 +1,5 @@
 # Zaliczka na PIT: PIT-2, KUP, próg 32%, ulgi i zwolnienia
-Tydzień 5 · lekcja 18 z 46 · ≈ 60 min
+Tydzień 5 · lekcja 19 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** stosujesz PIT-2, KUP, próg 32%, ulgę dla młodych i inne zwolnienia oraz wiesz, co zmienia się po ustaniu zatrudnienia.
 

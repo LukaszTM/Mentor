@@ -1,5 +1,5 @@
 # Powtórka etapu 4 i całego kursu: ustanie zatrudnienia, compliance, kontrola — audyt firmy
-Tydzień 15 · lekcja 46 z 46 · ≈ 65 min
+Tydzień 15 · lekcja 48 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** przeprowadzasz pracownika przez ustanie zatrudnienia (tryb, okres, pismo, świadectwo, rozliczenie), rozpoznajesz mobbing/dyskryminację i lukę płacową, masz procedury 2026/2027 i potrafisz przygotować firmę do kontroli — a z całego kursu umiesz wskazać, gdzie szukać każdej odpowiedzi.
 
@@ -19,7 +19,7 @@ Tydzień 15 · lekcja 46 z 46 · ≈ 65 min
 - Mobbing: nowa definicja od 5.11.2026 (uporczywe nękanie, bez wymogu skutku zdrowotnego), odszkodowanie ≥ 6 × min., procedura do 5.05.2027; dyskryminacja — kryterium, ciężar dowodu na pracodawcy; nierówne traktowanie — bez kryterium.
 - Jawność: obowiązuje — widełki (24.12.2025), zakaz pytań o zarobki; projekt UC127 — informacja 2 mies., raportowanie, luka > 5%; luka liczona w kategoriach, rozkładana na kryteria obiektywne.
 - Sygnaliści (≥ 50): procedura, 7 dni / 3 mies., rejestr, ochrona; zdalna: wniosek wiążący (dziecko do 4 lat), 7 dni, porozumienie, ryczałt z kalkulacją; monitoring/trzeźwość: regulamin, 2 tygodnie, retencja; RODO: upoważnienia, RCPD, powierzenia, retencja, 72 h.
-- Kontrola: PIP bez zapowiedzi (protokół — 7 dni zastrzeżeń; nakaz płacowy natychmiast; wystąpienie 30 dni; mandat/sąd do 30 000); ZUS/US z zawiadomieniem 7–30 dni (zastrzeżenia 14 dni; decyzja — odwołanie 1 mies.); teczka kontrolna, książka kontroli, audyt roczny.
+- Kontrola: PIP bez zapowiedzi (protokół — 7 dni zastrzeżeń; nakaz płacowy natychmiast; wystąpienie 30 dni; mandat do 10 000 / sąd 2 000–60 000 od 8.07.2026; decyzja o ustaleniu stosunku pracy); ZUS/US z zawiadomieniem 7–30 dni (zastrzeżenia 14 dni; decyzja — odwołanie 1 mies.); teczka kontrolna, książka kontroli, audyt roczny.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Audyt firmy — jak z 60 pytań zrobić plan naprawczy, który obroni się przed PIP i ZUS**
@@ -62,7 +62,7 @@ Wypełnij 10 wierszy audytu (obszary: umowy, ewidencja, nadgodziny, zasiłki, zl
 Napisz raport z audytu dla zarządu (1 strona, max 12 zdań + tabela 5 ryzyk): kontekst, 5 największych ryzyk z kwotami i terminami przedawnienia, 5 działań na 30 dni, koszt i oszczędność, prośba o decyzje (3 punkty: np. zatrudnienie 2 osób z orzeczeniem, aneksy, budżet na szkolenia). Użyj liczb z ćwiczenia 1. Plik: cwiczenia/tydzien_15/powtorka_etap_4_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_15/powtorka_etap_4_2.md` · rozwiązanie: `rozwiazania/tydzien_15/powtorka_etap_4_2.md`
-✔ Poprawny wynik wygląda tak: raport z tabelą: nadgodziny (4 380 + odsetki; 3 lata), zlecenia (768/mies.; mandat do 30 000), ZFŚS (składki od 18 600 + 5 lat), PFRON (5 524/mies. — do uniknięcia), procedury (odszkodowanie ≥ 28 836 za jedno zgłoszenie); działania 30 dni; koszt ~13 000, oszczędność ~66 000/rok; 3 decyzje do podjęcia.
+✔ Poprawny wynik wygląda tak: raport z tabelą: nadgodziny (4 380 + odsetki; 3 lata), zlecenia (768/mies.; grzywna do 30 000 z ustawy o minimalnym wynagrodzeniu), ZFŚS (składki od 18 600 + 5 lat), PFRON (5 524/mies. — do uniknięcia), procedury (zadośćuczynienie ≥ 28 836 za jedno zgłoszenie); działania 30 dni; koszt ~13 000, oszczędność ~66 000/rok; 3 decyzje do podjęcia.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Audyt pełen „raczej tak”.**

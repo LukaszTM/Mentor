@@ -1,5 +1,5 @@
 # Zwolnienia grupowe i indywidualne, odprawy, przejście zakładu (art. 23¹)
-Tydzień 13 · lekcja 40 z 46 · ≈ 65 min
+Tydzień 13 · lekcja 42 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** rozpoznajesz zwolnienie grupowe vs indywidualne, prowadzisz procedurę (związki, PUP, 20 dni) i liczysz odprawy oraz świadczenia przy przejściu zakładu.
 

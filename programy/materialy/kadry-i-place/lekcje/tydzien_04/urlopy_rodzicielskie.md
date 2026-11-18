@@ -1,5 +1,5 @@
 # Urlopy rodzicielskie 2026: macierzyński, rodzicielski, ojcowski, wychowawczy, ochrona
-Tydzień 4 · lekcja 14 z 46 · ≈ 60 min
+Tydzień 4 · lekcja 15 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** rozpisujesz macierzyński, rodzicielski (41 tyg., 9+9), ojcowski i wychowawczy na kalendarz, znasz stawki zasiłku i zakres ochrony.
 

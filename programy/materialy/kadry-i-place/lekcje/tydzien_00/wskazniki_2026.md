@@ -1,5 +1,5 @@
 # Wskaźniki 2026 — liczby, które musisz znać
-Tydzień 0 · lekcja 4 z 46 · ≈ 65 min
+Tydzień 0 · lekcja 4 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** znasz z pamięci kluczowe liczby 2026 (minimalne, składki, progi PIT, limity) i umiesz je sprawdzić u źródła w styczniu każdego roku.
 
@@ -20,7 +20,7 @@ Od minimalnej zależą inne kwoty:
 - dodatek nocny — 20% stawki godzinowej z minimalnej,
 - kwoty wolne od potrąceń — minimalne netto,
 - maksymalna odprawa — 15× minimalnej = 72 090 zł,
-- odszkodowanie za mobbing — 6× minimalnej = 28 836 zł,
+- zadośćuczynienie za mobbing — 6× minimalnej = 28 836 zł (od 5.11.2026),
 - wynagrodzenie za przestój,
 - minimalna podstawa zasiłku,
 - obniżona wpłata PPK — przy wynagrodzeniu ≤ 120% minimalnej = 5 767,20 zł.
@@ -32,7 +32,7 @@ Od minimalnej zależą inne kwoty:
 | chorobowa | 2,45% | — | 2,45% |
 | wypadkowa | — | 1,67% do 9 ubezpieczonych; inaczej wg PKD (0,67–3,33%) | — |
 | zdrowotna | 9% od podstawy po składkach społecznych | — | 9% |
-| FP (w tym FS 1,45%) | — | 2,45% | 2,45% |
+| Fundusz Pracy 1,00% + Fundusz Solidarnościowy 1,45% (w DRA i w programach łącznie jako „FP” 2,45%) | — | 2,45% | 2,45% |
 | FGŚP | — | 0,10% | 0,10% |
 | FEP (prace szczególne) | — | 1,5% | 1,5% |
 Pracownik oddaje 13,71% brutto na składki społeczne. Pracodawca dokłada ok. 20,48% (przy wypadkowej 1,67%).
@@ -45,7 +45,7 @@ Roczny limit podstawy emerytalno-rentowej 2026: 282 600 zł (30 × prognozowane 
 | KUP | 250 zł (300 zł dojeżdżający); 20% zlecenia; 50% autorskie |
 | ulga dla młodych (do 26 lat) | do 85 528 zł przychodu |
 | danina solidarnościowa | 4% ponad 1 mln |
-Projekt od 2027: próg 130 000 zł, stawka 24% do 150 000 zł. Uchwalony przez Sejm w X 2026, w Senacie. To projekt — sprawdzaj.
+Od 2027 — ustawa uchwalona (Sejm 5.11.2026, Senat bez poprawek 6.11.2026), do 27.11.2026 decyzja prezydenta (podpis albo weto): próg 12% do 130 000 zł, nowa stawka 24% od 130 000 do 150 000 zł, 32% powyżej; danina solidarnościowa 5% (było 4%); ryczałt ewidencjonowany tylko do 250 000 € przychodu; CIT 22% dla firm > 50 mln € przychodu. Dopóki nie ma ogłoszenia w Dz.U. (konieczne do 30.11.2026), liczysz 2027 w dwóch wariantach.
 ### Inne wskaźniki
 | Wskaźnik | 2026 |
 |---|---|
@@ -58,6 +58,24 @@ Projekt od 2027: próg 130 000 zł, stawka 24% do 150 000 zł. Uchwalony przez S
 | urlop wypoczynkowy | 20/26 dni |
 | urlop opiekuńczy | 5 dni |
 | siła wyższa | 2 dni / 16 h |
+| odsetki ustawowe za opóźnienie | 9,25% (stopa referencyjna NBP 3,75% + 5,5 pkt) |
+| odsetki za zwłokę — podatki i ZUS | 10,50% od 5.03.2026 (200% stopy lombardowej 4,25% + 2 pkt) |
+| grzywny PIP (od 8.07.2026) | 2 000–60 000 zł; mandat do 10 000 zł |
+### Zapowiedzi na 2027 — co już wiadomo (stan 18.11.2026)
+| Wskaźnik | 2027 | Status |
+|---|---|---|
+| minimalne wynagrodzenie / stawka godzinowa | 4 950 zł / 32,30 zł | rozporządzenie RM (Dz.U. 2026 poz. 1213) — pewne |
+| prognozowane przeciętne wynagrodzenie | 10 033 zł (projekt ustawy budżetowej z 28.08.2026) | limit 30-krotności 300 990 zł — po obwieszczeniu MRPiPS w M.P. (sprawdź XII 2026) |
+| współczynnik ekwiwalentu | 20,92 (2027: 2008 h, 251 dni roboczych; wymiar miesięczny: I 152, II 160, III 176, IV 176, V 144, VI 176, VII 176, VIII 176, IX 176, X 168, XI 160, XII 168) | policz sam — zasada z art. 130 KP |
+| maksymalna odprawa | 74 250 zł (15 × 4 950) | pewne |
+| zadośćuczynienie za mobbing — minimum | 29 700 zł (6 × 4 950) | pewne |
+| PIT | próg 130 000 zł (12%), 24% od 130 000 do 150 000, 32% powyżej; danina 5% | ustawa uchwalona (Sejm 5.11, Senat 6.11.2026) — decyzja prezydenta do 27.11.2026; bez ogłoszenia w Dz.U. do 30.11 zostaje 120 000 / 32% |
+| diety | 60 zł kraj; zagraniczne wyższe (np. Niemcy nocleg 220 EUR) | projekt rozporządzenia z 21.05.2026 — uzgodnienia; planowane 1.01.2027 |
+| e-ZLA | na jeden tytuł ubezpieczenia | od 1.01.2027 (ustawa z 18.12.2025) |
+| upały w pracy | progi 28/25°C i 35/32°C | od 11.01.2027 (Dz.U. 2026 poz. 927) |
+| procedury antymobbingowe | regulamin / odrębny regulamin (od 10 pracowników) | do 5.05.2027 |
+| PPK — autozapis | ponowny autozapis | 1.04.2027 |
+Zasada: liczby „pewne” wpisujesz do parametrów programu w grudniu; „projekt” — do kalendarza z datą sprawdzenia.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Minimalne wynagrodzenie 4 806 zł od brutto do netto i do kosztu pracodawcy — każdy wskaźnik w akcji**
@@ -136,6 +154,15 @@ Jakub Krawczyk (24 lata, 4 900 zł, PPK 2%/1,5%, PIT-2) ma prawo do ulgi dla mł
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Policzyć brutto → netto → koszt pracodawcy z pamięci dla 2026 r. (9,76 / 1,5 / 2,45 / 9 / 12% / 300 / 250), wskazać, które wskaźniki zmienia PPK, a które ulga dla młodych, i sprawdzić wynik w Warsztacie.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Rozporządzenie RM z 14.09.2026 — minimalne wynagrodzenie 4 950 zł i stawka 32,30 zł w 2027 r. (Dz.U. 2026 poz. 1213) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1213/ogl>
+- GUS — komunikaty i obwieszczenia (przeciętne wynagrodzenie do ZFŚS 7 848,60 zł, obwieszczenie z 19.02.2026) (dostęp 18.11.2026) — <https://stat.gov.pl/sygnalne/komunikaty-i-obwieszczenia/>
+- NBP — podstawowe stopy procentowe (referencyjna 3,75%, lombardowa 4,25%) (dostęp 18.11.2026) — <https://nbp.pl/polityka-pieniezna/decyzje-rpp/podstawowe-stopy-procentowe-nbp/>
+- Obwieszczenie MF o stawce odsetek za zwłokę od zaległości podatkowych — 10,50% od 5.03.2026 (M.P. 2026 poz. 269) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/MP/2026/269/ogl>
+- money.pl (PAP), 6.11.2026: Senat przyjął bez poprawek ustawę o PIT 2027 (próg 130 000 zł, stawka 24%) — decyzja prezydenta do 27.11.2026 (dostęp 18.11.2026) — <https://www.money.pl/podatki/zmiany-w-podatkach-senat-zdecydowal-teraz-czas-na-ruch-prezydenta-7348086529518048a.html>
+- Infor, XI 2026: zmiany w PIT, CIT i ryczałcie od 2027 r. — prezydent ma czas do 27 listopada (dostęp 18.11.2026) — <https://ksiegowosc.infor.pl/wiadomosci/7706344,zmiany-w-pit-cit-ryczalcie-od-2027-r-prezydent-nawrocki-do-27-listopada-ma-czas-na-decyzje-przedsiebiorcy-powinni-przeliczyc-dwa-warianty.html>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Minimalna stawka godzinowa dla zleceniobiorcy w 2026 r.?

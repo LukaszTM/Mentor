@@ -1,5 +1,5 @@
 # Źródła prawa pracy i gdzie sprawdzać stan prawny
-Tydzień 0 · lekcja 2 z 46 · ≈ 45 min
+Tydzień 0 · lekcja 2 z 48 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** znajdujesz właściwy przepis w ISAP/Dz.U., rozróżniasz ustawę, rozporządzenie i regulamin oraz wiesz, który dokument wygrywa, gdy się różnią.
 
@@ -45,6 +45,20 @@ Zasada uprzywilejowania pracownika (art. 18 KP): postanowienie mniej korzystne n
 | kontrola zwolnień lekarskich (L4) | 13.04.2026 |
 | mobbing i dyskryminacja — nowe przepisy | 5.11.2026 |
 | procedury antymobbingowe w firmach | do 5.05.2027 |
+| układy zbiorowe — nowa ustawa, zgłoszenie zamiast rejestracji (KEUZP) | 13.12.2025 |
+| postać elektroniczna dokumentów (zamiast „pisemnej”) w 14 miejscach KP | 27.01.2026 |
+| wygaszenie specustawy ukraińskiej — powiadomienie PUP w 7 dni, ochrona czasowa do 4.03.2027 | 5.03.2026 |
+| reforma PIP — decyzja o ustaleniu stosunku pracy, grzywny 2 000–60 000 zł, mandat do 10 000 zł | 8.07.2026 |
+| Kodeks pracy — nowy tekst jednolity | Dz.U. 2026 poz. 1245 |
+| praca w upale — progi 28/25°C i 35/32°C | 11.01.2027 |
+| minimalne wynagrodzenie 4 950 zł / 32,30 zł | 1.01.2027 |
+| PIT 2027 (próg 130 000 zł, stawka 24%) | ustawa uchwalona, decyzja prezydenta do 27.11.2026 |
+| jawność wynagrodzeń — dyrektywa 2023/970 (UC127) | projekt; termin UE minął 7.06.2026 |
+| praca platformowa — dyrektywa 2024/2831 (UC160) | projekt; termin UE 2.12.2026 |
+### Prawo UE i źródła zagraniczne
+Rozporządzenia UE (883/2004 — koordynacja ZUS, 2016/679 — RODO) stosujesz bezpośrednio, dyrektywy przez polską ustawę — ale sądy wykładają KP zgodnie z dyrektywą, a wyroki TSUE (np. CCOO o ewidencji czasu pracy) zmieniają praktykę od razu. Teksty po polsku: eur-lex.europa.eu (wersja PL), curia.europa.eu; konwencje MOP: normlex.ilo.org; materiały BHP: osha.europa.eu/pl. Procedury HR z ACAS i CIPD (UK) traktujesz jak dobrą praktykę — każdy krok sprawdzasz z KP (lekcje „Praktyki HR z zagranicy” i „Prawo UE i standardy międzynarodowe”).
+### Źródła w tym kursie
+Każda lekcja zaktualizowana w audycie z 18.11.2026 ma na końcu listę „Źródła” (tytuł, adres, data dostępu). To Twoja lista kontrolna: przed zastosowaniem w pracy otwórz źródło i sprawdź, czy nic się nie zmieniło.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Jedno pytanie, cztery źródła: ile wynosi dodatek za godzinę pracy w nocy w listopadzie 2026?**
@@ -122,6 +136,14 @@ Regulamin wynagradzania AGRO-MLEKO mówi: „dodatek za pracę w nocy 20% stawki
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Rozłożyć pytanie kadrowe na: reguła z ustawy → kwota z rozporządzenia/obwieszczenia → dzielnik z Kodeksu → rachunek; zapisać wynik z artykułem, Dz.U. i datą; rozpoznać, kiedy regulamin musi ustąpić ustawie.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
+- ISAP — Kodeks pracy (tekst ujednolicony) (dostęp 18.11.2026) — <https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19740240141>
+- Rządowy proces legislacyjny — projekty UC127 (jawność wynagrodzeń), UC160 (praca platformowa), diety 2027 (dostęp 18.11.2026) — <https://legislacja.gov.pl>
+- Sejm RP — proces legislacyjny (ustawy 2026: mobbing, PIP, PIT 2027) (dostęp 18.11.2026) — <https://www.sejm.gov.pl>
+- Rozporządzenie (WE) 883/2004 w sprawie koordynacji systemów zabezpieczenia społecznego (EUR-Lex, wersja PL) (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/reg/2004/883/oj/pol>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Umowa o pracę przewiduje 18 dni urlopu dla pracownika ze stażem 12 lat. Co obowiązuje?

@@ -140,6 +140,20 @@
   - jak sprawdzić: Czy na liście płac jest osobna pozycja „dodatek nocny”?
   - poprawka: Wypłacaj osobno: godziny nocne × 20% stawki z minimalnego; ryczałt dopuszczalny tylko dla stale pracujących w nocy i nie niższy.
 
+## Praktyki HR z zagranicy (ACAS, CIPD) po polsku: onboarding, rozmowa okresowa, skarga, dyscyplina, exit interview (tydzień 2)
+- ✘ **„Pracownik dostał trzecie ostrzeżenie, więc zwalniamy — jak w centrali.”**
+  - przyczyna: Przeniesienie brytyjskiego modelu „warnings” bez polskiego wymogu prawdziwej, konkretnej przyczyny wypowiedzenia.
+  - jak sprawdzić: Sprawdź, czy przyczyna w wypowiedzeniu opisuje konkretne zachowania z datami i czy kary nie uległy zatarciu (rok, art. 113).
+  - poprawka: Przyczyna wypowiedzenia z opisem naruszeń (art. 30 §4), konsultacja związkowa (art. 38), notatki z wysłuchań jako dowód; liczba kar nie jest przyczyną.
+- ✘ **„Zawiesiliśmy go bez pensji na czas wyjaśnień.”**
+  - przyczyna: Brak podstawy prawnej — KP nie przewiduje zawieszenia bez wynagrodzenia.
+  - jak sprawdzić: Czy pracownik był gotowy do pracy, a nie dopuszczono go z przyczyn pracodawcy? (art. 81 — wynagrodzenie za przestój).
+  - poprawka: Zwolnienie z obowiązku świadczenia pracy z wynagrodzeniem albo czasowe powierzenie innej pracy (art. 42 §4); wypłata zaległego wynagrodzenia.
+- ✘ **„Ocena roczna 2/5 — premii nie ma, bo kierownik tak ocenił.”**
+  - przyczyna: Ocena bez spisanych kryteriów i bez pisemnego podsumowania — dowolność.
+  - jak sprawdzić: Czy regulamin wynagradzania określa kryteria premii i czy pracownik je znał (potwierdzenie zapoznania)?
+  - poprawka: Kryteria SMART w regulaminie, ocena na piśmie udostępniona pracownikowi, uzasadnienie decyzji premiowej, przegląd ocen pod kątem dyskryminacji (płeć, wiek, nieobecności rodzicielskie).
+
 ## Ewidencja czasu pracy i nieobecności (tydzień 3)
 - ✘ **Ewidencja „8 h” bez godzin od–do.**
   - przyczyna: Stary wzór sprzed 2019 r.; §6 wymaga liczby godzin ORAZ godziny rozpoczęcia i zakończenia.
@@ -497,6 +511,20 @@
   - przyczyna: Umowy do 200 zł z osobą niebędącą pracownikiem — ryczałt 12%, PIT-8AR, bez PIT-11.
   - jak sprawdzić: Kwota należności z umowy ≤ 200 i osoba spoza etatu?
   - poprawka: PIT-8AR; podatnik nie wykazuje w zeznaniu.
+
+## Prawo UE i standardy międzynarodowe w kadrach: A1 i koordynacja ZUS, delegowanie, dyrektywy w KP, TSUE, MOP, EU-OSHA (tydzień 11)
+- ✘ **„Pojechali na 3 tygodnie, A1 nie było potrzebne.”**
+  - przyczyna: Mylenie podróży służbowej (polskie diety) z podleganiem ubezpieczeniu — A1 dotyczy każdej pracy w innym państwie od pierwszego dnia.
+  - jak sprawdzić: Czy praca była wykonywana na terytorium innego państwa UE/EOG/CH (nawet jeden dzień)?
+  - poprawka: US-3 w eZUS przed wyjazdem (A1 można uzyskać też wstecz, ale kontrola zagraniczna może już naliczyć składki); procedura: zlecenie wyjazdu → A1 → EKUZ.
+- ✘ **„Płacimy polską pensję, a różnicę do niemieckiej minimalnej pokrywają diety.”**
+  - przyczyna: Dyrektywa 2018/957: diety i zwrot kosztów nie są wynagrodzeniem; różnicę trzeba dopłacić jako składnik płacy.
+  - jak sprawdzić: Policz stawkę godzinową z polskiej pensji w EUR i porównaj ze stawką państwa przyjmującego (ustawową i układową).
+  - poprawka: Aneks z dopłatą na czas delegowania, diety wykazane osobno; dokumenty na miejscu; kontrola Zoll/SIPSI wymaga rozdzielenia.
+- ✘ **„Pracownik pracuje zdalnie z Portugalii od roku, nikt nic nie zgłaszał.”**
+  - przyczyna: Brak decyzji o państwie ubezpieczenia i podatku przed wyjazdem — po 183 dniach i przy ≥ 25% pracy w państwie zamieszkania zmienia się ustawodawstwo.
+  - jak sprawdzić: Gdzie pracownik mieszka (centrum interesów), jaki procent pracy wykonuje tam, czy państwo jest stroną umowy ramowej o telepracy (50%)?
+  - poprawka: Wniosek US-36 (jeśli < 50% w państwie zamieszkania) albo rejestracja składek w państwie zamieszkania; regulamin pracy zdalnej: praca z zagranicy tylko za zgodą po analizie ZUS/PIT/RODO.
 
 ## ZFŚS i PFRON: odpisy, terminy, regulamin, DEK/Wn-D, uprawnienia niepełnosprawnych (tydzień 12)
 - ✘ **Odpis liczony od 62 osób zamiast 58,5 etatu.**

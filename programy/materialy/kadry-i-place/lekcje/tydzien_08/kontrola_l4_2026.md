@@ -1,5 +1,5 @@
 # Kontrola zwolnień lekarskich po reformie 2026
-Tydzień 8 · lekcja 28 z 46 · ≈ 60 min
+Tydzień 8 · lekcja 29 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** prowadzisz kontrolę zwolnień po reformie 2026 (upoważnienie, protokół, praca zarobkowa vs aktywność niezgodna z celem) i znasz sankcje.
 
@@ -126,6 +126,11 @@ Kierownik produkcji chce „od jutra” kontrolować wszystkich chorych operator
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Przeprowadzić kontrolę zwolnienia zgodnie z regułami 2026 (upoważnienie, miejsce pobytu, protokół faktów, uwagi, decyzja/ZUS), odróżnić pracę zarobkową i aktywność niezgodną z celem od czynności codziennych i wpisać procedurę do regulaminu.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Ustawa z 18.12.2025 o zmianie ustawy zasiłkowej — kontrola zwolnień lekarskich (Dz.U. 2026 poz. 26) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/26/ogl>
+- Rozporządzenie z 8.04.2026 w sprawie kontroli zwolnień lekarskich (Dz.U. 2026 poz. 503) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/503/ogl>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Od kiedy obowiązują nowe zasady kontroli zwolnień (płatnik, praca zarobkowa, aktywność niezgodna z celem)?

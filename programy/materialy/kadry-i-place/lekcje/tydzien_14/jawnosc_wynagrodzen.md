@@ -1,5 +1,5 @@
 # Jawność wynagrodzeń: co obowiązuje (2025), co nadchodzi (dyrektywa 2023/970), audyt luki płacowej
-Tydzień 14 · lekcja 43 z 46 · ≈ 65 min
+Tydzień 14 · lekcja 45 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** wiesz, co z jawności wynagrodzeń już obowiązuje, a co nadchodzi z dyrektywy 2023/970, i liczysz lukę płacową w kategoriach.
 
@@ -16,9 +16,9 @@ Tydzień 14 · lekcja 43 z 46 · ≈ 65 min
 - Zakaz pytania o historię wynagrodzeń (art. 22¹ §1 pkt 6).
 - Neutralne płciowo ogłoszenia.
 - Obowiązek informowania o postanowieniach układu lub regulaminu wynagradzania dotyczących stanowiska.
-Sankcja: 1 000–30 000 zł.
+Sankcja: ustawa z 4.06.2025 nie dodała osobnego wykroczenia do art. 281 KP. Ryzyko to roszczenie kandydata z art. 18³ᵈ (zadośćuczynienie nie niższe niż minimalne wynagrodzenie albo odszkodowanie), wystąpienie PIP i wizerunek. Kary pieniężne 2 000–60 000 zł przewiduje dopiero projekt UC127.
 ### Co nadchodzi — dyrektywa (UE) 2023/970
-Termin transpozycji: 7.06.2026 — Polska spóźniona. Projekt UC127 (zmiana KP i innych ustaw) jest w procesie rządowo-parlamentarnym, nieuchwalony na XI 2026. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
+Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może wszcząć postępowanie o naruszenie). Projekt UC127 (zmiana KP i innych ustaw): pierwsza wersja XII 2025, druga 29.04.2026 po uzgodnieniach; Rada Ministrów planuje przyjęcie w IV kw. 2026; do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. W projekcie: sprawozdania o luce płacowej dla pracodawców od 100 pracowników, kary pieniężne 2 000–60 000 zł, organ monitorujący — PIP. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
 | Element dyrektywy | Zasada |
 |---|---|
 | prawo do informacji | pracownik może żądać informacji o swoim indywidualnym wynagrodzeniu oraz o ŚREDNIM poziomie wynagrodzeń (w podziale na płeć) dla kategorii pracowników wykonujących tę samą pracę lub pracę tej samej wartości; odpowiedź w 2 miesiące; pracodawca co roku przypomina o tym prawie |
@@ -119,6 +119,13 @@ Zarząd proponuje: (1) wpisać do wszystkich umów klauzulę poufności wynagrod
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Policzyć lukę płacową w kategorii (średnia, mediana), rozłożyć ją na składniki obiektywne i niewyjaśnione, zaplanować korektę i siatkę płac, odróżnić obowiązujące przepisy od projektu i odpowiedzieć na wniosek pracownika.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Ustawa z 4.06.2025 o zmianie KP — informacja o wynagrodzeniu w rekrutacji (Dz.U. 2025 poz. 807) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2025/807/ogl>
+- Dyrektywa (UE) 2023/970 o przejrzystości wynagrodzeń (termin transpozycji 7.06.2026) (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/dir/2023/970/oj/pol>
+- Rządowy proces legislacyjny — projekty UC127 (jawność wynagrodzeń), UC160 (praca platformowa), diety 2027 (dostęp 18.11.2026) — <https://legislacja.gov.pl>
+- MOP, Konwencja nr 100 o jednakowym wynagrodzeniu (NORMLEX) (dostęp 18.11.2026) — <https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C100>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Dyrektywa 2023/970 przewiduje odpowiedź na wniosek pracownika o informację o średnich wynagrodzeniach w ciągu:

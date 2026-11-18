@@ -43,7 +43,23 @@ Zasada uprzywilejowania pracownika (art. 18 KP): postanowienie mniej korzystne n
 | staż pracy z umów zlecenia — sektor prywatny | 1.05.2026 |
 | kontrola zwolnień lekarskich (L4) | 13.04.2026 |
 | mobbing i dyskryminacja — nowe przepisy | 5.11.2026 |
-| procedury antymobbingowe w firmach | do 5.05.2027 |"""
+| procedury antymobbingowe w firmach | do 5.05.2027 |
+| układy zbiorowe — nowa ustawa, zgłoszenie zamiast rejestracji (KEUZP) | 13.12.2025 |
+| postać elektroniczna dokumentów (zamiast „pisemnej”) w 14 miejscach KP | 27.01.2026 |
+| wygaszenie specustawy ukraińskiej — powiadomienie PUP w 7 dni, ochrona czasowa do 4.03.2027 | 5.03.2026 |
+| reforma PIP — decyzja o ustaleniu stosunku pracy, grzywny 2 000–60 000 zł, mandat do 10 000 zł | 8.07.2026 |
+| Kodeks pracy — nowy tekst jednolity | Dz.U. 2026 poz. 1245 |
+| praca w upale — progi 28/25°C i 35/32°C | 11.01.2027 |
+| minimalne wynagrodzenie 4 950 zł / 32,30 zł | 1.01.2027 |
+| PIT 2027 (próg 130 000 zł, stawka 24%) | ustawa uchwalona, decyzja prezydenta do 27.11.2026 |
+| jawność wynagrodzeń — dyrektywa 2023/970 (UC127) | projekt; termin UE minął 7.06.2026 |
+| praca platformowa — dyrektywa 2024/2831 (UC160) | projekt; termin UE 2.12.2026 |
+
+## Prawo UE i źródła zagraniczne
+Rozporządzenia UE (883/2004 — koordynacja ZUS, 2016/679 — RODO) stosujesz bezpośrednio, dyrektywy przez polską ustawę — ale sądy wykładają KP zgodnie z dyrektywą, a wyroki TSUE (np. CCOO o ewidencji czasu pracy) zmieniają praktykę od razu. Teksty po polsku: eur-lex.europa.eu (wersja PL), curia.europa.eu; konwencje MOP: normlex.ilo.org; materiały BHP: osha.europa.eu/pl. Procedury HR z ACAS i CIPD (UK) traktujesz jak dobrą praktykę — każdy krok sprawdzasz z KP (lekcje „Praktyki HR z zagranicy” i „Prawo UE i standardy międzynarodowe”).
+
+## Źródła w tym kursie
+Każda lekcja zaktualizowana w audycie z 18.11.2026 ma na końcu listę „Źródła” (tytuł, adres, data dostępu). To Twoja lista kontrolna: przed zastosowaniem w pracy otwórz źródło i sprawdź, czy nic się nie zmieniło."""
 
 WYJASNIENIA["narzedzia_kadrowca"] = """## Cztery systemy, bez których nie da się pracować
 | System | Do czego służy | Kto ma dostęp |
@@ -89,7 +105,7 @@ Od minimalnej zależą inne kwoty:
 - dodatek nocny — 20% stawki godzinowej z minimalnej,
 - kwoty wolne od potrąceń — minimalne netto,
 - maksymalna odprawa — 15× minimalnej = 72 090 zł,
-- odszkodowanie za mobbing — 6× minimalnej = 28 836 zł,
+- zadośćuczynienie za mobbing — 6× minimalnej = 28 836 zł (od 5.11.2026),
 - wynagrodzenie za przestój,
 - minimalna podstawa zasiłku,
 - obniżona wpłata PPK — przy wynagrodzeniu ≤ 120% minimalnej = 5 767,20 zł.
@@ -102,7 +118,7 @@ Od minimalnej zależą inne kwoty:
 | chorobowa | 2,45% | — | 2,45% |
 | wypadkowa | — | 1,67% do 9 ubezpieczonych; inaczej wg PKD (0,67–3,33%) | — |
 | zdrowotna | 9% od podstawy po składkach społecznych | — | 9% |
-| FP (w tym FS 1,45%) | — | 2,45% | 2,45% |
+| Fundusz Pracy 1,00% + Fundusz Solidarnościowy 1,45% (w DRA i w programach łącznie jako „FP” 2,45%) | — | 2,45% | 2,45% |
 | FGŚP | — | 0,10% | 0,10% |
 | FEP (prace szczególne) | — | 1,5% | 1,5% |
 
@@ -117,7 +133,7 @@ Roczny limit podstawy emerytalno-rentowej 2026: 282 600 zł (30 × prognozowane 
 | KUP | 250 zł (300 zł dojeżdżający); 20% zlecenia; 50% autorskie |
 | ulga dla młodych (do 26 lat) | do 85 528 zł przychodu |
 | danina solidarnościowa | 4% ponad 1 mln |
-Projekt od 2027: próg 130 000 zł, stawka 24% do 150 000 zł. Uchwalony przez Sejm w X 2026, w Senacie. To projekt — sprawdzaj.
+Od 2027 — ustawa uchwalona (Sejm 5.11.2026, Senat bez poprawek 6.11.2026), do 27.11.2026 decyzja prezydenta (podpis albo weto): próg 12% do 130 000 zł, nowa stawka 24% od 130 000 do 150 000 zł, 32% powyżej; danina solidarnościowa 5% (było 4%); ryczałt ewidencjonowany tylko do 250 000 € przychodu; CIT 22% dla firm > 50 mln € przychodu. Dopóki nie ma ogłoszenia w Dz.U. (konieczne do 30.11.2026), liczysz 2027 w dwóch wariantach.
 
 ## Inne wskaźniki
 | Wskaźnik | 2026 |
@@ -130,7 +146,26 @@ Projekt od 2027: próg 130 000 zł, stawka 24% do 150 000 zł. Uchwalony przez S
 | okres zasiłkowy | 182/270 dni |
 | urlop wypoczynkowy | 20/26 dni |
 | urlop opiekuńczy | 5 dni |
-| siła wyższa | 2 dni / 16 h |"""
+| siła wyższa | 2 dni / 16 h |
+| odsetki ustawowe za opóźnienie | 9,25% (stopa referencyjna NBP 3,75% + 5,5 pkt) |
+| odsetki za zwłokę — podatki i ZUS | 10,50% od 5.03.2026 (200% stopy lombardowej 4,25% + 2 pkt) |
+| grzywny PIP (od 8.07.2026) | 2 000–60 000 zł; mandat do 10 000 zł |
+
+## Zapowiedzi na 2027 — co już wiadomo (stan 18.11.2026)
+| Wskaźnik | 2027 | Status |
+|---|---|---|
+| minimalne wynagrodzenie / stawka godzinowa | 4 950 zł / 32,30 zł | rozporządzenie RM (Dz.U. 2026 poz. 1213) — pewne |
+| prognozowane przeciętne wynagrodzenie | 10 033 zł (projekt ustawy budżetowej z 28.08.2026) | limit 30-krotności 300 990 zł — po obwieszczeniu MRPiPS w M.P. (sprawdź XII 2026) |
+| współczynnik ekwiwalentu | 20,92 (2027: 2008 h, 251 dni roboczych; wymiar miesięczny: I 152, II 160, III 176, IV 176, V 144, VI 176, VII 176, VIII 176, IX 176, X 168, XI 160, XII 168) | policz sam — zasada z art. 130 KP |
+| maksymalna odprawa | 74 250 zł (15 × 4 950) | pewne |
+| zadośćuczynienie za mobbing — minimum | 29 700 zł (6 × 4 950) | pewne |
+| PIT | próg 130 000 zł (12%), 24% od 130 000 do 150 000, 32% powyżej; danina 5% | ustawa uchwalona (Sejm 5.11, Senat 6.11.2026) — decyzja prezydenta do 27.11.2026; bez ogłoszenia w Dz.U. do 30.11 zostaje 120 000 / 32% |
+| diety | 60 zł kraj; zagraniczne wyższe (np. Niemcy nocleg 220 EUR) | projekt rozporządzenia z 21.05.2026 — uzgodnienia; planowane 1.01.2027 |
+| e-ZLA | na jeden tytuł ubezpieczenia | od 1.01.2027 (ustawa z 18.12.2025) |
+| upały w pracy | progi 28/25°C i 35/32°C | od 11.01.2027 (Dz.U. 2026 poz. 927) |
+| procedury antymobbingowe | regulamin / odrębny regulamin (od 10 pracowników) | do 5.05.2027 |
+| PPK — autozapis | ponowny autozapis | 1.04.2027 |
+Zasada: liczby „pewne” wpisujesz do parametrów programu w grudniu; „projekt” — do kalendarza z datą sprawdzenia."""
 
 WYJASNIENIA["rekrutacja_jawnosc"] = """## Jakich danych możesz żądać od kandydata (art. 22¹ §1 KP)
 Zawsze: imię i nazwisko, data urodzenia, dane kontaktowe.
@@ -152,8 +187,8 @@ Przedział ustalasz obiektywnie i neutralnie płciowo. Ogłoszenia mają być ne
 | rozmów nie ma | przed nawiązaniem stosunku pracy |
 Forma: papierowa lub elektroniczna, z wyprzedzeniem.
 
-Sankcje: grzywna 1 000–30 000 zł (art. 281) i odszkodowanie za dyskryminację — nie mniej niż minimalne wynagrodzenie (art. 18³ᵈ).
-Pełne wdrożenie dyrektywy 2023/970 (prawo do informacji o średnich płacach, raport luki) to projekt UC127. W XI 2026 jeszcze nieuchwalony.
+Sankcje: ustawa z 4.06.2025 nie dodała osobnego wykroczenia — ryzyko to roszczenie kandydata z art. 18³ᵈ (zadośćuczynienie nie niższe niż minimalne wynagrodzenie albo odszkodowanie), wystąpienie PIP i wizerunek; kary pieniężne 2 000–60 000 zł przewiduje dopiero projekt UC127.
+Pełne wdrożenie dyrektywy 2023/970 (prawo do informacji o średnich płacach, raport luki) to projekt UC127: druga wersja z 29.04.2026, Rada Ministrów planuje przyjęcie w IV kw. 2026, do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. Do tego czasu brak informacji o wynagrodzeniu nie jest wykroczeniem z art. 281 KP.
 
 ## RODO w rekrutacji
 | Element | Zasada |
@@ -1033,7 +1068,7 @@ Oświadczenia o innych tytułach i ich aktualizacje to podstawa Twojej decyzji. 
 
 ## Minimalna stawka godzinowa
 31,40 zł w 2026 (32,30 zł w 2027). Dotyczy zleceń i usług wykonywanych przez osoby fizyczne, także samozatrudnionych bez pracowników.
-- Obowiązek POTWIERDZANIA LICZBY GODZIN — ewidencja w formie ustalonej w umowie. Brak ewidencji to wykroczenie: PIP 1 000–30 000 zł.
+- Obowiązek POTWIERDZANIA LICZBY GODZIN — ewidencja w formie ustalonej w umowie. Brak ewidencji to wykroczenie: grzywna 2 000–60 000 zł (od 8.07.2026).
 - Wypłata co najmniej raz w miesiącu przy umowach dłuższych. Zakaz zrzeczenia się.
 - Wyjątki: wynagrodzenie wyłącznie prowizyjne przy samodzielnym ustalaniu czasu i miejsca; opieka domowa w rodzinnych domach pomocy itp.
 
@@ -1111,9 +1146,19 @@ WYJASNIENIA["cudzoziemcy_b2b"] = """## Cudzoziemcy — ustawa z 20.03.2025 (Dz.U
 | oświadczenie o powierzeniu pracy (PUP, do 24 miesięcy) | obywatele Armenii, Białorusi, Gruzji, Mołdawii, Ukrainy; wpis w 7 dni roboczych |
 Zwolnieni z zezwolenia: obywatele UE/EOG/Szwajcarii, posiadacze zezwolenia na pobyt stały lub rezydenta UE, Karty Polaka, studenci stacjonarni, absolwenci polskich uczelni, małżonkowie obywateli PL.
 
-## Obywatele Ukrainy — specustawa z 12.03.2022
-Legalny pobyt (status UKR) przedłużany kolejnymi nowelizacjami — ostatnio do 4.03.2026 z zapowiedzią kolejnego przedłużenia lub przejścia na CUKR. Sprawdź aktualną datę.
-Praca na podstawie POWIADOMIENIA PUP w 14 dni od podjęcia (praca.gov.pl). Warunki: wynagrodzenie nie niższe niż w powiadomieniu i co najmniej minimalne; wymiar nie niższy. Od 2025 obowiązek umowy pisemnej i zgłoszenia do ZUS.
+## Obywatele Ukrainy — po wygaszeniu specustawy (ustawa z 23.01.2026, Dz.U. 2026 poz. 203, od 5.03.2026)
+| Element | Zasada |
+|---|---|
+| ochrona czasowa (PESEL ze statusem UKR) | do 4.03.2027 — na podstawie ustawy o udzielaniu cudzoziemcom ochrony, nie specustawy |
+| nowo przybyli | wniosek o PESEL UKR w 30 dni od wjazdu; inaczej brak ochrony |
+| potwierdzenie tożsamości | PESEL nadany na oświadczenie → paszport w gminie do 31.08.2026; inaczej status NUE i utrata pobytu od 1.09.2026 |
+| utrata ochrony | wyjazd z Polski na ponad 30 dni; uzyskanie zezwolenia na pobyt czasowy (karta CUKR — wnioski przez system MOS 2); pisemne zrzeczenie |
+| praca | bez zezwolenia — POWIADOMIENIE PUP przez praca.gov.pl (formularz PSZ-PPWPU) w 7 DNI od podjęcia pracy (do 4.03.2026 było 14) |
+| nowe powiadomienie | zmiana rodzaju umowy, stanowiska, wymiaru albo obniżka wynagrodzenia |
+| warunki | wynagrodzenie nie niższe niż w powiadomieniu i co najmniej minimalne; wymiar nie niższy; umowa pisemna z tłumaczeniem; ZUS |
+| kara | brak lub spóźnione powiadomienie — grzywna 1 000–3 000 zł |
+| okres przejściowy | każdy legalnie przebywający obywatel Ukrainy może pracować na powiadomienie przez 3 lata od 5.03.2026 (art. 5a ustawy o warunkach dopuszczalności) |
+| po 4.03.2027 | zwykłe tytuły pobytowe: zezwolenie na pobyt czasowy i pracę, karta CUKR; powiadomienia złożone wcześniej zachowują ważność na dotychczasowych warunkach |
 
 ## Kary i dokumenty
 Nielegalne powierzenie pracy: grzywna 3 000–50 000 zł; przy wielokrotności i wyzysku — przestępstwo.
@@ -1136,14 +1181,14 @@ Pracodawca sprawdza i kopiuje dokument pobytowy (wiza, karta pobytu, paszport). 
 ## B2B i art. 22 KP
 Art. 22 §1¹: zatrudnienie w warunkach stosunku pracy jest stosunkiem pracy bez względu na nazwę umowy. Warunki: praca określonego rodzaju na rzecz pracodawcy i pod jego KIEROWNICTWEM, w miejscu i czasie wyznaczonym, osobiście, za wynagrodzeniem, ryzyko gospodarcze po stronie firmy.
 Art. 22 §1²: zakaz zastępowania umowy o pracę umową cywilnoprawną.
-Kto przekwalifikowuje: sąd na powództwo pracownika lub PIP. Projekt nowelizacji ustawy o PIP 2025/2026 — decyzja administracyjna inspektora przekształcająca umowę; status: projekt.
+Kto przekwalifikowuje: sąd na powództwo pracownika lub PIP — a od 8.07.2026 także okręgowy inspektor pracy DECYZJĄ o ustaleniu istnienia stosunku pracy (ustawa z 11.03.2026 o zmianie ustawy o PIP, Dz.U. 2026 poz. 473): odwołanie w 30 dni do sądu pracy, rozpoznanie w 30 dni, dla osób szczególnie chronionych rygor natychmiastowej wykonalności. ABOLICJA do 8.07.2027: pracodawca, który sam zawrze umowę o pracę z osobą dotąd na umowie cywilnoprawnej, nie odpowiada za wykroczenie. (Specustawa z 12.03.2022 dla obywateli Ukrainy — wygaszona od 5.03.2026, patrz wyżej.)
 
 | Skutek przekwalifikowania | Szczegóły |
 |---|---|
 | składki ZUS za 5 lat | całość płaci pracodawca; części pracownika nie może potrącić (SN) |
 | PIT | zaległy PIT jako płatnik; różnica między liniowym a skalą — po stronie pracownika |
 | uprawnienia | urlopy i ekwiwalent, nadgodziny, PPK, ochrona, PFRON/ZFŚS |
-| wykroczenie | 1 000–30 000 zł |
+| wykroczenie (art. 281 §1 pkt 1 KP) | 2 000–60 000 zł od 8.07.2026; recydywa 3 000–90 000 |
 
 ## Test bezpiecznego B2B
 - Własny sprzęt i miejsce.
@@ -1437,7 +1482,8 @@ WYJASNIENIA["kalendarz_roczny"] = """## Co miesiąc (spółka z o.o., wypłata d
 | do 20. | zaliczka PIT na mikrorachunek; DEK-I-0 lub INF-1 PFRON |
 | do 25. | Wn-D (SOD) |
 | w 7 dni | ZUA, ZWUA, ZCNA, RUD, zmiany danych |
-| w 14 dni | powiadomienia PUP (Ukraina), protokoły powypadkowe |
+| w 7 dni | powiadomienia PUP (Ukraina; od 5.03.2026) |
+| w 14 dni | protokoły powypadkowe |
 Bieżąco: zajęcia komornicze (odpowiedź 7 dni), wnioski o urlopy rodzicielskie (21 dni), badania okresowe (terminy z orzeczeń), kończące się umowy (ZWUA, świadectwo, ekwiwalent), limity 33/3, okresy próbne, wygasające dokumenty cudzoziemców, kary porządkowe (rok), dokumenty do akt.
 
 ## W roku
@@ -1610,7 +1656,7 @@ NIE wpisujesz: przyczyny rozwiązania, oceny, kar.
 | odmowa (albo brak odpowiedzi) → sąd pracy | 14 dni |
 | nowe świadectwo po wyroku | 7 dni |
 Kopia w aktach C.
-Odszkodowanie za niewydanie lub wadliwe świadectwo — do 6 tygodni wynagrodzenia, gdy pracownik nie mógł podjąć pracy. Niewydanie to wykroczenie (1 000–30 000).
+Odszkodowanie za niewydanie lub wadliwe świadectwo — do 6 tygodni wynagrodzenia, gdy pracownik nie mógł podjąć pracy. Niewydanie to wykroczenie z art. 282 §1 pkt 3 (2 000–60 000 zł od 8.07.2026).
 Zmiana podstawy po wyroku (np. art. 52 → art. 30 §1 pkt 2) — nowe świadectwo.
 Śmierć pracownika — świadectwo do akt; rodzina może wnioskować.
 Świadectwo podpisuje osoba upoważniona. E-doręczenie oryginału z podpisem kwalifikowanym — dopuszczalne za zgodą; praktyka ostrożna: papier.
@@ -1644,26 +1690,32 @@ Mobbing to uporczywe nękanie pracownika (art. 94³ §2). Zachowanie — działa
 - polega na nieuzasadnionej krytyce, utrudnianiu wykonywania pracy, bezpodstawnym obciążaniu lub odbieraniu zadań.
 | Element definicji | Nowa zasada |
 |---|---|
-| uporczywość | powtarzalność lub długotrwałość — bez sztywnego minimum czasowego (SN wcześniej wymagał miesięcy) |
-| zamiar (wina umyślna) | nie jest wymagany |
-| skutek „zaniżonej oceny przydatności zawodowej” | nie jest wymagany |
-| kto może mobbować | przełożony, współpracownik, podwładny |
-| jednorazowe ciężkie zdarzenie | to nie mobbing; może być dyskryminacją albo naruszeniem dóbr |
+| uporczywość (§3) | zachowania powtarzalne, nawracające lub stałe — bez sztywnego minimum czasowego (SN wcześniej wymagał miesięcy) |
+| forma (§5–6) | fizyczna, werbalna lub pozawerbalna; także nakazywanie i zachęcanie |
+| zamiar (§7) | nie jest wymagany |
+| skutek „zaniżonej oceny przydatności zawodowej”, rozstrój zdrowia | nie są wymagane |
+| kto może mobbować (§8) | pracodawca, przełożony, współpracownik, podwładny, osoba na innej podstawie, także grupa |
+| uzasadniona krytyka, rozliczanie z pracy (§9) | to nie mobbing — jeśli we właściwej formie |
+| jednorazowe ciężkie zdarzenie | to nie mobbing; może być dyskryminacją albo naruszeniem dóbr osobistych |
+| ocena (§10) | indywidualna, z uwzględnieniem okoliczności |
 
 ## Obowiązki pracodawcy (art. 94³ §1)
-Pracodawca PRZECIWDZIAŁA mobbingowi: prewencja (szkolenia, zasady), wykrywanie (kanał zgłoszeń), reagowanie (postępowanie wyjaśniające), wsparcie ofiary.
-Zasady przeciwdziałania określa regulamin pracy; u pracodawców bez regulaminu — obwieszczenie.
-Pracodawcy objęci obowiązkiem (zgodnie z ustawą — zatrudniający co najmniej 10 pracowników) mają czas do 5.05.2027.
+Pracodawca STALE PRZECIWDZIAŁA mobbingowi: zapobieganie (szkolenia, zasady), wykrywanie (kanał zgłoszeń), skuteczne reagowanie (postępowanie wyjaśniające), naprawianie skutków i wsparcie osób pokrzywdzonych.
+Reguły, procedury i częstotliwość działań określa układ zbiorowy albo regulamin pracy (art. 104¹ §1 pkt 10). Pracodawca zatrudniający co najmniej 10 pracowników, który nie ma ich tam, wydaje ODRĘBNY REGULAMIN (art. 94³ᵃ): uzgadnia go ze związkami (gdy brak uzgodnienia w 30 dni od przedstawienia projektu — ustala sam), a bez związków — z przedstawicielami pracowników; stosuje się art. 104³ (wejście w życie 2 tygodnie po podaniu do wiadomości). Nie „obwieszczenie”.
+Termin dostosowania: 6 miesięcy od wejścia w życie, czyli do 5.05.2027.
 
 ## Roszczenia pracownika
 | Roszczenie | Zasady |
 |---|---|
-| zadośćuczynienie za rozstrój zdrowia | wymaga udowodnienia rozstroju |
-| odszkodowanie | nie niższe niż 6-krotność minimalnego wynagrodzenia: 28 836 zł w 2026, 29 700 zł w 2027 |
-Nowość: odszkodowanie bez konieczności rozwiązania umowy przez pracownika. Dotąd warunkiem było rozwiązanie umowy z powodu mobbingu.
-Pracodawca odpowiada za własne zaniechania w przeciwdziałaniu — także gdy mobberem jest współpracownik.
-Zwolnienie z odpowiedzialności za odszkodowanie: mobbingu nie dopuścił się pracodawca ani osoba zarządzająca, a pracodawca WYKAŻE, że realizował obowiązek przeciwdziałania (rzeczywista procedura, szkolenia, reakcja). To główny powód, by wdrożyć procedurę.
-Ciężar dowodu: pracownik uprawdopodabnia. Dokumentacja po stronie pracodawcy decyduje.
+| ZADOŚĆUCZYNIENIE (§11) | nie niższe niż 6-krotność minimalnego wynagrodzenia: 28 836 zł w 2026, 29 700 zł w 2027 — bez wymogu rozstroju zdrowia |
+| albo ODSZKODOWANIE (§11) | gdy pracownik wykaże szkodę majątkową wyższą (np. utracone zarobki) |
+| regres (§12) | pracodawca, który zapłacił, może żądać zwrotu od sprawcy — stosownie do winy sprawcy i własnej |
+| odwet (art. 18³ᵉ) | zgłoszenie mobbingu nie może być podstawą niekorzystnego traktowania ani wypowiedzenia — zadośćuczynienie ≥ minimalne albo odszkodowanie, także dla świadka/osoby wspierającej |
+| nakazywanie i zachęcanie (§6) | są mobbingiem także wtedy, gdy nakazujący sam nie nęka |
+Nowość: roszczenie bez konieczności rozwiązania umowy przez pracownika i bez wykazywania rozstroju zdrowia (dotąd zadośćuczynienie wymagało rozstroju, a odszkodowanie — rozwiązania umowy z powodu mobbingu).
+Roszczenie kieruje się do PRACODAWCY — także gdy mobberem jest współpracownik lub podwładny.
+UWAGA — częsty błąd: uchwalona ustawa NIE zawiera przepisu zwalniającego pracodawcę z odpowiedzialności, gdy wykaże, że przeciwdziałał mobbingowi. Taki przepis był w projekcie rządowym, ale nie znalazł się w ustawie. Procedura nadal się opłaca: szybka reakcja przerywa „uporczywość” (brak mobbingu), dokumentacja jest dowodem w sądzie i podstawą regresu, a brak regulaminu z art. 94³ᵃ to osobne naruszenie kontrolowane przez PIP.
+Ciężar dowodu mobbingu: zasady ogólne (pracownik dowodzi; sąd ocenia indywidualnie). Przy równym traktowaniu — uprawdopodobnienie (art. 18³ᶠ). Sprawy o mobbing, dobra osobiste i równe traktowanie — sąd rejonowy bez względu na wartość (art. 461 §1¹ KPC); błędna podstawa prawna pozwu nie jest powodem oddalenia (art. 477⁶ᵃ KPC).
 
 ## Dyskryminacja (art. 11³, 18³ᵃ–18³ᵉ)
 Zakaz jakiejkolwiek dyskryminacji — bezpośredniej i pośredniej.
@@ -1674,10 +1726,16 @@ Cechy (katalog otwarty): płeć, wiek, niepełnosprawność, rasa, religia, naro
 | molestowanie | niepożądane zachowanie naruszające godność |
 | molestowanie seksualne | — |
 | inne | zachęcanie i nakazywanie dyskryminacji; działania odwetowe za skorzystanie z uprawnień |
+| nowe od 5.11.2026 | dyskryminacja PRZEZ ZAŁOŻENIE (cecha mylnie przypisana) i PRZEZ SKOJARZENIE (związek z osobą o danej cesze) |
 Dozwolone różnicowanie (art. 18³ᵇ §2): obiektywne powody — staż, kwalifikacje, jakość pracy, rzeczywiste wymagania zawodowe, wiek przy ochronie, programy wyrównawcze.
 Równe wynagrodzenie (art. 18³ᶜ): za jednakową pracę LUB pracę jednakowej wartości (porównywalne kwalifikacje, odpowiedzialność, wysiłek) — wszystkie składniki i świadczenia.
-Ciężar dowodu: pracownik uprawdopodabnia (wskazuje cechę i gorsze traktowanie); pracodawca udowadnia obiektywne kryteria.
-Odszkodowanie (art. 18³ᵈ): nie niższe niż minimalne wynagrodzenie (4 806), bez górnej granicy, niezależnie od szkody.
+Ciężar dowodu (art. 18³ᶠ, od 5.11.2026 wprost w KP): pracownik uprawdopodabnia (wskazuje cechę i gorsze traktowanie); pracodawca udowadnia, że zasady nie naruszył.
+| Roszczenie (art. 18³ᵈ–18³ᵉ) | Minimum |
+|---|---|
+| zadośćuczynienie za naruszenie równego traktowania | minimalne wynagrodzenie (4 806 zł) — albo odszkodowanie; bez górnej granicy |
+| przy WIELOKROTNYM naruszeniu (powtarzalne z tej samej przyczyny, z wielu przyczyn albo jednorazowe z wielu przyczyn naraz) | 3 × minimalne (14 418 zł) |
+| odwet za skorzystanie z uprawnień — także wobec osoby wspierającej | zadośćuczynienie ≥ minimalne albo odszkodowanie |
+Art. 18³ᵍ: pracodawca systematycznie przeciwdziała naruszeniom równego traktowania (zapobieganie, wykrywanie, reagowanie, naprawianie skutków).
 Nierówne traktowanie z innych przyczyn (art. 11² — „równe prawa za jednakowe obowiązki”) — roszczenia na zasadach ogólnych.
 
 ## Procedura wewnętrzna (do 5.05.2027)
@@ -1690,18 +1748,18 @@ Nierówne traktowanie z innych przyczyn (art. 11² — „równe prawa za jednak
 | informacja zwrotna | dla zgłaszającego |
 | rejestr spraw | RODO — dostęp ograniczony; retencja do przedawnienia 3 lata |
 | szkolenia | wszyscy przy zatrudnieniu i co 2 lata; kadra kierownicza osobno |
-| inne | ankiety klimatu; zapisy w regulaminie pracy (uzgodnienie ze związkami, 2 tygodnie od podania do wiadomości); potwierdzenie zapoznania (akta B) |
-Kadry dokumentują KAŻDE zgłoszenie i reakcję. Brak reakcji to odpowiedzialność pracodawcy — nawet przy dobrej procedurze."""
+| inne | ankiety klimatu; zapisy w układzie / regulaminie pracy (uzgodnienie ze związkami, 2 tygodnie od podania do wiadomości) albo odrębny regulamin z art. 94³ᵃ (uzgodnienie ze związkami — 30 dni — lub z przedstawicielami pracowników); potwierdzenie zapoznania (akta B) |
+Kadry dokumentują KAŻDE zgłoszenie i reakcję. Pracodawca odpowiada wobec pracownika niezależnie od procedury — ale bez dokumentacji nie ma dowodu przeciwdziałania, podstawy do regresu ani obrony przed PIP."""
 
 WYJASNIENIA["jawnosc_wynagrodzen"] = """## Co obowiązuje od 24.12.2025 (Dz.U. 2025 poz. 807)
 - Informacja o wynagrodzeniu lub przedziale dla kandydata (art. 18³ᶜᵃ).
 - Zakaz pytania o historię wynagrodzeń (art. 22¹ §1 pkt 6).
 - Neutralne płciowo ogłoszenia.
 - Obowiązek informowania o postanowieniach układu lub regulaminu wynagradzania dotyczących stanowiska.
-Sankcja: 1 000–30 000 zł.
+Sankcja: ustawa z 4.06.2025 nie dodała osobnego wykroczenia do art. 281 KP. Ryzyko to roszczenie kandydata z art. 18³ᵈ (zadośćuczynienie nie niższe niż minimalne wynagrodzenie albo odszkodowanie), wystąpienie PIP i wizerunek. Kary pieniężne 2 000–60 000 zł przewiduje dopiero projekt UC127.
 
 ## Co nadchodzi — dyrektywa (UE) 2023/970
-Termin transpozycji: 7.06.2026 — Polska spóźniona. Projekt UC127 (zmiana KP i innych ustaw) jest w procesie rządowo-parlamentarnym, nieuchwalony na XI 2026. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
+Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może wszcząć postępowanie o naruszenie). Projekt UC127 (zmiana KP i innych ustaw): pierwsza wersja XII 2025, druga 29.04.2026 po uzgodnieniach; Rada Ministrów planuje przyjęcie w IV kw. 2026; do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. W projekcie: sprawozdania o luce płacowej dla pracodawców od 100 pracowników, kary pieniężne 2 000–60 000 zł, organ monitorujący — PIP. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
 | Element dyrektywy | Zasada |
 |---|---|
 | prawo do informacji | pracownik może żądać informacji o swoim indywidualnym wynagrodzeniu oraz o ŚREDNIM poziomie wynagrodzeń (w podziale na płeć) dla kategorii pracowników wykonujących tę samą pracę lub pracę tej samej wartości; odpowiedź w 2 miesiące; pracodawca co roku przypomina o tym prawie |
@@ -1788,10 +1846,11 @@ Trzy rodzaje: całkowita, hybrydowa, okazjonalna.
 - Naruszenia: ocena ryzyka; zgłoszenie do UODO w 72 h; informacja dla osób przy wysokim ryzyku — np. wysłanie listy płac do niewłaściwego odbiorcy.
 - Zasady: minimalizacja (nie kopiujesz dowodu osobistego — tylko dane; PESEL tak), szyfrowanie, czyste biurko, kontrola dostępu do akt."""
 
-WYJASNIENIA["kontrola_pip_zus"] = """## PIP (ustawa z 13.04.2007)
+WYJASNIENIA["kontrola_pip_zus"] = """## PIP (ustawa z 13.04.2007; duża nowelizacja — ustawa z 11.03.2026, Dz.U. 2026 poz. 473)
+Nowelizacja obowiązuje w większości od 8.07.2026 (część przepisów od 8.04.2026). Prezydent podpisał ją 2.04.2026 i skierował w trybie następczym do Trybunału Konstytucyjnego — śledź orzeczenie. Najważniejsze zmiany: decyzja o ustaleniu stosunku pracy, wyższe grzywny i mandaty, kontrole zdalne, abolicja, interpretacje indywidualne.
 Inspektor kontroluje BEZ UPRZEDZENIA — nie stosuje się zawiadomienia z Prawa przedsiębiorców (Konwencja MOP nr 81). O każdej porze, po okazaniu legitymacji; upoważnienie doręcza najpóźniej w 7 dni.
 Uprawnienia: wstęp na teren; wgląd w dokumenty (akta, ewidencja czasu pracy, listy płac, regulaminy, umowy cywilnoprawne, dokumenty cudzoziemców, BHP, ZFŚS); kopie; przesłuchanie pracodawcy i pracowników, także byłych; oględziny; nagrania; wezwanie do siedziby PIP.
-Przedmiot kontroli: legalność zatrudnienia (umowy, cudzoziemcy, zgłoszenia ZUS), wynagrodzenia i terminy, czas pracy, urlopy, BHP, umowy cywilnoprawne (art. 22), minimalna stawka godzinowa, równe traktowanie, jawność w rekrutacji, sygnaliści, mobbing (od 2026).
+Przedmiot kontroli: legalność zatrudnienia (umowy, cudzoziemcy, zgłoszenia ZUS), wynagrodzenia i terminy, czas pracy, urlopy, BHP, umowy cywilnoprawne (art. 22), minimalna stawka godzinowa, równe traktowanie, jawność w rekrutacji, sygnaliści, mobbing (od 2026), układy zbiorowe i porozumienia (ustawa z 5.11.2025, od 13.12.2025), praca platformowa (projekt UC160).
 
 | Środek PIP | Co oznacza |
 |---|---|
@@ -1799,12 +1858,15 @@ Przedmiot kontroli: legalność zatrudnienia (umowy, cudzoziemcy, zgłoszenia ZU
 | NAKAZ PŁACOWY | wypłata należnego wynagrodzenia lub świadczenia — natychmiast wykonalny |
 | WYSTĄPIENIE | usunięcie naruszeń prawa — odpowiedź w 30 dni z informacją o realizacji |
 | POLECENIE | ustne |
-| MANDAT | 1 000–2 000 zł; do 5 000 przy ponownym wykroczeniu w 2 lata |
-| WNIOSEK DO SĄDU o ukaranie | grzywna 1 000–30 000 zł (art. 281–283 KP); za cudzoziemców 3 000–50 000 |
+| MANDAT | do 10 000 zł (od 8.07.2026; wcześniej 1 000–2 000, do 5 000 przy recydywie) |
+| WNIOSEK DO SĄDU o ukaranie | grzywna 2 000–60 000 zł; recydywa i dłużnicy alimentacyjni 3 000–90 000 (art. 281–283 KP od 8.07.2026; wcześniej 1 000–30 000); za cudzoziemców 3 000–50 000 |
 | ZAWIADOMIENIE PROKURATURY | art. 218 KK — złośliwe lub uporczywe naruszanie praw pracownika; art. 219 — niezgłoszenie do ZUS; art. 220 — narażenie życia |
-| POWÓDZTWO o ustalenie stosunku pracy | projekt 2025/2026: decyzja administracyjna inspektora przekształcająca umowę cywilnoprawną w umowę o pracę — status: projekt, śledź |
+| DECYZJA o ustaleniu istnienia stosunku pracy | OBOWIĄZUJE od 8.07.2026 (ustawa z 11.03.2026, Dz.U. 2026 poz. 473): okręgowy inspektor pracy stwierdza decyzją, że umowa cywilnoprawna lub B2B jest stosunkiem pracy; stronami są pracodawca i osoba zatrudniona; odwołanie w 30 dni do sądu pracy (rozpoznanie w 30 dni, możliwe zabezpieczenie); dla osób szczególnie chronionych — rygor natychmiastowej wykonalności; alternatywnie powództwo o ustalenie |
+| ABOLICJA | do 8.07.2027: pracodawca, który sam zawrze umowę o pracę z osobą dotąd na umowie cywilnoprawnej, nie odpowiada za wykroczenie z art. 281 §1 pkt 1 |
+| KONTROLA ZDALNA, dane ZUS | dokumenty przez e-PIP / e-doręczenia; PIP ma dostęp do danych ZUS o ubezpieczonych |
+| INTERPRETACJA INDYWIDUALNA GIP | wniosek (40 zł), odpowiedź w 30 dni, wiążąca dla PIP, publikowana w BIP |
 | wpis do rejestru | — |
-Protokół: podpisujesz z możliwością ZASTRZEŻEŃ w 7 dni (inspektor rozpatruje, uzupełnia). Odwołanie od nakazu (decyzji) — do okręgowego inspektora pracy w 14 dni (KPA), dalej skarga do WSA.
+Protokół: podpisujesz z możliwością ZASTRZEŻEŃ w 7 dni (inspektor rozpatruje, uzupełnia). Odwołanie od nakazu (decyzji) — do okręgowego inspektora pracy w 7 dni (art. 34 ust. 5 ustawy o PIP — krócej niż 14 dni z KPA), dalej skarga do WSA.
 Najczęstsze ustalenia (sprawozdania GIP): nieterminowe lub zaniżone wynagrodzenia i nadgodziny; braki w ewidencji czasu pracy; umowy cywilnoprawne w warunkach etatu; brak badań i szkoleń BHP; niewydanie świadectw; nieudzielenie zaległych urlopów; ewidencja godzin zleceniobiorców; brak potwierdzenia umowy przed dopuszczeniem; jawność w rekrutacji (od 2026).
 
 ## ZUS (art. 86–97 ustawy systemowej)

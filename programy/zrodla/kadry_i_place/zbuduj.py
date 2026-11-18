@@ -37,11 +37,14 @@ from standard_5 import STANDARD_5                 # noqa: E402
 from powtorki import POWTORKI                     # noqa: E402
 from diagnoza import DIAGNOZA, PYTANIA_DZIENNIKA, QUIZ_LEKCJE  # noqa: E402
 from szablony import SZABLONY_DODATKOWE           # noqa: E402
+from lekcje_zagranica import LEKCJE_ZAGRANICA, STANDARD_ZAGRANICA, CELE_ZAGRANICA  # noqa: E402
+from zrodla_lekcji import ZRODLA, ZRODLA_KURSU     # noqa: E402
 import reszta                                     # noqa: E402
 
 STANDARD = {}
-for _m in (STANDARD_1, STANDARD_2, STANDARD_3, STANDARD_4, STANDARD_5, STANDARD_DELEGACJE):
+for _m in (STANDARD_1, STANDARD_2, STANDARD_3, STANDARD_4, STANDARD_5, STANDARD_DELEGACJE, STANDARD_ZAGRANICA):
     STANDARD.update(_m)
+CELE.update(CELE_ZAGRANICA)
 
 # pola, które standard nadpisuje w lekcji (zadania/w_praktyce — gdy stara wersja odsyłała poza Mentora)
 NADPISZ_W_PRAKTYCE = {
@@ -167,7 +170,7 @@ def _dopasuj_lekcje_quizu(tydzien, idx, q, lekcje_tyg, lekcje_po_id):
 
 
 def zbuduj():
-    zrodla = {l["id"]: l for l in [LEKCJA_START] + LEKCJE_1 + LEKCJE_2 + LEKCJE_3 + [LEKCJA_DELEGACJE]}
+    zrodla = {l["id"]: l for l in [LEKCJA_START] + LEKCJE_1 + LEKCJE_2 + LEKCJE_3 + [LEKCJA_DELEGACJE] + LEKCJE_ZAGRANICA}
     tydzien_lekcji = {}
     for w in PLAN:
         for lid in w["lekcje"]:
@@ -192,11 +195,15 @@ def zbuduj():
             elif "\n## " not in l["wyjasnienie"] and not l["wyjasnienie"].startswith("## "):
                 l["wyjasnienie"] = uczytelnij(l["wyjasnienie"])   # stary styl: automatyczne nagłówki i punkty
             assert l.get("cel"), f"lekcja {l['id']} bez celu"
+            l["zrodla"] = [list(z) for z in ZRODLA.get(l["id"], [])]   # sprawdzone materiały (tytuł, adres, data dostępu)
             l = _zastosuj_standard(l)
             assert l.get("cwiczenia") and l.get("demonstracja"), f"lekcja {l['id']} bez bloków standardu"
             lekcje.append(l)
     assert set(CELE) <= {l["id"] for l in lekcje}, set(CELE) - {l["id"] for l in lekcje}
     assert set(STANDARD) == {l["id"] for l in lekcje}, set(STANDARD) ^ {l["id"] for l in lekcje}
+    assert set(ZRODLA) <= {l["id"] for l in lekcje}, set(ZRODLA) - {l["id"] for l in lekcje}
+    for z in ZRODLA_KURSU:
+        assert len(z) == 3 and z[1].startswith("https://"), z
     # powtórki — po lekcjach etapu, dołączone do ostatniego tygodnia etapu
     for pw in POWTORKI:
         pw = dict(pw)
@@ -289,14 +296,15 @@ def zbuduj():
         "format": "mentor-program/1",
         "id": "kadry-i-place",
         "nazwa": "Kadry i płace — kurs zaawansowany (praktyka 2026)",
-        "podtytul": "16 tygodni · prawo pracy, lista płac, delegacje, zasiłki, ZUS, PIT, ZFŚS/PFRON, ustanie zatrudnienia, compliance 2026",
+        "podtytul": "16 tygodni · prawo pracy, lista płac, delegacje, zasiłki, ZUS, PIT, ZFŚS/PFRON, ustanie zatrudnienia, compliance 2026/2027, prawo UE i praktyki HR z zagranicy",
         "opis": "Po 16 tygodniach samodzielnie prowadzisz kadry i płace firmy zatrudniającej kilkadziesiąt osób: zawierasz i rozwiązujesz umowy, "
                 "rozliczasz czas pracy i urlopy, liczysz listę płac od brutto do netto, zasiłki, delegacje, ekwiwalenty i potrącenia, składasz dokumenty do ZUS, US, PFRON, "
                 "prowadzisz ZFŚS i PPK, wdrażasz procedury wymagane w 2026 r. (staż z zleceń, kontrola L4, mobbing, jawność wynagrodzeń, sygnaliści) "
-                "i przygotowujesz firmę do kontroli PIP/ZUS. Wszystko na fikcyjnej firmie AGRO-MLEKO, z liczbami obowiązującymi w 2026 r. "
-                "i podstawą prawną przy każdej liczbie. Uczysz się z asystentem AI (Claude Code, API albo tryb offline): kazusy rozwiązujesz sam, asystent pyta i wskazuje przepisy.",
-        "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude, stan prawny XI 2026)",
-        "wersja": "2.1",
+                "i przygotowujesz firmę do kontroli PIP/ZUS (po reformie z 2026 r.). Wszystko na fikcyjnej firmie AGRO-MLEKO, z liczbami obowiązującymi w 2026 r. "
+                "i podstawą prawną przy każdej liczbie; każda zaktualizowana lekcja ma listę sprawdzonych źródeł (Dz.U., ELI, EUR-Lex, TSUE, MOP, EU-OSHA, ACAS, CIPD) z datą dostępu. "
+                "Dwie lekcje przenoszą do polskich realiów materiały zagraniczne: koordynację ZUS i delegowanie w UE oraz procedury HR z ACAS/CIPD. Uczysz się z asystentem AI (Claude Code, API albo tryb offline): kazusy rozwiązujesz sam, asystent pyta i wskazuje przepisy.",
+        "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude; audyt źródeł 18.11.2026)",
+        "wersja": "2.2",
         "jezyk": "pl",
         "katalog_projektu": "kadry-praktyka",
         "stanowisko": "Specjalista ds. kadr i płac",
@@ -343,13 +351,14 @@ def zbuduj():
                    {"tytul": "Terminy", "pozycje": [list(x) for x in reszta.SCIAGA_TERMINY]},
                    {"tytul": "Dokumenty i kody ZUS / US / PFRON", "pozycje": [list(x) for x in reszta.SCIAGA_ZUS]}],
         "linki": reszta.LINKI,
+        "zrodla_kursu": [list(z) for z in ZRODLA_KURSU],
         "wskazowki": reszta.WSKAZOWKI,
         "motywacja_powrot": reszta.MOTYWACJA_POWROT,
         "pojecia": reszta.POJECIA,
         "bledy": reszta.BLEDY,
         "pytania_rekrutacyjne": [list(p) for p in reszta.PYTANIA_REKRUTACYJNE],
         "tematy_wpisu": sorted({l["nazwa"] for l in lekcje}),
-        "stan_prawny": "listopad 2026",
+        "stan_prawny": "18 listopada 2026",
     }
     # kontrola spójności
     for l in lekcje:

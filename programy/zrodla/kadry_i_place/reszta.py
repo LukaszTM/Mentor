@@ -57,7 +57,7 @@ QUIZY = {
         {"p": "Minimalna stawka godzinowa na zleceniu w 2026 r.:", "o": ["30,50 zł", "31,40 zł", "32,30 zł", "28,10 zł"], "odp": 1, "w": "Obowiązek ewidencji godzin."},
         {"p": "Umowę o dzieło zgłaszasz do ZUS na formularzu:", "o": ["ZUA", "RUD w 7 dni", "ZZA", "Nie zgłaszasz"], "odp": 1, "w": "Dzieło z osobą niebędącą pracownikiem."},
         {"p": "Wpłata podstawowa pracownika do PPK:", "o": ["0,5%", "1,5%", "2%", "4%"], "odp": 2, "w": "Obniżenie do 0,5% przy wynagrodzeniu ≤ 120% minimalnego."},
-        {"p": "Powiadomienie PUP o zatrudnieniu obywatela Ukrainy (status UKR) składasz w:", "o": ["3 dni", "7 dni", "14 dni", "30 dni"], "odp": 2, "w": "Przez praca.gov.pl."},
+        {"p": "Powiadomienie PUP o zatrudnieniu obywatela Ukrainy (status UKR) składasz w:", "o": ["3 dni", "7 dni", "14 dni", "30 dni"], "odp": 1, "w": "Od 5.03.2026 (ustawa z 23.01.2026, Dz.U. 2026 poz. 203) — 7 dni przez praca.gov.pl; do 4.03.2026 było 14 dni."},
     ],
     8: [
         {"p": "Kod tytułu ubezpieczenia pracownika:", "o": ["01 10", "04 11", "05 10", "12 11"], "odp": 0, "w": "04 11 — zleceniobiorca."},
@@ -81,7 +81,7 @@ QUIZY = {
         {"p": "Pracownik może odwołać się od wypowiedzenia do sądu pracy w ciągu:", "o": ["7 dni", "14 dni", "21 dni", "30 dni"], "odp": 2, "w": "Art. 264 KP."},
     ],
     11: [
-        {"p": "Minimalne odszkodowanie za mobbing po nowelizacji 2026:", "o": ["Minimalne wynagrodzenie", "3-krotność minimalnego", "6-krotność minimalnego wynagrodzenia", "12-krotność"], "odp": 2, "w": "28 836 zł w 2026."},
+        {"p": "Minimalne zadośćuczynienie za mobbing po nowelizacji 2026 (art. 94³ §11 KP):", "o": ["Minimalne wynagrodzenie", "3-krotność minimalnego", "6-krotność minimalnego wynagrodzenia", "12-krotność"], "odp": 2, "w": "28 836 zł w 2026 (29 700 w 2027) — albo odszkodowanie; 3× minimalne to wielokrotna dyskryminacja (art. 18³ᵈ §2)."},
         {"p": "Dyrektywa 2023/970 przewiduje coroczne raportowanie luki płacowej od:", "o": ["50 pracowników", "100 pracowników", "150 pracowników", "250 pracowników"], "odp": 3, "w": "150–249 i 100–149 co 3 lata."},
         {"p": "Procedura zgłoszeń wewnętrznych (sygnaliści) — próg:", "o": ["20 osób", "50 osób", "100 osób", "250 osób"], "odp": 1, "w": "Ustawa z 14.06.2024."},
         {"p": "Inspektor PIP może rozpocząć kontrolę:", "o": ["Po zawiadomieniu 7 dni wcześniej", "Bez uprzedzenia, po okazaniu legitymacji", "Tylko w dni robocze 8–16", "Tylko po zgodzie pracodawcy"], "odp": 1, "w": "Konwencja MOP nr 81."},
@@ -263,8 +263,10 @@ SCIAGA_WSKAZNIKI = [
     ("PIT", "12% do 120 000 zł dochodu · 32% ponad · kwota zmniejszająca 300 zł/mies. (PIT-2) · KUP 250/300 · ulga dla młodych 85 528"),
     ("Współczynnik ekwiwalentu", "20,92 (2026, pełny etat)"),
     ("Odpis ZFŚS", "2 943,23 zł (37,5% × 7 848,60) · 75% do 31.05 · reszta do 30.09"),
-    ("Odprawa — limit", "72 090 zł (15 × minimalne)"),
-    ("Mobbing — min. odszkodowanie", "28 836 zł (6 × minimalne) od 5.11.2026"),
+    ("Odprawa — limit", "72 090 zł (15 × minimalne) · 74 250 zł (2027)"),
+    ("Grzywny i mandaty PIP (od 8.07.2026)", "grzywna 2 000–60 000 zł (recydywa, dłużnicy alimentacyjni 3 000–90 000) · mandat do 10 000 zł · cudzoziemcy 3 000–50 000 · stawka min. zleceń 1 000–30 000"),
+    ("Odsetki (XI 2026)", "ustawowe za opóźnienie 9,25% · podatkowe i ZUS za zwłokę 10,50% (od 5.03.2026) · ZUS nie pobiera, gdy ≤ 48,06 zł"),
+    ("Mobbing — min. zadośćuczynienie", "28 836 zł (6 × minimalne; albo odszkodowanie) od 5.11.2026"),
     ("Dodatek nocny", "20% × (4 806 / wymiar miesiąca) za godzinę"),
     ("Wynagrodzenie chorobowe", "33 dni (14 dla 50+) · 80% (100% ciąża, wypadek w drodze) · okres zasiłkowy 182/270"),
     ("Minimalna podstawa zasiłku", "4 147,10 zł (4 806 − 13,71%)"),
@@ -273,10 +275,11 @@ SCIAGA_WSKAZNIKI = [
     ("Rodzicielskie", "macierzyński 20 tyg. · rodzicielski 41 (9+9 nieprzenoszalne) · ojcowski 2 tyg. do 12 mies. · 81,5% przy wniosku w 21 dni"),
 ]
 SCIAGA_TERMINY = [
-    ("7 dni", "ZUA/ZZA, ZWUA, ZCNA, RUD, zmiana danych; informacja art. 29 §3; odpowiedź komornikowi; uwagi do protokołu PIP"),
+    ("7 dni", "ZUA/ZZA, ZWUA, ZCNA, RUD, zmiana danych; informacja art. 29 §3; powiadomienie PUP (Ukraina — od 5.03.2026); odpowiedź komornikowi; zastrzeżenia do protokołu PIP i odwołanie od nakazu PIP"),
     ("10. dnia miesiąca", "Najpóźniejszy termin wypłaty wynagrodzenia za miesiąc poprzedni (art. 85)"),
     ("15. / 20.", "ZUS DRA/RCA/RSA + składki: 15. osoby prawne, 20. pozostali, 5. budżet · PPK do 15. · PIT zaliczka i DEK-I-0 do 20. · Wn-D do 25."),
-    ("14 dni", "Powiadomienie PUP (Ukraina) · protokół powypadkowy · wniosek o sprostowanie świadectwa · zastrzeżenia do protokołu ZUS · PIT-11 na wniosek po ustaniu"),
+    ("14 dni", "Protokół powypadkowy · wniosek o sprostowanie świadectwa · zastrzeżenia do protokołu ZUS · PIT-11 na wniosek po ustaniu · rozliczenie delegacji"),
+    ("30 dni", "Odwołanie od decyzji PIP o ustaleniu stosunku pracy (od 8.07.2026) · odpowiedź na wystąpienie PIP · uzgodnienie regulaminu antymobbingowego ze związkami"),
     ("21 dni", "Odwołanie do sądu pracy · wniosek o rodzicielski dla 81,5% · wniosek o wychowawczy / elastyczną organizację"),
     ("31 stycznia", "PIT-4R, PIT-8AR, PIT-11 do US · ZUS IWA · informacja o nietworzeniu ZFŚS (< 50) · DEK-R do 20.01"),
     ("koniec lutego", "PIT-11 pracownikom · IFT-1R · IMIR · informacja o autozapisie PPK (2027)"),
@@ -314,6 +317,12 @@ LINKI = [
     ["GUS — przeciętne wynagrodzenie, sprawozdania", "https://stat.gov.pl"],
     ["Rządowy proces legislacyjny — status projektów (UC127, PIP)", "https://legislacja.gov.pl"],
     ["Sąd Najwyższy — orzecznictwo (Izba Pracy)", "https://www.sn.pl"],
+    ["EUR-Lex — prawo UE po polsku (rozporządzenie 883/2004, dyrektywy 2003/88, 2019/1152, 2019/1158, 2023/970, 2024/2831)", "https://eur-lex.europa.eu/homepage.html?locale=pl"],
+    ["Trybunał Sprawiedliwości UE — wyszukiwarka orzeczeń (CCOO C-55/18, Max-Planck C-684/16, C-19/23)", "https://curia.europa.eu/juris/recherche.jsf?language=pl"],
+    ["MOP (ILO) — NORMLEX: konwencje i ratyfikacje Polski", "https://normlex.ilo.org"],
+    ["EU-OSHA — Europejska Agencja Bezpieczeństwa i Zdrowia w Pracy (materiały po polsku, w tym „Heat at work”)", "https://osha.europa.eu/pl"],
+    ["ACAS (UK) — kodeksy praktyk i poradniki HR: skargi, dyscyplina, ocena okresowa", "https://www.acas.org.uk"],
+    ["CIPD (UK) — factsheety HR: induction, retention, performance", "https://www.cipd.org/uk/knowledge/"],
 ]
 
 WSKAZOWKI = [
@@ -375,7 +384,7 @@ POJECIA = {
     "akta osobowe": "Dokumentacja pracownika w 5 częściach: A (rekrutacja), B (przebieg), C (ustanie), D (kary), E (trzeźwość); 10 lat po ustaniu (od 2019).",
     "świadectwo pracy": "Dokument wydawany w dniu ustania zatrudnienia: okres, stanowiska, tryb rozwiązania, urlop, nieobecności, zajęcia — bez przyczyny i ocen.",
     "odprawa": "Świadczenie przy rozwiązaniu z przyczyn niedotyczących pracownika (1/2/3-miesięczne, do 72 090 zł; bez ZUS, z PIT) — pracodawca ≥ 20 pracowników; także emerytalna i pośmiertna.",
-    "mobbing": "Od 5.11.2026: uporczywe (powtarzalne lub długotrwałe) nękanie pracownika — poniżanie, izolowanie, zastraszanie…; odszkodowanie min. 6× minimalne wynagrodzenie.",
+    "mobbing": "Od 5.11.2026: uporczywe (powtarzalne, nawracające lub stałe) nękanie pracownika — poniżanie, izolowanie, zastraszanie…; zadośćuczynienie min. 6× minimalne wynagrodzenie albo odszkodowanie; regres wobec sprawcy.",
     "dyskryminacja": "Gorsze traktowanie ze względu na cechę (płeć, wiek, niepełnosprawność…) — bezpośrednie lub pośrednie; odszkodowanie nie niższe niż minimalne wynagrodzenie.",
     "jawność wynagrodzeń": "Od 24.12.2025: widełki dla kandydata i zakaz pytania o historię zarobków; dyrektywa 2023/970 (raporty luki płacowej, prawo do informacji) — projekt UC127.",
     "luka płacowa": "Różnica średnich/median wynagrodzeń kobiet i mężczyzn w tej samej kategorii pracy: (M − K)/M × 100%; ≥ 5% nieuzasadnione → wspólna ocena wynagrodzeń.",
@@ -428,7 +437,7 @@ PYTANIA_REKRUTACYJNE = [
     ("ZUS", "Zleceniobiorca ma etat 5 000 zł u innego pracodawcy. Jakie składki od zlecenia?", "Tylko zdrowotna (etat ≥ minimalnej); gdyby etat < 4 806 — pełne składki; zlecenie z własnym pracodawcą — jak etat."),
     ("ZUS", "Jak dokumentuje się staż ze zlecenia po nowelizacji 2026?", "Zaświadczeniem ZUS o okresach ubezpieczenia (eZUS); obecni pracownicy mają 24 miesiące; nie wlicza się dzieła; okres wypowiedzenia — tylko zlecenia u tego pracodawcy."),
     ("zasiłki", "Pracownik chorował 20 dni w marcu i 15 dni w czerwcu. Jak liczysz 33 dni i okres zasiłkowy?", "33 dni w roku kalendarzowym: marzec 20 + czerwiec 13 chorobowe, od 14. dnia czerwca zasiłek; przerwa > 60 dni → nowy okres zasiłkowy, ale pula 33 jest roczna."),
-    ("compliance", "Co zmieniła nowelizacja mobbingu z 2026 r. i co musi zrobić pracodawca?", "Definicja: uporczywe nękanie bez wymogu zamiaru i skutku; odszkodowanie min. 6× minimalne bez rozwiązywania umowy; zasady przeciwdziałania w regulaminie/obwieszczeniu do 5.05.2027."),
+    ("compliance", "Co zmieniła nowelizacja mobbingu z 2026 r. i co musi zrobić pracodawca?", "Definicja: uporczywe nękanie bez wymogu zamiaru i skutku; zadośćuczynienie min. 6× minimalne albo odszkodowanie, bez rozwiązywania umowy; regres wobec sprawcy; reguły i procedury w układzie / regulaminie pracy albo odrębnym regulaminie (od 10 pracowników) do 5.05.2027; ustawa nie zwalnia pracodawcy, który „miał procedurę”."),
     ("compliance", "Co już obowiązuje z jawności wynagrodzeń, a co jest projektem?", "Obowiązuje od 24.12.2025: widełki dla kandydata, zakaz pytania o historię zarobków, neutralne ogłoszenia; projekt UC127 (dyrektywa 2023/970): prawo do informacji, raporty luki, zakaz klauzul poufności."),
     ("kontrola", "Jak przygotujesz firmę do kontroli PIP?", "Teczka kontrolna (regulaminy, ewidencja z godzinami, listy płac, umowy cywilnoprawne, BHP), książka kontroli, osoba kontaktowa, audyt wewnętrzny; podczas kontroli — kopie, notatki, zastrzeżenia w 7 dni."),
 ]

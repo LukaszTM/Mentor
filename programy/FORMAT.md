@@ -88,6 +88,7 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 ```
 
 - `cel` (zalecane) — jedno zdanie „po tej lekcji potrafisz…”; wyświetlane na górze lekcji.
+- `zrodla` (opcjonalne) — `[["tytuł", "https://...", "dostęp 18.11.2026"]]`: sprawdzone materiały, na których oparto lekcję; Mentor pokazuje je w karcie „Źródła” pod lekcją (link „otwórz ↗”), paczka materiałów — w sekcji „Źródła” pliku lekcji i w `ZRODLA.md`.
 - `czas_min` — orientacyjny czas lekcji; `w_praktyce` — lista kroków „jak to robisz naprawdę” (osobna karta).
 - W `wyjasnienie` linia zaczynająca się od `## ` to nagłówek sekcji, od `- ` — punkt listy, od `|` — wiersz tabeli Markdown (`| a | b |`, wiersz `|---|---|` pomijany; w aplikacji renderowana jako siatka, w Asystencie offline jako lista); `\n` rozdziela akapity.
 - Pierwsza lekcja na liście jest traktowana jako **wprowadzająca** (Panel → „Pierwsze kroki”, przewodnik „Jak zacząć”) — opisz w niej, jak uczyć się z programu.
@@ -145,6 +146,7 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `checklista` | `[{po: "Po etapie 1", punkty: ["..."]}]` |
 | `sciaga` | `[{tytul, pozycje: [["komenda", "co robi"]]}]` |
 | `linki` | `[["nazwa", "https://..."]]` |
+| `zrodla_kursu` | `[["tytuł", "https://...", "dostęp DD.MM.RRRR"]]` — rejestr źródeł całego programu (Ściąga → „Źródła programu”); zwykle suma pól `zrodla` lekcji |
 | `wskazowki`, `motywacja_powrot` | teksty na Panel |
 | `pojecia` | `{"terminal": "definicja"}` — dla Asystenta Offline („co to jest…”) |
 | `bledy` | `{"TypeError": {co, pytanie}}` — tłumaczenie błędów; brak = wbudowany słownik błędów Pythona |

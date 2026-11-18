@@ -1,5 +1,5 @@
 # Start: jak uczyć się z tego programu (przeczytaj najpierw)
-Tydzień 0 · lekcja 1 z 46 · ≈ 40 min
+Tydzień 0 · lekcja 1 z 48 · ≈ 40 min
 
 **Po tej lekcji potrafisz:** wiesz, co robić każdego dnia, gdzie co jest w Mentorze, jak czytać lekcję i jak odhaczać postępy.
 

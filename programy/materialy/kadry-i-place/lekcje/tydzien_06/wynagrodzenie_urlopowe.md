@@ -1,5 +1,5 @@
 # Wynagrodzenie za urlop i ekwiwalent
-Tydzień 6 · lekcja 20 z 46 · ≈ 55 min
+Tydzień 6 · lekcja 21 z 48 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** liczysz wynagrodzenie za urlop ze składników zmiennych, ekwiwalent ze współczynnikiem i pensję za część miesiąca.
 

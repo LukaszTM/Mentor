@@ -1,5 +1,5 @@
 # Czas pracy: normy, systemy, okresy rozliczeniowe, odpoczynek
-Tydzień 2 · lekcja 9 z 46 · ≈ 55 min
+Tydzień 2 · lekcja 9 z 48 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** liczysz wymiar czasu pracy miesiąca, dobierasz system i okres rozliczeniowy oraz układasz grafik z 11/35 h odpoczynku.
 
@@ -127,6 +127,12 @@ Kierownik logistyki prosi o grafik dla kierowcy dostaw, który jeździ 6 dni w t
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Policzyć wymiar dowolnego miesiąca dwiema metodami, dobrać system do potrzeb działu bez łamania norm i sprawdzić grafik pod kątem 11/35 h.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
+- Dyrektywa 2003/88/WE o czasie pracy (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/dir/2003/88/oj/pol>
+- TSUE, wyrok C-55/18 CCOO z 14.05.2019 — obowiązek rejestrowania czasu pracy (dostęp 18.11.2026) — <https://curia.europa.eu/juris/liste.jsf?num=C-55/18>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Wymiar czasu pracy w sierpniu 2026 (15.08 w sobotę)?

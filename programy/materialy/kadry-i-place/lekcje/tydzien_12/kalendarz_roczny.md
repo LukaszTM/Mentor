@@ -1,5 +1,5 @@
 # Kalendarz kadrowo-płacowy: miesięczny, roczny, cykliczny
-Tydzień 12 · lekcja 37 z 46 · ≈ 60 min
+Tydzień 12 · lekcja 39 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** masz kalendarz terminów miesięcznych, rocznych i cyklicznych z alertami i właścicielami — nic nie umyka.
 
@@ -22,7 +22,8 @@ Tydzień 12 · lekcja 37 z 46 · ≈ 60 min
 | do 20. | zaliczka PIT na mikrorachunek; DEK-I-0 lub INF-1 PFRON |
 | do 25. | Wn-D (SOD) |
 | w 7 dni | ZUA, ZWUA, ZCNA, RUD, zmiany danych |
-| w 14 dni | powiadomienia PUP (Ukraina), protokoły powypadkowe |
+| w 7 dni | powiadomienia PUP (Ukraina; od 5.03.2026) |
+| w 14 dni | protokoły powypadkowe |
 Bieżąco: zajęcia komornicze (odpowiedź 7 dni), wnioski o urlopy rodzicielskie (21 dni), badania okresowe (terminy z orzeczeń), kończące się umowy (ZWUA, świadectwo, ekwiwalent), limity 33/3, okresy próbne, wygasające dokumenty cudzoziemców, kary porządkowe (rok), dokumenty do akt.
 ### W roku
 | Miesiąc | Zadania |

@@ -1,5 +1,5 @@
 # Wynagrodzenie chorobowe i zasiłek chorobowy: 33/14 dni, okres zasiłkowy, e-ZLA
-Tydzień 7 · lekcja 25 z 46 · ≈ 60 min
+Tydzień 7 · lekcja 26 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** rozróżniasz wynagrodzenie chorobowe (33/14 dni) i zasiłek, liczysz dni i okres zasiłkowy, wiesz, kto wypłaca i jak czytać e-ZLA.
 

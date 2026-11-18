@@ -1,5 +1,5 @@
 # Onboarding i akta osobowe: badania, BHP, ZUS, informacja art. 29 §3, dokumentacja A–E
-Tydzień 1 · lekcja 8 z 46 · ≈ 60 min
+Tydzień 1 · lekcja 8 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** prowadzisz onboarding w terminach (badania, BHP, ZUA, informacja 29 §3) i wiesz, co trafia do części A–E akt i na jak długo.
 

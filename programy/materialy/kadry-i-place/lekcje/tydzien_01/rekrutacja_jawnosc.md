@@ -1,5 +1,5 @@
 # Rekrutacja: dane kandydata, jawność wynagrodzeń, RODO
-Tydzień 1 · lekcja 6 z 46 · ≈ 60 min
+Tydzień 1 · lekcja 6 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** piszesz ogłoszenie z widełkami, wiesz, o co nie wolno pytać kandydata, i prowadzisz rekrutację zgodnie z RODO.
 
@@ -27,8 +27,8 @@ Przedział ustalasz obiektywnie i neutralnie płciowo. Ogłoszenia mają być ne
 | nie było ogłoszenia albo nie podano w nim wynagrodzenia | przed pierwszą rozmową |
 | rozmów nie ma | przed nawiązaniem stosunku pracy |
 Forma: papierowa lub elektroniczna, z wyprzedzeniem.
-Sankcje: grzywna 1 000–30 000 zł (art. 281) i odszkodowanie za dyskryminację — nie mniej niż minimalne wynagrodzenie (art. 18³ᵈ).
-Pełne wdrożenie dyrektywy 2023/970 (prawo do informacji o średnich płacach, raport luki) to projekt UC127. W XI 2026 jeszcze nieuchwalony.
+Sankcje: ustawa z 4.06.2025 nie dodała osobnego wykroczenia — ryzyko to roszczenie kandydata z art. 18³ᵈ (zadośćuczynienie nie niższe niż minimalne wynagrodzenie albo odszkodowanie), wystąpienie PIP i wizerunek; kary pieniężne 2 000–60 000 zł przewiduje dopiero projekt UC127.
+Pełne wdrożenie dyrektywy 2023/970 (prawo do informacji o średnich płacach, raport luki) to projekt UC127: druga wersja z 29.04.2026, Rada Ministrów planuje przyjęcie w IV kw. 2026, do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. Do tego czasu brak informacji o wynagrodzeniu nie jest wykroczeniem z art. 281 KP.
 ### RODO w rekrutacji
 | Element | Zasada |
 |---|---|
@@ -114,17 +114,24 @@ Kierownik produkcji przysłał Ci 6 pytań na rozmowę z kandydatką: (1) „Czy
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Napisać ogłoszenie z realnymi widełkami i klauzulą RODO, odróżnić pytania dozwolone od zakazanych i przepisać zakazane tak, by dotyczyły organizacji pracy, nie osoby.
 
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Ustawa z 4.06.2025 o zmianie KP — informacja o wynagrodzeniu w rekrutacji (Dz.U. 2025 poz. 807) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2025/807/ogl>
+- Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
+- Dyrektywa (UE) 2023/970 o przejrzystości wynagrodzeń (termin transpozycji 7.06.2026) (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/dir/2023/970/oj/pol>
+- Rządowy proces legislacyjny — projekty UC127 (jawność wynagrodzeń), UC160 (praca platformowa), diety 2027 (dostęp 18.11.2026) — <https://legislacja.gov.pl>
+
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Które pytanie jest zakazane od 24.12.2025?
   - A) Jakie są Pani oczekiwania finansowe?
   - B) Ile Pani zarabiała u poprzedniego pracodawcy?
   - C) Czy ma Pani uprawnienia na wózek?
   - D) Od kiedy może Pani zacząć?
-- Jaka jest grzywna za brak informacji o wynagrodzeniu w rekrutacji?
-  - A) Do 5 000 zł
-  - B) 1 000–30 000 zł
-  - C) Do 90 000 zł
-  - D) Brak sankcji
+- Co grozi dziś (XI 2026) za brak informacji o wynagrodzeniu w rekrutacji?
+  - A) Grzywna 1 000–30 000 zł z art. 281 KP
+  - B) Brak osobnego wykroczenia — roszczenie kandydata z art. 18³ᵈ i wystąpienie PIP
+  - C) Kara 60 000 zł z ustawy wdrażającej dyrektywę 2023/970
+  - D) Zakaz rekrutacji na 12 miesięcy
 - Na jakiej podstawie przetwarzasz dane z art. 22¹ KP?
   - A) Zgoda kandydata
   - B) Obowiązek prawny / działania przed zawarciem umowy (art. 6 ust. 1 lit. c, b RODO)

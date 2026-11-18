@@ -1,5 +1,5 @@
 # Powtórka etapu 2: płace od brutto do netto — lista, PIT, zasiłki, umowy cywilne, PPK
-Tydzień 9 · lekcja 31 z 46 · ≈ 65 min
+Tydzień 9 · lekcja 32 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** liczysz pełną listę płac z nadgodzinami, chorobą, zasiłkiem, potrąceniem, benefitem i PPK, ustalasz podstawę zasiłku i rozliczasz zleceniobiorcę — i wiesz, który wynik sprawdzić w którym narzędziu.
 

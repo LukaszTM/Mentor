@@ -1,5 +1,5 @@
 # Umowa zlecenia i o dzieło: składki, zbiegi, PIT, minimalna stawka, RUD
-Tydzień 9 · lekcja 29 z 46 · ≈ 70 min
+Tydzień 9 · lekcja 30 z 48 · ≈ 70 min
 
 **Po tej lekcji potrafisz:** rozliczasz zlecenie (składki, zbiegi, student, stawka 31,40, ewidencja godzin, PIT 20% KUP) i dzieło (RUD, ryzyko przekwalifikowania).
 
@@ -42,7 +42,7 @@ Oświadczenia o innych tytułach i ich aktualizacje to podstawa Twojej decyzji. 
 | informacja | PIT-11 do końca lutego |
 ### Minimalna stawka godzinowa
 31,40 zł w 2026 (32,30 zł w 2027). Dotyczy zleceń i usług wykonywanych przez osoby fizyczne, także samozatrudnionych bez pracowników.
-- Obowiązek POTWIERDZANIA LICZBY GODZIN — ewidencja w formie ustalonej w umowie. Brak ewidencji to wykroczenie: PIP 1 000–30 000 zł.
+- Obowiązek POTWIERDZANIA LICZBY GODZIN — ewidencja w formie ustalonej w umowie. Brak ewidencji to wykroczenie: grzywna 2 000–60 000 zł (od 8.07.2026).
 - Wypłata co najmniej raz w miesiącu przy umowach dłuższych. Zakaz zrzeczenia się.
 - Wyjątki: wynagrodzenie wyłącznie prowizyjne przy samodzielnym ustalaniu czasu i miejsca; opieka domowa w rodzinnych domach pomocy itp.
 ### Dzieło

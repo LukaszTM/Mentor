@@ -1,5 +1,5 @@
 # Podróże służbowe: diety, ryczałty, kilometrówka — krajowe i zagraniczne
-Tydzień 7 · lekcja 24 z 46 · ≈ 75 min
+Tydzień 7 · lekcja 25 z 48 · ≈ 75 min
 
 **Po tej lekcji potrafisz:** rozliczasz krajową i zagraniczną podróż służbową (diety, pomniejszenia, noclegi, dojazdy, kilometrówka), rozliczasz zaliczkę i wiesz, która część jest przychodem na liście płac.
 
@@ -178,6 +178,11 @@ Kierownik sprzedaży leci na targi do Kolonii. Pociąg Kraków → lotnisko Wars
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Policzyć liczbę diet z godzin podróży, pomniejszyć je za posiłki od pełnej diety, rozliczyć nocleg (rachunek do limitu albo ryczałt), dojazdy, kilometrówkę i zaliczkę; dla podróży zagranicznej — liczyć czas od granicy, w walucie, po kursie z dnia zaliczki; wskazać nadwyżkę ponad limity, która idzie na listę płac.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Rządowy proces legislacyjny — projekty UC127 (jawność wynagrodzeń), UC160 (praca platformowa), diety 2027 (dostęp 18.11.2026) — <https://legislacja.gov.pl>
+- Dyrektywa (UE) 2018/957 zmieniająca dyrektywę o delegowaniu — równa płaca, 12/18 miesięcy (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/dir/2018/957/oj/pol>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Delegacja krajowa od 9:00 do 19:30 tego samego dnia (10,5 h). Dieta?

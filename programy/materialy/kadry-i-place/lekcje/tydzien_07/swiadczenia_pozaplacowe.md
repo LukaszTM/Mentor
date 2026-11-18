@@ -1,5 +1,5 @@
 # Świadczenia pozapłacowe i ZFŚS w liście płac
-Tydzień 7 · lekcja 23 z 46 · ≈ 60 min
+Tydzień 7 · lekcja 24 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** wyceniasz benefity (auto, karta, pakiet, ZFŚS) na liście płac i wiesz, które są bez ZUS/PIT i pod jakim warunkiem.
 

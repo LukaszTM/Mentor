@@ -1,5 +1,5 @@
 # Dokumenty zgłoszeniowe ZUS: ZUA, ZZA, ZWUA, ZCNA, ZIUA, kody tytułu
-Tydzień 10 · lekcja 32 z 46 · ≈ 70 min
+Tydzień 10 · lekcja 33 z 48 · ≈ 70 min
 
 **Po tej lekcji potrafisz:** składasz ZUA/ZZA/ZWUA/ZCNA/ZIUA w terminie 7 dni z właściwymi kodami tytułu i wiesz, jak poprawić błędne zgłoszenie.
 

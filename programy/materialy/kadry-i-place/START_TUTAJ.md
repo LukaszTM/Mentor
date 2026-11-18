@@ -1,6 +1,6 @@
 # START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2026)
 
-**Wersja kursu:** 2.1 · stan prawny: listopad 2026 · format `mentor-program/1`
+**Wersja kursu:** 2.2 · stan prawny: 18 listopada 2026 · format `mentor-program/1`
 **Poziom:** od podstaw — bez znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych.
 **Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 130 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
 **System:** Windows 10/11 (Mentor.exe); działa też z Pythonem 3.10+ na innych systemach.
@@ -29,6 +29,9 @@ Pierwsze działające ćwiczenie masz w ciągu 30 minut: Warsztat → Lista pła
 ## Jak wygląda każda lekcja (zawsze ta sama kolejność)
 cel → po co mi to → czego potrzebujesz → **1** wyjaśnienie od podstaw → **2** demonstracja omówiona krok po kroku → **3** jak to uruchomić → **4** ćwiczenie prowadzone → **5** ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → **6** typowe błędy i naprawa → sprawdzenie (pytania + „co potrafię bez przykładu”) → test (2/3 zalicza).
 Każde ćwiczenie ma plik startowy w `cwiczenia/tydzien_NN/` i rozwiązanie w `rozwiazania/tydzien_NN/` — te same treści są w Mentorze (Lekcje), więc możesz pracować w aplikacji albo na plikach.
+
+## Źródła i stan prawny
+Treść zaktualizowano w audycie z 18.11.2026 na podstawie sprawdzonych materiałów polskich (Dziennik Ustaw, ELI, ISAP, ZUS, MRPiPS, PIP, GUS, NBP) i zagranicznych w tłumaczeniu (EUR-Lex, TSUE, MOP/NORMLEX, EU-OSHA, ACAS, CIPD). Zaktualizowane lekcje mają na końcu sekcję **Źródła** z adresem i datą dostępu; pełna lista jest w `ZRODLA.md` i w Mentorze (Ściąga → Źródła programu). Przed zastosowaniem liczby w pracy otwórz źródło — przepisy zmieniają się częściej niż ten plik.
 
 ## Gdzie co jest w paczce
 - `kurs_mentor.json` — plik kursu (kopia `programy/kadry-i-place.json`); `manifest.json` — lista plików z sumami kontrolnymi.

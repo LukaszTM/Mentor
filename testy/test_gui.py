@@ -133,3 +133,31 @@ def test_pasek_cwiczen_w_planie(app, tmp_path):
     zad = next(z for t in P.tygodnie for z in t["zadania"] if z["id"] == "t1z1")
     d = cwiczenia.definicja(zad)
     assert d["plik"] == "zmienne.py"
+
+
+def test_karta_zrodel_w_lekcji_i_sciadze(app, repo):
+    """Lekcja ze źródłami pokazuje kartę „Źródła” z linkiem „otwórz ↗”; Ściąga — kartę „Źródła programu”."""
+    from program import P
+    assert app.ustaw_program(str(repo / "programy" / "kadry-i-place.json"))
+    app.update()
+    assert P.id == "kadry-i-place"
+
+    def teksty(w, acc):
+        try:
+            t = w.cget("text")
+            if t:
+                acc.append(str(t))
+        except tk.TclError:
+            pass
+        for c in w.winfo_children():
+            teksty(c, acc)
+        return acc
+
+    app.pokaz_lekcje("prawo_ue_i_swiat")
+    app.update()
+    txt = "\n".join(teksty(app, []))
+    assert "Źródła — sprawdzone materiały" in txt and "otwórz ↗" in txt and "883/2004" in txt
+    app.pokaz("sciaga")
+    app.update()
+    txt = "\n".join(teksty(app, []))
+    assert "Źródła programu" in txt and "EUR-Lex" in txt

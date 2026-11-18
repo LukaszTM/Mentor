@@ -1,5 +1,5 @@
 # Inne nieobecności i elastyczna organizacja pracy
-Tydzień 4 · lekcja 15 z 46 · ≈ 50 min
+Tydzień 4 · lekcja 16 z 48 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** rozliczasz urlop opiekuńczy, siłę wyższą, art. 188, okolicznościowe i bezpłatny — z właściwym wynagrodzeniem i wpływem na staż.
 

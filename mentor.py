@@ -1756,6 +1756,25 @@ class Mentor(tk.Tk):
             etykieta(k2, "⚠ Pułapki — zapisz do dziennika", 10, bold=True, bg=K["zolty"], kolor=K["pomar"]).pack(fill="x")
             for pu in l["pulapki"]:
                 etykieta(k2, "• " + pu, 10, bg=K["zolty"], wrap=W).pack(fill="x", pady=(2, 0))
+        if l.get("zrodla"):
+            z2, k2 = karta(prawa.wnetrze, tytul="Źródła — sprawdzone materiały (stan prawny i data dostępu w nawiasie)")
+            z2.pack(fill="x", pady=(8, 0))
+            etykieta(k2, "Lekcja opiera się na tych dokumentach. Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).", 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(0, 4))
+            for zr in l["zrodla"]:
+                tytul_z, url_z = (zr[0], zr[1]) if isinstance(zr, (list, tuple)) and len(zr) >= 2 else (str(zr), "")
+                dostep = zr[2] if isinstance(zr, (list, tuple)) and len(zr) >= 3 else ""
+                r2 = tk.Frame(k2, bg=K["karta"])
+                r2.pack(fill="x", pady=(0, 2))
+                if url_z:
+                    lnk = etykieta(r2, "otwórz ↗", 9, kolor=K["nieb"])
+                    lnk.pack(side="right", anchor="n", padx=(8, 4))
+                    lnk.configure(cursor="hand2")
+                    lnk.bind("<Button-1>", lambda e, u=url_z: webbrowser.open(u))
+                tyt = etykieta(r2, "• " + tytul_z + (f" ({dostep})" if dostep else ""), 10, wrap=W - 110)
+                tyt.pack(side="left", fill="x", expand=True)
+                if url_z:
+                    tyt.configure(cursor="hand2")
+                    tyt.bind("<Button-1>", lambda e, u=url_z: webbrowser.open(u))
         if l.get("zadania"):
             z2, k2 = karta(prawa.wnetrze, tytul=("Dodatkowe zadania — gdy chcesz więcej praktyki" if pelna else f"4 · {len(l['zadania'])} zadania — zrób w katalogu projektu, bez rozwiązań"))
             z2.pack(fill="x", pady=(8, 0))
@@ -2818,6 +2837,19 @@ class Mentor(tk.Tk):
             l = tk.Label(k, text="🔗 " + n, font=czc(10, "underline"), bg=K["karta"], fg=K["nieb"], cursor="hand2", anchor="w")
             l.pack(fill="x", pady=1)
             l.bind("<Button-1>", lambda e, url=u: webbrowser.open(url))
+        zrodla = P.d.get("zrodla_kursu") or []
+        if zrodla:
+            z, k = karta(w, tytul=f"Źródła programu — sprawdzone materiały ({len(zrodla)})" + (f" · stan prawny: {P.stan_prawny}" if P.d.get("stan_prawny") else ""))
+            z.pack(fill="x", padx=28, pady=(0, 24))
+            etykieta(k, "Dokumenty, na których oparto treść lekcji (akty prawne, orzeczenia, materiały urzędów i organizacji zagranicznych w tłumaczeniu). Data dostępu w nawiasie — przed zastosowaniem w pracy sprawdź, czy nic się nie zmieniło.", 9, kolor=K["szary"], wrap=800).pack(fill="x", pady=(0, 4))
+            for zr in zrodla:
+                tytul_z = zr[0] if zr else ""
+                url_z = zr[1] if len(zr) > 1 else ""
+                dostep = zr[2] if len(zr) > 2 else ""
+                l = tk.Label(k, text="• " + tytul_z + (f" ({dostep})" if dostep else ""), font=czc(10, "underline" if url_z else ""), bg=K["karta"], fg=K["nieb"] if url_z else K["tekst"], cursor="hand2" if url_z else "", anchor="w", justify="left", wraplength=800)
+                l.pack(fill="x", pady=1)
+                if url_z:
+                    l.bind("<Button-1>", lambda e, url=url_z: webbrowser.open(url))
 
     # ============================================================= USTAWIENIA
     def widok_ustawienia(self):

@@ -1,5 +1,5 @@
 # Powtórka etapu 3: ZUS, US, ZFŚS, PFRON i kalendarz — zamknięcie miesiąca i roku
-Tydzień 12 · lekcja 38 z 46 · ≈ 60 min
+Tydzień 12 · lekcja 40 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** zamykasz miesiąc (zgłoszenia, komplet, przelewy) i rok (PIT-4R/PIT-11, ZFŚS, PFRON, IWA) w terminach, robisz korekty i wiesz, jak wygląda kalendarz firmy — bez zaglądania do lekcji.
 

@@ -1,5 +1,5 @@
 # Zasiłek opiekuńczy, macierzyński, wypadkowy, świadczenie rehabilitacyjne — dokumenty i kody RSA
-Tydzień 8 · lekcja 27 z 46 · ≈ 65 min
+Tydzień 8 · lekcja 28 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** obsługujesz zasiłek opiekuńczy, macierzyński, wypadek przy pracy i świadczenie rehabilitacyjne — dokumenty, limity, kody RSA.
 

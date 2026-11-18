@@ -1,5 +1,5 @@
 # Potrącenia z wynagrodzenia: art. 87–91 KP
-Tydzień 6 · lekcja 21 z 46 · ≈ 50 min
+Tydzień 6 · lekcja 22 z 48 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** potrącasz z wynagrodzenia zgodnie z art. 87–91 (kolejność, granice, kwoty wolne) i poprawnie obsługujesz zajęcie komornicze.
 

@@ -1,5 +1,5 @@
 # Koszt pracodawcy i składka wypadkowa
-Tydzień 5 · lekcja 19 z 46 · ≈ 60 min
+Tydzień 5 · lekcja 20 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** liczysz pełny koszt zatrudnienia, znasz zwolnienia z FP/FGŚP, stopę wypadkową i porównujesz koszt etatu, zlecenia i B2B.
 

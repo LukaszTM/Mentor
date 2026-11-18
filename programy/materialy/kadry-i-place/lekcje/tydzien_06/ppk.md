@@ -1,5 +1,5 @@
 # PPK: zapisy, wpłaty, rezygnacje, autozapis 2027
-Tydzień 6 · lekcja 22 z 46 · ≈ 60 min
+Tydzień 6 · lekcja 23 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** zapisujesz uczestników, naliczasz wpłaty 2%/1,5%, obsługujesz rezygnacje i autozapis 2027 oraz rozliczasz PPK na liście płac.
 

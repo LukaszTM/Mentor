@@ -1,5 +1,5 @@
 # Kontrola PIP, ZUS, US i UODO — przygotowanie, przebieg, sankcje
-Tydzień 15 · lekcja 45 z 46 · ≈ 65 min
+Tydzień 15 · lekcja 47 z 48 · ≈ 70 min
 
 **Po tej lekcji potrafisz:** przygotowujesz firmę do kontroli PIP/ZUS/US/UODO, wiesz, jak przebiega kontrola i jakie są środki i sankcje, oraz robisz audyt wewnętrzny.
 
@@ -9,25 +9,29 @@ Tydzień 15 · lekcja 45 z 46 · ≈ 65 min
 - Wszystkie lekcje kursu — kontrola sprawdza ich efekty; teczka kontrolna z zadania tygodnia 15.
 - Warsztat → Przepisy: „Kontrola PIP, środki prawne, wykroczenia (art. 281–283 KP)” (ustawa o PIP), „Odsetki, przedawnienie, korekty, sankcje” (ZUS).
 - Prompty → Szablony → „Instrukcja dla recepcji: wizyta inspektora”, „Zastrzeżenia do protokołu”, „Odpowiedź na wystąpienie”.
-- Pojęcia: legitymacja i upoważnienie (PIP — upoważnienie może być doręczone do 7 dni po rozpoczęciu), książka kontroli, protokół (PIP: zastrzeżenia 7 dni; ZUS: 14 dni), nakaz płacowy (wykonalny natychmiast), nakaz BHP, wystąpienie (odpowiedź 30 dni), mandat (do 2 000; 5 000 przy recydywie), wniosek do sądu (grzywna do 30 000), decyzja ZUS (odwołanie 1 miesiąc do sądu).
+- Pojęcia: legitymacja i upoważnienie (PIP — upoważnienie może być doręczone do 7 dni po rozpoczęciu), książka kontroli, protokół (PIP: zastrzeżenia 7 dni; ZUS: 14 dni), nakaz płacowy (wykonalny natychmiast), nakaz BHP, wystąpienie (odpowiedź 30 dni), mandat (do 10 000 zł od 8.07.2026), wniosek do sądu (grzywna 2 000–60 000; recydywa do 90 000), decyzja o ustaleniu stosunku pracy (od 8.07.2026; odwołanie 30 dni do sądu pracy), decyzja ZUS (odwołanie 1 miesiąc do sądu).
 
 ## 1 · Wyjaśnienie od podstaw
-### PIP (ustawa z 13.04.2007)
+### PIP (ustawa z 13.04.2007; duża nowelizacja — ustawa z 11.03.2026, Dz.U. 2026 poz. 473)
+Nowelizacja obowiązuje w większości od 8.07.2026 (część przepisów od 8.04.2026). Prezydent podpisał ją 2.04.2026 i skierował w trybie następczym do Trybunału Konstytucyjnego — śledź orzeczenie. Najważniejsze zmiany: decyzja o ustaleniu stosunku pracy, wyższe grzywny i mandaty, kontrole zdalne, abolicja, interpretacje indywidualne.
 Inspektor kontroluje BEZ UPRZEDZENIA — nie stosuje się zawiadomienia z Prawa przedsiębiorców (Konwencja MOP nr 81). O każdej porze, po okazaniu legitymacji; upoważnienie doręcza najpóźniej w 7 dni.
 Uprawnienia: wstęp na teren; wgląd w dokumenty (akta, ewidencja czasu pracy, listy płac, regulaminy, umowy cywilnoprawne, dokumenty cudzoziemców, BHP, ZFŚS); kopie; przesłuchanie pracodawcy i pracowników, także byłych; oględziny; nagrania; wezwanie do siedziby PIP.
-Przedmiot kontroli: legalność zatrudnienia (umowy, cudzoziemcy, zgłoszenia ZUS), wynagrodzenia i terminy, czas pracy, urlopy, BHP, umowy cywilnoprawne (art. 22), minimalna stawka godzinowa, równe traktowanie, jawność w rekrutacji, sygnaliści, mobbing (od 2026).
+Przedmiot kontroli: legalność zatrudnienia (umowy, cudzoziemcy, zgłoszenia ZUS), wynagrodzenia i terminy, czas pracy, urlopy, BHP, umowy cywilnoprawne (art. 22), minimalna stawka godzinowa, równe traktowanie, jawność w rekrutacji, sygnaliści, mobbing (od 2026), układy zbiorowe i porozumienia (ustawa z 5.11.2025, od 13.12.2025), praca platformowa (projekt UC160).
 | Środek PIP | Co oznacza |
 |---|---|
 | NAKAZ (BHP) | usunięcie uchybień w terminie lub natychmiast; wstrzymanie prac; skierowanie do innych prac |
 | NAKAZ PŁACOWY | wypłata należnego wynagrodzenia lub świadczenia — natychmiast wykonalny |
 | WYSTĄPIENIE | usunięcie naruszeń prawa — odpowiedź w 30 dni z informacją o realizacji |
 | POLECENIE | ustne |
-| MANDAT | 1 000–2 000 zł; do 5 000 przy ponownym wykroczeniu w 2 lata |
-| WNIOSEK DO SĄDU o ukaranie | grzywna 1 000–30 000 zł (art. 281–283 KP); za cudzoziemców 3 000–50 000 |
+| MANDAT | do 10 000 zł (od 8.07.2026; wcześniej 1 000–2 000, do 5 000 przy recydywie) |
+| WNIOSEK DO SĄDU o ukaranie | grzywna 2 000–60 000 zł; recydywa i dłużnicy alimentacyjni 3 000–90 000 (art. 281–283 KP od 8.07.2026; wcześniej 1 000–30 000); za cudzoziemców 3 000–50 000 |
 | ZAWIADOMIENIE PROKURATURY | art. 218 KK — złośliwe lub uporczywe naruszanie praw pracownika; art. 219 — niezgłoszenie do ZUS; art. 220 — narażenie życia |
-| POWÓDZTWO o ustalenie stosunku pracy | projekt 2025/2026: decyzja administracyjna inspektora przekształcająca umowę cywilnoprawną w umowę o pracę — status: projekt, śledź |
+| DECYZJA o ustaleniu istnienia stosunku pracy | OBOWIĄZUJE od 8.07.2026 (ustawa z 11.03.2026, Dz.U. 2026 poz. 473): okręgowy inspektor pracy stwierdza decyzją, że umowa cywilnoprawna lub B2B jest stosunkiem pracy; stronami są pracodawca i osoba zatrudniona; odwołanie w 30 dni do sądu pracy (rozpoznanie w 30 dni, możliwe zabezpieczenie); dla osób szczególnie chronionych — rygor natychmiastowej wykonalności; alternatywnie powództwo o ustalenie |
+| ABOLICJA | do 8.07.2027: pracodawca, który sam zawrze umowę o pracę z osobą dotąd na umowie cywilnoprawnej, nie odpowiada za wykroczenie z art. 281 §1 pkt 1 |
+| KONTROLA ZDALNA, dane ZUS | dokumenty przez e-PIP / e-doręczenia; PIP ma dostęp do danych ZUS o ubezpieczonych |
+| INTERPRETACJA INDYWIDUALNA GIP | wniosek (40 zł), odpowiedź w 30 dni, wiążąca dla PIP, publikowana w BIP |
 | wpis do rejestru | — |
-Protokół: podpisujesz z możliwością ZASTRZEŻEŃ w 7 dni (inspektor rozpatruje, uzupełnia). Odwołanie od nakazu (decyzji) — do okręgowego inspektora pracy w 14 dni (KPA), dalej skarga do WSA.
+Protokół: podpisujesz z możliwością ZASTRZEŻEŃ w 7 dni (inspektor rozpatruje, uzupełnia). Odwołanie od nakazu (decyzji) — do okręgowego inspektora pracy w 7 dni (art. 34 ust. 5 ustawy o PIP — krócej niż 14 dni z KPA), dalej skarga do WSA.
 Najczęstsze ustalenia (sprawozdania GIP): nieterminowe lub zaniżone wynagrodzenia i nadgodziny; braki w ewidencji czasu pracy; umowy cywilnoprawne w warunkach etatu; brak badań i szkoleń BHP; niewydanie świadectw; nieudzielenie zaległych urlopów; ewidencja godzin zleceniobiorców; brak potwierdzenia umowy przed dopuszczeniem; jawność w rekrutacji (od 2026).
 ### ZUS (art. 86–97 ustawy systemowej)
 | Element | Zasada |
@@ -64,7 +68,7 @@ Inspektor PIP 17.11.2026, 9:10, bez zapowiedzi — skarga pracownika o nadgodzin
 2. „udostępnienie: regulamin pracy z obwieszczeniem o systemie równoważnym, harmonogramy i ewidencja (§6) za 36 miesięcy, listy płac, polecenia nadgodzin, wnioski o czas wolny”: inspektor żąda dokumentów (art. 23) — przygotowana teczka kontrolna skraca kontrolę; 36 miesięcy = okres przedawnienia roszczeń (art. 291).
 3. „inspektor przesłuchuje 4 pracowników i kierownika”: ma prawo do wyjaśnień od pracowników (także byłych), bez obecności pracodawcy; nie instruujesz pracowników „co mówić”.
 4. „Ustalenie: w 3 miesiącach brak dodatków 100% za niedziele (pomyłka programu — 50%)”: błąd parametru — typowy; inspektor liczy różnicę dla 11 osób: 4 380 zł.
-5. „Protokół 24.11: zastrzeżenia do 1.12; NAKAZ PŁACOWY (4 380 zł) — wykonalny natychmiast; MANDAT 1 500 zł; WYSTĄPIENIE: uzupełnić ewidencję o godziny rozpoczęcia — odpowiedź w 30 dni”: protokół (art. 31) → zastrzeżenia w 7 dni; nakaz wypłaty wynagrodzenia (art. 11 pkt 7) ma rygor natychmiastowej wykonalności — płacisz, a odwołanie (do okręgowego inspektora w 7 dni) nie wstrzymuje; mandat przyjmujesz albo odmawiasz (wtedy wniosek do sądu — grzywna do 30 000); wystąpienie — odpowiedź z dowodami w 30 dni.
+5. „Protokół 24.11: zastrzeżenia do 1.12; NAKAZ PŁACOWY (4 380 zł) — wykonalny natychmiast; MANDAT 1 500 zł; WYSTĄPIENIE: uzupełnić ewidencję o godziny rozpoczęcia — odpowiedź w 30 dni”: protokół (art. 31) → zastrzeżenia w 7 dni; nakaz wypłaty wynagrodzenia (art. 11 pkt 7) ma rygor natychmiastowej wykonalności — płacisz, a odwołanie (do okręgowego inspektora w 7 dni — art. 34 ust. 5 ustawy o PIP) nie wstrzymuje; mandat przyjmujesz albo odmawiasz (wtedy wniosek do sądu — grzywna 2 000–60 000); wystąpienie — odpowiedź z dowodami w 30 dni.
 6. „Kadry: wypłata z listą dodatkową (ZUS/PIT w miesiącu wypłaty, RPA — przychód za inny rok), poprawa parametrów programu, test na próbie, pismo do PIP z dowodami”: wyrównanie to przychód bieżący (zasada kasowa) + odsetki ustawowe dla pracowników; RPA, jeśli dotyczy poprzedniego roku; dowody realizacji (lista, potwierdzenia, zrzut parametrów) w odpowiedzi na wystąpienie; wpis do rejestru kontroli i audyt wewnętrzny, czy ten sam błąd nie dotyczy innych działów.
 
 ✔ **Oczekiwany wynik:** kontrola zamknięta w 8 dni: zastrzeżenia (jeśli zasadne) do 1.12, wypłata 4 380 zł + odsetki listą dodatkową, mandat 1 500, odpowiedź na wystąpienie do 24.12 z dowodami; procedura „wizyta inspektora” dla recepcji.
@@ -91,7 +95,7 @@ Przejdź przez kontrolę ZUS zapowiedzianą na 1.12.2026 (zawiadomienie 20.11, z
 Po kontroli PIP z demonstracji prezes mówi: „Mandatu nie przyjmujemy, nakazu nie wykonamy, bo się odwołamy, a zastrzeżeń nie piszemy — po co drażnić”. Zdecyduj: (a) co się stanie przy odmowie mandatu, (b) czy odwołanie wstrzymuje nakaz płacowy i co grozi za jego niewykonanie, (c) kiedy warto pisać zastrzeżenia, a kiedy nie, (d) ułóż 8-punktowy plan działań kadr na 30 dni po protokole (z datami od 24.11.2026) i policz koszt wyrównania z odsetkami ustawowymi (4 380 zł, średnio 10 miesięcy opóźnienia, odsetki za opóźnienie 11,25%). Plik: cwiczenia/tydzien_15/kontrola_pip_zus_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_15/kontrola_pip_zus_2.md` · rozwiązanie: `rozwiazania/tydzien_15/kontrola_pip_zus_2.md`
-✔ Poprawny wynik wygląda tak: (a) odmowa mandatu → inspektor kieruje wniosek o ukaranie do sądu (grzywna 1 000–30 000 zł, art. 281–283) — zwykle wyższa niż mandat; (b) nie — nakaz wypłaty ma rygor natychmiastowej wykonalności (art. 11 pkt 7 ustawy o PIP); odwołanie do OIP w 7 dni nie wstrzymuje; niewykonanie → grzywna w celu przymuszenia (egzekucja administracyjna) do 10 000 zł jednorazowo, łącznie do 50 000, i kolejne wykroczenie; (c) zastrzeżenia (7 dni) — gdy ustalenia faktyczne są błędne lub niepełne (masz dowody); nie — gdy ustalenia są prawdziwe (lepiej wykonać i wykazać naprawę); (d) plan: 24.11 analiza protokołu; 26.11 decyzja o zastrzeżeniach (jeśli są — do 1.12); 27.11 poprawa parametrów programu + test; 30.11 lista dodatkowa: 4 380 + odsetki ≈ 4 380 × 11,25% × 10/12 = 410,63 → ok. 4 790,63 (odsetki bez ZUS i PIT — zwolnione, art. 21 ust. 1 pkt 95); wypłata 10.12 ze składkami i PIT od 4 380 (RPA dla części za 2025); 1.12 odwołanie od nakazu (tylko jeśli kwota błędna) / mandat — decyzja; do 15.12 audyt pozostałych działów (ten sam błąd?); do 24.12 odpowiedź na wystąpienie z dowodami (ewidencja z godzinami od–do, zrzut ekranu parametrów, lista wypłat); styczeń — wpis do rejestru, szkolenie kierowników.
+✔ Poprawny wynik wygląda tak: (a) odmowa mandatu → inspektor kieruje wniosek o ukaranie do sądu (grzywna 2 000–60 000 zł, art. 281–283 od 8.07.2026) — zwykle wyższa niż mandat; (b) nie — nakaz wypłaty ma rygor natychmiastowej wykonalności (art. 11 pkt 7 ustawy o PIP); odwołanie do OIP w 7 dni nie wstrzymuje; niewykonanie → grzywna w celu przymuszenia (egzekucja administracyjna) do 10 000 zł jednorazowo, łącznie do 50 000, i kolejne wykroczenie; (c) zastrzeżenia (7 dni) — gdy ustalenia faktyczne są błędne lub niepełne (masz dowody); nie — gdy ustalenia są prawdziwe (lepiej wykonać i wykazać naprawę); (d) plan: 24.11 analiza protokołu; 26.11 decyzja o zastrzeżeniach (jeśli są — do 1.12); 27.11 poprawa parametrów programu + test; 30.11 lista dodatkowa: 4 380 + odsetki ≈ 4 380 × 9,25% × 10/12 = 337,63 → ok. 4 717,63 (odsetki bez ZUS i PIT — zwolnione, art. 21 ust. 1 pkt 95); wypłata 10.12 ze składkami i PIT od 4 380 (RPA dla części za 2025); 1.12 odwołanie od nakazu (tylko jeśli kwota błędna) / mandat — decyzja; do 15.12 audyt pozostałych działów (ten sam błąd?); do 24.12 odpowiedź na wystąpienie z dowodami (ewidencja z godzinami od–do, zrzut ekranu parametrów, lista wypłat); styczeń — wpis do rejestru, szkolenie kierowników.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Recepcja odmawia wejścia inspektorowi PIP „bo nie było zawiadomienia 7 dni wcześniej”.**
@@ -127,6 +131,13 @@ Po kontroli PIP z demonstracji prezes mówi: „Mandatu nie przyjmujemy, nakazu 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Przygotować firmę do kontroli (teczka, instrukcja, audyt), przeprowadzić ją bez błędów proceduralnych, właściwie zareagować na protokół, nakaz, mandat i wystąpienie oraz rozliczyć wyrównania z odsetkami.
 
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Ustawa z 11.03.2026 o zmianie ustawy o PIP i innych ustaw — decyzja o ustaleniu stosunku pracy, grzywny, abolicja (Dz.U. 2026 poz. 473) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/473/ogl>
+- ISAP — ustawa o Państwowej Inspekcji Pracy (tekst ujednolicony) (dostęp 18.11.2026) — <https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20070890589>
+- MOP, Konwencja nr 81 o inspekcji pracy (NORMLEX) (dostęp 18.11.2026) — <https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C081>
+- Obwieszczenie MF o stawce odsetek za zwłokę od zaległości podatkowych — 10,50% od 5.03.2026 (M.P. 2026 poz. 269) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/MP/2026/269/ogl>
+
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Nakaz płacowy PIP (wypłata należnego wynagrodzenia):
   - A) Wymaga wyroku sądu
@@ -138,10 +149,10 @@ Przygotować firmę do kontroli (teczka, instrukcja, audyt), przeprowadzić ją 
   - B) 18 dni
   - C) 24 dni
   - D) 48 dni
-- Maksymalna grzywna za wykroczenie przeciwko prawom pracownika (art. 281 KP):
+- Maksymalna grzywna za wykroczenie przeciwko prawom pracownika (art. 281 KP) od 8.07.2026:
   - A) 5 000 zł
-  - B) 10 000 zł
-  - C) 30 000 zł
+  - B) 30 000 zł
+  - C) 60 000 zł (90 000 przy recydywie)
   - D) 100 000 zł
 
 Odpowiedzi: B, C, C

@@ -1,5 +1,5 @@
 # Świadectwo pracy i rozliczenie końcowe pracownika
-Tydzień 13 · lekcja 41 z 46 · ≈ 65 min
+Tydzień 13 · lekcja 43 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** wydajesz świadectwo pracy w dniu ustania z pełną treścią i rozliczasz pracownika końcowo (wynagrodzenie, ekwiwalent, ZUS, PIT, PPK, komornik).
 
@@ -37,7 +37,7 @@ NIE wpisujesz: przyczyny rozwiązania, oceny, kar.
 | odmowa (albo brak odpowiedzi) → sąd pracy | 14 dni |
 | nowe świadectwo po wyroku | 7 dni |
 Kopia w aktach C.
-Odszkodowanie za niewydanie lub wadliwe świadectwo — do 6 tygodni wynagrodzenia, gdy pracownik nie mógł podjąć pracy. Niewydanie to wykroczenie (1 000–30 000).
+Odszkodowanie za niewydanie lub wadliwe świadectwo — do 6 tygodni wynagrodzenia, gdy pracownik nie mógł podjąć pracy. Niewydanie to wykroczenie z art. 282 §1 pkt 3 (2 000–60 000 zł od 8.07.2026).
 Zmiana podstawy po wyroku (np. art. 52 → art. 30 §1 pkt 2) — nowe świadectwo.
 Śmierć pracownika — świadectwo do akt; rodzina może wnioskować.
 Świadectwo podpisuje osoba upoważniona. E-doręczenie oryginału z podpisem kwalifikowanym — dopuszczalne za zgodą; praktyka ostrożna: papier.
@@ -134,6 +134,12 @@ Pracownik, który odszedł 20.11, 2.12 pisze: „W świadectwie macie 14 dni url
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Wydać świadectwo w dniu ustania z pełną treścią (bez przyczyny), rozliczyć pracownika końcowo (pensja za część miesiąca, ekwiwalent, odprawa, potrącenia, PIT bez oświadczeń) i obsłużyć sprostowanie w terminach.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Ustawa z 4.12.2025 o zmianie KP — postać elektroniczna dokumentów, ekwiwalent (Dz.U. 2026 poz. 25) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/25/ogl>
+- Ustawa z 11.03.2026 o zmianie ustawy o PIP i innych ustaw — decyzja o ustaleniu stosunku pracy, grzywny, abolicja (Dz.U. 2026 poz. 473) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/473/ogl>
+- Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - W świadectwie pracy wpisujesz:

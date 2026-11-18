@@ -1,5 +1,5 @@
 # Cudzoziemcy (ustawa 2025), delegowanie, B2B i ryzyko art. 22 KP
-Tydzień 9 · lekcja 30 z 46 · ≈ 65 min
+Tydzień 9 · lekcja 31 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** zatrudniasz cudzoziemca legalnie (praca.gov.pl, powiadomienie 14 dni, kopia dokumentu pobytowego, PIT rezydenta) i oceniasz ryzyko B2B z art. 22 KP.
 
@@ -8,7 +8,7 @@ Tydzień 9 · lekcja 30 z 46 · ≈ 65 min
 ## Czego potrzebujesz
 - Warsztat → Przepisy: „Zatrudnianie cudzoziemców” (ustawa z 20.03.2025 o warunkach dopuszczalności powierzania pracy cudzoziemcom), „Stosunek pracy i zakaz zastępowania…” (art. 22 KP).
 - Prompty → Szablony → „Checklista zatrudnienia cudzoziemca” i „Test 8 cech stosunku pracy”.
-- Pojęcia: tytuł pobytowy (wiza, karta pobytu, status UKR), podstawa pracy (zezwolenie na pracę / oświadczenie o powierzeniu / powiadomienie przez praca.gov.pl w 14 dni dla obywateli Ukrainy / zwolnienie), rezydencja podatkowa (183 dni / centrum interesów), B2B — test podporządkowania.
+- Pojęcia: tytuł pobytowy (wiza, karta pobytu, status UKR), podstawa pracy (zezwolenie na pracę / oświadczenie o powierzeniu / powiadomienie przez praca.gov.pl w 7 dni dla obywateli Ukrainy — od 5.03.2026, wcześniej 14 / zwolnienie), rezydencja podatkowa (183 dni / centrum interesów), B2B — test podporządkowania.
 
 ## 1 · Wyjaśnienie od podstaw
 ### Cudzoziemcy — ustawa z 20.03.2025 (Dz.U. 2025 poz. 621, od 1.06.2025)
@@ -22,9 +22,19 @@ Tydzień 9 · lekcja 30 z 46 · ≈ 65 min
 | zmiana stanowiska lub wymiaru | nowe zezwolenie; wyjątki: obniżenie wymiaru, podwyżka — informacja |
 | oświadczenie o powierzeniu pracy (PUP, do 24 miesięcy) | obywatele Armenii, Białorusi, Gruzji, Mołdawii, Ukrainy; wpis w 7 dni roboczych |
 Zwolnieni z zezwolenia: obywatele UE/EOG/Szwajcarii, posiadacze zezwolenia na pobyt stały lub rezydenta UE, Karty Polaka, studenci stacjonarni, absolwenci polskich uczelni, małżonkowie obywateli PL.
-### Obywatele Ukrainy — specustawa z 12.03.2022
-Legalny pobyt (status UKR) przedłużany kolejnymi nowelizacjami — ostatnio do 4.03.2026 z zapowiedzią kolejnego przedłużenia lub przejścia na CUKR. Sprawdź aktualną datę.
-Praca na podstawie POWIADOMIENIA PUP w 14 dni od podjęcia (praca.gov.pl). Warunki: wynagrodzenie nie niższe niż w powiadomieniu i co najmniej minimalne; wymiar nie niższy. Od 2025 obowiązek umowy pisemnej i zgłoszenia do ZUS.
+### Obywatele Ukrainy — po wygaszeniu specustawy (ustawa z 23.01.2026, Dz.U. 2026 poz. 203, od 5.03.2026)
+| Element | Zasada |
+|---|---|
+| ochrona czasowa (PESEL ze statusem UKR) | do 4.03.2027 — na podstawie ustawy o udzielaniu cudzoziemcom ochrony, nie specustawy |
+| nowo przybyli | wniosek o PESEL UKR w 30 dni od wjazdu; inaczej brak ochrony |
+| potwierdzenie tożsamości | PESEL nadany na oświadczenie → paszport w gminie do 31.08.2026; inaczej status NUE i utrata pobytu od 1.09.2026 |
+| utrata ochrony | wyjazd z Polski na ponad 30 dni; uzyskanie zezwolenia na pobyt czasowy (karta CUKR — wnioski przez system MOS 2); pisemne zrzeczenie |
+| praca | bez zezwolenia — POWIADOMIENIE PUP przez praca.gov.pl (formularz PSZ-PPWPU) w 7 DNI od podjęcia pracy (do 4.03.2026 było 14) |
+| nowe powiadomienie | zmiana rodzaju umowy, stanowiska, wymiaru albo obniżka wynagrodzenia |
+| warunki | wynagrodzenie nie niższe niż w powiadomieniu i co najmniej minimalne; wymiar nie niższy; umowa pisemna z tłumaczeniem; ZUS |
+| kara | brak lub spóźnione powiadomienie — grzywna 1 000–3 000 zł |
+| okres przejściowy | każdy legalnie przebywający obywatel Ukrainy może pracować na powiadomienie przez 3 lata od 5.03.2026 (art. 5a ustawy o warunkach dopuszczalności) |
+| po 4.03.2027 | zwykłe tytuły pobytowe: zezwolenie na pobyt czasowy i pracę, karta CUKR; powiadomienia złożone wcześniej zachowują ważność na dotychczasowych warunkach |
 ### Kary i dokumenty
 Nielegalne powierzenie pracy: grzywna 3 000–50 000 zł; przy wielokrotności i wyzysku — przestępstwo.
 Pracodawca sprawdza i kopiuje dokument pobytowy (wiza, karta pobytu, paszport). Kopia w aktach przez cały okres zatrudnienia (art. 2 ust. 3 ustawy o skutkach powierzania pracy niezgodnie z przepisami). Monitorujesz terminy ważności.
@@ -43,13 +53,13 @@ Pracodawca sprawdza i kopiuje dokument pobytowy (wiza, karta pobytu, paszport). 
 ### B2B i art. 22 KP
 Art. 22 §1¹: zatrudnienie w warunkach stosunku pracy jest stosunkiem pracy bez względu na nazwę umowy. Warunki: praca określonego rodzaju na rzecz pracodawcy i pod jego KIEROWNICTWEM, w miejscu i czasie wyznaczonym, osobiście, za wynagrodzeniem, ryzyko gospodarcze po stronie firmy.
 Art. 22 §1²: zakaz zastępowania umowy o pracę umową cywilnoprawną.
-Kto przekwalifikowuje: sąd na powództwo pracownika lub PIP. Projekt nowelizacji ustawy o PIP 2025/2026 — decyzja administracyjna inspektora przekształcająca umowę; status: projekt.
+Kto przekwalifikowuje: sąd na powództwo pracownika lub PIP — a od 8.07.2026 także okręgowy inspektor pracy DECYZJĄ o ustaleniu istnienia stosunku pracy (ustawa z 11.03.2026 o zmianie ustawy o PIP, Dz.U. 2026 poz. 473): odwołanie w 30 dni do sądu pracy, rozpoznanie w 30 dni, dla osób szczególnie chronionych rygor natychmiastowej wykonalności. ABOLICJA do 8.07.2027: pracodawca, który sam zawrze umowę o pracę z osobą dotąd na umowie cywilnoprawnej, nie odpowiada za wykroczenie. (Specustawa z 12.03.2022 dla obywateli Ukrainy — wygaszona od 5.03.2026, patrz wyżej.)
 | Skutek przekwalifikowania | Szczegóły |
 |---|---|
 | składki ZUS za 5 lat | całość płaci pracodawca; części pracownika nie może potrącić (SN) |
 | PIT | zaległy PIT jako płatnik; różnica między liniowym a skalą — po stronie pracownika |
 | uprawnienia | urlopy i ekwiwalent, nadgodziny, PPK, ochrona, PFRON/ZFŚS |
-| wykroczenie | 1 000–30 000 zł |
+| wykroczenie (art. 281 §1 pkt 1 KP) | 2 000–60 000 zł od 8.07.2026; recydywa 3 000–90 000 |
 ### Test bezpiecznego B2B
 - Własny sprzęt i miejsce.
 - Brak podporządkowania: zlecenia-rezultaty, nie polecenia.
@@ -71,15 +81,15 @@ Umowa z BYŁYM pracownikiem: liniowy 19% niedostępny w roku rozpoczęcia, gdy t
 **Spawacz z Ukrainy (status UKR) od 1.12.2026 — co musi być gotowe i do kiedy**
 
 ```
-Spawacz z Ukrainy (status UKR) od 1.12.2026: powiadomienie PUP przez praca.gov.pl do 15.12 (14 dni), umowa pisemna po polsku + tłumaczenie, kopia dokumentu pobytowego do akt (A), ZUA do 8.12, PESEL (ma), rezydent (mieszka > 183 dni) → PIT-2 możliwe, zasady ogólne. Jeśli wynagrodzenie w powiadomieniu 5 500 — nie możesz płacić mniej bez nowego powiadomienia. Monitoruj: termin legalnego pobytu wg specustawy/karta pobytu, zmiana stanowiska → nowe powiadomienie w 14 dni.
+Spawacz z Ukrainy (status UKR, ochrona czasowa do 4.03.2027) od 1.12.2026: powiadomienie PUP przez praca.gov.pl do 8.12 (7 dni od 5.03.2026), umowa pisemna po polsku + tłumaczenie, kopia dokumentu pobytowego do akt (A), ZUA do 8.12, PESEL (ma), rezydent (mieszka > 183 dni) → PIT-2 możliwe, zasady ogólne. Jeśli wynagrodzenie w powiadomieniu 5 500 — nie możesz płacić mniej bez nowego powiadomienia. Monitoruj: ochrona czasowa do 4.03.2027 / karta pobytu (CUKR), zmiana stanowiska, wymiaru lub obniżka płacy → nowe powiadomienie w 7 dni.
 ```
 
-1. „powiadomienie PUP przez praca.gov.pl do 15.12 (14 dni)”: obywatel Ukrainy ze statusem UKR może pracować bez zezwolenia, ale pracodawca powiadamia powiatowy urząd pracy w 14 dni od podjęcia pracy — wyłącznie elektronicznie (praca.gov.pl); brak powiadomienia = nielegalne powierzenie pracy.
+1. „powiadomienie PUP przez praca.gov.pl do 8.12 (7 dni)”: obywatel Ukrainy ze statusem UKR (ochrona czasowa do 4.03.2027 — ustawa z 23.01.2026, Dz.U. 2026 poz. 203) może pracować bez zezwolenia, ale pracodawca powiadamia powiatowy urząd pracy w 7 dni od podjęcia pracy (od 5.03.2026; wcześniej 14 dni) — wyłącznie elektronicznie (praca.gov.pl, formularz PSZ-PPWPU); brak lub spóźnienie powiadomienia = nielegalne powierzenie pracy (grzywna 1 000–3 000 zł).
 2. „umowa pisemna po polsku + tłumaczenie”: umowa (o pracę lub cywilnoprawna) na piśmie, w języku zrozumiałym dla cudzoziemca — przekazujesz tłumaczenie; warunki (stanowisko, wymiar, wynagrodzenie) nie mogą być gorsze niż w powiadomieniu.
 3. „kopia dokumentu pobytowego do akt (A)”: przed dopuszczeniem do pracy sprawdzasz ważność tytułu pobytowego, kopię przechowujesz przez cały okres pracy; wygaśnięcie tytułu w trakcie = koniec legalnej pracy.
 4. „ZUA do 8.12, PESEL (ma)”: ZUS i prawo pracy jak dla Polaka — kod 01 10, 7 dni; PESEL potrzebny do PIT (bez PESEL — NIP, ale od 2022 PESEL jest standardem dla osób bez działalności).
 5. „rezydent (mieszka > 183 dni) → PIT-2 możliwe, zasady ogólne”: rezydent podatkowy (art. 3 ustawy o PIT) rozlicza się jak Polak — skala, PIT-2, KUP; nierezydent na umowie o pracę — też skala i PIT-2 (art. 31b nie wyłącza nierezydentów); nierezydent na zleceniu — ryczałt 20% i IFT-1R zamiast PIT-11.
-6. „Jeśli wynagrodzenie w powiadomieniu 5 500 — nie możesz płacić mniej bez nowego powiadomienia. Zmiana stanowiska → nowe powiadomienie w 14 dni”: powiadomienie wiąże co do stanowiska i wynagrodzenia; podwyżka — bez; obniżka lub inne stanowisko — nowe powiadomienie. Kalendarz: termin ważności tytułu pobytowego, termin powiadomienia, data końca specustawy.
+6. „Jeśli wynagrodzenie w powiadomieniu 5 500 — nie możesz płacić mniej bez nowego powiadomienia. Zmiana stanowiska → nowe powiadomienie w 7 dni”: powiadomienie wiąże co do rodzaju umowy, stanowiska, wymiaru i wynagrodzenia; podwyżka — bez; obniżka, inne stanowisko, inny wymiar lub rodzaj umowy — nowe powiadomienie w 7 dni. Kalendarz: termin ważności tytułu pobytowego, termin powiadomienia, koniec ochrony czasowej 4.03.2027 (potem karta CUKR lub zezwolenie na pobyt czasowy i pracę).
 
 ✔ **Oczekiwany wynik:** checklista: tytuł pobytowy ✔ (kopia w A) → umowa + tłumaczenie → powiadomienie praca.gov.pl do 15.12 → ZUA do 8.12 → PESEL/rezydencja → kalendarz terminów.
 
@@ -140,6 +150,14 @@ Trzy umowy B2B w AGRO-MLEKO: (A) informatyk — faktura 12 000, praca 8–16 w b
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Przeprowadzić legalne zatrudnienie cudzoziemca (tytuł pobytowy, podstawa pracy, powiadomienie/oświadczenie, umowa z tłumaczeniem, ZUS/PIT, kalendarz) i ocenić umowę B2B testem 8 cech z oszacowaniem ryzyka.
+
+## Źródła — sprawdzone materiały (data dostępu w nawiasie)
+Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmieniło (Dz.U., ISAP, strona urzędu).
+- Ustawa z 23.01.2026 o wygaszeniu rozwiązań ustawy o pomocy obywatelom Ukrainy (Dz.U. 2026 poz. 203) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/203/ogl>
+- Zielona Linia (MRPiPS): Pobyt i praca obywateli Ukrainy po 4 marca 2026 r. — powiadomienie w 7 dni (dostęp 18.11.2026) — <https://zielonalinia.gov.pl/pobyt-i-praca-obywateli-ukrainy-po-4-marca-2026-r/>
+- Grant Thornton, 5.03.2026: zatrudnianie cudzoziemców 2026 — zmiany dla obywateli Ukrainy od 5 marca 2026 (powiadomienie 7 dni) (dostęp 18.11.2026) — <https://grantthornton.pl/publikacja/zatrudnianie-cudzoziemcow-2026-rewolucja-w-przepisach-dla-ukraincow-od-5-marca-2026-r/>
+- Ustawa z 11.03.2026 o zmianie ustawy o PIP i innych ustaw — decyzja o ustaleniu stosunku pracy, grzywny, abolicja (Dz.U. 2026 poz. 473) (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/473/ogl>
+- Rozporządzenie (WE) 883/2004 w sprawie koordynacji systemów zabezpieczenia społecznego (EUR-Lex, wersja PL) (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/reg/2004/883/oj/pol>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Który obywatel może pracować na podstawie oświadczenia o powierzeniu pracy (PUP)?

@@ -1,5 +1,26 @@
 # Zmiany w Mentorze
 
+## 2.7.3 — kurs „Kadry i płace” 2.2: audyt faktów (stan prawny 18.11.2026) i materiały zagraniczne w tłumaczeniu
+
+- **Poprawki merytoryczne po audycie ze sprawdzonymi źródłami** (Dziennik Ustaw/ELI, ISAP, legislacja.gov.pl, Sejm, ZUS, GUS, NBP, MF, PIP, Zielona Linia):
+  reforma PIP (ustawa z 11.03.2026, Dz.U. 2026 poz. 473, od 8.07.2026) — grzywny 2 000–60 000 zł (recydywa 3 000–90 000), mandat do 10 000 zł, decyzja o ustaleniu
+  stosunku pracy, abolicja do 8.07.2027, kontrole zdalne, interpretacje GIP, odwołanie od nakazu 7 dni; mobbing wg uchwalonej ustawy z 19.06.2026 (Dz.U. 2026 poz. 1046) —
+  zadośćuczynienie ≥ 6× minimalne albo odszkodowanie bez wymogu rozstroju zdrowia, regres wobec sprawcy, brak przepisu zwalniającego pracodawcę, odrębny regulamin
+  od 10 pracowników (art. 94³ᵃ) zamiast „obwieszczenia”, dyskryminacja 1×/3× minimalne, art. 18³ᶠ–18³ᵍ, KPC; jawność w rekrutacji — bez osobnego wykroczenia
+  (kary dopiero w projekcie UC127; status projektu 18.11.2026); obywatele Ukrainy po wygaszeniu specustawy (Dz.U. 2026 poz. 203) — powiadomienie PUP w 7 dni, ochrona
+  czasowa do 4.03.2027; odsetki 9,25% / 10,50% i przeliczone kwoty w ćwiczeniach; wymiar grudnia 2026 = 160 h; FP 1,00% + FS 1,45%; PIT 2027 (ustawa uchwalona,
+  decyzja prezydenta do 27.11.2026); nowe przepisy: układy zbiorowe (Dz.U. 2025 poz. 1661), upały (Dz.U. 2026 poz. 927, od 11.01.2027), praca platformowa (UC160),
+  rozporządzenie 883/2004, delegowanie; tabela zmian 2025–2027 w lekcji „Źródła prawa”, sekcja „Zapowiedzi na 2027” w lekcji „Wskaźniki”.
+- **Dwie nowe lekcje z materiałów zagranicznych (tłumaczenie + zestawienie z KP)**: „Praktyki HR z zagranicy (ACAS, CIPD) po polsku” (tydzień 2) — słowniczek EN–PL,
+  onboarding wg CIPD z obowiązkami KP, rozmowa okresowa wg ACAS, skarga pracownicza i postępowanie dyscyplinarne wg Kodeksu ACAS 2015 zestawione z art. 94³ᵃ i 108–113 KP,
+  exit interview z RODO, lista rozwiązań, których nie wolno przenieść; „Prawo UE i standardy międzynarodowe w kadrach” (tydzień 11) — koordynacja ubezpieczeń
+  (883/2004: A1, US-3/US-4/US-36, telepraca transgraniczna), delegowanie (96/71, 2018/957) z dopłatą do płacy państwa przyjmującego i przykładem liczbowym (Niemcy),
+  dyrektywy wdrożone w KP, wyroki TSUE (CCOO, Schultz-Hoff, Max-Planck, Tyco, Matzak, C-19/23), konwencje MOP, EU-OSHA „Heat at work” + polskie progi 28/35°C.
+  48 lekcji, 96 ćwiczeń, 62 przepisy, 134,8 h; każdy tydzień ≤ 9 h.
+- **Źródła w lekcjach**: pole `zrodla` lekcji (`[tytuł, adres, data dostępu]`) — Mentor pokazuje kartę „Źródła — sprawdzone materiały” pod lekcją z linkiem
+  „otwórz ↗”; pole `zrodla_kursu` programu — karta „Źródła programu” w Ściądze; paczka materiałów: sekcja „Źródła” w pliku każdej lekcji i `ZRODLA.md`
+  (format opisany w `programy/FORMAT.md`). Raport kursu: sekcja F w `RAPORT_CHECKLISTA.md`.
+
 ## 2.7.2 — paczki z niezależnymi testami, lokalne API kursu, rubryka oceny własnej (na podstawie paczki AI Developer Lab 1.5)
 
 - **`sprawdzenie.rodzaj = "test_zewnetrzny"`**: niezależne testy zachowania z paczki kursu (np. `WERYFIKATORY/test_zachowania.py`, wybór testu przez `wybor` = `pytest -k`).

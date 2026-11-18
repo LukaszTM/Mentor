@@ -1,5 +1,5 @@
 # Sygnaliści, praca zdalna, RODO i monitoring w kadrach
-Tydzień 14 · lekcja 44 z 46 · ≈ 65 min
+Tydzień 14 · lekcja 46 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** masz procedurę zgłoszeń wewnętrznych, regulamin pracy zdalnej z ryczałtem oraz zgodne z RODO monitoring, kontrolę trzeźwości i retencję danych.
 

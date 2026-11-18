@@ -1,5 +1,5 @@
 # Staż pracy 2026: zlecenia i działalność w stażu, zaświadczenie ZUS
-Tydzień 3 · lekcja 13 z 46 · ≈ 60 min
+Tydzień 3 · lekcja 14 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** wliczasz do stażu zlecenia i działalność po nowelizacji 2026, wiesz, jakie dokumenty przyjąć i co przeliczyć w firmie.
 

@@ -9,7 +9,7 @@ Tydzień 8 · lekcja 28 z 48 · ≈ 65 min
 - Lekcja „Podstawa wymiaru zasiłku” — stawka dzienna.
 - Warsztat → eZUS / Płatnik → Rozliczenie DRA/RCA/RSA → „Dodaj RSA” (kody przerw) i Warsztat → Zasiłki (karta B — rodzaj: opieka / wypadek_praca / ciaza).
 - Wzory: Z-15A (opieka nad dzieckiem), Z-15B (inny członek rodziny), ZNp-7 (świadczenie rehabilitacyjne) — opisy w Prompty → Szablony.
-- Pojęcia: zasiłek opiekuńczy (80%, limit 60 dni/rok na dziecko do 14 lat, 14 dni na innego członka rodziny, 30 dni na dziecko niepełnosprawne 14–18; limit łączny dla obojga rodziców), zasiłek wypadkowy 100% od 1. dnia (nie zużywa puli 33), świadczenie rehabilitacyjne (po 182 dniach, do 12 mies., 90%/75%), kody RSA 312/313/314/321/327/331.
+- Pojęcia: zasiłek opiekuńczy (80%, limit 60 dni/rok na dziecko do 14 lat, 14 dni na innego członka rodziny, 30 dni na dziecko niepełnosprawne 14–18; limit łączny dla obojga rodziców), zasiłek wypadkowy 100% od 1. dnia (nie zużywa puli 33), świadczenie rehabilitacyjne (po 182 dniach, do 12 mies., 90%/75%), kody RSA 312/313/314/321/311/331.
 
 ## 1 · Wyjaśnienie od podstaw
 ### Zasiłek opiekuńczy (art. 32–35) — 80% podstawy
@@ -53,17 +53,21 @@ Wysyłasz w eZUS. ZUS ustala i wypłaca w 30 dni.
 |---|---|
 | 111 | urlop bezpłatny |
 | 121 | urlop wychowawczy |
-| 151 | usprawiedliwiona nieobecność bez wynagrodzenia (np. opiekuńczy art. 173¹) |
+| 131 | urlop opiekuńczy (art. 173¹ KP) |
+| 151 | usprawiedliwiona nieobecność bez prawa do wynagrodzenia lub zasiłku (np. choroba w okresie wyczekiwania) |
 | 152 | nieusprawiedliwiona nieobecność |
-| 155 | niezdolność bez prawa do wynagrodzenia (wyczekiwanie) |
-| 311 | zasiłek macierzyński — obecnie rozbity: 327 za urlop macierzyński, 319 rodzicielski, 325 ojcowski |
+| 311 | zasiłek macierzyński za urlop macierzyński |
+| 319 | zasiłek macierzyński za urlop rodzicielski |
+| 338 | zasiłek macierzyński za 9 nieprzenoszalnych tygodni urlopu rodzicielskiego (art. 182¹ᵃ §4) |
+| 327 | zasiłek macierzyński za urlop ojcowski |
+| 341 | zasiłek macierzyński za uzupełniający urlop macierzyński |
 | 312 | zasiłek opiekuńczy |
 | 313 | zasiłek chorobowy z ubezpieczenia chorobowego |
 | 314 | zasiłek chorobowy z ubezpieczenia wypadkowego |
 | 321 | świadczenie rehabilitacyjne |
 | 331 | wynagrodzenie za czas niezdolności finansowane przez pracodawcę |
 W RSA podajesz: okres od–do, liczbę dni, kwotę (dla zasiłków wypłaconych przez płatnika).
-Aktualny wykaz kodów: zus.pl → „Kody wykorzystywane przy wypełnianiu dokumentów”.
+Źródło kodów: załącznik nr 24 do rozporządzenia MRPiPS z 9.04.2026 (Dz.U. 2026 poz. 518); wykaz także na zus.pl → „Kody wykorzystywane przy wypełnianiu dokumentów”.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Dziecko (5 lat) chore 3–9.11.2026 — zasiłek opiekuńczy matki krok po kroku**
@@ -93,7 +97,7 @@ RSA: kod 312, 03.11–09.11.2026, 7 dni, 966,42. RCA: składki od 4 600 (6 000 �
 1. Opieka: e-ZLA + Z-15A/B; sprawdź limit 60/14/30 dni w roku dla rodziny.
 2. Wypadek: zespół powypadkowy, protokół w 14 dni, zasiłek 100% z ubezpieczenia wypadkowego od 1. dnia.
 3. Rehabilitacyjne: wniosek ZNp-7 6 tygodni przed końcem 182 dni.
-4. W RSA kody: 313/314/312/327/321/331; kwoty zasiłków do rozliczenia w DRA.
+4. W RSA kody: 313/314/312/311/321/331; kwoty zasiłków do rozliczenia w DRA.
 
 ## 4 · Ćwiczenie prowadzone
 Ewa Sobczak (5 200 zł; podstawa 4 487,08) opiekuje się chorym 6-letnim synem 16–20.11.2026 (e-ZLA na opiekę); mąż w tym roku wykorzystał już 20 dni opieki na to dziecko. Wypełnij Z-15A (kluczowe pola), policz zasiłek, pomniejszenie pensji i wiersz RSA jak w demonstracji; sprawdź limit rodziny. Plik: cwiczenia/tydzien_08/zasilki_inne_1.md. Czas: 20 minut.
@@ -105,7 +109,7 @@ Ewa Sobczak (5 200 zł; podstawa 4 487,08) opiekuje się chorym 6-letnim synem 1
 Jakub Krawczyk (24 lata, pakowacz, 4 900 zł, ulga dla młodych) 23.11.2026 skaleczył się na pakowarce; e-ZLA 23.11–12.12.2026. Kierownik twierdzi, że „to zwykłe L4”, bo pracownik nie miał rękawic. Zdecyduj: (a) jakie kroki i w jakich terminach wykonuje firma, (b) ile wynosi świadczenie za listopad i z jakiego ubezpieczenia, czy zużywa pulę 33, (c) czy zasiłek korzysta z ulgi dla młodych, (d) jaki kod RSA. Plik: cwiczenia/tydzien_08/zasilki_inne_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_08/zasilki_inne_2.md` · rozwiązanie: `rozwiazania/tydzien_08/zasilki_inne_2.md`
-✔ Poprawny wynik wygląda tak: (a) zgłoszenie wypadku, zespół powypadkowy (specjalista BHP + SIP), protokół w 14 dni (do 7.12), zatwierdzenie przez pracodawcę w 5 dni, statystyczna karta Z-KW do GUS do 15. dnia następnego miesiąca po zatwierdzeniu; brak rękawic nie wyklucza uznania wypadku (wyklucza tylko wyłączna wina umyślna/rażące niedbalstwo lub nietrzeźwość — art. 21 ustawy wypadkowej); (b) zasiłek chorobowy z ubezpieczenia WYPADKOWEGO 100% od 1. dnia: 4 228,21/30 = 140,94 × 8 dni (23–30.11) = 1 127,52; grudzień 12 × 140,94 = 1 691,28; pula 33 nietknięta; pensja 4 900 − 4 900/30 × 8 = 3 593,33; (c) nie — ulga obejmuje przychody ze stosunku pracy i zlecenia, zasiłek to przychód z innych źródeł → zaliczka 12% od 1 128 = 135,36, ale kwota zmniejszająca 300 niewykorzystana przy pensji (podatek 0) → zaliczka 0; (d) RSA 314.
+✔ Poprawny wynik wygląda tak: (a) zgłoszenie wypadku, zespół powypadkowy (specjalista BHP + SIP), protokół w 14 dni (do 7.12), zatwierdzenie przez pracodawcę w 5 dni, statystyczna karta Z-KW do GUS do 15. dnia roboczego miesiąca następującego po miesiącu zatwierdzenia protokołu; brak rękawic nie wyklucza uznania wypadku (wyklucza tylko wyłączna wina umyślna/rażące niedbalstwo lub nietrzeźwość — art. 21 ustawy wypadkowej); (b) zasiłek chorobowy z ubezpieczenia WYPADKOWEGO 100% od 1. dnia: 4 228,21/30 = 140,94 × 8 dni (23–30.11) = 1 127,52; grudzień 12 × 140,94 = 1 691,28; pula 33 nietknięta; pensja 4 900 − 4 900/30 × 8 = 3 593,33; (c) nie — ulga obejmuje przychody ze stosunku pracy i zlecenia, zasiłek to przychód z innych źródeł → zaliczka 12% od 1 128 = 135,36, ale kwota zmniejszająca 300 niewykorzystana przy pensji (podatek 0) → zaliczka 0; (d) RSA 314.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Zasiłek opiekuńczy na 9-letnie dziecko z powodu zamknięcia szkoły.**
@@ -117,7 +121,7 @@ Jakub Krawczyk (24 lata, pakowacz, 4 900 zł, ulga dla młodych) 23.11.2026 skal
   - Jak sprawdzić: Data zawiadomienia + 14 dni; czy zespół powołany?
   - Poprawka: Protokół w 14 dni; do czasu uznania — wypłata 80% z korektą do 100% po protokole.
 - ✘ **Zasiłek macierzyński w RSA z kodem 313.**
-  - Prawdopodobna przyczyna: Kody: 327 (macierzyński za urlop macierzyński), 319 (rodzicielski), 325 (ojcowski).
+  - Prawdopodobna przyczyna: Kody: 311 (zasiłek macierzyński za urlop macierzyński), 319 (rodzicielski), 338 (9 nieprzenoszalnych tygodni rodzicielskiego), 327 (ojcowski); 313 to zasiłek chorobowy.
   - Jak sprawdzić: Jaki urlop? Sprawdź Warsztat → Przepisy / tabela kodów w Ściądze.
   - Poprawka: Popraw kod w RSA; kwota do odliczenia w DRA bez zmian.
 

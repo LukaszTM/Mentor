@@ -43,7 +43,7 @@ Umowę zawierasz na piśmie. Jeśli nie — przed dopuszczeniem do pracy potwier
 Brak umowy na piśmie przed dopuszczeniem = wykroczenie.
 ### Praktyka
 - Wynagrodzenie na pełny etat ≥ 4 806 zł; na część etatu proporcjonalnie.
-- Premia uznaniowa nie może „uzupełniać” do minimalnej w sposób niepewny. Od 2027 projekt UC62 ma wyłączyć dodatki z minimalnej.
+- Premia uznaniowa nie może „uzupełniać” do minimalnej w sposób niepewny. PROJEKTY nowej ustawy o minimalnym wynagrodzeniu (poselski — druk 1811, w komisji sejmowej; rządowy UC62) przewidują wyłączenie premii, nagród i dodatków z minimum oraz grzywnę 2 000–60 000 zł — stan 16.10.2026: nieuchwalone; obowiązuje art. 6 ust. 5 ustawy z 10.10.2002.
 - Miejsce pracy: konkretne — zakład albo obszar dla mobilnych. Zapis „terytorium RP” PIP kwestionuje.
 - Zmiana warunków: porozumienie (aneks) albo wypowiedzenie zmieniające.
 - Umowa w języku polskim; dla cudzoziemca — tłumaczenie.
@@ -53,13 +53,13 @@ Brak umowy na piśmie przed dopuszczeniem = wykroczenie.
 
 ```
 Pracownik: umowa próbna 1.02–30.04.2024 (3 mies.), potem określona 1.05.2024–30.04.2026 (24 mies.), potem określona 1.05.2026–31.01.2027 (9 mies. → razem 33).
-Trzecia umowa kończy się 31.01.2027 — czwarta musiałaby być już nieokreślona; przedłużenie trzeciej choćby o dzień → przekształcenie. Próbna nie liczy się do 33/3.
+Druga umowa na czas określony kończy się 31.01.2027 i wyczerpuje 33 miesiące — kolejna umowa od 1.02.2027 musiałaby być nieokreślona; przedłużenie choćby o dzień → przekształcenie. Próbna nie liczy się do 33/3.
 ```
 
 1. „próbna 1.02–30.04.2024 (3 mies.)” — okres próbny może trwać do 3 miesięcy (art. 25 §2 KP), ale: gdy planujesz potem umowę określoną krótszą niż 6 miesięcy → próbna max 1 miesiąc; 6–12 miesięcy → max 2 miesiące. Próbna NIE liczy się do limitu 33/3.
 2. „określona 1.05.2024–30.04.2026 (24 mies.)” — pierwsza umowa z limitu: 24 z 33 miesięcy; licznik umów: 1 z 3.
 3. „określona 1.05.2026–31.01.2027 (9 mies. → razem 33)” — druga umowa: 24 + 9 = 33 miesięcy — dokładnie limit (art. 25¹ §1); licznik: 2 z 3.
-4. „czwarta musiałaby być już nieokreślona” — poprawnie: kolejna umowa (trzecia z limitu) od 1.02.2027 musiałaby być nieokreślona, bo 33 miesiące są wyczerpane — przekroczenie LICZBY (4. umowa) albo CZASU (34. miesiąc) przekształca umowę w bezterminową (art. 25¹ §3).
+4. „kolejna umowa od 1.02.2027 musiałaby być nieokreślona” — choć byłaby dopiero trzecią umową z limitu, 33 miesiące są wyczerpane — przekroczenie LICZBY (4. umowa) albo CZASU (34. miesiąc) przekształca umowę w bezterminową (art. 25¹ §3).
 5. „przedłużenie choćby o dzień → przekształcenie” — aneks wydłużający umowę określoną to z mocy prawa NOWA umowa (art. 25¹ §2): liczy się do limitu 3 i do 33 miesięcy.
 
 ✔ **Oczekiwany wynik:** od 1.02.2027 tylko umowa na czas nieokreślony; żaden aneks nie ratuje terminu — to reguła, którą sprawdzasz przy każdej umowie terminowej.
@@ -86,19 +86,19 @@ Dla Anny Kowalczyk (próbna 1.10–31.12.2026) firma planuje potem umowę na cza
 Marek Zieliński ma umowę określoną 1.03.2025–28.02.2027 (24 mies.; wcześniej próbna 1.12.2024–28.02.2025). Kierownik chce 1.02.2027 podpisać aneks wydłużający umowę do 31.12.2027 „bo tak prościej niż nowa umowa”. Zdecyduj, jaki skutek prawny ma ten aneks, i zaproponuj poprawne rozwiązanie z datami. Plik: cwiczenia/tydzien_01/umowa_o_prace_2.md. Czas: 15 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_01/umowa_o_prace_2.md` · rozwiązanie: `rozwiazania/tydzien_01/umowa_o_prace_2.md`
-✔ Poprawny wynik wygląda tak: Aneks = nowa umowa określona od 1.03.2027 (art. 25¹ §2): licznik 2 z 3, miesiące 24 + 10 = 34 > 33 → od 34. miesiąca (1.01.2028)... — dokładniej: łączny okres przekracza 33 mies. już w trakcie: 24 (do 28.02.2027) + 10 (1.03–31.12.2027) = 34 → od 1.12.2027 (34. miesiąc) umowa staje się bezterminowa. Poprawnie: nowa umowa określona max do 30.11.2027 (33 mies.) albo od razu nieokreślona.
+✔ Poprawny wynik wygląda tak: Aneks = nowa umowa określona od 1.03.2027 (art. 25¹ §2): licznik 2 z 3; miesiące 24 (do 28.02.2027) + 10 (1.03–31.12.2027) = 34 > 33 → 33 miesiące upływają 30.11.2027, więc od 1.12.2027 (34. miesiąc) umowa jest z mocy prawa bezterminowa (art. 25¹ §3). Poprawnie: nowa umowa określona max do 30.11.2027 (33 mies.) albo od razu nieokreślona.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Umowa próbna 3 mies., potem określona na 5 miesięcy.**
   - Prawdopodobna przyczyna: Próbna mogła trwać maksymalnie 1 miesiąc (planowana określona < 6 mies.) — art. 25 §2² pkt 1.
-  - Jak sprawdzić: Czy w umowie próbnej wpisano planowany czas kolejnej umowy (art. 29 §1¹)?
+  - Jak sprawdzić: Czy w umowie próbnej wpisano planowany czas kolejnej umowy (art. 29 §1 pkt 6 — obowiązkowo, gdy plan jest krótszy niż 12 miesięcy)?
   - Poprawka: Przy krótkich planach: próbna 1 lub 2 miesiące; w umowie próbnej zapisz planowany okres kolejnej umowy.
 - ✘ **W umowie brak miejsca wykonywania pracy / wymiaru etatu.**
   - Prawdopodobna przyczyna: Niepełna treść art. 29 §1 (rodzaj pracy, miejsce, wynagrodzenie ze składnikami, wymiar, dzień rozpoczęcia).
   - Jak sprawdzić: Przejdź listę art. 29 §1 punkt po punkcie na szablonie.
   - Poprawka: Uzupełnij; przy zmianie — porozumienie zmieniające, nie „korekta”.
-- ✘ **Wynagrodzenie 2 300 zł dla 1/2 etatu uznane za „poniżej minimalnej”.**
-  - Prawdopodobna przyczyna: Minimalne dla części etatu jest proporcjonalne: 4 806 × 1/2 = 2 403 zł — więc 2 300 faktycznie jest za nisko.
+- ✘ **Umowa na 1/2 etatu z wynagrodzeniem zasadniczym 2 300 zł.**
+  - Prawdopodobna przyczyna: Minimalne dla części etatu jest proporcjonalne: 4 806 × 1/2 = 2 403 zł — 2 300 zł jest poniżej minimum.
   - Jak sprawdzić: Policz 4 806 × wymiar etatu.
   - Poprawka: Zasadnicze co najmniej 2 403 zł (art. 8 ust. 1 ustawy o minimalnym wynagrodzeniu).
 

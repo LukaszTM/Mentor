@@ -5,7 +5,7 @@ Tydzień 12 · lekcja `zfss_pfron` · plik: `cwiczenia/tydzien_12/zfss_pfron_1.m
 Na 1.01.2027 AGRO-MLEKO planuje 60,0 etatu (w tym 3 osoby z orzeczeniem: 2 umiarkowany, 1 lekki, wszystkie na pełny etat), odpis na 2027 przyjmij 3 100 zł (kwota ćwiczeniowa — prawdziwą podstawisz z obwieszczenia). Policz jak w demonstracji: odpis z zwiększeniami, kwoty i terminy przelewów, wpłatę PFRON (przeciętne 9 200) oraz SOD. Plik: cwiczenia/tydzien_12/zfss_pfron_1.md. Czas: 20 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-odpis: 60 × 3 100 = 186 000 + 3 × 193,75 (6,25% × 3 100) = 581,25 → 186 581,25; 75% = 139 935,94 do 31.05.2027, reszta 46 645,31 do 30.09.2027; PFRON: 6% × 60 = 3,6 etatu; zatrudnia 3,0 → brakuje 0,6 × 40,65% × 9 200 = 0,6 × 3 739,80 = 2 243,88/mies. (DEK-I-0 do 20.); SOD: 2 × 1 550 + 575 = 3 675/mies. (Wn-D do 25.), jeśli efekt zachęty spełniony.
+odpis: 60 × 3 100 = 186 000 + 2 × 193,75 (6,25% × 3 100 — tylko za stopień umiarkowany i znaczny) = 387,50 → 186 387,50; 75% = 139 790,63 do 31.05.2027, reszta 46 596,87 do 30.09.2027; PFRON: 6% × 60 = 3,6 etatu; zatrudnia 3,0 → brakuje 0,6 × 40,65% × 9 200 = 0,6 × 3 739,80 = 2 243,88/mies. (DEK-I-0 do 20.); SOD: 0 zł — firma ma ≥ 25 etatów i wskaźnik 5% < 6%; dopiero czwarta osoba z orzeczeniem (4/61 = 6,6%) zeruje wpłatę i otwiera SOD.
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).

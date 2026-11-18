@@ -6,7 +6,7 @@
 
 **Mentor nie widzi mojego pliku.** Nazwa musi być dokładnie taka jak w zadaniu (Notatnik dopisuje `.txt` — włącz w Eksploratorze „Rozszerzenia nazw plików”); plik może leżeć w dowolnym podkatalogu projektu. Mój projekt → „Odśwież”.
 
-**Czy muszę mieć internet, konto w ZUS, Excel?** Nie. Symulatory eZUS/Płatnika i e-Urzędu, kalkulatory i 48 streszczeń przepisów są w zakładce Warsztat. ISAP (pełne teksty aktów) jest publiczny, ale niepotrzebny do ćwiczeń.
+**Czy muszę mieć internet, konto w ZUS, Excel?** Nie. Symulatory eZUS/Płatnika i e-Urzędu, kalkulatory i ponad 60 streszczeń przepisów są w zakładce Warsztat. ISAP (pełne teksty aktów) jest publiczny, ale niepotrzebny do ćwiczeń.
 
 **Czy Asystent jest płatny?** Tryb offline — nie (bez konta). API i Subskrypcja — tak, opcjonalnie; żadne zadanie ich nie wymaga.
 
@@ -14,7 +14,7 @@
 
 **Jak zresetować ćwiczenie?** Skasuj swój plik w `cwiczenia/` i skopiuj materiały ponownie (nic innego nie zostanie nadpisane).
 
-**Skąd Mentor bierze liczby i czy są aktualne?** Stan prawny: listopad 2026; każdy wskaźnik ma źródło (Warsztat → Przepisy, Firma ćwiczeniowa → Parametry). W styczniu aktualizujesz parametry (lekcja „Wskaźniki”).
+**Skąd Mentor bierze liczby i czy są aktualne?** Stan prawny: listopad 2026; każdy wskaźnik ma źródło (Warsztat → Przepisy, Firma ćwiczeniowa → Parametry). W styczniu aktualizujesz parametry (lekcja „Wskaźniki”). Mentor pilnuje dat za Ciebie: karta „Aktualność przepisów” na Panelu i „Kalendarz aktualizacji” w Ściądze (17 terminów do sprawdzenia w latach 2026–2028).
 
 **Wynik w Warsztacie różni się od mojego.** Tryb ćwiczenia (Lista płac → „Sprawdź”) podpowie, której kwocie równa się różnica. Najczęściej: składki liczone jedną kwotą, brak zaokrągleń, zły dzielnik.
 

@@ -27,14 +27,14 @@ Wynagrodzenie jak urlopowe.
 ### Inne zwolnienia
 | Zwolnienie | Zasada |
 |---|---|
-| krwiodawstwo | dzień oddania krwi |
+| krwiodawstwo | dzień oddania krwi i dzień następny — 100% (art. 9 ust. 1 pkt 1 ustawy o publicznej służbie krwi); także czas badań okresowych dawcy |
 | wezwanie do sądu, urzędu, wojska | bez wynagrodzenia od pracodawcy; zaświadczenie dla organu, który rekompensuje |
 | badania ciężarnej | 100% |
 | poszukiwanie pracy w wypowiedzeniu przez pracodawcę | 2 dni przy 2 tygodniach lub 1 miesiącu; 3 dni przy 3 miesiącach — 100% |
 | urlop szkoleniowy | 6 dni na egzaminy; 21 dni na pracę dyplomową — 100%, gdy pracodawca kieruje lub się zgadza |
 | szkolenia BHP | czas pracy |
 ### Urlop bezpłatny (art. 174)
-- Na pisemny (od 2026 także elektroniczny) wniosek pracownika.
+- Na wniosek pracownika w postaci papierowej lub elektronicznej (od 27.01.2026 — nowelizacja z 4.12.2025, Dz.U. 2026 poz. 25; wcześniej wyłącznie pisemny).
 - Nie wlicza się do stażu. Wyjątek: urlop na pracę u innego pracodawcy za zgodą (art. 174¹).
 - Dłuższy niż 3 miesiące — strony mogą przewidzieć odwołanie.
 - W czasie bezpłatnego nie ma składek ani zasiłków (RSA 111).
@@ -60,8 +60,8 @@ Wynagrodzenie: 6 000 − 150 − 600 = 5 250 zł (składki i PIT od 5 250).
 1. „siła wyższa 8 h: 50% × (6 000/160 × 8) = 150 zł zamiast 300”: za czas zwolnienia z powodu siły wyższej (art. 148¹ §1) pracownik zachowuje 50% wynagrodzenia; wynagrodzenie za 8 h = 6 000/160 × 8 = 300; połowa = 150 → potrącasz 150 (bo pensja zasadnicza zakłada 100%).
 2. „Art. 188 — 8 h: 100% — bez zmian”: zwolnienie na opiekę nad dzieckiem do 14 lat (2 dni albo 16 h w roku) jest płatne jak za urlop — pensja bez pomniejszenia.
 3. „Opiekuńczy: bezpłatny → 6 000/160 × 16 = 600 zł potrącenia”: urlop opiekuńczy z art. 173¹ (5 dni w roku na członka rodziny) jest BEZPŁATNY, ale wlicza się do stażu; potrącasz pełną stawkę za 16 h.
-4. „Wynagrodzenie: 6 000 − 150 − 600 = 5 250 zł”: dzielnik to wymiar godzin miesiąca (160), nie 30 — przez 30 dzielisz tylko przy chorobie (§11 rozporządzenia o wynagrodzeniu urlopowym).
-5. Składki i PIT liczysz od 5 250; w RSA: urlop opiekuńczy to przerwa z kodem 151 (usprawiedliwiona bez prawa do wynagrodzenia); siła wyższa i art. 188 — bez RSA (wynagrodzenie zachowane w części/całości).
+4. „Wynagrodzenie: 6 000 − 150 − 600 = 5 250 zł”: dzielnik to wymiar godzin miesiąca (160), nie 30 — przez 30 dzielisz tylko przy chorobie (§ 11 rozporządzenia MPiPS z 29.05.1996 w sprawie sposobu ustalania wynagrodzenia w okresie niewykonywania pracy; inne nieobecności — § 12).
+5. Składki i PIT liczysz od 5 250; w RSA: urlop opiekuńczy to przerwa z kodem 131 (urlop opiekuńczy z art. 173¹ KP); siła wyższa i art. 188 — bez RSA (wynagrodzenie zachowane w części/całości).
 
 ✔ **Oczekiwany wynik:** 5 250 zł brutto za listopad; w ewidencji: 8 h SW (50%), 8 h art. 188 (100%), 16 h UO (0%).
 
@@ -78,10 +78,10 @@ Wynagrodzenie: 6 000 − 150 − 600 = 5 250 zł (składki i PIT od 5 250).
 4. Odpowiedz na wniosek o elastyczną organizację pracy w 7 dni, z uzasadnieniem.
 
 ## 4 · Ćwiczenie prowadzone
-Ewa Sobczak (5 200 zł, listopad 2026, 160 h): 24.11 ślub córki (1 dzień okolicznościowy), 26.11 siła wyższa 4 h (awaria w domu), 27–28.11 urlop opiekuńczy 16 h (ojciec po operacji). Rozlicz jak w demonstracji: potrącenia, wynagrodzenie do oskładkowania, kody w ewidencji. Plik: cwiczenia/tydzien_04/nieobecnosci_inne_1.md. Czas: 15 minut.
+Ewa Sobczak (5 200 zł, listopad 2026, 160 h): 24.11 ślub córki (1 dzień okolicznościowy), 25.11 siła wyższa 4 h (wypadek męża — musi natychmiast jechać do szpitala), 26–27.11 urlop opiekuńczy 16 h (ojciec po operacji). Rozlicz jak w demonstracji: potrącenia, wynagrodzenie do oskładkowania, kody w ewidencji. Plik: cwiczenia/tydzien_04/nieobecnosci_inne_1.md. Czas: 15 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_04/nieobecnosci_inne_1.md` · rozwiązanie: `rozwiazania/tydzien_04/nieobecnosci_inne_1.md`
-✔ Poprawny wynik wygląda tak: okolicznościowy 1 dzień (ślub dziecka — §15 pkt 2) 100% → 0; siła wyższa 4 h: 50% × (5 200/160 × 4 = 130) = 65 potrącenia; opiekuńczy 16 h: 5 200/160 × 16 = 520 potrącenia; wynagrodzenie 5 200 − 65 − 520 = 4 615 zł; RSA: kod 151 za 27–28.11.
+✔ Poprawny wynik wygląda tak: okolicznościowy 1 dzień (ślub dziecka — §15 pkt 2) 100% → 0; siła wyższa 4 h: 50% × (5 200/160 × 4 = 130) = 65 potrącenia; opiekuńczy 16 h: 5 200/160 × 16 = 520 potrącenia; wynagrodzenie 5 200 − 65 − 520 = 4 615 zł; RSA: kod 131 za 26–27.11.
 
 ## 5 · Ćwiczenie samodzielne
 Pracownik produkcji (system równoważny, zmiany 12 h) składa 2.11.2026 pierwszy w roku wniosek o siłę wyższą „na 1 dzień” (jego zmiana trwa 12 h), a 20.11 drugi — „na 4 godziny”. Zdecyduj: (a) ile godzin potrącasz za pierwszy dzień i jak wpływa to na limit 2 dni / 16 h, (b) czy drugi wniosek „w godzinach” jest dopuszczalny po pierwszym „w dniach”, (c) jak rozliczyć, gdyby pierwszy wniosek był „w godzinach” (12 h). Plik: cwiczenia/tydzien_04/nieobecnosci_inne_2.md. Czas: 15 minut.
@@ -93,15 +93,15 @@ Pracownik produkcji (system równoważny, zmiany 12 h) składa 2.11.2026 pierwsz
 - ✘ **Urlop opiekuńczy (art. 173¹) rozliczony jako płatny 100%.**
   - Prawdopodobna przyczyna: Pomylenie z art. 188 (opieka nad zdrowym dzieckiem — płatna) lub z zasiłkiem opiekuńczym (ZUS, 80%).
   - Jak sprawdzić: Kto jest podopiecznym i jaki przepis we wniosku? Art. 173¹ = bezpłatny.
-  - Poprawka: Potrąć pełną stawkę za godziny; RSA kod 151; staż zachowany.
+  - Poprawka: Potrąć pełną stawkę za godziny; RSA kod 131; staż zachowany.
 - ✘ **Pensja pomniejszona przez 30 za urlop bezpłatny.**
   - Prawdopodobna przyczyna: Dzielnik 30 dotyczy wyłącznie choroby (§11); inne nieobecności — przez wymiar godzin.
   - Jak sprawdzić: Czy nieobecność jest chorobą/zasiłkiem? Jeśli nie — przez wymiar.
   - Poprawka: 6 000/160 × godziny nieobecności.
 - ✘ **Odpowiedź na wniosek o elastyczną organizację pracy po 3 tygodniach.**
-  - Prawdopodobna przyczyna: Art. 188¹ §4 — odpowiedź w 7 dni od wniosku, z uzasadnieniem odmowy.
+  - Prawdopodobna przyczyna: Art. 188¹ §5 — odpowiedź w 7 dni od wniosku, z uzasadnieniem odmowy.
   - Jak sprawdzić: Data wpływu wniosku + 7 dni.
-  - Poprawka: Odpowiedz w 7 dni; brak odpowiedzi nie oznacza zgody, ale jest wykroczeniem (art. 281 §1 pkt 5b).
+  - Poprawka: Odpowiedz w 7 dni; brak odpowiedzi nie oznacza zgody, ale jest wykroczeniem (art. 281 §1 pkt 5a).
 
 ## Pułapki
 - Urlop opiekuńczy mylony z art. 188 (opieka nad zdrowym dzieckiem do 14 lat — płatny).
@@ -114,7 +114,7 @@ Pracownik produkcji (system równoważny, zmiany 12 h) składa 2.11.2026 pierwsz
 
 ## Sprawdzenie — odpowiedz na głos, potem rozwiń
 - **Ile wynosi wynagrodzenie za zwolnienie z powodu siły wyższej?**
-  - 50% wynagrodzenia liczonego jak urlopowe (art. 148¹ §4).
+  - 50% wynagrodzenia liczonego jak urlopowe (art. 148¹ §1).
 - **Czy urlop opiekuńczy (5 dni) jest płatny?**
   - Nie — bezpłatny, ale wlicza się do stażu i nie obniża urlopu wypoczynkowego.
 - **Ile dni zwolnienia na ślub dziecka?**

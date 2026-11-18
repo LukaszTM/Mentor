@@ -10,17 +10,18 @@ Nadgodzina w nocy — 50% czy 100%? Sprawdź art. 151¹ §1 pkt 1 lit. a.
 Warsztat → Przepisy → „Nadgodziny: limit, rekompensata, dzień wolny” i „Pora nocna i dodatek”: dodatek nocny należy się niezależnie od dodatku za nadgodziny.
 
 ## Podpowiedź 3 — częściowy przykład
-Szkic: nocny 64 × (4 806/160 × 20%) = 64 × 6,01; nadgodziny: w równoważnym dobowa norma to przedłużony wymiar z grafiku (12 h) → 2 h ponad = dobowe; w nocy → 100%; czas wolny bez wniosku 1,5 × 2 = 3 h.
+Szkic: nocny 64 × (4 806/160 × 20%) = 64 × 6,01; nadgodziny: w równoważnym dobowa norma to przedłużony wymiar z grafiku (12 h) → 13. godzina = dobowa; godziny liczysz od rozpoczęcia pracy (17:00), więc 13. to 5:00–6:00 → noc → 100%; czas wolny bez wniosku 1,5 × 1 = 1,5 h; doba: 24 − 11 h odpoczynku = najwyżej 13 h pracy.
 
 ## Pełne rozwiązanie
 ```
 (a) Dodatek nocny: stawka z minimalnego 4 806 / 160 = 30,04; 20% = 6,01 zł/h; 64 h × 6,01 = 384,64 zł (art. 151⁸ §1). Należy się za KAŻDĄ godzinę nocną, także nadliczbową.
-(b) W systemie równoważnym praca ponad przedłużony dobowy wymiar z grafiku (12 h) to nadgodziny dobowe (art. 151 §1). Przypadły w nocy → dodatek 100% (art. 151¹ §1 pkt 1 lit. a). Przy 5 400 zł: stawka 33,75; normalne 2 × 33,75 = 67,50 + dodatek 100% 67,50 = 135,00 zł; plus dodatek nocny 2 × 6,01 = 12,02 (już w 64 h, jeśli wliczone).
-(c) Czas wolny: bez wniosku pracownika pracodawca udziela 1:1,5 (3 h) najpóźniej do końca okresu rozliczeniowego (3-miesięczny w produkcji) — wtedy nie płaci dodatku 100%, ale normalne wynagrodzenie zostaje (pensja bez obniżki) i dodatek nocny nadal się należy. Na wniosek pracownika — 1:1 (2 h), może być poza okresem rozliczeniowym.
+(b) W systemie równoważnym praca ponad przedłużony dobowy wymiar z grafiku (12 h) to nadgodziny dobowe (art. 151 §1). Godziny doby pracowniczej liczysz od rozpoczęcia pracy (17:00): 13. godzina to 5:00–6:00 — pora nocna → dodatek 100% (art. 151¹ §1 pkt 1 lit. a). Przy 5 400 zł: stawka 33,75; normalne 33,75 + dodatek 100% 33,75 = 67,50 zł; plus dodatek nocny 6,01 (już w 64 h, jeśli wliczone).
+(c) Czas wolny: bez wniosku pracownika pracodawca udziela 1:1,5 (1,5 h) najpóźniej do końca okresu rozliczeniowego (3-miesięczny w produkcji) — wtedy nie płaci dodatku 100%, ale normalne wynagrodzenie zostaje (pensja bez obniżki) i dodatek nocny nadal się należy. Na wniosek pracownika — 1:1 (1 h), termin może wypaść także po okresie rozliczeniowym.
+(d) Doba ma 24 h, a odpoczynek dobowy to co najmniej 11 h nieprzerwanie (art. 132 §1) → najwyżej 13 h pracy razem z nadgodzinami. 14 h jest dopuszczalne tylko przy akcji ratowniczej albo usuwaniu awarii, z równoważnym odpoczynkiem (art. 132 §2 pkt 2 i §3).
 ```
 
 ## Oczekiwany wynik
-(a) 64 × 6,01 = 384,64 zł; (b) dobowe (ponad 12 h przedłużonego wymiaru w równoważnym) — w nocy dodatek 100% (art. 151¹ §1 pkt 1 lit. a): 2 × 33,75 normalne + 2 × 33,75 dodatek = 135,00 przy 5 400 zł; plus dodatek nocny za te 2 h; (c) tak — bez wniosku 1:1,5 = 3 h wolnego w tym samym okresie rozliczeniowym, bez dodatku 100%, ale dodatek nocny nadal.
+(a) 64 × 6,01 = 384,64 zł; (b) dobowe (ponad 12 h przedłużonego wymiaru w równoważnym) — 13. godzina pracy to 5:00–6:00, czyli noc → dodatek 100% (art. 151¹ §1 pkt 1 lit. a): 33,75 normalne + 33,75 dodatek = 67,50 przy 5 400 zł; plus dodatek nocny za tę godzinę; (c) tak — bez wniosku 1:1,5 = 1,5 h wolnego w tym samym okresie rozliczeniowym, bez dodatku 100%, ale dodatek nocny nadal; (d) 14 h pracy zostawia tylko 10 h odpoczynku w dobie — art. 132 §1 wymaga 11 h.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

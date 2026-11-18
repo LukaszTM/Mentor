@@ -2,10 +2,10 @@
 Tydzień 3 · lekcja `ewidencja_czasu` · plik: `cwiczenia/tydzien_03/ewidencja_czasu_1.md`
 
 ## Zadanie
-Przepisz grafik z przyklady/tydzien_02/grafik_grudzien_2026.md do karty ewidencji (1–15.12) tak jak w demonstracji: godziny od–do, nocne, kody dni wolnych; dopisz zdarzenia: 5.12 urlop (UW), 8–9.12 choroba (CH), 12.12 nadgodziny 2 h. Plik: cwiczenia/tydzien_03/ewidencja_czasu_1.md. Czas: 25 minut.
+Przepisz grafik z przyklady/tydzien_03/grafik_grudzien_2026.md do karty ewidencji (1–15.12) tak jak w demonstracji: godziny od–do, nocne, kody dni wolnych; dopisz zdarzenia: 5.12 urlop (UW), 8–9.12 choroba (CH), 12.12 jedna nadgodzina (praca 6:00–19:00). Plik: cwiczenia/tydzien_03/ewidencja_czasu_1.md. Czas: 25 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-15 wierszy; nocne tylko przy zmianach 18–6 (po 8 h); UW 12 h; CH 2 dni; nadgodziny 2 h z numerem polecenia; dni wolne z kodem W5/WN/WŚ.
+15 wierszy; nocne tylko przy zmianach 18–6 (po 8 h); UW 12 h; CH 2 dni; 1 nadgodzina dobowa z numerem polecenia (13 h pracy = 11 h odpoczynku zachowane); dni wolne z kodem W5/WN/WŚ.
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).

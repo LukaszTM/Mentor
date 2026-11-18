@@ -18,7 +18,7 @@ Szkic: etat 12 151 + 245 ZFŚS = 12 396; zlecenie 12 001; B2B 12 000 — różni
 Zlecenie (jedyny tytuł, pełne składki, dobrowolne chorobowe): 10 000 + 2 001,00 = 12 001,00; brak PPK, ZFŚS, urlopu; zleceniobiorca netto ok. 7 320 (KUP 20%, PIT-2).
 B2B: faktura 12 000 netto + 23% VAT (VAT firma odlicza) = 12 000 kosztu; wykonawca sam płaci ZUS (pełny ok. 1 900 zł lub preferencyjny) i podatek — z 12 000 zostaje mu ok. 8 000–9 000.
 (b) Na B2B traci: płatny urlop 20/26 dni i ekwiwalent; wynagrodzenie chorobowe 33 dni i zasiłki na zasadach pracowniczych; okres wypowiedzenia i ochronę (ciąża, wiek przedemerytalny); odprawy (ekonomiczna, emerytalna); PPK z wpłatą pracodawcy; badania, BHP, odzież; limity czasu pracy i dodatki za nadgodziny/noc; staż pracy do świadectwa.
-(c) Nie. Art. 22 §1¹–1² KP: zatrudnienie w warunkach podporządkowania (kierownictwo), w miejscu i czasie wyznaczonym przez pracodawcę jest zatrudnieniem na podstawie stosunku pracy bez względu na nazwę umowy. Ryzyko: ustalenie stosunku pracy przez sąd/PIP, składki za 5 lat wstecz (z częścią pracownika, której nie można potrącić), PIT, urlop, nadgodziny; wykroczenie z art. 281 §1 pkt 1 (grzywna do 30 000 zł).
+(c) Nie. Art. 22 §1¹–1² KP: zatrudnienie w warunkach podporządkowania (kierownictwo), w miejscu i czasie wyznaczonym przez pracodawcę jest zatrudnieniem na podstawie stosunku pracy bez względu na nazwę umowy. Ryzyko: ustalenie stosunku pracy przez sąd/PIP, składki za 5 lat wstecz (z częścią pracownika, której nie można potrącić), PIT, urlop, nadgodziny; wykroczenie z art. 281 §1 pkt 1 (grzywna 2 000–60 000 zł od 8.07.2026); od tej daty stosunek pracy może też stwierdzić decyzją okręgowy inspektor pracy.
 ```
 
 ## Oczekiwany wynik

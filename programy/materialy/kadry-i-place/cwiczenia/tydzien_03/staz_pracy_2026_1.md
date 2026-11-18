@@ -2,10 +2,10 @@
 Tydzień 3 · lekcja `staz_pracy_2026` · plik: `cwiczenia/tydzien_03/staz_pracy_2026_1.md`
 
 ## Zadanie
-Ewa Sobczak (od 1.03.2021 w firmie, wcześniej: 2012–2016 etat w innej firmie, 2016–2018 zlecenie z ubezpieczeniem, 2017–2018 równolegle drugie zlecenie, 2018–2021 działalność na ulgach: 6 mies. ulga na start, potem składki preferencyjne, szkoła średnia). Dostarczyła zaświadczenie ZUS 1.11.2026. Ustal jak w demonstracji staż ogólny przed i po, wymiar urlopu i od kiedy. Plik: cwiczenia/tydzien_03/staz_pracy_2026_1.md. Czas: 20 minut.
+Ewa Sobczak (od 1.03.2021 w firmie, wcześniej: 2012–2016 etat w innej firmie, 2016–2018 zlecenie z ubezpieczeniem, 2017–2018 równolegle drugie zlecenie, 2018–2021 działalność na ulgach: 6 mies. ulga na start, potem składki preferencyjne, szkoła średnia). Dostarczyła zaświadczenia ZUS 1.11.2026. Ustal jak w demonstracji staż ogólny przed i po, wymiar urlopu i od kiedy liczysz nowy staż. Plik: cwiczenia/tydzien_03/staz_pracy_2026_1.md. Czas: 20 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-przed: 4 (szkoła średnia) + 4 (2012–2016) + 5,7 (2021–XI 2026) ≈ 13,7 lat → już 26 dni; po: + 2 (zlecenie 2016–2018; drugie zlecenie równoległe nie liczy się podwójnie) + 2,5 (działalność ze składkami preferencyjnymi 2018,5–2021; ulga na start 6 mies. — nie) ≈ 18 lat → nadal 26 dni (maks.); zmiana wpływa tylko na składniki zależne od stażu ogólnego w regulaminie (u AGRO-MLEKO dodatek stażowy jest zakładowy → bez zmian).
+przed: 4 (szkoła średnia) + 4 (2012–2016) + 5,7 (2021–XI 2026) ≈ 13,7 lat → już 26 dni; po: + 2 (zlecenie 2016–2018; drugie zlecenie równoległe nie liczy się podwójnie) + 3 (działalność 2018–2021: 6 mies. ulgi na start — wlicza się, §4 pkt 1 — i 2,5 roku składek preferencyjnych) ≈ 18,7 roku → nadal 26 dni (maks.); nowy staż obowiązuje od 1.05.2026, nie od dnia wpływu zaświadczenia; zmiana wpływa tylko na składniki zależne od stażu ogólnego w regulaminie (u AGRO-MLEKO dodatek stażowy jest zakładowy → bez zmian).
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).

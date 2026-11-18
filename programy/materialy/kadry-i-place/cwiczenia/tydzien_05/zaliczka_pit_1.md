@@ -2,10 +2,10 @@
 Tydzień 5 · lekcja `zaliczka_pit` · plik: `cwiczenia/tydzien_05/zaliczka_pit_1.md`
 
 ## Zadanie
-Wypełnij (opisowo) PIT-2 i ustal KUP dla: (1) Haliny Mazur — dojeżdża z innej miejscowości, jeden pracodawca; (2) Piotra Nowaka — 1/2 etatu u Ciebie i etat u innego pracodawcy, gdzie złożył PIT-2; (3) Agnieszki Pawlak — zlecenie 3 000, bez innych tytułów. Dla każdej policz w Warsztacie zaliczkę z i bez oświadczenia. Plik: cwiczenia/tydzien_05/zaliczka_pit_1.md. Czas: 20 minut.
+Wypełnij (opisowo) PIT-2 i ustal KUP dla: (1) Haliny Mazur — dojeżdża z innej miejscowości, jeden pracodawca; (2) Piotra Nowaka — 1/2 etatu u Ciebie i 1/4 etatu u innego pracodawcy, gdzie złożył PIT-2; (3) Roberta Króla — zlecenie 3 500, jedyny tytuł, PPK 2%/1,5%. Dla dwóch pierwszych osób policz w Warsztacie zaliczkę z oświadczeniem i bez; zlecenie policz ręcznie (kalkulator Warsztatu jest pracowniczy: KUP 250/300, nie 20%). Plik: cwiczenia/tydzien_05/zaliczka_pit_1.md. Czas: 20 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-(1) PIT-2: kwota zmniejszająca 1/12 (300), KUP 300 (oświadczenie o zamieszkaniu poza miejscowością zakładu) → zaliczka 472 (z PIT-2) vs 772 (bez); (2) PIT-2 już u drugiego pracodawcy w pełnej 1/12 → u Ciebie 0 (lub oboje po 1/24 = 150, jeśli zmieni oświadczenie tam); KUP 250 u każdego pracodawcy → zaliczka 229 bez PIT-2; (3) zleceniobiorca może złożyć PIT-2 (od 2023) → 300 → zaliczka 0 zamiast 249 (podstawa 2 071 × 12% = 248,52 → 249).
+(1) PIT-2: kwota zmniejszająca 1/12 (300), KUP 300 (oświadczenie o zamieszkaniu poza miejscowością zakładu) → zaliczka 472 (z PIT-2) vs 772 (bez); (2) PIT-2 już u drugiego pracodawcy w pełnej 1/12 → u Ciebie 0 (lub oboje po 1/24 = 150, jeśli zmieni oświadczenie tam); KUP 250 u każdego pracodawcy → zaliczka 229 bez PIT-2; (3) zleceniobiorca może złożyć PIT-2 (od 2023) → 300 → zaliczka 0 zamiast 295 (podstawa 2 458 × 12% = 294,96 → 295).
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).
@@ -19,7 +19,7 @@ Wypełnij (opisowo) PIT-2 i ustal KUP dla: (1) Haliny Mazur — dojeżdża z inn
 |---|---|---|---|---|---|
 | Halina Mazur | | | | | |
 | Piotr Nowak | | | | | |
-| Agnieszka Pawlak | | | | | |
+| Robert Król (zlecenie) | | | | | |
 
 ## Twoja odpowiedź
 

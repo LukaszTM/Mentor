@@ -145,7 +145,7 @@ START_TUTAJ = """# START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2
 
 **Wersja kursu:** {wersja} · stan prawny: {stan_prawny} · format `mentor-program/1`
 **Poziom:** {poziom}.
-**Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 130 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
+**Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 136 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
 **System:** {system}.
 **Potrzebujesz:** {wymagania}.
 **Nie potrzebujesz:** internetu (kurs i Asystent offline działają bez sieci), kont w eZUS/e-Urzędzie (w Mentorze są symulatory), Excela, Pythona, żadnych instalacji poza samym Mentorem.
@@ -164,6 +164,8 @@ START_TUTAJ = """# START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2
 8. **Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”** — pierwsze zadanie: plik FIRMA.md (Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu”).
 
 Pierwsze działające ćwiczenie masz w ciągu 30 minut: Warsztat → Lista płac → Osoba „Katarzyna Wójcik” → „Policz” → netto 3 501,73 zł (a bez PPK: 3 605,85).
+
+Sprawdzanie automatyczne: pod większością ćwiczeń w lekcjach są pola „Twoje odpowiedzi” — wpisujesz kwoty, daty i kody, a Mentor ocenia każde pole (nie zdradza wyniku; klucz po 2 próbach). W Warsztat → Formularze wypełniasz prawdziwe druki z numerami pól (ZUS ZUA, ZWUA, RCA, RSA, PIT-2, PIT-11, świadectwo pracy), a kurs kończysz projektem „Zamknięcie roku 2026 w AGRO-MLEKO”.
 
 ## Jak wygląda każda lekcja (zawsze ta sama kolejność)
 cel → po co mi to → czego potrzebujesz → **1** wyjaśnienie od podstaw → **2** demonstracja omówiona krok po kroku → **3** jak to uruchomić → **4** ćwiczenie prowadzone → **5** ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → **6** typowe błędy i naprawa → sprawdzenie (pytania + „co potrafię bez przykładu”) → test (2/3 zalicza).
@@ -419,7 +421,7 @@ def _pomoc(d):
 
 **Mentor nie widzi mojego pliku.** Nazwa musi być dokładnie taka jak w zadaniu (Notatnik dopisuje `.txt` — włącz w Eksploratorze „Rozszerzenia nazw plików”); plik może leżeć w dowolnym podkatalogu projektu. Mój projekt → „Odśwież”.
 
-**Czy muszę mieć internet, konto w ZUS, Excel?** Nie. Symulatory eZUS/Płatnika i e-Urzędu, kalkulatory i 48 streszczeń przepisów są w zakładce Warsztat. ISAP (pełne teksty aktów) jest publiczny, ale niepotrzebny do ćwiczeń.
+**Czy muszę mieć internet, konto w ZUS, Excel?** Nie. Symulatory eZUS/Płatnika i e-Urzędu, kalkulatory i ponad 60 streszczeń przepisów są w zakładce Warsztat. ISAP (pełne teksty aktów) jest publiczny, ale niepotrzebny do ćwiczeń.
 
 **Czy Asystent jest płatny?** Tryb offline — nie (bez konta). API i Subskrypcja — tak, opcjonalnie; żadne zadanie ich nie wymaga.
 
@@ -427,7 +429,7 @@ def _pomoc(d):
 
 **Jak zresetować ćwiczenie?** Skasuj swój plik w `cwiczenia/` i skopiuj materiały ponownie (nic innego nie zostanie nadpisane).
 
-**Skąd Mentor bierze liczby i czy są aktualne?** Stan prawny: listopad 2026; każdy wskaźnik ma źródło (Warsztat → Przepisy, Firma ćwiczeniowa → Parametry). W styczniu aktualizujesz parametry (lekcja „Wskaźniki”).
+**Skąd Mentor bierze liczby i czy są aktualne?** Stan prawny: listopad 2026; każdy wskaźnik ma źródło (Warsztat → Przepisy, Firma ćwiczeniowa → Parametry). W styczniu aktualizujesz parametry (lekcja „Wskaźniki”). Mentor pilnuje dat za Ciebie: karta „Aktualność przepisów” na Panelu i „Kalendarz aktualizacji” w Ściądze (17 terminów do sprawdzenia w latach 2026–2028).
 
 **Wynik w Warsztacie różni się od mojego.** Tryb ćwiczenia (Lista płac → „Sprawdź”) podpowie, której kwocie równa się różnica. Najczęściej: składki liczone jedną kwotą, brak zaokrągleń, zły dzielnik.
 
@@ -488,7 +490,7 @@ def _pomoc(d):
 - „✔ Zgadza się” — pełne kroki.
 - „✘ Twoje netto … ≠ … Różnica równa się kwocie: …” — Mentor wskazuje krok, którego kwota odpowiada różnicy (np. PPK pracodawcy, zaliczka).
 - „Policz jeszcze raz w kolejności: składki osobno → zdrowotna od (brutto − składki) → podstawa PIT zaokrąglona → zaliczka − PIT-2 → PPK.”
-- Krok „FP/FGŚP nienależne: podstawa w przeliczeniu na miesiąc … poniżej minimalnego” — wpisz „Pensja wg umowy”, jeśli obniżka wynika z choroby/części miesiąca.
+- Krok „FP nienależny: podstawa w przeliczeniu na miesiąc … poniżej minimalnego” — wpisz „Pensja wg umowy”, jeśli obniżka wynika z choroby/części miesiąca. FGŚP nie ma progu minimalnego.
 
 ## Zasiłki
 - „… — miesiąc WYŁĄCZONY” (< 50% dni), „UZUPEŁNIENIE: …”, „Podniesienie do minimalnej podstawy …”, „Stawka dzienna × …% = … (zaokrąglona do grosza)”.

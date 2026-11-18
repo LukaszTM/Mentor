@@ -1,5 +1,5 @@
 # Rozwiązanie umowy o pracę: tryby, okresy, przyczyna, ochrona, art. 52/53
-Tydzień 13 · lekcja 41 z 48 · ≈ 65 min
+Tydzień 13 · lekcja 41 z 48 · ≈ 70 min
 
 **Po tej lekcji potrafisz:** wybierasz tryb rozwiązania umowy, liczysz okresy wypowiedzenia, piszesz pismo z przyczyną i pouczeniem oraz sprawdzasz ochronę.
 
@@ -7,7 +7,7 @@ Tydzień 13 · lekcja 41 z 48 · ≈ 65 min
 
 ## Czego potrzebujesz
 - Warsztat → Czas pracy → karta „Okres wypowiedzenia i data rozwiązania” (rodzaj umowy, staż, data doręczenia → data końca).
-- Prompty → Szablony → „Wypowiedzenie umowy o pracę”, „Rozwiązanie bez wypowiedzenia (art. 52)”, „Porozumienie stron”.
+- Prompty → Szablony → „Wypowiedzenie umowy o pracę przez pracodawcę”, „Rozwiązanie umowy bez wypowiedzenia z winy pracownika (art. 52)”, „Porozumienie o rozwiązaniu umowy o pracę”.
 - Warsztat → Przepisy: „Rozwiązanie umowy za wypowiedzeniem” (art. 30–36), „Konsultacja, ochrona, rozwiązanie bez wypowiedzenia” (art. 38–41, 52–53).
 - Pojęcia: tryby (porozumienie, wypowiedzenie, bez wypowiedzenia art. 52/53/55, upływ czasu), okres wypowiedzenia ze stażu zakładowego (2 tyg. / 1 mies. / 3 mies.; próbna: 3 dni rob. / 1 tydz. / 2 tyg.), koniec okresu (sobota / ostatni dzień miesiąca), przyczyna (konkretna, prawdziwa — także przy umowie określonej od 26.04.2023), ochrona (art. 41 — urlop/choroba; art. 39 — 4 lata do emerytury; art. 177 — ciąża), termin 1 miesiąca przy art. 52, pouczenie o odwołaniu 21 dni.
 
@@ -19,7 +19,7 @@ Tydzień 13 · lekcja 41 z 48 · ≈ 65 min
 | wypowiedzenie | każda ze stron | z okresem wypowiedzenia |
 | bez wypowiedzenia — art. 52 (z winy pracownika) | pracodawca | ciężkie naruszenie podstawowych obowiązków; przestępstwo oczywiste lub stwierdzone wyrokiem; zawiniona utrata uprawnień — w 1 MIESIĄC od uzyskania wiadomości przez osobę uprawnioną |
 | bez wypowiedzenia — art. 53 (bez winy) | pracodawca | niezdolność z powodu choroby dłuższa niż 3 miesiące (staż poniżej 6 miesięcy) albo dłuższa niż okres zasiłkowy + 3 miesiące świadczenia rehabilitacyjnego (staż co najmniej 6 miesięcy lub wypadek, choroba zawodowa); inna usprawiedliwiona nieobecność dłuższa niż 1 miesiąc; nie po stawieniu się do pracy po ustaniu przyczyny |
-| bez wypowiedzenia — art. 55 | pracownik | orzeczenie lekarskie bez przeniesienia (7 dni) albo ciężkie naruszenie przez pracodawcę — z odszkodowaniem za okres wypowiedzenia |
+| bez wypowiedzenia — art. 55 | pracownik | orzeczenie lekarskie o szkodliwym wpływie pracy na zdrowie, gdy pracodawca nie przeniesie do innej pracy w terminie wskazanym w orzeczeniu; albo ciężkie naruszenie podstawowych obowiązków przez pracodawcę (np. niewypłacanie pensji) — wtedy z odszkodowaniem za okres wypowiedzenia; pisemnie, z przyczyną, w 1 miesiąc od uzyskania wiadomości |
 | upływ czasu | — | umowa terminowa |
 | wygaśnięcie | — | śmierć pracownika lub pracodawcy-osoby fizycznej; tymczasowe aresztowanie dłuższe niż 3 miesiące |
 Ciężkie naruszenie (art. 52) = wina umyślna lub rażące niedbalstwo + zagrożenie interesów. Przykłady: nietrzeźwość, kradzież, nieusprawiedliwiona kilkudniowa nieobecność, praca zarobkowa na L4, naruszenie tajemnicy.
@@ -55,7 +55,7 @@ Liczenie: tygodniowy kończy się w sobotę; miesięczny — w ostatnim dniu mie
 | art. 39 | 4 lata przed emeryturą przy wystarczającym stażu |
 | art. 177 | ciąża, urlopy rodzicielskie — także od wniosku |
 | inni | ojcowie na urlopach, działacze związkowi (uchwała zarządu), SIP, radni, członkowie rad pracowników, żołnierze rezerwy |
-| wiek przedemerytalny przy zwolnieniach grupowych | tylko wypowiedzenie zmieniające z dodatkiem wyrównawczym |
+| art. 39 i 177 przy zwolnieniach z ustawy z 13.03.2003 — grupowych i indywidualnych | wypowiedzenia definitywnego nie ma; wolno tylko wypowiedzenie zmieniające, a gdy obniża wynagrodzenie — z dodatkiem wyrównawczym (art. 5 ust. 5–6, art. 10 ust. 1) |
 Od 2023: ochrona przed niekorzystnym traktowaniem za skorzystanie z uprawnień — ciężar dowodu na pracodawcy przy roszczeniach.
 ### Roszczenia pracownika (art. 45, 56)
 - Przywrócenie do pracy albo odszkodowanie — do 3-miesięcznego wynagrodzenia; przy bezprawnym art. 52 — za okres wypowiedzenia.
@@ -66,22 +66,22 @@ Od 2023: ochrona przed niekorzystnym traktowaniem za skorzystanie z uprawnień �
 **Magazynier przyłapany na kradzieży — art. 52 krok po kroku z datami**
 
 ```
-Magazynier, staż 4 lata, umowa nieokreślona; 3.11.2026 przyłapany na kradzieży (notatka ochrony, nagranie, oświadczenie). Pracodawca (prezes) dowiaduje się 4.11 → termin na art. 52 do 4.12. Brak związków → bez konsultacji. 6.11 doręczenie osobiste ze świadkiem: oświadczenie o rozwiązaniu bez wypowiedzenia z winy pracownika (art. 52 §1 pkt 1), przyczyna: „przywłaszczenie 3.11.2026 towaru o wartości 420 zł z magazynu nr 2 — potwierdzone nagraniem i notatką służbową”, pouczenie o 21 dniach. ZWUA do 13.11 (data 7.11, kod 100, tryb: bez wypowiedzenia z winy pracownika — art. 52 §1 pkt 1), świadectwo 6.11, ekwiwalent 10 dni, bez odprawy. Gdyby pracownik był na L4 od 5.11 — art. 52 nadal dopuszczalny (art. 41 go nie chroni).
+Magazynier, staż 4 lata, umowa nieokreślona; 3.11.2026 przyłapany na kradzieży (notatka ochrony, nagranie, oświadczenie). Pracodawca (prezes) dowiaduje się 4.11 → termin na art. 52 do 4.12. Brak związków → bez konsultacji. 6.11 doręczenie osobiste ze świadkiem: oświadczenie o rozwiązaniu bez wypowiedzenia z winy pracownika (art. 52 §1 pkt 1), przyczyna: „przywłaszczenie 3.11.2026 towaru o wartości 420 zł z magazynu nr 2 — potwierdzone nagraniem i notatką służbową”, pouczenie o 21 dniach. ZWUA do 13.11 (data 7.11, kod 100; blok V: tryb 25R, podstawa 404, strona 2), świadectwo 6.11, ekwiwalent za niewykorzystany urlop w terminie wypłaty (10.12), bez odprawy. Gdyby pracownik był na L4 od 5.11 — art. 52 nadal dopuszczalny (art. 41 go nie chroni).
 ```
 
 1. „3.11 kradzież (notatka ochrony, nagranie, oświadczenie); prezes dowiaduje się 4.11 → termin na art. 52 do 4.12”: rozwiązanie bez wypowiedzenia z winy pracownika musi nastąpić w ciągu 1 miesiąca od uzyskania wiadomości przez PRACODAWCĘ (osobę uprawnioną — art. 52 §2); liczy się wiedza prezesa, nie ochrony.
 2. „Brak związków → bez konsultacji”: przy art. 52 konsultacja związkowa (art. 52 §3) tylko gdy pracownik jest reprezentowany; przy wypowiedzeniu umowy bezterminowej — art. 38 (zawiadomienie związku, 5 dni na zastrzeżenia).
 3. „6.11 doręczenie osobiste ze świadkiem: oświadczenie … przyczyna: „przywłaszczenie 3.11.2026 towaru o wartości 420 zł z magazynu nr 2 — potwierdzone nagraniem i notatką służbową”, pouczenie o 21 dniach”: forma pisemna (art. 30 §3), przyczyna konkretna, prawdziwa i zrozumiała (art. 30 §4), pouczenie o prawie odwołania do sądu pracy w 21 dni (art. 30 §5, art. 264); doręczenie ze świadkiem lub pocztą (odmowa przyjęcia = doręczone).
-4. „ZWUA do 13.11 (data 7.11, kod 100, tryb: bez wypowiedzenia z winy pracownika — art. 52 §1 pkt 1)”: stosunek pracy ustaje 6.11 (dzień doręczenia) → data wyrejestrowania 7.11; ZWUA w 7 dni; w symulatorze tryb 4.
-5. „świadectwo 6.11, ekwiwalent, bez odprawy”: świadectwo w dniu ustania (art. 97 §1) — wpisujesz tryb i podstawę prawną (art. 52 §1 pkt 1), NIE przyczynę; ekwiwalent za niewykorzystany urlop w terminie wypłaty; odprawa z ustawy o zwolnieniach grupowych nie przysługuje (przyczyna leży po stronie pracownika).
+4. „ZWUA do 13.11 (data 7.11, kod 100; blok V: tryb 25R, podstawa 404, strona 2)”: stosunek pracy ustaje 6.11 (dzień doręczenia) → data wyrejestrowania 7.11; ZWUA w 7 dni; blok V wypełniasz kodami: tryb 25R (bez wypowiedzenia przez pracodawcę — ciężkie naruszenie obowiązków), podstawa 404 (art. 30 §1 pkt 3 w zw. z art. 52 §1 pkt 1 KP), strona inicjująca 2 (pracodawca).
+5. „świadectwo 6.11, ekwiwalent … w terminie wypłaty (10.12), bez odprawy”: świadectwo w dniu ustania (art. 97 §1) — wpisujesz tryb i podstawę prawną (art. 30 §1 pkt 3 w zw. z art. 52 §1 pkt 1), NIE przyczynę; ekwiwalent za niewykorzystany urlop płacisz w terminie wypłaty wynagrodzenia za listopad, czyli 10.12 (art. 171 §4; 10 dni z §5 dotyczy tylko firm, w których dzień wypłaty przypada przed dniem ustania); odprawa z ustawy o zwolnieniach grupowych nie przysługuje (przyczyna leży po stronie pracownika).
 6. „Gdyby pracownik był na L4 od 5.11 — art. 52 nadal dopuszczalny (art. 41 go nie chroni)”: art. 41 zakazuje WYPOWIEDZENIA w czasie urlopu/usprawiedliwionej nieobecności; rozwiązania bez wypowiedzenia nie obejmuje; natomiast ciąża (art. 177 §1) wymaga zgody związku przy art. 52, a brak związku — nie blokuje.
 
-✔ **Oczekiwany wynik:** pismo z art. 52 §1 pkt 1 doręczone 6.11 (w terminie 1 miesiąca), ZWUA 7.11 tryb 4, świadectwo 6.11, ekwiwalent 10.12, bez odprawy; L4 nie chroni przed art. 52.
+✔ **Oczekiwany wynik:** pismo z art. 52 §1 pkt 1 doręczone 6.11 (w terminie 1 miesiąca), ZWUA 7.11 (25R + 404 + strona 2), świadectwo 6.11, ekwiwalent 10.12, bez odprawy; L4 nie chroni przed art. 52.
 
 ## 3 · Jak to uruchomić
 1. Warsztat → Czas pracy → „Okres wypowiedzenia…”: Rodzaj nieokreslona, Staż 40 mies., Data doręczenia 2026-11-17 → „Policz” → „3 miesiące”, koniec 28.02.2027.
 2. Zmień: staż 20 mies. → 1 miesiąc → 31.12.2026; staż 3 mies. → 2 tygodnie → 5.12.2026 (sobota); Rodzaj probna, długość 90 dni → 2 tygodnie.
-3. Prompty → Szablony → „Wypowiedzenie umowy o pracę” → skopiuj do projektu jako wypowiedzenie_<nazwisko>.md; wypełnij: tryb, podstawa, okres, data końca, przyczyna, pouczenie.
+3. Prompty → Szablony → „Wypowiedzenie umowy o pracę przez pracodawcę” → skopiuj do projektu jako wypowiedzenie_<nazwisko>.md; wypełnij: tryb, podstawa, okres, data końca, przyczyna, pouczenie.
 4. Oczekiwany wynik: trzy pisma (wypowiedzenie z przyczyną, art. 52, porozumienie) z poprawnymi datami i pouczeniem; tabela dat końca okresów dla 4 osób.
 
 ## W praktyce — jak to robisz w firmie
@@ -100,7 +100,7 @@ Policz jak w demonstracji daty rozwiązania przy doręczeniu wypowiedzenia we wt
 Kierownik logistyki przysłał projekt wypowiedzenia dla kierowcy (nieokreślona, 6 lat stażu): „Wypowiadam umowę z powodu utraty zaufania i niespełniania oczekiwań. Okres wypowiedzenia 1 miesiąc. Proszę o zwrot kluczy.” Data doręczenia 3.12.2026. Zdecyduj: co jest wadliwe (wymień wszystko), popraw pismo (pełna treść) i policz prawidłową datę końca; dodaj listę czynności kadr od doręczenia do dnia ustania. Plik: cwiczenia/tydzien_13/rozwiazanie_umowy_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_13/rozwiazanie_umowy_2.md` · rozwiązanie: `rozwiazania/tydzien_13/rozwiazanie_umowy_2.md`
-✔ Poprawny wynik wygląda tak: wady: przyczyna pozorna/niekonkretna (bez faktów), okres 1 mies. zamiast 3 (staż 6 lat), brak pouczenia o odwołaniu (21 dni), brak podstawy prawnej i daty końca, brak podpisu osoby uprawnionej (kierownik nie jest pracodawcą bez pełnomocnictwa), brak konsultacji art. 38 (jeśli związek) — poprawione: art. 30 §1 pkt 2 w zw. z art. 36 §1 pkt 3, okres 3 mies. → koniec 31.03.2027; przyczyna: konkretne zdarzenia z datami (np. „trzykrotne w okresie X–XI 2026 uszkodzenie pojazdu z winy pracownika, potwierdzone protokołami z 5.10, 2.11, 20.11; nieusprawiedliwiona nieobecność 24.11”), pouczenie; czynności: ZWUA do 7.04.2027 (data 1.04), świadectwo 31.03, ekwiwalent 10.04 (termin wypłaty po ustaniu), zwolnienie z obowiązku świadczenia pracy (art. 36² — opcjonalnie), urlop w okresie wypowiedzenia (art. 167¹), dni wolne na poszukiwanie pracy (3 dni przy 3-mies. okresie — art. 37), zwrot mienia, odwołanie dostępów.
+✔ Poprawny wynik wygląda tak: wady: przyczyna pozorna/niekonkretna (bez faktów), okres 1 mies. zamiast 3 (staż 6 lat), brak pouczenia o odwołaniu (21 dni), brak podstawy prawnej i daty końca, brak podpisu osoby uprawnionej (kierownik nie jest pracodawcą bez pełnomocnictwa), brak konsultacji art. 38 (jeśli związek) — poprawione: art. 30 §1 pkt 2 w zw. z art. 36 §1 pkt 3, okres 3 mies. → koniec 31.03.2027; przyczyna: konkretne zdarzenia z datami (np. „trzykrotne w okresie X–XI 2026 uszkodzenie pojazdu z winy pracownika, potwierdzone protokołami z 5.10, 2.11, 20.11; nieusprawiedliwiona nieobecność 24.11”), pouczenie; czynności: ZWUA do 7.04.2027 (data 1.04, kod 100, tryb 23R, podstawa 403, strona 2), świadectwo 31.03, ekwiwalent 9.04 (termin wypłaty po ustaniu; 10.04.2027 to sobota → dzień roboczy wcześniej), zwolnienie z obowiązku świadczenia pracy (art. 36² — opcjonalnie), urlop w okresie wypowiedzenia (art. 167¹), dni wolne na poszukiwanie pracy (3 dni przy 3-mies. okresie — art. 37), zwrot mienia, odwołanie dostępów.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Wypowiedzenie umowy na czas określony „bez podawania przyczyny”.**
@@ -111,10 +111,10 @@ Kierownik logistyki przysłał projekt wypowiedzenia dla kierowcy (nieokreślona
   - Prawdopodobna przyczyna: Okres w tygodniach kończy się w sobotę (art. 30 §2¹) — liczony od pierwszej niedzieli po doręczeniu.
   - Jak sprawdzić: Warsztat → kalkulator: doręczenie wtorek 17.11 → koniec sobota 5.12, nie 1.12.
   - Poprawka: Koniec = sobota po upływie 2 pełnych tygodni; w miesiącach — ostatni dzień miesiąca.
-- ✘ **Art. 52 doręczony 40 dni po tym, jak kierownik dowiedział się o kradzieży.**
-  - Prawdopodobna przyczyna: Termin 1 miesiąca (art. 52 §2) biegnie od wiedzy osoby uprawnionej — jeśli kierownik ma obowiązek raportować, liczy się od jego wiedzy.
-  - Jak sprawdzić: Kiedy osoba uprawniona (lub jej bezpośredni informator) się dowiedziała?
-  - Poprawka: Po terminie — tylko wypowiedzenie z przyczyną (art. 52 wadliwy).
+- ✘ **Art. 52 doręczony 40 dni po tym, jak prezes dowiedział się o kradzieży — „bo trwało postępowanie wyjaśniające”.**
+  - Prawdopodobna przyczyna: Termin 1 miesiąca (art. 52 §2) biegnie od dnia, w którym wiadomość dotarła do osoby uprawnionej do rozwiązania umowy (zarząd, osoba wyznaczona — art. 3¹); wiedza ochrony czy brygadzisty go nie uruchamia, ale wewnętrzne wyjaśnianie sprawy też go nie wydłuża ponad miesiąc od uzyskania wiarygodnej wiadomości.
+  - Jak sprawdzić: Kiedy osoba uprawniona dostała notatkę lub zgłoszenie? Policz datą: 4.11 → ostatni dzień 4.12.
+  - Poprawka: Po terminie zostaje tylko wypowiedzenie z konkretną przyczyną (albo kara porządkowa w swoich terminach); art. 52 po miesiącu = odszkodowanie albo przywrócenie do pracy.
 
 ## Pułapki
 - Wypowiedzenie umowy na czas określony bez przyczyny — od 26.04.2023 wadliwe.

@@ -1,12 +1,12 @@
 # Nadgodziny, dyżur, praca w nocy — rozliczenie
-Tydzień 2 · lekcja 10 z 48 · ≈ 55 min
+Tydzień 2 · lekcja 10 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** rozliczasz nadgodziny dobowe i średniotygodniowe (50/100%, czas wolny 1:1 / 1:1,5), dodatek nocny i dyżur.
 
 **Po co mi to?** nadgodziny to najczęstszy przedmiot skarg do PIP i pozwów — kto umie je policzyć z właściwego dzielnika i właściwym dodatkiem, nie płaci nakazów płacowych.
 
 ## Czego potrzebujesz
-- Lekcja „Czas pracy: systemy” — wymiar miesiąca jako dzielnik.
+- Lekcja „Czas pracy: normy, systemy, okresy rozliczeniowe, odpoczynek” — wymiar miesiąca jako dzielnik.
 - Warsztat → Czas pracy: karty „Nadgodziny (art. 151¹)” i „Wymiar… i dodatek nocny”.
 - Pojęcia: nadgodziny dobowe (ponad 8 h / ponad przedłużony dobowy wymiar w równoważnym), średniotygodniowe (ponad przeciętnie 40 h w okresie), normalne wynagrodzenie (za każdą nadgodzinę) + dodatek 50% lub 100%.
 
@@ -25,8 +25,12 @@ Limit: 150 h rocznie. Regulamin lub umowa może go podnieść — do 416 h, przy
 | dobowe | przekroczenie 8 h albo przedłużonego wymiaru z grafiku w danym dniu | co miesiąc |
 | średniotygodniowe | przepracowane − wymiar − nadgodziny dobowe już policzone | po zakończeniu okresu rozliczeniowego |
 ### Rekompensata
-Za każdą nadgodzinę: normalne wynagrodzenie + dodatek.
-Stawka godzinowa = (wynagrodzenie zasadnicze + stałe składniki) / wymiar miesiąca.
+Za każdą nadgodzinę: normalne wynagrodzenie + dodatek. To dwie różne stawki:
+| Co liczysz | Z czego | Podstawa |
+|---|---|---|
+| normalne wynagrodzenie za nadgodzinę | wynagrodzenie zasadnicze + stałe składniki (dodatek funkcyjny, stażowy) / wymiar miesiąca | orzecznictwo SN: to, co pracownik dostaje stale i systematycznie |
+| dodatek 50% / 100% | tylko wynagrodzenie z osobistego zaszeregowania (zasadnicze) / wymiar miesiąca; gdy takiego składnika nie wyodrębniono — 60% wynagrodzenia | art. 151¹ §3 KP |
+Dzielnikiem jest zawsze wymiar miesiąca, w którym wystąpiły nadgodziny (§ 4a rozporządzenia MPiPS z 29.05.1996 w sprawie sposobu ustalania wynagrodzenia w okresie niewykonywania pracy). Gdy pracownik ma samo zasadnicze — obie stawki są równe.
 | Dodatek | Za nadgodziny |
 |---|---|
 | 100% | w nocy; w niedziele i święta niebędące dniami pracy wg rozkładu; w dniu wolnym udzielonym za niedzielę lub święto; za przekroczenie normy średniotygodniowej |
@@ -58,11 +62,11 @@ Dyżur nie może naruszać odpoczynków.
 Biuro, 6 000 zł, czerwiec 2026 (wymiar 168 h), stawka 35,71 zł/h.
 Wtorek 8 → 12 h: 4 nadgodziny dobowe: 4 × 35,71 = 142,84 normalne + 4 × 50% × 35,71 = 71,42 dodatek.
 Sobota 8 h (nie udzielono wolnego do końca czerwca): 8 × 35,71 = 285,68 normalne + 8 × 100% × 35,71 = 285,68.
-Razem za nadgodziny: 785,62 zł. Wariant: pracownik wnioskuje o czas wolny 12 h → wypłacasz tylko „normalne”? Nie — przy czasie wolnym 1:1 nie wypłacasz dodatku, a godziny wolne pomniejszają czas pracy bez obniżki pensji.
+Razem za nadgodziny: 785,62 zł. Wariant: pracownik wnioskuje na piśmie o czas wolny 12 h (1:1) → dodatków nie wypłacasz; gdy wolne przypada w tym samym miesiącu — pensja bez zmian; gdy w innym — w miesiącu nadgodzin płacisz za nie normalne wynagrodzenie, a w miesiącu odbioru pensja jest o te godziny niższa.
 ```
 
-1. „wymiar 168 h, stawka 35,71 zł/h”: czerwiec 2026 = 22 dni pon–pt × 8 = 176 − 8 (Boże Ciało 4.06) = 168 h; stawka = 6 000 / 168 = 35,71 (dzielnik = wymiar TEGO miesiąca, §4 rozporządzenia o wynagrodzeniu urlopowym).
-2. „Wtorek 8 → 12 h: 4 nadgodziny dobowe”: każda godzina ponad 8 h w dniu roboczym = nadgodzina dobowa z dodatkiem 50% (art. 151¹ §1 pkt 2). Za każdą płacisz normalne wynagrodzenie (4 × 35,71 = 142,84) PLUS dodatek 50% (4 × 17,86 = 71,42).
+1. „wymiar 168 h, stawka 35,71 zł/h”: czerwiec 2026 = 22 dni pon–pt × 8 = 176 − 8 (Boże Ciało 4.06) = 168 h; stawka = 6 000 / 168 = 35,71 (dzielnik = wymiar TEGO miesiąca — § 4a rozporządzenia MPiPS z 29.05.1996 w sprawie sposobu ustalania wynagrodzenia w okresie niewykonywania pracy).
+2. „Wtorek 8 → 12 h: 4 nadgodziny dobowe”: każda godzina ponad 8 h w dniu roboczym = nadgodzina dobowa z dodatkiem 50% (art. 151¹ §1 pkt 2). Za każdą płacisz normalne wynagrodzenie (4 × 35,71 = 142,84) PLUS dodatek 50% (4 × 50% × 35,71 = 71,42 — mnożysz stawkę, zaokrąglasz wynik).
 3. „Sobota 8 h (nie udzielono wolnego)”: praca w dniu wolnym z 5-dniowego tygodnia wymaga oddania innego dnia wolnego do końca okresu rozliczeniowego (art. 151³); gdy go nie oddano — godziny stają się nadgodzinami średniotygodniowymi z dodatkiem 100% (art. 151¹ §2): normalne 285,68 + dodatek 285,68.
 4. „Razem 785,62 zł”: 142,84 + 71,42 + 285,68 + 285,68. Wszystko oskładkowane i opodatkowane jak pensja, wypłacone z listą za czerwiec (średniotygodniowe — po zamknięciu okresu rozliczeniowego).
 5. Wariant czas wolny 1:1 (na wniosek pracownika): za 4 nadgodziny dobowe dajesz 4 h wolnego — bez dodatku, pensja bez obniżki; bez wniosku (z inicjatywy pracodawcy) — 1:1,5, czyli 6 h, w tym samym okresie rozliczeniowym.
@@ -77,7 +81,7 @@ Razem za nadgodziny: 785,62 zł. Wariant: pracownik wnioskuje o czas wolny 12 h 
 
 ## W praktyce — jak to robisz w firmie
 1. Z ewidencji wypisz godziny ponad normę dobową (co miesiąc) i ponad wymiar (po okresie rozliczeniowym).
-2. Ustal stawkę: wynagrodzenie zasadnicze / wymiar danego miesiąca.
+2. Ustal dwie stawki: normalne wynagrodzenie (zasadnicze + stałe dodatki) / wymiar miesiąca oraz podstawę dodatku (samo zasadnicze) / wymiar miesiąca.
 3. Zastosuj dodatek 50% lub 100% albo udziel czasu wolnego (wniosek 1:1, bez wniosku 1:1,5).
 4. Policz dodatek nocny: 20% × (minimalne / wymiar) × godziny nocne; sprawdź limit 150 h.
 
@@ -85,19 +89,19 @@ Razem za nadgodziny: 785,62 zł. Wariant: pracownik wnioskuje o czas wolny 12 h 
 Marek Zieliński (5 400 zł, listopad 2026, wymiar 160 h) w ewidencji ma: 6 h nadgodzin dobowych w dni robocze i 4 h pracy w niedzielę, za którą nie oddano dnia wolnego. Policz jak w demonstracji: stawkę, normalne wynagrodzenie, dodatki 50% i 100%, sumę. Plik: cwiczenia/tydzien_02/nadgodziny_noc_1.md. Czas: 15 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_02/nadgodziny_noc_1.md` · rozwiązanie: `rozwiazania/tydzien_02/nadgodziny_noc_1.md`
-✔ Poprawny wynik wygląda tak: stawka 5 400 / 160 = 33,75; normalne 10 × 33,75 = 337,50; dodatek 50% 6 × 16,88 = 101,25; dodatek 100% 4 × 33,75 = 135,00; razem 573,75 zł.
+✔ Poprawny wynik wygląda tak: stawka 5 400 / 160 = 33,75; normalne 10 × 33,75 = 337,50; dodatek 50% 6 × 50% × 33,75 = 101,25; dodatek 100% 4 × 33,75 = 135,00; razem 573,75 zł.
 
 ## 5 · Ćwiczenie samodzielne
-Operator (system równoważny, zmiany 18–6) przepracował w listopadzie 2026: 64 h w porze nocnej (22–6) oraz jedną zmianę wydłużoną z 12 do 14 h. Zdecyduj: (a) ile wynosi dodatek nocny, (b) czy 2 dodatkowe godziny to nadgodziny dobowe czy średniotygodniowe i jaki dodatek (uwzględnij, że przypadły w nocy), (c) czy pracownik może dostać za nie czas wolny i w jakim wymiarze bez wniosku. Plik: cwiczenia/tydzien_02/nadgodziny_noc_2.md. Czas: 20 minut.
+Operator (system równoważny, zmiany 18–6) przepracował w listopadzie 2026: 64 h w porze nocnej (22–6) oraz jedną zmianę rozpoczętą na polecenie godzinę wcześniej (praca 17:00–6:00, czyli 13 h zamiast 12). Zdecyduj: (a) ile wynosi dodatek nocny, (b) czy 13. godzina to nadgodzina dobowa czy średniotygodniowa i jaki dodatek (ustal, czy przypadła w nocy), (c) czy pracownik może dostać za nią czas wolny i w jakim wymiarze bez wniosku, (d) dlaczego nie wolno było wydłużyć tej zmiany do 14 h. Plik: cwiczenia/tydzien_02/nadgodziny_noc_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_02/nadgodziny_noc_2.md` · rozwiązanie: `rozwiazania/tydzien_02/nadgodziny_noc_2.md`
-✔ Poprawny wynik wygląda tak: (a) 64 × 6,01 = 384,64 zł; (b) dobowe (ponad 12 h przedłużonego wymiaru w równoważnym) — w nocy dodatek 100% (art. 151¹ §1 pkt 1 lit. a): 2 × 33,75 normalne + 2 × 33,75 dodatek = 135,00 przy 5 400 zł; plus dodatek nocny za te 2 h; (c) tak — bez wniosku 1:1,5 = 3 h wolnego w tym samym okresie rozliczeniowym, bez dodatku 100%, ale dodatek nocny nadal.
+✔ Poprawny wynik wygląda tak: (a) 64 × 6,01 = 384,64 zł; (b) dobowe (ponad 12 h przedłużonego wymiaru w równoważnym) — 13. godzina pracy to 5:00–6:00, czyli noc → dodatek 100% (art. 151¹ §1 pkt 1 lit. a): 33,75 normalne + 33,75 dodatek = 67,50 przy 5 400 zł; plus dodatek nocny za tę godzinę; (c) tak — bez wniosku 1:1,5 = 1,5 h wolnego w tym samym okresie rozliczeniowym, bez dodatku 100%, ale dodatek nocny nadal; (d) 14 h pracy zostawia tylko 10 h odpoczynku w dobie — art. 132 §1 wymaga 11 h.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Stawka 35,71 zł użyta w listopadzie (6 000 zł).**
   - Prawdopodobna przyczyna: Dzielnik 168 „na stałe”; listopad 2026 ma 160 h → 37,50 zł.
   - Jak sprawdzić: Warsztat → Czas pracy → wymiar miesiąca, w którym były nadgodziny.
-  - Poprawka: Stawka = zasadnicze / wymiar danego miesiąca (§4 rozporządzenia urlopowego w zw. z art. 151¹ §3).
+  - Poprawka: Stawka = zasadnicze / wymiar danego miesiąca (§ 4a rozporządzenia MPiPS z 29.05.1996 w sprawie sposobu ustalania wynagrodzenia w okresie niewykonywania pracy w zw. z art. 151¹ §3 KP).
 - ✘ **Czas wolny 1:1,5 udzielony w następnym okresie rozliczeniowym.**
   - Prawdopodobna przyczyna: Czas wolny z inicjatywy pracodawcy musi być w tym samym okresie rozliczeniowym (art. 151² §2).
   - Jak sprawdzić: Porównaj datę nadgodzin i datę wolnego z granicami okresu (produkcja: kwartały).

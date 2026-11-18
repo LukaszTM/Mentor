@@ -46,8 +46,8 @@ Zasada uprzywilejowania pracownika (art. 18 KP): postanowienie mniej korzystne n
 | procedury antymobbingowe w firmach | do 5.05.2027 |
 | układy zbiorowe — nowa ustawa, zgłoszenie zamiast rejestracji (KEUZP) | 13.12.2025 |
 | postać elektroniczna dokumentów (zamiast „pisemnej”) w 14 miejscach KP | 27.01.2026 |
-| wygaszenie specustawy ukraińskiej — powiadomienie PUP w 7 dni, ochrona czasowa do 4.03.2027 | 5.03.2026 |
-| reforma PIP — decyzja o ustaleniu stosunku pracy, grzywny 2 000–60 000 zł, mandat do 10 000 zł | 8.07.2026 |
+| wygaszenie specustawy ukraińskiej — powiadomienie PUP w 7 dni; ochrona czasowa przedłużona do 4.03.2028 (decyzja Rady z 30.07.2026) | 5.03.2026 |
+| reforma PIP — decyzja o ustaleniu stosunku pracy, grzywny 2 000–60 000 zł, mandat 2 000–5 000 zł (recydywa do 10 000) | 8.07.2026 |
 | Kodeks pracy — nowy tekst jednolity | Dz.U. 2026 poz. 1245 |
 | praca w upale — progi 28/25°C i 35/32°C | 11.01.2027 |
 | minimalne wynagrodzenie 4 950 zł / 32,30 zł | 1.01.2027 |
@@ -78,7 +78,7 @@ PIT-11 to tylko suma kartoteki przychodów. Kartotekę prowadzisz poprawnie prze
 - e-PFRON2 — DEK, Wn-D.
 - portal sprawozdawczy GUS.
 - platforma PPK instytucji finansowej — zapisy, wpłaty (plik).
-- e-Doręczenia — od 2025 obowiązkowe dla firm; tu przychodzą pisma urzędowe.
+- e-Doręczenia — spółki z KRS obowiązkowo od 1.04.2025, firmy z CEIDG zarejestrowane przed 2025 — od 1.10.2026; tu przychodzą pisma urzędowe (ZUS, PIP, US, sądy).
 
 ## Bezpieczeństwo dostępów
 - Każda osoba ma oddzielne konto i własne uprawnienia.
@@ -91,7 +91,8 @@ PIT-11 to tylko suma kartoteki przychodów. Kartotekę prowadzisz poprawnie prze
 |---|---|
 | eZUS / Płatnik | rejestr ubezpieczonych, dokumenty zgłoszeniowe z weryfikacją jak w Płatniku, komplety DRA/RCA/RSA, skrzynka e-ZLA, rejestr z numerami UPP |
 | e-Urząd: PIT | PIT-11 i PIT-4R z Twojej kartoteki, UPO |
-| kalkulatory | lista płac, zasiłki, urlopy, czas pracy, potrącenia, delegacje |
+| kalkulatory | lista płac (osobno miesiąc listy i miesiąc wypłaty; pole na odprawę bez ZUS), zasiłki, urlopy, czas pracy, potrącenia (także z zasiłku), delegacje |
+| Formularze | prawdziwe druki z numerami pól: ZUS ZUA, ZWUA, RCA, RSA, PIT-2, PIT-11, świadectwo pracy — wypełniasz ręcznie, Mentor sprawdza każde pole |
 | Przepisy | biblioteka przepisów offline |
 Ekrany i komunikaty odpowiadają prawdziwym. Po kursie przesiadka na eZUS i Płatnika to kwestia logowania, nie nauki od nowa."""
 
@@ -149,13 +150,13 @@ Od 2027 — ustawa uchwalona (Sejm 5.11.2026, Senat bez poprawek 6.11.2026), do 
 | siła wyższa | 2 dni / 16 h |
 | odsetki ustawowe za opóźnienie | 9,25% (stopa referencyjna NBP 3,75% + 5,5 pkt) |
 | odsetki za zwłokę — podatki i ZUS | 10,50% od 5.03.2026 (200% stopy lombardowej 4,25% + 2 pkt) |
-| grzywny PIP (od 8.07.2026) | 2 000–60 000 zł; mandat do 10 000 zł |
+| grzywny PIP (od 8.07.2026) | 2 000–60 000 zł; mandat 2 000–5 000 zł, przy recydywie do 10 000 zł |
 
 ## Zapowiedzi na 2027 — co już wiadomo (stan 18.11.2026)
 | Wskaźnik | 2027 | Status |
 |---|---|---|
 | minimalne wynagrodzenie / stawka godzinowa | 4 950 zł / 32,30 zł | rozporządzenie RM (Dz.U. 2026 poz. 1213) — pewne |
-| prognozowane przeciętne wynagrodzenie | 10 033 zł (projekt ustawy budżetowej z 28.08.2026) | limit 30-krotności 300 990 zł — po obwieszczeniu MRPiPS w M.P. (sprawdź XII 2026) |
+| prognozowane przeciętne wynagrodzenie / limit 30-krotności | 10 033 zł / 300 990 zł | obwieszczenie MRPiPS z 3.11.2026 (M.P. 2026 poz. 1098) — pewne |
 | współczynnik ekwiwalentu | 20,92 (2027: 2008 h, 251 dni roboczych; wymiar miesięczny: I 152, II 160, III 176, IV 176, V 144, VI 176, VII 176, VIII 176, IX 176, X 168, XI 160, XII 168) | policz sam — zasada z art. 130 KP |
 | maksymalna odprawa | 74 250 zł (15 × 4 950) | pewne |
 | zadośćuczynienie za mobbing — minimum | 29 700 zł (6 × 4 950) | pewne |
@@ -171,7 +172,7 @@ WYJASNIENIA["rekrutacja_jawnosc"] = """## Jakich danych możesz żądać od kand
 Zawsze: imię i nazwisko, data urodzenia, dane kontaktowe.
 Tylko gdy są niezbędne do pracy na stanowisku: wykształcenie, kwalifikacje, przebieg zatrudnienia.
 Inne dane (np. niekaralność) — tylko gdy przepis szczególny tego wymaga.
-Dane „wrażliwe” (zdrowie, związki) — nie. Wyjątek: orzeczenie o niepełnosprawności kandydat podaje sam, na wniosek pracodawcy, jeśli chce.
+Dane „wrażliwe” (zdrowie, związki) — nie. Wyjątek (art. 22¹ᵇ): kandydat może je przekazać wyłącznie z własnej inicjatywy i za wyraźną zgodą — np. orzeczenie o niepełnosprawności, gdy chce skorzystać z uprawnień. Brak takiej zgody nie może być powodem odmowy zatrudnienia.
 
 ## Zakaz pytania o wynagrodzenie (od 24.12.2025, Dz.U. 2025 poz. 807)
 Nie wolno żądać informacji o wynagrodzeniu w obecnej i poprzednich pracach (art. 22¹ §1 pkt 6). Ani pytaniem, ani przez dokumenty.
@@ -236,7 +237,7 @@ Brak umowy na piśmie przed dopuszczeniem = wykroczenie.
 
 ## Praktyka
 - Wynagrodzenie na pełny etat ≥ 4 806 zł; na część etatu proporcjonalnie.
-- Premia uznaniowa nie może „uzupełniać” do minimalnej w sposób niepewny. Od 2027 projekt UC62 ma wyłączyć dodatki z minimalnej.
+- Premia uznaniowa nie może „uzupełniać” do minimalnej w sposób niepewny. PROJEKTY nowej ustawy o minimalnym wynagrodzeniu (poselski — druk 1811, w komisji sejmowej; rządowy UC62) przewidują wyłączenie premii, nagród i dodatków z minimum oraz grzywnę 2 000–60 000 zł — stan 16.10.2026: nieuchwalone; obowiązuje art. 6 ust. 5 ustawy z 10.10.2002.
 - Miejsce pracy: konkretne — zakład albo obszar dla mobilnych. Zapis „terytorium RP” PIP kwestionuje.
 - Zmiana warunków: porozumienie (aneks) albo wypowiedzenie zmieniające.
 - Umowa w języku polskim; dla cudzoziemca — tłumaczenie."""
@@ -245,7 +246,7 @@ WYJASNIENIA["onboarding_akta"] = """## Przed dopuszczeniem do pracy
 | Krok | Szczegóły |
 |---|---|
 | wstępne badania lekarskie | skierowanie ze wskazaniem czynników szkodliwych; orzeczenie do akt A |
-| kto jest zwolniony z badań wstępnych | ponownie przyjmowani do tej samej pracy w 30 dni; osoby z aktualnym orzeczeniem od innego pracodawcy na te same warunki — poza pracami szczególnie niebezpiecznymi |
+| kto jest zwolniony z badań wstępnych | ponownie przyjmowani do tej samej pracy u tego samego pracodawcy w 30 dni od ustania poprzedniej umowy; przyjmowani do innego pracodawcy w 30 dni od ustania poprzedniego zatrudnienia, z aktualnym orzeczeniem i przy takich samych warunkach pracy — poza pracami szczególnie niebezpiecznymi (art. 229 §1¹) |
 | umowa o pracę | na piśmie, przed dopuszczeniem |
 | szkolenie BHP wstępne | instruktaż ogólny i stanowiskowy; karta do akt B |
 | BHP dla administracyjno-biurowych | wstępne zawsze; okresowe można pominąć przy niskim ryzyku |
@@ -272,7 +273,8 @@ Odrębnie prowadzisz: dokumentację czasu pracy, urlopową, listy płac i karty 
 | Zatrudnieni | Okres |
 |---|---|
 | od 1.01.2019 | 10 lat od końca roku ustania zatrudnienia |
-| wcześniej | 50 lat, chyba że złożono ZUS OSW i RIA |
+| od 1.01.1999 do 31.12.2018 | 50 lat; 10 lat od końca roku, w którym pracodawca złożył ZUS OSW i raport RIA |
+| przed 1.01.1999 | 50 lat |
 
 ## Postać papierowa albo elektroniczna
 Obie są równoważne.
@@ -303,7 +305,7 @@ Doba to 24 godziny od rozpoczęcia pracy. Drugie rozpoczęcie pracy w tej samej 
 | podstawowy | 8 h | — |
 | równoważny | do 12 h | dozór urządzeń, pogotowie — do 16 h; pilnowanie — do 24 h; okres 1 miesiąc, wyjątkowo 3–4 |
 | zadaniowy | — | bez ewidencji godzin; wymiar zadań musi być realny w normach |
-| przerywany | — | jedna przerwa do 5 h, 60% wynagrodzenia za przerwę; tylko w układzie lub porozumieniu |
+| przerywany | — | jedna przerwa do 5 h niewliczana do czasu pracy, płatna w wysokości połowy wynagrodzenia przestojowego (art. 139 §1); tylko w układzie lub porozumieniu |
 | skrócony tydzień, weekendowy | do 12 h | na wniosek pracownika |
 | ruchomy | — | przedziały rozpoczynania albo różne godziny |
 | ruch ciągły | — | do 43 h średnio |
@@ -311,11 +313,25 @@ Doba to 24 godziny od rozpoczęcia pracy. Drugie rozpoczęcie pracy w tej samej 
 System i okres rozliczeniowy ustala regulamin, układ albo obwieszczenie.
 Harmonogram (grafik) sporządzasz na co najmniej 1 miesiąc. Przekazujesz go 1 tydzień przed (art. 129 §3). Wyjątek: rozkład wynika z regulaminu lub umowy.
 
+## Kierowcy — odrębne normy
+Kierowca-pracownik podlega ustawie z 16.04.2004 o czasie pracy kierowców, a przy pojazdach powyżej 3,5 t (od 1.07.2026 także 2,5–3,5 t w przewozie międzynarodowym) — również rozporządzeniu (WE) 561/2006. Kodeks pracy stosujesz tam, gdzie ustawa milczy.
+| Co | Limit | Podstawa |
+|---|---|---|
+| czas pracy (jazda, załadunek, obsługa pojazdu, formalności) | 8 h na dobę i przeciętnie 40 h; z nadgodzinami przeciętnie 48 h tygodniowo, w pojedynczym tygodniu do 60 h; okres rozliczeniowy do 4 miesięcy | art. 11–12 ustawy |
+| przerwa w pracy | po 6 kolejnych godzinach pracy: 30 min (praca do 9 h) albo 45 min (ponad 9 h); można dzielić na części po co najmniej 15 min | art. 13 |
+| praca w nocy | gdy kierowca pracuje w porze nocnej (dla tego limitu: cztery godziny między 0:00 a 7:00 ustalone u pracodawcy), czas pracy w tej dobie — najwyżej 10 h | art. 21 |
+| odpoczynek | 11 h w dobie (może być w pojeździe z miejscem do spania), 35 h w tygodniu | art. 14 |
+| jazda | 9 h dziennie (dwa razy w tygodniu 10 h), 56 h w tygodniu, 90 h w dwóch kolejnych tygodniach; po 4,5 h jazdy przerwa 45 min (albo 15 + 30) | rozporządzenie 561/2006, art. 6–7 |
+| odpoczynek kierowcy | dzienny 11 h (skrócony 9 h — najwyżej 3 razy między odpoczynkami tygodniowymi), tygodniowy 45 h (skrócony 24 h z rekompensatą) | rozporządzenie 561/2006, art. 8 |
+Liczysz dwa zegary osobno: czas PRACY (ustawa) i czas JAZDY (rozporządzenie) — przekroczenie któregokolwiek jest naruszeniem.
+Ewidencję prowadzisz dla każdego kierowcy niezależnie od systemu czasu pracy, z danych tachografu i karty kierowcy.
+Diety i ryczałty kierowców omawia lekcja „Podróże służbowe: diety, ryczałty, kilometrówka…”. W AGRO-MLEKO te normy dotyczą kierowców z działu logistyki.
+
 ## Niedziele i święta
 Praca dozwolona tylko w przypadkach z art. 151¹⁰: ruch ciągły, praca zmianowa, handel w ograniczonym zakresie, usługi i inne wymienione.
 | Praca w | Rekompensata |
 |---|---|
-| niedzielę | dzień wolny w 6 dniach przed lub po; inaczej dodatek 100% |
+| niedzielę | dzień wolny w 6 dniach przed lub po tej niedzieli; gdy niemożliwe — do końca okresu rozliczeniowego; gdy i to niemożliwe — dodatek 100% za każdą godzinę (art. 151¹¹) |
 | święto | dzień wolny w okresie rozliczeniowym; inaczej dodatek 100% |
 Raz na 4 tygodnie pracownik ma wolną niedzielę.
 
@@ -346,8 +362,12 @@ Limit: 150 h rocznie. Regulamin lub umowa może go podnieść — do 416 h, przy
 | średniotygodniowe | przepracowane − wymiar − nadgodziny dobowe już policzone | po zakończeniu okresu rozliczeniowego |
 
 ## Rekompensata
-Za każdą nadgodzinę: normalne wynagrodzenie + dodatek.
-Stawka godzinowa = (wynagrodzenie zasadnicze + stałe składniki) / wymiar miesiąca.
+Za każdą nadgodzinę: normalne wynagrodzenie + dodatek. To dwie różne stawki:
+| Co liczysz | Z czego | Podstawa |
+|---|---|---|
+| normalne wynagrodzenie za nadgodzinę | wynagrodzenie zasadnicze + stałe składniki (dodatek funkcyjny, stażowy) / wymiar miesiąca | orzecznictwo SN: to, co pracownik dostaje stale i systematycznie |
+| dodatek 50% / 100% | tylko wynagrodzenie z osobistego zaszeregowania (zasadnicze) / wymiar miesiąca; gdy takiego składnika nie wyodrębniono — 60% wynagrodzenia | art. 151¹ §3 KP |
+Dzielnikiem jest zawsze wymiar miesiąca, w którym wystąpiły nadgodziny (§ 4a rozporządzenia MPiPS z 29.05.1996 w sprawie sposobu ustalania wynagrodzenia w okresie niewykonywania pracy). Gdy pracownik ma samo zasadnicze — obie stawki są równe.
 | Dodatek | Za nadgodziny |
 |---|---|
 | 100% | w nocy; w niedziele i święta niebędące dniami pracy wg rozkładu; w dniu wolnym udzielonym za niedzielę lub święto; za przekroczenie normy średniotygodniowej |
@@ -389,13 +409,14 @@ Prowadzisz ją dla każdego pracownika odrębnie, papierowo albo elektronicznie.
 
 ## Dokumenty towarzyszące
 Wnioski o wyjścia prywatne. Wnioski i polecenia nadgodzin. Zgody opiekunów dzieci do 8 lat i ciężarnych na delegację. Wnioski o czas wolny. Harmonogramy. Rozkłady ruchome.
-Dla zadaniowego czasu pracy i kierowników komórek nie ewidencjonujesz godzin — tylko nieobecności i dni wolne.
+Godzin pracy nie ewidencjonujesz tylko dla trzech grup (art. 149 §2): zadaniowy czas pracy, osoby zarządzające zakładem w imieniu pracodawcy, pracownicy z ryczałtem za nadgodziny albo za porę nocną. Nieobecności i dni wolne ewidencjonujesz zawsze.
+Kierownik wyodrębnionej komórki (art. 151⁴) nie dostaje dodatku za nadgodziny, ale jego godziny ewidencjonujesz normalnie.
 
 ## Lista obecności to nie ewidencja
 Lista obecności jest narzędziem dyscypliny. Nie jest obowiązkowa.
 Ewidencja musi pozwolić policzyć wynagrodzenie. To pierwszy dokument, o który prosi PIP.
 Brak ewidencji w sądzie (sprawy o nadgodziny) daje domniemanie na korzyść pracownika.
-Przechowywanie: jak akta — 10 lat po ustaniu zatrudnienia (dokumentacja z 2019+). Pracownik ma prawo wglądu i kopii.
+Przechowywanie: ewidencja jest częścią dokumentacji pracowniczej — okres zatrudnienia i 10 lat od końca roku, w którym ustał stosunek pracy (zatrudnieni od 2019 r.; wcześniejsze umowy — jak akta, tydzień 1). Pracownik ma prawo wglądu i kopii.
 
 ## Kody nieobecności w praktyce
 | Kod | Nieobecność | Wymiar / płatność |
@@ -447,9 +468,10 @@ Od następnego roku kalendarzowego: z góry, cały wymiar 1 stycznia.
 
 ## Urlop proporcjonalny (art. 155¹)
 - Zmiana pracodawcy w roku: u dotychczasowego za okres do ustania, u nowego za resztę.
-- Niepełny miesiąc u pierwszego pracodawcy liczy się za pełny.
+- Niepełny miesiąc zaokrąglasz w górę do pełnego (art. 155²ᵃ §2). Gdy zmiana pracodawcy wypada w tym samym miesiącu — zaokrągla tylko dotychczasowy pracodawca (§3).
 - Powrót po urlopie bezpłatnym dłuższym niż 1 miesiąc, po wychowawczym albo służbie — proporcja.
-- Dni zaokrąglasz w górę.
+- Niepełny dzień zaokrąglasz w górę (art. 155³ §1).
+- Limit roczny (art. 155³ §2): suma urlopu u wszystkich pracodawców w roku nie może przekroczyć wymiaru 20/26. Dlatego czytasz świadectwo pracy — podaje urlop wykorzystany w roku ustania zatrudnienia razem z dniami, za które wypłacono ekwiwalent.
 
 ## Urlop na żądanie
 4 dni w roku, w puli 20/26. Zgłoszenie najpóźniej w dniu urlopu, przed rozpoczęciem pracy.
@@ -467,7 +489,7 @@ Niewykorzystany urlop na żądanie przechodzi na rok następny jako zwykły zale
 | przesunięcie i odwołanie z urlopu — zwrot kosztów | art. 164–167 |
 | choroba przerywa urlop | — |
 | ekwiwalent tylko przy ustaniu zatrudnienia | art. 171 |
-Przedawnienie roszczeń: 3 lata od końca roku, w którym urlop stał się wymagalny (od 1.10 następnego roku)."""
+Przedawnienie roszczenia o urlop: 3 lata od dnia wymagalności (art. 291 §1). Dla urlopu niewykorzystanego w swoim roku liczysz od 30 września następnego roku: urlop za 2024 r. → 30.09.2028."""
 
 WYJASNIENIA["staz_pracy_2026"] = """## Co się zmieniło (art. 302¹ i n. KP)
 Do stażu pracy wlicza się teraz okresy pracy poza umową o pracę. Od stażu zależą: wymiar urlopu, okres wypowiedzenia u tego samego pracodawcy, odprawy, dodatki stażowe i nagrody jubileuszowe wg regulaminów.
@@ -498,8 +520,8 @@ Okresy nakładające się liczysz raz — korzystniejszy.
 
 ## Terminy i skutki
 Pracownicy już zatrudnieni mają 24 miesiące (od 1.01 albo 1.05.2026) na dostarczenie dokumentów.
-Uprawnienia nabywa się od dnia przedstawienia dokumentów, nie wcześniej niż od wejścia w życie.
-Przykład: wymiar urlopu rośnie z 20 na 26 dni → w roku bieżącym przysługuje różnica (urlop uzupełniający) od dnia przedstawienia zaświadczenia.
+Uprawnienia przysługują od dnia ich nabycia (np. przekroczenia 10 lat po doliczeniu okresów), ale nie wcześniej niż od 1.01.2026 albo 1.05.2026 — także gdy dokumenty wpłyną później, byle w terminie 24 miesięcy (wyjaśnienia MRPiPS).
+Przykład: po doliczeniu zlecenia staż przekracza 10 lat już 1.05.2026 → wymiar rośnie z 20 na 26 dni i za 2026 r. przysługuje pełna różnica 6 dni (urlop uzupełniający, art. 158). Za lata sprzed wejścia w życie nic nie wyrównujesz.
 Spory rozstrzyga sąd pracy.
 
 ## Co robi dział kadr
@@ -517,7 +539,7 @@ WYJASNIENIA["urlopy_rodzicielskie"] = """## Urlop macierzyński
 | przed porodem | do 6 tygodni |
 | obowiązkowe dla matki | 14 tygodni; resztę może przejąć ojciec |
 | zasiłek | 100% |
-Wcześniaki i hospitalizacja noworodka (od 19.03.2025): dodatkowy urlop macierzyński — tydzień za każdy tydzień pobytu dziecka w szpitalu, do 8 lub 15 tygodni (zależnie od tygodnia ciąży i masy). Zasiłek 100%.
+Wcześniaki i hospitalizacja noworodka (od 19.03.2025): uzupełniający urlop macierzyński (art. 180², RSA 341) — tydzień za każdy tydzień pobytu dziecka w szpitalu, do 8 lub 15 tygodni (zależnie od tygodnia ciąży i masy). Zasiłek 100%.
 
 ## Urlop rodzicielski (art. 182¹ᵃ)
 | Element | Zasada |
@@ -542,16 +564,16 @@ Wcześniaki i hospitalizacja noworodka (od 19.03.2025): dodatkowy urlop macierzy
 | warunek | staż co najmniej 6 miesięcy |
 | płatność | bezpłatny; wlicza się do stażu |
 | części | do 5 |
-| wniosek | 21 dni wcześniej, elektronicznie |
+| wniosek | 21 dni wcześniej, papierowo lub elektronicznie |
 | składki | emerytalno-rentowe i zdrowotna z budżetu — ZUS RCA kod 12 11, RSA 121 |
-Zamiast wychowawczego: obniżenie etatu do maksymalnie 1/2 na okres do 12 miesięcy, z ochroną.
+Zamiast wychowawczego (art. 186⁷): obniżenie wymiaru czasu pracy — nie niżej niż do 1/2 etatu — w okresie, w którym pracownik mógłby korzystać z wychowawczego. Ochrona przed wypowiedzeniem trwa wtedy łącznie do 12 miesięcy (art. 186⁸).
 Elastyczna organizacja pracy dla rodzica dziecka do 8 lat (art. 188¹): wniosek 21 dni wcześniej, odpowiedź w 7 dni.
 
 ## Ochrona
-- Od zgłoszenia ciąży i przez urlopy macierzyński, rodzicielski i ojcowski — zakaz wypowiedzenia i rozwiązania. Wyjątki: upadłość lub likwidacja oraz art. 52 za zgodą związku.
+- Przez całą ciążę (także gdy pracodawca o niej nie wiedział — wypowiedzenie okazuje się wtedy wadliwe) i przez urlopy macierzyński, rodzicielski i ojcowski — zakaz wypowiedzenia, rozwiązania i samych przygotowań do zwolnienia (art. 177 §1). Wyjątki: upadłość lub likwidacja oraz art. 52 za zgodą związku.
 - Umowa na czas określony albo próbna dłuższa niż 1 miesiąc, która rozwiązałaby się po 3. miesiącu ciąży — przedłuża się do porodu. Nie dotyczy zastępstwa.
-- Ochrona zaczyna się 14 dni przed terminem urlopu wskazanym we wniosku (ojcowski, rodzicielski).
-- Ciąża: zakaz pracy nocnej, nadgodzin i delegacji bez zgody. Przy pracach wzbronionych — zmiana warunków pracy z zachowaniem wynagrodzenia.
+- Gdy wniosek o urlop wpłynął wcześniej, ochrona zaczyna się 14 dni przed ojcowskim i 21 dni przed rodzicielskim (art. 177 §1¹); przy wychowawczym — 21 dni przed (art. 186⁸).
+- Ciąża: bezwzględny zakaz nadgodzin i pracy w nocy; delegacja i przerywany czas pracy — tylko za zgodą pracownicy (art. 178 §1). Przy pracach wzbronionych — zmiana warunków pracy z zachowaniem wynagrodzenia.
 
 ## Dokumenty
 Wnioski w postaci papierowej lub elektronicznej (od 2023). Oświadczenia o korzystaniu z urlopu przez drugiego rodzica. Akt urodzenia. Wszystko do akt — część B."""
@@ -574,7 +596,7 @@ Wynagrodzenie jak urlopowe.
 ## Inne zwolnienia
 | Zwolnienie | Zasada |
 |---|---|
-| krwiodawstwo | dzień oddania krwi |
+| krwiodawstwo | dzień oddania krwi i dzień następny — 100% (art. 9 ust. 1 pkt 1 ustawy o publicznej służbie krwi); także czas badań okresowych dawcy |
 | wezwanie do sądu, urzędu, wojska | bez wynagrodzenia od pracodawcy; zaświadczenie dla organu, który rekompensuje |
 | badania ciężarnej | 100% |
 | poszukiwanie pracy w wypowiedzeniu przez pracodawcę | 2 dni przy 2 tygodniach lub 1 miesiącu; 3 dni przy 3 miesiącach — 100% |
@@ -582,7 +604,7 @@ Wynagrodzenie jak urlopowe.
 | szkolenia BHP | czas pracy |
 
 ## Urlop bezpłatny (art. 174)
-- Na pisemny (od 2026 także elektroniczny) wniosek pracownika.
+- Na wniosek pracownika w postaci papierowej lub elektronicznej (od 27.01.2026 — nowelizacja z 4.12.2025, Dz.U. 2026 poz. 25; wcześniej wyłącznie pisemny).
 - Nie wlicza się do stażu. Wyjątek: urlop na pracę u innego pracodawcy za zgodą (art. 174¹).
 - Dłuższy niż 3 miesiące — strony mogą przewidzieć odwołanie.
 - W czasie bezpłatnego nie ma składek ani zasiłków (RSA 111).
@@ -599,7 +621,7 @@ Kara porządkowa. Przy nieobecności trwającej — rozważ art. 52.
 WYJASNIENIA["lista_plac_krok"] = """## Osiem kroków w stałej kolejności
 | Krok | Co liczysz | Jak |
 |---|---|---|
-| 1 | przychód brutto | wszystkie składniki wypłacone w miesiącu: zasadnicze, nadgodziny, nocne, premie, świadczenia w naturze, wpłata pracodawcy na PPK (jako przychód) |
+| 1 | przychód brutto | wszystkie składniki wypłacone w miesiącu: zasadnicze, nadgodziny, nocne, premie, świadczenia w naturze, wpłata pracodawcy na PPK (przychód w miesiącu przekazania jej do instytucji finansowej — w AGRO-MLEKO to ten sam miesiąc co wypłata) |
 | 2 | podstawa i składki społeczne | podstawa = przychód bez wyłączeń z rozporządzenia składkowego; składki pracownika: emerytalna 9,76%, rentowa 1,5%, chorobowa 2,45% — każda zaokrąglona do grosza; limit 30-krotności dla emerytalnej i rentowej |
 | 3 | podstawa i składka zdrowotna | podstawa = podstawa społecznych − składki społeczne pracownika + wynagrodzenie chorobowe; składka 9%, nie wyższa niż hipotetyczna zaliczka wg zasad z 2021 |
 | 4 | podstawa opodatkowania | przychód − składki społeczne pracownika − KUP (250/300) + PPK pracodawcy (już w przychodzie) − przychody zwolnione; zaokrąglona do pełnych złotych |
@@ -668,15 +690,16 @@ Pracownik może wnioskować o 32% wcześniej — unika dopłaty. Kwotę zmniejsz
 
 ## Ulga dla młodych
 Przychody ze stosunku pracy, zlecenia, praktyk i zasiłku macierzyńskiego — do 85 528 zł rocznie zwolnione, do dnia 26. urodzin.
-Składki ZUS normalnie. Zdrowotna ograniczona do hipotetycznej zaliczki liczonej jak bez ulgi. W praktyce przy minimalnej to ograniczenie działa.
+Składki ZUS normalnie. Zdrowotna ograniczona do hipotetycznej zaliczki liczonej jak bez ulgi (zasady z 2021 r.: 17% i kwota zmniejszająca 43,76 zł). Przy minimalnym wynagrodzeniu za pełny etat ograniczenie nie działa (373,24 < 618,73) — obniża składkę dopiero przy niskich przychodach, np. 1/4 etatu.
 
 ## Zasiłki i danina
 Zasiłki (chorobowy, macierzyński, opiekuńczy) to przychód z innych źródeł. Zaliczka 12% bez KUP; kwota zmniejszająca — gdy PIT-2 u tego płatnika.
-Danina solidarnościowa 4% ponad 1 mln — rozlicza podatnik.
+Danina solidarnościowa 4% ponad 1 mln zł dochodu — rozlicza podatnik (ustawa o PIT 2027 podnosi ją do 5%).
 
-## Zmiany 2027 — projekt
-Projekt uchwalony przez Sejm 22.10.2026, w Senacie z poprawkami: próg 130 000 zł, stawka 24% do 150 000 zł.
-Sprawdź status przed listą za styczeń 2027."""
+## Zmiany 2027 — ustawa czeka na podpis
+Nowa skala od 1.01.2027: 12% do 130 000 zł, 24% od 130 000 do 150 000 zł, 32% powyżej 150 000 zł. Kwota wolna 30 000 zł i kwota zmniejszająca 300 zł miesięcznie zostają.
+Stan na 18.11.2026: Sejm uchwalił ustawę 5.11.2026, Senat przyjął ją bez poprawek 6.11.2026, Prezydent ma czas na decyzję do 27.11.2026 (podpis, weto albo Trybunał Konstytucyjny). Pierwszą wersję z 22.10.2026 rząd wycofał po poprawkach Senatu.
+Przy wecie w 2027 r. zostaje skala 12% / 32% z progiem 120 000 zł. Sprawdź status przed listą za styczeń 2027: po wejściu ustawy w życie w miesiącu przekroczenia 130 000 zł liczysz 12% i 24%, a po 150 000 zł — 32%."""
 
 WYJASNIENIA["koszt_pracodawcy"] = """## Składki finansowane przez pracodawcę
 | Składka | Stopa |
@@ -690,10 +713,14 @@ WYJASNIENIA["koszt_pracodawcy"] = """## Składki finansowane przez pracodawcę
 | PPK | 1,5% (do 4%) |
 
 ## Zwolnienia z FP i FGŚP
-- Kobiety od 55 lat i mężczyźni od 60 lat.
-- 12 miesięcy po powrocie z urlopu macierzyńskiego, rodzicielskiego lub wychowawczego.
-- 36 miesięcy za osoby 50+ zatrudnione z PUP (bezrobotne); 12 miesięcy za skierowanych do 30 lat.
-- Wynagrodzenie niższe niż minimalne w przeliczeniu na miesiąc (np. niepełny etat poniżej 4 806) — brak FP/FGŚP, jeśli łączna podstawa ze wszystkich tytułów jest niższa niż minimalna.
+| Sytuacja | FP | FGŚP |
+|---|---|---|
+| kobieta od 55 lat, mężczyzna od 60 lat | nie płacisz | nie płacisz |
+| 36 miesięcy po powrocie z urlopu macierzyńskiego, rodzicielskiego lub wychowawczego | nie płacisz | nie płacisz |
+| 12 miesięcy za osobę 50+ zatrudnioną z rejestru bezrobotnych PUP | nie płacisz | nie płacisz |
+| 12 miesięcy za skierowanego bezrobotnego do 30 lat | nie płacisz | nie płacisz |
+| podstawa ze WSZYSTKICH tytułów w przeliczeniu na miesiąc niższa niż minimalne wynagrodzenie (np. 1/2 etatu za 2 500 zł i 1/4 etatu za 1 300 zł u innego pracodawcy — razem 3 800 zł; pracownik składa o tym oświadczenie) | nie płacisz | płacisz — FGŚP nie ma progu |
+FP i FGŚP liczysz od pełnej podstawy — limit 30-krotności ich nie dotyczy.
 
 ## Składka wypadkowa — skąd się bierze stopa
 | Płatnik | Stopa |
@@ -716,7 +743,7 @@ Zarząd pyta „ile kosztuje pracownik”. Odpowiedź: ok. 1,21–1,25 × brutto
 | Forma | Koszt ZUS firmy | Ryzyko |
 |---|---|---|
 | umowa o pracę | pełne składki | — |
-| zlecenie z pełnymi składkami | tyle samo w ZUS; bez FP/FGŚP przy zbiegu; bez urlopu i 33 dni chorobowego | — |
+| zlecenie z pełnymi składkami | tyle samo w ZUS co etat (FP tylko, gdy podstawa ≥ minimalnej); bez urlopu i 33 dni chorobowego | — |
 | B2B | brak kosztów ZUS po stronie firmy | art. 22 §1¹ KP — ustalenie stosunku pracy: składki 5 lat wstecz z odsetkami, których nie potrącisz pracownikowi, urlopy, nadgodziny, PIP |
 Limit 30-krotności obniża koszt w końcówce roku dla wysokich pensji — brak emerytalnej i rentowej po 282 600 zł podstawy."""
 
@@ -771,8 +798,8 @@ Granice liczysz po odliczeniu składek ZUS, zaliczki PIT i wpłat PPK pracownika
 | zaliczki pieniężne | — | 75% minimalnego netto |
 | kary pieniężne | 1/10 wynagrodzenia po innych potrąceniach | 90% minimalnego netto |
 Minimalne netto liczysz dla danego pracownika — po odliczeniu jego składek, PIT i PPK. Dla różnych osób jest różne.
-Niepełny etat: kwoty wolne proporcjonalnie.
-Nagroda z ZFŚS, trzynastka, nagroda jubileuszowa — na alimenty do 100%.
+Niepełny etat: kwotę wolną wyliczoną dla pełnego etatu mnożysz przez wymiar etatu (art. 87¹ §2), np. 1/2 etatu z PIT-2: 3 605,85 × 1/2 = 1 802,93.
+Nagroda z zakładowego funduszu nagród, trzynastka (dodatkowe wynagrodzenie roczne) i udział w zysku — na alimenty do 100% (art. 87 §5).
 
 ## Procedura przy zajęciu komorniczym
 - Komornik doręcza zajęcie. Od tej chwili potrącasz i przekazujesz.
@@ -780,14 +807,28 @@ Nagroda z ZFŚS, trzynastka, nagroda jubileuszowa — na alimenty do 100%.
 - Zbieg egzekucji: informujesz obu komorników, przekazujesz temu, który pierwszy zajął.
 - Ustanie zatrudnienia: zawiadamiasz komornika, wpisujesz zajęcie w świadectwie (komornik, sygnatura, kwota).
 - Za nieprzekazanie: grzywna do 5 000 zł od komornika i odpowiedzialność za szkodę.
-Zajęcie zasiłków z ZUS, gdy płatnik je wypłaca — limity z ustawy emerytalnej: alimenty 60%, inne 25%, kwota wolna jak w emeryturach.
+
+## Zasiłek to nie wynagrodzenie — potrącasz osobno
+Wynagrodzenie chorobowe (art. 92 KP) jest wynagrodzeniem: sumujesz je z pensją i stosujesz granice z Kodeksu pracy.
+Zasiłki wypłacane przez płatnika (chorobowy, opiekuńczy, macierzyński, świadczenie rehabilitacyjne) mają własne zasady — art. 139–141 ustawy o emeryturach i rentach z FUS:
+| Potrącenie z zasiłku | Granica — od zasiłku BRUTTO | Kwota wolna za pełny miesiąc (1.03.2026–28.02.2027) |
+|---|---|---|
+| alimenty | 60% | 849,42 zł |
+| inne egzekwowane należności | 25% | 1 401,57 zł |
+- Kwotę wolną przeliczasz na dni zasiłku: kwota miesięczna / 30 × liczba dni zasiłku.
+- Potrącasz z zasiłku po odliczeniu zaliczki PIT; pracownikowi musi zostać co najmniej kwota wolna.
+- Kwoty wolne rosną co roku 1 marca (komunikat Prezesa ZUS — na ten okres M.P. 2026 poz. 220).
+- Sprawdź treść zajęcia: komornik musi nim objąć także zasiłki (zwykle to robi); zajęcie administracyjne obejmuje je z mocy prawa (od 25.03.2024).
+- Potrąceń dobrowolnych (rata pożyczki, składka grupowa) z zasiłku nie robisz — katalog z art. 139 ust. 1 jest zamknięty.
+Zaliczka przypadająca na zasiłek: przepisy nie mówią, jak wydzielić ją z jednej zaliczki miesięcznej. W kursie i w Warsztacie przyjmujemy 12% × zasiłek, a kwotę zmniejszającą 300 zł zaliczamy na wynagrodzenie; Twój program może dzielić proporcjonalnie — stosuj jedną metodę konsekwentnie.
+Przykład: pensja z chorobowym netto 3 421,32 (PPK, kwota wolna 3 501,73) i zasiłek 800,76 brutto za 6 dni; zajęcie komornicze 1 200 zł. Z wynagrodzenia: 0, bo netto jest poniżej kwoty wolnej. Z zasiłku: granica 25% × 800,76 = 200,19; kwota wolna 1 401,57 / 30 × 6 = 280,31; netto zasiłku 800,76 − 96,09 = 704,67 → potrącasz 200,19.
 
 ## Za zgodą pracownika (art. 91)
 Tylko pisemna zgoda z konkretną kwotą lub tytułem: pożyczka z ZFŚS, składka związkowa, ubezpieczenie grupowe.
 | Na czyją rzecz | Kwota wolna |
 |---|---|
-| inne podmioty | 100% minimalnego netto |
-| pracodawca | 80% minimalnego netto |
+| pracodawca (np. szkoda, pożyczka z ZFŚS, wykup sprzętu) | 100% minimalnego netto (art. 91 §2 pkt 1) |
+| inne podmioty (składka związkowa, ubezpieczenie grupowe, kasa zapomogowo-pożyczkowa) | 80% minimalnego netto (art. 91 §2 pkt 2) |
 
 ## Co nie jest potrąceniem
 Nadpłacone wynagrodzenie za okres nieobecności odliczasz w najbliższym terminie wypłaty (art. 87 §7). Tylko za okres nieobecności, nie za „pomyłkę”.
@@ -819,7 +860,7 @@ Współfinansowanie: pracownik dopłaca choć 1 zł — składek brak, PIT jest.
 ## Zwolnienia z PIT
 | Świadczenie | Limit |
 |---|---|
-| posiłki, bony (art. 21 ust. 1 pkt 11b) | do 450 zł miesięcznie |
+| posiłki profilaktyczne i napoje z przepisów BHP oraz bony na nie (art. 21 ust. 1 pkt 11 i 11b) | bez limitu; zwykły posiłek od firmy to przychód w PIT — limit 450 zł miesięcznie dotyczy tylko składek ZUS (§2 ust. 1 pkt 11) |
 | ekwiwalent za pranie, narzędzia | — |
 | ryczałt za pracę zdalną | odpowiadający kosztom |
 | dokształcanie z inicjatywy pracodawcy | — |
@@ -928,7 +969,7 @@ Nieobecności nieusprawiedliwione — nie uzupełniasz. Urlop wypoczynkowy i inn
 Jeśli wszystkie miesiące są wyłączone — bierzesz wynagrodzenie z miesięcy niepełnych, uzupełnione.
 
 ## Zleceniobiorcy i inne zasiłki
-- Zleceniobiorca: 12 miesięcy przychodu, bez uzupełniania; minimalna podstawa 31,40 × godziny; zbieg tytułów z wyłączeniem.
+- Zleceniobiorca (art. 48–49): przeciętny przychód z 12 miesięcy, bez uzupełniania i wyłączania miesięcy i bez minimalnej podstawy; choroba w pierwszym miesiącu ubezpieczenia — kwota z umowy.
 - Dobrowolne chorobowe: podstawa miesięczna maksymalnie 250% prognozowanego przeciętnego wynagrodzenia — 2026: 23 550 zł.
 - Świadczenie rehabilitacyjne i zasiłek macierzyński: te same zasady. Rehabilitacyjne — waloryzacja wskaźnikiem kwartalnym, gdy przekracza 100%."""
 
@@ -977,17 +1018,21 @@ Wysyłasz w eZUS. ZUS ustala i wypłaca w 30 dni.
 |---|---|
 | 111 | urlop bezpłatny |
 | 121 | urlop wychowawczy |
-| 151 | usprawiedliwiona nieobecność bez wynagrodzenia (np. opiekuńczy art. 173¹) |
+| 131 | urlop opiekuńczy (art. 173¹ KP) |
+| 151 | usprawiedliwiona nieobecność bez prawa do wynagrodzenia lub zasiłku (np. choroba w okresie wyczekiwania) |
 | 152 | nieusprawiedliwiona nieobecność |
-| 155 | niezdolność bez prawa do wynagrodzenia (wyczekiwanie) |
-| 311 | zasiłek macierzyński — obecnie rozbity: 327 za urlop macierzyński, 319 rodzicielski, 325 ojcowski |
+| 311 | zasiłek macierzyński za urlop macierzyński |
+| 319 | zasiłek macierzyński za urlop rodzicielski |
+| 338 | zasiłek macierzyński za 9 nieprzenoszalnych tygodni urlopu rodzicielskiego (art. 182¹ᵃ §4) |
+| 327 | zasiłek macierzyński za urlop ojcowski |
+| 341 | zasiłek macierzyński za uzupełniający urlop macierzyński |
 | 312 | zasiłek opiekuńczy |
 | 313 | zasiłek chorobowy z ubezpieczenia chorobowego |
 | 314 | zasiłek chorobowy z ubezpieczenia wypadkowego |
 | 321 | świadczenie rehabilitacyjne |
 | 331 | wynagrodzenie za czas niezdolności finansowane przez pracodawcę |
 W RSA podajesz: okres od–do, liczbę dni, kwotę (dla zasiłków wypłaconych przez płatnika).
-Aktualny wykaz kodów: zus.pl → „Kody wykorzystywane przy wypełnianiu dokumentów”."""
+Źródło kodów: załącznik nr 24 do rozporządzenia MRPiPS z 9.04.2026 (Dz.U. 2026 poz. 518); wykaz także na zus.pl → „Kody wykorzystywane przy wypełnianiu dokumentów”."""
 
 WYJASNIENIA["kontrola_l4_2026"] = """## Trzy daty reformy (ustawa z 18.12.2025, Dz.U. 2026 poz. 26)
 | Data | Co weszło w życie |
@@ -999,12 +1044,12 @@ WYJASNIENIA["kontrola_l4_2026"] = """## Trzy daty reformy (ustawa z 18.12.2025, 
 ## Co się zmieniło
 | Pojęcie | Nowa zasada |
 |---|---|
-| praca zarobkowa | każda aktywność zmierzająca do uzyskania przychodu — także bez wynagrodzenia i w innej formie niż umowa |
-| co NIE jest pracą zarobkową | aktywność incydentalna wymuszona okolicznościami (podpisanie dokumentu, którego nie można było odłożyć); czynności niezbędne do zachowania działalności gospodarczej bez aktywnego zarządzania; czynności z pełnienia funkcji społecznych lub publicznych |
-| aktywność niezgodna z celem zwolnienia (zamiast „wykorzystywania niezgodnie z celem”) | zachowania mogące wydłużyć niezdolność: remont, wyjazd rekreacyjny, prace fizyczne |
-| co jest dozwolone | czynności życia codziennego: zakupy, wizyta lekarska, opieka nad dzieckiem |
+| praca zarobkowa (art. 17 ust. 1a) | każda czynność o charakterze zarobkowym, niezależnie od podstawy prawnej |
+| co NIE jest pracą zarobkową | czynności incydentalne, których podjęcia w czasie zwolnienia wymagają istotne okoliczności (np. podpisanie dokumentu, którego nie dało się odłożyć); polecenie pracodawcy taką okolicznością NIE jest |
+| aktywność niezgodna z celem zwolnienia (art. 17 ust. 1b; zamiast „wykorzystywania niezgodnie z celem”) | działania utrudniające lub wydłużające leczenie albo rekonwalescencję: remont, wyjazd rekreacyjny, prace fizyczne |
+| co jest dozwolone | zwykłe czynności dnia codziennego (zakupy, wizyta lekarska, opieka nad dzieckiem) i czynności incydentalne wymagane istotnymi okolicznościami |
 | kto ocenia | ZUS i płatnik — czy aktywność jest zgodna z zaleceniami lekarskimi; może ocenić orzecznik |
-| praca u drugiego pracodawcy | od 2027 lekarz oznaczy tytuł na e-ZLA; w 2026 praca u drugiego tylko gdy lekarz wystawił zwolnienie wyłącznie na jeden tytuł |
+| praca u drugiego pracodawcy | do końca 2026 r. zwolnienie obejmuje wszystkie tytuły — praca u drugiego pracodawcy to praca zarobkowa (utrata zasiłku); od 1.01.2027 lekarz na żądanie ubezpieczonego może wystawić e-ZLA tylko z jednego tytułu, gdy rodzaj pracy w drugim na to pozwala (art. 17 ust. 1c–1e) — ubezpieczony informuje o tym płatnika |
 
 ## Kto kontroluje i jak
 | Element | Zasada |
@@ -1014,7 +1059,7 @@ WYJASNIENIA["kontrola_l4_2026"] = """## Trzy daty reformy (ustawa z 18.12.2025, 
 | miejsce | miejsce zamieszkania lub pobytu z e-ZLA albo inne miejsce; także wezwanie do stawienia się |
 | obowiązek ubezpieczonego | podaje adres pobytu; zmianę zgłasza w 3 dni |
 | wezwanie na badanie przez ZUS | także przez eZUS, telefon, SMS |
-| protokół | ubezpieczony wnosi uwagi w 3 dni |
+| protokół (art. 68e) | dwa egzemplarze, podpis kontrolowanego; zastrzeżenia w 7 dni od otrzymania protokołu — rozpatruje ZUS |
 | spór | ZUS rozstrzyga decyzją; odwołanie do sądu w miesiąc |
 
 ## Sankcje
@@ -1025,7 +1070,7 @@ Kontrola prawidłowości ORZEKANIA (czy pracownik faktycznie jest chory) — tyl
 
 ## Procedura w firmie
 - Regulamin kontroli: kto, jak, protokół.
-- Upoważnienie imienne (wzór ZUS). Dwie osoby. Kontrola bez uprzedzenia.
+- Upoważnienie imienne (art. 68b; wzór z rozporządzenia). Dwie osoby. Kontrola bez uprzedzenia.
 - Dokumentacja: protokół z opisem zastanej sytuacji, oświadczenie pracownika; zdjęcia tylko za zgodą.
 - Nieobecność w domu nie przesądza — pracownik może wyjaśnić (wizyta lekarska, apteka).
 - Wynik: brak naruszeń albo naruszenie → wstrzymanie wypłaty i informacja do ZUS; gdy ZUS płaci — wniosek o kontrolę lub decyzję.
@@ -1041,17 +1086,19 @@ Zlecenie (także umowa o świadczenie usług i agencyjna) jest tytułem do ubezp
 | emerytalne, rentowe, wypadkowe | obowiązkowe |
 | chorobowe | dobrowolne — na wniosek (kod 04 11) |
 | zdrowotne | obowiązkowe |
-| FP, FGŚP | tak, gdy podstawa ze wszystkich tytułów ≥ minimalna |
+| FP | tak, gdy podstawa ze wszystkich tytułów w przeliczeniu na miesiąc ≥ minimalna (4 806 zł) |
+| FGŚP | tak — 0,10% zawsze, gdy zlecenie jest objęte obowiązkowymi emerytalnym i rentowymi (bez progu minimalnego) |
 Podstawa = przychód przy wynagrodzeniu kwotowym — jak u pracownika.
+Wiek 55+ (kobieta) i 60+ (mężczyzna) zwalnia zleceniodawcę z FP i FGŚP tak samo jak przy etacie.
 
 ## Zbiegi tytułów — sześć sytuacji
 | Sytuacja | Składki ze zlecenia |
 |---|---|
-| uczeń lub student do 26 lat | brak; nie zgłaszasz do ZUS; zaświadczenie lub legitymacja do dokumentacji; po utracie statusu — składki od następnego dnia |
+| uczeń lub student do 26 lat | brak; nie zgłaszasz do ZUS; zaświadczenie lub legitymacja do dokumentacji; po obronie lub skreśleniu — składki od następnego dnia, po ukończeniu 26 lat — od dnia urodzin |
 | zlecenie z WŁASNYM pracodawcą (lub na jego rzecz) | jak stosunek pracy: pełne składki, sumowane z etatem (RCA kod 01 10 z łączną podstawą); podstawa zasiłku łączona |
 | zlecenie + etat u INNEGO pracodawcy z wynagrodzeniem ≥ minimalne (4 806 w przeliczeniu na miesiąc) | tylko zdrowotna (kod 04 11, oświadczenie zleceniobiorcy); gdy etat < minimalnej — pełne składki |
 | kilka zleceń | sumujesz podstawy chronologicznie: dopóki suma wcześniejszych < 4 806 — pełne składki; od zlecenia, przy którym suma poprzednich ≥ 4 806 — tylko zdrowotna; zleceniobiorca może wybrać tytuł |
-| emeryt lub rencista | pełne składki |
+| emeryt lub rencista | jak każdy zleceniobiorca: jedyny tytuł → obowiązkowe emerytalne, rentowe, wypadkowe i zdrowotne (5. znak kodu: 1 emerytura, 2 renta); etat ≥ minimalnej u innego płatnika → tylko zdrowotna |
 | własna działalność + zlecenie w zakresie działalności | składki z działalności; zlecenie jako przychód firmy, faktura |
 Oświadczenia o innych tytułach i ich aktualizacje to podstawa Twojej decyzji. Za nieprawdę odpowiada zleceniobiorca.
 
@@ -1063,12 +1110,14 @@ Oświadczenia o innych tytułach i ich aktualizacje to podstawa Twojej decyzji. 
 | zaliczka | 12%; zleceniobiorca może złożyć PIT-2 — kwota zmniejszająca 300 zł, jeśli nie korzysta u innego płatnika; może wnioskować o 32% |
 | umowy do 200 zł z osobą niebędącą pracownikiem | ryczałt 12% bez KUP (PIT-8AR); składki normalnie |
 | ulga dla młodych | obejmuje zlecenia — do 26 lat zero PIT |
+| PPK zleceniobiorcy | wpłata zleceniodawcy (1,5%) to przychód z tego samego źródła co zlecenie — KUP 20% liczysz od łącznego przychodu (zlecenie + wpłata) po odjęciu składek społecznych |
 | nierezydent bez certyfikatu | ryczałt 20% (IFT-1R) |
 | informacja | PIT-11 do końca lutego |
 
 ## Minimalna stawka godzinowa
 31,40 zł w 2026 (32,30 zł w 2027). Dotyczy zleceń i usług wykonywanych przez osoby fizyczne, także samozatrudnionych bez pracowników.
-- Obowiązek POTWIERDZANIA LICZBY GODZIN — ewidencja w formie ustalonej w umowie. Brak ewidencji to wykroczenie: grzywna 2 000–60 000 zł (od 8.07.2026).
+- Obowiązek POTWIERDZANIA LICZBY GODZIN — w sposób ustalony w umowie (art. 8b ustawy o minimalnym wynagrodzeniu); gdy umowa milczy, zleceniobiorca składa informację o liczbie godzin przed terminem wypłaty. Dokumenty przechowujesz 3 lata od dnia wymagalności wynagrodzenia (art. 8c).
+- Wypłata poniżej stawki minimalnej to wykroczenie z art. 8e tej ustawy: grzywna 1 000–30 000 zł. Nowelizacja o PIP z 2026 r. podniosła grzywny z Kodeksu pracy, tej nie zmieniła. Inspektor może też wydać polecenie albo skierować wystąpienie.
 - Wypłata co najmniej raz w miesiącu przy umowach dłuższych. Zakaz zrzeczenia się.
 - Wyjątki: wynagrodzenie wyłącznie prowizyjne przy samodzielnym ustalaniu czasu i miejsca; opieka domowa w rodzinnych domach pomocy itp.
 
@@ -1097,10 +1146,10 @@ Osoby zatrudnione: pracownicy, zleceniobiorcy z obowiązkowymi składkami emeryt
 | 70+ | nie |
 
 ## Rezygnacja i autozapis
-- Rezygnacja: pisemna deklaracja (wzór z rozporządzenia) składana pracodawcy. Od następnego miesiąca brak wpłat.
+- Rezygnacja: pisemna deklaracja (wzór z rozporządzenia) składana pracodawcy. Wpłat nie naliczasz już od miesiąca jej złożenia; wpłaty pobrane w tym miesiącu zwracasz (art. 23 ust. 4).
 - Autozapis co 4 lata: pracodawca do końca lutego informuje; od 1 kwietnia (2023, 2027, 2031) wznawia wpłaty za każdego, kto nie złożył nowej deklaracji.
 - Powrót możliwy w każdej chwili — wniosek.
-Sankcje: nakłanianie do rezygnacji — grzywna do 1,5% funduszu wynagrodzeń; brak umowy o zarządzanie — grzywna do 1 mln zł. PFR weryfikuje (wezwania).
+Sankcje: brak umowy o zarządzanie w terminie albo nakłanianie do rezygnacji — grzywna do 1,5% funduszu wynagrodzeń (art. 106 i 108); brak umowy o prowadzenie albo wpłaty nie w terminie — grzywna od 1 000 zł do 1 mln zł (art. 107). PFR weryfikuje (wezwania).
 
 ## Wpłaty
 Podstawa = wynagrodzenie = podstawa składek emerytalno-rentowych, BEZ limitu 30-krotności. Zasiłki nie wchodzą.
@@ -1112,7 +1161,8 @@ Podstawa = wynagrodzenie = podstawa składek emerytalno-rentowych, BEZ limitu 30
 |---|---|
 | pracownika | potrącana z netto (po PIT) |
 | pracodawcy | przychód pracownika do PIT w miesiącu przekazania do instytucji; bez składek ZUS; koszt uzyskania dla firmy |
-Termin: naliczenie w miesiącu wypłaty, przekazanie do instytucji do 15. dnia miesiąca następnego (plik z systemu kadrowego → portal instytucji).
+Termin: naliczenie w miesiącu wypłaty, przekazanie do instytucji najpóźniej do 15. dnia miesiąca następnego (plik z systemu kadrowego → portal instytucji).
+AGRO-MLEKO przelewa wpłaty w dniu wypłaty wynagrodzeń, dlatego przychód z wpłaty pracodawcy doliczasz na tej samej liście. Firma, która przelewa w następnym miesiącu, dolicza ten przychód miesiąc później.
 Państwo dokłada: wpłatę powitalną 250 zł (po 3 miesiącach uczestnictwa) i dopłatę roczną 240 zł — gdy wpłaty w roku ≥ 3,5% × 6 × minimalne; przy obniżonej 0,5% wystarczy 25% tej kwoty.
 Zmiana pracy: środki zostają; nowy pracodawca dostaje informację o rachunkach i robi transfer, chyba że pracownik się sprzeciwi.
 
@@ -1124,6 +1174,14 @@ Zmiana pracy: środki zostają; nowy pracodawca dostaje informację o rachunkach
 | wkład własny | do 45 lat, zwrot w 15 lat |
 | poważne zachorowanie | 25% bez zwrotu |
 | inne | świadczenie małżeńskie, dziedziczenie |
+
+## Sankcje i kontrola
+| Naruszenie | Sankcja |
+|---|---|
+| brak umowy o zarządzanie PPK w terminie | grzywna do 1,5% funduszu wynagrodzeń z poprzedniego roku (art. 106) |
+| niezawarcie umowy o prowadzenie, brak wpłat w terminie, brak dokumentacji | grzywna 1 000–1 000 000 zł (art. 107) |
+| nakłanianie do rezygnacji z PPK | grzywna do 1,5% funduszu wynagrodzeń (art. 108) |
+Kontroluje PIP. Zdanie „lepiej zrezygnuj, zaoszczędzimy oboje” to właśnie nakłanianie — nie pada nigdy, także w rozmowie rekrutacyjnej.
 
 ## Obowiązki kadr co miesiąc
 - Lista uczestników i stawek.
@@ -1139,30 +1197,41 @@ WYJASNIENIA["cudzoziemcy_b2b"] = """## Cudzoziemcy — ustawa z 20.03.2025 (Dz.U
 |---|---|
 | wnioski | wyłącznie elektronicznie przez praca.gov.pl |
 | test rynku pracy (informacja starosty) | zniesiony |
-| zezwolenie na pracę | wydaje wojewoda; typy A–E; A — praca u polskiego pracodawcy, do 3 lat |
+| zezwolenie na pracę | wydaje wojewoda. Ustawa z 2025 r. nie używa już liter A–E: mówi o zezwoleniu na pracę na rzecz polskiego podmiotu (dawny typ A), w związku z pełnioną funkcją (B) i w związku z delegowaniem do Polski (C–E) — w rozmowach litery nadal usłyszysz. Ważne do 3 lat; najwyżej rok, gdy firma działa krócej niż rok albo wymiar nie przekracza 1/2 etatu lub 20 godzin tygodniowo |
 | odmowa | zaległości ZUS/PIT, karalność za nielegalne zatrudnienie, firma fikcyjna |
-| obowiązki pracodawcy | umowa na piśmie z tłumaczeniem na język zrozumiały; kopia zezwolenia dla cudzoziemca; zgłoszenie w 7 dni do urzędu niepodjęcia lub zakończenia pracy |
+| obowiązki pracodawcy | umowa na piśmie PRZED dopuszczeniem do pracy, w języku zrozumiałym dla cudzoziemca (albo z tłumaczeniem); kopia umowy przekazana urzędowi przez praca.gov.pl przed powierzeniem pracy; kopia zezwolenia dla cudzoziemca; zgłoszenie wojewodzie w 7 dni: niepodjęcia pracy w ciągu 2 miesięcy od początku ważności zezwolenia, przerwy dłuższej niż 2 miesiące, zakończenia pracy wcześniej niż 2 miesiące przed końcem ważności |
 | zmiana stanowiska lub wymiaru | nowe zezwolenie; wyjątki: obniżenie wymiaru, podwyżka — informacja |
-| oświadczenie o powierzeniu pracy (PUP, do 24 miesięcy) | obywatele Armenii, Białorusi, Gruzji, Mołdawii, Ukrainy; wpis w 7 dni roboczych |
+| oświadczenie o powierzeniu pracy (PUP, do 24 miesięcy) | obywatele Armenii, Białorusi, Mołdawii i Ukrainy. Gruzja jest wykreślona od 1.12.2025 (rozporządzenie MRPiPS z 21.11.2025) — obywatel Gruzji potrzebuje zezwolenia; oświadczenia wpisane wcześniej działają do końca swojej ważności. Wpis w 7 dni roboczych. Powiadomienie PUP o podjęciu pracy — w 7 dni od jej rozpoczęcia, o niepodjęciu — w 14 dni od daty z ewidencji |
+| opłaty (od 1.12.2025) | oświadczenie 400 zł (wcześniej 100 zł); zezwolenie: 200 zł do 3 miesięcy, 400 zł powyżej; delegowanie do Polski 800 zł; praca sezonowa 100 zł |
+| kary za braki formalne | brak umowy w zrozumiałym języku, kopii umowy w urzędzie albo powiadomienia o pracy osoby z ochroną czasową: 1 000–3 000 zł; brak powiadomień przy oświadczeniu: 500–5 000 zł |
 Zwolnieni z zezwolenia: obywatele UE/EOG/Szwajcarii, posiadacze zezwolenia na pobyt stały lub rezydenta UE, Karty Polaka, studenci stacjonarni, absolwenci polskich uczelni, małżonkowie obywateli PL.
+
+## Inne ścieżki legalnej pracy — gdy oświadczenie nie wystarcza
+| Ścieżka | Dla kogo i na jak długo | Kto wydaje |
+|---|---|---|
+| zezwolenie na pracę sezonową | rolnictwo, ogrodnictwo, turystyka; do 9 miesięcy w roku kalendarzowym | starosta (PUP) |
+| zezwolenie na pobyt czasowy i pracę (jedno zezwolenie) | cudzoziemiec przebywający już legalnie w Polsce, praca dłuższa niż 3 miesiące; do 3 lat; wniosek składa cudzoziemiec, pracodawca wypełnia załącznik | wojewoda |
+| Niebieska Karta UE | zawód wymagający wysokich kwalifikacji, wynagrodzenie co najmniej 150% przeciętnego | wojewoda |
+Kadry pilnują trzech dat: końca dokumentu pobytowego, końca podstawy pracy i dnia, do którego trzeba złożyć wniosek o przedłużenie. Wniosek złożony przed końcem legalnego pobytu (masz potwierdzenie złożenia — dawniej stempel w paszporcie) pozwala pracować dalej u tego samego pracodawcy na dotychczasowych warunkach do dnia decyzji.
 
 ## Obywatele Ukrainy — po wygaszeniu specustawy (ustawa z 23.01.2026, Dz.U. 2026 poz. 203, od 5.03.2026)
 | Element | Zasada |
 |---|---|
-| ochrona czasowa (PESEL ze statusem UKR) | do 4.03.2027 — na podstawie ustawy o udzielaniu cudzoziemcom ochrony, nie specustawy |
+| ochrona czasowa (PESEL ze statusem UKR) | do 4.03.2028 — decyzja wykonawcza Rady (UE) 2026/1912 z 30.07.2026 (poprzednio do 4.03.2027). Status przedłuża się z mocy prawa, bez wniosków. Podstawą jest ustawa o udzielaniu cudzoziemcom ochrony, nie specustawa |
 | nowo przybyli | wniosek o PESEL UKR w 30 dni od wjazdu; inaczej brak ochrony |
 | potwierdzenie tożsamości | PESEL nadany na oświadczenie → paszport w gminie do 31.08.2026; inaczej status NUE i utrata pobytu od 1.09.2026 |
 | utrata ochrony | wyjazd z Polski na ponad 30 dni; uzyskanie zezwolenia na pobyt czasowy (karta CUKR — wnioski przez system MOS 2); pisemne zrzeczenie |
-| praca | bez zezwolenia — POWIADOMIENIE PUP przez praca.gov.pl (formularz PSZ-PPWPU) w 7 DNI od podjęcia pracy (do 4.03.2026 było 14) |
-| nowe powiadomienie | zmiana rodzaju umowy, stanowiska, wymiaru albo obniżka wynagrodzenia |
+| praca | bez zezwolenia — POWIADOMIENIE PUP przez praca.gov.pl (formularz PSZ-PPWPU) w 7 DNI od rozpoczęcia pracy. Termin 7 dni obowiązuje od 1.07.2024 (wcześniej 14); od 5.03.2026 jego podstawą jest art. 5a ustawy z 20.03.2025 |
+| nowe powiadomienie — w 7 dni | zmiana rodzaju umowy, zmiana stanowiska lub rodzaju pracy, zmniejszenie wymiaru czasu pracy lub liczby godzin, obniżenie stawki. Podwyżka albo większy wymiar z proporcjonalnie wyższą płacą — bez powiadomienia |
 | warunki | wynagrodzenie nie niższe niż w powiadomieniu i co najmniej minimalne; wymiar nie niższy; umowa pisemna z tłumaczeniem; ZUS |
 | kara | brak lub spóźnione powiadomienie — grzywna 1 000–3 000 zł |
-| okres przejściowy | każdy legalnie przebywający obywatel Ukrainy może pracować na powiadomienie przez 3 lata od 5.03.2026 (art. 5a ustawy o warunkach dopuszczalności) |
-| po 4.03.2027 | zwykłe tytuły pobytowe: zezwolenie na pobyt czasowy i pracę, karta CUKR; powiadomienia złożone wcześniej zachowują ważność na dotychczasowych warunkach |
+| okres przejściowy | każdy legalnie przebywający obywatel Ukrainy (także bez statusu UKR: wiza, ruch bezwizowy, karta pobytu z innego tytułu) może pracować na powiadomienie przez 3 lata od 5.03.2026, czyli do marca 2029 (przepis przejściowy ustawy z 23.01.2026) |
+| 4.03.2027 — pułapka | do tego dnia ustawa z 23.01.2026 przedłużyła ważność wiz krajowych, zezwoleń na pobyt czasowy i kart pobytu obywateli Ukrainy, które wygasłyby po 24.02.2022. Ten termin NIE przesunął się razem z ochroną czasową (stan na 10.11.2026) — osoby bez statusu UKR muszą wcześniej uzyskać nowy tytuł pobytowy; wnioski o kartę CUKR także do 4.03.2027 |
+| po 4.03.2028 | koniec ochrony czasowej, o ile Rada UE nie przedłuży jej ponownie — zwykłe tytuły pobytowe (zezwolenie na pobyt czasowy i pracę, karta CUKR); śledź komunikaty UdSC |
 
 ## Kary i dokumenty
-Nielegalne powierzenie pracy: grzywna 3 000–50 000 zł; przy wielokrotności i wyzysku — przestępstwo.
-Pracodawca sprawdza i kopiuje dokument pobytowy (wiza, karta pobytu, paszport). Kopia w aktach przez cały okres zatrudnienia (art. 2 ust. 3 ustawy o skutkach powierzania pracy niezgodnie z przepisami). Monitorujesz terminy ważności.
+Nielegalne powierzenie pracy: grzywna 3 000–50 000 zł, nie mniej niż 3 000 zł za każdego cudzoziemca. Powierzenie pracy osobie przebywającej w Polsce nielegalnie może być przestępstwem (ustawa z 15.06.2012 o skutkach powierzania pracy cudzoziemcom przebywającym wbrew przepisom).
+Przed dopuszczeniem do pracy żądasz ważnego dokumentu pobytowego (wiza, karta pobytu, paszport z wpisem) i robisz kopię. Kopię przechowujesz przez cały okres wykonywania pracy i jeszcze 2 lata od końca roku, w którym umowa się rozwiązała lub wygasła (art. 4 ustawy z 20.03.2025). Monitorujesz terminy ważności.
 
 ## ZUS i PIT cudzoziemca
 | Element | Zasada |
@@ -1175,13 +1244,15 @@ Pracodawca sprawdza i kopiuje dokument pobytowy (wiza, karta pobytu, paszport). 
 
 ## Delegowanie z Polski i praca zdalna z zagranicy
 - A1 z ZUS (przez eZUS US-3/US-4) na okres do 24 miesięcy.
+- Przed wyjazdem na ponad 4 kolejne tygodnie — informacja z art. 29¹ §2 KP: państwo, przewidywany czas, waluta wynagrodzenia, świadczenia związane z wyjazdem, zasady powrotu. Pracownik delegowany w ramach świadczenia usług dostaje też informację o wynagrodzeniu według prawa państwa przyjmującego i adres jego urzędowej strony o delegowaniu (art. 29¹ §4).
+- Podróż służbowa (delegacja) a oddelegowanie: w podróży służbowej miejsce pracy z umowy się nie zmienia — należą się diety, wolne od PIT i ZUS do limitu z rozporządzenia. Przy oddelegowaniu (aneks zmienia miejsce pracy na zagraniczne) diet nie ma; z PIT zwolnione jest 30% diety za każdy dzień pobytu (art. 21 ust. 1 pkt 20 ustawy o PIT), a podstawę składek pomniejszasz o równowartość diet, ale nie poniżej przeciętnego wynagrodzenia (§2 ust. 1 pkt 16 rozporządzenia składkowego).
 - Zasady państwa przyjmującego (dyrektywa 96/71): płaca minimalna, czas pracy; po 12 miesiącach prawie wszystkie warunki. Diety i noclegi.
 - Praca zdalna z zagranicy — ryzyko składek i podatku w państwie wykonywania. Telepraca transgraniczna (porozumienie ramowe 2023): do 50% czasu w państwie zamieszkania bez zmiany ustawodawstwa — wniosek A1.
 
 ## B2B i art. 22 KP
 Art. 22 §1¹: zatrudnienie w warunkach stosunku pracy jest stosunkiem pracy bez względu na nazwę umowy. Warunki: praca określonego rodzaju na rzecz pracodawcy i pod jego KIEROWNICTWEM, w miejscu i czasie wyznaczonym, osobiście, za wynagrodzeniem, ryzyko gospodarcze po stronie firmy.
 Art. 22 §1²: zakaz zastępowania umowy o pracę umową cywilnoprawną.
-Kto przekwalifikowuje: sąd na powództwo pracownika lub PIP — a od 8.07.2026 także okręgowy inspektor pracy DECYZJĄ o ustaleniu istnienia stosunku pracy (ustawa z 11.03.2026 o zmianie ustawy o PIP, Dz.U. 2026 poz. 473): odwołanie w 30 dni do sądu pracy, rozpoznanie w 30 dni, dla osób szczególnie chronionych rygor natychmiastowej wykonalności. ABOLICJA do 8.07.2027: pracodawca, który sam zawrze umowę o pracę z osobą dotąd na umowie cywilnoprawnej, nie odpowiada za wykroczenie. (Specustawa z 12.03.2022 dla obywateli Ukrainy — wygaszona od 5.03.2026, patrz wyżej.)
+Kto przekwalifikowuje: sąd na powództwo pracownika lub PIP — a od 8.07.2026 także okręgowy inspektor pracy DECYZJĄ o ustaleniu istnienia stosunku pracy (ustawa z 11.03.2026 o zmianie ustawy o PIP, Dz.U. 2026 poz. 473): decyzję poprzedza polecenie zawarcia umowy o pracę; stosunek pracy jest ustalony od dnia decyzji; odwołanie w miesiąc do sądu pracy, rozpoznanie w 30 dni, dla osób szczególnie chronionych rygor natychmiastowej wykonalności. ABOLICJA do 8.07.2027: pracodawca, który sam zawrze umowę o pracę z osobą dotąd na umowie cywilnoprawnej, nie odpowiada za wykroczenie. (Specustawa z 12.03.2022 dla obywateli Ukrainy — wygaszona od 5.03.2026, patrz wyżej.)
 
 | Skutek przekwalifikowania | Szczegóły |
 |---|---|
@@ -1222,7 +1293,7 @@ Dla firm z KRS/CEIDG ZUS tworzy zgłoszenie płatnika automatycznie z danych rej
 ## Dokumenty ubezpieczonego
 | Dokument | Do czego |
 |---|---|
-| ZUA | zgłoszenie do ubezpieczeń społecznych i zdrowotnego: pracownik 01 10, zleceniobiorca 04 11, wychowawczy 12 11… |
+| ZUA | zgłoszenie do ubezpieczeń społecznych i zdrowotnego: pracownik 01 10, zleceniobiorca 04 11, działalność 05 10… |
 | ZZA | tylko zdrowotne: zleceniobiorca ze zbiegiem, osoba na uldze na start 05 40 |
 | ZIUA | zmiana danych identyfikacyjnych: PESEL, nazwisko, dokument |
 | ZUA/ZZA w trybie ZMIANY | adres, NFZ (od 2019 zmiana adresu przez ZUA zmiana) |
@@ -1231,7 +1302,13 @@ Dla firm z KRS/CEIDG ZUS tworzy zgłoszenie płatnika automatycznie z danych rej
 | ZCNA | zgłoszenie lub wyrejestrowanie członka rodziny do zdrowotnego: małżonek, dziecko do 18 lat (do 26 ucząc się), bez własnego tytułu; 7 dni od oświadczenia pracownika; kod stopnia pokrewieństwa, wspólne gospodarstwo |
 | ZSWA | praca w szczególnych warunkach — do 31.03 za poprzedni rok (FEP) |
 | IWA | do 31.01 (składka wypadkowa) |
-ZWUA pracownika od 2019 ma dodatkowo kod trybu rozwiązania lub wygaśnięcia stosunku pracy i kod podstawy prawnej: porozumienie stron art. 30 §1 pkt 1 KP; wypowiedzenie przez pracownika lub pracodawcę art. 30 §1 pkt 2; bez wypowiedzenia art. 52/53/55; upływ czasu art. 30 §1 pkt 4; wygaśnięcie art. 63. Wykaz kodów na zus.pl. ZUS porównuje te dane przy ustalaniu prawa do zasiłku dla bezrobotnych i stażu.
+ZWUA pracownika ma od 16.05.2021 blok V — dane o rozwiązaniu lub wygaśnięciu stosunku pracy. Wypełniasz go tylko przy kodzie przyczyny 100 albo 500 (przy 600 — nie; dla zleceniobiorców — nie):
+| Pole bloku V | Co wpisujesz | Przykłady |
+|---|---|---|
+| kod trybu | 2 cyfry i litera: R — rozwiązanie, W — wygaśnięcie | 22R porozumienie stron; 23R wypowiedzenie przez pracodawcę; 24R wypowiedzenie przez pracownika; 25R bez wypowiedzenia z winy pracownika (art. 52 §1 pkt 1); 28R upływ czasu, na który zawarto umowę; 36R bez wypowiedzenia przez pracownika (art. 55 §1¹); 44R / 45R wypowiedzenie w zwolnieniu grupowym / indywidualnym z przyczyn niedotyczących pracownika; 48W śmierć pracownika |
+| kod podstawy prawnej | 3 cyfry | 402 art. 30 §1 pkt 1; 403 art. 30 §1 pkt 2; 404 art. 52 §1 pkt 1; 407 art. 30 §1 pkt 4; 415 art. 55 §1¹; 421 / 422 ustawa o zwolnieniach grupowych (art. 1 / art. 10); 424 art. 63¹ |
+| strona inicjująca | 1 — pracownik, 2 — pracodawca | przy wygaśnięciu (kody W) pole zostaje puste; gdy nie da się wskazać strony (np. upływ czasu) — wpisujesz 2 |
+Pełny wykaz kodów jest w załączniku do rozporządzenia o wzorach dokumentów ZUS (od 2026 r.: rozporządzenie z 9.04.2026, Dz.U. 2026 poz. 518) i pod formularzem w Warsztacie. ZUS udostępnia te dane urzędom pracy — od trybu zależy m.in. termin nabycia prawa do zasiłku dla bezrobotnych, dlatego muszą zgadzać się ze świadectwem pracy.
 
 ## Terminy — wszystkie 7 dni
 | Dokument | Od kiedy liczysz |
@@ -1254,8 +1331,8 @@ Przykład: 01 10 2 2 = pracownik z rentą i umiarkowanym stopniem.
 | 05 70 | działalność — preferencyjne |
 | 05 40 | działalność — ulga na start |
 | 05 90 | mały ZUS plus |
-| 12 11 | urlop wychowawczy |
-| 12 40 | zasiłek macierzyński — osoba na macierzyńskim po ustaniu, zleceniobiorca |
+| 12 11 | osoba na urlopie wychowawczym — kod używany tylko w RCA: pracownika nie wyrejestrowujesz ani nie zgłaszasz ponownie |
+| 12 40 | osoba pobierająca zasiłek macierzyński — także tylko w RCA: podstawa równa kwocie zasiłku, składki emerytalną i rentowe finansuje budżet państwa |
 | 30 00 | osoba bez tytułu, dla której rozliczasz składki lub świadczenia po ustaniu (wypłata po zwolnieniu) |
 
 ## Dane w ZUA
@@ -1270,9 +1347,9 @@ WYJASNIENIA["zus_rozliczenia"] = """## Komplet miesięczny
 | Dokument | Co zawiera |
 |---|---|
 | DRA | deklaracja zbiorcza: liczba ubezpieczonych, sumy składek wg funduszy, kwoty zasiłków wypłaconych przez płatnika do rozliczenia z ZUS, kwota do zapłaty, stopa wypadkowa |
-| RCA | raport imienny: za każdego ubezpieczonego kod tytułu, wymiar etatu, podstawy i składki emerytalna, rentowa, chorobowa, wypadkowa, zdrowotna; od 2022 informacyjnie kwota wpłaty na PPK finansowanej przez płatnika |
+| RCA | raport imienny: za każdego ubezpieczonego kod tytułu, wymiar etatu, podstawy i składki emerytalna, rentowa, chorobowa, wypadkowa, zdrowotna; informacyjnie kwota wpłaty na PPK finansowanej przez płatnika |
 | RSA | raport o przerwach i świadczeniach: kody przerw, okresy, dni, kwoty zasiłków wypłaconych przez płatnika |
-| RPA | raport o przychodach dla celów emerytalnych — składasz TYLKO, gdy wystąpiło: przychód należny za INNY rok wypłacony w tym miesiącu (trzynastka, premia roczna, wyrównanie); składnik wypłacony OBOK wynagrodzenia chorobowego lub zasiłku, od którego nie było składek, a stanowi podstawę do emerytury (dodatek stażowy w pełnej wysokości w czasie choroby); praca nauczycielska; praca w szczególnych warunkach przed 2009 |
+| RPA | raport o przychodach dla celów emerytalnych — składasz TYLKO, gdy wystąpiło: przychód należny za INNY rok wypłacony w tym miesiącu (trzynastka, premia roczna, wyrównanie); składnik wypłacony OBOK wynagrodzenia chorobowego lub zasiłku, od którego nie było składek, a stanowi podstawę do emerytury (dodatek stażowy w pełnej wysokości w czasie choroby); okresy pracy nauczycielskiej. Pensja za grudzień wypłacana w styczniu w zwykłym terminie wypłat NIE wymaga RPA |
 Za pracowników i zleceniobiorców składasz jeden komplet. Identyfikator dokumentu: 01 MM RRRR — pierwotny; 02–39 — kolejne korekty. Przy przekroczeniu 30-krotności — informacja ZUS i korekty.
 
 ## Zasada kasowa
@@ -1281,8 +1358,9 @@ W raportach za dany miesiąc wykazujesz przychody WYPŁACONE lub postawione do d
 |---|---|
 | wynagrodzenie za listopad wypłacone 10 grudnia | DRA/RCA za grudzień (12/2026) |
 | wypłata do końca miesiąca | za ten miesiąc |
-| nieobecność listopadowa (pensja w grudniu) | RSA za listopad (11/2026) |
-Rozjazd okresów RCA i RSA jest normalny.
+| wynagrodzenie chorobowe lub zasiłek za listopad wypłacone 10 grudnia | RSA w komplecie za grudzień (12/2026) — z okresem listopadowym |
+| przerwa bez świadczenia w listopadzie (urlop bezpłatny, opiekuńczy, nieobecność bez wynagrodzenia) | RSA w komplecie za listopad (11/2026) |
+Zasada dla RSA: świadczenia wykazujesz za miesiąc ich wypłaty, przerwy bez świadczeń — za miesiąc, w którym wystąpiły. Rozjazd okresów RCA i RSA jest normalny.
 
 ## Terminy złożenia i zapłaty
 | Płatnik | Do |
@@ -1317,7 +1395,7 @@ Korekta po terminie — lekcja o korektach. Dokumenty rozliczeniowe (kopie DRA/R
 WYJASNIENIA["zus_korekty"] = """## Kiedy i jak korygujesz
 | Element | Zasada |
 |---|---|
-| termin | 7 dni od stwierdzenia błędu albo od zawiadomienia ZUS; po kontroli — 30 dni od protokołu lub decyzji |
+| termin | 7 dni od stwierdzenia błędu albo od zawiadomienia ZUS; po kontroli — 30 dni od otrzymania protokołu; po decyzji — 7 dni od jej uprawomocnienia |
 | forma | nowy komplet za miesiąc z identyfikatorem 02 MM RRRR (03, 04… kolejne) |
 | co składasz | DRA zawsze + tylko te RCA/RSA, które się zmieniają; RCA korygujący zastępuje pierwotny dla danej osoby; RSA — pełny zestaw przerw osoby |
 | dokumenty zgłoszeniowe | ZUA/ZZA w trybie korekty; ZWUA + ZUA przy złym kodzie lub dacie; ZIUA przy danych identyfikacyjnych |
@@ -1330,15 +1408,15 @@ Pracownik z kilkoma płatnikami pilnuje sam — oświadczenie o przekroczeniu u 
 Gdy naliczyłeś za dużo:
 - korekta RCA — podstawa do limitu,
 - nadpłata emerytalnej i rentowej: część pracodawcy do zaliczenia, część pracownika do zwrotu pracownikowi,
-- skutki uboczne: rośnie podstawa zdrowotnej (mniej odliczonych składek) i podatek — niedopłatę zdrowotnej i PIT potrącasz ze zwracanej kwoty,
-- zwrócone składki społeczne to przychód ze stosunku pracy w miesiącu zwrotu — doliczasz do listy, zaliczka,
-- różnicę zdrowotnej wykazujesz w RCA korekcie.
+- zdrowotna: podstawa zdrowotnej w miesiącu nadpłaty rośnie o nienależnie potrącone składki — dopłatę 9% wykazujesz w RCA KORYGUJĄCYM za ten miesiąc i potrącasz ze zwracanej kwoty,
+- PIT: zwrot w tym samym roku — przy najbliższej liście zmniejszasz odliczane składki o kwotę zwrotu (albo doliczasz ją do dochodu), zaliczka rośnie; zwrot w następnym roku — przychód ze stosunku pracy w miesiącu zwrotu,
+- pracownikowi wypłacasz zwrot pomniejszony o dopłatę zdrowotnej i zaliczkę; PIT-11 nie korygujesz wstecz.
 
 ## Typowe korekty
 | Błąd | Co robisz |
 |---|---|
 | zleceniobiorca-student zgłoszony z pełnymi składkami | ZWUA, korekty RCA, zwrot |
-| zbieg: pełne składki zamiast tylko zdrowotnej (lub odwrotnie — po zmianie etatu u innego pracodawcy) | NIEDOPŁATA 5 lat wstecz z odsetkami; część pracownika można potrącić za zgodą lub dochodzić |
+| zbieg tytułów rozliczony błędnie | pełne składki zamiast samej zdrowotnej → NADPŁATA (zwrot ubezpieczonemu, zaliczenie u płatnika); sama zdrowotna zamiast pełnych (np. etat u innego pracodawcy ustał albo spadł poniżej minimalnej) → NIEDOPŁATA do 5 lat wstecz z odsetkami; część ubezpieczonego potrącasz za jego zgodą albo dochodzisz |
 | nieuwzględnione świadczenie (benefit, ZFŚS bez kryterium) | dopłata |
 | wynagrodzenie chorobowe zamiast zasiłku (błędna pula 33 dni) | RSA i rozliczenie zasiłku z ZUS |
 | wypłata po ustaniu zatrudnienia bez kodu 30 00 | korekta kodu |
@@ -1352,7 +1430,7 @@ Gdy naliczyłeś za dużo:
 ## PIT po korekcie składek
 | Sytuacja | Skutek |
 |---|---|
-| zwrot składek społecznych pracownikowi | przychód w roku zwrotu — PIT-11 za ten rok, pozycja składki pomniejszona |
+| zwrot składek społecznych pracownikowi | ten sam rok: w PIT-11 niższe składki odliczone (dochód wyższy); następny rok: przychód ze stosunku pracy w roku zwrotu — PIT-11 za ten rok |
 | zwrot zdrowotnej | od 2022 nie wpływa na podatek (nieodliczalna) |
 | zwrot składek byłemu pracownikowi (brak wypłat) | PIT-11 z przychodem ze stosunku pracy; zaliczka potrącona ze zwrotu |
 Dokumentuj każdą korektę: uzasadnienie, obliczenia, pisma do pracownika. ZUS może pytać po latach."""
@@ -1368,6 +1446,8 @@ Składasz przez e-Deklaracje lub e-Urząd Skarbowy, z podpisem kwalifikowanym os
 | koniec lutego | IFT-1R | dla nierezydentów — i do US |
 | koniec lutego | ZUS IMIR | roczna informacja dla ubezpieczonego |
 Po ustaniu zatrudnienia w trakcie roku PIT-11 składasz w standardowym terminie. Na WNIOSEK podatnika — w 14 dni (art. 39 ust. 2 PIT).
+Termin, który wypada w sobotę lub dzień ustawowo wolny, przesuwa się na najbliższy dzień roboczy (art. 12 §5 Ordynacji podatkowej). Za 2026 r.: 31.01.2027 i 28.02.2027 to niedziele — PIT-4R, PIT-8AR i PIT-11 wysyłasz do urzędu najpóźniej w poniedziałek 1.02.2027, a PIT-11, IFT-1R i IMIR przekazujesz najpóźniej w poniedziałek 1.03.2027.
+Projekt UDER105 (stan na 17.11.2026: po konsultacjach publicznych, nie trafił do Sejmu): PIT-11, PIT-8C i IFT-1R podatnik dostawałby tylko na wniosek, a dane widziałby w e-Urzędzie Skarbowym; wersja z 28.04.2026 miała obowiązywać od 1.01.2027 i objąć już dochody z 2026 r. Dopóki ustawa nie jest ogłoszona — przekazujesz PIT-11 wszystkim; status sprawdź na legislacja.gov.pl przed wysyłką.
 Płatnik nie rozlicza już podatnika (PIT-40 zniesiony). Podatnik korzysta z Twój e-PIT, zasilonego Twoimi PIT-11. Błąd w PIT-11 = błąd w zeznaniu pracownika.
 
 ## Treść PIT-11
@@ -1375,13 +1455,14 @@ Sprawdź numer formularza na podatki.gov.pl — od 2024 obowiązuje wersja 29 lu
 | Sekcja | Co wpisujesz |
 |---|---|
 | dane | płatnik i podatnik: PESEL/NIP, adres (zagraniczny dla nierezydentów) |
-| przychody wg źródeł | stosunek pracy (osobno przychody z 50% KUP); zlecenia (działalność wykonywana osobiście); zasiłki z ubezpieczenia społecznego wypłacone przez zakład pracy (inne źródła) |
+| przychody wg źródeł (część E) | wiersz 1 — stosunek pracy: poz. 29 przychód, 30 koszty, 31 dochód, 33 zaliczka (przychody z 50% KUP osobno: poz. 34–35); wiersz 2 — to samo dla podatnika do 26 lat, gdy przychód nie korzysta z ulgi (poz. 36–40); wiersz 6 — zlecenia, czyli działalność wykonywana osobiście (poz. 58–61); wiersz 15 — inne źródła, w tym zasiłki z ubezpieczenia społecznego wypłacone przez zakład pracy (poz. 90–94) |
 | czego tu nie ma | należności z art. 30 ust. 1 pkt 5a (ryczałt) — w PIT-8AR |
-| KUP | faktycznie zastosowane: 250/300, 20%, 50% |
-| dochód i zaliczki | zaliczki pobrane |
-| składki społeczne | podlegające odliczeniu; składki od przychodów zwolnionych — osobno |
-| składka zdrowotna | od 2022 BRAK pola — nie wykazujesz |
-| przychody ZWOLNIONE | ulga dla młodych (stosunek pracy i zlecenia osobno, zasiłek macierzyński osobno), na powrót, 4+, dla seniorów — z zaznaczeniem, które zwolnienie i czy stosowane na wniosek |
+| KUP | faktycznie zastosowane: 250/300, 20%, 50%; rodzaj kosztów pracowniczych zaznaczasz w części D (poz. 28) |
+| dochód i zaliczki | zaliczki pobrane; gdy pracownik dostał i pensję, i zasiłek, łączną zaliczkę wykazujesz w wierszu 1 (poz. 33) — w wierszu 15 tylko wtedy, gdy pobrano ją wyłącznie od zasiłków |
+| składki społeczne | poz. 95 — podlegające odliczeniu; składki od przychodów zwolnionych — osobno |
+| składka zdrowotna | część G, poz. 122 — wykazujesz kwotę pobraną przez płatnika; od 2022 r. nie odlicza się jej od podatku, ale jest potrzebna m.in. do dodatkowego zwrotu ulgi na dzieci |
+| przychody ZWOLNIONE (część G) | ulga dla młodych: poz. 109 razem, w tym 110 stosunek pracy, 111 zlecenia, 113 zasiłek macierzyński; ulga na powrót, 4+, dla seniorów: poz. 114–117 i kwadraty 118–120 — zaznaczasz, które zwolnienie stosowałeś |
+| numeracja | pozycje podane dla PIT-11 w wersji 29 (obowiązującej dla wypłat od 2022 r.) — przed wysyłką sprawdź numer wersji na podatki.gov.pl |
 | zwolnienia przedmiotowe (ZFŚS do 1 000 zł, posiłki) | nie wykazujesz |
 | wpłaty pracodawcy na PPK | w przychodzie ze stosunku pracy |
 Zgodność: suma zaliczek z PIT-11 = PIT-4R = wpłaty na mikrorachunek. Suma przychodów = kartoteka płacowa.
@@ -1450,15 +1531,20 @@ Wpłata = 40,65% przeciętnego wynagrodzenia (GUS, poprzedni kwartał) × (6% ×
 Placówki edukacyjne — próg 2%.
 Obniżenie wpłaty: zakup usług lub produkcji od firm uprawnionych (informacja o kwocie obniżenia na fakturze; do 50% wpłaty); zatrudnianie osób ze schorzeniami szczególnymi (obniżony wskaźnik).
 
+## Jak liczysz stan zatrudnienia do PFRON
+Stan zatrudnienia to przeciętna miesięczna liczba pracowników w przeliczeniu na pełne etaty (suma etatów z każdego dnia miesiąca podzielona przez liczbę dni).
+Nie wliczasz m.in. osób na urlopach rodzicielskich i wychowawczych, pobierających świadczenie rehabilitacyjne, młodocianych w przygotowaniu zawodowym oraz osób na urlopach bezpłatnych, których udzielenie nakazuje ustawa (art. 21 ust. 5). Zleceniobiorców nie liczysz wcale.
+AGRO-MLEKO: 58,5 etatu i 2 osoby z orzeczeniem na pełnych etatach → wskaźnik 2 / 58,5 = 3,42%. Do 6% brakuje 58,5 × 6% − 2 = 1,51 etatu — od tylu etatów liczysz miesięczną wpłatę.
+
 ## PFRON — dofinansowanie do wynagrodzeń (SOD)
 Warunki: pracodawca z co najmniej 25 etatami musi mieć co najmniej 6% (mniejsi — bez warunku); efekt zachęty (wzrost zatrudnienia lub zwolnione miejsce); bez zaległości PFRON powyżej 100 zł; wynagrodzenie wypłacone na konto i koszty płacy w terminie (ZUS do 14 dni po terminie — dopuszczalne).
-| Stopień | Kwota miesięczna (od 2025) | Dodatkowo przy schorzeniach szczególnych |
+| Stopień | Kwota miesięczna na pełny etat (od 1.07.2024; art. 26a — sprawdzaj co roku) | Dodatkowo przy schorzeniach szczególnych |
 |---|---|---|
 | znaczny | 2 760 zł | +1 380 zł |
 | umiarkowany | 1 550 zł | +1 035 zł |
 | lekki | 575 zł | +690 zł |
 Schorzenia szczególne: epilepsja, choroba psychiczna, niepełnosprawność intelektualna, całościowe zaburzenia rozwojowe, niewidomi.
-Limit: nie więcej niż 75% kosztów płacy (otwarty rynek) albo 90%.
+Limit: nie więcej niż 75% kosztów płacy u pracodawcy prowadzącego działalność gospodarczą (u pozostałych 90%). Kwota jest proporcjonalna do wymiaru etatu.
 Wniosek Wn-D + INF-D-P do 25. dnia następnego miesiąca przez SODiR. Orzeczenie w aktach (B); w ZUS — kod niepełnosprawności.
 
 ## Uprawnienia pracownika z niepełnosprawnością
@@ -1466,7 +1552,7 @@ Wniosek Wn-D + INF-D-P do 25. dnia następnego miesiąca przez SODiR. Orzeczenie
 |---|---|---|
 | czas pracy | 7 h / 35 h bez obniżenia wynagrodzenia; na wniosek i za zgodą lekarza — normalny | 8 h / 40 h |
 | praca nocna i nadgodziny | zakaz; wyjątki: pilnowanie mienia, zgoda lekarza na wniosek pracownika | zakaz — te same wyjątki |
-| dodatkowa przerwa | 15 min | — |
+| dodatkowa przerwa | 15 min, wliczana do czasu pracy | 15 min — przysługuje przy każdym stopniu (art. 17) |
 | dodatkowy urlop | 10 dni (po roku od zaliczenia do stopnia) | — |
 | turnus rehabilitacyjny | do 21 dni raz w roku, z wynagrodzeniem jak ekwiwalent | — |
 | badania i zabiegi | zwolnienie 100% | — |
@@ -1482,7 +1568,7 @@ WYJASNIENIA["kalendarz_roczny"] = """## Co miesiąc (spółka z o.o., wypłata d
 | do 20. | zaliczka PIT na mikrorachunek; DEK-I-0 lub INF-1 PFRON |
 | do 25. | Wn-D (SOD) |
 | w 7 dni | ZUA, ZWUA, ZCNA, RUD, zmiany danych |
-| w 7 dni | powiadomienia PUP (Ukraina; od 5.03.2026) |
+| w 7 dni | powiadomienia PUP o pracy obywateli Ukrainy (od rozpoczęcia pracy) |
 | w 14 dni | protokoły powypadkowe |
 Bieżąco: zajęcia komornicze (odpowiedź 7 dni), wnioski o urlopy rodzicielskie (21 dni), badania okresowe (terminy z orzeczeń), kończące się umowy (ZWUA, świadectwo, ekwiwalent), limity 33/3, okresy próbne, wygasające dokumenty cudzoziemców, kary porządkowe (rok), dokumenty do akt.
 
@@ -1505,7 +1591,7 @@ Bieżąco: zajęcia komornicze (odpowiedź 7 dni), wnioski o urlopy rodzicielski
 | badania okresowe | wg orzeczenia: zwykle 2–4 lata, biurowe do 5; kontrolne po chorobie dłuższej niż 30 dni — przed dopuszczeniem!; końcowe przy narażeniu na czynniki rakotwórcze |
 | szkolenia BHP okresowe — stanowiska robotnicze | co 3 lata; co rok przy pracach szczególnie niebezpiecznych |
 | szkolenia BHP — kierownicy, inżynierowie, technolodzy | co 5 lat |
-| szkolenia BHP — administracyjno-biurowi | co 6 lat; zwolnieni przy ryzyku do 3. kategorii i braku wypadków — decyzja pracodawcy |
+| szkolenia BHP — administracyjno-biurowi | co 6 lat; niewymagane, gdy przeważająca działalność pracodawcy ma kategorię ryzyka nie wyższą niż trzecia (ustawa wypadkowa), chyba że ocena ryzyka wskazuje inaczej (art. 237³ §2²) |
 | pierwsze szkolenie okresowe | do 12 miesięcy; kierownicy — 6 |
 | ocena ryzyka zawodowego | przegląd przy zmianach |
 | regulamin pracy i wynagradzania | obowiązek od 50 pracowników (20–49 na wniosek związków); od 5.11.2026 zasady przeciwdziałania mobbingowi (do 5.05.2027) |
@@ -1523,7 +1609,7 @@ WYJASNIENIA["rozwiazanie_umowy"] = """## Tryby rozwiązania (art. 30 §1)
 | wypowiedzenie | każda ze stron | z okresem wypowiedzenia |
 | bez wypowiedzenia — art. 52 (z winy pracownika) | pracodawca | ciężkie naruszenie podstawowych obowiązków; przestępstwo oczywiste lub stwierdzone wyrokiem; zawiniona utrata uprawnień — w 1 MIESIĄC od uzyskania wiadomości przez osobę uprawnioną |
 | bez wypowiedzenia — art. 53 (bez winy) | pracodawca | niezdolność z powodu choroby dłuższa niż 3 miesiące (staż poniżej 6 miesięcy) albo dłuższa niż okres zasiłkowy + 3 miesiące świadczenia rehabilitacyjnego (staż co najmniej 6 miesięcy lub wypadek, choroba zawodowa); inna usprawiedliwiona nieobecność dłuższa niż 1 miesiąc; nie po stawieniu się do pracy po ustaniu przyczyny |
-| bez wypowiedzenia — art. 55 | pracownik | orzeczenie lekarskie bez przeniesienia (7 dni) albo ciężkie naruszenie przez pracodawcę — z odszkodowaniem za okres wypowiedzenia |
+| bez wypowiedzenia — art. 55 | pracownik | orzeczenie lekarskie o szkodliwym wpływie pracy na zdrowie, gdy pracodawca nie przeniesie do innej pracy w terminie wskazanym w orzeczeniu; albo ciężkie naruszenie podstawowych obowiązków przez pracodawcę (np. niewypłacanie pensji) — wtedy z odszkodowaniem za okres wypowiedzenia; pisemnie, z przyczyną, w 1 miesiąc od uzyskania wiadomości |
 | upływ czasu | — | umowa terminowa |
 | wygaśnięcie | — | śmierć pracownika lub pracodawcy-osoby fizycznej; tymczasowe aresztowanie dłuższe niż 3 miesiące |
 Ciężkie naruszenie (art. 52) = wina umyślna lub rażące niedbalstwo + zagrożenie interesów. Przykłady: nietrzeźwość, kradzież, nieusprawiedliwiona kilkudniowa nieobecność, praca zarobkowa na L4, naruszenie tajemnicy.
@@ -1562,7 +1648,7 @@ Liczenie: tygodniowy kończy się w sobotę; miesięczny — w ostatnim dniu mie
 | art. 39 | 4 lata przed emeryturą przy wystarczającym stażu |
 | art. 177 | ciąża, urlopy rodzicielskie — także od wniosku |
 | inni | ojcowie na urlopach, działacze związkowi (uchwała zarządu), SIP, radni, członkowie rad pracowników, żołnierze rezerwy |
-| wiek przedemerytalny przy zwolnieniach grupowych | tylko wypowiedzenie zmieniające z dodatkiem wyrównawczym |
+| art. 39 i 177 przy zwolnieniach z ustawy z 13.03.2003 — grupowych i indywidualnych | wypowiedzenia definitywnego nie ma; wolno tylko wypowiedzenie zmieniające, a gdy obniża wynagrodzenie — z dodatkiem wyrównawczym (art. 5 ust. 5–6, art. 10 ust. 1) |
 Od 2023: ochrona przed niekorzystnym traktowaniem za skorzystanie z uprawnień — ciężar dowodu na pracodawcy przy roszczeniach.
 
 ## Roszczenia pracownika (art. 45, 56)
@@ -1583,102 +1669,121 @@ W okresie do 30 dni rozwiązujesz umowy z:
 Wliczasz porozumienia stron z inicjatywy pracodawcy, jeśli dotyczą co najmniej 5 osób.
 
 ## Procedura zwolnienia grupowego
-1. Zawiadomienie związków (lub przedstawicieli) na piśmie: przyczyny, liczba zatrudnionych i zwalnianych, grupy, okres, kryteria doboru, kolejność, propozycje świadczeń.
-2. Kopia do PUP.
-3. Konsultacje → POROZUMIENIE w 20 dni. Brak porozumienia — REGULAMIN zwolnień po konsultacji.
-4. Zawiadomienie PUP o porozumieniu lub regulaminie.
-5. Wypowiedzenia nie wcześniej niż po zawiadomieniu PUP. Rozwiązanie nie wcześniej niż 30 dni od zawiadomienia.
-- Indywidualna konsultacja z art. 38 jest zbędna przy porozumieniu.
-- Chronieni szczególnie (art. 39, ciąża, działacze) — tylko wypowiedzenie zmieniające z DODATKIEM WYRÓWNAWCZYM do końca ochrony.
-- Art. 41 nie stoi na przeszkodzie przy likwidacji i upadłości. Przy zwolnieniach grupowych: urlop co najmniej 3 miesiące, choroba po upływie okresu z art. 53.
+1. Zawiadomienie związków na piśmie: przyczyny, liczba zatrudnionych i zwalnianych, grupy zawodowe, okres, kryteria doboru, kolejność, propozycje świadczeń (art. 2 ust. 3). Brak związków — te same informacje dostają przedstawiciele pracowników wyłonieni w trybie przyjętym u pracodawcy.
+2. Te same informacje (bez sposobu ustalania świadczeń pieniężnych) trafiają do PUP (art. 2 ust. 6).
+3. Konsultacje → POROZUMIENIE ze związkami w ciągu 20 dni od zawiadomienia (art. 3). Brak porozumienia — REGULAMIN zwolnień ustala pracodawca. Brak związków — porozumienia nie zawierasz w ogóle: wydajesz REGULAMIN po konsultacji z przedstawicielami (art. 3 ust. 5).
+4. Zawiadomienie PUP o przyjętych ustaleniach (art. 4).
+5. Wypowiedzenia — dopiero po zawiadomieniu z pkt 4. Rozwiązanie umów — nie wcześniej niż po upływie 30 dni od tego zawiadomienia (art. 6).
+- Do progu liczysz wypowiedzenia WRĘCZONE i porozumienia zawarte w ciągu 30 dni — nie daty rozwiązania umów.
+- Art. 38 KP (konsultacja każdego wypowiedzenia ze związkiem) — nie stosujesz, gdy zawarto porozumienie; przy regulaminie — stosujesz.
+- Chronieni z art. 5 ust. 5 (wiek przedemerytalny — art. 39 KP, ciąża i urlop macierzyński — art. 177 KP, członkowie zarządu związku, społeczny inspektor pracy, członkowie rady pracowników) — tylko wypowiedzenie ZMIENIAJĄCE; gdy obniża wynagrodzenie — DODATEK WYRÓWNAWCZY do końca ochrony (art. 5 ust. 6).
+- Art. 41 KP: wypowiedzenie jest dopuszczalne w czasie urlopu trwającego co najmniej 3 miesiące, a przy innej usprawiedliwionej nieobecności — po upływie okresu z art. 53 (art. 5 ust. 3).
+- Upadłość lub likwidacja PRACODAWCY (nie linii czy działu): art. 38, 39 i 41 KP nie obowiązują w ogóle (art. 41¹ KP).
 
 ## Zwolnienie indywidualne (art. 10)
-U pracodawcy z co najmniej 20 pracownikami, gdy przyczyny niedotyczące pracownika są WYŁĄCZNĄ przyczyną. Odprawa przysługuje, bez procedury grupowej. Chronieni — tylko za zgodą związku, z ograniczeniami.
-Ponowne zatrudnienie (art. 9): pracownik zgłosi zamiar w roku → pracodawca zatrudniający w tej samej grupie zawodowej w 15 miesięcy ma obowiązek go zatrudnić.
+U pracodawcy z co najmniej 20 pracownikami, gdy przyczyny niedotyczące pracownika są WYŁĄCZNYM powodem wypowiedzenia albo porozumienia, a liczba zwalnianych nie osiąga progu. Odprawa przysługuje. Procedury grupowej nie ma. Art. 38 KP stosujesz jak zwykle.
+| Kto | Co wolno przy zwolnieniu indywidualnym |
+|---|---|
+| chronieni z art. 5 ust. 5: wiek przedemerytalny (art. 39), ciąża i urlop macierzyński (art. 177), działacze związkowi, SIP | tak samo jak przy grupowym — tylko wypowiedzenie zmieniające, z dodatkiem wyrównawczym przy niższej pensji (art. 10 ust. 1 w zw. z art. 5 ust. 5–6; wyrok SN I PK 260/03) |
+| inni chronieni z przepisów odrębnych, których przy zwolnieniu grupowym wolno zwolnić (np. na urlopie wychowawczym — uchwała SN II PZP 13/05) | wypowiedzenie definitywne, jeśli związek nie zgłosi sprzeciwu w 14 dni (art. 10 ust. 2); po sprzeciwie — zmieniające, z dodatkiem wyrównawczym najwyżej przez 6 miesięcy (ust. 3–4) |
+| nieobecni chronieni art. 41 KP | jak przy grupowym: urlop co najmniej 3 miesiące albo upływ okresu z art. 53 (art. 5 ust. 3) |
+Ponowne zatrudnienie (art. 9) dotyczy tylko zwolnionych GRUPOWO: pracownik zgłasza zamiar w ciągu roku → pracodawca, który znów zatrudnia w tej samej grupie zawodowej, powinien go zatrudnić w ciągu 15 miesięcy od rozwiązania umowy.
 
 ## Odprawa (art. 8)
 | Staż u tego pracodawcy | Odprawa |
 |---|---|
 | poniżej 2 lat | 1-miesięczne wynagrodzenie |
-| 2–8 lat | 2-miesięczne |
+| od 2 do 8 lat (równo 2 lata to już ten próg) | 2-miesięczne |
 | ponad 8 lat | 3-miesięczne |
-Liczysz jak ekwiwalent za urlop. Limit: 15 × minimalne = 72 090 zł (2026), 74 250 zł (2027).
-Bez składek ZUS (§2 ust. 1 pkt 3 rozporządzenia składkowego), z PIT (bez zwolnienia).
-Staż = u tego pracodawcy, w tym z art. 23¹ i (od 2026) ze zlecenia u niego.
-Przy porozumieniu stron z przyczyn pracodawcy odprawa przysługuje (SN) — wpisz przyczynę w porozumieniu.
+- Podstawę liczysz jak ekwiwalent za urlop (stałe + średnia zmiennych z 3 miesięcy + 1/12 rocznych).
+- Staż liczysz na dzień ROZWIĄZANIA umowy, czyli z okresem wypowiedzenia: u tego pracodawcy, w tym z art. 23¹ i — od 1.05.2026 — ze zleceń wykonywanych wcześniej dla niego.
+- Limit: 15 × minimalne wynagrodzenie z dnia rozwiązania umowy — 72 090 zł w 2026, 74 250 zł w 2027 (15 × 4 950).
+- Bez składek ZUS i zdrowotnej (§2 ust. 1 pkt 3 rozporządzenia składkowego), z PIT (bez zwolnienia). W Warsztacie: Lista płac → pole „Odprawa / odszkod. (bez ZUS)”.
+- Termin: dzień rozwiązania umowy — wtedy roszczenie staje się wymagalne; inny dzień (np. z ostatnią pensją) tylko, gdy strony tak ustaliły w porozumieniu.
+- Porozumienie stron z przyczyn pracodawcy też daje odprawę — wpisz przyczynę w porozumieniu.
+- Upływ czasu umowy terminowej to nie rozwiązanie z przyczyn pracodawcy — odprawy nie ma.
+- Pracownik, który sam rozwiązał umowę bez wypowiedzenia z winy pracodawcy (art. 55 §1¹), dostaje odprawę, jeśli te przyczyny były wyłącznym powodem (uchwała SN III PZP 4/15).
 
 ## Inne odprawy i odszkodowania
 | Świadczenie | Zasady | ZUS | PIT |
 |---|---|---|---|
 | odprawa emerytalno-rentowa (art. 92¹ KP) | 1-miesięczna, raz w życiu; warunek: ustanie w związku z przejściem na emeryturę lub rentę (też po art. 53); układ może podwyższyć | nie | tak |
-| odprawa pośmiertna (art. 93) | dla rodziny (małżonek, dzieci uprawnione do renty rodzinnej): 1-miesięczna (poniżej 10 lat), 3-miesięczna (co najmniej 10), 6-miesięczna (co najmniej 15); dzielona równo; połowa, gdy jeden uprawniony; nie wypłacasz, jeśli pracodawca ubezpieczył pracownika na życie i świadczenie ≥ odprawa | nie | zwolniona |
+| odprawa pośmiertna (art. 93) | dla rodziny (małżonek oraz inni członkowie rodziny spełniający warunki do renty rodzinnej): 1-miesięczna (poniżej 10 lat), 3-miesięczna (co najmniej 10), 6-miesięczna (co najmniej 15); dzielona równo; połowa, gdy jeden uprawniony; nie wypłacasz, jeśli pracodawca ubezpieczył pracownika na życie i świadczenie ≥ odprawa | nie | zwolniona |
 | odszkodowanie za skrócony okres wypowiedzenia (art. 36¹) | — | nie | tak |
 | odszkodowania z art. 55 §1¹ i z art. 45/56 | zasądzone | nie | zwolnione przy wyroku lub ugodzie sądowej; ugoda pozasądowa — PIT |
 | odszkodowanie z zakazu konkurencji po ustaniu (art. 101²) | minimum 25% wynagrodzenia za okres zakazu | nie | tak |
-| odszkodowanie za niewydanie świadectwa | do 6 tygodni | — | — |
+| odszkodowanie za niewydanie lub wadliwe świadectwo (art. 99) | wynagrodzenie za czas pozostawania bez pracy z tego powodu, najwyżej 6 tygodni | nie (§2 ust. 1 pkt 3) | zwolnione przy wyroku lub ugodzie sądowej |
 | nagroda jubileuszowa | wg regulaminu | nie, gdy nie częściej niż co 5 lat | tak |
 
 ## Przejście zakładu lub jego części (art. 23¹)
 Dotyczy outsourcingu, sprzedaży, fuzji, przejęcia działu.
 - Nowy pracodawca staje się stroną z mocy prawa: umowy, staż, urlopy, warunki — co najmniej rok przy układzie.
 - Zawiadomienie pracowników na piśmie 30 dni przed: termin, przyczyny, skutki, zamierzone działania — gdy brak związków. Ze związkami — informacja i negocjacje.
-- Pracownik może w 2 MIESIĄCE od przejścia rozwiązać umowę za 7-dniowym uprzedzeniem. Skutki jak wypowiedzenie przez pracodawcę, ale bez odprawy (SN).
+- Pracownik może w 2 MIESIĄCE od przejścia rozwiązać umowę za 7-dniowym uprzedzeniem. Skutki jak wypowiedzenie przez pracodawcę; odprawa z ustawy z 13.03.2003 należy się jednak tylko wtedy, gdy powodem odejścia była poważna zmiana warunków pracy na niekorzyść (uchwała 7 sędziów SN III PZP 1/09).
 - Zakaz wypowiedzenia z powodu przejścia.
 - Umowy cywilnoprawne nie przechodzą automatycznie. Dokumentacja (akta) przechodzi.
-- ZUS: wyrejestrowanie u dotychczasowego płatnika (ZWUA z kodem przyczyny właściwym dla przejęcia — z listy w Płatniku) i zgłoszenie u nowego od dnia przejścia.
+- ZUS: wyrejestrowanie u dotychczasowego płatnika — ZWUA z kodem przyczyny 800 (przejście do innego pracodawcy w trybie art. 23¹), bez bloku V — i ZUA u nowego od dnia przejścia.
+- Urlop zaległy i bieżący przechodzi na nowego pracodawcę — ekwiwalentu nie wypłacasz.
 - PIT-11 za okres u każdego pracodawcy; przy następstwie prawnym — jeden.
 Outsourcing pozorny (ta sama praca, ten sam nadzór) — ZUS i PIP uznają za fikcję."""
 
 WYJASNIENIA["swiadectwo_rozliczenie"] = """## Świadectwo pracy — kiedy i jak (art. 97, rozporządzenie z 30.12.2016 ze zm.)
 Wydajesz w DNIU ustania stosunku pracy, bez wniosku. Gdy to niemożliwe — w 7 dni pocztą lub w inny sposób.
-Postać papierowa. Elektroniczna z podpisem kwalifikowanym — tylko za zgodą pracownika; w praktyce papier.
+Postać: papierowa z własnoręcznym podpisem albo elektroniczna z kwalifikowanym podpisem elektronicznym. Skan lub zwykły PDF wysłany e-mailem świadectwem nie jest. Przepisy nie wymagają zgody pracownika na postać elektroniczną, ale musi on móc ją odebrać — ustal to z nim; standardem pozostaje papier.
 Jeśli w 7 dni zawierasz kolejną umowę — świadectwo tylko na wniosek.
 
-## Treść (wzór pomocniczy MRPiPS)
-| Pozycja | Co wpisujesz |
+## Treść — układ pomocniczego wzoru (załącznik do rozporządzenia, ust. 1–8)
+| Ustęp wzoru | Co wpisujesz |
 |---|---|
-| zatrudnienie | okres, wymiar etatu, stanowiska lub rodzaj pracy |
-| tryb i podstawa rozwiązania | art. 30 §1 pkt …; art. 52; art. 53; upływ czasu; wygaśnięcie; przy zwolnieniach grupowych — „art. 1/art. 10 ustawy z 13.03.2003” (ważne dla zasiłku dla bezrobotnych) |
-| skrócenie okresu wypowiedzenia | art. 36¹ |
-| urlop wypoczynkowy wykorzystany w roku ustania | dni i godziny, w tym na żądanie; obejmuje urlop, za który wypłacono ekwiwalent |
-| urlopy i zwolnienia | bezpłatny (podstawa); ojcowski, rodzicielski, wychowawczy (wymiar, części, podstawa); opiekuńczy (173¹); siła wyższa (148¹); art. 188; praca zdalna okazjonalna; zwolnienie z obowiązku świadczenia pracy (36²) |
-| niezdolność do pracy w roku | dni z 33/14 (art. 92) |
-| okresy nieskładkowe | choroba — wszystkie w okresie zatrudnienia |
-| zajęcia komornicze | komornik, sygnatura, kwota |
-| na wniosek pracownika | wysokość i składniki wynagrodzenia, kwalifikacje, wyrok sądu |
-NIE wpisujesz: przyczyny rozwiązania, oceny, kar.
+| 1 | pracownik, pracodawca, okres (okresy) zatrudnienia, wymiar czasu pracy |
+| 2 | tylko agencja pracy tymczasowej: pracodawcy użytkownicy i okresy |
+| 3 | rodzaj pracy, stanowiska, funkcje |
+| 4 | tryb i podstawa prawna ustania: a) rozwiązanie — art. 30 §1 pkt 1–4 (z art. 52, 53, 55; przy zwolnieniach z ustawy z 13.03.2003 dopisz „w zw. z art. 1 / art. 10 ust. 1” — ważne dla zasiłku dla bezrobotnych) i strona, która wypowiedziała; b) wygaśnięcie — art. 63¹, 66 |
+| 5 | skrócenie okresu wypowiedzenia (art. 36¹ §1) — okres, za który przysługuje odszkodowanie |
+| 6 pkt 1 | zwolnienie z powodu siły wyższej (art. 148¹) wykorzystane w roku ustania — dni lub godziny |
+| 6 pkt 2 | urlop wypoczynkowy wykorzystany w roku ustania (dni i godziny), w tym na żądanie (art. 167²); wliczasz urlop, za który wypłacono ekwiwalent |
+| 6 pkt 3–7 | urlop opiekuńczy (art. 173¹) w roku ustania; urlop bezpłatny (okres, podstawa); ojcowski; rodzicielski; wychowawczy (wymiar, okresy, liczba części, podstawa) |
+| 6 pkt 8–10 | okres ochrony przy obniżonym wymiarze (art. 186⁸); zwolnienie z art. 188; praca zdalna okazjonalna (art. 67³³) — w roku ustania |
+| 6 pkt 11 | liczba dni niezdolności do pracy z wynagrodzeniem chorobowym (art. 92) w roku ustania — nowy pracodawca odejmie je od 33/14 |
+| 6 pkt 13–15 | służba wojskowa; praca w szczególnych warunkach lub o szczególnym charakterze (okresy, rodzaj); dodatkowy urlop lub inne uprawnienia |
+| 6 pkt 16 | okresy nieskładkowe z CAŁEGO okresu zatrudnienia: wynagrodzenie chorobowe, zasiłki, świadczenie rehabilitacyjne — okresy od–do |
+| 7 | zajęcie wynagrodzenia: komornik, numer sprawy, wysokość potrąconych kwot |
+| 8 | informacje uzupełniające; na żądanie pracownika: wysokość i składniki wynagrodzenia, kwalifikacje; informacja o orzeczeniu sądu |
+Pod spodem: pouczenie o sprostowaniu. NIE wpisujesz: przyczyny rozwiązania, oceny, kar porządkowych, zwolnienia z obowiązku świadczenia pracy (art. 36²).
+Numeracja pochodzi z tekstu jednolitego rozporządzenia (Dz.U. 2024 poz. 1016) — przed wydaniem porównaj z aktualnym załącznikiem.
 
 ## Sprostowanie i sankcje
 | Krok | Termin |
 |---|---|
 | wniosek pracownika o sprostowanie (papierowo lub elektronicznie) | 14 dni |
 | odpowiedź pracodawcy | 7 dni |
-| odmowa (albo brak odpowiedzi) → sąd pracy | 14 dni |
-| nowe świadectwo po wyroku | 7 dni |
-Kopia w aktach C.
+| odmowa → sąd pracy | 14 dni od zawiadomienia o odmowie; gdy pracodawca milczy — pozew bez tego terminu (art. 97 §2¹) |
+| nowe świadectwo po wyroku albo ugodzie | 7 dni |
+Kopia w aktach C. Stare świadectwo usuwasz z akt i niszczysz.
+Gdy pracodawca w ogóle nie wydał świadectwa, pracownik może żądać w sądzie zobowiązania do wydania, a gdy pracodawca nie istnieje — ustalenia uprawnienia do świadectwa (art. 97¹).
 Odszkodowanie za niewydanie lub wadliwe świadectwo — do 6 tygodni wynagrodzenia, gdy pracownik nie mógł podjąć pracy. Niewydanie to wykroczenie z art. 282 §1 pkt 3 (2 000–60 000 zł od 8.07.2026).
 Zmiana podstawy po wyroku (np. art. 52 → art. 30 §1 pkt 2) — nowe świadectwo.
 Śmierć pracownika — świadectwo do akt; rodzina może wnioskować.
-Świadectwo podpisuje osoba upoważniona. E-doręczenie oryginału z podpisem kwalifikowanym — dopuszczalne za zgodą; praktyka ostrożna: papier.
+Świadectwo podpisuje pracodawca albo osoba upoważniona (art. 3¹).
 
 ## Rozliczenie końcowe — checklista
 | Obszar | Co robisz |
 |---|---|
 | wynagrodzenie | za część miesiąca (stałe / wymiar × przepracowane); zmienne (nadgodziny, nocne, premie) |
-| ekwiwalent za urlop | współczynnik; wypłata w terminie wypłaty albo w 10 dni od ustania (od 27.01.2026) |
-| inne wypłaty | odszkodowanie za skrócony okres; odprawa (72 090); zakaz konkurencji (odszkodowanie w ratach); rozliczenie zaliczek i pożyczek (potrącenie za zgodą); nadpłaty; karta i pasek |
-| ZUS | ZWUA w 7 dni (data następna); ZCNA dla rodziny; RSA za nieobecności; RCA za wypłaty po ustaniu (kod 30 00) |
-| PIT | oświadczenia pomijane po ustaniu — zaliczki od późniejszych wypłat bez 300 zł i bez podwyższonych KUP; PIT-11 w terminie lub w 14 dni na wniosek |
+| ekwiwalent za urlop | współczynnik; od 27.01.2026 termin z Kodeksu: w dniu wypłaty wynagrodzenia (art. 171 §4), a gdy ten dzień przypada przed dniem ustania — w 10 dni od ustania (§5) |
+| inne wypłaty | odszkodowanie za skrócony okres; odprawa (limit 72 090 / 74 250 w 2027; w dniu rozwiązania umowy, chyba że porozumienie stanowi inaczej); zakaz konkurencji (odszkodowanie w ratach); rozliczenie zaliczek i pożyczek (potrącenie za zgodą); nadpłaty; karta i pasek |
+| ZUS | ZWUA w 7 dni od ustania (data wyrejestrowania = następny dzień; blok V: tryb, podstawa, strona); członkowie rodziny wyrejestrowują się automatycznie; RSA za nieobecności; RCA i RSA za wypłaty w miesiącach po ustaniu — kod 30 00 |
+| PIT | po ustaniu płatnik pomija oświadczenia i wnioski złożone w czasie zatrudnienia (art. 31a ust. 7): bez 300 zł i bez podwyższonych KUP; zostają tylko rezygnacje (z ulgi dla młodych, z KUP, z 50% KUP); były pracownik może złożyć PIT-2 na nowo — wtedy wracasz do 300 zł; PIT-11 w terminie lub w 14 dni na wniosek |
 | PPK | środki zostają na rachunku; informację o rachunkach nowemu pracodawcy przekazuje pracownik |
 | komornik | zawiadomienie o ustaniu i wpis w świadectwie |
-| dokumentacja | informacja o okresie przechowywania (10 lat od końca roku ustania) i możliwości odbioru do końca miesiąca po upływie okresu; kopia akt na wniosek |
+| dokumentacja | informacja o okresie przechowywania (zatrudnieni od 2019 r. — 10 lat od końca roku ustania; zatrudnieni 1999–2018 — 50 lat, chyba że złożono RIA; wcześniej — 50 lat), o możliwości odbioru do końca miesiąca po upływie okresu i o zniszczeniu nieodebranej; kopia akt na wniosek |
 | zaświadczenia | o zatrudnieniu i wynagrodzeniu (ZUS ERP-7 — na wniosek, bez terminu ustawowego, w praktyce 7–14 dni); potwierdzenie okresów pracy w szczególnych warunkach |
 | mienie i dostępy | zwrot sprzętu, odzieży, kluczy, kart — protokół; odwołanie uprawnień (eZUS, poczta, systemy, pełnomocnictwa) tego samego dnia |
 | RODO | zakończenie przetwarzania w systemach poza aktami |
 | exit interview | dobrowolny |
 
 ## Śmierć pracownika
-Wynagrodzenie i odprawa pośmiertna dla rodziny (art. 63¹). Prawa majątkowe przechodzą na małżonka i osoby uprawnione do renty rodzinnej w równych częściach — bez postępowania spadkowego.
+Wynagrodzenie i odprawa pośmiertna dla rodziny (art. 63¹). Prawa majątkowe przechodzą na małżonka i osoby uprawnione do renty rodzinnej w równych częściach — bez postępowania spadkowego; gdy takich osób nie ma, wchodzą do spadku.
 Świadczenia wypłacone po śmierci to dla członków rodziny przychody z praw majątkowych: PIT-11 na uprawnionych, zaliczka 12% bez KUP, bez składek ZUS."""
 
 WYJASNIENIA["mobbing_dyskryminacja_2026"] = """## Mobbing — nowa definicja (ustawa z 19.06.2026, Dz.U. 2026 poz. 1046, od 5.11.2026)
@@ -1732,8 +1837,8 @@ Równe wynagrodzenie (art. 18³ᶜ): za jednakową pracę LUB pracę jednakowej 
 Ciężar dowodu (art. 18³ᶠ, od 5.11.2026 wprost w KP): pracownik uprawdopodabnia (wskazuje cechę i gorsze traktowanie); pracodawca udowadnia, że zasady nie naruszył.
 | Roszczenie (art. 18³ᵈ–18³ᵉ) | Minimum |
 |---|---|
-| zadośćuczynienie za naruszenie równego traktowania | minimalne wynagrodzenie (4 806 zł) — albo odszkodowanie; bez górnej granicy |
-| przy WIELOKROTNYM naruszeniu (powtarzalne z tej samej przyczyny, z wielu przyczyn albo jednorazowe z wielu przyczyn naraz) | 3 × minimalne (14 418 zł) |
+| zadośćuczynienie za naruszenie równego traktowania | minimalne wynagrodzenie (4 806 zł w 2026, 4 950 zł w 2027) — albo odszkodowanie; bez górnej granicy |
+| przy WIELOKROTNYM naruszeniu (powtarzalne z tej samej przyczyny, z wielu przyczyn albo jednorazowe z wielu przyczyn naraz) | 3 × minimalne (14 418 zł w 2026, 14 850 zł w 2027) |
 | odwet za skorzystanie z uprawnień — także wobec osoby wspierającej | zadośćuczynienie ≥ minimalne albo odszkodowanie |
 Art. 18³ᵍ: pracodawca systematycznie przeciwdziała naruszeniom równego traktowania (zapobieganie, wykrywanie, reagowanie, naprawianie skutków).
 Nierówne traktowanie z innych przyczyn (art. 11² — „równe prawa za jednakowe obowiązki”) — roszczenia na zasadach ogólnych.
@@ -1759,10 +1864,10 @@ WYJASNIENIA["jawnosc_wynagrodzen"] = """## Co obowiązuje od 24.12.2025 (Dz.U. 2
 Sankcja: ustawa z 4.06.2025 nie dodała osobnego wykroczenia do art. 281 KP. Ryzyko to roszczenie kandydata z art. 18³ᵈ (zadośćuczynienie nie niższe niż minimalne wynagrodzenie albo odszkodowanie), wystąpienie PIP i wizerunek. Kary pieniężne 2 000–60 000 zł przewiduje dopiero projekt UC127.
 
 ## Co nadchodzi — dyrektywa (UE) 2023/970
-Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może wszcząć postępowanie o naruszenie). Projekt UC127 (zmiana KP i innych ustaw): pierwsza wersja XII 2025, druga 29.04.2026 po uzgodnieniach; Rada Ministrów planuje przyjęcie w IV kw. 2026; do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. W projekcie: sprawozdania o luce płacowej dla pracodawców od 100 pracowników, kary pieniężne 2 000–60 000 zł, organ monitorujący — PIP. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
+Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może wszcząć postępowanie o naruszenie). Projekt UC127 (zmiana KP i innych ustaw): pierwsza wersja XII 2025, druga 29.04.2026 po uzgodnieniach; Rada Ministrów planuje przyjęcie w IV kw. 2026; do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. W projekcie (wersja z 29.04.2026): sprawozdania o luce płacowej dla pracodawców od 100 pracowników składane przez narzędzie prowadzone przez Prezesa GUS, odpowiedź na wniosek pracownika o informację w 30 dni (dyrektywa pozwala na 2 miesiące), kary pieniężne 2 000–60 000 zł, nowe zadania kontrolne PIP. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
 | Element dyrektywy | Zasada |
 |---|---|
-| prawo do informacji | pracownik może żądać informacji o swoim indywidualnym wynagrodzeniu oraz o ŚREDNIM poziomie wynagrodzeń (w podziale na płeć) dla kategorii pracowników wykonujących tę samą pracę lub pracę tej samej wartości; odpowiedź w 2 miesiące; pracodawca co roku przypomina o tym prawie |
+| prawo do informacji | pracownik może żądać informacji o swoim indywidualnym wynagrodzeniu oraz o ŚREDNIM poziomie wynagrodzeń (w podziale na płeć) dla kategorii pracowników wykonujących tę samą pracę lub pracę tej samej wartości; odpowiedź najpóźniej w 2 miesiące (polski projekt: 30 dni); pracodawca co roku przypomina o tym prawie |
 | zakaz klauzul poufności | pracownik może ujawniać swoje wynagrodzenie w celu egzekwowania równości; klauzule w umowach stają się bezskuteczne |
 | przejrzyste kryteria | ustalania wynagrodzeń, poziomów i progresji — obiektywne, neutralne płciowo, łatwo dostępne; pracodawcy z co najmniej 50 pracownikami udostępniają obowiązkowo |
 | wspólna ocena wynagrodzeń | z przedstawicielami pracowników, gdy luka w jakiejkolwiek kategorii ≥ 5%, nieuzasadniona obiektywnie i nieusunięta w 6 miesięcy |
@@ -1776,7 +1881,7 @@ Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może 
 | 150–249 | co 3 lata, od 2027 |
 | 100–149 | co 3 lata, od 2031 |
 Zakres raportu: luka w wynagrodzeniu średnim i medianie; luka w składnikach zmiennych; odsetek kobiet i mężczyzn otrzymujących składniki zmienne; luka w kwartylach; luka wg kategorii pracowników (podstawowe + zmienne).
-Raport trafia do organu monitorującego (w projekcie: PIP) i do wiadomości pracowników.
+Raport trafia do organu monitorującego (wyznaczy go ustawa) i do wiadomości pracowników oraz ich przedstawicieli.
 
 ## Co robić teraz — przygotowanie 12–18 miesięcy
 | Krok | Co robisz |
@@ -1791,7 +1896,7 @@ Z perspektywy kadr: każdy awans i podwyżka z uzasadnieniem w aktach (B); zmian
 
 WYJASNIENIA["sygnalisci_zdalna_rodo"] = """## Sygnaliści (ustawa z 14.06.2024, Dz.U. 2024 poz. 928)
 Obowiązuje od 25.09.2024; zgłoszenia zewnętrzne od 25.12.2024.
-Procedurę zgłoszeń wewnętrznych MUSI mieć podmiot, na rzecz którego pracę zarobkową wykonuje co najmniej 50 osób — stan na 1 stycznia lub 1 lipca. Liczysz osoby, nie etaty: pracowników, zleceniobiorców, B2B, praktykantów, stażystów.
+Procedurę zgłoszeń wewnętrznych MUSI mieć podmiot, na rzecz którego pracę zarobkową wykonuje co najmniej 50 osób — stan na 1 stycznia lub 1 lipca. Do progu liczysz pracowników W PRZELICZENIU NA PEŁNE ETATY oraz osoby pracujące za wynagrodzeniem na innej podstawie (zlecenie, B2B), jeśli same nie zatrudniają do tej pracy innych osób (art. 23 ust. 2). AGRO-MLEKO: 58,5 etatu pracowników + zleceniobiorcy → próg 50 przekroczony.
 | Element procedury | Zasada |
 |---|---|
 | wdrożenie | konsultacje ze związkami lub przedstawicielami 5–10 dni; wejście w życie 7 dni po podaniu do wiadomości |
@@ -1812,12 +1917,12 @@ Trzy rodzaje: całkowita, hybrydowa, okazjonalna.
 | Element | Zasada |
 |---|---|
 | uzgodnienie | przy zawarciu umowy albo w trakcie — wniosek papierowy lub elektroniczny |
-| wniosek WIĄŻĄCY | ciężarna; rodzic dziecka do 4 lat; rodzic dziecka z niepełnosprawnością; opiekun osoby z niepełnosprawnością — odmowa tylko, gdy niemożliwe ze względu na organizację lub rodzaj pracy; odpowiedź 7 dni |
+| wniosek WIĄŻĄCY | ciężarna; rodzic dziecka do 4 lat; rodzic dziecka z niepełnosprawnością; opiekun osoby z niepełnosprawnością — odmowa tylko, gdy niemożliwe ze względu na organizację lub rodzaj pracy — z przyczyną, na papierze lub elektronicznie, w 7 dni roboczych od wniosku |
 | polecenie pracodawcy | tylko w stanie nadzwyczajnym lub epidemii albo gdy zapewnienie BHP w zakładzie jest czasowo niemożliwe; oświadczenie pracownika o warunkach |
 | zasady | porozumienie ze związkami, regulamin (po konsultacji), porozumienie indywidualne lub polecenie: grupy, kontrola, koszty, BHP, komunikacja |
 | obowiązki pracodawcy | materiały, narzędzia (lub ekwiwalent za własne), instalacja, serwis, szkolenia; POKRYCIE KOSZTÓW energii i usług telekomunikacyjnych — ryczałt lub ekwiwalent odpowiadający przewidywanym kosztom, bez PIT i ZUS; ocena ryzyka i informacja BHP; oświadczenie pracownika o bezpiecznych warunkach lokalowych i technicznych; zakaz prac niebezpiecznych |
 | kontrola | praca, BHP, bezpieczeństwo informacji — w uzgodnieniu z pracownikiem, w godzinach pracy, bez naruszania prywatności |
-| cofnięcie | na wniosek każdej strony w 30 dni; nie dla grup z wnioskiem wiążącym bez przyczyny |
+| zaprzestanie pracy zdalnej uzgodnionej w trakcie zatrudnienia (art. 67²²) | wiążący wniosek każdej ze stron; termin powrotu ustalają strony — najpóźniej 30 dni od wniosku; wobec osób z wnioskiem wiążącym pracodawca może to zrobić tylko, gdy dalsza praca zdalna nie jest możliwa ze względu na organizację lub rodzaj pracy |
 | wypadek przy pracy zdalnej | oględziny miejsca za zgodą |
 | OKAZJONALNA | do 24 dni w roku na wniosek; bez obowiązku kosztów i ekwiwalentu (można); bez regulaminu; ewidencja dni, oświadczenie BHP; nieproporcjonalna do etatu |
 | praca zdalna z zagranicy | ryzyko podatkowe i ZUS (A1, 183 dni) — uzgodnij miejsce |
@@ -1858,10 +1963,10 @@ Przedmiot kontroli: legalność zatrudnienia (umowy, cudzoziemcy, zgłoszenia ZU
 | NAKAZ PŁACOWY | wypłata należnego wynagrodzenia lub świadczenia — natychmiast wykonalny |
 | WYSTĄPIENIE | usunięcie naruszeń prawa — odpowiedź w 30 dni z informacją o realizacji |
 | POLECENIE | ustne |
-| MANDAT | do 10 000 zł (od 8.07.2026; wcześniej 1 000–2 000, do 5 000 przy recydywie) |
+| MANDAT | 2 000–5 000 zł, a przy recydywie (co najmniej dwa ukarania w ciągu 2 lat) do 10 000 zł (od 8.07.2026; wcześniej 1 000–2 000, przy recydywie do 5 000) |
 | WNIOSEK DO SĄDU o ukaranie | grzywna 2 000–60 000 zł; recydywa i dłużnicy alimentacyjni 3 000–90 000 (art. 281–283 KP od 8.07.2026; wcześniej 1 000–30 000); za cudzoziemców 3 000–50 000 |
 | ZAWIADOMIENIE PROKURATURY | art. 218 KK — złośliwe lub uporczywe naruszanie praw pracownika; art. 219 — niezgłoszenie do ZUS; art. 220 — narażenie życia |
-| DECYZJA o ustaleniu istnienia stosunku pracy | OBOWIĄZUJE od 8.07.2026 (ustawa z 11.03.2026, Dz.U. 2026 poz. 473): okręgowy inspektor pracy stwierdza decyzją, że umowa cywilnoprawna lub B2B jest stosunkiem pracy; stronami są pracodawca i osoba zatrudniona; odwołanie w 30 dni do sądu pracy (rozpoznanie w 30 dni, możliwe zabezpieczenie); dla osób szczególnie chronionych — rygor natychmiastowej wykonalności; alternatywnie powództwo o ustalenie |
+| DECYZJA o ustaleniu istnienia stosunku pracy | OBOWIĄZUJE od 8.07.2026 (ustawa z 11.03.2026, Dz.U. 2026 poz. 473): okręgowy inspektor pracy stwierdza decyzją, że umowa cywilnoprawna lub B2B jest stosunkiem pracy; najpierw inspektor wysłuchuje stron i wydaje polecenie zawarcia umowy o pracę — decyzja zapada dopiero, gdy strony go nie wykonają; ustala stosunek pracy od dnia jej wydania (za okres wcześniejszy potrzebne jest powództwo, ale ZUS i urząd skarbowy mogą sięgnąć 5 lat wstecz); stronami są pracodawca i osoba zatrudniona; odwołanie w miesiąc od doręczenia do sądu pracy, który ma je rozpoznać w 30 dni i może udzielić zabezpieczenia; decyzja jest wykonalna po uprawomocnieniu, a dla osób szczególnie chronionych może dostać rygor natychmiastowej wykonalności; alternatywnie powództwo o ustalenie; niekorzystne traktowanie pracownika po takiej decyzji to nowe wykroczenie (art. 281 §1 pkt 1b) |
 | ABOLICJA | do 8.07.2027: pracodawca, który sam zawrze umowę o pracę z osobą dotąd na umowie cywilnoprawnej, nie odpowiada za wykroczenie z art. 281 §1 pkt 1 |
 | KONTROLA ZDALNA, dane ZUS | dokumenty przez e-PIP / e-doręczenia; PIP ma dostęp do danych ZUS o ubezpieczonych |
 | INTERPRETACJA INDYWIDUALNA GIP | wniosek (40 zł), odpowiedź w 30 dni, wiążąca dla PIP, publikowana w BIP |
@@ -1874,9 +1979,10 @@ Najczęstsze ustalenia (sprawozdania GIP): nieterminowe lub zaniżone wynagrodze
 |---|---|
 | zawiadomienie o zamiarze kontroli | kontrola nie wcześniej niż 7 i nie później niż 30 dni od doręczenia (Prawo przedsiębiorców); upoważnienie |
 | zakres | zgłaszanie, obliczanie i opłacanie składek; uprawnienia do świadczeń i ich wypłata; dokumentacja; zgłoszenia wypadków |
-| limit czasu kontroli w roku | mikro 12 dni roboczych; mały 18; średni 24; duży 48 |
+| limit czasu kontroli w roku | mikro 6 dni roboczych (do 2025: 12); mały 18; średni 24 (AGRO-MLEKO); duży 48 |
+| częstotliwość kontroli planowych (od 1.01.2026) | wg kategorii ryzyka: niskie — nie częściej niż raz na 5 lat, średnie — raz na 3 lata, wysokie — wg potrzeb |
 | protokół | zastrzeżenia w 14 dni |
-| decyzja | odwołanie do sądu okręgowego (pracy i ubezpieczeń) w miesiąc; korekty w 30 dni |
+| decyzja | odwołanie do sądu okręgowego (pracy i ubezpieczeń) w miesiąc, za pośrednictwem ZUS; korekty dokumentów: 30 dni od otrzymania protokołu albo 7 dni od uprawomocnienia się decyzji |
 | sankcje | grzywna do 5 000 zł (art. 98 — niezgłoszenie, nieprowadzenie dokumentacji, nieopłacanie); opłata dodatkowa do 100% składek; odsetki; przedawnienie 5 lat |
 | po kontroli | wniosek o interpretację (art. 83d) na przyszłość |
 Typowe ustalenia: składki od benefitów i ZFŚS bez kryterium; umowy o dzieło = zlecenia; zbiegi tytułów; podstawa zasiłków (uzupełnianie, składniki); wypłaty po ustaniu; zaniżone kody; zdrowotna przedsiębiorców.

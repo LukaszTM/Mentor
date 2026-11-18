@@ -2,10 +2,10 @@
 Tydzień 11 · lekcja `pit_roczny` · plik: `cwiczenia/tydzien_11/pit_roczny_1.md`
 
 ## Zadanie
-Anna Kowalczyk pracuje od 1.10.2026 (6 000, PPK): pensja za październik wypłacona 10.11, za listopad 10.12, za grudzień 10.01.2027. Sporządź jak w demonstracji PIT-11 za 2026: przychód (z PPK pracodawcy), KUP, składki społeczne, zaliczki, zdrowotna; wskaż, co trafi do PIT-11 za 2027. Porównaj z Warsztatem. Plik: cwiczenia/tydzien_11/pit_roczny_1.md. Czas: 20 minut.
+Anna Kowalczyk pracuje od 1.10.2026 (6 000; umowa o prowadzenie PPK zawarta dopiero w styczniu 2027): pensja za październik wypłacona 10.11, za listopad 10.12, za grudzień 8.01.2027 (10.01 to niedziela). Sporządź jak w demonstracji PIT-11 za 2026: przychód, KUP, składki społeczne, zaliczki; wskaż, co trafi do PIT-11 za 2027 i co zmieni w nim PPK. Porównaj z Warsztatem. Plik: cwiczenia/tydzien_11/pit_roczny_1.md. Czas: 20 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-w 2026 r. wypłacono 2 pensje (10.11 i 10.12): przychód 2 × 6 090 = 12 180 (6 000 + 90 PPK pracodawcy); KUP 2 × 250 = 500; składki społeczne 2 × 822,60 = 1 645,20; dochód 12 180 − 500 − 1 645,20 = 10 034,80; zaliczki 2 × 302 = 604; zdrowotna 2 × 465,97 = 931,94 (informacyjnie); pensja grudniowa (wypłata 10.01.2027) → PIT-11 za 2027.
+w 2026 r. wypłacono 2 pensje (10.11 i 10.12): przychód 2 × 6 000 = 12 000 (bez PPK — pierwsze wpłaty w 2027); KUP 2 × 250 = 500; dochód w PIT-11 (poz. 31) = przychód − koszty = 11 500; składki społeczne 2 × 822,60 = 1 645,20 wykazujesz osobno (poz. 95) — do progu 120 000 zł w liście płac liczy się dochód po składkach: 9 854,80; zaliczki 2 × 291 = 582; zdrowotna 2 × 465,97 = 931,94 (część G, poz. 122 — informacyjnie); pensja grudniowa (wypłata 8.01.2027) → PIT-11 za 2027, w którym przychód powiększą wpłaty pracodawcy na PPK (90 zł miesięcznie).
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).

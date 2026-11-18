@@ -6,19 +6,19 @@ Tydzień 12 · lekcja 40 z 48 · ≈ 60 min
 **Po co mi to?** w etapie 3 liczby z listy płac stają się dokumentami do urzędów — tu błąd kosztuje odsetki i korekty, a terminy nie negocjują.
 
 ## Czego potrzebujesz
-- Zaliczone testy lekcji tygodni 8–9.
+- Zaliczone testy lekcji tygodni 10–12.
 - Komplet 01 12 2026 i korekta 02 w symulatorze (Rejestr).
 - Warsztat → eZUS/Płatnik, e-Urząd: PIT.
 
 ## 1 · Wyjaśnienie od podstaw
 ### Miesiąc
-- Zgłoszenia: ZUA (wszystkie), ZZA (zdrowotne), ZWUA (dzień po, kod 100, tryb dla pracownika), ZCNA, ZIUA — 7 dni; kod 6-znakowy; student — brak; dzieło — RUD.
+- Zgłoszenia: ZUA (wszystkie), ZZA (zdrowotne), ZWUA (dzień po, kod przyczyny 100; dla pracownika blok V: tryb, podstawa prawna, strona), ZCNA, ZIUA — 7 dni; kod 6-znakowy; student — brak; dzieło — RUD.
 - Komplet za miesiąc WYPŁATY: DRA + RCA (każdy z podstawą; 30 00 po ustaniu; 12 11 wychowawczy) + RSA (świadczenia za miesiąc wypłaty z faktycznym okresem; przerwy za miesiąc wystąpienia) + RPA (przychód za inny rok); do 15./20.; NRS; do zapłaty = składki − zasiłki (nie chorobowe); odsetki > 48,06 zł.
-- Korekty: identyfikator 02+, DRA zawsze, tylko zmienione RCA/RSA; nadpłata pracownika → zwrot (przychód: zdrowotna + PIT), pracodawcy → zaliczenie/RZS-P; niedopłata → dopłata z odsetkami (część ubezpieczonego za zgodą); 5 lat.
+- Korekty: identyfikator 02+, DRA zawsze, tylko zmienione RCA/RSA; nadpłata pracownika → zwrot (zdrowotna w korekcie RCA, zaliczka PIT przy zwrocie), pracodawcy → zaliczenie/RZS-P; niedopłata → dopłata z odsetkami (część ubezpieczonego za zgodą); 5 lat.
 ### Rok
 - PIT-4R, PIT-8AR, PIT-11 do 31.01 (US), PIT-11 pracownikom do końca lutego (14 dni na wniosek po ustaniu); zasada kasowa; po ustaniu bez kwoty zmniejszającej; ryczałt do 200 zł → PIT-8AR; nierezydent → IFT-1R.
-- ZFŚS: ≥ 50 etatów; odpis 2 943,23/etat (+ 490,54 na osobę z orzeczeniem); 75% do 31.05, reszta 30.09, korekta 31.12; kryterium socjalne; PIT do 1 000.
-- PFRON: ≥ 25 etatów, wskaźnik 6%; wpłata = brakujące etaty × 40,65% × przeciętne; DEK-I-0 do 20.; SOD (2 760 / 1 550 / 575) Wn-D do 25. z efektem zachęty.
+- ZFŚS: ≥ 50 etatów; odpis 2 943,23/etat (+ 490,54 na osobę ze stopniem umiarkowanym lub znacznym); 75% do 31.05, reszta 30.09, korekta 31.12; kryterium socjalne; PIT do 1 000.
+- PFRON: ≥ 25 etatów, wskaźnik 6%; wpłata = brakujące etaty × 40,65% × przeciętne; DEK-I-0 do 20.; SOD (2 760 / 1 550 / 575; przy ≥ 25 etatach tylko ze wskaźnikiem ≥ 6%) Wn-D do 25. z efektem zachęty.
 - Kalendarz: miesięczny 5/8/10/15/20/25, roczny (31.01 PIT i IWA, 31.05/30.09 ZFŚS, 30.09 urlopy, 30.11 płatnik zasiłków, 31.12 korekta), cykliczny (badania, BHP, umowy, cudzoziemcy, kary 1 rok, PPK 4 lata), zdarzeniowy (7 dni ZUS, 14 dni protokół, 21 dni odwołanie); przesunięcia: ZUS/PIT → następny roboczy; wypłata → poprzedni.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
@@ -50,13 +50,13 @@ styczeń: nowe wskaźniki (4 950; 30-krotność; odpis), aneksy < 4 950, plan ZF
 Zamknij luty 2027 jak w demonstracji: wypłata za styczeń 10.02 (środa), Kowalczyk odchodzi 28.02 (porozumienie), nowy zleceniobiorca od 15.02 (jedyny tytuł), Sobczak zasiłek opiekuńczy 3–5.02 wypłacony 10.03. Wypisz: dokumenty zgłoszeniowe z datami i terminami, komplet (który miesiąc, co w RSA), terminy PIT, ZFŚS i PFRON w lutym–marcu, przesunięcia. Plik: cwiczenia/tydzien_12/powtorka_etap_3_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_12/powtorka_etap_3_1.md` · rozwiązanie: `rozwiazania/tydzien_12/powtorka_etap_3_1.md`
-✔ Poprawny wynik wygląda tak: ZUA 04 11 nowy zleceniobiorca: data 15.02, termin 22.02; ZWUA Kowalczyk: data 1.03, termin 8.03, kod 100, tryb 1; komplet 01 02 2027 (wypłata 10.02) do 15.03: RCA ze stycznia wypłaconego w lutym; RSA: przerwy lutowe (opieka 3–5.02 — zasiłek wypłacony 10.03 → RSA 312 w komplecie 03 2027, nie 02!), RPA — nie; PIT za wypłaty lutowe do 20.03 (sobota → 22.03); DEK-I-0 do 20.03 → 22.03; ZFŚS: plan odpisu (nie przelew); PFRON Wn-D 25.03; 28.02 — ostatni dzień na PIT-11 pracownikom za 2026 (niedziela → 1.03); Kowalczyk: świadectwo 28.02, ekwiwalent 10.03 (termin wypłaty po ustaniu), PIT-11 za 2027 na wniosek w 14 dni.
+✔ Poprawny wynik wygląda tak: ZUA 04 11 nowy zleceniobiorca: data 15.02, termin 22.02; ZWUA Kowalczyk: data 1.03, termin 8.03, kod przyczyny 100, tryb 22R + podstawa 402 + strona; komplet 01 02 2027 (wypłata 10.02) do 15.03: RCA ze stycznia wypłaconego w lutym; RSA: przerwy lutowe (opieka 3–5.02 — zasiłek wypłacony 10.03 → RSA 312 w komplecie 03 2027, nie 02!), RPA — nie; PIT za wypłaty lutowe do 20.03 (sobota → 22.03); DEK-I-0 do 20.03 → 22.03; ZFŚS: plan odpisu (nie przelew); PFRON Wn-D 25.03; 28.02 — ostatni dzień na PIT-11 pracownikom za 2026 (niedziela → 1.03); Kowalczyk: świadectwo 28.02, ekwiwalent 10.03 (termin wypłaty po ustaniu), PIT-11 za 2027 na wniosek w 14 dni.
 
 ## 5 · Ćwiczenie samodzielne
 Audyt roczny wykazał: (1) Joanna Michalska miała 3 „dzieła” → ZUS uznał za zlecenia (decyzja prawomocna 10.01.2027); (2) w 2026 r. płacono SOD na osobę, która od września pracowała na 1/2 etatu (dofinansowanie proporcjonalne!); (3) odpis ZFŚS przelano na 60 etatów, a faktyczna średnia to 57,2. Zdecyduj dla każdego: jakie dokumenty i korekty, w jakich terminach, jakie kwoty (SOD umiarkowany 1 550; odpis 2 943,23) i gdzie w PIT. Plik: cwiczenia/tydzien_12/powtorka_etap_3_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_12/powtorka_etap_3_2.md` · rozwiązanie: `rozwiazania/tydzien_12/powtorka_etap_3_2.md`
-✔ Poprawny wynik wygląda tak: (1) ZUA 04 11 od dat umów, ZWUA po; komplety 02 za miesiące wypłat; składki 2 753 + odsetki; korekta PIT-11 2025/2026 (KUP 20%); termin korekt 7 dni od prawomocności (17.01); (2) SOD za IX–XII: 1 550 × 1/2 = 775/mies. → nadpłata 4 × 775 = 3 100 do zwrotu do PFRON z odsetkami (korekta Wn-D/INF-D-P); (3) korekta odpisu do 31.12: (60 − 57,2) × 2 943,23 = 8 241,04 — nadwyżka zostaje na rachunku funduszu jako środki roku następnego i pomniejsza przelew 2027; bez PIT.
+✔ Poprawny wynik wygląda tak: (1) ZUA 04 11 od dat umów, ZWUA po; komplety 02 za miesiące wypłat; składki 2 760,50 + odsetki; korekta PIT-11 2025/2026 (KUP 20%); termin korekt 7 dni od prawomocności (17.01); (2) SOD za IX–XII: 1 550 × 1/2 = 775/mies. → nadpłata 4 × 775 = 3 100 do zwrotu do PFRON z odsetkami (korekta Wn-D/INF-D-P); (3) korekta odpisu do 31.12: (60 − 57,2) × 2 943,23 = 8 241,04 — nadwyżkę ponad należny odpis wycofujesz albo zaliczasz na odpis 2027; bez PIT.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Komplet „za grudzień” wysłany z wypłatą styczniową.**
@@ -83,11 +83,11 @@ Audyt roczny wykazał: (1) Joanna Michalska miała 3 „dzieła” → ZUS uzna�
 
 ## Sprawdzenie — odpowiedz na głos, potem rozwiń
 - **Co odejmujesz w DRA od składek do zapłaty?**
-  - Tylko zasiłki wypłacone przez płatnika (313, 312, 314, 327…), nie wynagrodzenie chorobowe (331).
+  - Tylko zasiłki wypłacone przez płatnika (313, 312, 314, 311…), nie wynagrodzenie chorobowe (331).
 - **Kiedy termin ZUS się przesuwa, a kiedy termin wypłaty?**
   - ZUS/PIT — na następny dzień roboczy; wypłata — na poprzedni.
 - **Od kiedy liczysz 75% odpisu ZFŚS i do kiedy przelewasz?**
-  - Odpis planowany na etaty z 1.01; 75% do 31.05, reszta do 30.09; korekta do 31.12.
+  - Odpis liczysz od przeciętnej planowanej liczby zatrudnionych w roku (w etatach); 75% do 31.05, reszta do 30.09; korekta do 31.12 według faktycznej średniej.
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Zamknąć miesiąc i rok w ZUS/US/PFRON/ZFŚS we właściwych terminach, przypisać świadczenia i przerwy do właściwego kompletu, przeprowadzić korekty i uzgodnić deklaracje roczne.

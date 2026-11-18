@@ -20,18 +20,18 @@ QUIZY_DODATKOWE = {
     8: [
         {"p": "Okres wyczekiwania na zasiłek chorobowy pracownika (ubezpieczenie obowiązkowe):", "o": ["Nie ma — od pierwszego dnia", "30 dni nieprzerwanego ubezpieczenia", "90 dni nieprzerwanego ubezpieczenia", "180 dni"],
          "odp": 1, "w": "Art. 4 ust. 1 pkt 1 ustawy zasiłkowej — 30 dni (dobrowolne chorobowe: 90 dni); wyjątki w art. 4 ust. 3.", "lekcja": "podstawa_zasilku"},
-        {"p": "Ubezpieczony po kontroli prawidłowości wykorzystywania zwolnienia (od 13.04.2026) ma na uwagi do protokołu:", "o": ["1 dzień", "3 dni", "7 dni", "14 dni"],
-         "odp": 1, "w": "3 dni na uwagi; spór rozstrzyga ZUS decyzją, od której przysługuje odwołanie do sądu.", "lekcja": "kontrola_l4_2026"},
+        {"p": "Ubezpieczony po kontroli prawidłowości wykorzystywania zwolnienia (od 13.04.2026) ma na zastrzeżenia do protokołu:", "o": ["1 dzień", "3 dni", "7 dni", "14 dni"],
+         "odp": 2, "w": "7 dni od otrzymania protokołu (art. 68e ust. 4 ustawy zasiłkowej); zastrzeżenia rozpatruje ZUS. 3 dni to termin na zgłoszenie zmiany adresu pobytu.", "lekcja": "kontrola_l4_2026"},
     ],
     11: [
-        {"p": "PIT-11 za 2026 r.: do kiedy do urzędu skarbowego, a do kiedy do pracownika?", "o": ["Oba do 31 stycznia 2027", "US — 31 stycznia 2027; pracownik — koniec lutego 2027", "US — koniec lutego; pracownik — 31 stycznia", "Oba do 30 kwietnia 2027"],
-         "odp": 1, "w": "Art. 39 ust. 1 PIT: do US do końca stycznia, do podatnika do końca lutego; po ustaniu zatrudnienia na wniosek — 14 dni.", "lekcja": "pit_roczny"},
+        {"p": "PIT-11 za 2026 r.: do kiedy do urzędu skarbowego, a do kiedy do pracownika? (31.01.2027 i 28.02.2027 to niedziele)", "o": ["Oba do 1 lutego 2027", "US — 1 lutego 2027; pracownik — 1 marca 2027", "US — 29 stycznia 2027; pracownik — 26 lutego 2027", "Oba do 30 kwietnia 2027"],
+         "odp": 1, "w": "Art. 39 ust. 1 PIT: do US do końca stycznia, do podatnika do końca lutego; termin wypadający w niedzielę przesuwa się na następny dzień roboczy (art. 12 §5 Ordynacji podatkowej). Po ustaniu zatrudnienia na wniosek — 14 dni.", "lekcja": "pit_roczny"},
         {"p": "Zasiłek chorobowy wypłacony przez pracodawcę (płatnika) wykazujesz w PIT-11:", "o": ["W przychodach ze stosunku pracy z KUP", "W przychodach z innych źródeł, bez KUP", "Wcale — zasiłek wykazuje ZUS", "W PIT-8AR"],
          "odp": 1, "w": "Zasiłki pieniężne z ubezpieczenia społecznego to inne źródła (art. 20 PIT) — bez kosztów uzyskania.", "lekcja": "pit_roczny"},
         {"p": "ZUS IWA (dane do ustalenia składki wypadkowej) składasz do:", "o": ["31 stycznia", "28 lutego", "31 marca", "20 kwietnia"],
          "odp": 0, "w": "IWA — do 31 stycznia; ZSWA — do 31 marca; stopę procentową na nowy rok składkowy ZUS podaje do 20 kwietnia.", "lekcja": "zus_rozliczenia"},
-        {"p": "Składkę zdrowotną w PIT-11:", "o": ["Wykazujesz w osobnej pozycji do odliczenia", "Nie wykazujesz — od 2022 nie podlega odliczeniu", "Wykazujesz tylko w części 7,75%", "Wykazujesz razem ze składkami społecznymi"],
-         "odp": 1, "w": "Od 1.01.2022 (Polski Ład) składka zdrowotna nie jest odliczana; formularz nie ma tego pola.", "lekcja": "pit_roczny"},
+        {"p": "Składkę zdrowotną w PIT-11:", "o": ["Odliczasz ją od podatku i wykazujesz w poz. 95", "Wykazujesz w części G (poz. 122) — informacyjnie, bez odliczenia od podatku", "Wykazujesz tylko w części 7,75%", "Wykazujesz razem ze składkami społecznymi"],
+         "odp": 1, "w": "PIT-11 (29) ma w części G pozycję 122 „składka na ubezpieczenie zdrowotne”. Od 1.01.2022 nie odlicza się jej od podatku, ale kwota jest potrzebna m.in. do dodatkowego zwrotu ulgi na dzieci.", "lekcja": "pit_roczny"},
     ],
     12: [
         {"p": "Zaległy urlop za 2026 r. pracownik musi wykorzystać najpóźniej do:", "o": ["31 marca 2027", "30 czerwca 2027", "30 września 2027", "31 grudnia 2027"],
@@ -47,6 +47,6 @@ QUIZY_DODATKOWE = {
         {"p": "Procedura zgłoszeń wewnętrznych (sygnaliści) jest obowiązkowa od:", "o": ["20 osób", "25 etatów", "50 osób wykonujących pracę zarobkową", "250 osób"],
          "odp": 2, "w": "Stan zatrudnienia na 1 stycznia lub 1 lipca; w sektorze finansowym — zawsze.", "lekcja": "sygnalisci_zdalna_rodo"},
         {"p": "Limit dni kontroli ZUS u średniego przedsiębiorcy w roku kalendarzowym:", "o": ["12 dni", "18 dni", "24 dni", "48 dni"],
-         "odp": 2, "w": "Mikro 12, mały 18, średni 24, duży 48 dni (ustawa Prawo przedsiębiorców).", "lekcja": "kontrola_pip_zus"},
+         "odp": 2, "w": "Mikro 6 (do 2025: 12), mały 18, średni 24, duży 48 dni (ustawa Prawo przedsiębiorców).", "lekcja": "kontrola_pip_zus"},
     ],
 }

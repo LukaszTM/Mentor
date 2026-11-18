@@ -1,5 +1,5 @@
 # Potrącenia z wynagrodzenia: art. 87–91 KP
-Tydzień 6 · lekcja 22 z 48 · ≈ 50 min
+Tydzień 6 · lekcja 22 z 48 · ≈ 55 min
 
 **Po tej lekcji potrafisz:** potrącasz z wynagrodzenia zgodnie z art. 87–91 (kolejność, granice, kwoty wolne) i poprawnie obsługujesz zajęcie komornicze.
 
@@ -26,21 +26,34 @@ Granice liczysz po odliczeniu składek ZUS, zaliczki PIT i wpłat PPK pracownika
 | zaliczki pieniężne | — | 75% minimalnego netto |
 | kary pieniężne | 1/10 wynagrodzenia po innych potrąceniach | 90% minimalnego netto |
 Minimalne netto liczysz dla danego pracownika — po odliczeniu jego składek, PIT i PPK. Dla różnych osób jest różne.
-Niepełny etat: kwoty wolne proporcjonalnie.
-Nagroda z ZFŚS, trzynastka, nagroda jubileuszowa — na alimenty do 100%.
+Niepełny etat: kwotę wolną wyliczoną dla pełnego etatu mnożysz przez wymiar etatu (art. 87¹ §2), np. 1/2 etatu z PIT-2: 3 605,85 × 1/2 = 1 802,93.
+Nagroda z zakładowego funduszu nagród, trzynastka (dodatkowe wynagrodzenie roczne) i udział w zysku — na alimenty do 100% (art. 87 §5).
 ### Procedura przy zajęciu komorniczym
 - Komornik doręcza zajęcie. Od tej chwili potrącasz i przekazujesz.
 - W 7 dni odpowiadasz (art. 882 KPC): wynagrodzenie za 3 miesiące, inne zajęcia, przeszkody.
 - Zbieg egzekucji: informujesz obu komorników, przekazujesz temu, który pierwszy zajął.
 - Ustanie zatrudnienia: zawiadamiasz komornika, wpisujesz zajęcie w świadectwie (komornik, sygnatura, kwota).
 - Za nieprzekazanie: grzywna do 5 000 zł od komornika i odpowiedzialność za szkodę.
-Zajęcie zasiłków z ZUS, gdy płatnik je wypłaca — limity z ustawy emerytalnej: alimenty 60%, inne 25%, kwota wolna jak w emeryturach.
+### Zasiłek to nie wynagrodzenie — potrącasz osobno
+Wynagrodzenie chorobowe (art. 92 KP) jest wynagrodzeniem: sumujesz je z pensją i stosujesz granice z Kodeksu pracy.
+Zasiłki wypłacane przez płatnika (chorobowy, opiekuńczy, macierzyński, świadczenie rehabilitacyjne) mają własne zasady — art. 139–141 ustawy o emeryturach i rentach z FUS:
+| Potrącenie z zasiłku | Granica — od zasiłku BRUTTO | Kwota wolna za pełny miesiąc (1.03.2026–28.02.2027) |
+|---|---|---|
+| alimenty | 60% | 849,42 zł |
+| inne egzekwowane należności | 25% | 1 401,57 zł |
+- Kwotę wolną przeliczasz na dni zasiłku: kwota miesięczna / 30 × liczba dni zasiłku.
+- Potrącasz z zasiłku po odliczeniu zaliczki PIT; pracownikowi musi zostać co najmniej kwota wolna.
+- Kwoty wolne rosną co roku 1 marca (komunikat Prezesa ZUS — na ten okres M.P. 2026 poz. 220).
+- Sprawdź treść zajęcia: komornik musi nim objąć także zasiłki (zwykle to robi); zajęcie administracyjne obejmuje je z mocy prawa (od 25.03.2024).
+- Potrąceń dobrowolnych (rata pożyczki, składka grupowa) z zasiłku nie robisz — katalog z art. 139 ust. 1 jest zamknięty.
+Zaliczka przypadająca na zasiłek: przepisy nie mówią, jak wydzielić ją z jednej zaliczki miesięcznej. W kursie i w Warsztacie przyjmujemy 12% × zasiłek, a kwotę zmniejszającą 300 zł zaliczamy na wynagrodzenie; Twój program może dzielić proporcjonalnie — stosuj jedną metodę konsekwentnie.
+Przykład: pensja z chorobowym netto 3 421,32 (PPK, kwota wolna 3 501,73) i zasiłek 800,76 brutto za 6 dni; zajęcie komornicze 1 200 zł. Z wynagrodzenia: 0, bo netto jest poniżej kwoty wolnej. Z zasiłku: granica 25% × 800,76 = 200,19; kwota wolna 1 401,57 / 30 × 6 = 280,31; netto zasiłku 800,76 − 96,09 = 704,67 → potrącasz 200,19.
 ### Za zgodą pracownika (art. 91)
 Tylko pisemna zgoda z konkretną kwotą lub tytułem: pożyczka z ZFŚS, składka związkowa, ubezpieczenie grupowe.
 | Na czyją rzecz | Kwota wolna |
 |---|---|
-| inne podmioty | 100% minimalnego netto |
-| pracodawca | 80% minimalnego netto |
+| pracodawca (np. szkoda, pożyczka z ZFŚS, wykup sprzętu) | 100% minimalnego netto (art. 91 §2 pkt 1) |
+| inne podmioty (składka związkowa, ubezpieczenie grupowe, kasa zapomogowo-pożyczkowa) | 80% minimalnego netto (art. 91 §2 pkt 2) |
 ### Co nie jest potrąceniem
 Nadpłacone wynagrodzenie za okres nieobecności odliczasz w najbliższym terminie wypłaty (art. 87 §7). Tylko za okres nieobecności, nie za „pomyłkę”.
 Zwykłą nadpłatę odzyskujesz za zgodą pracownika albo sądownie.
@@ -58,7 +71,7 @@ Gdyby pracownik był w PPK (2% = 96,12 z netto): kwota wolna liczona z uwzględn
 2. „kwota wolna = 3 605,85”: 100% minimalnego wynagrodzenia NETTO liczonego z parametrami TEGO pracownika (art. 87¹ §1 pkt 1): 4 806 brutto, KUP 250, PIT-2, bez PPK → 3 605,85 (lekcja „Wskaźniki”).
 3. „możesz potrącić 4 300 − 3 605,85 = 694,15”: potrącenie = min(granica 2 150; netto − kwota wolna 694,15; kwota zajęcia) → wiąże kwota wolna, nie 1/2.
 4. „Gdyby pracownik był w PPK: minimalne netto 3 501,73” — kwota wolna liczona z uwzględnieniem wpłaty PPK pracownika (art. 87¹ §1 w zw. z art. 87 §1 — netto po PPK): wolna = 3 501,73; przy jego netto 4 300 − 96,12 (PPK) = 4 203,88 → potrącenie 702,15.
-5. Przy 1/2 etatu kwotę wolną obniżasz proporcjonalnie (art. 87¹ §2): 2 403 brutto bez PIT-2 → netto 1 648,09 → tyle zostaje wolne.
+5. Przy 1/2 etatu kwotę wolną obniżasz proporcjonalnie (art. 87¹ §2): minimalne netto pełnego etatu z parametrami pracownika × etat — z PIT-2: 3 605,85 × 1/2 = 1 802,93; bez PIT-2: 3 305,85 × 1/2 = 1 652,93.
 6. Potrąconą kwotę przekazujesz komornikowi w terminie wypłaty; w 7 dni od zajęcia odpowiadasz na pismo (wynagrodzenie za 3 miesiące, inne zajęcia).
 
 ✔ **Oczekiwany wynik:** 694,15 zł do komornika (bez PPK); pracownikowi zostaje 3 605,85 = kwota wolna.
@@ -66,7 +79,7 @@ Gdyby pracownik był w PPK (2% = 96,12 z netto): kwota wolna liczona z uwzględn
 ## 3 · Jak to uruchomić
 1. Warsztat → Potrącenia: Netto 4300, Rodzaj „inne”, Kwota zajęcia 0, KUP 250, PIT-2 300, PPK 0, Etat 1 → „Policz” → max 694,15.
 2. Zmień Rodzaj na „alimenty” → granica 3/5 = 2 580, kwota wolna 0 → max 2 580.
-3. Otwórz cwiczenia/tydzien_06/potracenia_1.md — 5 kazusów i odpowiedź dla komornika (szablon: Prompty → Szablony → „Odpowiedź komornikowi”).
+3. Otwórz cwiczenia/tydzien_06/potracenia_1.md — 5 kazusów i odpowiedź dla komornika (szablon: Prompty → Szablony → „Odpowiedź na zajęcie wynagrodzenia (art. 882 KPC)”).
 4. Oczekiwany wynik: dla każdego kazusu: granica, kwota wolna, potrącenie, kolejność — zgodne z Warsztatem.
 
 ## W praktyce — jak to robisz w firmie
@@ -85,7 +98,7 @@ Zajęcie niealimentacyjne 1 200 zł miesięcznie u Marka Zielińskiego (netto li
 U Tomasza Lisa (netto 9 568,35, PPK) zbiegły się: alimenty 2 500 zł/mies., zajęcie niealimentacyjne 3 000 zł i prośba firmy o potrącenie 800 zł za zgubiony laptop (bez zgody pracownika na piśmie). Zdecyduj: kolejność, łączną granicę, ile potrącasz na każdy tytuł i co z laptopem. Plik: cwiczenia/tydzien_06/potracenia_2.md. Czas: 15 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_06/potracenia_2.md` · rozwiązanie: `rozwiazania/tydzien_06/potracenia_2.md`
-✔ Poprawny wynik wygląda tak: kolejność art. 87 §1: alimenty → inne egzekucje → zaliczki → kary; łącznie przy zbiegu alimentów i innych: 3/5 netto = 5 741,01; alimenty 2 500 (bez kwoty wolnej); na inne zostaje 5 741,01 − 2 500 = 3 241,01, ale z zachowaniem kwoty wolnej 3 501,73 → netto − alimenty − wolna = 9 568,35 − 2 500 − 3 501,73 = 3 566,62 ≥ 3 000 → potrącasz 3 000 (łącznie 5 500 ≤ 5 741,01); laptop: bez pisemnej zgody pracownika nie wolno (art. 91) — zgoda może być wyrażona na konkretną kwotę; przy zgodzie kwota wolna 80%.
+✔ Poprawny wynik wygląda tak: kolejność art. 87 §1: alimenty → inne egzekucje → zaliczki → kary; łącznie przy zbiegu alimentów i innych: 3/5 netto = 5 741,01; alimenty 2 500 (bez kwoty wolnej); na inne zostaje 5 741,01 − 2 500 = 3 241,01, ale z zachowaniem kwoty wolnej 3 501,73 → netto − alimenty − wolna = 9 568,35 − 2 500 − 3 501,73 = 3 566,62 ≥ 3 000 → potrącasz 3 000 (łącznie 5 500 ≤ 5 741,01); laptop: bez pisemnej zgody pracownika nie wolno (art. 91) — zgoda może być wyrażona na konkretną kwotę; przy zgodzie kwota wolna 100% minimalnego netto (potrącenie na rzecz pracodawcy), czyli w tym miesiącu najwyżej 566,62.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Potrącono 1/2 netto, mimo że pracownik zarabia 4 300.**
@@ -93,7 +106,7 @@ U Tomasza Lisa (netto 9 568,35, PPK) zbiegły się: alimenty 2 500 zł/mies., za
   - Jak sprawdzić: Czy po potrąceniu zostało ≥ minimalne netto dla tego pracownika?
   - Poprawka: Potrącenie = min(granica, netto − kwota wolna); zwróć pracownikowi nadwyżkę.
 - ✘ **Zajęcie na „karcie podarunkowej” z ZFŚS albo na diecie.**
-  - Prawdopodobna przyczyna: Świadczenia z ZFŚS i diety nie są wynagrodzeniem za pracę — komornik zajmuje je odrębnie (w całości lub wg KPC), nie w trybie art. 87.
+  - Prawdopodobna przyczyna: Diety i zwrot kosztów podróży służbowej w ogóle nie podlegają egzekucji (art. 831 §1 pkt 2 KPC). Świadczenia z ZFŚS nie są wynagrodzeniem za pracę — komornik zajmuje je odrębnie (w całości lub wg KPC), nie w trybie art. 87.
   - Jak sprawdzić: Czy pismo komornika obejmuje „wierzytelności” poza wynagrodzeniem?
   - Poprawka: Rozróżnij: wynagrodzenie (art. 87) vs inne wierzytelności (zajęcie wierzytelności — bez kwot wolnych z KP).
 - ✘ **Nadpłata wynagrodzenia potrącona z następnej pensji „bo program się pomylił”.**
@@ -116,7 +129,7 @@ U Tomasza Lisa (netto 9 568,35, PPK) zbiegły się: alimenty 2 500 zł/mies., za
 - **Co zrobić przy dwóch zajęciach od różnych komorników?**
   - Potrącać dla pierwszego, zawiadomić obu o zbiegu (art. 773 KPC) i czekać na wskazanie właściwego.
 - **Czy można potrącić pożyczkę z ZFŚS bez zgody?**
-  - Nie — tylko pisemna zgoda z kwotą (art. 91), z kwotą wolną 80% minimalnego netto.
+  - Nie — tylko pisemna zgoda z kwotą (art. 91). Wierzycielem jest pracodawca, więc wolne zostaje 100% minimalnego netto; 80% dotyczy potrąceń na rzecz innych podmiotów.
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Ustalić granicę i kwotę wolną dla konkretnego pracownika (KUP, PIT-2, PPK, etat), rozliczyć zbieg alimentów z innymi zajęciami w kolejności art. 87 i odmówić potrącenia dobrowolnego bez pisemnej zgody.

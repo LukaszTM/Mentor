@@ -15,8 +15,8 @@ Wynagrodzenie: 6 000 − 150 − 600 = 5 250 zł (składki i PIT od 5 250).
 1. „siła wyższa 8 h: 50% × (6 000/160 × 8) = 150 zł zamiast 300”: za czas zwolnienia z powodu siły wyższej (art. 148¹ §1) pracownik zachowuje 50% wynagrodzenia; wynagrodzenie za 8 h = 6 000/160 × 8 = 300; połowa = 150 → potrącasz 150 (bo pensja zasadnicza zakłada 100%).
 2. „Art. 188 — 8 h: 100% — bez zmian”: zwolnienie na opiekę nad dzieckiem do 14 lat (2 dni albo 16 h w roku) jest płatne jak za urlop — pensja bez pomniejszenia.
 3. „Opiekuńczy: bezpłatny → 6 000/160 × 16 = 600 zł potrącenia”: urlop opiekuńczy z art. 173¹ (5 dni w roku na członka rodziny) jest BEZPŁATNY, ale wlicza się do stażu; potrącasz pełną stawkę za 16 h.
-4. „Wynagrodzenie: 6 000 − 150 − 600 = 5 250 zł”: dzielnik to wymiar godzin miesiąca (160), nie 30 — przez 30 dzielisz tylko przy chorobie (§11 rozporządzenia o wynagrodzeniu urlopowym).
-5. Składki i PIT liczysz od 5 250; w RSA: urlop opiekuńczy to przerwa z kodem 151 (usprawiedliwiona bez prawa do wynagrodzenia); siła wyższa i art. 188 — bez RSA (wynagrodzenie zachowane w części/całości).
+4. „Wynagrodzenie: 6 000 − 150 − 600 = 5 250 zł”: dzielnik to wymiar godzin miesiąca (160), nie 30 — przez 30 dzielisz tylko przy chorobie (§ 11 rozporządzenia MPiPS z 29.05.1996 w sprawie sposobu ustalania wynagrodzenia w okresie niewykonywania pracy; inne nieobecności — § 12).
+5. Składki i PIT liczysz od 5 250; w RSA: urlop opiekuńczy to przerwa z kodem 131 (urlop opiekuńczy z art. 173¹ KP); siła wyższa i art. 188 — bez RSA (wynagrodzenie zachowane w części/całości).
 
 ✔ Oczekiwany wynik: 5 250 zł brutto za listopad; w ewidencji: 8 h SW (50%), 8 h art. 188 (100%), 16 h UO (0%).
 

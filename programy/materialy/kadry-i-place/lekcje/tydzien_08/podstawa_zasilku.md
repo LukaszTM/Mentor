@@ -8,7 +8,7 @@ Tydzień 8 · lekcja 27 z 48 · ≈ 70 min
 ## Czego potrzebujesz
 - Warsztat → Zasiłki i chorobowe → karta A (12 miesięcy: stałe, zmienne, dni obowiązujące, dni przepracowane) — kalkulator sam wyłącza miesiące < 50% i uzupełnia pozostałe.
 - Regulamin wynagradzania AGRO-MLEKO: premia pomniejszana za chorobę (WLICZASZ), dodatek stażowy wypłacany w pełni za chorobę (NIE wliczasz).
-- Kartoteka wypłat (przyklady/tydzien_06/kartoteka_zielinski.md) z 12 miesięcy.
+- Kartoteka wypłat (przyklady/tydzien_08/kartoteka_zielinski.md) z 12 miesięcy.
 - Pojęcia: 12 miesięcy przed miesiącem niezdolności, uzupełnianie (miesiąc z ≥ 50% czasu), wyłączanie (< 50%), składniki wliczane (te, które są pomniejszane za chorobę), minimum (4 147,10 — minimalne minus 13,71%), ta sama podstawa przy przerwie < 1 miesiąca kalendarzowego.
 
 ## 1 · Wyjaśnienie od podstaw
@@ -49,7 +49,7 @@ Jak uzupełniasz: składniki stałe — do pełnej miesięcznej kwoty z umowy (p
 Nieobecności nieusprawiedliwione — nie uzupełniasz. Urlop wypoczynkowy i inne płatne nieobecności traktujesz jak dni przepracowane.
 Jeśli wszystkie miesiące są wyłączone — bierzesz wynagrodzenie z miesięcy niepełnych, uzupełnione.
 ### Zleceniobiorcy i inne zasiłki
-- Zleceniobiorca: 12 miesięcy przychodu, bez uzupełniania; minimalna podstawa 31,40 × godziny; zbieg tytułów z wyłączeniem.
+- Zleceniobiorca (art. 48–49): przeciętny przychód z 12 miesięcy, bez uzupełniania i wyłączania miesięcy i bez minimalnej podstawy; choroba w pierwszym miesiącu ubezpieczenia — kwota z umowy.
 - Dobrowolne chorobowe: podstawa miesięczna maksymalnie 250% prognozowanego przeciętnego wynagrodzenia — 2026: 23 550 zł.
 - Świadczenie rehabilitacyjne i zasiłek macierzyński: te same zasady. Rehabilitacyjne — waloryzacja wskaźnikiem kwartalnym, gdy przekracza 100%.
 
@@ -84,7 +84,7 @@ Suma 11 miesięcy (po 13,71%): (68 400 + 6 532) × 0,8629 = 64 658,82 / 11 = 5 8
 4. Sprawdź minimum (4 147,10) i czy przerwa < miesiąca (ta sama podstawa).
 
 ## 4 · Ćwiczenie prowadzone
-Marek Zieliński choruje od 16.11.2026. Kartoteka (przyklady/tydzien_06/kartoteka_zielinski.md): stałe 5 400 co miesiąc, premia regulaminowa (pomniejszana) 400 w pełnych miesiącach; marzec 2026: 11 z 22 dni przepracowanych, premia 200; lipiec 2026: 5 z 23 dni, premia 87; dodatek stażowy 108 zł wypłacany także za chorobę. Policz podstawę jak w demonstracji i sprawdź w Warsztacie. Plik: cwiczenia/tydzien_08/podstawa_zasilku_1.md. Czas: 25 minut.
+Marek Zieliński choruje od 16.11.2026. Kartoteka (przyklady/tydzien_08/kartoteka_zielinski.md): stałe 5 400 co miesiąc, premia regulaminowa (pomniejszana) 400 w pełnych miesiącach; marzec 2026: 11 z 22 dni przepracowanych (L4 9–20.03 i 1 dzień urlopu bezpłatnego), premia 200; lipiec 2026: 5 z 23 dni (urlop bezpłatny 1–10.07 i L4 20–31.07), premia 87; dodatek stażowy 108 zł wypłacany także za chorobę. Policz podstawę jak w demonstracji i sprawdź w Warsztacie. Plik: cwiczenia/tydzien_08/podstawa_zasilku_1.md. Czas: 25 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_08/podstawa_zasilku_1.md` · rozwiązanie: `rozwiazania/tydzien_08/podstawa_zasilku_1.md`
 ✔ Poprawny wynik wygląda tak: okres XI 2025–X 2026; dodatek stażowy pomijasz; lipiec wyłączony (5/23 < 50%); marzec uzupełniony: 5 400 + 200/11 × 22 = 5 800; 11 miesięcy × 5 800 = 63 800 × 0,8629 → średnia 5 004,82; stawka dzienna 166,83; 80% = 133,46 zł/dzień — to stawka dla zwolnienia listopadowego; dla marca i lipca podstawę liczyłeś z ich własnych 12 miesięcy.

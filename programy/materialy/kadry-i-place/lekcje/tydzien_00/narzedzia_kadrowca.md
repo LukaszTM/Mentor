@@ -26,7 +26,7 @@ PIT-11 to tylko suma kartoteki przychodów. Kartotekę prowadzisz poprawnie prze
 - e-PFRON2 — DEK, Wn-D.
 - portal sprawozdawczy GUS.
 - platforma PPK instytucji finansowej — zapisy, wpłaty (plik).
-- e-Doręczenia — od 2025 obowiązkowe dla firm; tu przychodzą pisma urzędowe.
+- e-Doręczenia — spółki z KRS obowiązkowo od 1.04.2025, firmy z CEIDG zarejestrowane przed 2025 — od 1.10.2026; tu przychodzą pisma urzędowe (ZUS, PIP, US, sądy).
 ### Bezpieczeństwo dostępów
 - Każda osoba ma oddzielne konto i własne uprawnienia.
 - Prowadzisz rejestr pełnomocnictw.
@@ -37,7 +37,8 @@ PIT-11 to tylko suma kartoteki przychodów. Kartotekę prowadzisz poprawnie prze
 |---|---|
 | eZUS / Płatnik | rejestr ubezpieczonych, dokumenty zgłoszeniowe z weryfikacją jak w Płatniku, komplety DRA/RCA/RSA, skrzynka e-ZLA, rejestr z numerami UPP |
 | e-Urząd: PIT | PIT-11 i PIT-4R z Twojej kartoteki, UPO |
-| kalkulatory | lista płac, zasiłki, urlopy, czas pracy, potrącenia, delegacje |
+| kalkulatory | lista płac (osobno miesiąc listy i miesiąc wypłaty; pole na odprawę bez ZUS), zasiłki, urlopy, czas pracy, potrącenia (także z zasiłku), delegacje |
+| Formularze | prawdziwe druki z numerami pól: ZUS ZUA, ZWUA, RCA, RSA, PIT-2, PIT-11, świadectwo pracy — wypełniasz ręcznie, Mentor sprawdza każde pole |
 | Przepisy | biblioteka przepisów offline |
 Ekrany i komunikaty odpowiadają prawdziwym. Po kursie przesiadka na eZUS i Płatnika to kwestia logowania, nie nauki od nowa.
 

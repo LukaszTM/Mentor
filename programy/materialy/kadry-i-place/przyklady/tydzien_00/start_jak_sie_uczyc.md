@@ -10,7 +10,7 @@ Dzień 1 krok po kroku (tydzień 0):
 3. Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić” (5 kroków): tworzysz folder kadry-praktyka, plik FIRMA.md, wskazujesz folder w Mentorze.
 4. Sesja nauki → start timera; fazy 2–3 to praca nad zadaniem i sprawdzenie.
 5. Plan → ✔ przy zadaniu 1 (+10 XP).  6. Dziennik → „Dziś: utworzyłem katalog i FIRMA.md; nie wiem jeszcze, co to PEL” (+3 XP).
-Jutro: Panel pokaże zadanie 2 (symulatory eZUS/Płatnika i e-Urzędu w Warsztacie) i lekcję „Narzędzia kadrowca”.
+Jutro: Panel pokaże zadanie 2 (symulatory eZUS/Płatnika i e-Urzędu w Warsztacie) i lekcję „Narzędzia: eZUS/PUE, Płatnik, e-Urząd Skarbowy, program kadrowy”.
 ```
 
 ## Omówienie — co robi każdy krok i dlaczego
@@ -19,7 +19,7 @@ Jutro: Panel pokaże zadanie 2 (symulatory eZUS/Płatnika i e-Urzędu w Warsztac
 3. Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”: kroki są kompletne (jaki folder, jaki plik, co w nim ma być). Robisz je w swoim katalogu, nie w Mentorze.
 4. Sesja nauki → start timera. Fazy 2–3 (ćwiczenie w Warsztacie, weryfikacja) to czas na zadanie — Mentor sam zapisuje minuty i serię dni.
 5. Plan → ✔ przy zadaniu 1 (+10 XP) — dopiero gdy plik istnieje w katalogu. Dziennik → jedno zdanie (+3 XP).
-6. Jutro Panel pokaże zadanie 2 i lekcję „Narzędzia kadrowca” — pętla jest zawsze ta sama: lekcja → zadanie → odhaczenie → dziennik.
+6. Jutro Panel pokaże zadanie 2 i lekcję „Narzędzia: eZUS/PUE, Płatnik, e-Urząd Skarbowy, program kadrowy” — pętla jest zawsze ta sama: lekcja → zadanie → odhaczenie → dziennik.
 
 ✔ Oczekiwany wynik: po dniu 1 masz: folder kadry-praktyka z plikiem FIRMA.md, zaliczony test tej lekcji, zapisaną sesję i 1 wpis w dzienniku.
 

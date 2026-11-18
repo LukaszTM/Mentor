@@ -35,7 +35,7 @@ Współfinansowanie: pracownik dopłaca choć 1 zł — składek brak, PIT jest.
 ### Zwolnienia z PIT
 | Świadczenie | Limit |
 |---|---|
-| posiłki, bony (art. 21 ust. 1 pkt 11b) | do 450 zł miesięcznie |
+| posiłki profilaktyczne i napoje z przepisów BHP oraz bony na nie (art. 21 ust. 1 pkt 11 i 11b) | bez limitu; zwykły posiłek od firmy to przychód w PIT — limit 450 zł miesięcznie dotyczy tylko składek ZUS (§2 ust. 1 pkt 11) |
 | ekwiwalent za pranie, narzędzia | — |
 | ryczałt za pracę zdalną | odpowiadający kosztom |
 | dokształcanie z inicjatywy pracodawcy | — |
@@ -64,7 +64,7 @@ Netto spada względem 6 000 o składki od 400 i podatek od 549; pracownik nie do
 3. Składki od 6 400: 624,64 + 96,00 + 156,80 = 877,44; zdrowotna 9% × (6 400 − 877,44) = 497,03; PPK pracodawcy 1,5% × 6 400 = 96,00; PPK pracownika 128,00.
 4. Podstawa PIT = 6 400 + 149 + 96 − 877,44 − 250 = 5 517,56 → 5 518 × 12% = 662,16 − 300 = 362,16 → 362.
 5. „Netto spada względem 6 000”: netto = 6 000 (tylko gotówka!) − 877,44 − 497,03 − 362 − 128 = 4 135,53 vs 4 289,43 bez benefitów — pracownik płaci 153,90 zł miesięcznie składek i podatku od świadczeń, których nie dostaje w gotówce; warto mu to pokazać na pasku.
-6. Gdyby karta była „w pełni od firmy” (bez 1 zł): 150 wchodzi do ZUS → podstawa 6 550 — dla firmy +30 zł składek miesięcznie od każdej karty, dla pracownika +20,57.
+6. Gdyby karta była „w pełni od firmy” (bez 1 zł): 150 wchodzi do ZUS → podstawa 6 550 — dla firmy +30 zł składek miesięcznie od każdej karty, dla pracownika +20,57 zł składek społecznych i wyższa zdrowotna — razem ok. 32 zł mniej netto.
 
 ✔ **Oczekiwany wynik:** ZUS od 6 400, PIT od 6 549 (+ PPK pracodawcy), netto 4 135,53 zł — wiersz „auto 400” i „karta 149” na liście bez wypłaty.
 
@@ -84,13 +84,13 @@ Netto spada względem 6 000 o składki od 400 i podatek od 549; pracownik nie do
 Uzupełnij tabelę 10 świadczeń AGRO-MLEKO (auto 400 ryczałt, karta sportowa 1 zł, pakiet medyczny 1 zł, paczka świąteczna z ZFŚS 400 wg dochodu, dofinansowanie wczasów z ZFŚS 1 500, nagroda jubileuszowa za 20 lat, posiłek w stołówce 300/mies., telefon służbowy używany prywatnie, szkolenie z Excela, ekwiwalent za pranie odzieży 40 zł): ZUS? PIT? pod jakim warunkiem, podstawa prawna. Plik: cwiczenia/tydzien_07/swiadczenia_pozaplacowe_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_07/swiadczenia_pozaplacowe_1.md` · rozwiązanie: `rozwiazania/tydzien_07/swiadczenia_pozaplacowe_1.md`
-✔ Poprawny wynik wygląda tak: auto: ZUS+PIT (ryczałt); karta/pakiet za 1 zł: PIT tak (149/wartość − 1), ZUS nie (§2 ust. 1 pkt 26, regulamin); paczka ZFŚS wg kryterium: ZUS nie (pkt 19), PIT zwolniony do 1 000 zł/rok (art. 21 ust. 1 pkt 67); wczasy ZFŚS 1 500: ZUS nie, PIT — nadwyżka ponad 1 000 (łącznie ze świadczeniami ZFŚS w roku); jubileuszówka co 5 lat: ZUS nie (pkt 1), PIT tak; posiłek 300: ZUS nie do 450 zł/mies. (pkt 11), PIT tak (chyba że bony do 450 zł — też zwolnione? nie: PIT zwolnienie dotyczy posiłków profilaktycznych BHP); telefon: wartość prywatnego użytku — PIT i ZUS (trudna wycena → regulamin); szkolenie Excel: bez ZUS i PIT (art. 21 ust. 1 pkt 90, §2 pkt 29); ekwiwalent za pranie: bez ZUS i PIT, gdy kwota odpowiada kosztom (pkt 6; art. 21 ust. 1 pkt 11).
+✔ Poprawny wynik wygląda tak: auto: ZUS+PIT (ryczałt); karta/pakiet za 1 zł: PIT tak (149/wartość − 1), ZUS nie (§2 ust. 1 pkt 26, regulamin); paczka ZFŚS wg kryterium: ZUS nie (pkt 19), PIT zwolniony do 1 000 zł/rok (art. 21 ust. 1 pkt 67); wczasy ZFŚS 1 500: ZUS nie, PIT — nadwyżka ponad 1 000 (łącznie ze świadczeniami ZFŚS w roku); jubileuszówka co 5 lat: ZUS nie (pkt 1), PIT tak; posiłek 300: ZUS nie — do 450 zł/mies. (pkt 11), PIT tak (zwolnione są tylko posiłki profilaktyczne z przepisów BHP); telefon: wartość prywatnego użytku — PIT i ZUS (trudna wycena → regulamin); szkolenie Excel: bez ZUS i PIT (art. 21 ust. 1 pkt 90, §2 pkt 29); ekwiwalent za pranie: bez ZUS i PIT, gdy kwota odpowiada kosztom (pkt 6; art. 21 ust. 1 pkt 11).
 
 ## 5 · Ćwiczenie samodzielne
 Komisja socjalna chce dać wszystkim 62 pracownikom paczki po 300 zł z ZFŚS „bo tak sprawiedliwie”, a kierownik produkcji proponuje, by firma w całości opłacała karty sportowe (bez 1 zł), „bo to i tak grosze”. Zdecyduj o obu pomysłach: skutki składkowe, podatkowe i prawne, policz koszt różnicy dla firmy rocznie (karty: 40 osób × 150 zł). Plik: cwiczenia/tydzien_07/swiadczenia_pozaplacowe_2.md. Czas: 15 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_07/swiadczenia_pozaplacowe_2.md` · rozwiązanie: `rozwiazania/tydzien_07/swiadczenia_pozaplacowe_2.md`
-✔ Poprawny wynik wygląda tak: paczki „po równo”: brak kryterium socjalnego → ZUS kwestionuje wyłączenie (składki od 62 × 300 = 18 600 → ok. 3 700 zł składek pracodawcy + składki pracownika) i naruszenie ustawy o ZFŚS (art. 8 ust. 1) — zróżnicuj wg dochodu (3 progi); karty bez 1 zł: 150 zł wchodzi do ZUS: 40 × 150 × 12 = 72 000 rocznie × 20,01% ≈ 14 400 zł składek pracodawcy + pracownicy tracą ok. 20 zł/mies. każdy — zostaw współfinansowanie w regulaminie wynagradzania.
+✔ Poprawny wynik wygląda tak: paczki „po równo”: brak kryterium socjalnego → ZUS kwestionuje wyłączenie (składki od 62 × 300 = 18 600 → ok. 3 700 zł składek pracodawcy + składki pracownika) i naruszenie ustawy o ZFŚS (art. 8 ust. 1) — zróżnicuj wg dochodu (3 progi); karty bez 1 zł: 150 zł wchodzi do ZUS: 40 × 150 × 12 = 72 000 rocznie × 20,01% ≈ 14 400 zł składek pracodawcy + pracownicy tracą ok. 32 zł netto miesięcznie każdy — zostaw współfinansowanie w regulaminie wynagradzania.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Ryczałt za auto 400 zł dodany do netto pracownika.**
@@ -137,7 +137,7 @@ Zakwalifikować każde świadczenie do ZUS/PIT z warunkiem (regulamin współfin
   - B) Podlega ZUS (brak kryterium socjalnego)
   - C) Jest zwolnione z PIT bez limitu
   - D) Nie jest przychodem
-- Do jakiej kwoty miesięcznie zwolnione są posiłki/bony od pracodawcy?
+- Do jakiej kwoty miesięcznie posiłki finansowane przez pracodawcę są wyłączone ze SKŁADEK ZUS?
   - A) 190 zł
   - B) 300 zł
   - C) 450 zł

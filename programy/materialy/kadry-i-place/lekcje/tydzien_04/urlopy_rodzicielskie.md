@@ -1,9 +1,9 @@
 # Urlopy rodzicielskie 2026: macierzyński, rodzicielski, ojcowski, wychowawczy, ochrona
-Tydzień 4 · lekcja 15 z 48 · ≈ 60 min
+Tydzień 4 · lekcja 15 z 48 · ≈ 65 min
 
 **Po tej lekcji potrafisz:** rozpisujesz macierzyński, rodzicielski (41 tyg., 9+9), ojcowski i wychowawczy na kalendarz, znasz stawki zasiłku i zakres ochrony.
 
-**Po co mi to?** błąd w kalendarzu urlopów rodzicielskich to błąd w wysokości zasiłku (100/81,5/70%) i w kodach RSA przez rok — a ochrona pracownicy zaczyna się od dnia, w którym dowiesz się o ciąży.
+**Po co mi to?** błąd w kalendarzu urlopów rodzicielskich to błąd w wysokości zasiłku (100/81,5/70%) i w kodach RSA przez rok — a ochrona pracownicy obejmuje całą ciążę — także wtedy, gdy dowiesz się o niej już po wręczeniu wypowiedzenia.
 
 ## Czego potrzebujesz
 - Kalendarz 2026/2027 (Warsztat → Czas pracy pokazuje święta) i kartka do liczenia tygodni.
@@ -18,7 +18,7 @@ Tydzień 4 · lekcja 15 z 48 · ≈ 60 min
 | przed porodem | do 6 tygodni |
 | obowiązkowe dla matki | 14 tygodni; resztę może przejąć ojciec |
 | zasiłek | 100% |
-Wcześniaki i hospitalizacja noworodka (od 19.03.2025): dodatkowy urlop macierzyński — tydzień za każdy tydzień pobytu dziecka w szpitalu, do 8 lub 15 tygodni (zależnie od tygodnia ciąży i masy). Zasiłek 100%.
+Wcześniaki i hospitalizacja noworodka (od 19.03.2025): uzupełniający urlop macierzyński (art. 180², RSA 341) — tydzień za każdy tydzień pobytu dziecka w szpitalu, do 8 lub 15 tygodni (zależnie od tygodnia ciąży i masy). Zasiłek 100%.
 ### Urlop rodzicielski (art. 182¹ᵃ)
 | Element | Zasada |
 |---|---|
@@ -40,15 +40,15 @@ Wcześniaki i hospitalizacja noworodka (od 19.03.2025): dodatkowy urlop macierzy
 | warunek | staż co najmniej 6 miesięcy |
 | płatność | bezpłatny; wlicza się do stażu |
 | części | do 5 |
-| wniosek | 21 dni wcześniej, elektronicznie |
+| wniosek | 21 dni wcześniej, papierowo lub elektronicznie |
 | składki | emerytalno-rentowe i zdrowotna z budżetu — ZUS RCA kod 12 11, RSA 121 |
-Zamiast wychowawczego: obniżenie etatu do maksymalnie 1/2 na okres do 12 miesięcy, z ochroną.
+Zamiast wychowawczego (art. 186⁷): obniżenie wymiaru czasu pracy — nie niżej niż do 1/2 etatu — w okresie, w którym pracownik mógłby korzystać z wychowawczego. Ochrona przed wypowiedzeniem trwa wtedy łącznie do 12 miesięcy (art. 186⁸).
 Elastyczna organizacja pracy dla rodzica dziecka do 8 lat (art. 188¹): wniosek 21 dni wcześniej, odpowiedź w 7 dni.
 ### Ochrona
-- Od zgłoszenia ciąży i przez urlopy macierzyński, rodzicielski i ojcowski — zakaz wypowiedzenia i rozwiązania. Wyjątki: upadłość lub likwidacja oraz art. 52 za zgodą związku.
+- Przez całą ciążę (także gdy pracodawca o niej nie wiedział — wypowiedzenie okazuje się wtedy wadliwe) i przez urlopy macierzyński, rodzicielski i ojcowski — zakaz wypowiedzenia, rozwiązania i samych przygotowań do zwolnienia (art. 177 §1). Wyjątki: upadłość lub likwidacja oraz art. 52 za zgodą związku.
 - Umowa na czas określony albo próbna dłuższa niż 1 miesiąc, która rozwiązałaby się po 3. miesiącu ciąży — przedłuża się do porodu. Nie dotyczy zastępstwa.
-- Ochrona zaczyna się 14 dni przed terminem urlopu wskazanym we wniosku (ojcowski, rodzicielski).
-- Ciąża: zakaz pracy nocnej, nadgodzin i delegacji bez zgody. Przy pracach wzbronionych — zmiana warunków pracy z zachowaniem wynagrodzenia.
+- Gdy wniosek o urlop wpłynął wcześniej, ochrona zaczyna się 14 dni przed ojcowskim i 21 dni przed rodzicielskim (art. 177 §1¹); przy wychowawczym — 21 dni przed (art. 186⁸).
+- Ciąża: bezwzględny zakaz nadgodzin i pracy w nocy; delegacja i przerywany czas pracy — tylko za zgodą pracownicy (art. 178 §1). Przy pracach wzbronionych — zmiana warunków pracy z zachowaniem wynagrodzenia.
 ### Dokumenty
 Wnioski w postaci papierowej lub elektronicznej (od 2023). Oświadczenia o korzystaniu z urlopu przez drugiego rodzica. Akt urodzenia. Wszystko do akt — część B.
 
@@ -67,7 +67,7 @@ Ojciec: ojcowski 2 tyg. do 14.09.2027 (100%); 9 tyg. rodzicielskiego (70%) np. 1
 3. „32 tyg. (41 − 9 ojca): 2.02–13.09.2027”: rodzicielski 41 tyg. łącznie, ale 9 tygodni jest nieprzenoszalnych — każdy rodzic ma 9 „swoich” (art. 182¹ᵃ §4); matka może wziąć max 32; 32 × 7 = 224 dni od 2.02 → 13.09.2027.
 4. „Ojciec: ojcowski 2 tyg. do 14.09.2027 (100%)”: ojcowski (art. 182³) niezależny od matki, do ukończenia 12 miesięcy życia dziecka, w 1 lub 2 częściach, zasiłek 100%.
 5. „9 tyg. rodzicielskiego (70%) do końca 2032”: ojciec wykorzystuje swoje 9 tygodni w dowolnym momencie do końca roku, w którym dziecko kończy 6 lat; zasiłek 70% (nie 81,5%, bo 81,5% dotyczy wniosku matki w 21 dni); może brać w 5 częściach, także równolegle z matką.
-6. ZUS: w RSA kody 327 (macierzyński za urlop macierzyński), 319 (za rodzicielski), 325 (za ojcowski); wychowawczy — kod tytułu 12 11 w RCA (składki z budżetu).
+6. ZUS: w RSA kody 311 (zasiłek macierzyński za urlop macierzyński), 319 (za rodzicielski), 338 (za 9 nieprzenoszalnych tygodni rodzicielskiego — tu: ojca), 327 (za ojcowski); wychowawczy — przerwa 121 i kod tytułu 12 11 w RCA (składki z budżetu). Kody: załącznik nr 24 do rozporządzenia MRPiPS z 9.04.2026 (Dz.U. 2026 poz. 518).
 
 ✔ **Oczekiwany wynik:** matka: 15.09.2026–13.09.2027 (52 tyg. × 81,5%); ojciec: ojcowski 2 tyg. do 14.09.2027 (100%) + 9 tyg. rodzicielskiego (70%) do końca 2032.
 
@@ -81,24 +81,24 @@ Ojciec: ojcowski 2 tyg. do 14.09.2027 (100%); 9 tyg. rodzicielskiego (70%) np. 1
 1. Po zgłoszeniu ciąży: ochrona, zakaz nocnej/nadgodzin, ewentualne przedłużenie umowy do porodu.
 2. Po porodzie: akt urodzenia, wniosek o macierzyński; w 21 dni wniosek o rodzicielski dla 81,5%.
 3. Zaplanuj kalendarz obojga rodziców (części, 9 tygodni ojca, ojcowski do 12 mies.).
-4. Zgłoś w ZUS (RSA, kody 327/319/325; wychowawczy 12 11) i w PPK; dokumenty do części B.
+4. Zgłoś w ZUS (RSA, kody 311/319/327, 9 tygodni drugiego rodzica 338; wychowawczy 121 i 12 11) i w PPK; dokumenty do części B.
 
 ## 4 · Ćwiczenie prowadzone
 Poród 3.12.2026, matka (Ewa Sobczak) rozpoczyna macierzyński w dniu porodu i w 21 dni składa wniosek o pełny dostępny rodzicielski; ojciec planuje ojcowski w lipcu 2027 i swoje 9 tygodni od 1.03.2028. Ułóż kalendarz jak w demonstracji (daty od–do, % zasiłku, kod RSA). Plik: cwiczenia/tydzien_04/urlopy_rodzicielskie_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_04/urlopy_rodzicielskie_1.md` · rozwiązanie: `rozwiazania/tydzien_04/urlopy_rodzicielskie_1.md`
-✔ Poprawny wynik wygląda tak: macierzyński 3.12.2026–21.04.2027 (140 dni; obowiązkowe 14 tyg. do 10.03.2027), kod 327, 81,5%; rodzicielski matki 32 tyg. 22.04–30.11.2027, kod 319, 81,5%; ojcowski 2 tyg. w lipcu 2027 (do 2.12.2027), kod 325, 100%; rodzicielski ojca 9 tyg. 1.03–2.05.2028, kod 319, 70%.
+✔ Poprawny wynik wygląda tak: macierzyński 3.12.2026–21.04.2027 (140 dni; obowiązkowe 14 tyg. do 10.03.2027), kod 311, 81,5%; rodzicielski matki 32 tyg. 22.04–1.12.2027, kod 319, 81,5%; ojcowski 2 tyg. w lipcu 2027 (do 2.12.2027), kod 327, 100%; rodzicielski ojca 9 tyg. 1.03–2.05.2028, kod 338, 70%.
 
 ## 5 · Ćwiczenie samodzielne
-Anna Kowalczyk (umowa próbna 1.10–31.12.2026) 20.11.2026 informuje, że jest w 4. miesiącu ciąży (termin porodu ok. 20.04.2027). Zdecyduj: (a) czy jej umowa kończy się 31.12.2026, (b) czy możesz jej wypowiedzieć umowę z powodu słabych wyników próby, (c) czy może dalej pracować na zmianie nocnej w laboratorium jakości i do kiedy, (d) jakie dokumenty i kody ZUS pojawią się po porodzie. Plik: cwiczenia/tydzien_04/urlopy_rodzicielskie_2.md. Czas: 20 minut.
+Anna Kowalczyk (umowa próbna 1.10–31.12.2026) 20.11.2026 informuje, że jest w 4. miesiącu ciąży (15. tydzień; termin porodu ok. 15.05.2027). Zdecyduj: (a) czy jej umowa kończy się 31.12.2026, (b) czy możesz jej wypowiedzieć umowę z powodu słabych wyników próby, (c) czy może dalej pracować na zmianie nocnej w laboratorium jakości i do kiedy, (d) jakie dokumenty i kody ZUS pojawią się po porodzie. Plik: cwiczenia/tydzien_04/urlopy_rodzicielskie_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_04/urlopy_rodzicielskie_2.md` · rozwiązanie: `rozwiazania/tydzien_04/urlopy_rodzicielskie_2.md`
-✔ Poprawny wynik wygląda tak: (a) nie — umowa próbna dłuższa niż 1 miesiąc, która rozwiązałaby się po 3. miesiącu ciąży, przedłuża się do dnia porodu (art. 177 §3): 31.12 jest po 3. miesiącu ciąży → trwa do porodu; (b) nie — zakaz wypowiedzenia w ciąży (art. 177 §1), wyjątki: art. 52 lub upadłość/likwidacja; (c) nie — zakaz pracy w nocy kobiet w ciąży (art. 178 §1) od dnia przedstawienia zaświadczenia: zmieniasz rozkład, a gdy niemożliwe — przenosisz lub zwalniasz z obowiązku z zachowaniem wynagrodzenia; (d) po porodzie: zaświadczenie/akt urodzenia, wniosek o macierzyński (i rodzicielski w 21 dni), RSA 327/319; umowa kończy się z dniem porodu — zasiłek macierzyński po ustaniu zatrudnienia wypłaca ZUS (Z-3 w eZUS).
+✔ Poprawny wynik wygląda tak: (a) nie — umowa próbna dłuższa niż 1 miesiąc, która rozwiązałaby się po 3. miesiącu ciąży, przedłuża się do dnia porodu (art. 177 §3): 31.12 jest po 3. miesiącu ciąży (3 miesiące księżycowe = 12 tygodni minęły 31.10) → trwa do porodu; (b) nie — zakaz wypowiedzenia w ciąży (art. 177 §1), wyjątki: art. 52 lub upadłość/likwidacja; (c) nie — zakaz pracy w nocy kobiet w ciąży (art. 178 §1) od dnia przedstawienia zaświadczenia: zmieniasz rozkład, a gdy niemożliwe — przenosisz lub zwalniasz z obowiązku z zachowaniem wynagrodzenia; (d) po porodzie: zaświadczenie/akt urodzenia, wniosek o macierzyński (i rodzicielski w 21 dni); umowa kończy się z dniem porodu — zasiłek macierzyński po ustaniu zatrudnienia wypłaca ZUS (Z-3 w eZUS).
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Rodzicielski matki zaplanowany na 41 tygodni.**
   - Prawdopodobna przyczyna: Pominięto 9 nieprzenoszalnych tygodni ojca (art. 182¹ᵃ §4).
-  - Jak sprawdzić: Czy ojciec jest uprawniony (ubezpieczony)? Jeśli tak — matka max 32 tyg.
+  - Jak sprawdzić: Ile tygodni wpisano we wniosku matki? Jeden rodzic może wykorzystać najwyżej 32 — także wtedy, gdy drugi rodzic z urlopu nie skorzysta.
   - Poprawka: 32 tyg. dla matki; 9 tyg. ojca przepada, jeśli ich nie wykorzysta.
 - ✘ **Wniosek o rodzicielski złożony 25. dnia po porodzie — wypłacono 81,5%.**
   - Prawdopodobna przyczyna: Termin 21 dni przekroczony → macierzyński 100%, rodzicielski 70%, bez prawa do 81,5%.

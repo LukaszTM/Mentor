@@ -25,7 +25,7 @@ Dla firm z KRS/CEIDG ZUS tworzy zgłoszenie płatnika automatycznie z danych rej
 ### Dokumenty ubezpieczonego
 | Dokument | Do czego |
 |---|---|
-| ZUA | zgłoszenie do ubezpieczeń społecznych i zdrowotnego: pracownik 01 10, zleceniobiorca 04 11, wychowawczy 12 11… |
+| ZUA | zgłoszenie do ubezpieczeń społecznych i zdrowotnego: pracownik 01 10, zleceniobiorca 04 11, działalność 05 10… |
 | ZZA | tylko zdrowotne: zleceniobiorca ze zbiegiem, osoba na uldze na start 05 40 |
 | ZIUA | zmiana danych identyfikacyjnych: PESEL, nazwisko, dokument |
 | ZUA/ZZA w trybie ZMIANY | adres, NFZ (od 2019 zmiana adresu przez ZUA zmiana) |
@@ -34,7 +34,13 @@ Dla firm z KRS/CEIDG ZUS tworzy zgłoszenie płatnika automatycznie z danych rej
 | ZCNA | zgłoszenie lub wyrejestrowanie członka rodziny do zdrowotnego: małżonek, dziecko do 18 lat (do 26 ucząc się), bez własnego tytułu; 7 dni od oświadczenia pracownika; kod stopnia pokrewieństwa, wspólne gospodarstwo |
 | ZSWA | praca w szczególnych warunkach — do 31.03 za poprzedni rok (FEP) |
 | IWA | do 31.01 (składka wypadkowa) |
-ZWUA pracownika od 2019 ma dodatkowo kod trybu rozwiązania lub wygaśnięcia stosunku pracy i kod podstawy prawnej: porozumienie stron art. 30 §1 pkt 1 KP; wypowiedzenie przez pracownika lub pracodawcę art. 30 §1 pkt 2; bez wypowiedzenia art. 52/53/55; upływ czasu art. 30 §1 pkt 4; wygaśnięcie art. 63. Wykaz kodów na zus.pl. ZUS porównuje te dane przy ustalaniu prawa do zasiłku dla bezrobotnych i stażu.
+ZWUA pracownika ma od 16.05.2021 blok V — dane o rozwiązaniu lub wygaśnięciu stosunku pracy. Wypełniasz go tylko przy kodzie przyczyny 100 albo 500 (przy 600 — nie; dla zleceniobiorców — nie):
+| Pole bloku V | Co wpisujesz | Przykłady |
+|---|---|---|
+| kod trybu | 2 cyfry i litera: R — rozwiązanie, W — wygaśnięcie | 22R porozumienie stron; 23R wypowiedzenie przez pracodawcę; 24R wypowiedzenie przez pracownika; 25R bez wypowiedzenia z winy pracownika (art. 52 §1 pkt 1); 28R upływ czasu, na który zawarto umowę; 36R bez wypowiedzenia przez pracownika (art. 55 §1¹); 44R / 45R wypowiedzenie w zwolnieniu grupowym / indywidualnym z przyczyn niedotyczących pracownika; 48W śmierć pracownika |
+| kod podstawy prawnej | 3 cyfry | 402 art. 30 §1 pkt 1; 403 art. 30 §1 pkt 2; 404 art. 52 §1 pkt 1; 407 art. 30 §1 pkt 4; 415 art. 55 §1¹; 421 / 422 ustawa o zwolnieniach grupowych (art. 1 / art. 10); 424 art. 63¹ |
+| strona inicjująca | 1 — pracownik, 2 — pracodawca | przy wygaśnięciu (kody W) pole zostaje puste; gdy nie da się wskazać strony (np. upływ czasu) — wpisujesz 2 |
+Pełny wykaz kodów jest w załączniku do rozporządzenia o wzorach dokumentów ZUS (od 2026 r.: rozporządzenie z 9.04.2026, Dz.U. 2026 poz. 518) i pod formularzem w Warsztacie. ZUS udostępnia te dane urzędom pracy — od trybu zależy m.in. termin nabycia prawa do zasiłku dla bezrobotnych, dlatego muszą zgadzać się ze świadectwem pracy.
 ### Terminy — wszystkie 7 dni
 | Dokument | Od kiedy liczysz |
 |---|---|
@@ -55,8 +61,8 @@ Przykład: 01 10 2 2 = pracownik z rentą i umiarkowanym stopniem.
 | 05 70 | działalność — preferencyjne |
 | 05 40 | działalność — ulga na start |
 | 05 90 | mały ZUS plus |
-| 12 11 | urlop wychowawczy |
-| 12 40 | zasiłek macierzyński — osoba na macierzyńskim po ustaniu, zleceniobiorca |
+| 12 11 | osoba na urlopie wychowawczym — kod używany tylko w RCA: pracownika nie wyrejestrowujesz ani nie zgłaszasz ponownie |
+| 12 40 | osoba pobierająca zasiłek macierzyński — także tylko w RCA: podstawa równa kwocie zasiłku, składki emerytalną i rentowe finansuje budżet państwa |
 | 30 00 | osoba bez tytułu, dla której rozliczasz składki lub świadczenia po ustaniu (wypłata po zwolnieniu) |
 ### Dane w ZUA
 PESEL (obcokrajowiec bez PESEL — paszport; PESEL obowiązkowy do PIT). Nazwisko, data urodzenia, obywatelstwo. Adresy: zameldowania, zamieszkania, korespondencji. NFZ — oddział wg zamieszkania. Daty powstania obowiązku dla każdego ubezpieczenia. Wniosek o dobrowolne chorobowe — zleceniobiorca od dnia wniosku, nie wstecz.
@@ -69,21 +75,21 @@ Najczęstsze błędy: zły kod (01 10 zamiast 04 11); zła data (zawarcie umowy 
 **Pracownik z rentą i umiarkowanym stopniem, zatrudniony 16.11.2026 — ZUA, ZCNA, ZWUA i premia po ustaniu**
 
 ```
-Pracownik zatrudniony 16.11.2026 (umowa podpisana 10.11, praca od 16.11), ma rentę, umiarkowany stopień: ZUA do 23.11 z kodem 01 10 2 2, data powstania obowiązku 16.11.2026 (wszystkie ubezpieczenia), NFZ lubelski. Żona bez pracy: ZCNA do 7 dni od oświadczenia (kod 01 — małżonek). Umowa kończy się 31.03.2027 (upływ czasu): ZWUA do 7.04.2027, data 1.04.2027, kod 100, tryb: upływ czasu — art. 30 §1 pkt 4 KP. Premia roczna wypłacona 15.05.2027 → RCA 05/2027 z kodem 30 00.
+Pracownik zatrudniony 16.11.2026 (umowa podpisana 10.11, praca od 16.11), ma rentę, umiarkowany stopień: ZUA do 23.11 z kodem 01 10 2 2, data powstania obowiązku 16.11.2026 (wszystkie ubezpieczenia), NFZ lubelski. Żona bez pracy: ZCNA do 7 dni od oświadczenia (kod 01 — małżonek). Umowa kończy się 31.03.2027 (upływ czasu): ZWUA do 7.04.2027, data 1.04.2027, kod przyczyny 100, blok V: tryb 28R (upływ czasu), podstawa 407 (art. 30 §1 pkt 4 KP), strona 2. Premia roczna wypłacona 15.05.2027 → RCA 05/2027 z kodem 30 00.
 ```
 
 1. „umowa podpisana 10.11, praca od 16.11 → ZUA do 23.11 z kodem 01 10 2 2, data 16.11.2026”: obowiązek ubezpieczeń powstaje z dniem nawiązania stosunku pracy = rozpoczęcia pracy (16.11), nie podpisania umowy; termin 7 dni (art. 36 ust. 4 ustawy systemowej); kod: 01 10 (pracownik) + 2 (renta) + 2 (umiarkowany stopień).
 2. „wszystkie ubezpieczenia, NFZ lubelski”: ZUA = emerytalne, rentowe, chorobowe, wypadkowe (obowiązkowe) + zdrowotne; oddział NFZ wg miejsca zamieszkania; pola „dobrowolne” zostają puste (pracownik ma chorobowe obowiązkowe — symulator to przypomni ostrzeżeniem).
 3. „Żona bez pracy: ZCNA do 7 dni od oświadczenia (kod 01 — małżonek)”: członka rodziny bez własnego tytułu zgłaszasz do zdrowotnego na wniosek pracownika; kody pokrewieństwa 01 małżonek, 11 dziecko własne; ZCNA składasz do osoby już zgłoszonej (symulator sprawdza).
-4. „Umowa kończy się 31.03.2027: ZWUA do 7.04.2027, data 1.04.2027, kod 100, tryb: upływ czasu — art. 30 §1 pkt 4 KP”: data wyrejestrowania = dzień następny po ustaniu tytułu; kod przyczyny 100 (ustanie tytułu); dla pracownika obowiązkowo tryb rozwiązania i podstawa prawna (od 2022) — symulator blokuje ZWUA bez trybu.
+4. „Umowa kończy się 31.03.2027: ZWUA do 7.04.2027, data 1.04.2027, kod przyczyny 100, blok V: tryb 28R, podstawa 407, strona 2”: data wyrejestrowania = dzień następny po ustaniu tytułu; kod przyczyny 100 (ustanie tytułu); dla pracownika obowiązkowo blok V (od 16.05.2021): kod trybu 28R — upływ czasu, kod podstawy prawnej 407 — art. 30 §1 pkt 4 KP, strona inicjująca 2 (nie da się wskazać strony → pracodawca) — symulator blokuje ZWUA bez trybu i podstawy.
 5. „Premia roczna wypłacona 15.05.2027 → RCA 05/2027 z kodem 30 00”: przychód wypłacony po ustaniu zatrudnienia podlega składkom wg zasady kasowej — w RCA za miesiąc wypłaty z kodem 30 00 (osoba, której tytuł ustał), bez ponownego ZUA.
 
-✔ **Oczekiwany wynik:** ZUA 01 10 2 2 (16.11, do 23.11) → ZCNA (małżonek, kod 01) → ZWUA (1.04.2027, kod 100, tryb 7 — upływ czasu, art. 30 §1 pkt 4) → RCA 30 00 za maj 2027.
+✔ **Oczekiwany wynik:** ZUA 01 10 2 2 (16.11, do 23.11) → ZCNA (małżonek, kod 01) → ZWUA (1.04.2027, kod 100, tryb 28R + podstawa 407 + strona 2 — upływ czasu, art. 30 §1 pkt 4) → RCA 30 00 za maj 2027.
 
 ## 3 · Jak to uruchomić
 1. Warsztat → eZUS / Płatnik → „Wyczyść wszystkie zgłoszenia (zacznij od nowa)” (jeśli ćwiczyłeś wcześniej) → Dokument zgłoszeniowy: Osoba Anna Kowalczyk, ZUA, kod 011000, data 2026-10-01 → „Weryfikuj (jak Płatnik)” → brak błędów → „Wyślij do ZUS (symulacja)” → UPP w Rejestrze.
 2. Powtórz ZUA dla tej samej osoby → błąd: „Osoba jest już zgłoszona z tym tytułem — najpierw ZWUA (lub ZUA w trybie korekty)”.
-3. ZWUA: data 2027-01-01, kod 100, tryb 7 → Weryfikuj → Wyślij. Potem ZCNA dla innej osoby: PESEL członka (symulator sprawdza sumę kontrolną), pokrewieństwo 11.
+3. ZWUA: data 2027-01-01, kod przyczyny 100, tryb 28R, podstawa 407, strona 2 → Weryfikuj → Wyślij. Potem ZCNA dla innej osoby: PESEL członka (symulator sprawdza sumę kontrolną), pokrewieństwo 11.
 4. Oczekiwany wynik: Rejestr pokazuje dokumenty ze statusem „przyjęty” i numerami UPP; karta „Ubezpieczeni” — aktualny stan każdej osoby.
 
 ## W praktyce — jak to robisz w firmie
@@ -93,16 +99,16 @@ Pracownik zatrudniony 16.11.2026 (umowa podpisana 10.11, praca od 16.11), ma ren
 4. Rodzina: ZCNA w 7 dni; zmiany danych — ZUA zmiana / ZIUA.
 
 ## 4 · Ćwiczenie prowadzone
-Przygotuj i wyślij w symulatorze komplet zgłoszeń dla 5 osób jak w demonstracji: Anna Kowalczyk (ZUA 1.10.2026), Ewa Sobczak (ZUA — ma kod 01 10 0 2: lekki stopień; data 1.03.2021), Agnieszka Pawlak (ZUA 04 11 z chorobowym, 1.02.2026), Robert Król (ZUA 04 11, 1.06.2024), Joanna Michalska (dzieło — RUD, nie ZUA). Zapisz tabelę: osoba | dokument | kod | data | termin | UPP. Plik: cwiczenia/tydzien_10/zus_zgloszenia_1.md. Czas: 25 minut.
+Przygotuj i wyślij w symulatorze komplet zgłoszeń dla 5 osób jak w demonstracji: Anna Kowalczyk (ZUA 1.10.2026), Ewa Sobczak (ZUA — ma kod 01 10 0 2: umiarkowany stopień; data 1.03.2021), Agnieszka Pawlak (zlecenie przy etacie u innego pracodawcy — jaki dokument? data 1.02.2026), Robert Król (ZUA 04 11 z dobrowolnym chorobowym, 1.06.2024), Joanna Michalska (dzieło — RUD, nie ZUA). Zapisz tabelę: osoba | dokument | kod | data | termin | UPP. Plik: cwiczenia/tydzien_10/zus_zgloszenia_1.md. Czas: 25 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_10/zus_zgloszenia_1.md` · rozwiązanie: `rozwiazania/tydzien_10/zus_zgloszenia_1.md`
-✔ Poprawny wynik wygląda tak: 4 ZUA przyjęte z UPP; Michalska — brak zgłoszenia (RUD w 7 dni od 2.11 → do 9.11.2026); Sobczak kod 011002; terminy: 7 dni od daty powstania obowiązku; symulator ostrzega „Zgłoszenie po terminie 7 dni” dla dat historycznych — w notatce zaznaczasz, że ćwiczysz wstecz.
+✔ Poprawny wynik wygląda tak: 3 ZUA i 1 ZZA (Pawlak) przyjęte z UPP; Michalska — brak zgłoszenia (RUD w 7 dni od 2.11 → do 9.11.2026); Sobczak kod 011002; terminy: 7 dni od daty powstania obowiązku; symulator ostrzega „Zgłoszenie po terminie 7 dni” dla dat historycznych — w notatce zaznaczasz, że ćwiczysz wstecz.
 
 ## 5 · Ćwiczenie samodzielne
 Kadry odkryły, że Robert Król (zleceniobiorca) od 1.06.2024 był zgłoszony z kodem 01 10 00 (jak pracownik), a od 1.09.2026 ma dodatkowo etat w innej firmie (5 500 zł) — i nikt nie zmienił zgłoszenia. Zdecyduj: (a) jaka sekwencja dokumentów naprawia kod od 1.06.2024, (b) co zmienia etat od 1.09.2026 i jakie dokumenty, (c) skutki składkowe za okres 1.09–30.11.2026 (podstawa 3 500) — czy to nadpłata czy niedopłata i w czyjej części. Plik: cwiczenia/tydzien_10/zus_zgloszenia_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_10/zus_zgloszenia_2.md` · rozwiązanie: `rozwiazania/tydzien_10/zus_zgloszenia_2.md`
-✔ Poprawny wynik wygląda tak: (a) ZWUA z datą 1.06.2024 w trybie korekty (wyrejestrowanie błędnego kodu) + ZUA 04 11 00 od 1.06.2024 — składki były pełne, więc kwoty się nie zmieniają, ale RCA za wszystkie miesiące wymagają korekty kodu (30 miesięcy!); (b) od 1.09.2026 zbieg: etat ≥ minimalne → ze zlecenia tylko zdrowotna → ZWUA (04 11) z datą 1.09.2026 + ZZA 04 11 00 od 1.09.2026; (c) nadpłata: społeczne za IX–XI 2026 nienależne: pracownik 13,71% × 3 500 × 3 = 1 439,55 (zwrot; przychód, PIT), pracodawca (9,76 + 6,5 + 1,2)% × 10 500 = 1 832,88 (zaliczenie); zdrowotna wzrośnie (od 3 500 zamiast 3 020,15: +43,19/mies.); korekta RCA 09–11/2026 z identyfikatorem 02 i DRA.
+✔ Poprawny wynik wygląda tak: (a) ZWUA z datą 1.06.2024 w trybie korekty (wyrejestrowanie błędnego kodu) + ZUA 04 11 00 od 1.06.2024 — składki były pełne, więc kwoty się nie zmieniają, ale RCA za wszystkie miesiące wymagają korekty kodu (30 miesięcy!); (b) od 1.09.2026 zbieg: etat ≥ minimalne → ze zlecenia tylko zdrowotna → ZWUA (04 11) z datą 1.09.2026 + ZZA 04 11 00 od 1.09.2026; (c) nadpłata: społeczne za IX–XI 2026 nienależne: pracownik 13,71% × 3 500 × 3 = 1 439,55 (zwrot; przychód, PIT), zleceniodawca (9,76 + 6,5 + 1,2)% × 10 500 = 1 833,30 + FGŚP 10,50 = 1 843,80 (zaliczenie); zdrowotna wzrośnie (od 3 500 zamiast 3 020,15: +43,19/mies.); korekta RCA 09–11/2026 z identyfikatorem 02 i DRA.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Symulator: „Niepoprawny PESEL (błąd sumy kontrolnej lub długości)”.**

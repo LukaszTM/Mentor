@@ -15,7 +15,7 @@ Netto spada względem 6 000 o składki od 400 i podatek od 549; pracownik nie do
 3. Składki od 6 400: 624,64 + 96,00 + 156,80 = 877,44; zdrowotna 9% × (6 400 − 877,44) = 497,03; PPK pracodawcy 1,5% × 6 400 = 96,00; PPK pracownika 128,00.
 4. Podstawa PIT = 6 400 + 149 + 96 − 877,44 − 250 = 5 517,56 → 5 518 × 12% = 662,16 − 300 = 362,16 → 362.
 5. „Netto spada względem 6 000”: netto = 6 000 (tylko gotówka!) − 877,44 − 497,03 − 362 − 128 = 4 135,53 vs 4 289,43 bez benefitów — pracownik płaci 153,90 zł miesięcznie składek i podatku od świadczeń, których nie dostaje w gotówce; warto mu to pokazać na pasku.
-6. Gdyby karta była „w pełni od firmy” (bez 1 zł): 150 wchodzi do ZUS → podstawa 6 550 — dla firmy +30 zł składek miesięcznie od każdej karty, dla pracownika +20,57.
+6. Gdyby karta była „w pełni od firmy” (bez 1 zł): 150 wchodzi do ZUS → podstawa 6 550 — dla firmy +30 zł składek miesięcznie od każdej karty, dla pracownika +20,57 zł składek społecznych i wyższa zdrowotna — razem ok. 32 zł mniej netto.
 
 ✔ Oczekiwany wynik: ZUS od 6 400, PIT od 6 549 (+ PPK pracodawcy), netto 4 135,53 zł — wiersz „auto 400” i „karta 149” na liście bez wypłaty.
 

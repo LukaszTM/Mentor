@@ -15,7 +15,7 @@ Tydzień 5 · lekcja 18 z 48 · ≈ 65 min
 ### Osiem kroków w stałej kolejności
 | Krok | Co liczysz | Jak |
 |---|---|---|
-| 1 | przychód brutto | wszystkie składniki wypłacone w miesiącu: zasadnicze, nadgodziny, nocne, premie, świadczenia w naturze, wpłata pracodawcy na PPK (jako przychód) |
+| 1 | przychód brutto | wszystkie składniki wypłacone w miesiącu: zasadnicze, nadgodziny, nocne, premie, świadczenia w naturze, wpłata pracodawcy na PPK (przychód w miesiącu przekazania jej do instytucji finansowej — w AGRO-MLEKO to ten sam miesiąc co wypłata) |
 | 2 | podstawa i składki społeczne | podstawa = przychód bez wyłączeń z rozporządzenia składkowego; składki pracownika: emerytalna 9,76%, rentowa 1,5%, chorobowa 2,45% — każda zaokrąglona do grosza; limit 30-krotności dla emerytalnej i rentowej |
 | 3 | podstawa i składka zdrowotna | podstawa = podstawa społecznych − składki społeczne pracownika + wynagrodzenie chorobowe; składka 9%, nie wyższa niż hipotetyczna zaliczka wg zasad z 2021 |
 | 4 | podstawa opodatkowania | przychód − składki społeczne pracownika − KUP (250/300) + PPK pracodawcy (już w przychodzie) − przychody zwolnione; zaokrąglona do pełnych złotych |
@@ -113,7 +113,7 @@ Na liście za listopad Marek Zieliński (5 400) chorował 10 dni (wynagrodzenie 
 - KUP odejmujesz także od wynagrodzenia chorobowego (tak — to przychód ze stosunku pracy), ale nie od zasiłku.
 
 ## Dodatkowe zadania
-1. Policz ręcznie 4 806 zł w 4 wariantach (bez PPK / z PPK / bez PIT-2 / ulga dla młodych) — zadanie 1 tygodnia 4.
+1. Policz ręcznie 4 806 zł w 4 wariantach (bez PPK / z PPK / bez PIT-2 / ulga dla młodych) — zadanie 1 tego tygodnia.
 2. Zbuduj w Warsztacie listę miesiąca dla 8 pracowników z FIRMA.md (każdy wiersz najpierw na kartce, potem „Sprawdź”) i zapisz MD + CSV.
 3. Sprawdź, co się dzieje ze składką zdrowotną pracownika 1/2 etatu 2 500 zł bez PIT-2 — i przy 1 200 zł (1/4 etatu) z PIT-2; wyjaśnij różnicę.
 

@@ -22,7 +22,7 @@ Tydzień 12 · lekcja 39 z 48 · ≈ 60 min
 | do 20. | zaliczka PIT na mikrorachunek; DEK-I-0 lub INF-1 PFRON |
 | do 25. | Wn-D (SOD) |
 | w 7 dni | ZUA, ZWUA, ZCNA, RUD, zmiany danych |
-| w 7 dni | powiadomienia PUP (Ukraina; od 5.03.2026) |
+| w 7 dni | powiadomienia PUP o pracy obywateli Ukrainy (od rozpoczęcia pracy) |
 | w 14 dni | protokoły powypadkowe |
 Bieżąco: zajęcia komornicze (odpowiedź 7 dni), wnioski o urlopy rodzicielskie (21 dni), badania okresowe (terminy z orzeczeń), kończące się umowy (ZWUA, świadectwo, ekwiwalent), limity 33/3, okresy próbne, wygasające dokumenty cudzoziemców, kary porządkowe (rok), dokumenty do akt.
 ### W roku
@@ -43,7 +43,7 @@ Bieżąco: zajęcia komornicze (odpowiedź 7 dni), wnioski o urlopy rodzicielski
 | badania okresowe | wg orzeczenia: zwykle 2–4 lata, biurowe do 5; kontrolne po chorobie dłuższej niż 30 dni — przed dopuszczeniem!; końcowe przy narażeniu na czynniki rakotwórcze |
 | szkolenia BHP okresowe — stanowiska robotnicze | co 3 lata; co rok przy pracach szczególnie niebezpiecznych |
 | szkolenia BHP — kierownicy, inżynierowie, technolodzy | co 5 lat |
-| szkolenia BHP — administracyjno-biurowi | co 6 lat; zwolnieni przy ryzyku do 3. kategorii i braku wypadków — decyzja pracodawcy |
+| szkolenia BHP — administracyjno-biurowi | co 6 lat; niewymagane, gdy przeważająca działalność pracodawcy ma kategorię ryzyka nie wyższą niż trzecia (ustawa wypadkowa), chyba że ocena ryzyka wskazuje inaczej (art. 237³ §2²) |
 | pierwsze szkolenie okresowe | do 12 miesięcy; kierownicy — 6 |
 | ocena ryzyka zawodowego | przegląd przy zmianach |
 | regulamin pracy i wynagradzania | obowiązek od 50 pracowników (20–49 na wniosek związków); od 5.11.2026 zasady przeciwdziałania mobbingowi (do 5.05.2027) |
@@ -62,7 +62,7 @@ Alert tygodnia 9–13.11.2026 (sp. z o.o.): 10.11 wypłata; 12.11 nowa umowa —
 
 1. „10.11 wypłata”: regulamin (do 10.); 10.11 to wtorek — bez przesunięcia; z wypłatą wiążą się: paski, przelewy, potrącenia dla komornika.
 2. „12.11 nowa umowa — ZUA do 19.11”: termin zdarzeniowy 7 dni od rozpoczęcia pracy (nie od podpisania).
-3. „13.11 kończy się umowa próbna — ZWUA do 20.11, świadectwo w dniu ustania, ekwiwalent w terminie wypłaty (10.12)”: trzy terminy z jednego zdarzenia; ekwiwalent — bo termin wypłaty (10.12) przypada po ustaniu (zasada z lekcji „Świadectwo i rozliczenie”).
+3. „13.11 kończy się umowa próbna — ZWUA do 20.11, świadectwo w dniu ustania, ekwiwalent w terminie wypłaty (10.12)”: trzy terminy z jednego zdarzenia; ekwiwalent — bo termin wypłaty (10.12) przypada po ustaniu (zasada z lekcji „Świadectwo pracy i rozliczenie końcowe pracownika”).
 4. „15.11 (niedziela → 16.11) DRA/RCA/RSA + składki + PPK”: termin ZUS przesuwa się na następny dzień roboczy; PPK — wpłaty do instytucji do 15., ale instytucja liczy dzień wpływu — przelew zlecasz w piątek 13.11.
 5. „20.11 zaliczka PIT + DEK-I-0; 25.11 Wn-D”: piątek i środa — bez przesunięć.
 6. „30.11 stan ubezpieczonych do chorobowego (płatnik zasiłków 2027); do 30.11 wnioski urlopowe grudniowe; 5.11 weszła nowa definicja mobbingu — procedura do 5.05.2027”: terminy roczne i legislacyjne — kalendarz musi mieć wiersz „zmiany prawa” z datą wejścia w życie i datą obowiązku wdrożenia.
@@ -85,7 +85,7 @@ Alert tygodnia 9–13.11.2026 (sp. z o.o.): 10.11 wypłata; 12.11 nowa umowa —
 Zbuduj „alert tygodnia” dla 11–15.01.2027 (sp. z o.o.) jak w demonstracji. W tym tygodniu: wypłata grudniowa (10.01 to niedziela — ustal właściwy dzień), 12.01 wraca pracownica z urlopu rodzicielskiego, termin umowy o prowadzenie PPK Anny Kowalczyk (90 dni minęło 29.12), 15.01 ZUS za grudzień, 20.01 PIT i DEK-I-0, do 31.01 PIT-4R/PIT-11/IWA. Dla każdej pozycji: termin, podstawa, właściciel, co dokładnie robisz. Plik: cwiczenia/tydzien_12/kalendarz_roczny_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_12/kalendarz_roczny_1.md` · rozwiązanie: `rozwiazania/tydzien_12/kalendarz_roczny_1.md`
-✔ Poprawny wynik wygląda tak: 11.01 (pon) wypłata — regulamin: 10. w niedzielę → dzień roboczy WCZEŚNIEJ, czyli 8.01 (piątek)! (wynagrodzenie, gdy termin wypada w dzień wolny, wypłaca się dnia poprzedniego — art. 85 §3); 12.01 powrót z rodzicielskiego — dopuszczenie na dotychczasowym stanowisku, ZUS: koniec RSA 319, zwolnienie z FP/FGŚP przez 36 mies.; umowa o prowadzenie PPK Kowalczyk do 11.01 (termin „do 10. dnia” wypada w niedzielę → następny dzień roboczy, art. 115 KC); 15.01 (pt) komplet 01 12 2026 + składki + PPK; do 31.01 (nd → 1.02): PIT-4R, PIT-8AR, PIT-11 do US; IWA; 31.01 zgłoszenie ZUS IWA za 2026 (jeśli firma ma obowiązek — ≥ 10 ubezpieczonych i wpis do REGON: tak).
+✔ Poprawny wynik wygląda tak: 11.01 (pon) wypłata — regulamin: 10. w niedzielę → dzień roboczy WCZEŚNIEJ, czyli 8.01 (piątek)! (wynagrodzenie, gdy termin wypada w dzień wolny, wypłaca się dnia poprzedniego — art. 85 §3); 12.01 powrót z rodzicielskiego — dopuszczenie na dotychczasowym stanowisku, ZUS: koniec RSA 319, zwolnienie z FP/FGŚP przez 36 mies.; umowa o prowadzenie PPK Kowalczyk — termin „do 10. dnia” wypada w niedzielę 10.01, więc zawierasz ją najpóźniej w piątek 8.01 (PFR nie potwierdza przesunięcia tego terminu na poniedziałek); 15.01 (pt) komplet 01 12 2026 + składki + PPK; do 31.01 (nd → 1.02): PIT-4R, PIT-8AR, PIT-11 do US; IWA; 31.01 zgłoszenie ZUS IWA za 2026 (jeśli firma ma obowiązek — ≥ 10 ubezpieczonych i wpis do REGON: tak).
 
 ## 5 · Ćwiczenie samodzielne
 Zarząd pyta: „które terminy zmieniłyby się, gdyby AGRO-MLEKO była firmą osoby fizycznej (Jan Kowalski — działalność) zatrudniającą te same 62 osoby, a które zmieniłyby się, gdyby zatrudniała 18 osób (14 etatów)?”. Zdecyduj i uzasadnij: ZUS (termin), ZFŚS, PFRON, regulaminy pracy/wynagradzania, sygnaliści, płatnik zasiłków, kontrola L4, ZUS IWA. Plik: cwiczenia/tydzien_12/kalendarz_roczny_2.md. Czas: 15 minut.

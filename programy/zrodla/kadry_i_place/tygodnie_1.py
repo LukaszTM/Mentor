@@ -2,7 +2,7 @@
 """Kadry i płace — dawne tygodnie 0–3 (harmonogram: plan_tygodni.py; warsztat, zatrudnienie, czas pracy, urlopy). Stan prawny: listopad 2026."""
 
 FIRMA = ("Firma ćwiczeniowa: AGRO-MLEKO sp. z o.o. — mleczarnia, 62 pracowników etatowych (produkcja 3-zmianowa, "
-         "logistyka, biuro), 6 zleceniobiorców, 2 osoby na umowie o dzieło, 1 pracownik z orzeczeniem o niepełnosprawności, "
+         "logistyka, biuro), 6 zleceniobiorców, 2 osoby na umowie o dzieło, 2 pracowników z orzeczeniem o niepełnosprawności (stopień umiarkowany), "
          "wypłata do 10. dnia następnego miesiąca, okres rozliczeniowy 1 miesiąc dla biura i 3 miesiące dla produkcji "
          "(system równoważny do 12 h). Wszystkie ćwiczenia robisz na tej firmie.")
 
@@ -78,7 +78,7 @@ TYGODNIE_1 = [
               "Przy każdym etapie dopisz: dokument, termin ustawowy, kto odpowiada (kadry / płace / kierownik / pracownik), system (Płatnik, e-US, program kadrowy). Np. zgłoszenie ZUS ZUA — 7 dni od zatrudnienia — kadry — Płatnik.",
               "Zaznacz czerwonym (lub pogrubieniem) 10 terminów, których przekroczenie grozi karą lub odsetkami: ZUA 7 dni, DRA do 15./20., PIT-4R do 31.01, PIT-11 do 31.01 (US) i 28.02 (pracownik), ZFŚS 31.05/30.09, PFRON do 20., świadectwo 7 dni, ekwiwalent w terminie wypłaty/10 dni, badania okresowe przed upływem ważności, informacja o warunkach zatrudnienia 7 dni.",
               "Poproś Asystenta o recenzję mapy: „Przejrzyj @mapa_procesow.md jak doświadczony kadrowiec: czego brakuje, co jest w złej kolejności, które terminy są błędne”. Wdróż uwagi — ale każdą zweryfikuj w przepisach, zanim ją przyjmiesz.",
-              "Sobota: quiz z tygodnia 0 i checklista „Po tygodniu 0”.",
+              "Jeśli jeszcze tego nie zrobiłeś: quiz tygodnia 0 i checklista „Po tygodniu 0” (zakładka Checklista).",
           ],
           "sprawdz": "Mapa ma ≥ 12 etapów z dokumentem, terminem, odpowiedzialnym i systemem; 10 terminów krytycznych wyróżnionych.",
           "problemy": ["Mapa rośnie bez końca → ogranicz do zdarzeń, które występują w firmie 62-osobowej co najmniej raz w roku; wyjątki dopiszesz w kolejnych tygodniach."]},
@@ -93,7 +93,7 @@ TYGODNIE_1 = [
          {"id": "k1z1", "tytul": "Ogłoszenie o pracę zgodne z przepisami 2026 i lista pytań zakazanych", "opis": "Ogłoszenie na stanowisko „Operator linii produkcyjnej” w firmie ćwiczeniowej + checklista rekrutera.",
           "czas_min": 60, "pliki": ["ogloszenie.md"], "xp": 10,
           "kroki": [
-              "Lekcja „Rekrutacja: dane, jawność wynagrodzeń, RODO”. Napisz ogłoszenie: nazwa stanowiska neutralna płciowo (operator/operatorka linii lub „osoba na stanowisko operatora”), zakres obowiązków, wymagania, system czasu pracy (równoważny, 3 zmiany), wynagrodzenie: przedział 5 200–6 100 zł brutto + dodatek nocny + premia regulaminowa 10% (od 24.12.2025 informacja o wynagrodzeniu lub widełkach musi trafić do kandydata najpóźniej przed rozmową — art. 18³ᶜᵃ KP).",
+              "Lekcja „Rekrutacja: dane kandydata, jawność wynagrodzeń, RODO”. Napisz ogłoszenie: nazwa stanowiska neutralna płciowo (operator/operatorka linii lub „osoba na stanowisko operatora”), zakres obowiązków, wymagania, system czasu pracy (równoważny, 3 zmiany), wynagrodzenie: przedział 5 200–6 100 zł brutto + dodatek nocny + premia regulaminowa 10% (od 24.12.2025 informacja o wynagrodzeniu lub widełkach musi trafić do kandydata najpóźniej przed rozmową — art. 18³ᶜᵃ KP).",
               "Dodaj klauzulę informacyjną RODO (administrator, cel, podstawa prawna art. 6 ust. 1 lit. b i c RODO oraz art. 22¹ KP, okres przechowywania CV: do zakończenia rekrutacji, a za zgodą — do 12 miesięcy na przyszłe rekrutacje).",
               "Lista danych, których WOLNO żądać od kandydata (art. 22¹ §1 KP): imię i nazwisko, data urodzenia, dane kontaktowe, wykształcenie, kwalifikacje, przebieg zatrudnienia — i czego NIE WOLNO: wynagrodzenie w poprzedniej pracy (art. 22¹ §1 pkt 6 — od 24.12.2025), plany rodzicielskie, niekaralność (chyba że przepis wymaga), stan zdrowia, przynależność związkowa.",
               "Przygotuj 10 pytań na rozmowę kwalifikacyjną i oznacz 3, które są zakazane lub ryzykowne (np. „Ile Pan zarabiał?”, „Czy planuje Pani dzieci?”, „Jaki ma Pan stan zdrowia?”) — z uzasadnieniem i poprawną alternatywą („Jakie są Pana oczekiwania finansowe?”).",
@@ -104,7 +104,7 @@ TYGODNIE_1 = [
          {"id": "k1z2", "tytul": "Umowa o pracę: trzy rodzaje, limity, obowiązkowa treść", "opis": "Trzy wzory umów (próbna, określona, nieokreślona) dla pracowników z FIRMA.md, z poprawnymi elementami art. 29 KP.",
           "czas_min": 90, "pliki": ["umowa_probna.md", "umowa_okreslona.md", "umowa_nieokreslona.md"], "xp": 10,
           "kroki": [
-              "Lekcja „Umowa o pracę: rodzaje, limity, treść”. Napisz umowę na okres próbny (max 3 miesiące; 1 miesiąc gdy planowana umowa na czas określony < 6 mies., 2 miesiące gdy 6–12 mies.; w umowie wpisujesz planowany okres kolejnej umowy — art. 25 §2²) dla operatora linii.",
+              "Lekcja „Umowa o pracę: rodzaje, limity 33/3, treść art. 29”. Napisz umowę na okres próbny (max 3 miesiące; 1 miesiąc gdy planowana umowa na czas określony < 6 mies., 2 miesiące gdy 6–12 mies.; w umowie wpisujesz planowany okres kolejnej umowy — art. 25 §2²) dla operatora linii.",
               "Napisz umowę na czas określony (limit: 33 miesiące i 3 umowy łącznie — art. 25¹; wyjątki: zastępstwo, sezon, kadencja, obiektywne przyczyny z zawiadomieniem PIP w 5 dni roboczych). Umowa 4. lub przekraczająca 33 mies. = z mocy prawa nieokreślona.",
               "Napisz umowę na czas nieokreślony. We wszystkich trzech: strony, rodzaj, data zawarcia, rodzaj pracy, miejsce (lub miejsca), wynagrodzenie ze składnikami (zasadnicze, dodatek nocny ustawowy, premia regulaminowa wg regulaminu), wymiar etatu, dzień rozpoczęcia, a przy próbnej — czas trwania i ewentualnie przedłużenie o urlop/nieobecność.",
               "Sprawdź pułapki: umowa na piśmie przed dopuszczeniem do pracy (albo pisemne potwierdzenie ustaleń przed rozpoczęciem — art. 29 §2); wynagrodzenie nie niższe niż 4806 zł na pełny etat (proporcjonalnie na część); miejsce pracy „terytorium Polski” jest kwestionowane przez PIP; brak informacji o okresie próbnym = max 3 miesiące.",
@@ -141,7 +141,7 @@ TYGODNIE_1 = [
               "Każda część: chronologia, numeracja stron, wykaz dokumentów na początku. Zasada: do części B wkładasz także dokumenty dotyczące przebiegu zatrudnienia (aneksy, badania okresowe, szkolenia BHP okresowe).",
               "Dokumentacja w sprawach związanych ze stosunkiem pracy (odrębna od akt): ewidencja czasu pracy (wnioski o wyjścia, zgody na nadgodziny, harmonogramy), wnioski urlopowe, karta ewidencji przydziału odzieży, lista obecności? (nie jest obowiązkowa — ewidencja czasu pracy jest).",
               "Procedura: okres przechowywania 10 lat od końca roku kalendarzowego ustania zatrudnienia (zatrudnieni od 2019; wcześniejsi — 50 lat, chyba że złożono ZUS OSW/RIA); e-akta: wymogi (integralność, metadane, kopia zapasowa, odwzorowanie cyfrowe z podpisem kwalifikowanym/pieczęcią), zmiana postaci papierowej na elektroniczną = informacja dla pracowników i 30 dni na odbiór papieru.",
-              "Zbuduj „teczkę” jednego pracownika w folderze 01-zatrudnienie/akta_Kowalski/ z podfolderami A, B, C, D, E i wykazami. Recenzja Asystenta: „Czego brakuje w aktach, co jest w złej części?”. Sobota: quiz 1, checklista.",
+              "Zbuduj „teczkę” jednego pracownika w folderze 01-zatrudnienie/akta_Kowalski/ z podfolderami A, B, C, D, E i wykazami. Recenzja Asystenta: „Czego brakuje w aktach, co jest w złej części?”. Sobota: quiz tygodnia, checklista.",
           ],
           "sprawdz": "Wykaz dokumentów dla A–E zgodny z rozporządzeniem o dokumentacji; teczka jednego pracownika z wykazami; procedura opisuje 10/50 lat i e-akta.",
           "problemy": ["PIT-2 i oświadczenie PPK w części A → to dokumenty z zatrudnienia, część B.", "Kara porządkowa w B → zawsze D (i usunięcie po roku)."]},
@@ -181,17 +181,17 @@ TYGODNIE_1 = [
               "Lekcja „Nadgodziny, dyżur, praca w nocy”. Przypadek 1 (biuro, 1-mies. okres, 6 000 zł): w czerwcu 2026 pracownik przepracował 12 h we wtorek (4 nadgodziny dobowe: 2 pierwsze 50%, dalsze też 50% — bo dobowe w dzień roboczy) i 8 h w sobotę (wolna z 5-dniowego tygodnia → najpierw dzień wolny do końca okresu; jeśli niemożliwy → 100%). Policz: normalne wynagrodzenie za nadgodziny = stawka godzinowa (6 000 / wymiar czerwca 168 h = 35,71 zł) × godziny; dodatek 50%/100% od stawki.",
               "Przypadek 2 (produkcja, równoważny, 3-mies. okres, 5 600 zł): po zakończeniu kwartału przepracowane 520 h przy wymiarze 496 h → 24 nadgodziny średniotygodniowe = 100%. Policz z uwzględnieniem, że w jednym miesiącu były też nadgodziny dobowe już rozliczone.",
               "Przypadek 3 (nocne): operator w listopadzie 2026 przepracował 64 h w porze nocnej. Dodatek nocny = 20% × (4806 / wymiar listopada 2026 w godzinach) × 64. Policz i zapisz wymiar listopada.",
-              "Czas wolny zamiast dodatku: na wniosek pracownika 1:1 (w okresie rozliczeniowym, może być w kolejnym), bez wniosku — pracodawca 1:1,5 w tym samym okresie, bez obniżenia wynagrodzenia. Rozlicz przypadek 1 w wariancie „czas wolny”.",
+              "Czas wolny zamiast dodatku: na wniosek pracownika 1:1 (termin uzgadniacie — może wypaść także po okresie rozliczeniowym), bez wniosku — pracodawca 1:1,5 najpóźniej do końca okresu rozliczeniowego, bez obniżenia wynagrodzenia. Rozlicz przypadek 1 w wariancie „czas wolny”.",
               "Limity: 150 h nadgodzin rocznie (regulamin może podnieść do 416 h), 48 h tygodniowo średnio z nadgodzinami. Sprawdź, czy przypadek 2 nie przekracza; zapisz, kto nie może pracować w nadgodzinach (ciężarne, młodociani, opiekun dziecka do 8 lat bez zgody).",
           ],
           "sprawdz": "Trzy przypadki policzone z pokazaną stawką godzinową i podstawą dodatku; wariant czasu wolnego; limity sprawdzone.",
           "problemy": ["Dodatek 100% za „sobotę” zawsze → nie: sobota wolna z 5-dniowego tygodnia to najpierw dzień wolny; 100% tylko gdy nie da się go udzielić do końca okresu (albo noc/niedziela/święto)."]},
-         {"id": "k2z4", "tytul": "Ewidencja czasu pracy: wzór, zawartość, nieobecności, 3 lata przechowywania", "opis": "Karta ewidencji dla jednego pracownika na miesiąc z pełnym zakresem z §6 rozporządzenia o dokumentacji.",
+         {"id": "k2z4", "tytul": "Ewidencja czasu pracy: wzór, zawartość, nieobecności, przechowywanie", "opis": "Karta ewidencji dla jednego pracownika na miesiąc z pełnym zakresem z §6 rozporządzenia o dokumentacji.",
           "czas_min": 60, "pliki": ["ewidencja_czasu_pracy.xlsx", "ewidencja.md"], "xp": 10,
           "kroki": [
               "Lekcja „Ewidencja czasu pracy i nieobecności”. Zbuduj kartę ewidencji (plik .md z tabelą, szablon: cwiczenia/tydzien_02/ewidencja_czasu_1.md) z kolumnami dla każdego dnia: godzina rozpoczęcia i zakończenia, liczba godzin, w tym nadgodziny, w porze nocnej, w niedzielę/święto, dyżur (miejsce, godziny), dni wolne (z oznaczeniem tytułu: W5 — wolna z 5-dniowego tygodnia, WN — niedziela, WŚ — święto), rodzaj i wymiar nieobecności (urlop, choroba, opieka, siła wyższa, urlop opiekuńczy), zwolnienia od pracy z zachowaniem/bez wynagrodzenia.",
               "Wypełnij dla operatora za grudzień 2026 z grafiku z zadania 2 (z 1 dniem urlopu, 2 dniami L4 i 4 nadgodzinami). Suma ma się zgadzać z listą płac w tygodniu 6.",
-              "Dla pracownika zadaniowego i kierownika wyodrębnionej komórki: nie ewidencjonujesz godzin (art. 149 §2), ale ewidencjonujesz nieobecności i dni wolne — dodaj drugą, uproszczoną kartę.",
+              "Dla pracownika zadaniowego, zarządzającego zakładem w imieniu pracodawcy i osoby z ryczałtem za nadgodziny: nie ewidencjonujesz godzin (art. 149 §2), ale ewidencjonujesz nieobecności i dni wolne — dodaj drugą, uproszczoną kartę.",
               "Dokumenty towarzyszące (trzymane razem z ewidencją): wnioski o czas wolny za nadgodziny, zgody na nadgodziny opiekuna dziecka do 8 lat, wnioski o wyjścia prywatne (odpracowanie nie jest nadgodziną), polecenia nadgodzin, harmonogramy. Okres przechowywania: jak akta (10 lat po ustaniu).",
               "Praca zdalna: ewidencja nadal obowiązuje (pracownik zdalny raportuje godziny), okazjonalna 24 dni/rok — osobna kolumna.",
           ],
@@ -204,7 +204,7 @@ TYGODNIE_1 = [
               "Rozlicz każdego: wymiar okresu pomniejszony o nieobecności (urlop i choroba obniżają wymiar o godziny z planu), godziny przepracowane, nadgodziny dobowe (miesięcznie) i średniotygodniowe (na koniec okresu), dni wolne udzielone/nieudzielone, dodatek nocny, wynagrodzenie za nadgodziny (kwoty — stawka godzinowa z wynagrodzenia zasadniczego / wymiar danego miesiąca).",
               "Znajdź naruszenia: czy ktoś przekroczył 48 h średnio, czy odpoczynek 35 h był zachowany w tygodniu wezwania, czy niedziela wolna raz na 4 tygodnie. Opisz w raporcie z artykułami KP i propozycją naprawy (dzień wolny, zmiana grafiku, wypłata).",
               "Raport 1 strona dla zarządu: tabela (osoba | wymiar | przepracowane | nadgodziny 50% | 100% | nocne h | koszt dodatków) + 3 rekomendacje.",
-              "Asystent: „Oceń @audyt_czasu_pracy.md jak inspektor PIP”. Sobota: quiz 2, checklista.",
+              "Asystent: „Oceń @audyt_czasu_pracy.md jak inspektor PIP”. Sobota: quiz tygodnia, checklista.",
           ],
           "sprawdz": "4 rozliczenia z kwotami, wykryte ≥ 2 naruszenia z artykułami, raport z rekomendacjami; sumy zgodne z ewidencją.",
           "problemy": ["Nadgodziny dobowe liczysz drugi raz na koniec okresu → odejmij je od przekroczenia średniotygodniowego (nie dublujesz)."]},
@@ -221,7 +221,7 @@ TYGODNIE_1 = [
           "kroki": [
               "Lekcja „Urlop wypoczynkowy w praktyce”. Zasady: 20 dni (< 10 lat stażu) / 26 dni (≥ 10 lat); do stażu: nauka (ZSZ 3 lata, średnia zawodowa 5, liceum 4, policealna 6, wyższe 8 — nie sumują się, bierzesz korzystniejszy), poprzednie zatrudnienia (świadectwa), od 2026 także umowy zlecenia/działalność potwierdzone zaświadczeniem ZUS (sektor prywatny od 1.05.2026), okresy pobierania zasiłku dla bezrobotnych, urlop wychowawczy.",
               "Pierwsza praca w życiu: urlop „z dołu” 1/12 z 20 dni za każdy miesiąc (bez zaokrąglania w górę dni niepełnych — PIP: zaokrągla się do pełnego dnia tylko przy urlopie proporcjonalnym, nie przy pierwszym). Niepełny etat: 1/2 × 26 = 13 dni; 3/4 × 20 = 15 dni (zaokrąglenie w górę do pełnego dnia). Urlop w godzinach: dzień = 8 h (7 h dla umiarkowanej niepełnosprawności + 10 dni dodatkowego urlopu po roku od orzeczenia).",
-              "Zatrudnienie w trakcie roku: proporcjonalnie 1/12 za każdy miesiąc kalendarzowy (niepełny miesiąc zaokrągla się w górę do pełnego, gdy to pierwszy pracodawca w roku; przy zmianie pracodawcy w miesiącu — tylko u jednego). Zmiana wymiaru etatu w roku — oblicz osobno za oba okresy.",
+              "Zatrudnienie w trakcie roku: proporcjonalnie 1/12 za każdy miesiąc kalendarzowy (niepełny miesiąc zaokrągla się w górę do pełnego — art. 155²ᵃ §2; przy zmianie pracodawcy w tym samym miesiącu zaokrągla tylko dotychczasowy — §3; suma w roku nie może przekroczyć 20/26 — art. 155³ §2, patrz świadectwo pracy). Zmiana wymiaru etatu w roku — oblicz osobno za oba okresy.",
               "Policz dla 8 osób, każdy wiersz z pokazaną ścieżką (staż z czego, dni, godziny). Dodaj kolumnę „urlop zaległy” i termin wykorzystania (do 30 września następnego roku; na żądanie 4 dni nie podlega planowi).",
               "Asystent: dla 3 najtrudniejszych przypadków poproś o pytania naprowadzające, nie o wynik. Różnice między rachunkiem ręcznym a Warsztatem wyjaśnij.",
           ],
@@ -242,13 +242,13 @@ TYGODNIE_1 = [
           "czas_min": 90, "pliki": ["rodzicielskie_kalendarz.md"], "xp": 10,
           "kroki": [
               "Lekcja „Urlopy rodzicielskie 2026”. Dla pracownicy (poród 15.09.2026): macierzyński 20 tygodni (może zacząć do 6 tyg. przed porodem; 100% zasiłek; po 14 tyg. może zrezygnować na rzecz ojca), rodzicielski 41 tygodni łącznie dla obojga (43 przy ciąży mnogiej), z czego 9 tygodni nieprzenoszalnych dla każdego rodzica; zasiłek 70% (lub 81,5% za cały okres macierzyńskiego i rodzicielskiego, jeśli wniosek o pełny wymiar w 21 dni po porodzie), do 5 części, do końca roku, w którym dziecko kończy 6 lat; łączenie z pracą do 1/2 etatu wydłuża urlop.",
-              "Ojciec: urlop ojcowski 2 tygodnie do ukończenia 12. miesiąca życia dziecka (100%), w max 2 częściach po tydzień, wniosek 7 dni wcześniej; 9 tygodni rodzicielskiego nieprzenoszalne (70%). Wcześniak/hospitalizacja: dodatkowy urlop macierzyński do 8 lub 15 tygodni (od 19.03.2025) — kryteria: tydzień ciąży/masa/hospitalizacja.",
-              "Wychowawczy: do 36 miesięcy (35 + 1 dla drugiego rodzica), do końca roku, w którym dziecko kończy 6 lat, bezpłatny, staż ≥ 6 miesięcy, wniosek 21 dni wcześniej, do 5 części, składki emerytalno-rentowe z budżetu (ZUS RSA kod). Obniżenie etatu zamiast wychowawczego — do 12 miesięcy, ochrona.",
-              "Ochrona: od zgłoszenia ciąży do końca rodzicielskiego — zakaz wypowiedzenia (poza upadłością/likwidacją, art. 52 ze zgodą związku); od złożenia wniosku o rodzicielski/ojcowski — ochrona od 14 dni przed terminem urlopu; zakaz pracy w nocy i nadgodzinach w ciąży, delegacja za zgodą; ciężarna na umowie określonej kończącej się po 3. miesiącu ciąży → przedłużenie do porodu (nie dotyczy zastępstwa i próbnej ≤ 1 mies.).",
-              "Zbuduj kalendarz dla obojga rodziców z FIRMA.md: daty, wnioski (terminy 21 dni / 7 dni), kody ZUS RSA (327 macierzyński, 319 rodzicielski, 325 ojcowski, 121 wychowawczy — aktualna lista kodów na zus.pl), dokumenty do akt B, informacja dla przełożonego. Asystent: „Sprawdź daty w @rodzicielskie_kalendarz.md”.",
+              "Ojciec: urlop ojcowski 2 tygodnie do ukończenia 12. miesiąca życia dziecka (100%), w max 2 częściach po tydzień, wniosek 7 dni wcześniej; 9 tygodni rodzicielskiego nieprzenoszalne (70%). Wcześniak/hospitalizacja: uzupełniający urlop macierzyński (art. 180²) do 8 lub 15 tygodni (od 19.03.2025) — kryteria: tydzień ciąży/masa/hospitalizacja.",
+              "Wychowawczy: do 36 miesięcy (35 + 1 dla drugiego rodzica), do końca roku, w którym dziecko kończy 6 lat, bezpłatny, staż ≥ 6 miesięcy, wniosek 21 dni wcześniej, do 5 części, składki emerytalno-rentowe z budżetu (ZUS RSA kod). Obniżenie etatu zamiast wychowawczego (art. 186⁷) — nie niżej niż 1/2 etatu, przez okres, w którym można korzystać z wychowawczego; ochrona przed wypowiedzeniem łącznie do 12 miesięcy.",
+              "Ochrona: przez całą ciążę i do końca rodzicielskiego — zakaz wypowiedzenia i przygotowań do niego (poza upadłością/likwidacją, art. 52 ze zgodą związku); od złożenia wniosku — ochrona najwcześniej 21 dni przed rodzicielskim i 14 dni przed ojcowskim (art. 177 §1¹); zakaz pracy w nocy i nadgodzinach w ciąży, delegacja za zgodą; ciężarna na umowie określonej kończącej się po 3. miesiącu ciąży → przedłużenie do porodu (nie dotyczy zastępstwa i próbnej ≤ 1 mies.).",
+              "Zbuduj kalendarz dla obojga rodziców z FIRMA.md: daty, wnioski (terminy 21 dni / 7 dni), kody ZUS RSA (311 macierzyński, 319 rodzicielski, 338 — 9 nieprzenoszalnych tygodni rodzicielskiego, 327 ojcowski, 121 wychowawczy — aktualna lista kodów na zus.pl), dokumenty do akt B, informacja dla przełożonego. Asystent: „Sprawdź daty w @rodzicielskie_kalendarz.md”.",
           ],
           "sprawdz": "Kalendarz obu rodziców z datami i wnioskami; 9 tygodni nieprzenoszalnych zaznaczone; ochrona opisana; kody ZUS zweryfikowane.",
-          "problemy": ["Wniosek o 81,5% po 21 dniach → zasiłek 100%/70%, wyrównanie tylko gdy ojciec nie wykorzysta — pilnuj terminu 21 dni w komunikacji z pracownicą."]},
+          "problemy": ["Wniosek o 81,5% po 21 dniach → zasiłek 100% za macierzyński i 70% za rodzicielski; terminu nie da się przywrócić — pilnuj 21 dni w komunikacji z pracownicą. Odwrotnie: matka, która pobierała 81,5% i nie wzięła ani dnia zasiłku za rodzicielski, dostaje jednorazowe wyrównanie macierzyńskiego do 100%."]},
          {"id": "k3z4", "tytul": "Nieobecności „krótkie”: opiekuńczy, siła wyższa, okolicznościowe, bezpłatny, art. 188", "opis": "Tabela 12 rodzajów zwolnień z wynagrodzeniem/bez, podstawą, wymiarem, dokumentem i kodem w ewidencji.",
           "czas_min": 60, "pliki": ["nieobecnosci_tabela.md"], "xp": 10,
           "kroki": [
@@ -266,7 +266,7 @@ TYGODNIE_1 = [
               "Ułóż plan 2027 dla 8 pracowników z FIRMA.md: produkcja nie może mieć > 1 operatora na urlopie naraz w sezonie VI–VIII; biuro — kadrowa i księgowa nie razem w pierwszych 10 dniach miesiąca (lista płac). Zaznacz 14-dniowe bloki, urlopy zaległe z 2026, dodatkowy urlop z orzeczenia.",
               "Procedura wniosków: forma (papier/elektroniczna — od 2026 wnioski urlopowe i o urlop bezpłatny mogą być elektroniczne), terminy (wniosek 7 dni wcześniej wg regulaminu — nie dla urlopu na żądanie: zgłoszenie najpóźniej w dniu, przed rozpoczęciem pracy), zatwierdzanie (kierownik → kadry), przesunięcie urlopu (art. 164–167: choroba, wezwanie z urlopu, koszty), ewidencja i kontrola salda.",
               "Dopisz 5 kazusów z odpowiedzią: pracownik zachorował w trakcie urlopu (urlop przerwany, dni do wykorzystania później); urlop na żądanie odmówiony (wyjątkowo, gdy zagraża interesowi firmy); pracownik nie składa wniosków — czy pracodawca może zmusić (zaległy w okresie wypowiedzenia tak; co do zasady uzgodnienie); rozwiązanie umowy 31.03 — ile urlopu (3/12 wymiaru, ekwiwalent za resztę); pracownik przechodzi na 1/2 etatu od 1.07.",
-              "Asystent: „Sprawdź @procedura_urlopy.md pod kątem art. 161–173 KP”. Sobota: quiz 3 i CHECKLISTA etapu 1.",
+              "Asystent: „Sprawdź @procedura_urlopy.md pod kątem art. 161–173 KP”. Sobota: quiz tygodnia i CHECKLISTA etapu 1.",
           ],
           "sprawdz": "Plan bez kolizji produkcji/biura, z blokami 14 dni i zaległymi; procedura z terminami i 5 kazusami rozwiązanymi z artykułami.",
           "problemy": ["Urlop na żądanie wpisany do planu → nie; 4 dni poza planem.", "Ekwiwalent przy 1/2 etatu liczony ze współczynnika pełnego → współczynnik proporcjonalny (10,46)."]},

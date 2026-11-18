@@ -9,16 +9,16 @@ import kadry  # noqa: E402
 
 _OSOBY = [
     # imie, nazwisko, plec, ur, stanowisko, rodzaj, umowa, od, do, etat, zasadnicze, ppk, kup, pit2, kod, flagi, uwagi
-    ("Anna", "Kowalczyk", "K", "1991-05-14", "specjalistka ds. jakości", "pracownik", "próbna 3 mies.", "2026-10-01", "2026-12-31", 1, 6000, True, 250, 300, "011000", {}, "okres próbny; planowana umowa na czas określony"),
+    ("Anna", "Kowalczyk", "K", "1991-05-14", "specjalistka ds. jakości", "pracownik", "próbna 3 mies.", "2026-10-01", "2026-12-31", 1, 6000, False, 250, 300, "011000", {}, "okres próbny; planowana umowa na czas określony; PPK: umowa o prowadzenie do 10.01.2027 (niedziela — zawrzyj do piątku 8.01) — w 2026 bez wpłat"),
     ("Marek", "Zieliński", "M", "1988-02-20", "operator linii (3 zmiany)", "pracownik", "czas określony", "2025-03-01", "2027-02-28", 1, 5400, True, 250, 300, "011000", {}, "praca nocna, system równoważny 12 h"),
     ("Halina", "Mazur", "K", "1972-08-03", "główna księgowa", "pracownik", "nieokreślony", "2009-04-01", "", 1, 7800, False, 300, 300, "011000", {}, "54 lata — chorobowe 14 dni; dojeżdża (KUP 300)"),
-    ("Piotr", "Nowak", "M", "1985-11-30", "magazynier", "pracownik", "nieokreślony", "2019-09-01", "", 0.5, 2500, False, 250, 0, "011000", {}, "1/2 etatu; PIT-2 złożony u drugiego pracodawcy"),
+    ("Piotr", "Nowak", "M", "1985-11-30", "magazynier", "pracownik", "nieokreślony", "2019-09-01", "", 0.5, 2500, False, 250, 0, "011000", {}, "1/2 etatu; u drugiego pracodawcy 1/4 etatu za 1 300 zł i tam złożył PIT-2; łącznie 3 800 < 4 806 → bez FP (oświadczenie w aktach)"),
     ("Katarzyna", "Wójcik", "K", "1995-06-18", "pracownik produkcji", "pracownik", "nieokreślony", "2023-01-16", "", 1, 4806, True, 250, 300, "011000", {}, "pensja minimalna; dziecko 5 lat"),
-    ("Tomasz", "Lis", "M", "1979-01-09", "dyrektor produkcji", "pracownik", "nieokreślony", "2015-05-01", "", 1, 14000, True, 250, 300, "011000", {}, "przekracza próg 120 000 zł w listopadzie"),
-    ("Ewa", "Sobczak", "K", "1983-09-25", "specjalistka ds. administracji", "pracownik", "nieokreślony", "2021-03-01", "", 1, 5200, True, 250, 300, "011002", {}, "orzeczenie — stopień umiarkowany (7 h / 35 h, 10 dni dodatkowego urlopu)"),
+    ("Tomasz", "Lis", "M", "1979-01-09", "dyrektor produkcji", "pracownik", "nieokreślony", "2015-05-01", "", 1, 14000, True, 250, 300, "011000", {}, "z PPK pracodawcy przekracza próg 120 000 zł dochodu w październiku"),
+    ("Ewa", "Sobczak", "K", "1983-09-25", "specjalistka ds. administracji", "pracownik", "nieokreślony", "2021-03-01", "", 1, 5200, True, 250, 300, "011002", {}, "orzeczenie — stopień umiarkowany: 10 dni dodatkowego urlopu, przerwa 15 min; na jej wniosek lekarz zgodził się na normy ogólne 8 h / 40 h (art. 16 ustawy o rehabilitacji; bez zgody: 7 h / 35 h, bez nocy i nadgodzin)"),
     ("Jakub", "Krawczyk", "M", "2002-03-03", "pakowacz", "pracownik", "nieokreślony", "2026-07-01", "", 1, 4900, True, 250, 300, "011000", {"mlody": True}, "24 lata — ulga dla młodych"),
-    ("Michał", "Dąbrowski", "M", "2004-04-12", "zlecenie: pomoc w magazynie", "zlecenie", "zlecenie", "2026-09-01", "", 0, 2000, False, 0, 0, "", {"student": True, "mlody": True}, "student 22 l. — bez ZUS, ulga dla młodych; 31,40 zł/h × ok. 64 h"),
-    ("Agnieszka", "Pawlak", "K", "1990-12-02", "zlecenie: obsługa sklepu firmowego", "zlecenie", "zlecenie", "2026-02-01", "", 0, 3000, False, 0, 0, "041100", {}, "etat 5 000 zł u innego pracodawcy → ze zlecenia tylko zdrowotna"),
+    ("Michał", "Dąbrowski", "M", "2004-04-12", "zlecenie: pomoc w magazynie", "zlecenie", "zlecenie", "2026-09-01", "", 0, 2000, False, 0, 0, "", {"student": True, "mlody": True}, "student 22 l. — bez ZUS, ulga dla młodych; 2 000 zł za 60 h (33,33 zł/h)"),
+    ("Agnieszka", "Pawlak", "K", "1990-12-02", "zlecenie: obsługa sklepu firmowego", "zlecenie", "zlecenie", "2026-02-01", "", 0, 3000, False, 0, 0, "041100", {"inny_tytul": True}, "etat 5 000 zł u innego pracodawcy (oświadczenie w aktach) → ze zlecenia tylko zdrowotna: ZZA; PIT-2 ma u pracodawcy; 25 zł/h — do aneksu"),
     ("Robert", "Król", "M", "1976-07-07", "zlecenie: kierowca dostaw", "zlecenie", "zlecenie", "2024-06-01", "", 0, 3500, True, 0, 300, "041100", {}, "bez innego tytułu — pełne składki, dobrowolne chorobowe; PPK tak"),
     ("Joanna", "Michalska", "K", "1987-10-21", "dzieło: projekt etykiet", "dzieło", "umowa o dzieło", "2026-11-02", "2026-11-30", 0, 2500, False, 0, 0, "", {}, "RUD w 7 dni od zawarcia; KUP 50% (prawa autorskie)"),
 ]
@@ -30,7 +30,7 @@ for i, (im, nz, pl, ur, st, rodz, um, od, do, et, zas, ppk, kup, pit2, kod, flag
                         "kod": kod, "uwagi": uw, "dokumenty": [], **flagi})
 
 FIRMA_REGULAMINY = [
-    "Wypłata wynagrodzenia do 10. dnia następnego miesiąca przelewem; gdy 10. jest dniem wolnym — dzień roboczy wcześniej.",
+    "Wypłata wynagrodzenia do 10. dnia następnego miesiąca przelewem; gdy 10. przypada w sobotę, niedzielę lub święto — w poprzedzającym dniu roboczym.",
     "Biuro: podstawowy system czasu pracy, 1-miesięczny okres rozliczeniowy, 8:00–16:00. Produkcja i logistyka: równoważny do 12 h, 3-miesięczny okres rozliczeniowy, 3 zmiany (6–18, 18–6), pora nocna 22:00–6:00.",
     "Dodatek nocny ustawowy (20% stawki godzinowej z minimalnego wynagrodzenia). Nadgodziny: dodatki ustawowe 50/100% lub czas wolny.",
     "Premia regulaminowa do 10% wynagrodzenia zasadniczego za wynik miesiąca — POMNIEJSZANA proporcjonalnie za dni choroby (wlicza się do podstawy zasiłku).",
@@ -38,10 +38,11 @@ FIRMA_REGULAMINY = [
     "Składka wypadkowa firmy: 1,20% (stopa ustalona przez ZUS na podstawie IWA, obowiązuje od 1.04.2026 do 31.03.2027).",
     "Firma jest płatnikiem zasiłków (na 30.11.2025 zgłaszała 66 osób do ubezpieczenia chorobowego).",
     "ZFŚS prowadzony (62 pracowników = 58,5 etatu); regulamin ZFŚS z kryterium dochodu na osobę w rodzinie; komisja socjalna 3-osobowa.",
-    "PPK w instytucji „PFR TFI” (ćwiczeniowo): wpłaty podstawowe 2% / 1,5%; brak wpłat dodatkowych.",
+    "Osoby z orzeczeniem o niepełnosprawności: 2 (obie stopień umiarkowany, pełne etaty) — Ewa Sobczak i operator spoza ósemki z Warsztatu; do wskaźnika PFRON liczysz 2,0 etatu.",
+    "PPK w instytucji „PFR TFI” (ćwiczeniowo): wpłaty podstawowe 2% / 1,5%; brak wpłat dodatkowych. Wpłaty przekazywane do instytucji w dniu wypłaty wynagrodzeń — przychód z wpłaty pracodawcy powstaje w tym samym miesiącu.",
     "Regulamin pracy i wynagradzania z 1.03.2025; brak związków zawodowych — przedstawiciel załogi wybrany 10.02.2025; benefity (karta sportowa, pakiet medyczny) współfinansowane przez pracownika (1 zł) wg regulaminu wynagradzania.",
-    "Kategorie zaszeregowania: I pracownicy produkcji i magazynu, II operatorzy i kierowcy, III specjaliści, IV kierownicy, V dyrektorzy — widełki w siatce płac (tydzień 11).",
+    "Kategorie zaszeregowania: I pracownicy produkcji i magazynu, II operatorzy i kierowcy, III specjaliści, IV kierownicy, V dyrektorzy — widełki w siatce płac (tydzień 14).",
 ]
 
 PARAMETRY = dict(kadry.DOMYSLNE, rok=2026, wypadkowa=1.20)
-NARZEDZIA = ["firma", "place", "zasilki", "urlopy", "czas", "potracenia", "delegacje", "zus", "pit", "przepisy"]
+NARZEDZIA = ["firma", "place", "zasilki", "urlopy", "czas", "potracenia", "delegacje", "zus", "pit", "formularze", "przepisy"]

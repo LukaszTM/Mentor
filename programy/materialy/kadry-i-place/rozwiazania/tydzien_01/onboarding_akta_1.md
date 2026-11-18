@@ -18,7 +18,7 @@ Pierwsze wiersze: „do 29.09 | skierowanie na badania | A | art. 229 §4”; �
 |---|---|---|---|
 | do 29.09.2026 | skierowanie na badania wstępne | A | art. 229 §4 KP |
 | do 30.09 | orzeczenie lekarskie (brak przeciwwskazań) | A | art. 229 §4 |
-| 30.09 | umowa o pracę na okres próbny (z planowanym czasem kolejnej umowy) | B | art. 29 §1–2, §1¹ |
+| 30.09 | umowa o pracę na okres próbny (z planowanym czasem kolejnej umowy) | B | art. 29 §1 pkt 6, §2 |
 | 1.10 | instruktaż BHP ogólny + stanowiskowy, karta szkolenia | B | art. 237³ §2 |
 | 1.10 | zapoznanie z regulaminem pracy i wynagradzania (oświadczenie) | B | art. 104³ |
 | 1.10 | PIT-2, oświadczenie KUP, informacja RODO, informacja PPK | B | ustawa PIT art. 31a; RODO art. 13 |

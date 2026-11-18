@@ -118,6 +118,24 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 - Asystent Offline: komenda `podpowiedź` / `/podpowiedz [nr]` odkrywa kolejne `wskazowki` ćwiczenia z ostatnio otwartej lekcji, a na końcu `rozwiazanie`.
 - Powtórka etapu to zwykła lekcja (np. `id: "powtorka_etap_2"`) dołączona do ostatniego tygodnia etapu, z tymi samymi blokami.
 
+### Sprawdzanie automatyczne ćwiczeń: `odpowiedzi` (opcjonalne pole ćwiczenia)
+
+```json
+{"rodzaj": "prowadzone", "tresc": "…", "wynik": "…", "rozwiazanie": "…",
+ "odpowiedzi": [
+   {"id": "netto", "etykieta": "Netto do wypłaty (zł)", "typ": "kwota", "wartosc": 3893.29, "tol": 0.01,
+    "bledy": [{"wartosc": 4011.29, "komunikat": "to netto bez PPK — pracownik jest uczestnikiem"}]},
+   {"id": "termin", "etykieta": "Ostatni dzień na ZUA", "typ": "data", "wartosc": "2026-10-08"},
+   {"id": "kod", "etykieta": "Kod trybu ZWUA", "typ": "tekst", "wartosc": ["23R"]},
+   {"id": "odprawa", "etykieta": "Czy należy się odprawa?", "typ": "wybor", "opcje": ["tak", "nie"], "wartosc": "nie"}]}
+```
+
+- Typy: `kwota` (liczba z groszami; tolerancja domyślna 0,01), `liczba` (dokładnie albo z `tol`), `data` (`RRRR-MM-DD`; uczeń może wpisać `28.02.2027`),
+  `tekst` (kod, artykuł — porównanie bez wielkości liter, spacji i znaków przestankowych; `wartosc` może być listą; `zawiera`: fragmenty, które muszą wystąpić), `wybor` (jedna z `opcje`).
+- Mentor pokazuje pod ćwiczeniem pola „Twoje odpowiedzi”, ocenia każde osobno (✔/✘) i **nie ujawnia** poprawnej wartości; `bledy` to typowe pomyłki z podpowiedzią,
+  skąd się wzięły. Pełny `wynik` odsłania się po komplecie albo po przycisku „Pokaż klucz” (aktywny po 2 próbach). Komplet bez podglądania klucza: +2 XP.
+- Stan (wpisy, próby, wynik) zapisuje się per program w `mentor_dane.json` → `odpowiedzi["<id lekcji>:<nr ćwiczenia>"]`. Logika: `odpowiedzi.py` (bez tkintera), widżet: `odpowiedzi_ui.py`.
+
 ## Pola opcjonalne (z wartościami domyślnymi)
 
 | Pole | Co to |
@@ -151,6 +169,8 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `pojecia` | `{"terminal": "definicja"}` — dla Asystenta Offline („co to jest…”) |
 | `bledy` | `{"TypeError": {co, pytanie}}` — tłumaczenie błędów; brak = wbudowany słownik błędów Pythona |
 | `pytania_rekrutacyjne` | `[["kategoria", "pytanie", "wzorzec"]]` — dla `/rekrutacja` |
+| `formularze` | ćwiczenia na wzorach prawdziwych druków (Warsztat → Formularze; narzędzie `"formularze"` w `narzedzia`): `[{"id", "nazwa", "wzor", "lekcja", "scenariusz", "sekcje": [{"tytul": "III.B. …", "pola": [pola jak w `odpowiedzi`]}], "po": "komentarz po komplecie"}]`; stan w `odpowiedzi["formularz:<id>"]`, zapis wypełnionego druku do `formularze/<id>.md` w projekcie |
+| `aktualizacje` | kalendarz aktualizacji kursu: `[{"data": "2027-01-01", "temat": "…", "co": "co sprawdzić", "gdzie": "źródło", "lekcje": ["id"]}]` — Panel pokazuje kartę „Aktualność przepisów” (termin minął albo mija w 30 dni), Ściąga pełną listę z przyciskiem „Sprawdzone” |
 
 Walidacja: program z brakującym polem obowiązkowym, powtórzonym `id` zadania, lekcją bez `id`/`nazwa`/`wyjasnienie`
 lub pytaniem z błędnym `odp` nie zostanie wczytany — Mentor wypisze, co poprawić.

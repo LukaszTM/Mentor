@@ -21,7 +21,7 @@ Wniosek: różnica wynika z obiektywnych, neutralnych kryteriów (staż, praca n
 ```
 
 ## Oczekiwany wynik
-M: średnia 5 230, mediana 5 200; K: średnia 5 010, mediana 5 000; luka 4,2% (średnia) / 3,8% (mediana) — poniżej 5%, ale: po korekcie o staż (M +1,5 roku → ok. 150 zł) i nocne (M +60 zł) zasadnicze M 5 020 vs K 4 990 → 0,6% — w granicach błędu; działanie: siatka i monitoring, bez wyrównań; dokumentacja uzasadnienia.
+M: średnia 5 230, mediana 5 200; K: średnia 5 010, mediana 5 000; luka 4,2% (średnia) / 3,8% (mediana) — poniżej 5%, ale: po odjęciu wpływu stażu (M +1,5 roku → ok. 150 zł) i nocnych (M 110 zł, K 50 zł) zostaje 4 970 vs 4 960 → 10 zł (0,2%) — brak luki w zasadniczym; działanie: siatka i monitoring, bez wyrównań; dokumentacja uzasadnienia.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

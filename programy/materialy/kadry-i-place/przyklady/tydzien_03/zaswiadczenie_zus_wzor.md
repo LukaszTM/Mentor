@@ -14,4 +14,4 @@ Ubezpieczona: Ewa Sobczak, PESEL 83092510121
 | 2019-03-01 | 2021-02-28 | działalność — preferencyjne (05 70) | — | opłacone |
 | 2021-03-01 | nadal | pracownik (01 10) | AGRO-MLEKO sp. z o.o. | opłacone |
 
-Okresy wliczane do stażu (art. 302¹ KP): te z opłaconymi składkami emerytalno-rentowymi; okresy równoległe — raz; ulga na start — nie.
+Okresy wliczane do stażu (art. 302¹ KP): te z opłaconymi składkami emerytalno-rentowymi; okresy równoległe — raz (§9); ulga na start — też się wlicza (§4 pkt 1), a potwierdza ją zaświadczenie ZUS o zgłoszeniu do ubezpieczenia zdrowotnego.

@@ -22,12 +22,13 @@ Prowadzisz ją dla każdego pracownika odrębnie, papierowo albo elektronicznie.
 - czas pracy młodocianego przy pracach wzbronionych.
 ### Dokumenty towarzyszące
 Wnioski o wyjścia prywatne. Wnioski i polecenia nadgodzin. Zgody opiekunów dzieci do 8 lat i ciężarnych na delegację. Wnioski o czas wolny. Harmonogramy. Rozkłady ruchome.
-Dla zadaniowego czasu pracy i kierowników komórek nie ewidencjonujesz godzin — tylko nieobecności i dni wolne.
+Godzin pracy nie ewidencjonujesz tylko dla trzech grup (art. 149 §2): zadaniowy czas pracy, osoby zarządzające zakładem w imieniu pracodawcy, pracownicy z ryczałtem za nadgodziny albo za porę nocną. Nieobecności i dni wolne ewidencjonujesz zawsze.
+Kierownik wyodrębnionej komórki (art. 151⁴) nie dostaje dodatku za nadgodziny, ale jego godziny ewidencjonujesz normalnie.
 ### Lista obecności to nie ewidencja
 Lista obecności jest narzędziem dyscypliny. Nie jest obowiązkowa.
 Ewidencja musi pozwolić policzyć wynagrodzenie. To pierwszy dokument, o który prosi PIP.
 Brak ewidencji w sądzie (sprawy o nadgodziny) daje domniemanie na korzyść pracownika.
-Przechowywanie: jak akta — 10 lat po ustaniu zatrudnienia (dokumentacja z 2019+). Pracownik ma prawo wglądu i kopii.
+Przechowywanie: ewidencja jest częścią dokumentacji pracowniczej — okres zatrudnienia i 10 lat od końca roku, w którym ustał stosunek pracy (zatrudnieni od 2019 r.; wcześniejsze umowy — jak akta, tydzień 1). Pracownik ma prawo wglądu i kopii.
 ### Kody nieobecności w praktyce
 | Kod | Nieobecność | Wymiar / płatność |
 |---|---|---|
@@ -58,7 +59,7 @@ Karta — grudzień 2026, operator (fragment):
 03.12 | 18:00–06:00 | 12 h | nocne 8 h (22–6)
 05.12 | — | UW 12 h (urlop = godziny z planu)
 08–09.12 | — | CH (e-ZLA)
-12.12 | 06:00–20:00 | 14 h | nadgodziny dobowe 2 h (polecenie nr 7/12)
+12.12 | 06:00–19:00 | 13 h | nadgodzina dobowa 1 h (polecenie nr 7/12)
 ```
 
 1. „01.12 | 06:00–18:00 | 12 h | nocne 0 | zmiana wg grafiku” — godzina rozpoczęcia i zakończenia jest obowiązkowa od 2019 r. (§6 pkt 1 lit. a); 12 h to przedłużony wymiar dobowy z równoważnego — nie nadgodziny.
@@ -66,13 +67,13 @@ Karta — grudzień 2026, operator (fragment):
 3. „03.12 | 18:00–06:00 | 12 h | nocne 8 h (22–6)” — godziny nocne liczysz z pory nocnej z regulaminu (22–6): 8 z 12 h; to podstawa dodatku nocnego.
 4. „05.12 | UW 12 h” — urlop w dniu, w którym pracownik miał pracować 12 h, pomniejsza pulę urlopową o 12 h (art. 154² §1), nie o 8.
 5. „08–09.12 | CH (e-ZLA)” — choroba z numerem e-ZLA; dni te pomniejszają pensję przez 30 i są źródłem RSA.
-6. „12.12 | 06:00–20:00 | 14 h | nadgodziny dobowe 2 h (polecenie nr 7/12)” — polecenie pracy nadliczbowej (ustne wystarczy, ale dokumentuj) dołączasz do ewidencji (§6 pkt 2); 2 h ponad 12 = nadgodziny dobowe.
+6. „12.12 | 06:00–19:00 | 13 h | nadgodzina dobowa 1 h (polecenie nr 7/12)” — polecenie pracy nadliczbowej (ustne wystarczy, ale dokumentuj) dołączasz do ewidencji (§6 pkt 1 lit. e); 1 h ponad 12 = nadgodzina dobowa. Więcej niż 13 h pracy w dobie nie wolno — musi zostać 11 h nieprzerwanego odpoczynku (art. 132 §1).
 
 ✔ **Oczekiwany wynik:** karta, z której da się odczytać każdą godzinę pracy, każdą nieobecność z kodem i każde polecenie nadgodzin — materiał do listy płac i do kontroli PIP.
 
 ## 3 · Jak to uruchomić
 1. Otwórz cwiczenia/tydzien_03/ewidencja_czasu_1.md — pusta karta na grudzień 2026 z kolumnami: data | od–do | godziny | nocne | nadgodziny | kod nieobecności | uwagi/wnioski.
-2. Grafik do przepisania jest w przyklady/tydzien_02/grafik_grudzien_2026.md (operator, zmiany 6–18 / 18–6, rotacja).
+2. Grafik do przepisania jest w przyklady/tydzien_03/grafik_grudzien_2026.md (operator, zmiany 6–18 / 18–6, rotacja).
 3. Po wypełnieniu policz sumę godzin i porównaj z wymiarem (Warsztat → Czas pracy → 12/2026 = 160 h).
 4. Oczekiwany wynik: suma godzin pracy + urlop + choroba (w godzinach z planu) = 160 h; nadgodziny i nocne w osobnych kolumnach.
 
@@ -83,10 +84,10 @@ Karta — grudzień 2026, operator (fragment):
 4. Zamykaj miesiąc do 5. dnia; przechowuj jak akta (10 lat).
 
 ## 4 · Ćwiczenie prowadzone
-Przepisz grafik z przyklady/tydzien_02/grafik_grudzien_2026.md do karty ewidencji (1–15.12) tak jak w demonstracji: godziny od–do, nocne, kody dni wolnych; dopisz zdarzenia: 5.12 urlop (UW), 8–9.12 choroba (CH), 12.12 nadgodziny 2 h. Plik: cwiczenia/tydzien_03/ewidencja_czasu_1.md. Czas: 25 minut.
+Przepisz grafik z przyklady/tydzien_03/grafik_grudzien_2026.md do karty ewidencji (1–15.12) tak jak w demonstracji: godziny od–do, nocne, kody dni wolnych; dopisz zdarzenia: 5.12 urlop (UW), 8–9.12 choroba (CH), 12.12 jedna nadgodzina (praca 6:00–19:00). Plik: cwiczenia/tydzien_03/ewidencja_czasu_1.md. Czas: 25 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_03/ewidencja_czasu_1.md` · rozwiązanie: `rozwiazania/tydzien_03/ewidencja_czasu_1.md`
-✔ Poprawny wynik wygląda tak: 15 wierszy; nocne tylko przy zmianach 18–6 (po 8 h); UW 12 h; CH 2 dni; nadgodziny 2 h z numerem polecenia; dni wolne z kodem W5/WN/WŚ.
+✔ Poprawny wynik wygląda tak: 15 wierszy; nocne tylko przy zmianach 18–6 (po 8 h); UW 12 h; CH 2 dni; 1 nadgodzina dobowa z numerem polecenia (13 h pracy = 11 h odpoczynku zachowane); dni wolne z kodem W5/WN/WŚ.
 
 ## 5 · Ćwiczenie samodzielne
 Pracownik biura twierdzi po roku, że „codziennie zostawał do 17:30”, a firma prowadziła ewidencję tylko jako „8 h” bez godzin od–do i bez poleceń nadgodzin. Zdecyduj: (a) kto musi udowodnić godziny w sądzie i dlaczego, (b) ile firma może stracić (szacunek za 12 miesięcy przy 6 000 zł), (c) jakie 3 zmiany w ewidencji wprowadzasz od jutra. Plik: cwiczenia/tydzien_03/ewidencja_czasu_2.md. Czas: 15 minut.
@@ -121,7 +122,7 @@ Pracownik biura twierdzi po roku, że „codziennie zostawał do 17:30”, a fir
 - **Czy lista obecności zastępuje ewidencję czasu pracy?**
   - Nie — ewidencja musi zawierać godziny, nadgodziny, nocne, dyżury, nieobecności; lista obecności to tylko potwierdzenie przybycia.
 - **Dla kogo nie ewidencjonujesz godzin pracy?**
-  - Zadaniowy czas pracy, kierownicy wyodrębnionych komórek, ryczałt za nadgodziny/nocne — ale nieobecności i dni wolne tak.
+  - Zadaniowy czas pracy, zarządzający zakładem w imieniu pracodawcy, ryczałt za nadgodziny/nocne (art. 149 §2) — ale nieobecności i dni wolne tak. Kierownikom wyodrębnionych komórek godziny ewidencjonujesz.
 - **Czy odpracowanie wyjścia prywatnego jest nadgodziną?**
   - Nie (art. 151 §2¹), jeśli na pisemny wniosek pracownika i bez naruszenia odpoczynku.
 

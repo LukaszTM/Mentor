@@ -24,7 +24,7 @@ MIARY: rotacja w okresie próbnym (cel < 15%), ankieta 30/90 dni, czas do samodz
 ✔ Oczekiwany wynik: plan wdrożenia w tabeli: data | krok | podstawa (przepis KP / dobra praktyka CIPD-ACAS) | dokument do akt | odpowiedzialny — z 6 terminami ustawowymi i 5 elementami dobrej praktyki.
 
 ## Jak to uruchomić
-1. Prompty → Szablony → „Checklista onboardingu” → skopiuj jako onboarding_30_60_90.md; dodaj kolumnę „podstawa”.
+1. Prompty → Szablony → „Onboarding — checklista z terminami i częścią akt” → skopiuj jako onboarding_30_60_90.md; dodaj kolumnę „podstawa”.
 2. Otwórz cwiczenia/tydzien_02/praktyki_hr_zagranica_1.md — tabela kroków ACAS do przetłumaczenia i zmapowania.
 3. Warsztat → Przepisy → wpisz „108”, „109”, „112” — kary porządkowe; „94³” — procedura.
 4. Oczekiwany wynik: dwie tabele (skarga wg ACAS → procedura PL; dyscyplina wg ACAS → art. 108–113) i plan 30–60–90 z podstawami.

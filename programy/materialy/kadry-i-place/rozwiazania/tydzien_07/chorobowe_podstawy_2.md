@@ -15,7 +15,7 @@ Szkic: stawka 6 730,62/30 = 224,35 × 80% = 179,48; luty: 14 × 179,48 + 12 × 1
 ## Pełne rozwiązanie
 ```
 (a) Art. 92 §1 pkt 1 KP: pracownik, który ukończył 50 lat — wynagrodzenie chorobowe za 14 dni w roku, licząc od roku następnego po roku 50. urodzin (ur. 1972 → 50 lat w 2022 → od 2023 limit 14). Luty 2–27.02 = 26 dni: 14 dni chorobowego (14 × 179,48 = 2 512,72) + 12 dni zasiłku (12 × 179,48 = 2 153,76). Listopad 2–20.11 = 19 dni: pula wyczerpana → 19 dni zasiłku = 3 410,12.
-(b) Pobyt w szpitalu: od 2022 r. zasiłek 80% (art. 11 ust. 1a uchylony — wcześniej 70%); 100% tylko w ciąży, po wypadku w drodze/w pracy, dawca.
+(b) Pobyt w szpitalu: od 2022 r. zasiłek 80% (art. 11 ust. 1 ustawy zasiłkowej w brzmieniu od 1.01.2022 — wcześniej 70%); 100% tylko w ciąży, po wypadku w drodze/w pracy, dawca.
 (c) Przerwa między 27.02 a 2.11 = 247 dni > 60 → nowy okres zasiłkowy od 2.11 (liczony od zera: 19/182), niezależnie od tego, czy to ta sama choroba.
 (d) Płatnikiem zasiłków jest pracodawca zgłaszający na 30.11 poprzedniego roku > 20 osób do ubezpieczenia chorobowego (art. 61 ust. 1 pkt 1 ustawy zasiłkowej) — AGRO-MLEKO (66) wypłaca z listą płac w terminie wypłaty, wykazuje w RSA (kod 313, kwota) i odlicza od składek w DRA. Gdyby zgłaszała ≤ 20 — wysyłałaby Z-3 w eZUS, a ZUS wypłacałby w 30 dni.
 ```

@@ -6,20 +6,20 @@ Tydzień 15 · lekcja 48 z 48 · ≈ 65 min
 **Po co mi to?** etap 4 domyka kurs: wszystko, czego nauczyłeś się o zatrudnieniu, czasie pracy, płacach i ZUS, wraca w rozliczeniu końcowym i w kontroli — to Twój projekt końcowy (audyt firmy).
 
 ## Czego potrzebujesz
-- Zaliczone testy lekcji tygodni 10–11 i powtórek etapów 0–3.
+- Zaliczone testy lekcji tygodni 13–15 i powtórek etapów 0–3.
 - Pliki: pisma rozwiązujące, świadectwo, procedury (mobbing, sygnaliści, zdalna), teczka kontrolna, audyt 60 pytań.
 - Cały Warsztat.
 
 ## 1 · Wyjaśnienie od podstaw
 ### Ustanie zatrudnienia
 - Tryby art. 30; okres ze stażu zakładowego (2 tyg./1/3 mies.; próbna 3 dni/1 tydz./2 tyg.); koniec: sobota / ostatni dzień miesiąca; przyczyna konkretna (także określona); pouczenie 21 dni; ochrona art. 41, 39 (4 lata), 177; art. 52 — 1 miesiąc od wiedzy, L4 nie chroni.
-- Grupowe: próg 10/10%/30 w 30 dniach (porozumienia ≥ 5 liczą się); 20 dni + PUP; odprawy 1/2/3 (limit 15 × min.), bez ZUS, z PIT; ochrona przy grupowym tylko zmieniające + dodatek.
+- Grupowe: próg 10/10%/30 w 30 dniach (porozumienia ≥ 5 liczą się); konsultacje, porozumienie w 20 dni albo regulamin (bez związków zawsze regulamin), dwa zawiadomienia PUP; odprawy 1/2/3 wg stażu na dzień rozwiązania (limit 15 × min.), bez ZUS, z PIT; osobom z art. 39 i 177 — w trybie grupowym i indywidualnym — tylko wypowiedzenie zmieniające + dodatek.
 - Świadectwo w dniu ustania (bez przyczyny; urlop z ekwiwalentem; 33 dni; nieskładkowe; zajęcia); sprostowanie 14/7/14 dni; rozliczenie końcowe: pensja za część, ekwiwalent (termin wypłaty / 10 dni), odprawa, PIT bez oświadczeń, ZWUA 7 dni, PIT-11 na wniosek 14 dni.
 ### Compliance 2026/2027
-- Mobbing: nowa definicja od 5.11.2026 (uporczywe nękanie, bez wymogu skutku zdrowotnego), odszkodowanie ≥ 6 × min., procedura do 5.05.2027; dyskryminacja — kryterium, ciężar dowodu na pracodawcy; nierówne traktowanie — bez kryterium.
-- Jawność: obowiązuje — widełki (24.12.2025), zakaz pytań o zarobki; projekt UC127 — informacja 2 mies., raportowanie, luka > 5%; luka liczona w kategoriach, rozkładana na kryteria obiektywne.
-- Sygnaliści (≥ 50): procedura, 7 dni / 3 mies., rejestr, ochrona; zdalna: wniosek wiążący (dziecko do 4 lat), 7 dni, porozumienie, ryczałt z kalkulacją; monitoring/trzeźwość: regulamin, 2 tygodnie, retencja; RODO: upoważnienia, RCPD, powierzenia, retencja, 72 h.
-- Kontrola: PIP bez zapowiedzi (protokół — 7 dni zastrzeżeń; nakaz płacowy natychmiast; wystąpienie 30 dni; mandat do 10 000 / sąd 2 000–60 000 od 8.07.2026; decyzja o ustaleniu stosunku pracy); ZUS/US z zawiadomieniem 7–30 dni (zastrzeżenia 14 dni; decyzja — odwołanie 1 mies.); teczka kontrolna, książka kontroli, audyt roczny.
+- Mobbing: nowa definicja od 5.11.2026 (uporczywe nękanie, bez wymogu skutku zdrowotnego), zadośćuczynienie ≥ 6 × min. albo odszkodowanie, bez ustawowego zwolnienia pracodawcy „za procedurę”, regulamin do 5.05.2027; dyskryminacja — kryterium, ciężar dowodu na pracodawcy; nierówne traktowanie — bez kryterium.
+- Jawność: obowiązuje — widełki (24.12.2025), zakaz pytań o zarobki; projekt UC127 — informacja w 30 dni (dyrektywa: do 2 mies.), raportowanie, luka ≥ 5%; luka liczona w kategoriach, rozkładana na kryteria obiektywne.
+- Sygnaliści (≥ 50): procedura, 7 dni / 3 mies., rejestr, ochrona; zdalna: wniosek wiążący (dziecko do 4 lat), odmowa z przyczyną w 7 dni roboczych, porozumienie, ryczałt z kalkulacją; monitoring/trzeźwość: regulamin, 2 tygodnie, retencja; RODO: upoważnienia, RCPD, powierzenia, retencja, 72 h.
+- Kontrola: PIP bez zapowiedzi (protokół — 7 dni zastrzeżeń; nakaz płacowy natychmiast; wystąpienie 30 dni; mandat 2 000–5 000, recydywa do 10 000 / sąd 2 000–60 000 od 8.07.2026; decyzja okręgowego inspektora o ustaleniu stosunku pracy — odwołanie w miesiąc); ZUS/US z zawiadomieniem 7–30 dni (zastrzeżenia 14 dni; decyzja — odwołanie 1 mies.); teczka kontrolna, książka kontroli, audyt roczny.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Audyt firmy — jak z 60 pytań zrobić plan naprawczy, który obroni się przed PIP i ZUS**
@@ -80,7 +80,7 @@ Napisz raport z audytu dla zarządu (1 strona, max 12 zdań + tabela 5 ryzyk): k
 
 ## Pułapki
 - Powtórka końcowa to audyt — nie czytanie; każda lekcja kursu ma w nim jedno pytanie.
-- Jeśli nie wiesz, gdzie w Warsztacie sprawdzić daną liczbę — wróć do lekcji „Narzędzia kadrowca”.
+- Jeśli nie wiesz, gdzie w Warsztacie sprawdzić daną liczbę — wróć do lekcji „Narzędzia: eZUS/PUE, Płatnik, e-Urząd Skarbowy, program kadrowy”.
 
 ## Dodatkowe zadania
 1. Powtórz testy 7 lekcji etapu 4 i 4 powtórek etapów 0–3.
@@ -90,8 +90,8 @@ Napisz raport z audytu dla zarządu (1 strona, max 12 zdań + tabela 5 ryzyk): k
 ## Sprawdzenie — odpowiedz na głos, potem rozwiń
 - **Jaki środek PIP jest wykonalny natychmiast i co grozi za jego niewykonanie?**
   - Nakaz wypłaty wynagrodzenia — odwołanie nie wstrzymuje; grzywna w celu przymuszenia i wykroczenie.
-- **Co musi wykazać pracodawca, by nie odpowiadać za mobbing kierownika?**
-  - Że rzeczywiście przeciwdziałał: procedura, szkolenia, reakcja na zgłoszenie — udokumentowane.
+- **Czy procedura antymobbingowa zwalnia pracodawcę z odpowiedzialności za mobbing kierownika?**
+  - Nie — ustawa z 19.06.2026 nie zawiera takiego zwolnienia: pracodawca płaci zadośćuczynienie (≥ 6 × minimalne) i ma regres wobec sprawcy. Procedura, szybka reakcja i dokumentacja przerywają uporczywość, są dowodem w sądzie i podstawą regresu.
 - **Od czego zależy, czy zwolnienie 9 + 4 osób jest grupowe?**
   - Czy porozumienia z inicjatywy pracodawcy liczą się (≥ 5) i czy suma w 30 dniach ≥ 10 (firma < 100).
 

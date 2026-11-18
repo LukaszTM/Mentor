@@ -21,7 +21,7 @@ Bilans: niedopłaty 30 + 915 = 945 zł; różnica między listami a przelewami w
 ```
 
 ## Oczekiwany wynik
-(1) zasiłek bez KUP: zaliczka powinna być wyższa o 12% × 250 = 30 zł — niedopłata 30 (korekta listy, dopłata z odsetkami, PIT-11 Zielińskiego); (2) ryczałt 12% × 180 = 21,60 → 22 zł należy do PIT-8AR, nie do PIT-4R — przenosisz (PIT-4R o 22 mniej, PIT-8AR o 22 więcej; wpłata była — kwoty się nie zmieniają); (3) zwrot składek 2 860,04 → zaliczka 32% × 2 860 = 915,20 → 915 — brak = niedopłata 915; łącznie wyjaśnione: +30 + 915 − 22 = 923 ≠ 470 → różnica 470 nie wynika tylko z tych trzech; sprawdź listy dodatkowe i korekty; wniosek: nie „domykaj” PIT-4R na siłę, znajdź wszystkie pozycje.
+(1) zasiłek bez KUP: zaliczka powinna być wyższa o 12% × 250 = 30 zł — niedopłata 30 (korekta listy, dopłata z odsetkami, PIT-11 Zielińskiego); (2) ryczałt 12% × 180 = 21,60 → 22 zł należy do PIT-8AR, nie do PIT-4R — przenosisz (PIT-4R o 22 mniej, PIT-8AR o 22 więcej; wpłata była — kwoty się nie zmieniają); (3) zwrot składek 2 860,04 → zaliczka 32% × 2 860 = 915,20 → 915 — brak = niedopłata 915; (1) i (3) to niedopłaty 30 + 915 = 945 zł — więcej niż różnica 470, a (2) jest dla przelewów neutralne → różnica 470 nie wynika tylko z tych trzech pozycji; sprawdź listy dodatkowe i korekty; wniosek: nie „domykaj” PIT-4R na siłę, znajdź wszystkie pozycje.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

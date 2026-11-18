@@ -53,22 +53,26 @@ Wpłata = 40,65% przeciętnego wynagrodzenia (GUS, poprzedni kwartał) × (6% ×
 | INF-1 (zwolnieni — wskaźnik co najmniej 6%) | do 20. |
 Placówki edukacyjne — próg 2%.
 Obniżenie wpłaty: zakup usług lub produkcji od firm uprawnionych (informacja o kwocie obniżenia na fakturze; do 50% wpłaty); zatrudnianie osób ze schorzeniami szczególnymi (obniżony wskaźnik).
+### Jak liczysz stan zatrudnienia do PFRON
+Stan zatrudnienia to przeciętna miesięczna liczba pracowników w przeliczeniu na pełne etaty (suma etatów z każdego dnia miesiąca podzielona przez liczbę dni).
+Nie wliczasz m.in. osób na urlopach rodzicielskich i wychowawczych, pobierających świadczenie rehabilitacyjne, młodocianych w przygotowaniu zawodowym oraz osób na urlopach bezpłatnych, których udzielenie nakazuje ustawa (art. 21 ust. 5). Zleceniobiorców nie liczysz wcale.
+AGRO-MLEKO: 58,5 etatu i 2 osoby z orzeczeniem na pełnych etatach → wskaźnik 2 / 58,5 = 3,42%. Do 6% brakuje 58,5 × 6% − 2 = 1,51 etatu — od tylu etatów liczysz miesięczną wpłatę.
 ### PFRON — dofinansowanie do wynagrodzeń (SOD)
 Warunki: pracodawca z co najmniej 25 etatami musi mieć co najmniej 6% (mniejsi — bez warunku); efekt zachęty (wzrost zatrudnienia lub zwolnione miejsce); bez zaległości PFRON powyżej 100 zł; wynagrodzenie wypłacone na konto i koszty płacy w terminie (ZUS do 14 dni po terminie — dopuszczalne).
-| Stopień | Kwota miesięczna (od 2025) | Dodatkowo przy schorzeniach szczególnych |
+| Stopień | Kwota miesięczna na pełny etat (od 1.07.2024; art. 26a — sprawdzaj co roku) | Dodatkowo przy schorzeniach szczególnych |
 |---|---|---|
 | znaczny | 2 760 zł | +1 380 zł |
 | umiarkowany | 1 550 zł | +1 035 zł |
 | lekki | 575 zł | +690 zł |
 Schorzenia szczególne: epilepsja, choroba psychiczna, niepełnosprawność intelektualna, całościowe zaburzenia rozwojowe, niewidomi.
-Limit: nie więcej niż 75% kosztów płacy (otwarty rynek) albo 90%.
+Limit: nie więcej niż 75% kosztów płacy u pracodawcy prowadzącego działalność gospodarczą (u pozostałych 90%). Kwota jest proporcjonalna do wymiaru etatu.
 Wniosek Wn-D + INF-D-P do 25. dnia następnego miesiąca przez SODiR. Orzeczenie w aktach (B); w ZUS — kod niepełnosprawności.
 ### Uprawnienia pracownika z niepełnosprawnością
 | Uprawnienie | Umiarkowany i znaczny | Lekki |
 |---|---|---|
 | czas pracy | 7 h / 35 h bez obniżenia wynagrodzenia; na wniosek i za zgodą lekarza — normalny | 8 h / 40 h |
 | praca nocna i nadgodziny | zakaz; wyjątki: pilnowanie mienia, zgoda lekarza na wniosek pracownika | zakaz — te same wyjątki |
-| dodatkowa przerwa | 15 min | — |
+| dodatkowa przerwa | 15 min, wliczana do czasu pracy | 15 min — przysługuje przy każdym stopniu (art. 17) |
 | dodatkowy urlop | 10 dni (po roku od zaliczenia do stopnia) | — |
 | turnus rehabilitacyjny | do 21 dni raz w roku, z wynagrodzeniem jak ekwiwalent | — |
 | badania i zabiegi | zwolnienie 100% | — |
@@ -80,15 +84,15 @@ Każdy stopień: pracodawca zapewnia niezbędne racjonalne usprawnienia (refunda
 ```
 AGRO-MLEKO: 62 pracowników = 58,5 etatu na 1.01.2026 (ZFŚS obowiązkowy), 2 osoby z umiarkowanym stopniem.
 Odpis: 58,5 × 2 943,23 = 172 178,96 + 2 × 490,54 = 173 160,04 zł; 75% (129 870,03) do 31.05, reszta do 30.09; korekta 31.12 wg faktycznego przeciętnego zatrudnienia (np. 57,2 etatu).
-PFRON: 6% × 58,5 = 3,51 etatu wymagane; zatrudnia 2,0 → brakuje 1,51 etatu × 40,65% × przeciętne (np. 9 000 zł) = 1,51 × 3 658,50 = 5 524,34 zł miesięcznie (DEK-I-0 do 20.). Zatrudnienie 2 dodatkowych osób z niepełnosprawnością zeruje wpłatę i daje SOD 2 × 1 550 zł.
+PFRON: 6% × 58,5 = 3,51 etatu wymagane; zatrudnia 2,0 → brakuje 1,51 etatu × 40,65% × przeciętne (np. 9 000 zł) = 1,51 × 3 658,50 = 5 524,34 zł miesięcznie (DEK-I-0 do 20.). Zatrudnienie 2 dodatkowych osób z niepełnosprawnością zeruje wpłatę i otwiera prawo do SOD: 2 × 1 550 zł za nowo zatrudnionych (za dotychczasowe osoby — o ile i dla nich wykażesz efekt zachęty).
 ```
 
 1. „58,5 etatu na 1.01.2026 (ZFŚS obowiązkowy)”: obowiązek tworzenia funduszu — co najmniej 50 pracowników w przeliczeniu na pełne etaty na 1 stycznia (art. 3 ust. 1 ustawy o ZFŚS); liczysz ETATY, nie osoby (62 osoby = 58,5 etatu).
 2. „58,5 × 2 943,23 = 172 178,96 + 2 × 490,54 = 173 160,04”: odpis podstawowy na etat (37,5% przeciętnego wynagrodzenia z II półrocza roku poprzedniego — kwota z obwieszczenia); zwiększenie 6,25% na każdą osobę z orzeczeniem (490,54) — fakultatywne, ale wpisane w regulaminie AGRO-MLEKO.
-3. „75% (129 870,03) do 31.05, reszta do 30.09; korekta 31.12 wg faktycznego przeciętnego zatrudnienia (np. 57,2 etatu)”: przelewy na odrębny rachunek funduszu; w grudniu przeliczasz odpis wg rzeczywistej średniej etatów w roku — nadwyżkę zostawiasz na następny rok, niedobór dopłacasz.
+3. „75% (129 870,03) do 31.05, reszta do 30.09; korekta 31.12 wg faktycznego przeciętnego zatrudnienia (np. 57,2 etatu)”: przelewy na odrębny rachunek funduszu; w grudniu przeliczasz odpis wg rzeczywistej średniej etatów w roku — nadwyżkę ponad należny odpis możesz wycofać albo zaliczyć na odpis następnego roku, niedobór dopłacasz.
 4. „PFRON: 6% × 58,5 = 3,51 etatu wymagane; zatrudnia 2,0 → brakuje 1,51”: pracodawca ≥ 25 etatów płaci na PFRON, jeśli wskaźnik zatrudnienia osób niepełnosprawnych < 6% (art. 21 ustawy o rehabilitacji); liczysz w etatach, miesięcznie.
 5. „1,51 × 40,65% × 9 000 = 1,51 × 3 658,50 = 5 524,34 zł miesięcznie (DEK-I-0 do 20.)”: wpłata = brakujące etaty × 40,65% przeciętnego wynagrodzenia (GUS, kwartalne — tu przykładowo 9 000); deklaracja DEK-I-0 i przelew do 20. dnia następnego miesiąca przez e-PFRON.
-6. „Zatrudnienie 2 dodatkowych osób z niepełnosprawnością zeruje wpłatę i daje SOD 2 × 1 550 zł”: przy 4 etatach wskaźnik 6,8% ≥ 6% → wpłata 0; dofinansowanie do wynagrodzeń (SOD) wg stopnia: znaczny 2 760, umiarkowany 1 550, lekki 575 zł (+ schorzenia specjalne) — Wn-D + INF-D-P do 25. dnia następnego miesiąca; warunek: efekt zachęty i brak zaległości.
+6. „Zatrudnienie 2 dodatkowych osób z niepełnosprawnością zeruje wpłatę i otwiera prawo do SOD: 2 × 1 550 zł za nowo zatrudnionych (za dotychczasowe osoby — o ile i dla nich wykażesz efekt zachęty)”: przy 4 etatach wskaźnik 6,8% ≥ 6% → wpłata 0; dofinansowanie do wynagrodzeń (SOD) wg stopnia: znaczny 2 760, umiarkowany 1 550, lekki 575 zł (+ schorzenia specjalne) — Wn-D + INF-D-P do 25. dnia następnego miesiąca; warunek: efekt zachęty i brak zaległości.
 
 ✔ **Oczekiwany wynik:** odpis 173 160,04 (129 870,03 do 31.05, reszta do 30.09); PFRON 5 524,34/mies. — albo 0 i +3 100 zł SOD miesięcznie po zatrudnieniu 2 osób z umiarkowanym stopniem.
 
@@ -108,7 +112,7 @@ PFRON: 6% × 58,5 = 3,51 etatu wymagane; zatrudnia 2,0 → brakuje 1,51 etatu ×
 Na 1.01.2027 AGRO-MLEKO planuje 60,0 etatu (w tym 3 osoby z orzeczeniem: 2 umiarkowany, 1 lekki, wszystkie na pełny etat), odpis na 2027 przyjmij 3 100 zł (kwota ćwiczeniowa — prawdziwą podstawisz z obwieszczenia). Policz jak w demonstracji: odpis z zwiększeniami, kwoty i terminy przelewów, wpłatę PFRON (przeciętne 9 200) oraz SOD. Plik: cwiczenia/tydzien_12/zfss_pfron_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_12/zfss_pfron_1.md` · rozwiązanie: `rozwiazania/tydzien_12/zfss_pfron_1.md`
-✔ Poprawny wynik wygląda tak: odpis: 60 × 3 100 = 186 000 + 3 × 193,75 (6,25% × 3 100) = 581,25 → 186 581,25; 75% = 139 935,94 do 31.05.2027, reszta 46 645,31 do 30.09.2027; PFRON: 6% × 60 = 3,6 etatu; zatrudnia 3,0 → brakuje 0,6 × 40,65% × 9 200 = 0,6 × 3 739,80 = 2 243,88/mies. (DEK-I-0 do 20.); SOD: 2 × 1 550 + 575 = 3 675/mies. (Wn-D do 25.), jeśli efekt zachęty spełniony.
+✔ Poprawny wynik wygląda tak: odpis: 60 × 3 100 = 186 000 + 2 × 193,75 (6,25% × 3 100 — tylko za stopień umiarkowany i znaczny) = 387,50 → 186 387,50; 75% = 139 790,63 do 31.05.2027, reszta 46 596,87 do 30.09.2027; PFRON: 6% × 60 = 3,6 etatu; zatrudnia 3,0 → brakuje 0,6 × 40,65% × 9 200 = 0,6 × 3 739,80 = 2 243,88/mies. (DEK-I-0 do 20.); SOD: 0 zł — firma ma ≥ 25 etatów i wskaźnik 5% < 6%; dopiero czwarta osoba z orzeczeniem (4/61 = 6,6%) zeruje wpłatę i otwiera SOD.
 
 ## 5 · Ćwiczenie samodzielne
 Komisja socjalna zaplanowała: (1) dofinansowanie wczasów 1 500 zł „dla każdego, kto złoży wniosek”, (2) karty podarunkowe po 500 zł na święta dla wszystkich, (3) pożyczkę remontową 20 000 zł dla dyrektora na 1% oraz (4) sfinansowanie z funduszu nagrody za wyniki (5 000 zł) dla najlepszego operatora. Zdecyduj dla każdego pomysłu: dopuszczalny / niedopuszczalny / dopuszczalny pod warunkiem, z podstawą i skutkami (ZUS, PIT, kontrola). Zaproponuj 3 progi dochodowe dla wczasów. Plik: cwiczenia/tydzien_12/zfss_pfron_2.md. Czas: 15 minut.

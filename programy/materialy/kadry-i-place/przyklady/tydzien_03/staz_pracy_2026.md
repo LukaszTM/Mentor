@@ -10,12 +10,12 @@ Staż przed nowelizacją: 4 lata (2022–2026) → 20 dni. Po: + 3 (zlecenie) + 
 
 ## Omówienie — co robi każdy krok i dlaczego
 1. „2016–2019 zlecenie (ubezpieczony)”: okres umowy zlecenia, z którego odprowadzano składki emerytalno-rentowe, wlicza się do stażu (art. 302¹ §1 KP od 2026 r.) → +3 lata.
-2. „2019–2021 działalność (składki opłacone)”: pozarolnicza działalność z opłaconymi składkami → +2 lata; działalność z „ulgą na start” (tylko zdrowotne) się nie wlicza — bo brak ubezpieczeń emerytalno-rentowych.
-3. „2020–2021 równolegle dzieło”: umowa o dzieło nie jest tytułem do ubezpieczeń → nie wlicza się nigdy; a nawet gdyby — okresy równoległe liczysz raz (art. 302¹ §3).
+2. „2019–2021 działalność (składki opłacone)”: pozarolnicza działalność z opłaconymi składkami → +2 lata (art. 302¹ §1). Uwaga: pierwsze 6 miesięcy „ulgi na start” (tylko składka zdrowotna) też się wlicza — przepis mówi o tym wprost (§4 pkt 1); dokumentem jest zaświadczenie ZUS o zgłoszeniu do ubezpieczenia zdrowotnego.
+3. „2020–2021 równolegle dzieło”: umowa o dzieło nie jest tytułem do ubezpieczeń → nie wlicza się nigdy; a nawet gdyby — okresy równoległe liczysz raz (art. 302¹ §9).
 4. „Staż przed: 4 lata → 20 dni; po: 9 lat → 20 dni; po 1 roku → 26”: 4 (2022–2026) + 3 + 2 = 9 lat → nadal poniżej 10 → 20 dni; 10 lat minie w 2027 r. → wtedy urlop uzupełniający 6 dni od dnia nabycia (art. 158).
-5. „Zaświadczenie dostarczone 10.06.2026 — przelicz staż; okres wypowiedzenia bez zmian”: nowy staż liczysz od dnia dostarczenia dowodów (nie wstecz); staż ZAKŁADOWY (od 2022 u Ciebie) decyduje o okresie wypowiedzenia i odprawie — nowelizacja go nie dotyczy.
+5. „Zaświadczenie dostarczone 10.06.2026 — przelicz staż; okres wypowiedzenia bez zmian”: doliczone okresy działają od dnia nabycia uprawnienia, nie wcześniej niż od 1.05.2026 (prywatny pracodawca) — nie od dnia wpływu dokumentu i nie wstecz przed 1.05.2026; na dokumenty pracownik ma 24 miesiące. Staż ZAKŁADOWY (od 2022 u Ciebie) decyduje o okresie wypowiedzenia i odprawie — rośnie tylko o zlecenia wykonywane dla TEGO pracodawcy (art. 302¹ §7), a tu ich nie było.
 
-✔ Oczekiwany wynik: staż ogólny 9 lat od 10.06.2026 (20 dni urlopu, 26 od 2027 z urlopem uzupełniającym); staż zakładowy 4 lata (okres wypowiedzenia 3 miesiące — bez zmian).
+✔ Oczekiwany wynik: staż ogólny 9 lat — z doliczonymi okresami od 1.05.2026 (20 dni urlopu, 26 od 2027 z urlopem uzupełniającym); staż zakładowy 4 lata (okres wypowiedzenia 3 miesiące — bez zmian).
 
 ## Jak to uruchomić
 1. Otwórz przyklady/tydzien_03/zaswiadczenie_zus_wzor.md — jak wygląda zaświadczenie o okresach ubezpieczenia (fikcyjne, dla osób z FIRMA.md).

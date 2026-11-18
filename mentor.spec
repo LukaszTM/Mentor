@@ -19,7 +19,7 @@ a = Analysis(
         ("srodowisko_testy", "srodowisko_testy"),            # testy końcowe środowiska: pytest, lokalne API, Selenium + strona HTML
         ("mentor.ico", "."),
     ],
-    hiddenimports=["asystent", "program", "motywy", "wiedza_ogolna", "warsztat", "kadry", "paczki", "srodowisko", "widok_srodowisko", "cwiczenia",
+    hiddenimports=["asystent", "program", "motywy", "wiedza_ogolna", "warsztat", "kadry", "paczki", "srodowisko", "widok_srodowisko", "cwiczenia", "odpowiedzi", "odpowiedzi_ui",
                    "tkinter", "tkinter.ttk", "tkinter.font", "tkinter.filedialog", "tkinter.messagebox", "tkinter.simpledialog", "tkinter.scrolledtext"],
     hookspath=[],
     runtime_hooks=[],

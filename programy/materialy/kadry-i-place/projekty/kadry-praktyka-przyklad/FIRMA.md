@@ -1,9 +1,9 @@
 # AGRO-MLEKO sp. z o.o. — karta firmy ćwiczeniowej (dane fikcyjne)
 
-Firma ćwiczeniowa: AGRO-MLEKO sp. z o.o. — mleczarnia, 62 pracowników etatowych (produkcja 3-zmianowa, logistyka, biuro), 6 zleceniobiorców, 2 osoby na umowie o dzieło, 1 pracownik z orzeczeniem o niepełnosprawności, wypłata do 10. dnia następnego miesiąca, okres rozliczeniowy 1 miesiąc dla biura i 3 miesiące dla produkcji (system równoważny do 12 h). Wszystkie ćwiczenia robisz na tej firmie.
+Firma ćwiczeniowa: AGRO-MLEKO sp. z o.o. — mleczarnia, 62 pracowników etatowych (produkcja 3-zmianowa, logistyka, biuro), 6 zleceniobiorców, 2 osoby na umowie o dzieło, 2 pracowników z orzeczeniem o niepełnosprawności (stopień umiarkowany), wypłata do 10. dnia następnego miesiąca, okres rozliczeniowy 1 miesiąc dla biura i 3 miesiące dla produkcji (system równoważny do 12 h). Wszystkie ćwiczenia robisz na tej firmie.
 
 ## Regulaminy i zasady
-- Wypłata wynagrodzenia do 10. dnia następnego miesiąca przelewem; gdy 10. jest dniem wolnym — dzień roboczy wcześniej.
+- Wypłata wynagrodzenia do 10. dnia następnego miesiąca przelewem; gdy 10. przypada w sobotę, niedzielę lub święto — w poprzedzającym dniu roboczym.
 - Biuro: podstawowy system czasu pracy, 1-miesięczny okres rozliczeniowy, 8:00–16:00. Produkcja i logistyka: równoważny do 12 h, 3-miesięczny okres rozliczeniowy, 3 zmiany (6–18, 18–6), pora nocna 22:00–6:00.
 - Dodatek nocny ustawowy (20% stawki godzinowej z minimalnego wynagrodzenia). Nadgodziny: dodatki ustawowe 50/100% lub czas wolny.
 - Premia regulaminowa do 10% wynagrodzenia zasadniczego za wynik miesiąca — POMNIEJSZANA proporcjonalnie za dni choroby (wlicza się do podstawy zasiłku).
@@ -11,14 +11,15 @@ Firma ćwiczeniowa: AGRO-MLEKO sp. z o.o. — mleczarnia, 62 pracowników etatow
 - Składka wypadkowa firmy: 1,20% (stopa ustalona przez ZUS na podstawie IWA, obowiązuje od 1.04.2026 do 31.03.2027).
 - Firma jest płatnikiem zasiłków (na 30.11.2025 zgłaszała 66 osób do ubezpieczenia chorobowego).
 - ZFŚS prowadzony (62 pracowników = 58,5 etatu); regulamin ZFŚS z kryterium dochodu na osobę w rodzinie; komisja socjalna 3-osobowa.
-- PPK w instytucji „PFR TFI” (ćwiczeniowo): wpłaty podstawowe 2% / 1,5%; brak wpłat dodatkowych.
+- Osoby z orzeczeniem o niepełnosprawności: 2 (obie stopień umiarkowany, pełne etaty) — Ewa Sobczak i operator spoza ósemki z Warsztatu; do wskaźnika PFRON liczysz 2,0 etatu.
+- PPK w instytucji „PFR TFI” (ćwiczeniowo): wpłaty podstawowe 2% / 1,5%; brak wpłat dodatkowych. Wpłaty przekazywane do instytucji w dniu wypłaty wynagrodzeń — przychód z wpłaty pracodawcy powstaje w tym samym miesiącu.
 - Regulamin pracy i wynagradzania z 1.03.2025; brak związków zawodowych — przedstawiciel załogi wybrany 10.02.2025; benefity (karta sportowa, pakiet medyczny) współfinansowane przez pracownika (1 zł) wg regulaminu wynagradzania.
-- Kategorie zaszeregowania: I pracownicy produkcji i magazynu, II operatorzy i kierowcy, III specjaliści, IV kierownicy, V dyrektorzy — widełki w siatce płac (tydzień 11).
+- Kategorie zaszeregowania: I pracownicy produkcji i magazynu, II operatorzy i kierowcy, III specjaliści, IV kierownicy, V dyrektorzy — widełki w siatce płac (tydzień 14).
 
 ## Osoby
 | Id | Imię i nazwisko | Stanowisko | Umowa | Od | Etat | Zasadnicze | PPK | KUP | PIT-2 | Kod ZUS |
 |---|---|---|---|---|---|---|---|---|---|---|
-| o1 | Anna Kowalczyk | specjalistka ds. jakości | próbna 3 mies. | 2026-10-01 | 1 | 6000 | tak | 250 | 300 | 011000 |
+| o1 | Anna Kowalczyk | specjalistka ds. jakości | próbna 3 mies. | 2026-10-01 | 1 | 6000 | nie | 250 | 300 | 011000 |
 | o2 | Marek Zieliński | operator linii (3 zmiany) | czas określony | 2025-03-01 | 1 | 5400 | tak | 250 | 300 | 011000 |
 | o3 | Halina Mazur | główna księgowa | nieokreślony | 2009-04-01 | 1 | 7800 | nie | 300 | 300 | 011000 |
 | o4 | Piotr Nowak | magazynier | nieokreślony | 2019-09-01 | 0.5 | 2500 | nie | 250 | 0 | 011000 |
@@ -59,3 +60,5 @@ Firma ćwiczeniowa: AGRO-MLEKO sp. z o.o. — mleczarnia, 62 pracowników etatow
 | odpis_zfss | 2943.23 |
 | hip_stawka | 17.0 |
 | hip_kwota_zmn | 43.76 |
+| zas_wolna_alimenty | 849.42 |
+| zas_wolna_inne | 1401.57 |

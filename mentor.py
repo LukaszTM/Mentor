@@ -30,6 +30,7 @@ from motywy import GRUPY, MOTYW_DOMYSLNY, MOTYWY, motyw
 import cwiczenia
 import paczki
 import warsztat
+import odpowiedzi_ui
 import widok_srodowisko
 from program import (P, KATALOG_PROGRAMOW, domyslna_sciezka, importuj as importuj_program, lista_programow,
                      wczytaj as wczytaj_program, zapisz_szablon, katalog_materialow, skopiuj_materialy)
@@ -142,9 +143,11 @@ class Stan:
         "przewodnik": {},   # id programu -> True, gdy uczeń zamknął „Jak zacząć”
         "warsztat": {},     # dane Warsztatu (symulatory, kartoteka) — per program
         "sprawdzenia": {},  # id zadania -> wynik „Sprawdź wynik” (ćwiczenia w Mentorze) — per program
+        "odpowiedzi": {},   # "lekcja:nr" / "formularz:id" -> {"wpisy", "ok", "max", "proby", "komplet", "pokazane", "data"} — per program
+        "aktualizacje": {}, # "data|temat" -> data oznaczenia „sprawdzone” (kalendarz aktualizacji kursu) — per program
     }
     # postępy liczone per program: klucze zależne od programu trzymamy w "programy": {id: {...}}
-    KLUCZE_PROGRAMU = ("zadania", "checklista", "quizy", "lekcje", "powtorki", "odznaki", "warsztat", "projekt", "sprawdzenia")
+    KLUCZE_PROGRAMU = ("zadania", "checklista", "quizy", "lekcje", "powtorki", "odznaki", "warsztat", "projekt", "sprawdzenia", "odpowiedzi", "aktualizacje")
 
     def __init__(self):
         self.d = json.loads(json.dumps(self.DOMYSLNE))
@@ -1008,6 +1011,17 @@ class Mentor(tk.Tk):
             etykieta(k, f"Minęło {dni} dni od ostatniej sesji.", 11, bold=True, bg=K["zolty"]).pack(fill="x")
             etykieta(k, random.choice(P.motywacja_powrot) if P.motywacja_powrot else "Zacznij od jednego małego zadania.", 10, bg=K["zolty"], wrap=860).pack(fill="x", pady=(2, 0))
 
+        # kalendarz aktualizacji kursu: przepisy do sprawdzenia (termin minął albo mija w ciągu 30 dni)
+        zal, nad = self.aktualizacje_do_sprawdzenia()
+        if zal or nad:
+            z, k = karta(w, bg=K["zolty"])
+            z.pack(fill="x", padx=28, pady=(14, 0))
+            etykieta(k, "🔔 Aktualność przepisów: " + (f"{len(zal)} do sprawdzenia teraz" if zal else "") + (", " if zal and nad else "") + (f"{len(nad)} w ciągu 30 dni" if nad else ""),
+                     11, bold=True, bg=K["zolty"]).pack(fill="x")
+            for a in (zal + nad)[:3]:
+                etykieta(k, f"• {a['data'][8:10]}.{a['data'][5:7]}.{a['data'][:4]} — {a.get('temat', '')}", 10, bg=K["zolty"], wrap=860).pack(fill="x")
+            przycisk(k, "Otwórz kalendarz aktualizacji (Ściąga)", lambda: self.pokaz("sciaga"), "drugi").pack(anchor="w", pady=(6, 0))
+
         # statystyki
         rzad = tk.Frame(w, bg=K["tlo"])
         rzad.pack(fill="x", padx=28, pady=(16, 0))
@@ -1731,15 +1745,30 @@ class Mentor(tk.Tk):
             for i, kr in enumerate(l["w_praktyce"], 1):
                 etykieta(k2, f"{i}. {kr}", 10, wrap=W).pack(fill="x", pady=(0, 3))
         # 4/5 · ćwiczenia z trzema poziomami pomocy
+        miejsca = {}
+
+        def odslon(cw_, kl_):
+            z = odpowiedzi_ui.zapis(self, kl_)
+            m = miejsca.get(kl_)
+            if m is not None and cw_.get("wynik") and (z.get("komplet") or z.get("pokazane")) and not m.winfo_children():
+                etykieta(m, "✔ Pełny wynik wzorcowy: " + cw_["wynik"], 10, kolor=K["ziel"], wrap=W).pack(fill="x", pady=(6, 0))
+
         for nr, cw in enumerate(l.get("cwiczenia") or [], 4):
             rodzaj = cw.get("rodzaj", "prowadzone")
-            tyt = f"{nr} · Ćwiczenie {'prowadzone — jak demonstracja, z podpowiedziami' if rodzaj == 'prowadzone' else 'samodzielne — Twoja decyzja, nie kopiowanie'}"
+            tyt = f"{nr} · Ćwiczenie {'prowadzone (jak demonstracja)' if rodzaj == 'prowadzone' else 'samodzielne (Twoja decyzja)'}"
             z2, k2 = karta(prawa.wnetrze, tytul=tyt)
             z2.pack(fill="x", pady=(8, 0))
             etykieta(k2, cw.get("tresc", ""), 10, wrap=W).pack(fill="x")
             if cw.get("plik"):
                 etykieta(k2, "📄 Plik: " + cw["plik"], 9, kolor=K["szary"], wrap=W).pack(fill="x", pady=(4, 0))
-            if cw.get("wynik"):
+            if cw.get("odpowiedzi"):
+                # ćwiczenie ze sprawdzaniem automatycznym: wynik wzorcowy odsłaniamy dopiero po komplecie albo po pokazaniu klucza
+                kl = f"{l['id']}:{nr - 3}"
+                odpowiedzi_ui.panel(self, k2, cw["odpowiedzi"], kl, W, po_sprawdzeniu=lambda _w, a=cw, b=kl: odslon(a, b), po_pokazaniu=lambda a=cw, b=kl: odslon(a, b))
+                miejsca[kl] = tk.Frame(k2, bg=K["karta"])
+                miejsca[kl].pack(fill="x")
+                odslon(cw, kl)
+            elif cw.get("wynik"):
                 etykieta(k2, "✔ Poprawny wynik wygląda tak: " + cw["wynik"], 10, kolor=K["ziel"], wrap=W).pack(fill="x", pady=(4, 0))
             self._podpowiedzi(k2, cw, W)
         if l.get("typowe_bledy"):
@@ -2820,8 +2849,58 @@ class Mentor(tk.Tk):
         tk.Frame(w, bg=K["tlo"], height=24).pack()
 
     # ================================================================= ŚCIĄGA
+    def aktualizacje_do_sprawdzenia(self, dzien=None):
+        """(zaległe, nadchodzące w 30 dni) pozycje kalendarza aktualizacji kursu, których uczeń nie oznaczył jeszcze jako sprawdzone."""
+        spr = self.stan.d.setdefault("aktualizacje", {})
+        d = dzien or dzis()
+        zal, nad = [], []
+        for a in sorted(P.d.get("aktualizacje") or [], key=lambda x: str(x.get("data", ""))):
+            try:
+                da = dt.date.fromisoformat(a["data"])
+            except (KeyError, ValueError, TypeError):
+                continue
+            if f"{a['data']}|{a.get('temat', '')}" in spr:
+                continue
+            if da <= d:
+                zal.append(a)
+            elif (da - d).days <= 30:
+                nad.append(a)
+        return zal, nad
+
+    def _karta_aktualizacji(self, w):
+        akt = sorted(P.d.get("aktualizacje") or [], key=lambda x: str(x.get("data", "")))
+        if not akt:
+            return
+        spr = self.stan.d.setdefault("aktualizacje", {})
+        z, k = karta(w, tytul="Kalendarz aktualizacji — kiedy i co sprawdzić w przepisach")
+        z.pack(fill="x", padx=28, pady=(0, 12))
+        etykieta(k, "Przepisy kadrowo-płacowe zmieniają się co kilka miesięcy. Po każdej dacie sprawdź wskazane źródło, popraw swoje notatki i tabelę wskaźników, a potem kliknij „Sprawdzone”."
+                 + (f" Stan prawny kursu: {P.stan_prawny}." if P.d.get("stan_prawny") else ""), 9, kolor=K["szary"], wrap=800).pack(fill="x", pady=(0, 6))
+        d = dzis()
+        for a in akt:
+            try:
+                da = dt.date.fromisoformat(a["data"])
+            except (KeyError, ValueError, TypeError):
+                continue
+            kl = f"{a['data']}|{a.get('temat', '')}"
+            r = tk.Frame(k, bg=K["karta"])
+            r.pack(fill="x", pady=(6, 0))
+            if kl in spr:
+                stan_t, kol = f"✔ sprawdzone {spr[kl]}", K["ziel"]
+            elif da <= d:
+                stan_t, kol = "⏰ termin minął — sprawdź teraz", K["czerw"]
+            else:
+                stan_t, kol = f"za {(da - d).days} dni", K["szary"]
+            etykieta(r, f"{da.day}.{da.month:02d}.{da.year} — {a.get('temat', '')}", 10, bold=True, wrap=560).pack(side="left")
+            if kl not in spr:
+                przycisk(r, "Sprawdzone", lambda kk=kl: (spr.__setitem__(kk, str(dzis())), self.stan.zapisz(), self.pokaz("sciaga")), "drugi").pack(side="right")
+            etykieta(r, stan_t + "  ", 9, kolor=kol).pack(side="right")
+            lek = [P.lekcja(x)["nazwa"].split(":")[0] for x in a.get("lekcje", []) if P.lekcja(x)]
+            etykieta(k, a.get("co", "") + (f"  Gdzie: {a['gdzie']}." if a.get("gdzie") else "") + (f"  Lekcje: {'; '.join(lek)}." if lek else ""), 9, wrap=800).pack(fill="x", padx=(12, 0))
+
     def widok_sciaga(self):
         w = self._strona("Ściąga", "Najważniejsze liczby, komendy i skróty z programu nauki. Reszta czeka pod /help w Asystencie.")
+        self._karta_aktualizacji(w)
         for sekcja in P.sciaga:
             tytul, dane = sekcja["tytul"], sekcja["pozycje"]
             z, k = karta(w, tytul=tytul)

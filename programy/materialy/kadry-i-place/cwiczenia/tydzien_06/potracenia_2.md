@@ -5,7 +5,7 @@ Tydzień 6 · lekcja `potracenia` · plik: `cwiczenia/tydzien_06/potracenia_2.md
 U Tomasza Lisa (netto 9 568,35, PPK) zbiegły się: alimenty 2 500 zł/mies., zajęcie niealimentacyjne 3 000 zł i prośba firmy o potrącenie 800 zł za zgubiony laptop (bez zgody pracownika na piśmie). Zdecyduj: kolejność, łączną granicę, ile potrącasz na każdy tytuł i co z laptopem. Plik: cwiczenia/tydzien_06/potracenia_2.md. Czas: 15 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-kolejność art. 87 §1: alimenty → inne egzekucje → zaliczki → kary; łącznie przy zbiegu alimentów i innych: 3/5 netto = 5 741,01; alimenty 2 500 (bez kwoty wolnej); na inne zostaje 5 741,01 − 2 500 = 3 241,01, ale z zachowaniem kwoty wolnej 3 501,73 → netto − alimenty − wolna = 9 568,35 − 2 500 − 3 501,73 = 3 566,62 ≥ 3 000 → potrącasz 3 000 (łącznie 5 500 ≤ 5 741,01); laptop: bez pisemnej zgody pracownika nie wolno (art. 91) — zgoda może być wyrażona na konkretną kwotę; przy zgodzie kwota wolna 80%.
+kolejność art. 87 §1: alimenty → inne egzekucje → zaliczki → kary; łącznie przy zbiegu alimentów i innych: 3/5 netto = 5 741,01; alimenty 2 500 (bez kwoty wolnej); na inne zostaje 5 741,01 − 2 500 = 3 241,01, ale z zachowaniem kwoty wolnej 3 501,73 → netto − alimenty − wolna = 9 568,35 − 2 500 − 3 501,73 = 3 566,62 ≥ 3 000 → potrącasz 3 000 (łącznie 5 500 ≤ 5 741,01); laptop: bez pisemnej zgody pracownika nie wolno (art. 91) — zgoda może być wyrażona na konkretną kwotę; przy zgodzie kwota wolna 100% minimalnego netto (potrącenie na rzecz pracodawcy), czyli w tym miesiącu najwyżej 566,62.
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).

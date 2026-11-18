@@ -7,22 +7,22 @@ Zasada: najpierw własna próba. Podpowiedzi odkrywaj po kolei — rozwiązanie 
 Czy 30-krotność liczysz od przychodu, czy od podstawy E/R narastająco — i czy premia roczna się wlicza? (Tak, w miesiącu wypłaty.)
 
 ## Podpowiedź 2 — gdzie szukać
-Lekcje „Zaliczka PIT” (32% od całości po progu), „Chorobowe” (pula wyczerpana → zasiłek od 1. dnia), „Potrącenia” (alimenty 3/5 bez kwoty wolnej).
+Lekcje „Zaliczka na PIT…” (w miesiącach po przekroczeniu progu 32% od całej podstawy), „Wynagrodzenie chorobowe i zasiłek chorobowy…” (pula wyczerpana → zasiłek od 1. dnia), „Potrącenia z wynagrodzenia…” (alimenty 3/5 bez kwoty wolnej).
 
 ## Podpowiedź 3 — częściowy przykład
-Szkic: podstawa E/R narastająco po listopadzie 154 000; grudzień 41 666,67 → 195 666,67 < 282 600; zasiłek 402,69 × 0,8 = 322,15 × 5; 32% od (… ) − 300…
+Szkic: podstawa E/R narastająco po 11 wypłatach roku 154 000; wypłata grudniowa 41 666,67 → 195 666,67 < 282 600; zasiłek 402,69 × 0,8 = 322,15 × 5; 32% od (… ) − 300…
 
 ## Pełne rozwiązanie
 ```
-30-krotność: podstawa E/R narastająco po listopadzie 11 × 14 000 = 154 000; grudzień: pensja 11 666,67 + premia 30 000 = 41 666,67 → 195 666,67 < 282 600 → składki E/R od całości.
+30-krotność liczysz według wypłat w roku: po 11 wypłatach (styczeń–listopad) podstawa E/R = 11 × 14 000 = 154 000; wypłata 10.12: pensja 11 666,67 + premia 30 000 = 41 666,67 → 195 666,67 < 282 600 → składki E/R od całości.
 Pensja: 14 000 − 14 000/30 × 5 = 11 666,67 (choroba — /30). Przychód oskładkowany 41 666,67.
 Składki: 4 066,67 + 625,00 + 1 020,83 = 5 712,50. Zdrowotna 9% × 35 954,17 = 3 235,88 (zasiłek nie wchodzi).
 Świadczenie: pula 33 dni wyczerpana → zasiłek chorobowy od 1. dnia: 12 080,60/30 = 402,69; × 80% = 322,15; × 5 dni = 1 610,75 (płatnik wypłaca, odlicza w DRA; RSA 313); tylko PIT bez KUP.
 PPK: pracodawcy 625,00 (przychód), pracownika 833,33.
 Podstawa PIT: 41 666,67 + 625,00 − 5 712,50 − 250 + 1 610,75 = 37 939,92 → 37 940; po progu całość 32%: 12 140,80 − 300 = 11 840,80 → 11 841.
 Netto: (41 666,67 + 1 610,75) − 5 712,50 − 3 235,88 − 11 841 − 833,33 = 21 654,71.
-Alimenty: granica 3/5 netto = 12 992,83; bez kwoty wolnej → 3 000 w całości → do wypłaty 18 654,71 zł.
-Dochód narastająco po grudniu: 132 451 + 37 940 = 170 391 → PIT-11.
+Alimenty: 3 000 mieści się w granicy 3/5 samej części z wynagrodzenia (netto bez zasiłku ok. 20 559 → 3/5 ≈ 12 336), bez kwoty wolnej → potrącasz całość z wynagrodzenia; zasiłek ma własne granice (60% brutto, kwota wolna 849,42 × 5/30) — tu niepotrzebne. Do wypłaty 18 654,71 zł.
+Dochód narastający roku 2026 po tej wypłacie: 132 451 + 37 940 = 170 391 → PIT-11 za 2026.
 ```
 
 ## Oczekiwany wynik

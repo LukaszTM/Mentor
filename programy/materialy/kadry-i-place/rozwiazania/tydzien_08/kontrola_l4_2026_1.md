@@ -14,10 +14,10 @@ Szkic: (1) i (5) — zarobek → utrata; (2) — wpływ na zdrowie → utrata; (
 
 ## Pełne rozwiązanie
 ```
-1. Sklep internetowy, wysyłka paczek — PRACA ZAROBKOWA (art. 17 ust. 1): utrata prawa do świadczenia za cały okres zwolnienia; nie ma znaczenia, czy szkodzi zdrowiu.
+1. Sklep internetowy, wysyłka paczek — PRACA ZAROBKOWA (art. 17 ust. 1 i 1a): utrata prawa do świadczenia za cały okres zwolnienia; nie ma znaczenia, czy szkodzi zdrowiu.
 2. Narty przy L4 po operacji kolana — AKTYWNOŚĆ NIEZGODNA Z CELEM zwolnienia (może wydłużyć niezdolność) → utrata świadczenia; protokół z faktami (data, miejsce, dowód).
 3. Wyjazd do rodziny przy L4 z powodu depresji — co do zasady DOZWOLONE: zmiana miejsca pobytu wymaga poinformowania płatnika w 3 dni (art. 59 ust. 5e); odpoczynek nie wydłuża niezdolności; sankcja tylko, gdyby lekarz zalecił inaczej lub pracownik nie zgłosił adresu (wtedy — brak możliwości kontroli, wezwanie do wyjaśnień).
-4. Apteka i zakupy przy grypie — CZYNNOŚĆ ŻYCIA CODZIENNEGO (art. 17 ust. 1a) → brak sankcji.
+4. Apteka i zakupy przy grypie — ZWYKŁA CZYNNOŚĆ DNIA CODZIENNEGO (art. 17 ust. 1b) → brak sankcji.
 5. Odpłatne zajęcia jogi na L4 ciążowym — PRACA ZAROBKOWA → utrata świadczenia; dodatkowo pytanie o zgodność z celem (ciąża nie daje wyjątku).
 6. Nieobecność pod adresem — nie jest naruszeniem sama w sobie: wzywasz do wyjaśnień w wyznaczonym terminie (co najmniej 3 dni); brak wyjaśnień lub ich niewiarygodność → można uznać naruszenie; wyjaśnienie (lekarz, rehabilitacja, zakupy) → brak sankcji.
 ```

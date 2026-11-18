@@ -3,7 +3,7 @@ Tydzień 6 · lekcja 23 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** zapisujesz uczestników, naliczasz wpłaty 2%/1,5%, obsługujesz rezygnacje i autozapis 2027 oraz rozliczasz PPK na liście płac.
 
-**Po co mi to?** PPK dotyka każdej listy płac (2% z netto, 1,5% kosztu i przychodu) i każdego nowego pracownika (umowa po 3 miesiącach), a w 2027 r. czeka Cię autozapis — spóźniona wpłata to odsetki i grzywna do 1,5% funduszu wynagrodzeń.
+**Po co mi to?** PPK dotyka każdej listy płac (2% z netto, 1,5% kosztu i przychodu) i każdego nowego pracownika (umowa po 3 miesiącach), a w 2027 r. czeka Cię autozapis — spóźniona wpłata to odsetki i grzywna od 1 000 zł do 1 mln zł (art. 107 ustawy o PPK).
 
 ## Czego potrzebujesz
 - Lekcja „Lista płac” (PPK w rachunku) i „Koszt pracodawcy”.
@@ -22,10 +22,10 @@ Osoby zatrudnione: pracownicy, zleceniobiorcy z obowiązkowymi składkami emeryt
 | 55–70 lat | na wniosek |
 | 70+ | nie |
 ### Rezygnacja i autozapis
-- Rezygnacja: pisemna deklaracja (wzór z rozporządzenia) składana pracodawcy. Od następnego miesiąca brak wpłat.
+- Rezygnacja: pisemna deklaracja (wzór z rozporządzenia) składana pracodawcy. Wpłat nie naliczasz już od miesiąca jej złożenia; wpłaty pobrane w tym miesiącu zwracasz (art. 23 ust. 4).
 - Autozapis co 4 lata: pracodawca do końca lutego informuje; od 1 kwietnia (2023, 2027, 2031) wznawia wpłaty za każdego, kto nie złożył nowej deklaracji.
 - Powrót możliwy w każdej chwili — wniosek.
-Sankcje: nakłanianie do rezygnacji — grzywna do 1,5% funduszu wynagrodzeń; brak umowy o zarządzanie — grzywna do 1 mln zł. PFR weryfikuje (wezwania).
+Sankcje: brak umowy o zarządzanie w terminie albo nakłanianie do rezygnacji — grzywna do 1,5% funduszu wynagrodzeń (art. 106 i 108); brak umowy o prowadzenie albo wpłaty nie w terminie — grzywna od 1 000 zł do 1 mln zł (art. 107). PFR weryfikuje (wezwania).
 ### Wpłaty
 Podstawa = wynagrodzenie = podstawa składek emerytalno-rentowych, BEZ limitu 30-krotności. Zasiłki nie wchodzą.
 | Wpłata | Podstawowa | Dodatkowa |
@@ -36,7 +36,8 @@ Podstawa = wynagrodzenie = podstawa składek emerytalno-rentowych, BEZ limitu 30
 |---|---|
 | pracownika | potrącana z netto (po PIT) |
 | pracodawcy | przychód pracownika do PIT w miesiącu przekazania do instytucji; bez składek ZUS; koszt uzyskania dla firmy |
-Termin: naliczenie w miesiącu wypłaty, przekazanie do instytucji do 15. dnia miesiąca następnego (plik z systemu kadrowego → portal instytucji).
+Termin: naliczenie w miesiącu wypłaty, przekazanie do instytucji najpóźniej do 15. dnia miesiąca następnego (plik z systemu kadrowego → portal instytucji).
+AGRO-MLEKO przelewa wpłaty w dniu wypłaty wynagrodzeń, dlatego przychód z wpłaty pracodawcy doliczasz na tej samej liście. Firma, która przelewa w następnym miesiącu, dolicza ten przychód miesiąc później.
 Państwo dokłada: wpłatę powitalną 250 zł (po 3 miesiącach uczestnictwa) i dopłatę roczną 240 zł — gdy wpłaty w roku ≥ 3,5% × 6 × minimalne; przy obniżonej 0,5% wystarczy 25% tej kwoty.
 Zmiana pracy: środki zostają; nowy pracodawca dostaje informację o rachunkach i robi transfer, chyba że pracownik się sprzeciwi.
 ### Wypłata środków
@@ -47,6 +48,13 @@ Zmiana pracy: środki zostają; nowy pracodawca dostaje informację o rachunkach
 | wkład własny | do 45 lat, zwrot w 15 lat |
 | poważne zachorowanie | 25% bez zwrotu |
 | inne | świadczenie małżeńskie, dziedziczenie |
+### Sankcje i kontrola
+| Naruszenie | Sankcja |
+|---|---|
+| brak umowy o zarządzanie PPK w terminie | grzywna do 1,5% funduszu wynagrodzeń z poprzedniego roku (art. 106) |
+| niezawarcie umowy o prowadzenie, brak wpłat w terminie, brak dokumentacji | grzywna 1 000–1 000 000 zł (art. 107) |
+| nakłanianie do rezygnacji z PPK | grzywna do 1,5% funduszu wynagrodzeń (art. 108) |
+Kontroluje PIP. Zdanie „lepiej zrezygnuj, zaoszczędzimy oboje” to właśnie nakłanianie — nie pada nigdy, także w rozmowie rekrutacyjnej.
 ### Obowiązki kadr co miesiąc
 - Lista uczestników i stawek.
 - Wpłaty w liście płac — 3 wiersze: pracownik, pracodawca, PIT od wpłaty pracodawcy.
@@ -60,13 +68,13 @@ PPK ≠ PPE. PPE to pracowniczy program emerytalny, dobrowolny; składka pracoda
 **Nowy pracownik od 1.10.2026 (30 lat, 6 000 zł) — od zatrudnienia do pierwszej wpłaty**
 
 ```
-Nowy pracownik od 1.10.2026, 30 lat, brutto 6 000: umowa o prowadzenie do 10.01.2027 (90 dni mija 29.12), pierwsze wpłaty od wynagrodzenia wypłaconego po zawarciu umowy (styczeń 2027, wypłata 10.01): pracownik 2% = 120 (z netto), pracodawca 1,5% = 90 (przychód: PIT 12% × 90 ≈ 11 zł więcej zaliczki). Przekazanie do instytucji do 15.02.2027. Po 3 miesiącach — 250 zł powitalne; za 2027 — 240 zł rocznie, jeśli wpłaty ≥ 3,5% × 6 × 4 950 = 1 039,50 zł.
+Nowy pracownik od 1.10.2026, 30 lat, brutto 6 000: umowa o prowadzenie do 10.01.2027 (90 dni mija 29.12), pierwsze wpłaty od wynagrodzenia wypłaconego po zawarciu umowy (styczeń 2027, wypłata 8.01 — 10.01 to niedziela): pracownik 2% = 120 (z netto), pracodawca 1,5% = 90 (przychód: PIT 12% × 90 ≈ 11 zł więcej zaliczki). Przekazanie do instytucji najpóźniej do 15.02.2027 (AGRO-MLEKO przelewa w dniu wypłaty). Po 3 miesiącach — 250 zł powitalne; za 2027 — 240 zł rocznie, jeśli wpłaty ≥ 3,5% × 6 × 4 950 = 1 039,50 zł.
 ```
 
 1. „umowa o prowadzenie do 10.01.2027 (90 dni mija 29.12)”: art. 16 ustawy o PPK — umowę zawierasz nie wcześniej niż po 14 dniach i nie później niż do 10. dnia miesiąca następującego po upływie 3 miesięcy (90 dni) zatrudnienia; osoba 18–55 lat automatycznie (chyba że złoży rezygnację), 55–70 na wniosek.
-2. „pierwsze wpłaty od wynagrodzenia wypłaconego po zawarciu umowy (styczeń 2027, wypłata 10.01)”: wpłaty naliczasz od pierwszej wypłaty po zawarciu umowy o prowadzenie; jeśli umowę zawrzesz 5.01, a wypłata jest 10.01 — już z tej wypłaty.
+2. „pierwsze wpłaty od wynagrodzenia wypłaconego po zawarciu umowy (styczeń 2027, wypłata 8.01 — 10.01 to niedziela)”: wpłaty naliczasz od pierwszej wypłaty po zawarciu umowy o prowadzenie; jeśli umowę zawrzesz 5.01, a wypłata jest 8.01 — już z tej wypłaty.
 3. „pracownik 2% = 120 (z netto), pracodawca 1,5% = 90 (przychód: PIT 12% × 90 ≈ 11 zł więcej zaliczki)”: podstawa wpłat = podstawa składek emerytalno-rentowych (bez chorobowego i zasiłków); wpłata pracodawcy to przychód pracownika do PIT (nie do ZUS) — zaliczka rośnie o ok. 11 zł, netto spada łącznie o ok. 131 zł (4 420,43 → 4 289,43).
-4. „Przekazanie do instytucji do 15.02.2027”: wpłaty za styczeń (naliczone przy wypłacie 10.01) przekazujesz do 15. dnia następnego miesiąca; plik wpłat generuje program kadrowy; opóźnienie — odsetki i odpowiedzialność z art. 107.
+4. „Przekazanie do instytucji najpóźniej do 15.02.2027”: wpłaty naliczone przy wypłacie 8.01 przekazujesz najpóźniej do 15. dnia następnego miesiąca; AGRO-MLEKO robi przelew w dniu wypłaty, dlatego 90 zł wpłaty pracodawcy jest przychodem pracownika już w styczniu; plik wpłat generuje program kadrowy; opóźnienie — odsetki i odpowiedzialność z art. 107.
 5. „Po 3 miesiącach — 250 zł powitalne; za 2027 — 240 zł rocznie, jeśli wpłaty ≥ 3,5% × 6 × 4 950 = 1 039,50”: wpłata powitalna z budżetu po 3 miesiącach uczestnictwa; dopłata roczna, gdy suma wpłat w roku ≥ 3,5% × 6-krotność minimalnego (dla osób z obniżoną wpłatą — 25% tej kwoty).
 6. Rezygnacja: pisemna deklaracja (wzór z rozporządzenia) w dowolnym momencie — od miesiąca złożenia nie naliczasz; ważna do kolejnego autozapisu (1.04.2027), o którym informujesz do końca lutego 2027.
 
@@ -94,7 +102,7 @@ Policz jak w demonstracji wpłaty PPK i wpływ na netto (listopad 2026) dla: Ann
 W AGRO-MLEKO 18 osób ma złożone rezygnacje z PPK (w tym 4 osoby 55+ i 2 na urlopach rodzicielskich), a 1.04.2027 wypada autozapis. Zdecyduj: (a) harmonogram działań firmy od stycznia do kwietnia 2027 z terminami, (b) kogo autozapis obejmuje, a kogo nie, (c) od której wypłaty naliczysz wpłaty osobom, które nie złożą ponownej rezygnacji, (d) co z osobą, która złoży rezygnację 5.04.2027. Plik: cwiczenia/tydzien_06/ppk_2.md. Czas: 15 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_06/ppk_2.md` · rozwiązanie: `rozwiazania/tydzien_06/ppk_2.md`
-✔ Poprawny wynik wygląda tak: (a) do 28.02.2027 — pisemna informacja do każdego, kto zrezygnował, o ponownym naliczaniu od 1.04; 1.04 — wznowienie (umowy o prowadzenie dla tych, którzy nigdy nie mieli); wpłaty od wynagrodzenia WYPŁACONEGO po 31.03 — w AGRO-MLEKO z wypłaty 10.04.2027; przekazanie do 15.05; (b) obejmuje wszystkich 18–55 lat, którzy zrezygnowali, także na urlopach rodzicielskich (wpłaty, gdy jest wynagrodzenie); osoby 55+ — tylko na wniosek, autozapis ich nie dotyczy; (c) z wypłaty 10.04.2027; (d) rezygnacja złożona 5.04 działa od miesiąca złożenia: z wypłaty 10.04 nie naliczasz; wpłaty pobrane wcześniej w tym miesiącu podlegają zwrotowi (art. 23 ust. 4).
+✔ Poprawny wynik wygląda tak: (a) do 28.02.2027 — pisemna informacja do każdego, kto zrezygnował, o ponownym naliczaniu od 1.04; 1.04 — wznowienie (umowy o prowadzenie dla tych, którzy nigdy nie mieli); wpłaty od wynagrodzenia WYPŁACONEGO po 31.03 — w AGRO-MLEKO z wypłaty 9.04.2027 (10.04 to sobota → dzień roboczy wcześniej); przekazanie do 17.05 (15.05 to sobota); (b) obejmuje wszystkich 18–55 lat, którzy zrezygnowali, także na urlopach rodzicielskich (wpłaty, gdy jest wynagrodzenie); osoby 55+ — tylko na wniosek, autozapis ich nie dotyczy; (c) z wypłaty 9.04.2027; (d) rezygnacja złożona 5.04 działa od miesiąca złożenia: z wypłaty 9.04 nie naliczasz; wpłaty pobrane wcześniej w tym miesiącu podlegają zwrotowi (art. 23 ust. 4).
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Wpłata PPK naliczona od zasiłku chorobowego.**

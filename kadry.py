@@ -15,6 +15,8 @@ DOMYSLNE = {
     "zdrowotna": 9.0, "fp": 2.45, "fgsp": 0.10, "limit_30": 282600.0, "prog": 120000.0, "stawka_1": 12.0, "stawka_2": 32.0,
     "kwota_zmn": 300.0, "kup": 250.0, "kup_podw": 300.0, "ulga_mlodych": 85528.0, "wspolczynnik": 20.92,
     "ppk_prac": 2.0, "ppk_pracod": 1.5, "odpis_zfss": 2943.23, "hip_stawka": 17.0, "hip_kwota_zmn": 43.76,
+    # kwoty wolne od potrąceń z zasiłków (art. 141 ustawy emerytalnej) — 1.03.2026–28.02.2027, M.P. 2026 poz. 220; waloryzacja co roku 1 marca
+    "zas_wolna_alimenty": 849.42, "zas_wolna_inne": 1401.57,
 }
 
 
@@ -35,11 +37,15 @@ def fmt(x):
 # ============================================================ LISTA PŁAC
 def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasilek=0.0, kup=250.0, pit2=300.0,
                ppk_prac=2.0, ppk_pracod=1.5, ulga_mlodych=False, przychod_mlodych_narast=0.0, dochod_narast=0.0,
-               podstawa_er_narast=0.0, fp_zwolnienie=False, potracenia=0.0, par=None, pensja_umowna=None):
+               podstawa_er_narast=0.0, fp_zwolnienie=False, potracenia=0.0, par=None, pensja_umowna=None, bez_zus=0.0):
     """Brutto → netto dla jednego pracownika w jednym miesiącu. Zwraca słownik z wszystkimi krokami.
-    pensja_umowna: wynagrodzenie za PEŁNY miesiąc wg umowy — składki na FP/FGŚP są należne, gdy podstawa „w przeliczeniu
-    na okres miesiąca” (art. 104 ust. 1 ustawy o promocji zatrudnienia) jest ≥ minimalnemu; obniżka za chorobę/część miesiąca
-    nie zwalnia z FP, zwalnia dopiero niepełny etat z pensją poniżej minimalnej (bez innych tytułów)."""
+    pensja_umowna: wynagrodzenie za PEŁNY miesiąc wg umowy — składka na Fundusz Pracy (z Funduszem Solidarnościowym) jest
+    należna, gdy podstawa „w przeliczeniu na okres miesiąca” jest ≥ minimalnemu wynagrodzeniu; obniżka za chorobę/część miesiąca
+    nie zwalnia z FP, zwalnia dopiero niepełny etat z pensją poniżej minimalnej (bez innych tytułów). FGŚP nie ma takiego progu —
+    jest należny także od niższej podstawy. fp_zwolnienie (55+/60+, 36 mies. po urlopach rodzicielskich, 12 mies. 50+ z PUP) zwalnia z obu.
+    bez_zus: świadczenia pieniężne ze stosunku pracy zwolnione ze składek, ale opodatkowane — odprawa (zwolnienia grupowe,
+    emerytalna), odszkodowanie za skrócony okres wypowiedzenia (§2 ust. 1 pkt 2–3 rozporządzenia składkowego): nie wchodzą do
+    podstaw ZUS, zdrowotnej, PPK ani FP/FGŚP, wchodzą do przychodu ze stosunku pracy (PIT) i do wypłaty."""
     p = dict(DOMYSLNE, **(par or {}))
     kroki = []
     przychod_oskl = zl(zasadnicze + zmienne + natura)
@@ -59,7 +65,10 @@ def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasil
     kroki.append(("Podstawa składki zdrowotnej (przychód − składki społeczne + wynagrodzenie chorobowe)", podstawa_zdr))
     ppk_pracod_kw = zl(przychod_oskl * ppk_pracod / 100)
     ppk_prac_kw = zl(przychod_oskl * ppk_prac / 100)
-    przychod_pracy = zl(przychod_oskl + wyn_chorobowe + ppk_pracod_kw)
+    bez_zus = zl(bez_zus)
+    if bez_zus:
+        kroki.append(("Świadczenia bez składek ZUS i zdrowotnej, ale z PIT (odprawa, odszkodowanie)", bez_zus))
+    przychod_pracy = zl(przychod_oskl + wyn_chorobowe + ppk_pracod_kw + bez_zus)
     kup_zast = kup if przychod_pracy > 0 else 0.0
     # hipotetyczna zaliczka wg zasad z 2021 (ograniczenie składki zdrowotnej, art. 83 ustawy zdrowotnej)
     hip_podst = max(0.0, pelne(przychod_pracy - spol - kup_zast))
@@ -95,7 +104,7 @@ def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasil
         kroki.append((f"PPK pracownika {ppk_prac}% (potrącane z netto)", ppk_prac_kw))
     if ppk_pracod_kw:
         kroki.append((f"PPK pracodawcy {ppk_pracod}% (przychód do PIT, bez ZUS, nie wypłacane)", ppk_pracod_kw))
-    pieniezne = zl(zasadnicze + zmienne + wyn_chorobowe + zasilek)
+    pieniezne = zl(zasadnicze + zmienne + wyn_chorobowe + zasilek + bez_zus)
     netto = zl(pieniezne - spol - zdrowotna - zaliczka - ppk_prac_kw - potracenia)
     kroki.append(("Netto = wypłaty pieniężne − składki społeczne − zdrowotna − zaliczka − PPK pracownika − potrącenia", netto))
     # pracodawca
@@ -105,18 +114,18 @@ def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasil
     na_miesiac = max(przychod_oskl, pensja_umowna or 0.0)
     bez_fp = fp_zwolnienie or na_miesiac < p["minimalne"] * 0.999
     fp = 0.0 if bez_fp else zl(przychod_oskl * p["fp"] / 100)
-    fgsp = 0.0 if bez_fp else zl(przychod_oskl * p["fgsp"] / 100)
+    fgsp = 0.0 if fp_zwolnienie else zl(przychod_oskl * p["fgsp"] / 100)
     if bez_fp and not fp_zwolnienie:
-        kroki.append((f"FP/FGŚP nienależne: podstawa w przeliczeniu na miesiąc ({fmt(na_miesiac)}) poniżej minimalnego {fmt(p['minimalne'])}", 0.0))
+        kroki.append((f"FP nienależny: podstawa w przeliczeniu na miesiąc ({fmt(na_miesiac)}) poniżej minimalnego {fmt(p['minimalne'])}; FGŚP płacisz normalnie", 0.0))
     skl_pracod = zl(emer_p + rent_p + wyp + fp + fgsp)
-    koszt = zl(przychod_oskl + wyn_chorobowe + skl_pracod + ppk_pracod_kw)
+    koszt = zl(przychod_oskl + wyn_chorobowe + skl_pracod + ppk_pracod_kw + bez_zus)
     kroki.append((f"Składki pracodawcy: emerytalna {fmt(emer_p)} + rentowa {fmt(rent_p)} + wypadkowa {fmt(wyp)} + FP {fmt(fp)} + FGŚP {fmt(fgsp)}", skl_pracod))
     kroki.append(("Koszt pracodawcy = brutto + składki pracodawcy + PPK pracodawcy (zasiłek rozlicza się z ZUS)", koszt))
     return {
         "przychod_oskl": przychod_oskl, "podstawa_er": podstawa_er, "emer": emer, "rent": rent, "chor": chor, "spol": spol,
         "podstawa_zdr": podstawa_zdr, "zdrowotna": zdrowotna, "ppk_prac": ppk_prac_kw, "ppk_pracod": ppk_pracod_kw,
         "przychod_pracy": przychod_pracy, "zwolnione": zwolnione, "kup": kup_eff, "podstawa_pit": podstawa_pit,
-        "zaliczka": zaliczka, "zasilek": zasilek, "wyn_chorobowe": wyn_chorobowe, "netto": netto, "potracenia": potracenia,
+        "zaliczka": zaliczka, "zasilek": zasilek, "wyn_chorobowe": wyn_chorobowe, "bez_zus": bez_zus, "netto": netto, "potracenia": potracenia,
         "emer_p": emer_p, "rent_p": rent_p, "wyp": wyp, "fp": fp, "fgsp": fgsp, "skl_pracod": skl_pracod, "koszt": koszt,
         "dochod_narast_po": zl(dochod_narast + podstawa_pit), "podstawa_er_narast_po": zl(podstawa_er_narast + podstawa_er),
         "kroki": kroki,
@@ -124,17 +133,19 @@ def lista_plac(zasadnicze=0.0, zmienne=0.0, natura=0.0, wyn_chorobowe=0.0, zasil
 
 
 def minimalne_netto(kup=250.0, pit2=300.0, ppk_prac=0.0, etat=1.0, par=None):
-    """Kwota wolna od potrąceń = minimalne wynagrodzenie netto przy parametrach tego pracownika (proporcjonalnie do etatu)."""
+    """Kwota wolna od potrąceń = minimalne wynagrodzenie netto przy parametrach tego pracownika (KUP, PIT-2, PPK).
+    Niepełny etat: kwotę wyliczoną dla pełnego etatu zmniejsza się proporcjonalnie do wymiaru czasu pracy (art. 87¹ §2 KP)."""
     p = dict(DOMYSLNE, **(par or {}))
-    w = lista_plac(zasadnicze=zl(p["minimalne"] * etat), kup=kup, pit2=pit2, ppk_prac=ppk_prac, ppk_pracod=p["ppk_pracod"] if ppk_prac else 0, par=p)
-    return w["netto"]
+    w = lista_plac(zasadnicze=zl(p["minimalne"]), kup=kup, pit2=pit2, ppk_prac=ppk_prac, ppk_pracod=p["ppk_pracod"] if ppk_prac else 0, par=p)
+    return zl(w["netto"] * etat)
 
 
 def potracenia(netto, rodzaj="inne", kwota_zajecia=None, kup=250.0, pit2=300.0, ppk_prac=0.0, etat=1.0, par=None):
-    """Ile wolno potrącić z netto: rodzaj = alimenty / inne / zaliczka / kara / zgoda_inne / zgoda_pracodawca."""
+    """Ile wolno potrącić z netto: rodzaj = alimenty / inne / zaliczka / kara / zgoda_inne / zgoda_pracodawca.
+    Potrącenia za zgodą (art. 91 §2 KP): na rzecz pracodawcy — wolne 100% minimalnego netto, na rzecz innych podmiotów — 80%."""
     wolna_100 = minimalne_netto(kup, pit2, ppk_prac, etat, par)
     reguly = {"alimenty": (3 / 5, 0.0), "inne": (1 / 2, 1.0), "zaliczka": (1 / 2, 0.75), "kara": (1 / 10, 0.9),
-              "zgoda_inne": (1.0, 1.0), "zgoda_pracodawca": (1.0, 0.8)}
+              "zgoda_inne": (1.0, 0.8), "zgoda_pracodawca": (1.0, 1.0)}
     ulamek, ul_wolna = reguly[rodzaj]
     granica = zl(netto * ulamek)
     kwota_wolna = zl(wolna_100 * ul_wolna)
@@ -145,6 +156,32 @@ def potracenia(netto, rodzaj="inne", kwota_zajecia=None, kup=250.0, pit2=300.0, 
             "kroki": [(f"Granica potrącenia ({rodzaj}): {ulamek:.2f} × netto", granica),
                       (f"Kwota wolna: {int(ul_wolna * 100)}% minimalnego netto dla tego pracownika ({fmt(wolna_100)})", kwota_wolna),
                       ("Potrącenie = min(granica, netto − kwota wolna, kwota zajęcia)", max_potr)]}
+
+
+def potracenia_zasilek(zasilek_brutto, dni, rodzaj="inne", kwota_zajecia=None, zaliczka=None, par=None):
+    """Potrącenie z ZASIŁKU (chorobowy, opiekuńczy, macierzyński, świadczenie rehabilitacyjne) wypłacanego przez płatnika.
+    To nie Kodeks pracy, tylko art. 139–141 ustawy o emeryturach i rentach z FUS: granica liczona od zasiłku BRUTTO
+    (alimenty 60%, inne egzekwowane należności 25%), kwota wolna = miesięczna / 30 × liczba dni zasiłku, a potrąca się
+    z zasiłku po odliczeniu zaliczki PIT. zaliczka=None → 12% × zasiłek (kwota zmniejszająca zaliczona na wynagrodzenie)."""
+    p = dict(DOMYSLNE, **(par or {}))
+    if rodzaj not in ("alimenty", "inne"):
+        raise ValueError("Z zasiłku potrąca się tylko należności egzekwowane: rodzaj „alimenty” albo „inne”.")
+    ulamek = 0.60 if rodzaj == "alimenty" else 0.25
+    wolna_mies = p["zas_wolna_alimenty"] if rodzaj == "alimenty" else p["zas_wolna_inne"]
+    zasilek_brutto = zl(zasilek_brutto)
+    if zaliczka is None:
+        zaliczka = zl(zasilek_brutto * p["stawka_1"] / 100)
+    netto = zl(zasilek_brutto - zaliczka)
+    granica = zl(zasilek_brutto * ulamek)
+    wolna = zl(wolna_mies / 30 * dni)
+    max_potr = zl(max(0.0, min(granica, netto - wolna)))
+    if kwota_zajecia is not None:
+        max_potr = min(max_potr, zl(kwota_zajecia))
+    return {"granica": granica, "kwota_wolna": wolna, "netto": netto, "zaliczka": zl(zaliczka), "max": max_potr, "zostaje": zl(netto - max_potr),
+            "kroki": [(f"Zasiłek netto = brutto {fmt(zasilek_brutto)} − zaliczka PIT {fmt(zaliczka)}", netto),
+                      (f"Granica ({rodzaj}): {int(ulamek * 100)}% zasiłku BRUTTO", granica),
+                      (f"Kwota wolna: {fmt(wolna_mies)} / 30 × {dni:g} dni zasiłku", wolna),
+                      ("Potrącenie z zasiłku = min(granica, netto zasiłku − kwota wolna, kwota zajęcia)", max_potr)]}
 
 
 # ============================================================ CZAS PRACY
@@ -178,13 +215,15 @@ def wymiar(rok, miesiac):
     robocze = [d for d in dni if d.weekday() < 5]
     obnizajace = [d for d in dni if d in sw and d.weekday() != 6]
     godziny = len(robocze) * 8 - len(obnizajace) * 8
-    dni_pracy = len([d for d in robocze if d not in sw])
+    dni_bez_swiat = len([d for d in robocze if d not in sw])
     soboty_sw = [d for d in obnizajace if d.weekday() == 5]
-    return {"godziny": godziny, "dni_pracy": dni_pracy, "dni_robocze_pn_pt": len(robocze), "swieta_obnizajace": obnizajace,
-            "soboty_swiateczne": soboty_sw,
+    dni_pracy = godziny // 8          # święto w sobotę daje dodatkowy dzień wolny — dni pracy = wymiar / 8, nie „pon–pt bez świąt”
+    return {"godziny": godziny, "dni_pracy": dni_pracy, "dni_pon_pt_bez_swiat": dni_bez_swiat, "dni_robocze_pn_pt": len(robocze),
+            "swieta_obnizajace": obnizajace, "soboty_swiateczne": soboty_sw,
             "kroki": [(f"Dni pon–pt w miesiącu × 8 h", len(robocze) * 8),
                       (f"minus 8 h za każde święto w dniu innym niż niedziela ({len(obnizajace)})", -len(obnizajace) * 8),
-                      ("Wymiar czasu pracy", godziny)]}
+                      ("Wymiar czasu pracy", godziny),
+                      (f"Dni pracy (wymiar / 8; dni pon–pt bez świąt: {dni_bez_swiat}" + (f", minus {len(soboty_sw)} dzień wolny za święto w sobotę" if soboty_sw else "") + ")", dni_pracy)]}
 
 
 def wymiar_roczny(rok):
@@ -205,24 +244,33 @@ def dodatek_nocny(rok, miesiac, godziny, par=None):
 
 
 def nadgodziny(zasadnicze, wymiar_godz, h50=0.0, h100=0.0, stale_dodatki=0.0):
+    """Nadgodziny: NORMALNE wynagrodzenie liczysz od zasadniczego i stałych dodatków (funkcyjny, stażowy), a DODATEK 50/100% — tylko od
+    wynagrodzenia z osobistego zaszeregowania (art. 151¹ §3 KP). Dzielnik: wymiar miesiąca, w którym były nadgodziny
+    (§ 4a rozporządzenia MPiPS z 29.05.1996). Bez stałych dodatków obie stawki są równe."""
     stawka = zl((zasadnicze + stale_dodatki) / wymiar_godz)
+    stawka_dod = zl(zasadnicze / wymiar_godz)
     normalne = zl(stawka * (h50 + h100))
-    dod50 = zl(stawka * 0.5 * h50)
-    dod100 = zl(stawka * h100)
-    return {"stawka": stawka, "normalne": normalne, "dod50": dod50, "dod100": dod100, "razem": zl(normalne + dod50 + dod100),
-            "kroki": [(f"Stawka godzinowa = (zasadnicze + stałe dodatki) / wymiar {wymiar_godz} h", stawka),
-                      (f"Normalne wynagrodzenie za {h50 + h100:g} nadgodzin", normalne),
-                      (f"Dodatek 50% za {h50:g} h", dod50), (f"Dodatek 100% za {h100:g} h", dod100), ("Razem", zl(normalne + dod50 + dod100))]}
+    dod50 = zl(stawka_dod * 0.5 * h50)
+    dod100 = zl(stawka_dod * h100)
+    kroki = [(f"Stawka normalnego wynagrodzenia = (zasadnicze + stałe dodatki) / wymiar {wymiar_godz:g} h", stawka)]
+    if stale_dodatki:
+        kroki.append((f"Stawka do dodatku = samo zasadnicze / wymiar {wymiar_godz:g} h (art. 151¹ §3 KP)", stawka_dod))
+    kroki += [(f"Normalne wynagrodzenie za {h50 + h100:g} nadgodzin", normalne),
+              (f"Dodatek 50% za {h50:g} h", dod50), (f"Dodatek 100% za {h100:g} h", dod100), ("Razem", zl(normalne + dod50 + dod100))]
+    return {"stawka": stawka, "stawka_dodatku": stawka_dod, "normalne": normalne, "dod50": dod50, "dod100": dod100,
+            "razem": zl(normalne + dod50 + dod100), "kroki": kroki}
 
 
 def koniec_wypowiedzenia(data_doreczenia, okres):
-    """okres: '3d', '1t', '2t', '1m', '3m'. Tygodniowy kończy się w sobotę, miesięczny — ostatniego dnia miesiąca."""
+    """okres: '3d', '1t', '2t', '1m', '3m'. Tygodniowy kończy się w sobotę, miesięczny — ostatniego dnia miesiąca.
+    Dni robocze (art. 34 pkt 1 KP) to wszystkie dni z wyjątkiem niedziel i świąt ustawowo wolnych — sobota JEST dniem roboczym
+    (stanowisko MRPiPS z 1.03.2010); dnia doręczenia nie liczy się (art. 111 KC w zw. z art. 300 KP)."""
     d = data_doreczenia
     if okres.endswith("d"):
         n, kon = int(okres[:-1]), d
         while n:
             kon += dt.timedelta(days=1)
-            if kon.weekday() < 5 and kon not in swieta(kon.year):
+            if kon.weekday() != 6 and kon not in swieta(kon.year):
                 n -= 1
         return kon
     if okres.endswith("t"):
@@ -251,24 +299,33 @@ def okres_wypowiedzenia(staz_miesiace, rodzaj="nieokreslona", dlugosc_probnej_dn
 
 
 # ============================================================ URLOPY
-def wymiar_urlopu(staz_lata, etat=1.0, pierwsza_praca=False, miesiace_w_roku=12, par=None):
-    """Dni i godziny urlopu w roku; proporcja do etatu i do okresu zatrudnienia w roku (zaokrąglenie w górę do dnia)."""
+def wymiar_urlopu(staz_lata, etat=1.0, pierwsza_praca=False, miesiace_w_roku=12, par=None, u_poprzedniego=0):
+    """Dni i godziny urlopu w roku; proporcja do etatu i do okresu zatrudnienia w roku (zaokrąglenie w górę do dnia).
+    u_poprzedniego — dni urlopu za ten rok ze świadectwa pracy (wykorzystane + ekwiwalent): limit roczny z art. 155³ §2 KP."""
     import math
     pelny = 26 if staz_lata >= 10 else 20
-    kroki = [(f"Wymiar ze stażu {staz_lata} lat", pelny)]
+    kroki = [(f"Wymiar ze stażu {staz_lata:g} lat", pelny)]
     dni_etat = math.ceil(pelny * etat - 1e-9)
     if etat != 1.0:
         kroki.append((f"× etat {etat:g}, zaokrąglenie w górę", dni_etat))
     if pierwsza_praca:
         dni = math.floor(dni_etat * miesiace_w_roku / 12 * 100 + 1e-6) / 100
         kroki.append((f"Pierwsza praca: 1/12 × {miesiace_w_roku} przepracowanych miesięcy, bez zaokrąglania w górę", dni))
-        return {"dni": dni, "godziny": round(dni * 8, 2), "kroki": kroki}
+        return {"dni": dni, "godziny": round(dni * 8, 2), "z_proporcji": dni, "kroki": kroki}
     if miesiace_w_roku < 12:
         dni = math.ceil(dni_etat * miesiace_w_roku / 12 - 1e-9)
         kroki.append((f"Proporcjonalnie do {miesiace_w_roku}/12 miesięcy, zaokrąglenie w górę", dni))
     else:
         dni = dni_etat
-    return {"dni": dni, "godziny": dni * 8, "kroki": kroki}
+    z_proporcji = dni
+    if u_poprzedniego:
+        limit = max(dni_etat - u_poprzedniego, 0)
+        if dni > limit:
+            dni = limit
+            kroki.append((f"Limit roczny art. 155³ §2: {dni_etat:g} − {u_poprzedniego:g} dni ze świadectwa pracy", dni))
+        else:
+            kroki.append((f"Limit roczny art. 155³ §2: {u_poprzedniego:g} + {dni:g} ≤ {dni_etat:g} — bez obniżenia", dni))
+    return {"dni": dni, "godziny": dni * 8, "z_proporcji": z_proporcji, "kroki": kroki}
 
 
 def ekwiwalent(stale, zmienne_3m=0.0, roczne_12m=0.0, godziny=0.0, rok=2026, etat=1.0, norma=8, wspolczynnik=None):
@@ -405,20 +462,99 @@ KODY_TYTULU = {
     "0590": "mały ZUS plus", "1211": "osoba na urlopie wychowawczym", "1240": "osoba pobierająca zasiłek macierzyński", "3000": "osoba bez tytułu — rozliczenie po ustaniu",
 }
 KODY_PRZERW = {
-    "111": "urlop bezpłatny", "121": "urlop wychowawczy", "151": "usprawiedliwiona nieobecność bez prawa do wynagrodzenia/zasiłku",
-    "152": "nieusprawiedliwiona nieobecność", "155": "niezdolność bez prawa do wynagrodzenia (okres wyczekiwania)",
-    "312": "zasiłek opiekuńczy", "313": "zasiłek chorobowy z ubezpieczenia chorobowego", "314": "zasiłek chorobowy z ubezpieczenia wypadkowego",
-    "319": "zasiłek macierzyński za okres urlopu rodzicielskiego", "321": "świadczenie rehabilitacyjne", "325": "zasiłek macierzyński za okres urlopu ojcowskiego",
-    "327": "zasiłek macierzyński za okres urlopu macierzyńskiego", "331": "wynagrodzenie za czas niezdolności finansowane przez pracodawcę",
+    # załącznik nr 24 do rozporządzenia MRPiPS z 9.04.2026 r. (Dz.U. 2026 poz. 518), część XI — wybór używany w kursie
+    "111": "urlop bezpłatny", "121": "urlop wychowawczy (art. 186 §2 KP)", "131": "urlop opiekuńczy (art. 173¹ KP)",
+    "151": "usprawiedliwiona nieobecność bez prawa do wynagrodzenia lub zasiłku", "152": "nieusprawiedliwiona nieobecność",
+    "311": "zasiłek macierzyński za okres urlopu macierzyńskiego", "312": "zasiłek opiekuńczy",
+    "313": "zasiłek chorobowy z ubezpieczenia chorobowego", "314": "zasiłek chorobowy z ubezpieczenia wypadkowego",
+    "319": "zasiłek macierzyński za okres urlopu rodzicielskiego", "321": "świadczenie rehabilitacyjne z ubezpieczenia chorobowego",
+    "322": "świadczenie rehabilitacyjne z ubezpieczenia wypadkowego", "327": "zasiłek macierzyński za okres urlopu ojcowskiego",
+    "331": "wynagrodzenie za czas niezdolności do pracy finansowane przez pracodawcę",
+    "338": "zasiłek macierzyński za urlop rodzicielski do 9 tygodni (część nieprzenoszalna, art. 182¹ᵃ §4 KP)",
+    "341": "zasiłek macierzyński za uzupełniający urlop macierzyński", "350": "inne świadczenia / przerwy",
 }
-KODY_WYREJ = {"100": "ustanie tytułu do ubezpieczeń", "500": "zgon", "600": "inna przyczyna"}
-TRYBY_ROZW = {"1": "porozumienie stron (art. 30 §1 pkt 1 KP)", "2": "wypowiedzenie przez pracownika (art. 30 §1 pkt 2)", "3": "wypowiedzenie przez pracodawcę (art. 30 §1 pkt 2)",
-              "4": "bez wypowiedzenia z winy pracownika (art. 52)", "5": "bez wypowiedzenia bez winy pracownika (art. 53)", "6": "bez wypowiedzenia przez pracownika (art. 55)",
-              "7": "upływ czasu, na który była zawarta (art. 30 §1 pkt 4)", "8": "wygaśnięcie (art. 63 i n.)"}
+KODY_WYREJ = {"100": "ustanie tytułu do ubezpieczeń", "500": "zgon osoby ubezpieczonej", "600": "inna przyczyna",
+              "800": "przejście zakładu pracy na innego pracodawcę (art. 23¹ KP)"}
+# ZUS ZWUA blok V pole 02 — kod trybu rozwiązania (R) / wygaśnięcia (W) stosunku pracy (zał. 24, część XV)
+TRYBY_ROZW = {
+    "20R": "bez wypowiedzenia przez pracownika — po przejściu zakładu na innego pracodawcę (art. 23¹ §4)",
+    "21R": "nieprzyjęcie nowych warunków pracy i płacy po przejściu zakładu (art. 23¹ §5)",
+    "22R": "porozumienie stron", "23R": "wypowiedzenie przez pracodawcę", "24R": "wypowiedzenie przez pracownika",
+    "25R": "bez wypowiedzenia przez pracodawcę — ciężkie naruszenie obowiązków (art. 52 §1 pkt 1)",
+    "26R": "bez wypowiedzenia przez pracodawcę — przestępstwo (art. 52 §1 pkt 2)",
+    "27R": "bez wypowiedzenia przez pracodawcę — utrata uprawnień (art. 52 §1 pkt 3)",
+    "28R": "upływ czasu, na który umowa była zawarta", "29R": "ukończenie pracy, dla której zawarto umowę (umowy sprzed 22.02.2016)",
+    "30R": "skrócony okres wypowiedzenia (art. 36¹)", "31R": "po przywróceniu do pracy — pracownik zatrudniony u innego pracodawcy (art. 48 §2)",
+    "32R": "bez wypowiedzenia przez pracodawcę — niezdolność do pracy dłuższa niż 3 miesiące (art. 53)",
+    "33R": "bez wypowiedzenia przez pracodawcę — wyczerpanie okresu zasiłkowego / świadczenia rehabilitacyjnego (art. 53)",
+    "34R": "bez wypowiedzenia przez pracodawcę — usprawiedliwiona nieobecność dłuższa niż 1 miesiąc (art. 53)",
+    "35R": "bez wypowiedzenia przez pracownika — orzeczenie lekarskie (art. 55 §1)",
+    "36R": "bez wypowiedzenia przez pracownika — ciężkie naruszenie obowiązków przez pracodawcę (art. 55 §1¹)",
+    "37R": "rozwiązanie w przypadkach z przepisów szczególnych", "38R": "powołanie u innego pracodawcy (art. 68³)",
+    "39R": "odwołanie równoznaczne z wypowiedzeniem (art. 70 §2)", "40R": "odwołanie równoznaczne z rozwiązaniem bez wypowiedzenia (art. 70 §3)",
+    "41R": "wygaśnięcie mandatu — stosunek pracy z wyboru (art. 73 §2)", "42R": "młodociany — praca zagrażająca zdrowiu (art. 201 §2)",
+    "43R": "zwolnienie grupowe — porozumienie stron", "44R": "zwolnienie grupowe — wypowiedzenie",
+    "45R": "zwolnienie indywidualne z przyczyn niedotyczących pracownika — wypowiedzenie",
+    "46R": "zwolnienie indywidualne z przyczyn niedotyczących pracownika — porozumienie stron",
+    "47W": "wygaśnięcie — brak powrotu po zakończeniu stosunku pracy z wyboru (art. 74)",
+    "48W": "wygaśnięcie — śmierć pracownika", "49W": "wygaśnięcie — śmierć pracodawcy", "50W": "wygaśnięcie — tymczasowe aresztowanie",
+    "51W": "wygaśnięcie — powołanie do zawodowej służby wojskowej", "52W": "wygaśnięcie — brak powrotu po służbie wojskowej",
+    "53W": "wygaśnięcie w przypadkach z przepisów szczególnych",
+}
+# ZUS ZWUA blok V pole 03 — kod podstawy prawnej (zał. 24, część XVI)
+PODSTAWY_ROZW = {
+    "400": "art. 23¹ §4 KP", "401": "art. 23¹ §5 KP",
+    "402": "art. 30 §1 pkt 1 KP", "403": "art. 30 §1 pkt 2 KP", "404": "art. 30 §1 pkt 3 w zw. z art. 52 §1 pkt 1 KP",
+    "405": "art. 30 §1 pkt 3 w zw. z art. 52 §1 pkt 2 KP", "406": "art. 30 §1 pkt 3 w zw. z art. 52 §1 pkt 3 KP",
+    "407": "art. 30 §1 pkt 4 KP", "408": "art. 30 §1 pkt 5 KP (brzmienie do 21.02.2016)", "409": "art. 36¹ §1 KP", "410": "art. 48 §2 KP",
+    "411": "art. 53 §1 pkt 1 lit. a KP", "412": "art. 53 §1 pkt 1 lit. b KP",
+    "413": "art. 53 §1 pkt 2 KP", "414": "art. 55 §1 KP", "415": "art. 55 §1¹ KP",
+    "416": "art. 68³ KP", "417": "art. 70 §2 KP", "418": "art. 70 §3 KP", "419": "art. 73 §2 KP", "420": "art. 201 §2 KP",
+    "421": "art. 30 §1 pkt 2 KP w zw. z art. 1 ust. 1 ustawy o zwolnieniach grupowych",
+    "422": "art. 30 §1 pkt 2 KP w zw. z art. 10 ust. 1 ustawy o zwolnieniach grupowych", "423": "art. 74 KP",
+    "424": "art. 63¹ §1 KP (śmierć pracownika)",
+    "425": "art. 63² §1 KP (śmierć pracodawcy)", "426": "art. 66 §1 KP (tymczasowe aresztowanie)",
+    "427": "art. 63 KP — powołanie do zawodowej służby wojskowej", "428": "art. 63 KP — niezgłoszenie się po służbie wojskowej",
+    "429": "art. 30 §1 pkt 1 KP — przyczyny dotyczące zakładu pracy, pracodawca poniżej 20 pracowników",
+    "430": "art. 30 §1 pkt 2 KP — przyczyny dotyczące zakładu pracy, pracodawca poniżej 20 pracowników",
+    "431": "art. 30 §1 pkt 1 KP — upadłość, likwidacja pracodawcy lub stanowiska (porozumienie stron)",
+    "432": "art. 30 §1 pkt 2 KP — upadłość, likwidacja pracodawcy lub stanowiska (wypowiedzenie)",
+    "433": "art. 30 §1 pkt 1 KP — niewypłacalność pracodawcy (art. 3 ustawy o ochronie roszczeń)",
+    "434": "art. 30 §1 pkt 2 KP — niewypłacalność pracodawcy (art. 3 ustawy o ochronie roszczeń)",
+    "435": "art. 30 §1 pkt 1 KP — niewypłacalność, postępowanie w państwie UE/EFTA (art. 4)",
+    "436": "art. 30 §1 pkt 2 KP — niewypłacalność, postępowanie w państwie UE/EFTA (art. 4)",
+    "437": "art. 30 §1 pkt 1 KP — niewypłacalność (art. 5 ustawy o ochronie roszczeń)",
+    "438": "art. 30 §1 pkt 2 KP — niewypłacalność (art. 5 ustawy o ochronie roszczeń)",
+    "439": "art. 30 §1 pkt 1 KP — niewypłacalność (art. 6 ustawy o ochronie roszczeń)",
+    "440": "art. 30 §1 pkt 2 KP — niewypłacalność (art. 6 ustawy o ochronie roszczeń)",
+    "441": "art. 30 §1 pkt 1 KP — niewypłacalność (art. 8 ustawy o ochronie roszczeń)",
+    "442": "art. 30 §1 pkt 2 KP — niewypłacalność (art. 8 ustawy o ochronie roszczeń)",
+    "550": "inna podstawa prawna (wpisz tekstem)",
+}
+# typowe pary tryb → podstawa (Poradnik ZUS / instrukcja wypełniania ZWUA); inne zestawienie = ostrzeżenie
+PARY_TRYB_PODSTAWA = {"20R": ("400",), "21R": ("401",), "22R": ("402", "429", "431", "433"), "23R": ("403", "430", "432", "434"), "24R": ("403",),
+                      "25R": ("404",), "26R": ("405",), "27R": ("406",), "28R": ("407",), "29R": ("408",), "30R": ("409",), "31R": ("410",),
+                      "32R": ("411", "412"), "33R": ("412",), "34R": ("413",), "35R": ("414",), "36R": ("415",), "38R": ("416",), "39R": ("417",),
+                      "40R": ("418",), "41R": ("419",), "42R": ("420",), "43R": ("402", "421", "431"), "44R": ("421",), "45R": ("422", "432"),
+                      "46R": ("402", "422", "431"), "47W": ("423",), "48W": ("424",), "49W": ("425",), "50W": ("426",), "51W": ("427",), "52W": ("428",)}
+TRYBY_STARE = {"1": "22R", "2": "24R", "3": "23R", "4": "25R", "5": "32R", "6": "36R", "7": "28R", "8": "48W"}
+
+
+def _jako_date(x):
+    """Data z obiektu date albo z tekstu RRRR-MM-DD (tak zapisuje ją rejestr wysłanych dokumentów)."""
+    if isinstance(x, dt.datetime):
+        return x.date()
+    if isinstance(x, dt.date):
+        return x
+    try:
+        return dt.date.fromisoformat(str(x)[:10])
+    except ValueError:
+        return None
 
 
 def sprawdz_zgloszenie(dok, osoba, ubezpieczeni, dzis=None):
-    """Walidacja jak w Płatniku: zwraca (bledy, ostrzezenia). dok: {typ, kod, data, kod_wyrej, tryb, chorobowe}."""
+    """Walidacja jak w Płatniku: zwraca (bledy, ostrzezenia). dok: {typ, kod, data, kod_wyrej, tryb, podstawa, strona, chorobowe}.
+    ZWUA dla pracownika (blok V): data ustania, kod trybu (np. 23R), kod podstawy prawnej (np. 403), strona inicjująca (1 pracownik / 2 pracodawca)."""
     dzis = dzis or dt.date.today()
     bledy, ostrz = [], []
     typ = dok.get("typ")
@@ -445,6 +581,16 @@ def sprawdz_zgloszenie(dok, osoba, ubezpieczeni, dzis=None):
             bledy.append("Osoba jest już zgłoszona z tym tytułem — najpierw ZWUA (lub ZUA w trybie korekty).")
         if osoba.get("student") and kod[:4] == "0411":
             bledy.append("Uczeń/student do 26 lat na zleceniu nie podlega ubezpieczeniom — nie zgłaszasz go wcale.")
+        if kod[:4] == "0411" and osoba.get("rodzaj") == "zlecenie" and not osoba.get("student"):
+            if osoba.get("inny_tytul") and typ == "ZUA":
+                ostrz.append("Zleceniobiorca ma inny tytuł z podstawą ≥ minimalnego wynagrodzenia (etat u innego płatnika) — ze zlecenia obowiązkowe jest "
+                             "tylko ubezpieczenie zdrowotne: właściwe jest ZZA. ZUA składasz tylko, gdy złożył wniosek o dobrowolne emerytalne i rentowe.")
+            if not osoba.get("inny_tytul") and typ == "ZZA":
+                ostrz.append("Zleceniobiorca bez innego tytułu podlega obowiązkowo ubezpieczeniom emerytalnemu, rentowym i wypadkowemu — ZZA (tylko zdrowotne) "
+                             "wymaga oświadczenia o innym tytule z podstawą ≥ minimalnego wynagrodzenia; bez niego składasz ZUA.")
+        if kod[:4] in ("1211", "1240"):
+            ostrz.append("Kody 12 11 (urlop wychowawczy) i 12 40 (zasiłek macierzyński) stosujesz w raporcie ZUS RCA — własnego pracownika nie zgłaszasz "
+                         "ponownie: zostaje zgłoszony jako 01 10, a przerwę wykazujesz w ZUS RSA (121, 311, 319…).")
         if typ == "ZZA" and kod[:4] == "0110":
             bledy.append("Pracownik (01 10) podlega ubezpieczeniom społecznym — ZZA (tylko zdrowotne) jest błędne; użyj ZUA.")
         if osoba.get("data_zatrudnienia") and data != osoba["data_zatrudnienia"] and kod[:4] == "0110":
@@ -456,17 +602,44 @@ def sprawdz_zgloszenie(dok, osoba, ubezpieczeni, dzis=None):
     elif typ == "ZWUA":
         if not aktywne:
             bledy.append("Nie można wyrejestrować osoby, która nie jest zgłoszona.")
-        ost = max((d["data"] for d in zgl), default=None)
+        ost = max((x for x in (_jako_date(d.get("data")) for d in zgl) if x), default=None)
         if ost and data <= ost:
             bledy.append("Data wyrejestrowania musi być późniejsza niż data zgłoszenia (dzień PO ustaniu tytułu).")
-        if osoba.get("data_ustania") and data != osoba["data_ustania"] + dt.timedelta(days=1):
-            ostrz.append(f"Umowa ustała {osoba['data_ustania']} — data wyrejestrowania to dzień następny ({osoba['data_ustania'] + dt.timedelta(days=1)}).")
-        if (dok.get("kod_wyrej") or "") not in KODY_WYREJ:
-            bledy.append("Brak lub zły kod przyczyny wyrejestrowania (100 / 500 / 600).")
-        if osoba.get("rodzaj") == "pracownik" and not dok.get("tryb"):
-            bledy.append("Dla pracownika podaj tryb i podstawę prawną rozwiązania stosunku pracy.")
+        ustanie = _jako_date(osoba.get("data_ustania")) if osoba.get("data_ustania") else None
+        if ustanie and data != ustanie + dt.timedelta(days=1):
+            ostrz.append(f"Umowa ustała {ustanie} — data wyrejestrowania to dzień następny ({ustanie + dt.timedelta(days=1)}).")
+        kod_wyrej = dok.get("kod_wyrej") or ""
+        if kod_wyrej not in KODY_WYREJ:
+            bledy.append("Brak lub zły kod przyczyny wyrejestrowania (100 ustanie tytułu / 500 zgon / 600 inna / 800 przejście zakładu).")
+        if osoba.get("rodzaj") == "pracownik" and kod_wyrej in ("100", "500"):
+            # blok V ZUS ZWUA — tylko dla pracowników, przy kodzie przyczyny 100 lub 500
+            tryb = TRYBY_STARE.get(str(dok.get("tryb") or ""), str(dok.get("tryb") or "")).upper()
+            podstawa = str(dok.get("podstawa") or "")
+            strona = str(dok.get("strona") or "")
+            if not tryb:
+                bledy.append("Blok V: dla pracownika podaj kod trybu rozwiązania/wygaśnięcia stosunku pracy (np. 22R porozumienie stron, 23R wypowiedzenie przez pracodawcę, 28R upływ czasu).")
+            elif tryb not in TRYBY_ROZW:
+                bledy.append(f"Blok V: kod trybu „{tryb}” nie istnieje — to 2 cyfry i litera R (rozwiązanie) albo W (wygaśnięcie), np. 23R.")
+            else:
+                if not podstawa:
+                    bledy.append("Blok V: podaj kod podstawy prawnej (np. 402 — art. 30 §1 pkt 1, 403 — art. 30 §1 pkt 2, 407 — art. 30 §1 pkt 4).")
+                elif podstawa not in PODSTAWY_ROZW:
+                    bledy.append(f"Blok V: kod podstawy prawnej „{podstawa}” nie istnieje (kody 400–442, 550 — inna).")
+                elif tryb in PARY_TRYB_PODSTAWA and podstawa not in PARY_TRYB_PODSTAWA[tryb]:
+                    oczek = " lub ".join(f"{k} ({PODSTAWY_ROZW[k]})" for k in PARY_TRYB_PODSTAWA[tryb] if k in PODSTAWY_ROZW)
+                    ostrz.append(f"Blok V: do trybu {tryb} ({TRYBY_ROZW[tryb]}) zwykle podaje się podstawę {oczek}, a wpisano {podstawa} ({PODSTAWY_ROZW[podstawa]}).")
+                if tryb.endswith("R") and strona not in ("1", "2"):
+                    bledy.append("Blok V: podaj stronę inicjującą rozwiązanie — 1 pracownik, 2 pracodawca (także gdy nie da się ustalić).")
+                elif tryb.endswith("R") and ((tryb in ("23R", "25R", "26R", "27R", "32R", "33R", "34R", "44R", "45R") and strona == "1") or (tryb in ("20R", "24R", "35R", "36R") and strona == "2")):
+                    ostrz.append(f"Blok V: strona inicjująca nie pasuje do trybu {tryb} ({TRYBY_ROZW[tryb]}).")
+                elif tryb.endswith("W") and strona:
+                    ostrz.append("Blok V: przy wygaśnięciu stosunku pracy (kody W) pola „strona inicjująca” nie wypełnia się.")
+                if kod_wyrej == "500" and tryb != "48W":
+                    ostrz.append("Kod przyczyny 500 (zgon) łączy się z trybem 48W — wygaśnięcie wskutek śmierci pracownika.")
+        elif osoba.get("rodzaj") != "pracownik" and dok.get("tryb"):
+            ostrz.append("Blok V (tryb, podstawa, strona) wypełnia się tylko dla pracowników — przy zleceniu pozostaje pusty.")
         if (dzis - data).days > 7:
-            ostrz.append("Wyrejestrowanie po terminie 7 dni.")
+            ostrz.append(f"Wyrejestrowanie po terminie 7 dni (termin minął {data + dt.timedelta(days=7)}).")
     elif typ == "ZCNA":
         if not aktywne:
             bledy.append("Członka rodziny zgłasza się do osoby, która sama jest zgłoszona (ZUA/ZZA).")

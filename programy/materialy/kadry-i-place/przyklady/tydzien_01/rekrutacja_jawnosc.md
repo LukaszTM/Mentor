@@ -13,7 +13,7 @@ Klauzula: Administratorem danych jest AGRO-MLEKO sp. z o.o. … podstawa: art. 2
 ## Omówienie — co robi każdy krok i dlaczego
 1. „osoba na stanowisko operatora linii” — forma neutralna płciowo (zamiast „operator”), żeby ogłoszenie nie sugerowało preferencji (art. 18³ᵃ KP — zakaz dyskryminacji także w rekrutacji).
 2. „praca 3-zmianowa, system równoważny do 12 h” — informacja o organizacji pracy z regulaminu; kandydat musi wiedzieć, że będą nocki, bo dodatek nocny jest składnikiem wynagrodzenia.
-3. „5 200–6 100 zł brutto (zasadnicze)” — widełki obowiązkowe od 24.12.2025 (art. 22¹ᵇ KP): przedział musi być realny, z siatki płac; „od 4 806 do 20 000” to obejście przepisu.
+3. „5 200–6 100 zł brutto (zasadnicze)” — kwota początkowa lub przedział — obowiązek od 24.12.2025 (art. 18³ᶜᵃ KP): przedział musi być realny, z siatki płac; „od 4 806 do 20 000” to obejście przepisu.
 4. „+ dodatek za pracę w nocy (20% stawki godz. z minimalnej) + premia regulaminowa do 10%” — składniki zmienne nazwane z podstawą (regulamin z 1.03.2025), bez obiecywania kwot, których nie ma w regulaminie.
 5. Klauzula RODO: administrator (firma), podstawa (art. 22¹ KP = obowiązek prawny; art. 6 ust. 1 lit. b, c RODO), retencja: do końca rekrutacji; 12 miesięcy tylko za osobną zgodą na przyszłe rekrutacje.
 

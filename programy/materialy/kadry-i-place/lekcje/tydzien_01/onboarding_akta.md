@@ -15,7 +15,7 @@ Tydzień 1 · lekcja 8 z 48 · ≈ 60 min
 | Krok | Szczegóły |
 |---|---|
 | wstępne badania lekarskie | skierowanie ze wskazaniem czynników szkodliwych; orzeczenie do akt A |
-| kto jest zwolniony z badań wstępnych | ponownie przyjmowani do tej samej pracy w 30 dni; osoby z aktualnym orzeczeniem od innego pracodawcy na te same warunki — poza pracami szczególnie niebezpiecznymi |
+| kto jest zwolniony z badań wstępnych | ponownie przyjmowani do tej samej pracy u tego samego pracodawcy w 30 dni od ustania poprzedniej umowy; przyjmowani do innego pracodawcy w 30 dni od ustania poprzedniego zatrudnienia, z aktualnym orzeczeniem i przy takich samych warunkach pracy — poza pracami szczególnie niebezpiecznymi (art. 229 §1¹) |
 | umowa o pracę | na piśmie, przed dopuszczeniem |
 | szkolenie BHP wstępne | instruktaż ogólny i stanowiskowy; karta do akt B |
 | BHP dla administracyjno-biurowych | wstępne zawsze; okresowe można pominąć przy niskim ryzyku |
@@ -39,7 +39,8 @@ Odrębnie prowadzisz: dokumentację czasu pracy, urlopową, listy płac i karty 
 | Zatrudnieni | Okres |
 |---|---|
 | od 1.01.2019 | 10 lat od końca roku ustania zatrudnienia |
-| wcześniej | 50 lat, chyba że złożono ZUS OSW i RIA |
+| od 1.01.1999 do 31.12.2018 | 50 lat; 10 lat od końca roku, w którym pracodawca złożył ZUS OSW i raport RIA |
+| przed 1.01.1999 | 50 lat |
 ### Postać papierowa albo elektroniczna
 Obie są równoważne.
 Przejście na e-akta: skan z podpisem kwalifikowanym lub pieczęcią, informacja dla pracowników, 30 dni na odbiór papieru.
@@ -116,17 +117,17 @@ Posortuj 20 dokumentów z pliku cwiczenia/tydzien_01/onboarding_akta_2.md do cz�
 - **Ile masz dni na zgłoszenie pracownika do ZUS?**
   - 7 dni od powstania obowiązku ubezpieczenia (dzień rozpoczęcia pracy).
 - **Kiedy kara porządkowa znika z akt?**
-  - Po roku nienagannej pracy (wcześniej na wniosek pracownika za zgodą pracodawcy lub związku).
+  - Po roku nienagannej pracy (wcześniej — z inicjatywy pracodawcy albo na wniosek związku zawodowego reprezentującego pracownika, art. 113 §1).
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Ułożyć onboarding w terminach (badania → umowa → BHP → 7 dni: ZUA i informacja 29 §3 → PPK), przypisać dokument do części akt i wiedzieć, które części „czyścisz” po roku.
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
-- W jakiej części akt przechowujesz oświadczenie PIT-2?
+- W jakiej części akt przechowujesz orzeczenie lekarskie z badań OKRESOWYCH?
   - A) A
   - B) B
   - C) C
-  - D) Poza aktami, w dokumentacji płacowej
+  - D) E
 - Ile wynosi okres przechowywania akt pracownika zatrudnionego w 2020 r.?
   - A) 5 lat
   - B) 10 lat od końca roku ustania zatrudnienia

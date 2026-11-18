@@ -16,7 +16,7 @@ Styczeń 2027: 1.01 piątek → pełne tygodnie 1–28.01 = 4 × 40 = 160; 29.01
 ```
 Styczeń 2027: 1–28.01 = 4 tygodnie × 40 = 160; 29.01 piątek +8 = 168; święta 1.01 (pt), 6.01 (śr): −16 → 152 h; dni pracy 19.
 Kwiecień 2027: 1–28.04 = 160; 29.04 (czw), 30.04 (pt) +16 = 176; święta: brak (Wielkanoc 28.03, Poniedziałek Wielkanocny 29.03 — marzec) → 176 h; dni pracy 22.
-Maj 2027: 1–28.05 = 160; 31.05 (pon) +8 = 168; święta: 1.05 (sobota — obniża i daje dzień wolny), 3.05 (pon), 27.05 Boże Ciało (czw): −24 → 144 h; dni pracy 19 (+1 dzień wolny do oddania za 1.05).
+Maj 2027: 1–28.05 = 160; 31.05 (pon) +8 = 168; święta: 1.05 (sobota — obniża i daje dzień wolny), 3.05 (pon), 27.05 Boże Ciało (czw): −24 → 144 h; dni pracy 18 (19 dni pon–pt bez świąt minus dzień wolny za sobotnie święto 1.05).
 Kontrola: Warsztat → Czas pracy → 152 / 176 / 144.
 ```
 

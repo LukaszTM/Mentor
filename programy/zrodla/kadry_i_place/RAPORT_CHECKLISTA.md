@@ -1,6 +1,6 @@
 # Raport zgodności ze STANDARDEM TWORZENIA KURSÓW v1.0 — „Kadry i płace — kurs zaawansowany (praktyka 2026)”
 
-Wersja kursu: 2.2 · Mentor 2.7.3 · data raportu: 18.11.2026 (aktualizacja po audycie faktów i dodaniu materiałów zagranicznych; poprzednia: 12.11.2026) · autor raportu: zespół kursu (Claude) — **raport uczciwy: status końcowy poniżej**
+Wersja kursu: 3.0 · Mentor 2.8.0 · data raportu: 18.11.2026 (aktualizacja po pełnym audycie merytorycznym, dodaniu sprawdzania automatycznego, formularzy, projektu końcowego i kalendarza aktualizacji; poprzednia: 18.11.2026 — wersja 2.2) · autor raportu: zespół kursu (Claude) — **raport uczciwy: status końcowy poniżej**
 
 ## A. Testy jakości (STANDARD §10)
 

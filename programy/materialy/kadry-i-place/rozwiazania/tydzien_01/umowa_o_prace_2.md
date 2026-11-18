@@ -19,7 +19,7 @@ Poprawne rozwiązanie: (1) nowa umowa określona od 1.03.2027 do 30.11.2027 (ł�
 ```
 
 ## Oczekiwany wynik
-Aneks = nowa umowa określona od 1.03.2027 (art. 25¹ §2): licznik 2 z 3, miesiące 24 + 10 = 34 > 33 → od 34. miesiąca (1.01.2028)... — dokładniej: łączny okres przekracza 33 mies. już w trakcie: 24 (do 28.02.2027) + 10 (1.03–31.12.2027) = 34 → od 1.12.2027 (34. miesiąc) umowa staje się bezterminowa. Poprawnie: nowa umowa określona max do 30.11.2027 (33 mies.) albo od razu nieokreślona.
+Aneks = nowa umowa określona od 1.03.2027 (art. 25¹ §2): licznik 2 z 3; miesiące 24 (do 28.02.2027) + 10 (1.03–31.12.2027) = 34 > 33 → 33 miesiące upływają 30.11.2027, więc od 1.12.2027 (34. miesiąc) umowa jest z mocy prawa bezterminowa (art. 25¹ §3). Poprawnie: nowa umowa określona max do 30.11.2027 (33 mies.) albo od razu nieokreślona.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

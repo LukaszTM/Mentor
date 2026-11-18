@@ -6,50 +6,51 @@ Tydzień 9 · lekcja 32 z 48 · ≈ 65 min
 **Po co mi to?** etap 2 to serce kursu: każda liczba z lekcji 4–7 wraca w ZUS (etap 3) i w rozliczeniu końcowym (etap 4); kto tu jest pewny, tam tylko wysyła dokumenty.
 
 ## Czego potrzebujesz
-- Zaliczone testy lekcji tygodni 4–7.
+- Zaliczone testy lekcji tygodni 5–9.
 - Lista płac 2026-11 zapisana z Warsztatu (04-place/).
 - Warsztat → Lista płac, Zasiłki, Potrącenia, Urlopy.
 
 ## 1 · Wyjaśnienie od podstaw
 ### Kolejność, która nigdy się nie zmienia
-- przychód oskładkowany (zasadnicze + zmienne + natura) → 3 składki osobno (limit 30-krotności dla E/R) → zdrowotna 9% od (przychód − składki + chorobowe), ograniczona hipotetyczną zaliczką 2021 → podstawa PIT = przychód ze stosunku pracy (+ PPK pracodawcy, + chorobowe, + benefity tylko-PIT) − składki − KUP (zaokr.) + zasiłki → zaliczka 12/32% − kwota zmniejszająca (zaokr.) → PPK pracownika → potrącenia (granice, kwoty wolne) → netto; bilans.
+- przychód oskładkowany (zasadnicze + zmienne + natura) → 3 składki osobno (limit 30-krotności dla E/R) → zdrowotna 9% od (przychód − składki + chorobowe), ograniczona hipotetyczną zaliczką 2021 → podstawa PIT = przychód ze stosunku pracy (+ PPK pracodawcy, + chorobowe, + benefity tylko-PIT) − składki − KUP (zaokr.) + zasiłki → zaliczka 12/32% − kwota zmniejszająca (zaokr.) → PPK pracownika → potrącenia (z wynagrodzenia: granice i kwoty wolne z KP; z zasiłku osobno: 25% / 60% brutto i kwota wolna 1 401,57 / 849,42 × dni/30) → netto; bilans.
 - Chorobowe: bez społecznych, ze zdrowotną i PIT; zasiłek: tylko PIT bez KUP; benefit współfinansowany: bez ZUS, z PIT; ZFŚS z kryterium: bez ZUS, PIT do 1 000; odprawa: bez ZUS, z PIT; zwrot składek: przychód.
 - Dzielniki: choroba /30; inne nieobecności /wymiar; urlopowe ze zmiennych / godziny przepracowane; ekwiwalent /20,92 (× etat) /8.
-- Zasiłki: pula 33/14 (rok), okres 182/270 (przerwa > 60 dni), podstawa z 12 mies. (wyłącz < 50%, uzupełnij, −13,71%, minimum 4 147,10, nowa po przerwie ≥ 1 mies.), stawka dzienna × % (zaokr.) × dni; kody RSA 331/313/312/314/327/319/325/321.
+- Zasiłki: pula 33/14 (rok), okres 182/270 (przerwa > 60 dni), podstawa z 12 mies. (wyłącz < 50%, uzupełnij, −13,71%, minimum 4 147,10, nowa po przerwie ≥ 1 mies.), stawka dzienna × % (zaokr.) × dni; kody RSA 331/313/312/314/311/319/327/321.
 - Zlecenie: jedyny tytuł → pełne składki (chorobowa dobrowolna); etat ≥ min. gdzie indziej → tylko zdrowotna (ZZA); student < 26 → nic; stawka ≥ 31,40; KUP 20%/50%; PIT-2 możliwe; dzieło → RUD, ryzyko przekwalifikowania. PPK: po 3 mies., 2%/1,5% (0,5% przy ≤ 1,2 × min.), autozapis 1.04.2027.
-- Koszt: brutto × 1,2001 (wypadkowa 1,2%) + PPK 1,5% + ZFŚS/12; zwolnienia z FP/FGŚP (55+/60+, 36 mies. po rodzicielskim, podstawa < min. w przeliczeniu na miesiąc).
+- Koszt: brutto × 1,2001 (wypadkowa 1,2%) + PPK 1,5% + ZFŚS/12; zwolnienia z FP/FGŚP (55+/60+, 36 mies. po rodzicielskim, 12 mies. 50+ z PUP); podstawa < min. w przeliczeniu na miesiąc zwalnia tylko z FP.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Jedna lista, osiem lekcji — prześledź każdą pozycję**
 
 ```
 Lista listopad 2026, Marek Zieliński (5 400, PPK, PIT-2, KUP 250): choroba 16–30.11 (9 dni chorobowego 1 201,14 + 6 dni zasiłku 800,76 ze stawki 133,46), nadgodziny z 1–15.11: 573,75, karta sportowa 1 zł (149 do PIT), zajęcie komornicze 1 200/mies.
-pensja 5 400 − 5 400/30 × 15 = 2 700; oskładkowane 2 700 + 573,75 = 3 273,75; składki 319,52 + 49,11 + 80,21 = 448,84; zdrowotna 9% × (3 273,75 − 448,84 + 1 201,14) = 362,34; PPK pracod. 49,11; podstawa PIT = 3 273,75 + 1 201,14 + 49,11 + 149 − 448,84 − 250 + 800,76 (zasiłek) = 4 774,92 → 4 775 → 573,00 − 300 = 273; PPK prac. 65,48; netto przed potrąceniem = (3 273,75 + 1 201,14 + 800,76) − 448,84 − 362,34 − 273 − 65,48 = 4 125,99; kwota wolna 3 501,73 → potrącenie 624,26; do wypłaty 3 501,73.
+pensja 5 400 − 5 400/30 × 15 = 2 700; oskładkowane 2 700 + 573,75 = 3 273,75; składki 319,52 + 49,11 + 80,21 = 448,84; zdrowotna 9% × (3 273,75 − 448,84 + 1 201,14) = 362,34; PPK pracod. 49,11; podstawa PIT = 3 273,75 + 1 201,14 + 49,11 + 149 − 448,84 − 250 + 800,76 (zasiłek) = 4 774,92 → 4 775 → 573,00 − 300 = 273; PPK prac. 65,48; netto przed potrąceniem = (3 273,75 + 1 201,14 + 800,76) − 448,84 − 362,34 − 273 − 65,48 = 4 125,99.
+Potrącenie komornicze liczysz OSOBNO dla wynagrodzenia i dla zasiłku. Zasiłek: zaliczka 12% × 800,76 = 96,09 → netto zasiłku 704,67; granica 25% × 800,76 (brutto) = 200,19; kwota wolna 1 401,57 × 6/30 = 280,31 → z zasiłku 200,19. Wynagrodzenie z chorobowym: 4 125,99 − 704,67 = 3 421,32 — mniej niż kwota wolna 3 501,73 → 0. Komornik dostaje 200,19 (nie 1 200); do wypłaty 3 925,80. Odpłatność 1 zł za kartę (potrącenie za zgodą) pominięto.
 ```
 
-1. Pensja za część miesiąca (lekcja „Wynagrodzenie urlopowe”): choroba — dzielnik 30, 15 dni kalendarzowych → 2 700.
-2. Chorobowe i zasiłek (lekcje „Chorobowe”, „Podstawa”): stawka 166,83 × 80% = 133,46 (zaokr.) × 9 i × 6; chorobowe wchodzi do zdrowotnej i PIT, zasiłek tylko do PIT.
+1. Pensja za część miesiąca (lekcja „Wynagrodzenie za urlop i ekwiwalent”): choroba — dzielnik 30, 15 dni kalendarzowych → 2 700.
+2. Chorobowe i zasiłek (lekcje „Wynagrodzenie chorobowe i zasiłek chorobowy…”, „Podstawa wymiaru zasiłku…”): stawka 166,83 × 80% = 133,46 (zaokr.) × 9 i × 6; chorobowe wchodzi do zdrowotnej i PIT, zasiłek tylko do PIT.
 3. Nadgodziny (etap 1) są oskładkowane → przychód oskładkowany 3 273,75; składki osobno; FP/FGŚP należne (pensja umowna 5 400 ≥ min.).
-4. Benefit (lekcja „Świadczenia”): karta za 1 zł — bez ZUS, 149 do PIT; PPK pracodawcy 1,5% od 3 273,75 = 49,11 — do PIT.
-5. Zaliczka (lekcja „Zaliczka PIT”): jedna podstawa łączna (praca + chorobowe + benefit + PPK − składki − KUP) + zasiłek bez KUP → 12% − 300.
-6. Potrącenie (lekcja „Potrącenia”): netto 4 125,99; granica 1/2 = 2 063; kwota wolna z PPK 3 501,73 → potrącasz 624,26, nie 1 200.
+4. Benefit (lekcja „Świadczenia pozapłacowe i ZFŚS w liście płac”): karta za 1 zł — bez ZUS, 149 do PIT; PPK pracodawcy 1,5% od 3 273,75 = 49,11 — do PIT.
+5. Zaliczka (lekcja „Zaliczka na PIT…”): jedna podstawa łączna (praca + chorobowe + benefit + PPK − składki − KUP) + zasiłek bez KUP → 12% − 300.
+6. Potrącenie (lekcja „Potrącenia z wynagrodzenia…”): dwie pule. Wynagrodzenie z chorobowym: netto 3 421,32 jest niższe od kwoty wolnej z PPK 3 501,73 → 0. Zasiłek: 25% × 800,76 brutto = 200,19 (kwota wolna 1 401,57 × 6/30 = 280,31 zostaje pracownikowi) → komornik dostaje 200,19, nie 1 200.
 7. ZUS (etap 3, zapowiedź): RCA od 3 273,75 (zdrowotna od 4 026,05); RSA 331 (9 dni, 1 201,14) i 313 (6 dni, 800,76 — do odliczenia w DRA).
 
-✔ **Oczekiwany wynik:** do wypłaty 3 501,73 zł; komornik 624,26; zaliczka 273; zasiłek 800,76 do odliczenia w DRA.
+✔ **Oczekiwany wynik:** do wypłaty 3 925,80 zł; komornik 200,19 (tylko z zasiłku); zaliczka 273; zasiłek 800,76 do odliczenia w DRA.
 
 ## 3 · Jak to uruchomić
 1. Warsztat → Lista płac: Osoba Zieliński, Zasadnicze 2700, Nadgodziny 573.75, Wynagrodzenie chorobowe 1201.14, Zasiłek 800.76, Pensja wg umowy 5400 → Policz (bez karty: netto 4 143,99; kartę 149 dolicz ręcznie → zaliczka +18 → 4 125,99).
-2. Warsztat → Potrącenia: netto 4125.99, inne, zajęcie 1200, PPK 2 → 624,26.
+2. Warsztat → Potrącenia: netto 4125.99, inne, zajęcie 1200, PPK 2, Zasiłek brutto 800.76, Dni zasiłku 6 → z wynagrodzenia 0,00 (część z wynagrodzenia 3 421,32 < kwota wolna 3 501,73), z zasiłku 200,19.
 3. Oczekiwany wynik: zgodny z przykładem co do grosza.
 
 ## 4 · Ćwiczenie prowadzone
 Policz listę za grudzień 2026 dla Ewy Sobczak (5 200, PPK, KUP 250, PIT-2, kod 01 10 0 2): opieka nad dzieckiem 16–20.11 była w listopadzie — w grudniu pełny miesiąc; premia 400; auto służbowe prywatnie (ryczałt 400 — natura); urlop opiekuńczy 8 h (wymiar 160). Potem oblicz zaliczkę i netto; wskaż pozycje do RCA/RSA. Plik: cwiczenia/tydzien_09/powtorka_etap_2_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_09/powtorka_etap_2_1.md` · rozwiązanie: `rozwiazania/tydzien_09/powtorka_etap_2_1.md`
-✔ Poprawny wynik wygląda tak: pensja 5 200 − 5 200/160 × 8 = 4 940; oskładkowane 4 940 + 400 + 400 (auto) = 5 740; składki 560,22 + 86,10 + 140,63 = 786,95; zdrowotna 9% × 4 953,05 = 445,77; PPK pracod. 86,10; podstawa 5 740 + 86,10 − 786,95 − 250 = 4 789,15 → 4 789 × 12% = 574,68 − 300 → 275; PPK prac. 114,80; netto = (4 940 + 400) − 786,95 − 445,77 − 275 − 114,80 = 3 717,48 (auto nie jest wypłacane); RCA: podstawa 5 740; RSA 151 za 8 h opiekuńczego (dzień).
+✔ Poprawny wynik wygląda tak: pensja 5 200 − 5 200/160 × 8 = 4 940; oskładkowane 4 940 + 400 + 400 (auto) = 5 740; składki 560,22 + 86,10 + 140,63 = 786,95; zdrowotna 9% × 4 953,05 = 445,77; PPK pracod. 86,10; podstawa 5 740 + 86,10 − 786,95 − 250 = 4 789,15 → 4 789 × 12% = 574,68 − 300 → 275; PPK prac. 114,80; netto = (4 940 + 400) − 786,95 − 445,77 − 275 − 114,80 = 3 717,48 (auto nie jest wypłacane); RCA: podstawa 5 740 (komplet 01 2027 — miesiąc wypłaty); RSA 131 za dzień urlopu opiekuńczego (komplet 12 2026 — miesiąc przerwy).
 
 ## 5 · Ćwiczenie samodzielne
-Dyrektor Tomasz Lis (14 000, PPK) w grudniu 2026: dochód narastająco po listopadzie 132 451 (próg przekroczony w październiku), premia roczna 30 000 oskładkowana, 5 dni choroby (podstawa zasiłku 12 080,60 → stawka?), zajęcie alimentacyjne 3 000. Zdecyduj i policz: składki E/R (30-krotność: podstawa narastająco 154 000 + grudzień?), zaliczkę 32%, zasiłek czy chorobowe (wykorzystał już 33 dni), potrącenie, netto. Plik: cwiczenia/tydzien_09/powtorka_etap_2_2.md. Czas: 25 minut.
+Dyrektor Tomasz Lis (14 000, PPK) — lista za listopad 2026 wypłacana 10.12.2026, czyli ostatnia wypłata roku podatkowego 2026: dochód narastająco po wypłacie listopadowej 132 451 (próg przekroczony przy wypłacie październikowej), premia roczna 30 000 oskładkowana, 5 dni choroby w listopadzie (podstawa zasiłku 12 080,60 → stawka?), zajęcie alimentacyjne 3 000. Zdecyduj i policz: składki E/R (30-krotność: podstawa narastająco 154 000 + ta wypłata?), zaliczkę 32%, zasiłek czy chorobowe (wykorzystał już 33 dni), potrącenie, netto. Plik: cwiczenia/tydzien_09/powtorka_etap_2_2.md. Czas: 25 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_09/powtorka_etap_2_2.md` · rozwiązanie: `rozwiazania/tydzien_09/powtorka_etap_2_2.md`
 ✔ Poprawny wynik wygląda tak: 30-krotność: 154 000 + (14 000 − 2 333,33 + 30 000) = 195 666,67 < 282 600 → bez ograniczenia; pensja 14 000 − 14 000/30 × 5 = 11 666,67; oskładkowane 41 666,67; składki 4 066,67 + 625,00 + 1 020,83 = 5 712,50; zasiłek (pula 33 wyczerpana → zasiłek od 1. dnia): 12 080,60/30 = 402,69 × 80% = 322,15 × 5 = 1 610,75 (tylko PIT); zdrowotna 9% × (41 666,67 − 5 712,50) = 3 235,88; PPK pracod. 625,00; podstawa = 41 666,67 + 625 − 5 712,50 − 250 + 1 610,75 (zasiłek) = 37 939,92 → 37 940 × 32% = 12 140,80 − 300 = 11 840,80 → 11 841; PPK prac. 833,33; netto = (41 666,67 + 1 610,75) − 5 712,50 − 3 235,88 − 11 841 − 833,33 = 21 654,71; alimenty: 3/5 × 21 654,71 = 12 992,83 ≥ 3 000, bez kwoty wolnej → potrącenie 3 000 → do wypłaty 18 654,71.
@@ -67,6 +68,10 @@ Dyrektor Tomasz Lis (14 000, PPK) w grudniu 2026: dochód narastająco po listop
   - Prawdopodobna przyczyna: Minimalne netto z PPK = 3 501,73.
   - Jak sprawdzić: Warsztat → Potrącenia z PPK 2.
   - Poprawka: Kwota wolna z parametrami pracownika.
+- ✘ **Zajęcie komornicze policzone od łącznego netto razem z zasiłkiem.**
+  - Prawdopodobna przyczyna: Zasiłek nie jest wynagrodzeniem za pracę — ma własne granice (25% / 60% brutto) i kwoty wolne z ustawy emerytalnej (art. 139–141).
+  - Jak sprawdzić: Warsztat → Potrącenia: wpisz zasiłek brutto i dni — narzędzie liczy obie części osobno.
+  - Poprawka: Licz osobno: wynagrodzenie z chorobowym według art. 87–87¹ KP, zasiłek według ustawy emerytalnej; potem zsumuj.
 
 ## Pułapki
 - Lista bez bilansu (brutto = netto + obciążenia) to lista niesprawdzona.

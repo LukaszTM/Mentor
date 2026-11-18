@@ -18,12 +18,12 @@ Wersje dozwolone: (1) „Czy jest pani dostępna do pracy w systemie 3-zmianowym
 2. Dotychczasowe wynagrodzenie — ZAKAZANE (art. 22¹ §1 pkt 6 KP od 24.12.2025: pracodawca nie może żądać informacji o wynagrodzeniu u poprzednich pracodawców). Wersja: „Jakie są pani oczekiwania finansowe wobec tego stanowiska?” (pyt. 6 — dozwolone).
 3. Orzeczenie o niepełnosprawności — nie pytasz; kandydat może sam ujawnić, jeśli chce skorzystać z uprawnień (7 h, dodatkowy urlop). Wersja: informacja w ogłoszeniu o możliwości zgłoszenia.
 4. Praca w nocy — DOZWOLONE jako pytanie o akceptację organizacji pracy (nie o stan zdrowia): „Praca jest 3-zmianowa, z nocą — czy to pani odpowiada?”. O przeciwwskazaniach zdrowotnych orzeknie lekarz medycyny pracy.
-5. Uprawnienia na wózki — DOZWOLONE (kwalifikacje zawodowe, art. 22¹ §1 pkt 4).
+5. Uprawnienia na wózki — DOZWOLONE (kwalifikacje zawodowe, art. 22¹ §1 pkt 5, gdy są niezbędne na stanowisku — §2).
 6. Oczekiwania finansowe — DOZWOLONE (to oferta kandydata, nie historia zarobków).
 ```
 
 ## Oczekiwany wynik
-(1) zakazane (art. 18³ᵃ, stan rodzinny); (2) zakazane (art. 22¹ §1 pkt 6 — informacja o dotychczasowym wynagrodzeniu nie może być wymagana); (3) tylko gdy kandydat sam chce skorzystać z uprawnień — nie pytasz wprost; (4) dozwolone jako „czy akceptuje pani pracę w systemie 3-zmianowym z nocą?”; (5) dozwolone (kwalifikacje — art. 22¹ §1 pkt 4); (6) dozwolone — oczekiwania to nie historia zarobków.
+(1) zakazane (art. 18³ᵃ, stan rodzinny); (2) zakazane (art. 22¹ §1 pkt 6 — informacja o dotychczasowym wynagrodzeniu nie może być wymagana); (3) tylko gdy kandydat sam chce skorzystać z uprawnień — nie pytasz wprost; (4) dozwolone jako „czy akceptuje pani pracę w systemie 3-zmianowym z nocą?”; (5) dozwolone (kwalifikacje — art. 22¹ §1 pkt 5); (6) dozwolone — oczekiwania to nie historia zarobków.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

@@ -16,7 +16,7 @@ Ojciec: ojcowski 2 tyg. do 14.09.2027 (100%); 9 tyg. rodzicielskiego (70%) np. 1
 3. „32 tyg. (41 − 9 ojca): 2.02–13.09.2027”: rodzicielski 41 tyg. łącznie, ale 9 tygodni jest nieprzenoszalnych — każdy rodzic ma 9 „swoich” (art. 182¹ᵃ §4); matka może wziąć max 32; 32 × 7 = 224 dni od 2.02 → 13.09.2027.
 4. „Ojciec: ojcowski 2 tyg. do 14.09.2027 (100%)”: ojcowski (art. 182³) niezależny od matki, do ukończenia 12 miesięcy życia dziecka, w 1 lub 2 częściach, zasiłek 100%.
 5. „9 tyg. rodzicielskiego (70%) do końca 2032”: ojciec wykorzystuje swoje 9 tygodni w dowolnym momencie do końca roku, w którym dziecko kończy 6 lat; zasiłek 70% (nie 81,5%, bo 81,5% dotyczy wniosku matki w 21 dni); może brać w 5 częściach, także równolegle z matką.
-6. ZUS: w RSA kody 327 (macierzyński za urlop macierzyński), 319 (za rodzicielski), 325 (za ojcowski); wychowawczy — kod tytułu 12 11 w RCA (składki z budżetu).
+6. ZUS: w RSA kody 311 (zasiłek macierzyński za urlop macierzyński), 319 (za rodzicielski), 338 (za 9 nieprzenoszalnych tygodni rodzicielskiego — tu: ojca), 327 (za ojcowski); wychowawczy — przerwa 121 i kod tytułu 12 11 w RCA (składki z budżetu). Kody: załącznik nr 24 do rozporządzenia MRPiPS z 9.04.2026 (Dz.U. 2026 poz. 518).
 
 ✔ Oczekiwany wynik: matka: 15.09.2026–13.09.2027 (52 tyg. × 81,5%); ojciec: ojcowski 2 tyg. do 14.09.2027 (100%) + 9 tyg. rodzicielskiego (70%) do końca 2032.
 

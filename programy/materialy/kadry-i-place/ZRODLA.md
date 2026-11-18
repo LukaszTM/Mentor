@@ -40,7 +40,7 @@ Stan prawny: 18 listopada 2026. Każda pozycja: tytuł, adres, data dostępu. Ma
 - ACAS, Performance management — reviews and appraisals (tłumaczenie własne w lekcji) (dostęp 18.11.2026) — <https://www.acas.org.uk/performance>
 - CIPD, Induction factsheet — wdrożenie pracownika (tłumaczenie własne w lekcji) (dostęp 18.11.2026) — <https://www.cipd.org/uk/knowledge/factsheets/induction-factsheet/>
 - CIPD, Employee turnover and retention factsheet — exit interviews (dostęp 18.11.2026) — <https://www.cipd.org/uk/knowledge/factsheets/turnover-retention-factsheet/>
-- SHRM, Exit interview questions (9.04.2025; pełna treść dla członków) (dostęp 18.11.2026) — <https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions>
+- SHRM, Exit interview questions (9.04.2025) — źródło płatne, nieobowiązkowe: w lekcji tylko wzmianka, treść oparta na ACAS i CIPD (dostęp 18.11.2026) — <https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions>
 - Rozporządzenie (UE) 2016/679 — RODO (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/reg/2016/679/oj/pol>
 - Rozporządzenie (WE) 987/2009 — wykonanie koordynacji (A1) (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/reg/2009/987/oj/pol>
 - Dyrektywa 96/71/WE o delegowaniu pracowników (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/dir/1996/71/oj/pol>
@@ -89,7 +89,7 @@ Stan prawny: 18 listopada 2026. Każda pozycja: tytuł, adres, data dostępu. Ma
 - ACAS, Performance management — reviews and appraisals (tłumaczenie własne w lekcji) — <https://www.acas.org.uk/performance>
 - CIPD, Induction factsheet — wdrożenie pracownika (tłumaczenie własne w lekcji) — <https://www.cipd.org/uk/knowledge/factsheets/induction-factsheet/>
 - CIPD, Employee turnover and retention factsheet — exit interviews — <https://www.cipd.org/uk/knowledge/factsheets/turnover-retention-factsheet/>
-- SHRM, Exit interview questions (9.04.2025; pełna treść dla członków) — <https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions>
+- SHRM, Exit interview questions (9.04.2025) — źródło płatne, nieobowiązkowe: w lekcji tylko wzmianka, treść oparta na ACAS i CIPD — <https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions>
 - Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
 - Rozporządzenie (UE) 2016/679 — RODO — <https://eur-lex.europa.eu/eli/reg/2016/679/oj/pol>
 

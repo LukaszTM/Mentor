@@ -14,7 +14,7 @@ Szkic: próbna nie liczy się; 1.01–31.12.2027 = 12 mies. (umowa 1); zostaje 2
 
 ## Pełne rozwiązanie
 ```
-(a) Plan: określona 1.01–31.12.2027 = 12 miesięcy → art. 25 §2² KP ogranicza próbną do 1 mies. (gdy kolejna < 6 mies.) lub 2 mies. (6–12 mies.); „nie krótsza niż 12” nie wchodzi w te progi, więc próbna 3-miesięczna jest dopuszczalna (art. 25 §2). Zapis o planowanym czasie kolejnej umowy powinien być w umowie próbnej (art. 29 §1¹).
+(a) Plan: określona 1.01–31.12.2027 = 12 miesięcy → art. 25 §2² KP ogranicza próbną do 1 mies. (gdy kolejna < 6 mies.) lub 2 mies. (6–12 mies.); „nie krótsza niż 12” nie wchodzi w te progi, więc próbna 3-miesięczna jest dopuszczalna (art. 25 §2). Planowany okres kolejnej umowy wpisuje się do umowy próbnej, gdy jest krótszy niż 12 miesięcy (art. 29 §1 pkt 6) — tu plan to równo 12 miesięcy, więc zapis nie jest obowiązkowy, ale warto go mieć jako dowód.
 (b) Umowa określona 1.01–31.12.2027: 12 miesięcy z 33; umowa 1 z 3.
 (c) Pozostało 21 miesięcy i 2 umowy. Druga określona od 1.01.2028 maksymalnie do 30.09.2029 (21 mies.). Trzecia możliwa tylko w ramach reszty 33 mies. Od 34. miesiąca (1.10.2029) lub od 4. umowy — nieokreślona z mocy prawa (art. 25¹ §3).
 ```

@@ -60,12 +60,12 @@ Od 2027 — ustawa uchwalona (Sejm 5.11.2026, Senat bez poprawek 6.11.2026), do 
 | siła wyższa | 2 dni / 16 h |
 | odsetki ustawowe za opóźnienie | 9,25% (stopa referencyjna NBP 3,75% + 5,5 pkt) |
 | odsetki za zwłokę — podatki i ZUS | 10,50% od 5.03.2026 (200% stopy lombardowej 4,25% + 2 pkt) |
-| grzywny PIP (od 8.07.2026) | 2 000–60 000 zł; mandat do 10 000 zł |
+| grzywny PIP (od 8.07.2026) | 2 000–60 000 zł; mandat 2 000–5 000 zł, przy recydywie do 10 000 zł |
 ### Zapowiedzi na 2027 — co już wiadomo (stan 18.11.2026)
 | Wskaźnik | 2027 | Status |
 |---|---|---|
 | minimalne wynagrodzenie / stawka godzinowa | 4 950 zł / 32,30 zł | rozporządzenie RM (Dz.U. 2026 poz. 1213) — pewne |
-| prognozowane przeciętne wynagrodzenie | 10 033 zł (projekt ustawy budżetowej z 28.08.2026) | limit 30-krotności 300 990 zł — po obwieszczeniu MRPiPS w M.P. (sprawdź XII 2026) |
+| prognozowane przeciętne wynagrodzenie / limit 30-krotności | 10 033 zł / 300 990 zł | obwieszczenie MRPiPS z 3.11.2026 (M.P. 2026 poz. 1098) — pewne |
 | współczynnik ekwiwalentu | 20,92 (2027: 2008 h, 251 dni roboczych; wymiar miesięczny: I 152, II 160, III 176, IV 176, V 144, VI 176, VII 176, VIII 176, IX 176, X 168, XI 160, XII 168) | policz sam — zasada z art. 130 KP |
 | maksymalna odprawa | 74 250 zł (15 × 4 950) | pewne |
 | zadośćuczynienie za mobbing — minimum | 29 700 zł (6 × 4 950) | pewne |
@@ -119,7 +119,7 @@ Policz na kartce brutto → netto dla Marka Zielińskiego (5 400 zł, KUP 250, P
 Jakub Krawczyk (24 lata, 4 900 zł, PPK 2%/1,5%, PIT-2) ma prawo do ulgi dla młodych. Zdecyduj, które kroki rachunku zmienia ulga, a których nie, policz netto i wyjaśnij, dlaczego jego składka zdrowotna NIE spada do zera, mimo że podatek wynosi 0. Zapisz w cwiczenia/tydzien_00/wskazniki_2026_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_00/wskazniki_2026_2.md` · rozwiązanie: `rozwiazania/tydzien_00/wskazniki_2026_2.md`
-✔ Poprawny wynik wygląda tak: Ulga zeruje tylko podatek (przychód do 85 528 zł rocznie zwolniony); składki społeczne (671,79) i zdrowotna (380,54) bez zmian — zdrowotna jest ograniczona do hipotetycznej zaliczki z 2021 r., a ta przy 4 900 zł wynosi ok. 630 zł, więc 380,54 zostaje. Netto 3 749,67 zł (PPK pracownika 98,00).
+✔ Poprawny wynik wygląda tak: Ulga zeruje tylko podatek (przychód do 85 528 zł rocznie zwolniony); składki społeczne (671,79) i zdrowotna (380,54) bez zmian — zdrowotna jest ograniczona do hipotetycznej zaliczki z 2021 r., a ta przy 4 900 zł wynosi 645,08 zł, więc 380,54 zostaje. Netto 3 749,67 zł (PPK pracownika 98,00).
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Netto 3 605,86 zamiast 3 605,85 (różnica 1 grosz).**

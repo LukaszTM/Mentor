@@ -7,7 +7,7 @@ Tydzień 8 · lekcja 29 z 48 · ≈ 60 min
 
 ## Czego potrzebujesz
 - Warsztat → Przepisy → „Kontrola zwolnień lekarskich po 13.04.2026” (art. 68 i n. ustawy zasiłkowej, Dz.U. 2026 poz. 26).
-- Prompty → Szablony → „Upoważnienie do kontroli zwolnień” i „Protokół kontroli” (wzory wg ZUS).
+- Prompty → Szablony → „Upoważnienie do kontroli prawidłowości wykorzystywania zwolnień” i „Protokół kontroli prawidłowości wykorzystywania zwolnienia”.
 - Regulamin pracy AGRO-MLEKO (gdzie wpisać zasady kontroli).
 - Pojęcia: praca zarobkowa w czasie L4 (bezwzględnie zakazana), aktywność niezgodna z celem zwolnienia (ocena: czy może wydłużyć niezdolność), czynności życia codziennego (dozwolone), kontrola prawidłowości wykorzystywania (płatnik > 20 ubezp.) vs kontrola orzekania (tylko lekarz orzecznik ZUS).
 
@@ -21,12 +21,12 @@ Tydzień 8 · lekcja 29 z 48 · ≈ 60 min
 ### Co się zmieniło
 | Pojęcie | Nowa zasada |
 |---|---|
-| praca zarobkowa | każda aktywność zmierzająca do uzyskania przychodu — także bez wynagrodzenia i w innej formie niż umowa |
-| co NIE jest pracą zarobkową | aktywność incydentalna wymuszona okolicznościami (podpisanie dokumentu, którego nie można było odłożyć); czynności niezbędne do zachowania działalności gospodarczej bez aktywnego zarządzania; czynności z pełnienia funkcji społecznych lub publicznych |
-| aktywność niezgodna z celem zwolnienia (zamiast „wykorzystywania niezgodnie z celem”) | zachowania mogące wydłużyć niezdolność: remont, wyjazd rekreacyjny, prace fizyczne |
-| co jest dozwolone | czynności życia codziennego: zakupy, wizyta lekarska, opieka nad dzieckiem |
+| praca zarobkowa (art. 17 ust. 1a) | każda czynność o charakterze zarobkowym, niezależnie od podstawy prawnej |
+| co NIE jest pracą zarobkową | czynności incydentalne, których podjęcia w czasie zwolnienia wymagają istotne okoliczności (np. podpisanie dokumentu, którego nie dało się odłożyć); polecenie pracodawcy taką okolicznością NIE jest |
+| aktywność niezgodna z celem zwolnienia (art. 17 ust. 1b; zamiast „wykorzystywania niezgodnie z celem”) | działania utrudniające lub wydłużające leczenie albo rekonwalescencję: remont, wyjazd rekreacyjny, prace fizyczne |
+| co jest dozwolone | zwykłe czynności dnia codziennego (zakupy, wizyta lekarska, opieka nad dzieckiem) i czynności incydentalne wymagane istotnymi okolicznościami |
 | kto ocenia | ZUS i płatnik — czy aktywność jest zgodna z zaleceniami lekarskimi; może ocenić orzecznik |
-| praca u drugiego pracodawcy | od 2027 lekarz oznaczy tytuł na e-ZLA; w 2026 praca u drugiego tylko gdy lekarz wystawił zwolnienie wyłącznie na jeden tytuł |
+| praca u drugiego pracodawcy | do końca 2026 r. zwolnienie obejmuje wszystkie tytuły — praca u drugiego pracodawcy to praca zarobkowa (utrata zasiłku); od 1.01.2027 lekarz na żądanie ubezpieczonego może wystawić e-ZLA tylko z jednego tytułu, gdy rodzaj pracy w drugim na to pozwala (art. 17 ust. 1c–1e) — ubezpieczony informuje o tym płatnika |
 ### Kto kontroluje i jak
 | Element | Zasada |
 |---|---|
@@ -35,7 +35,7 @@ Tydzień 8 · lekcja 29 z 48 · ≈ 60 min
 | miejsce | miejsce zamieszkania lub pobytu z e-ZLA albo inne miejsce; także wezwanie do stawienia się |
 | obowiązek ubezpieczonego | podaje adres pobytu; zmianę zgłasza w 3 dni |
 | wezwanie na badanie przez ZUS | także przez eZUS, telefon, SMS |
-| protokół | ubezpieczony wnosi uwagi w 3 dni |
+| protokół (art. 68e) | dwa egzemplarze, podpis kontrolowanego; zastrzeżenia w 7 dni od otrzymania protokołu — rozpatruje ZUS |
 | spór | ZUS rozstrzyga decyzją; odwołanie do sądu w miesiąc |
 ### Sankcje
 - Utrata prawa do zasiłku i wynagrodzenia chorobowego (art. 92 §3 KP odsyła do zasad zasiłkowych) za cały okres zwolnienia, w którym stwierdzono naruszenie.
@@ -44,7 +44,7 @@ Tydzień 8 · lekcja 29 z 48 · ≈ 60 min
 Kontrola prawidłowości ORZEKANIA (czy pracownik faktycznie jest chory) — tylko lekarz orzecznik ZUS. Płatnik może wnioskować. Niestawienie się na badanie = utrata zasiłku od dnia badania.
 ### Procedura w firmie
 - Regulamin kontroli: kto, jak, protokół.
-- Upoważnienie imienne (wzór ZUS). Dwie osoby. Kontrola bez uprzedzenia.
+- Upoważnienie imienne (art. 68b; wzór z rozporządzenia). Dwie osoby. Kontrola bez uprzedzenia.
 - Dokumentacja: protokół z opisem zastanej sytuacji, oświadczenie pracownika; zdjęcia tylko za zgodą.
 - Nieobecność w domu nie przesądza — pracownik może wyjaśnić (wizyta lekarska, apteka).
 - Wynik: brak naruszeń albo naruszenie → wstrzymanie wypłaty i informacja do ZUS; gdy ZUS płaci — wniosek o kontrolę lub decyzję.
@@ -57,20 +57,20 @@ Statystyki ZUS: w 2025 r. wstrzymano lub obniżono świadczenia na ponad 200 mln
 **Film z układania kostki brukowej na L4 — od sygnału do decyzji**
 
 ```
-Pracownik na L4 (kręgosłup) 1–21.11.2026 publikuje film z układania kostki brukowej u siebie 8.11. Kadry: upoważnienie dla 2 osób, kontrola 10.11 w miejscu pobytu — zastany przy pracy fizycznej; protokół, uwagi pracownika (3 dni): „lekarz nie zabronił”. Decyzja płatnika: aktywność niezgodna z celem (może wydłużyć niezdolność) → utrata wynagrodzenia chorobowego za 1–21.11; informacja do ZUS; rozważenie art. 52 (konsultacja prawna). Gdyby pracownik tylko kupował kostkę w markecie — czynność życia codziennego, brak sankcji.
+Pracownik na L4 (kręgosłup) 1–21.11.2026 publikuje film z układania kostki brukowej u siebie 8.11. Kadry: upoważnienie dla 2 osób, kontrola 10.11 w miejscu pobytu — zastany przy pracy fizycznej; protokół, zastrzeżenia pracownika (ma na nie 7 dni): „lekarz nie zabronił”. Decyzja płatnika: aktywność niezgodna z celem (może wydłużyć niezdolność) → utrata wynagrodzenia chorobowego za 1–21.11; informacja do ZUS; rozważenie art. 52 (konsultacja prawna). Gdyby pracownik tylko kupował kostkę w markecie — czynność życia codziennego, brak sankcji.
 ```
 
 1. „L4 (kręgosłup) 1–21.11, film 8.11”: sygnał (publiczny post) nie jest jeszcze dowodem — jest powodem do kontroli; nie podejmujesz decyzji „z internetu”.
-2. „upoważnienie dla 2 osób”: pracodawca zgłaszający > 20 ubezpieczonych kontroluje sam przez osoby z IMIENNYM upoważnieniem (wzór ZUS); dwie osoby — dla wiarygodności protokołu; kontrolujący nie oceniają stanu zdrowia.
+2. „upoważnienie dla 2 osób”: pracodawca zgłaszający > 20 ubezpieczonych kontroluje sam przez osoby z IMIENNYM upoważnieniem (wzór z rozporządzenia, art. 68g); dwie osoby — dla wiarygodności protokołu; kontrolujący nie oceniają stanu zdrowia.
 3. „kontrola 10.11 w miejscu pobytu — zastany przy pracy fizycznej”: miejsce pobytu z e-ZLA (pracownik ma obowiązek podać adres; zmiana — w 3 dni); kontrola może być w domu, w innym miejscu, także po godzinach; brak zastania nie oznacza automatycznie naruszenia — wzywasz do wyjaśnień.
-4. „protokół, uwagi pracownika (3 dni)”: protokół opisuje FAKTY (co, gdzie, kiedy, kto), bez ocen medycznych; pracownik ma prawo wnieść uwagi (3 dni) — to element obrony przed zarzutem stronniczości.
+4. „protokół, zastrzeżenia pracownika (ma na nie 7 dni)”: protokół opisuje FAKTY (co, gdzie, kiedy, kto), bez ocen medycznych; sporządzasz go w dwóch egzemplarzach, pracownik podpisuje i może wnieść zastrzeżenia w 7 dni od otrzymania (art. 68e ust. 4) — rozpatruje je ZUS.
 5. „Decyzja płatnika: aktywność niezgodna z celem (może wydłużyć niezdolność) → utrata wynagrodzenia chorobowego za 1–21.11”: nowa definicja (2026): nie tylko praca zarobkowa, ale aktywność, która może przedłużyć niezdolność; sankcja: utrata prawa do świadczenia za CAŁY okres zwolnienia (art. 17); pracodawca decyduje o swoim wynagrodzeniu chorobowym, o zasiłku — ZUS po przekazaniu informacji.
 6. „Gdyby pracownik tylko kupował kostkę w markecie — czynność życia codziennego, brak sankcji”: zakupy, wizyta u lekarza, odbiór dziecka ze szkoły, krótki spacer zalecony — dozwolone; granicą jest zgodność z celem zwolnienia i zaleceniami lekarza. Art. 52 KP (dyscyplinarka) — tylko po konsultacji prawnej; samo naruszenie zwolnienia bywa uznawane za ciężkie naruszenie, ale wymaga oceny każdego przypadku.
 
 ✔ **Oczekiwany wynik:** protokół z faktami, uwagi pracownika, decyzja o utracie wynagrodzenia chorobowego za 1–21.11 z pouczeniem, informacja do ZUS; przy samych zakupach — brak sankcji.
 
 ## 3 · Jak to uruchomić
-1. Prompty → Szablony → „Upoważnienie do kontroli zwolnień” → skopiuj do projektu jako upowaznienie_kontrola.md i wypełnij dla 2 osób z firmy (np. specjalista ds. kadr i kierownik innego działu).
+1. Prompty → Szablony → „Upoważnienie do kontroli prawidłowości wykorzystywania zwolnień” → skopiuj do projektu jako upowaznienie_kontrola.md i wypełnij dla 2 osób z firmy (np. specjalista ds. kadr i kierownik innego działu).
 2. Prompty → Szablony → „Protokół kontroli” → protokol_kontroli_<nazwisko>.md.
 3. Otwórz cwiczenia/tydzien_08/kontrola_l4_2026_1.md — 6 sytuacji do oceny.
 4. Oczekiwany wynik: upoważnienie, protokół z faktami (bez ocen zdrowia) i tabela ocen 6 sytuacji z podstawą.
@@ -78,7 +78,7 @@ Pracownik na L4 (kręgosłup) 1–21.11.2026 publikuje film z układania kostki 
 ## W praktyce — jak to robisz w firmie
 1. Wpisz zasady kontroli do regulaminu; przygotuj imienne upoważnienia (wzór ZUS).
 2. Kontroluj we dwie osoby w miejscu pobytu z e-ZLA; spisz protokół bez ocen stanu zdrowia.
-3. Daj 3 dni na uwagi; przy naruszeniu wstrzymaj wypłatę i przekaż sprawę do ZUS.
+3. Wręcz egzemplarz protokołu — pracownik ma 7 dni na zastrzeżenia; przy naruszeniu wstrzymaj wypłatę i przekaż sprawę do ZUS.
 4. Wątpliwości co do samej choroby — wniosek do ZUS o badanie przez orzecznika.
 
 ## 4 · Ćwiczenie prowadzone
@@ -91,7 +91,7 @@ Oceń 6 sytuacji pracowników na L4 jak w demonstracji (praca zarobkowa / aktywn
 Kierownik produkcji chce „od jutra” kontrolować wszystkich chorych operatorów sam, bo „ma nosa”, i proponuje: kontrola przez telefon („pytam, czy leży w łóżku”), zdjęcia z Facebooka jako dowód, i natychmiastowa dyscyplinarka przy pierwszym naruszeniu. Zdecyduj, co z tego jest legalne, i napisz 8-punktową procedurę kontroli do regulaminu pracy (kto, na jakiej podstawie, jak, dokumenty, terminy, sankcje, RODO). Plik: cwiczenia/tydzien_08/kontrola_l4_2026_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_08/kontrola_l4_2026_2.md` · rozwiązanie: `rozwiazania/tydzien_08/kontrola_l4_2026_2.md`
-✔ Poprawny wynik wygląda tak: kierownik bez imiennego upoważnienia nie może kontrolować; telefon nie jest kontrolą (nie ustala faktów, a pytanie o leżenie to ocena zdrowia); zdjęcia publiczne mogą być sygnałem i dowodem pomocniczym, ale kontrola wymaga protokołu z ustaleniami; dyscyplinarka automatyczna — nie (każdy przypadek oceniasz; utrata świadczenia to inna sankcja niż art. 52); procedura: 1) podstawa (art. 68 ustawy zasiłkowej, > 20 ubezp.), 2) upoważnienia imienne dla 2 osób, 3) kryteria typowania (częste krótkie L4, sygnały), 4) sposób: wizyta w miejscu pobytu, dwie osoby, bez oceny zdrowia, 5) protokół + uwagi 3 dni, 6) decyzja pracodawcy (wynagrodzenie chorobowe) / przekazanie do ZUS (zasiłek), pouczenie o odwołaniu, 7) RODO: dane tylko niezbędne, retencja, dostęp ograniczony, informacja dla pracowników, 8) ewidencja kontroli; wątpliwości co do choroby → wniosek do ZUS o badanie przez orzecznika.
+✔ Poprawny wynik wygląda tak: kierownik bez imiennego upoważnienia nie może kontrolować; telefon nie jest kontrolą (nie ustala faktów, a pytanie o leżenie to ocena zdrowia); zdjęcia publiczne mogą być sygnałem i dowodem pomocniczym, ale kontrola wymaga protokołu z ustaleniami; dyscyplinarka automatyczna — nie (każdy przypadek oceniasz; utrata świadczenia to inna sankcja niż art. 52); procedura: 1) podstawa (art. 68 ustawy zasiłkowej, > 20 ubezp.), 2) upoważnienia imienne dla 2 osób, 3) kryteria typowania (częste krótkie L4, sygnały), 4) sposób: wizyta w miejscu pobytu, dwie osoby, bez oceny zdrowia, 5) protokół + zastrzeżenia w 7 dni, 6) decyzja pracodawcy (wynagrodzenie chorobowe) / przekazanie do ZUS (zasiłek), pouczenie o odwołaniu, 7) RODO: dane tylko niezbędne, retencja, dostęp ograniczony, informacja dla pracowników, 8) ewidencja kontroli; wątpliwości co do choroby → wniosek do ZUS o badanie przez orzecznika.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Protokół zawiera zdanie „pracownik wyglądał na zdrowego”.**
@@ -113,7 +113,7 @@ Kierownik produkcji chce „od jutra” kontrolować wszystkich chorych operator
 
 ## Dodatkowe zadania
 1. Napisz regulamin kontroli zwolnień (zadanie tygodnia): upoważnienie, protokół, sankcje, RODO.
-2. Oceń 6 dodatkowych sytuacji z pliku przyklady/tydzien_06/kontrola_sytuacje.md.
+2. Oceń 6 dodatkowych sytuacji z pliku przyklady/tydzien_08/kontrola_sytuacje.md.
 3. Wypełnij wzory upoważnienia i protokołu z Prompty → Szablony dla fikcyjnej kontroli z demonstracji.
 
 ## Sprawdzenie — odpowiedz na głos, potem rozwiń
@@ -121,8 +121,8 @@ Kierownik produkcji chce „od jutra” kontrolować wszystkich chorych operator
   - Pracodawca jako płatnik zgłaszający > 20 ubezpieczonych — przez osobę z imiennym upoważnieniem; sprawy sporne — ZUS.
 - **Jaka jest sankcja za pracę zarobkową na zwolnieniu?**
   - Utrata prawa do zasiłku/wynagrodzenia chorobowego za cały okres tego zwolnienia; możliwe art. 52.
-- **Ile dni ma ubezpieczony na uwagi do protokołu kontroli?**
-  - 3 dni.
+- **Ile dni ma ubezpieczony na zastrzeżenia do protokołu kontroli?**
+  - 7 dni od otrzymania protokołu (art. 68e ust. 4 ustawy zasiłkowej); 3 dni to termin na zgłoszenie zmiany adresu pobytu.
 
 ## Co potrafię teraz zrobić bez patrzenia na przykład?
 Przeprowadzić kontrolę zwolnienia zgodnie z regułami 2026 (upoważnienie, miejsce pobytu, protokół faktów, uwagi, decyzja/ZUS), odróżnić pracę zarobkową i aktywność niezgodną z celem od czynności codziennych i wpisać procedurę do regulaminu.

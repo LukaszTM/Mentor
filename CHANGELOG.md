@@ -1,5 +1,32 @@
 # Zmiany w Mentorze
 
+## 2.8.0 — kurs „Kadry i płace” 3.0: pełny audyt merytoryczny, sprawdzanie automatyczne, prawdziwe formularze, projekt końcowy, kalendarz aktualizacji
+
+- **Sprawdzanie automatyczne ćwiczeń** (`odpowiedzi.py`, `odpowiedzi_ui.py`; pole `odpowiedzi` ćwiczenia): pod 87 z 96 ćwiczeń kursu kadrowego są pola
+  „Twoje odpowiedzi” (422 pola: kwoty, daty, kody, wybory). Mentor ocenia każde pole osobno i nie ujawnia wyniku; 52 typowe pomyłki mają własną podpowiedź
+  („to netto bez PPK”, „31.01.2027 to niedziela…”). Wynik wzorcowy odsłania się po komplecie albo po „Pokaż klucz” (po 2 próbach). Budowanie kursu sprawdza,
+  że każda wartość klucza występuje w rozwiązaniu ćwiczenia.
+- **Warsztat → Formularze** (pole `formularze` programu): 10 ćwiczeń na wzorach prawdziwych druków z numerami pól — ZUS ZUA, ZWUA (dwa scenariusze, blok V z kodami),
+  RCA (blok III.B i III.C), RSA, PIT-2 w wersji 9 (dwa scenariusze), PIT-11 w wersji 29 (poz. 28–33, 95, 122), świadectwo pracy wg wzoru MRPiPS (ust. 1–8) —
+  139 pól ze sprawdzaniem, zapis wypełnionego druku do projektu; kroki „Formularz” dopisane do zadań tygodniowych.
+- **Projekt końcowy „Zamknięcie roku 2026 w AGRO-MLEKO”** — 35 pól: lista płac za grudzień (premia roczna, choroba, pierwsza wypłata nowego roku podatkowego),
+  komplet ZUS i RSA/RPA wg zasady kasowej, PIT, wskaźniki i terminy 2027, korekta odpisu ZFŚS.
+- **Kalendarz aktualizacji kursu** (pole `aktualizacje`): 17 dat do sprawdzenia w przepisach (PIT 2027, diety 2027, UC127, UDER105, wskaźniki 2027, autozapis PPK,
+  mobbing 5.05.2027, abolicja PIP, ochrona czasowa UA…) — karta „Aktualność przepisów” na Panelu i pełna lista z przyciskiem „Sprawdzone” w Ściądze.
+- **Pełny audyt merytoryczny kursu** (wszystkie 48 lekcji, 60 zadań, quizy, 33 szablony, 64 przepisy, ściąga — ze źródłami: ELI/Dz.U., M.P., ZUS, MF, PFR, SN):
+  m.in. zwolnienia grupowe i indywidualne (regulamin bez związków, ochrona art. 39/177 — tylko wypowiedzenie zmieniające, staż do odprawy na dzień rozwiązania,
+  limit 74 250 zł w 2027), świadectwo pracy wg urzędowego wzoru, kody ZWUA 20R–53W i 400–442, PIT-2 — litery części wg wzoru, PIT-11 — składka zdrowotna w poz. 122
+  i dochód jako przychód minus koszty, terminy roczne 2027 przesunięte przez niedziele (1.02 i 1.03.2027), projekt UDER105, limit 30-krotności 2027 z obwieszczenia
+  (300 990 zł), mandat PIP 2 000–5 000 zł (recydywa do 10 000), limit kontroli mikroprzedsiębiorcy 6 dni, praca zdalna (7 dni roboczych, powrót w 30 dni),
+  sygnaliści (próg w etatach), zasada kasowa w RSA/RCA, potrącenia z zasiłków. Dwa nowe wpisy w bibliotece przepisów (potrącenia z zasiłków, kary porządkowe);
+  automat spójności odwołań do nazw lekcji, szablonów i przepisów.
+- **Silnik i Warsztat**: `kadry.lista_plac(bez_zus=…)` i pole „Odprawa / odszkod. (bez ZUS)” w Liście płac; lista „za miesiąc” i „wypłata w miesiącu”;
+  komplet ZUS z list wypłaconych w miesiącu; potrącenia z zasiłku; PIT-11 symulatora z numerami pozycji wersji 29 i terminami przesuniętymi na dzień roboczy.
+- **Treść**: nowe sekcje — czas pracy kierowców (ustawa z 16.04.2004 i rozporządzenie 561/2006), sankcje PPK, inne ścieżki pracy cudzoziemców (praca sezonowa,
+  pobyt czasowy i praca, Niebieska Karta), liczenie stanu zatrudnienia do PFRON; „Jeśli zaczynasz od zera” w lekcji startowej; źródła zagraniczne — tylko otwarte
+  (ACAS na licencji OGL, CIPD), SHRM oznaczone jako płatne i nieobowiązkowe. Kurs: 48 lekcji, 96 ćwiczeń, 64 przepisy, 136 h; każdy tydzień ≤ 9 h.
+- **Testy**: `testy/test_odpowiedzi.py` (silnik sprawdzania, klucze ćwiczeń i formularzy) i `testy/test_kadry.py` (silnik płacowy na przypadkach z lekcji).
+
 ## 2.7.3 — kurs „Kadry i płace” 2.2: audyt faktów (stan prawny 18.11.2026) i materiały zagraniczne w tłumaczeniu
 
 - **Poprawki merytoryczne po audycie ze sprawdzonymi źródłami** (Dziennik Ustaw/ELI, ISAP, legislacja.gov.pl, Sejm, ZUS, GUS, NBP, MF, PIP, Zielona Linia):

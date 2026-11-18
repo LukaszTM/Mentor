@@ -10,7 +10,7 @@ Alert tygodnia 9–13.11.2026 (sp. z o.o.): 10.11 wypłata; 12.11 nowa umowa —
 ## Omówienie — co robi każdy krok i dlaczego
 1. „10.11 wypłata”: regulamin (do 10.); 10.11 to wtorek — bez przesunięcia; z wypłatą wiążą się: paski, przelewy, potrącenia dla komornika.
 2. „12.11 nowa umowa — ZUA do 19.11”: termin zdarzeniowy 7 dni od rozpoczęcia pracy (nie od podpisania).
-3. „13.11 kończy się umowa próbna — ZWUA do 20.11, świadectwo w dniu ustania, ekwiwalent w terminie wypłaty (10.12)”: trzy terminy z jednego zdarzenia; ekwiwalent — bo termin wypłaty (10.12) przypada po ustaniu (zasada z lekcji „Świadectwo i rozliczenie”).
+3. „13.11 kończy się umowa próbna — ZWUA do 20.11, świadectwo w dniu ustania, ekwiwalent w terminie wypłaty (10.12)”: trzy terminy z jednego zdarzenia; ekwiwalent — bo termin wypłaty (10.12) przypada po ustaniu (zasada z lekcji „Świadectwo pracy i rozliczenie końcowe pracownika”).
 4. „15.11 (niedziela → 16.11) DRA/RCA/RSA + składki + PPK”: termin ZUS przesuwa się na następny dzień roboczy; PPK — wpłaty do instytucji do 15., ale instytucja liczy dzień wpływu — przelew zlecasz w piątek 13.11.
 5. „20.11 zaliczka PIT + DEK-I-0; 25.11 Wn-D”: piątek i środa — bez przesunięć.
 6. „30.11 stan ubezpieczonych do chorobowego (płatnik zasiłków 2027); do 30.11 wnioski urlopowe grudniowe; 5.11 weszła nowa definicja mobbingu — procedura do 5.05.2027”: terminy roczne i legislacyjne — kalendarz musi mieć wiersz „zmiany prawa” z datą wejścia w życie i datą obowiązku wdrożenia.

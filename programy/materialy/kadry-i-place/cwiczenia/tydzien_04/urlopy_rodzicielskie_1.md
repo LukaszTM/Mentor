@@ -5,7 +5,7 @@ Tydzień 4 · lekcja `urlopy_rodzicielskie` · plik: `cwiczenia/tydzien_04/urlop
 Poród 3.12.2026, matka (Ewa Sobczak) rozpoczyna macierzyński w dniu porodu i w 21 dni składa wniosek o pełny dostępny rodzicielski; ojciec planuje ojcowski w lipcu 2027 i swoje 9 tygodni od 1.03.2028. Ułóż kalendarz jak w demonstracji (daty od–do, % zasiłku, kod RSA). Plik: cwiczenia/tydzien_04/urlopy_rodzicielskie_1.md. Czas: 20 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-macierzyński 3.12.2026–21.04.2027 (140 dni; obowiązkowe 14 tyg. do 10.03.2027), kod 327, 81,5%; rodzicielski matki 32 tyg. 22.04–30.11.2027, kod 319, 81,5%; ojcowski 2 tyg. w lipcu 2027 (do 2.12.2027), kod 325, 100%; rodzicielski ojca 9 tyg. 1.03–2.05.2028, kod 319, 70%.
+macierzyński 3.12.2026–21.04.2027 (140 dni; obowiązkowe 14 tyg. do 10.03.2027), kod 311, 81,5%; rodzicielski matki 32 tyg. 22.04–1.12.2027, kod 319, 81,5%; ojcowski 2 tyg. w lipcu 2027 (do 2.12.2027), kod 327, 100%; rodzicielski ojca 9 tyg. 1.03–2.05.2028, kod 338, 70%.
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).
@@ -17,10 +17,12 @@ macierzyński 3.12.2026–21.04.2027 (140 dni; obowiązkowe 14 tyg. do 10.03.202
 
 | Część | Kto | Od | Do | Tygodni | % zasiłku | Kod RSA |
 |---|---|---|---|---|---|---|
-| macierzyński | matka | 3.12.2026 | | 20 | | 327 |
-| rodzicielski | matka | | | | | 319 |
-| ojcowski | ojciec | | | 2 | | 325 |
-| rodzicielski (9 tyg.) | ojciec | | | 9 | | 319 |
+| macierzyński | matka | 3.12.2026 | | 20 | | |
+| rodzicielski | matka | | | | | |
+| ojcowski | ojciec | | | 2 | | |
+| rodzicielski (9 tyg.) | ojciec | | | 9 | | |
+
+Kody RSA do wpisania: 311, 319, 327, 338 — dopasuj sam.
 
 ## Twoja odpowiedź
 

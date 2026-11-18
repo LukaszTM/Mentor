@@ -25,7 +25,7 @@
 - „✔ Zgadza się” — pełne kroki.
 - „✘ Twoje netto … ≠ … Różnica równa się kwocie: …” — Mentor wskazuje krok, którego kwota odpowiada różnicy (np. PPK pracodawcy, zaliczka).
 - „Policz jeszcze raz w kolejności: składki osobno → zdrowotna od (brutto − składki) → podstawa PIT zaokrąglona → zaliczka − PIT-2 → PPK.”
-- Krok „FP/FGŚP nienależne: podstawa w przeliczeniu na miesiąc … poniżej minimalnego” — wpisz „Pensja wg umowy”, jeśli obniżka wynika z choroby/części miesiąca.
+- Krok „FP nienależny: podstawa w przeliczeniu na miesiąc … poniżej minimalnego” — wpisz „Pensja wg umowy”, jeśli obniżka wynika z choroby/części miesiąca. FGŚP nie ma progu minimalnego.
 
 ## Zasiłki
 - „… — miesiąc WYŁĄCZONY” (< 50% dni), „UZUPEŁNIENIE: …”, „Podniesienie do minimalnej podstawy …”, „Stawka dzienna × …% = … (zaokrąglona do grosza)”.

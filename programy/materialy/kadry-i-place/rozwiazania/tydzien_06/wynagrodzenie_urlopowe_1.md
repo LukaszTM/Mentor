@@ -15,7 +15,7 @@ Szkic: 1 500 / 496 = 3,024 → 3,02; × 16 = 48,32; ekwiwalent: 5 200 + 500 = 5 
 ## Pełne rozwiązanie
 ```
 (1) Wynagrodzenie za urlop wypoczynkowy 16 h: składniki stałe (5 200) wypłacasz w całości bez przeliczania (§7); część zmienna: 1 500 zł (zmienne z VIII–X) / 496 h przepracowanych w tych miesiącach = 3,02 zł/h (§8–9) × 16 h = 48,32 zł. Razem w listopadzie: 5 200 + 48,32 + zmienne listopadowe za pracę.
-(2) Ekwiwalent za 40 h: podstawa = 5 200 + średnia zmiennych 1 500/3 = 500 → 5 700 (§15–16); stawka dzienna 5 700 / 20,92 = 272,47; godzinowa 272,47 / 8 = 34,06; × 40 h = 1 362,40 zł (§18). Oskładkowany i opodatkowany jak pensja; wypłata w terminie wypłaty wynagrodzenia (10.12), bez kwoty zmniejszającej, bo po ustaniu.
+(2) Ekwiwalent za 40 h: podstawa = 5 200 + średnia zmiennych 1 500/3 = 500 → 5 700 (§15–16); stawka dzienna 5 700 / 20,92 = 272,47; godzinowa 272,47 / 8 = 34,06; × 40 h = 1 362,40 zł (§18). Oskładkowany i opodatkowany jak pensja; wypłata w terminie wypłaty wynagrodzenia (10.12 — art. 171 §4 KP). Cała wypłata z 10.12 (pensja za listopad i ekwiwalent) jest już po ustaniu zatrudnienia, więc zaliczkę liczysz bez kwoty zmniejszającej 300 zł (art. 31a ust. 7 ustawy o PIT).
 ```
 
 ## Oczekiwany wynik

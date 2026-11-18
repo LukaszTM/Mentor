@@ -6,7 +6,7 @@ Tydzień 0 · lekcja 2 z 48 · ≈ 50 min
 **Po co mi to?** w kadrach każda liczba i każdy termin mają źródło — gdy zarząd lub inspektor zapyta „skąd to”, odpowiadasz artykułem, nie „z internetu”.
 
 ## Czego potrzebujesz
-- Warsztat → Przepisy (48 streszczeń offline; każde ma link do ISAP — ISAP jest publiczny, bez logowania, ale nie jest konieczny do ćwiczeń).
+- Warsztat → Przepisy (ponad 60 streszczeń offline; każde ma link do ISAP — ISAP jest publiczny, bez logowania, ale nie jest konieczny do ćwiczeń).
 - Katalog projektu z materiałami (cwiczenia/tydzien_00/).
 - Pojęcia: ustawa (uchwala Sejm), rozporządzenie (wydaje rząd/minister na podstawie ustawy), obwieszczenie (ogłasza kwotę wyliczoną z ustawy), regulamin (pracodawca).
 
@@ -47,8 +47,8 @@ Zasada uprzywilejowania pracownika (art. 18 KP): postanowienie mniej korzystne n
 | procedury antymobbingowe w firmach | do 5.05.2027 |
 | układy zbiorowe — nowa ustawa, zgłoszenie zamiast rejestracji (KEUZP) | 13.12.2025 |
 | postać elektroniczna dokumentów (zamiast „pisemnej”) w 14 miejscach KP | 27.01.2026 |
-| wygaszenie specustawy ukraińskiej — powiadomienie PUP w 7 dni, ochrona czasowa do 4.03.2027 | 5.03.2026 |
-| reforma PIP — decyzja o ustaleniu stosunku pracy, grzywny 2 000–60 000 zł, mandat do 10 000 zł | 8.07.2026 |
+| wygaszenie specustawy ukraińskiej — powiadomienie PUP w 7 dni; ochrona czasowa przedłużona do 4.03.2028 (decyzja Rady z 30.07.2026) | 5.03.2026 |
+| reforma PIP — decyzja o ustaleniu stosunku pracy, grzywny 2 000–60 000 zł, mandat 2 000–5 000 zł (recydywa do 10 000) | 8.07.2026 |
 | Kodeks pracy — nowy tekst jednolity | Dz.U. 2026 poz. 1245 |
 | praca w upale — progi 28/25°C i 35/32°C | 11.01.2027 |
 | minimalne wynagrodzenie 4 950 zł / 32,30 zł | 1.01.2027 |

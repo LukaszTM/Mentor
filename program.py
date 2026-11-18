@@ -20,6 +20,8 @@ import shutil
 import sys
 from pathlib import Path
 
+import odpowiedzi
+
 # W wersji .exe (PyInstaller) zasoby wbudowane leżą w paczce (sys._MEIPASS — TYLKO DO ODCZYTU), a dane użytkownika
 # (postępy, kursy, środowiska, logi) w katalogu danych użytkownika: %LOCALAPPDATA%\Mentor. Katalog EXE traktujemy jako
 # potencjalnie tylko do odczytu (Program Files, pendrive z blokadą). Tryb przenośny: plik portable.txt obok EXE → dane obok EXE.
@@ -180,7 +182,7 @@ DOMYSLNE = {
     "sciaga": [], "linki": [], "wskazowki": [], "motywacja_powrot": [], "pojecia": {}, "bledy": {},
     "pytania_rekrutacyjne": [], "tematy_wpisu": [], "stanowisko": "", "stan_prawny": "",
     "narzedzia": [], "parametry": {}, "firma": "", "firma_osoby": [], "firma_regulaminy": [], "przepisy": [],
-    "diagnoza": [], "pytania_dziennika": [], "materialy": "",
+    "diagnoza": [], "pytania_dziennika": [], "materialy": "", "formularze": [], "aktualizacje": [],
     "rytm_dnia": [
         {"nazwa": "Nowy temat", "minuty": 20, "ikona": "📖", "opis": "Lekcja i przykłady.", "prompt": "Uczę się [temat]. Wytłumacz na 2 przykładach i daj 3 zadania bez rozwiązań."},
         {"nazwa": "Ćwiczenie", "minuty": 50, "ikona": "⌨", "opis": "Samodzielna praca nad zadaniem.", "prompt": "Utknąłem na zadaniu [opis]. Nie podawaj rozwiązania — zadaj pytanie naprowadzające."},
@@ -321,6 +323,8 @@ def waliduj(dane):
             cw.setdefault("wskazowki", [])
             cw.setdefault("rozwiazanie", "")
             cw.setdefault("wynik", "")
+            if cw.get("odpowiedzi") is not None:
+                bledy.extend(odpowiedzi.waliduj_pola(cw["odpowiedzi"], f"Lekcja {l.get('id')}: ćwiczenie nr {i + 1}"))
         for i, b in enumerate(l.get("typowe_bledy", []) or []):
             if not isinstance(b, dict) or not b.get("komunikat"):
                 bledy.append(f"Lekcja {l.get('id')}: typowy błąd nr {i + 1} bez „komunikat”.")
@@ -335,6 +339,12 @@ def waliduj(dane):
             bledy.append(f"Diagnoza: pytanie nr {i + 1} z błędnym „odp”.")
         elif q.get("lekcja") and q["lekcja"] not in lekcje_ids:
             bledy.append(f"Diagnoza: pytanie nr {i + 1} wskazuje nieistniejącą lekcję „{q['lekcja']}”.")
+    for i, f in enumerate(dane.get("formularze", []) or []):
+        if not isinstance(f, dict) or not f.get("id") or not f.get("nazwa") or not isinstance(f.get("sekcje"), list):
+            bledy.append(f"Formularz nr {i + 1}: wymagane „id”, „nazwa” i lista „sekcje”.")
+            continue
+        pola = [p for s in f["sekcje"] if isinstance(s, dict) for p in (s.get("pola") or [])]
+        bledy.extend(odpowiedzi.waliduj_pola(pola, f"Formularz {f['id']}"))
     for e in dane["etapy"]:
         for k in ("nr", "nazwa", "tygodnie"):
             if k not in e:

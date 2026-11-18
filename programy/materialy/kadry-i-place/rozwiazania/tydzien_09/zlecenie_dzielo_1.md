@@ -4,23 +4,23 @@ Plik startowy: `cwiczenia/tydzien_09/zlecenie_dzielo_1.md`
 Zasada: najpierw własna próba. Podpowiedzi odkrywaj po kolei — rozwiązanie dopiero na końcu.
 
 ## Podpowiedź 1 — pytanie naprowadzające
-Dla kogo z trójki składki są pełne (jak u pracownika), a dla kogo żadne? Od czego to zależy?
+Dla kogo z trójki składki są pełne (jak u pracownika), dla kogo tylko zdrowotna, a dla kogo żadne? Od czego to zależy?
 
 ## Podpowiedź 2 — gdzie szukać
-Demonstracja, kroki 1–2 i 6; lekcja: schemat „jedyny tytuł → pełne składki (emerytalna, rentowa, wypadkowa, zdrowotna; chorobowa dobrowolna)”.
+Demonstracja, kroki 1–2 i 6; lekcja: tabela „Zbiegi tytułów — sześć sytuacji”.
 
 ## Podpowiedź 3 — częściowy przykład
-Szkic Pawlak: 3 000 × 13,71% = 411,30; zdrowotna 9% × 2 588,70 = 232,98; KUP 20% × 2 588,70 = 517,74; podstawa 3 000 − 411,30 − 517,74 = 2 070,96 → 2 071 × 12% = 248,52 → 249; netto 3 000 − 411,30 − 232,98 − 249 = …
+Szkic Król: 3 500 × 13,71% = 479,85; zdrowotna 9% × 3 020,15 = 271,81; wpłatę PPK zleceniodawcy 52,50 dolicz do przychodu; KUP 20% × (3 552,50 − 479,85) = 614,53; podstawa 3 552,50 − 479,85 − 614,53 = 2 458,12 → 2 458 × 12% = 294,96 − 300 → 0; netto 3 500 − 479,85 − 271,81 − 70 = …
 
 ## Pełne rozwiązanie
 ```
-Agnieszka Pawlak (jedyny tytuł): stawka 3 000/120 = 25,00 < 31,40 → naruszenie art. 8a — umowa wymaga aneksu (3 768 za 120 h) lub ograniczenia godzin do 95; grzywna z art. 8e ustawy o minimalnym wynagrodzeniu 1 000–30 000 zł (odrębna ustawa — stawki PIP z KP jej nie zmieniły). Rozliczenie (na 3 000, do poprawy): emerytalna 292,80 + rentowa 45,00 + chorobowa (dobrowolna) 73,50 = 411,30; zdrowotna 9% × 2 588,70 = 232,98; KUP 20% × 2 588,70 = 517,74; podstawa 2 070,96 → 2 071; zaliczka 12% = 248,52 → 249 (bez PIT-2); netto 2 106,72. Pracodawca: 292,80 + 195,00 + 36,00 (wyp. 1,2%) + FP 73,50 + FGŚP 3,00 — FP tylko gdy podstawa ≥ minimalne w przeliczeniu na miesiąc: 3 000 < 4 806 → bez FP/FGŚP. ZUA kod 04 11 00 z chorobowym dobrowolnym.
-Robert Król (jedyny tytuł, PPK): 35,00 zł/h ✔; składki 341,60 + 52,50 + 85,75 = 479,85; zdrowotna 9% × 3 020,15 = 271,81; PPK pracodawcy 52,50 (przychód), pracownika 70,00; KUP 20% × 3 020,15 = 604,03; podstawa 3 500 + 52,50 − 479,85 − 604,03 = 2 468,62 → 2 469; podatek 296,28 − 300 (PIT-2) → zaliczka 0; netto 3 500 − 479,85 − 271,81 − 0 − 70 = 2 678,34. ZUA 04 11 00.
-Michał Dąbrowski (student, 22 lata): 33,33 zł/h ✔; art. 6 ust. 4 ustawy systemowej — brak ubezpieczeń (także zdrowotnego); ulga dla młodych → zaliczka 0; netto 2 000,00; bez zgłoszenia w ZUS; w aktach: oświadczenie o statusie + kopia legitymacji/zaświadczenie, ponowne sprawdzenie w lutym i październiku; po utracie statusu (26. urodziny, skreślenie) — ZUA od następnego dnia.
+Agnieszka Pawlak (etat 5 000 zł u innego pracodawcy ≥ 4 806 → zbieg tytułów, art. 9 ust. 1 i 1a ustawy systemowej): stawka 3 000/120 = 25,00 < 31,40 → naruszenie art. 8a — umowa wymaga aneksu (3 768 za 120 h) lub ograniczenia godzin do 95; grzywna z art. 8e ustawy o minimalnym wynagrodzeniu 1 000–30 000 zł (odrębna ustawa — podwyżka grzywien z Kodeksu pracy jej nie objęła). Rozliczenie (na 3 000, do poprawy): składki społeczne — brak (dobrowolne tylko na jej wniosek); zdrowotna 9% × 3 000 = 270,00; KUP 20% × 3 000 = 600,00; podstawa 2 400; zaliczka 12% = 288 (kwotę zmniejszającą ma u pracodawcy); netto 3 000 − 270 − 288 = 2 442,00. Zleceniodawca: bez składek społecznych, FP i FGŚP. Zgłoszenie: ZZA kod 04 11 00 (tylko zdrowotne). Podstawa Twojej decyzji: pisemne oświadczenie o etacie z podstawą ≥ minimalnej i zobowiązanie do zgłaszania zmian — bez niego liczysz pełne składki. PPK: nie (brak obowiązkowych emerytalno-rentowych z tej umowy).
+Robert Król (jedyny tytuł, dobrowolne chorobowe, PPK): 35,00 zł/h ✔; składki 341,60 + 52,50 + 85,75 = 479,85; zdrowotna 9% × 3 020,15 = 271,81; PPK zleceniodawcy 52,50 (przychód z tego samego źródła co zlecenie), zleceniobiorcy 70,00; KUP 20% × (3 500 + 52,50 − 479,85) = 614,53; podstawa 3 552,50 − 479,85 − 614,53 = 2 458,12 → 2 458; podatek 294,96 − 300 (PIT-2) → zaliczka 0; netto 3 500 − 479,85 − 271,81 − 0 − 70 = 2 678,34. Zleceniodawca: emerytalna 341,60 + rentowa 227,50 + wypadkowa 42,00 (1,2%) + FGŚP 3,50 = 614,60; FP (85,75) nienależny, bo podstawa 3 500 < 4 806 w przeliczeniu na miesiąc — FGŚP takiego progu nie ma; do tego PPK 52,50. ZUA 04 11 00 z dobrowolnym chorobowym (od dnia wskazanego we wniosku, nie wstecz).
+Michał Dąbrowski (student, 22 lata): 33,33 zł/h ✔; art. 6 ust. 4 ustawy systemowej — brak ubezpieczeń (także zdrowotnego); ulga dla młodych → zaliczka 0; netto 2 000,00; bez zgłoszenia w ZUS; w aktach: oświadczenie o statusie + kopia legitymacji/zaświadczenie, ponowne sprawdzenie w lutym i październiku; po utracie statusu: po obronie lub skreśleniu — ZUA od następnego dnia, po ukończeniu 26 lat — od dnia urodzin.
 ```
 
 ## Oczekiwany wynik
-Pawlak: 25 zł/h < 31,40 → NARUSZENIE (min. 3 768 za 120 h; w rozliczeniu przyjmij 3 000 i zaznacz konieczność aneksu); pełne składki: 292,80 + 45,00 + 73,50 = 411,30; zdrowotna 232,98; KUP 517,74; podstawa 2 071 → 249; netto 2 106,72; ZUA 04 11 00 z chorobowym. Król: 35 zł/h ✔; składki 479,85; zdrowotna 271,81; PPK 52,50/70,00; KUP 604,03; podstawa 2 469 → 296,28 − 300 → 0; netto 2 678,34; ZUA 04 11 00. Dąbrowski: 33,33 zł/h ✔; 0 ZUS, 0 PIT; netto 2 000; bez zgłoszenia (oświadczenie + legitymacja w aktach).
+Pawlak: 25 zł/h < 31,40 → NARUSZENIE (min. 3 768 za 120 h; w rozliczeniu przyjmij 3 000 i zaznacz konieczność aneksu); zbieg z etatem ≥ minimalnej → tylko zdrowotna 270,00; KUP 600,00; podstawa 2 400 → zaliczka 288; netto 2 442,00; zleceniodawca bez składek; ZZA 04 11 00. Król: 35 zł/h ✔; składki 479,85; zdrowotna 271,81; PPK 52,50/70,00; KUP 614,53; podstawa 2 458 → 294,96 − 300 → 0; netto 2 678,34; zleceniodawca 614,60 (bez FP, z FGŚP 3,50) + PPK 52,50; ZUA 04 11 00 z dobrowolnym chorobowym. Dąbrowski: 33,33 zł/h ✔; 0 ZUS, 0 PIT; netto 2 000; bez zgłoszenia (oświadczenie + legitymacja w aktach).
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

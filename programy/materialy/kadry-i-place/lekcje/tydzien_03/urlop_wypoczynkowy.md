@@ -1,5 +1,5 @@
 # Urlop wypoczynkowy w praktyce: wymiar, proporcja, na żądanie, zaległy
-Tydzień 3 · lekcja 13 z 48 · ≈ 55 min
+Tydzień 3 · lekcja 13 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** liczysz wymiar urlopu (20/26, proporcja, pierwsza praca, niepełny etat) i udzielasz go zgodnie z zasadami (plan, 14 dni, na żądanie, zaległy).
 
@@ -36,9 +36,10 @@ W pierwszym roku: z dołu, 1/12 wymiaru za każdy przepracowany miesiąc, bez za
 Od następnego roku kalendarzowego: z góry, cały wymiar 1 stycznia.
 ### Urlop proporcjonalny (art. 155¹)
 - Zmiana pracodawcy w roku: u dotychczasowego za okres do ustania, u nowego za resztę.
-- Niepełny miesiąc u pierwszego pracodawcy liczy się za pełny.
+- Niepełny miesiąc zaokrąglasz w górę do pełnego (art. 155²ᵃ §2). Gdy zmiana pracodawcy wypada w tym samym miesiącu — zaokrągla tylko dotychczasowy pracodawca (§3).
 - Powrót po urlopie bezpłatnym dłuższym niż 1 miesiąc, po wychowawczym albo służbie — proporcja.
-- Dni zaokrąglasz w górę.
+- Niepełny dzień zaokrąglasz w górę (art. 155³ §1).
+- Limit roczny (art. 155³ §2): suma urlopu u wszystkich pracodawców w roku nie może przekroczyć wymiaru 20/26. Dlatego czytasz świadectwo pracy — podaje urlop wykorzystany w roku ustania zatrudnienia razem z dniami, za które wypłacono ekwiwalent.
 ### Urlop na żądanie
 4 dni w roku, w puli 20/26. Zgłoszenie najpóźniej w dniu urlopu, przed rozpoczęciem pracy.
 Odmowa tylko wyjątkowo — interes pracodawcy (SN).
@@ -54,27 +55,29 @@ Niewykorzystany urlop na żądanie przechodzi na rok następny jako zwykły zale
 | przesunięcie i odwołanie z urlopu — zwrot kosztów | art. 164–167 |
 | choroba przerywa urlop | — |
 | ekwiwalent tylko przy ustaniu zatrudnienia | art. 171 |
-Przedawnienie roszczeń: 3 lata od końca roku, w którym urlop stał się wymagalny (od 1.10 następnego roku).
+Przedawnienie roszczenia o urlop: 3 lata od dnia wymagalności (art. 291 §1). Dla urlopu niewykorzystanego w swoim roku liczysz od 30 września następnego roku: urlop za 2024 r. → 30.09.2028.
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Pracownica 1/2 etatu, staż 11 lat, zatrudniona 15.03.2026 — wymiar u nowego pracodawcy**
 
 ```
-Pracownica, 1/2 etatu, staż 11 lat (wliczone 3 lata zlecenia), zatrudniona 15.03.2026 (wcześniej pracowała w 2026 u innego pracodawcy do 28.02):
-wymiar roczny: 26 × 1/2 = 13 dni; proporcja u Ciebie: 10/12 (marzec–grudzień; marzec liczy się cały, bo poprzedni pracodawca rozliczył do lutego) × 13 = 10,83 → 11 dni = 88 h.
-Zaległy u Ciebie: brak. Na żądanie: 4 dni w puli 11.
+Pracownica, 1/2 etatu, staż 11 lat (liceum 4 lata + 7 lat pracy), zatrudniona 15.03.2026; w 2026 r. pracowała już u innego pracodawcy do 28.02 — świadectwo pracy: 1/2 etatu, urlop wykorzystany w 2026 r.: 3 dni.
+wymiar roczny: 26 × 1/2 = 13 dni; proporcja u Ciebie: 10/12 (marzec–grudzień; niepełny marzec zaokrąglasz w górę do pełnego miesiąca) × 13 = 10,83 → 11 dni.
+Limit roczny (art. 155³ §2): 3 dni ze świadectwa + 11 = 14 > 13 → u Ciebie 13 − 3 = 10 dni = 80 h.
+Zaległy u Ciebie: brak. Na żądanie: 4 dni w roku — z tej puli.
 ```
 
-1. „staż 11 lat (wliczone 3 lata zlecenia)”: od 2026 r. do stażu urlopowego wliczasz okresy zlecenia i działalności potwierdzone zaświadczeniem ZUS (art. 302¹ KP) → ≥ 10 lat = 26 dni (art. 154 §1 pkt 2).
+1. „staż 11 lat (liceum 4 lata + 7 lat pracy)”: do stażu urlopowego wliczasz okres nauki (art. 155 §1 pkt 3) i poprzednie zatrudnienie, a od 2026 r. także zlecenia i działalność (art. 302¹ KP; prywatny pracodawca stosuje go od 1.05.2026) → ≥ 10 lat = 26 dni (art. 154 §1 pkt 2).
 2. „26 × 1/2 = 13 dni”: wymiar proporcjonalny do etatu (art. 154 §2); niepełny dzień zaokrąglasz w górę — tu wychodzi równo 13.
-3. „proporcja u Ciebie 10/12 (marzec–grudzień)”: u kolejnego pracodawcy w roku urlop proporcjonalny do okresu zatrudnienia (art. 155¹ §1 pkt 2); miesiąc marzec liczy się cały, bo poprzedni pracodawca rozliczył urlop do lutego (niepełny miesiąc zaokrągla się w górę do pełnego — art. 155² ᵃ §2).
-4. „10/12 × 13 = 10,83 → 11 dni = 88 h”: niepełny dzień zaokrąglasz w górę (art. 155³ §1); urlop udzielasz w godzinach: 11 × 8 = 88 h, ale na 1/2 etatu dzień pracy ma 4 h, więc to 22 dni robocze po 4 h.
-5. „Na żądanie: 4 dni w puli 11”: urlop na żądanie (art. 167²) nie jest dodatkowy — to część tych 11 dni; na 1/2 etatu 4 dni × 4 h = 16 h.
+3. „proporcja u Ciebie 10/12 (marzec–grudzień)”: u kolejnego pracodawcy w roku urlop proporcjonalny do okresu zatrudnienia (art. 155¹ §1 pkt 2); niepełny miesiąc zaokrąglasz w górę do pełnego (art. 155²ᵃ §2) — marzec liczysz Ty, bo poprzednie zatrudnienie skończyło się w lutym (gdyby zmiana wypadła w tym samym miesiącu, zaokrąglałby tylko poprzedni pracodawca — §3).
+4. „10/12 × 13 = 10,83 → 11 dni”: niepełny dzień zaokrąglasz w górę (art. 155³ §1).
+5. „3 + 11 = 14 > 13 → 10 dni = 80 h”: suma urlopu u obu pracodawców nie może przekroczyć wymiaru rocznego (art. 155³ §2). Ze świadectwa pracy bierzesz urlop wykorzystany w roku ustania zatrudnienia (razem z dniami, za które wypłacono ekwiwalent): 13 − 3 = 10 dni. W godzinach 10 × 8 = 80 h; na 1/2 etatu dzień pracy ma 4 h, więc to 20 dni roboczych po 4 h.
+6. „Na żądanie: 4 dni w roku — z tej puli”: urlop na żądanie (art. 167²) nie jest dodatkowy — to część tych 10 dni. Limit 4 dni jest roczny i wspólny dla obu pracodawców (świadectwo pracy podaje, ile wykorzystano); na 1/2 etatu 4 dni × 4 h = 16 h.
 
-✔ **Oczekiwany wynik:** 11 dni = 88 h urlopu w 2026 r. u nowego pracodawcy (w tym do 4 dni na żądanie); suma u obu pracodawców nie może przekroczyć 13 dni.
+✔ **Oczekiwany wynik:** 10 dni = 80 h urlopu w 2026 r. u nowego pracodawcy: 11 dni z proporcji, obniżone do 10 limitem rocznym 13 dni (3 dni rozliczył poprzedni pracodawca); urlop na żądanie — w ramach rocznych 4 dni.
 
 ## 3 · Jak to uruchomić
-1. Warsztat → Urlopy i ekwiwalent → „Wymiar urlopu”: Staż 11, Etat 0.5, Miesięcy w roku 10 → „Policz wymiar” → 11 dni / 88 h.
+1. Warsztat → Urlopy i ekwiwalent → „Wymiar urlopu”: Staż 11, Etat 0.5, Miesięcy w roku 10, Urlop u poprzedniego pracodawcy (dni) 3 → „Policz wymiar” → 11 dni z proporcji, po limicie rocznym 10 dni / 80 h.
 2. Zmień: Staż 0, Etat 1, Miesięcy 6, zaznacz „pierwsza praca w życiu” → „Policz” → 10,0 dni (1/12 za każdy miesiąc, BEZ zaokrąglania w górę — art. 153 §1).
 3. Otwórz cwiczenia/tydzien_03/urlop_wypoczynkowy_1.md — tabela 8 osób z FIRMA.md do policzenia ręcznie.
 4. Oczekiwany wynik: Twoje wyniki = wyniki Warsztatu dla każdej osoby.
@@ -86,10 +89,10 @@ Zaległy u Ciebie: brak. Na żądanie: 4 dni w puli 11.
 4. Do 30 września udziel urlopu zaległego z poprzedniego roku.
 
 ## 4 · Ćwiczenie prowadzone
-Policz jak w demonstracji wymiar urlopu na 2026 r. dla: Piotra Nowaka (1/2 etatu, od 2019, staż ogólny 15 lat), Anny Kowalczyk (od 1.10.2026, staż 12 lat, poprzednio pracowała do 30.09.2026 — wykorzystała tam 15 dni) i Jakuba Krawczyka (24 lata, od 1.07.2026, pierwsza praca w życiu, staż szkolny 4 lata). Plik: cwiczenia/tydzien_03/urlop_wypoczynkowy_1.md. Czas: 20 minut.
+Policz jak w demonstracji wymiar urlopu na 2026 r. dla: Piotra Nowaka (1/2 etatu, od 2019, staż ogólny 15 lat), Anny Kowalczyk (od 1.10.2026, staż 12 lat, poprzednio pracowała do 30.09.2026 — świadectwo pracy: urlop za 2026 r. 20 dni, w tym 5 dni ekwiwalentu) i Jakuba Krawczyka (24 lata, od 1.07.2026, pierwsza praca w życiu, staż szkolny 4 lata). Plik: cwiczenia/tydzien_03/urlop_wypoczynkowy_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_03/urlop_wypoczynkowy_1.md` · rozwiązanie: `rozwiazania/tydzien_03/urlop_wypoczynkowy_1.md`
-✔ Poprawny wynik wygląda tak: Nowak: 26 × 1/2 = 13 dni = 104 h (cały rok); Kowalczyk: 26 × 3/12 (X–XII) = 6,5 → 7 dni = 56 h u Ciebie, ale łącznie w roku max 26 → 26 − 15 = 11, więc 7 dni mieści się; Krawczyk: pierwsza praca — 20 × 1/12 za każdy przepracowany miesiąc: po lipcu 1,67 dnia, do końca roku 6 × 1,67 = 10 dni (bez zaokrąglania w górę), od 1.01.2027 pełne 20 dni.
+✔ Poprawny wynik wygląda tak: Nowak: 26 × 1/2 = 13 dni = 104 h (cały rok); Kowalczyk: 26 × 3/12 (X–XII) = 6,5 → 7 dni z proporcji, ale limit roczny: 20 dni ze świadectwa + 7 = 27 > 26 → u Ciebie 26 − 20 = 6 dni = 48 h (art. 155³ §2); Krawczyk: pierwsza praca — 20 × 1/12 za każdy przepracowany miesiąc: po lipcu 1,67 dnia, do końca roku 6 × 1,67 = 10 dni (bez zaokrąglania w górę), od 1.01.2027 pełne 20 dni.
 
 ## 5 · Ćwiczenie samodzielne
 Halina Mazur (główna księgowa, od 2009) ma na 1.01.2026: 26 dni za 2026 + 9 dni zaległych za 2025 + 3 dni zaległe za 2024. Prosi, by „zaległe z 2024 przenieść na 2027, bo i tak nie ma kiedy”. Zdecyduj: (a) co z urlopem za 2024 i do kiedy musisz go udzielić, (b) czy możesz jednostronnie wysłać ją na zaległy urlop, (c) kiedy przedawnia się roszczenie o urlop za 2024. Plik: cwiczenia/tydzien_03/urlop_wypoczynkowy_2.md. Czas: 15 minut.

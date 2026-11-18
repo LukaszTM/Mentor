@@ -24,7 +24,7 @@ Szkic wiersza: „Nadgodziny | dodatki 100% za niedziele | art. 151¹ | listy p�
 | ZUS | Komplety = listy; RSA we właściwym miesiącu? | ustawa systemowa | Rejestr UPP, listy | CZĘŚCIOWO (1 RSA) | odsetki, korekty | komplet 02 | 7 dni | kadry |
 | PIT | PIT-4R = przelewy? | art. 38 PIT | zestawienie miesięczne | NIE (470 zł) | odsetki, KKS | uzgodnienie, dopłata | 31.01 | księgowa |
 | ZFŚS/PFRON | Kryterium socjalne; wskaźnik 6%? | art. 8 ZFŚS; art. 21 rehab. | regulamin, DEK | NIE / 2,0 z 3,51 | składki od 18 600; 5 524/mies. | progi dochodowe; plan zatrudnienia 2 osób z orzeczeniem | 31.01 / 30.06 | komisja / zarząd |
-| Procedury | Mobbing, sygnaliści, zdalna, trzeźwość? | KP, ustawy 2024/2026 | regulaminy | NIE (3 z 4) | odszkodowania ≥ 28 836; grzywny; nielegalna kontrola | harmonogram: trzeźwość 45 dni, sygnaliści 45 dni, mobbing do 5.05.2027 | j.w. | kadry + zarząd |
+| Procedury | Mobbing, sygnaliści, zdalna, trzeźwość? | KP, ustawy 2024/2026 | regulaminy | NIE (3 z 4) | zadośćuczynienia ≥ 28 836; grzywny; nielegalna kontrola | harmonogram: trzeźwość 45 dni, sygnaliści 45 dni, mobbing do 5.05.2027 | j.w. | kadry + zarząd |
 | Teczka/kalendarz | Teczka kontrolna i kalendarz z właścicielami? | — | — | TAK (z kursu) | — | aktualizacja kwartalna | co kwartał | kadry |
 Priorytety: 1) nadgodziny + zlecenia (nielegalne niedopłaty), 2) ZUS/PIT korekty (odsetki rosną), 3) procedury (terminy ustawowe). Koszt: ok. 10 000 zł wyrównań + ok. 3 000 odsetek; oszczędność: PFRON do 66 000 zł/rok.
 ```

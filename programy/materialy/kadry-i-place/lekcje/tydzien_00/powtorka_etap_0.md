@@ -3,7 +3,7 @@ Tydzień 0 · lekcja 5 z 48 · ≈ 50 min
 
 **Po tej lekcji potrafisz:** bez zaglądania do notatek rozkładasz pytanie kadrowe na przepis → kwotę → dzielnik → rachunek, wiesz, które narzędzie w Warsztacie do czego służy, i liczysz minimalne brutto → netto → koszt.
 
-**Po co mi to?** etap 0 to fundament — w kolejnych 11 tygodniach każda lekcja zakłada, że umiesz znaleźć przepis, odczytać wskaźnik i sprawdzić wynik w Warsztacie.
+**Po co mi to?** etap 0 to fundament — w kolejnych 15 tygodniach każda lekcja zakłada, że umiesz znaleźć przepis, odczytać wskaźnik i sprawdzić wynik w Warsztacie.
 
 ## Czego potrzebujesz
 - Zaliczone testy 4 lekcji tygodnia 0 (Lekcje → ✔).
@@ -18,7 +18,7 @@ Tydzień 0 · lekcja 5 z 48 · ≈ 50 min
 - Pełnomocnictwa: PEL (ZUS), UPL-1 (US) — podpisuje zarząd; dokumenty mają stany: przygotowany → zweryfikowany → wysłany (UPP/UPO).
 - Wskaźniki 2026: minimalne 4 806 (stawka 31,40), składki pracownika 9,76 / 1,5 / 2,45 (osobno zaokrąglane), zdrowotna 9% (ograniczenie do hipotetycznej zaliczki 2021), KUP 250/300, PIT 12% do 120 000 / 32%, kwota zmniejszająca 300, ulga dla młodych 85 528, 30-krotność 282 600, współczynnik ekwiwalentu 20,92, odpis ZFŚS 2 943,23, wypadkowa firmy 1,20% (mały płatnik 1,67%), PPK 2% / 1,5%.
 ### Co umiesz zrobić w Warsztacie
-- Lista płac (Tryb ćwiczenia: najpierw swoje netto, potem Sprawdź), Czas pracy (wymiar, nocne), Przepisy (48 streszczeń), Firma ćwiczeniowa (12 osób, parametry, regulaminy), eZUS/Płatnik i e-Urząd (symulatory z weryfikacją i UPP/UPO).
+- Lista płac (Tryb ćwiczenia: najpierw swoje netto, potem Sprawdź), Czas pracy (wymiar, nocne), Przepisy (ponad 60 streszczeń), Firma ćwiczeniowa (12 osób, parametry, regulaminy), eZUS/Płatnik i e-Urząd (symulatory z weryfikacją i UPP/UPO).
 
 ## 2 · Demonstracja — kompletny przykład omówiony krok po kroku
 **Jedno pytanie, cztery lekcje etapu 0 — prześledź, skąd bierze się każda liczba**

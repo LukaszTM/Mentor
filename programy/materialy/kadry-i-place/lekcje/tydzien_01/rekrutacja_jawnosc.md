@@ -3,7 +3,7 @@ Tydzień 1 · lekcja 6 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** piszesz ogłoszenie z widełkami, wiesz, o co nie wolno pytać kandydata, i prowadzisz rekrutację zgodnie z RODO.
 
-**Po co mi to?** pierwszy dokument, który kandydat widzi od firmy, to ogłoszenie — od 24.12.2025 musi mieć widełki, a każde pytanie o dotychczasowe zarobki lub ciążę to wykroczenie z art. 22¹ KP.
+**Po co mi to?** pierwszy dokument, który kandydat widzi od firmy, to ogłoszenie — od 24.12.2025 musi mieć widełki, a pytanie o dotychczasowe zarobki lub plany rodzicielskie narusza art. 22¹ i 18³ᵃ KP (roszczenie kandydata z art. 18³ᵈ, kara administracyjna UODO za zbędne dane).
 
 ## Czego potrzebujesz
 - Regulamin wynagradzania AGRO-MLEKO (Warsztat → Firma ćwiczeniowa): premia do 10%, dodatek stażowy, dodatek nocny.
@@ -15,7 +15,7 @@ Tydzień 1 · lekcja 6 z 48 · ≈ 60 min
 Zawsze: imię i nazwisko, data urodzenia, dane kontaktowe.
 Tylko gdy są niezbędne do pracy na stanowisku: wykształcenie, kwalifikacje, przebieg zatrudnienia.
 Inne dane (np. niekaralność) — tylko gdy przepis szczególny tego wymaga.
-Dane „wrażliwe” (zdrowie, związki) — nie. Wyjątek: orzeczenie o niepełnosprawności kandydat podaje sam, na wniosek pracodawcy, jeśli chce.
+Dane „wrażliwe” (zdrowie, związki) — nie. Wyjątek (art. 22¹ᵇ): kandydat może je przekazać wyłącznie z własnej inicjatywy i za wyraźną zgodą — np. orzeczenie o niepełnosprawności, gdy chce skorzystać z uprawnień. Brak takiej zgody nie może być powodem odmowy zatrudnienia.
 ### Zakaz pytania o wynagrodzenie (od 24.12.2025, Dz.U. 2025 poz. 807)
 Nie wolno żądać informacji o wynagrodzeniu w obecnej i poprzednich pracach (art. 22¹ §1 pkt 6). Ani pytaniem, ani przez dokumenty.
 ### Jawność wynagrodzeń w rekrutacji (art. 18³ᶜᵃ KP, od 24.12.2025)
@@ -50,7 +50,7 @@ Klauzula: Administratorem danych jest AGRO-MLEKO sp. z o.o. … podstawa: art. 2
 
 1. „osoba na stanowisko operatora linii” — forma neutralna płciowo (zamiast „operator”), żeby ogłoszenie nie sugerowało preferencji (art. 18³ᵃ KP — zakaz dyskryminacji także w rekrutacji).
 2. „praca 3-zmianowa, system równoważny do 12 h” — informacja o organizacji pracy z regulaminu; kandydat musi wiedzieć, że będą nocki, bo dodatek nocny jest składnikiem wynagrodzenia.
-3. „5 200–6 100 zł brutto (zasadnicze)” — widełki obowiązkowe od 24.12.2025 (art. 22¹ᵇ KP): przedział musi być realny, z siatki płac; „od 4 806 do 20 000” to obejście przepisu.
+3. „5 200–6 100 zł brutto (zasadnicze)” — kwota początkowa lub przedział — obowiązek od 24.12.2025 (art. 18³ᶜᵃ KP): przedział musi być realny, z siatki płac; „od 4 806 do 20 000” to obejście przepisu.
 4. „+ dodatek za pracę w nocy (20% stawki godz. z minimalnej) + premia regulaminowa do 10%” — składniki zmienne nazwane z podstawą (regulamin z 1.03.2025), bez obiecywania kwot, których nie ma w regulaminie.
 5. Klauzula RODO: administrator (firma), podstawa (art. 22¹ KP = obowiązek prawny; art. 6 ust. 1 lit. b, c RODO), retencja: do końca rekrutacji; 12 miesięcy tylko za osobną zgodą na przyszłe rekrutacje.
 
@@ -78,11 +78,11 @@ Napisz ogłoszenie na stanowisko „osoba na stanowisko pakowacza” (dział pak
 Kierownik produkcji przysłał Ci 6 pytań na rozmowę z kandydatką: (1) „Czy planuje pani dzieci?”, (2) „Ile pani zarabiała u poprzedniego pracodawcy?”, (3) „Czy ma pani orzeczenie o niepełnosprawności?”, (4) „Czy może pani pracować w nocy?”, (5) „Jakie ma pani uprawnienia na wózki?”, (6) „Jakie są pani oczekiwania finansowe?”. Zdecyduj dla każdego: dozwolone / zakazane / dozwolone pod warunkiem — i przepisz zakazane na wersje dozwolone. Plik: cwiczenia/tydzien_01/rekrutacja_jawnosc_2.md. Czas: 15 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_01/rekrutacja_jawnosc_2.md` · rozwiązanie: `rozwiazania/tydzien_01/rekrutacja_jawnosc_2.md`
-✔ Poprawny wynik wygląda tak: (1) zakazane (art. 18³ᵃ, stan rodzinny); (2) zakazane (art. 22¹ §1 pkt 6 — informacja o dotychczasowym wynagrodzeniu nie może być wymagana); (3) tylko gdy kandydat sam chce skorzystać z uprawnień — nie pytasz wprost; (4) dozwolone jako „czy akceptuje pani pracę w systemie 3-zmianowym z nocą?”; (5) dozwolone (kwalifikacje — art. 22¹ §1 pkt 4); (6) dozwolone — oczekiwania to nie historia zarobków.
+✔ Poprawny wynik wygląda tak: (1) zakazane (art. 18³ᵃ, stan rodzinny); (2) zakazane (art. 22¹ §1 pkt 6 — informacja o dotychczasowym wynagrodzeniu nie może być wymagana); (3) tylko gdy kandydat sam chce skorzystać z uprawnień — nie pytasz wprost; (4) dozwolone jako „czy akceptuje pani pracę w systemie 3-zmianowym z nocą?”; (5) dozwolone (kwalifikacje — art. 22¹ §1 pkt 5); (6) dozwolone — oczekiwania to nie historia zarobków.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Ogłoszenie: „wynagrodzenie: od 4 806 zł”.**
-  - Prawdopodobna przyczyna: Brak górnej kwoty — nie jest to przedział; obowiązek z art. 22¹ᵇ KP niespełniony.
+  - Prawdopodobna przyczyna: „Od 4 806” to ani konkretna kwota początkowa, ani przedział (brak górnej granicy) — obowiązek z art. 18³ᶜᵃ KP niespełniony.
   - Jak sprawdzić: Czy kandydat na podstawie ogłoszenia wie, ile może dostać maksymalnie?
   - Poprawka: Podaj dolną i górną kwotę zasadniczego z siatki płac (np. 4 806–5 200) i nazwij składniki zmienne.
 - ✘ **CV odrzuconych kandydatów leżą w skrzynce kadr rok po rekrutacji.**

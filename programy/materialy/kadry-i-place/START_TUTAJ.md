@@ -1,10 +1,10 @@
 # START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2026)
 
-**Wersja kursu:** 2.2 · stan prawny: 18 listopada 2026 · format `mentor-program/1`
-**Poziom:** od podstaw — bez znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych.
-**Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 130 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
+**Wersja kursu:** 3.0 · stan prawny: 18 listopada 2026 · format `mentor-program/1`
+**Poziom:** od podstaw do poziomu samodzielnego specjalisty — bez wymaganej wcześniej znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych.
+**Czas:** 16 tygodni × (5 dni × ok. 90 minut + do 90 minut w sobotę na quiz i powtórkę) — ok. 136 godzin; żaden tydzień nie przekracza 9 godzin (czas lekcji i zadań policzony z ich treści, nie „z oka”).
 **System:** Windows 10/11 (Mentor.exe); działa też z Pythonem 3.10+ na innych systemach.
-**Potrzebujesz:** ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) przez 16 tygodni — razem ok. 130 godzin; każdy tydzień mieści się w 9 godzinach; jeden folder na dysku na pliki ćwiczeń; Mentor (ten program) — nic więcej: żadnych kont, instalacji ani arkuszy; internet niepotrzebny.
+**Potrzebujesz:** ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) przez 16 tygodni — razem ok. 136 godzin; każdy tydzień mieści się w 9 godzinach; jeden folder na dysku na pliki ćwiczeń; Mentor (ten program) — nic więcej: żadnych kont, instalacji ani arkuszy; internet niepotrzebny.
 **Nie potrzebujesz:** internetu (kurs i Asystent offline działają bez sieci), kont w eZUS/e-Urzędzie (w Mentorze są symulatory), Excela, Pythona, żadnych instalacji poza samym Mentorem.
 
 ## Co będziesz umieć po kursie
@@ -25,6 +25,8 @@
 8. **Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”** — pierwsze zadanie: plik FIRMA.md (Warsztat → Firma ćwiczeniowa → „Zapisz FIRMA.md do projektu”).
 
 Pierwsze działające ćwiczenie masz w ciągu 30 minut: Warsztat → Lista płac → Osoba „Katarzyna Wójcik” → „Policz” → netto 3 501,73 zł (a bez PPK: 3 605,85).
+
+Sprawdzanie automatyczne: pod większością ćwiczeń w lekcjach są pola „Twoje odpowiedzi” — wpisujesz kwoty, daty i kody, a Mentor ocenia każde pole (nie zdradza wyniku; klucz po 2 próbach). W Warsztat → Formularze wypełniasz prawdziwe druki z numerami pól (ZUS ZUA, ZWUA, RCA, RSA, PIT-2, PIT-11, świadectwo pracy), a kurs kończysz projektem „Zamknięcie roku 2026 w AGRO-MLEKO”.
 
 ## Jak wygląda każda lekcja (zawsze ta sama kolejność)
 cel → po co mi to → czego potrzebujesz → **1** wyjaśnienie od podstaw → **2** demonstracja omówiona krok po kroku → **3** jak to uruchomić → **4** ćwiczenie prowadzone → **5** ćwiczenie samodzielne (3 podpowiedzi, potem rozwiązanie) → **6** typowe błędy i naprawa → sprawdzenie (pytania + „co potrafię bez przykładu”) → test (2/3 zalicza).

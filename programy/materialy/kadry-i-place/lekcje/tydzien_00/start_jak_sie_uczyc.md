@@ -12,7 +12,13 @@ Tydzień 0 · lekcja 1 z 48 · ≈ 40 min
 
 ## 1 · Wyjaśnienie od podstaw
 ### Co to za kurs i dla kogo
-16 tygodni (0–15), trzy–cztery zadania tygodniowo, jedna lekcja (ok. godziny) co drugi dzień. Uczysz się na fikcyjnej firmie AGRO-MLEKO (62 pracowników, produkcja 3-zmianowa, zleceniobiorcy, umowy o dzieło) — każdy kazus, lista płac i pismo dotyczą jej pracowników. Nie musisz znać prawa pracy ani księgowości. Poziom: od podstaw (nie musisz znać prawa pracy, księgowości ani Excela). Potrzebujesz: ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) — każdy tydzień mieści się w 9 godzinach, cały kurs to ok. 130 godzin; do tego Windows z Mentorem i jeden folder na dysku. Nic więcej — kalkulatory, symulatory ZUS/US, przepisy i wszystkie pliki ćwiczeń są w Mentorze i w paczce materiałów (kopiujesz je jednym przyciskiem). Internet nie jest potrzebny; Asystent w trybie offline działa bez konta i bez opłat (tryby API/Subskrypcja są opcjonalne i płatne).
+16 tygodni (0–15), trzy–cztery zadania tygodniowo, jedna lekcja (ok. godziny) co drugi dzień. Uczysz się na fikcyjnej firmie AGRO-MLEKO (62 pracowników, produkcja 3-zmianowa, zleceniobiorcy, umowy o dzieło) — każdy kazus, lista płac i pismo dotyczą jej pracowników. Nie musisz znać prawa pracy ani księgowości. Poziom: od podstaw (nie musisz znać prawa pracy, księgowości ani Excela). Potrzebujesz: ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) — każdy tydzień mieści się w 9 godzinach, cały kurs to ok. 136 godzin; do tego Windows z Mentorem i jeden folder na dysku. Nic więcej — kalkulatory, symulatory ZUS/US, przepisy i wszystkie pliki ćwiczeń są w Mentorze i w paczce materiałów (kopiujesz je jednym przyciskiem). Internet nie jest potrzebny; Asystent w trybie offline działa bez konta i bez opłat (tryby API/Subskrypcja są opcjonalne i płatne).
+### Jeśli zaczynasz od zera
+- Zrób diagnozę (Panel → „Diagnoza”, 10 pytań, 5 minut): pokaże, które lekcje czytać najuważniej. Niczego nie blokuje.
+- Nieznane słowo? Wpisz w Asystencie „co to jest [pojęcie]” — kurs ma słownik 42 pojęć (brutto, podstawa wymiaru, okres zasiłkowy, kod tytułu…).
+- W każdej lekcji czytaj w tej kolejności: „Po co mi to” → demonstracja z omówieniem → dopiero potem tabele wyjaśnienia. Liczby zapamiętasz, gdy raz przeliczysz je sam.
+- Tydzień 0 i etap 1 (tygodnie 1–4) to fundament: narzędzia, źródła, umowa, czas pracy, urlopy. Nie przeskakuj do listy płac — korzysta z nich każda następna lekcja.
+- Kurs prowadzi od podstaw do poziomu samodzielnego specjalisty: w drugiej połowie wypełniasz prawdziwe druki ZUS i PIT, robisz korekty i przygotowujesz firmę do kontroli.
 ### Co będziesz umieć po kursie
 - zawrzeć i rozwiązać umowę o pracę z kompletem dokumentów i w terminach (ZUA, świadectwo, ekwiwalent),
 - policzyć wymiar czasu pracy, nadgodziny, nocne, urlop i pensję za część miesiąca,
@@ -27,7 +33,7 @@ Tydzień 0 · lekcja 1 z 48 · ≈ 40 min
 - Plan → zaznaczasz ✔ przy zadaniu (+10 XP; zadanie tygodnia +25). Dziennik → jedno zdanie, czego się nauczyłeś (+3 XP).
 - Sobota: Quiz tygodnia (4–5 pytań) i powtórka. Po każdym etapie: Checklista — co masz umieć, odhaczasz sam.
 ### Wszystko w Mentorze: Warsztat
-Kurs nie wymaga żadnych kont zewnętrznych, instalowania programów ani arkusza kalkulacyjnego. Zakładka Warsztat ma 10 narzędzi: Firma ćwiczeniowa (12 osób z danymi), Lista płac (brutto → netto krok po kroku, z „Trybem ćwiczenia”), Zasiłki i chorobowe, Urlopy i ekwiwalent, Czas pracy, Potrącenia, Delegacje i diety, eZUS / Płatnik (symulator zgłoszeń, kompletów DRA/RCA/RSA, e-ZLA — z weryfikacją i numerami UPP), e-Urząd: PIT (PIT-11, PIT-4R, UPO) i Przepisy (48 streszczeń offline). Każde narzędzie ma przycisk „Zapisz do projektu” — wynik trafia do Twojego katalogu jako plik .md/.csv. Zasada: najpierw liczysz na kartce, potem sprawdzasz w Warsztacie.
+Kurs nie wymaga żadnych kont zewnętrznych, instalowania programów ani arkusza kalkulacyjnego. Zakładka Warsztat ma 11 narzędzi: Firma ćwiczeniowa (12 osób z danymi), Lista płac (brutto → netto krok po kroku, z „Trybem ćwiczenia”), Zasiłki i chorobowe, Urlopy i ekwiwalent, Czas pracy, Potrącenia, Delegacje i diety, eZUS / Płatnik (symulator zgłoszeń, kompletów DRA/RCA/RSA, e-ZLA — z weryfikacją i numerami UPP), e-Urząd: PIT (PIT-11, PIT-4R, UPO), Formularze (prawdziwe druki ZUS i PIT oraz świadectwo pracy — wypełniasz pole po polu, Mentor sprawdza) i Przepisy (ponad 60 streszczeń offline). Każde narzędzie ma przycisk „Zapisz do projektu” — wynik trafia do Twojego katalogu jako plik .md/.csv. Zasada: najpierw liczysz na kartce, potem sprawdzasz w Warsztacie.
 ### Twój warsztat: katalog projektu
 Folder „kadry-praktyka” (nazwę proponuje Mentor; wskazujesz go w Ustawieniach lub w zakładce Mój projekt). Trafiają tam: FIRMA.md (karta firmy — zadanie 1 tygodnia 0), dziennik.md (Twoje notatki), listy płac i dokumenty ZUS/PIT zapisane z Warsztatu (.md/.csv), pisma w plikach .md. Mentor wykrywa te pliki i podpowiada, czy zadanie ma już efekt. Git jest opcjonalny — zadanie tygodnia 0 pokaże, jak zapisywać wersje; jeśli nie chcesz, pomijasz „commit” w krokach.
 ### Jak czytać lekcję (7 kroków, 20–40 minut)
@@ -35,8 +41,9 @@ Folder „kadry-praktyka” (nazwę proponuje Mentor; wskazujesz go w Ustawienia
 - 2. Wyjaśnienie od podstaw — każde pojęcie jest objaśnione w lekcji; przepisy sprawdzasz w Warsztat → Przepisy (ISAP tylko dla pogłębienia).
 - 3. Demonstracja — kompletny przykład z omówieniem każdego kroku; zakryj wynik, przelicz sam, potem porównaj. To najważniejszy krok.
 - 4. Jak to uruchomić — dokładne kliknięcia w Warsztacie lub plik z paczki materiałów i oczekiwany wynik.
-- 5. Ćwiczenie prowadzone (podobne do demonstracji) i samodzielne (wymaga decyzji) — każde ma 3 stopniowane podpowiedzi (pytanie → gdzie szukać → częściowy przykład) i pełne rozwiązanie na końcu; plik startowy jest w cwiczenia/, rozwiązanie w rozwiazania/.
+- 5. Ćwiczenie prowadzone (podobne do demonstracji) i samodzielne (wymaga decyzji) — każde ma 3 stopniowane podpowiedzi (pytanie → gdzie szukać → częściowy przykład) i pełne rozwiązanie na końcu; plik startowy jest w cwiczenia/, rozwiązanie w rozwiazania/. Pod treścią większości ćwiczeń są pola „Twoje odpowiedzi”: wpisujesz kwoty, daty i kody, klikasz „Sprawdź odpowiedzi”, a Mentor ocenia każde pole osobno — nie zdradza wyniku, za to przy typowej pomyłce podpowiada, skąd się wzięła. Klucz możesz odsłonić dopiero po dwóch próbach.
 - 6. Typowe błędy i pułapki — przepisz jeden do dziennika; to są błędy, za które płaci się w kontroli.
+- Uwaga: każde ćwiczenie i zadanie to OSOBNY wariant zdarzeń w firmie (w jednym Marek Zieliński choruje w listopadzie, w innym odchodzi z pracy) — nie sumuj zdarzeń między ćwiczeniami, chyba że treść wprost każe wziąć dane z wcześniejszego zadania.
 - 7. Sprawdzenie i test — pytania mówisz na głos, potem test 3 pytań: 2/3 zalicza, możesz powtarzać.
 ### Asystent — nauczyciel, nie wykonawca
 Zakładka Asystent ma trzy karty: Subskrypcja (Claude Code w terminalu), API (własny klucz, rozmowa w Mentorze) i Offline (wbudowany, bez internetu — rozumie: „uczę się [temat]”, „co to jest [pojęcie]”, „zadaj mi 3 pytania”, „quiz z tygodnia 4”, „odpytaj mnie jak rekruter”, „utknąłem: [problem]”). Zasada we wszystkich trybach: najpierw własna próba (podpowiedzi w lekcji odkrywasz po kolei), potem pytanie o podpowiedź — nie o gotowy wynik; gdy nie wiesz nawet, jak zacząć, pytaj od razu — nie ma obowiązku „walczyć” przez określony czas. W trybie offline działa też komenda „podpowiedź” (kolejna wskazówka do ćwiczenia z ostatniej lekcji). Gotowe prompty do każdej sytuacji: zakładka Prompty.
@@ -59,7 +66,7 @@ Dzień 1 krok po kroku (tydzień 0):
 3. Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić” (5 kroków): tworzysz folder kadry-praktyka, plik FIRMA.md, wskazujesz folder w Mentorze.
 4. Sesja nauki → start timera; fazy 2–3 to praca nad zadaniem i sprawdzenie.
 5. Plan → ✔ przy zadaniu 1 (+10 XP).  6. Dziennik → „Dziś: utworzyłem katalog i FIRMA.md; nie wiem jeszcze, co to PEL” (+3 XP).
-Jutro: Panel pokaże zadanie 2 (symulatory eZUS/Płatnika i e-Urzędu w Warsztacie) i lekcję „Narzędzia kadrowca”.
+Jutro: Panel pokaże zadanie 2 (symulatory eZUS/Płatnika i e-Urzędu w Warsztacie) i lekcję „Narzędzia: eZUS/PUE, Płatnik, e-Urząd Skarbowy, program kadrowy”.
 ```
 
 1. Panel → karta „Dzisiaj”: Mentor sam wybiera zadanie dnia (pon–czw zadania 1–4, piątek zadanie tygodnia, sobota quiz). Dziś: „Katalog projektu i karta firmy ćwiczeniowej”.
@@ -67,7 +74,7 @@ Jutro: Panel pokaże zadanie 2 (symulatory eZUS/Płatnika i e-Urzędu w Warsztac
 3. Plan → Tydzień 0 → zadanie 1 → „Jak to zrobić”: kroki są kompletne (jaki folder, jaki plik, co w nim ma być). Robisz je w swoim katalogu, nie w Mentorze.
 4. Sesja nauki → start timera. Fazy 2–3 (ćwiczenie w Warsztacie, weryfikacja) to czas na zadanie — Mentor sam zapisuje minuty i serię dni.
 5. Plan → ✔ przy zadaniu 1 (+10 XP) — dopiero gdy plik istnieje w katalogu. Dziennik → jedno zdanie (+3 XP).
-6. Jutro Panel pokaże zadanie 2 i lekcję „Narzędzia kadrowca” — pętla jest zawsze ta sama: lekcja → zadanie → odhaczenie → dziennik.
+6. Jutro Panel pokaże zadanie 2 i lekcję „Narzędzia: eZUS/PUE, Płatnik, e-Urząd Skarbowy, program kadrowy” — pętla jest zawsze ta sama: lekcja → zadanie → odhaczenie → dziennik.
 
 ✔ **Oczekiwany wynik:** po dniu 1 masz: folder kadry-praktyka z plikiem FIRMA.md, zaliczony test tej lekcji, zapisaną sesję i 1 wpis w dzienniku.
 

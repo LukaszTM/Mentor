@@ -29,7 +29,7 @@ Pierwsze wiersze: „auto 400 | ZUS tak | PIT tak | ryczałt art. 12 ust. 2a PIT
 ```
 
 ## Oczekiwany wynik
-auto: ZUS+PIT (ryczałt); karta/pakiet za 1 zł: PIT tak (149/wartość − 1), ZUS nie (§2 ust. 1 pkt 26, regulamin); paczka ZFŚS wg kryterium: ZUS nie (pkt 19), PIT zwolniony do 1 000 zł/rok (art. 21 ust. 1 pkt 67); wczasy ZFŚS 1 500: ZUS nie, PIT — nadwyżka ponad 1 000 (łącznie ze świadczeniami ZFŚS w roku); jubileuszówka co 5 lat: ZUS nie (pkt 1), PIT tak; posiłek 300: ZUS nie do 450 zł/mies. (pkt 11), PIT tak (chyba że bony do 450 zł — też zwolnione? nie: PIT zwolnienie dotyczy posiłków profilaktycznych BHP); telefon: wartość prywatnego użytku — PIT i ZUS (trudna wycena → regulamin); szkolenie Excel: bez ZUS i PIT (art. 21 ust. 1 pkt 90, §2 pkt 29); ekwiwalent za pranie: bez ZUS i PIT, gdy kwota odpowiada kosztom (pkt 6; art. 21 ust. 1 pkt 11).
+auto: ZUS+PIT (ryczałt); karta/pakiet za 1 zł: PIT tak (149/wartość − 1), ZUS nie (§2 ust. 1 pkt 26, regulamin); paczka ZFŚS wg kryterium: ZUS nie (pkt 19), PIT zwolniony do 1 000 zł/rok (art. 21 ust. 1 pkt 67); wczasy ZFŚS 1 500: ZUS nie, PIT — nadwyżka ponad 1 000 (łącznie ze świadczeniami ZFŚS w roku); jubileuszówka co 5 lat: ZUS nie (pkt 1), PIT tak; posiłek 300: ZUS nie — do 450 zł/mies. (pkt 11), PIT tak (zwolnione są tylko posiłki profilaktyczne z przepisów BHP); telefon: wartość prywatnego użytku — PIT i ZUS (trudna wycena → regulamin); szkolenie Excel: bez ZUS i PIT (art. 21 ust. 1 pkt 90, §2 pkt 29); ekwiwalent za pranie: bez ZUS i PIT, gdy kwota odpowiada kosztom (pkt 6; art. 21 ust. 1 pkt 11).
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

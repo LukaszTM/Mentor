@@ -2,10 +2,10 @@
 Tydzień 10 · lekcja `zus_zgloszenia` · plik: `cwiczenia/tydzien_10/zus_zgloszenia_1.md`
 
 ## Zadanie
-Przygotuj i wyślij w symulatorze komplet zgłoszeń dla 5 osób jak w demonstracji: Anna Kowalczyk (ZUA 1.10.2026), Ewa Sobczak (ZUA — ma kod 01 10 0 2: lekki stopień; data 1.03.2021), Agnieszka Pawlak (ZUA 04 11 z chorobowym, 1.02.2026), Robert Król (ZUA 04 11, 1.06.2024), Joanna Michalska (dzieło — RUD, nie ZUA). Zapisz tabelę: osoba | dokument | kod | data | termin | UPP. Plik: cwiczenia/tydzien_10/zus_zgloszenia_1.md. Czas: 25 minut.
+Przygotuj i wyślij w symulatorze komplet zgłoszeń dla 5 osób jak w demonstracji: Anna Kowalczyk (ZUA 1.10.2026), Ewa Sobczak (ZUA — ma kod 01 10 0 2: umiarkowany stopień; data 1.03.2021), Agnieszka Pawlak (zlecenie przy etacie u innego pracodawcy — jaki dokument? data 1.02.2026), Robert Król (ZUA 04 11 z dobrowolnym chorobowym, 1.06.2024), Joanna Michalska (dzieło — RUD, nie ZUA). Zapisz tabelę: osoba | dokument | kod | data | termin | UPP. Plik: cwiczenia/tydzien_10/zus_zgloszenia_1.md. Czas: 25 minut.
 
 ## Oczekiwany wynik (sprawdź, czy Twój wygląda tak samo)
-4 ZUA przyjęte z UPP; Michalska — brak zgłoszenia (RUD w 7 dni od 2.11 → do 9.11.2026); Sobczak kod 011002; terminy: 7 dni od daty powstania obowiązku; symulator ostrzega „Zgłoszenie po terminie 7 dni” dla dat historycznych — w notatce zaznaczasz, że ćwiczysz wstecz.
+3 ZUA i 1 ZZA (Pawlak) przyjęte z UPP; Michalska — brak zgłoszenia (RUD w 7 dni od 2.11 → do 9.11.2026); Sobczak kod 011002; terminy: 7 dni od daty powstania obowiązku; symulator ostrzega „Zgłoszenie po terminie 7 dni” dla dat historycznych — w notatce zaznaczasz, że ćwiczysz wstecz.
 
 ## Jak sprawdzić
 1. Zrób zadanie poniżej (albo w Warsztacie / w pliku, który wskazuje treść).

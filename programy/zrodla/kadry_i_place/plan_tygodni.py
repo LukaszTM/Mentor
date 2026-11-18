@@ -35,7 +35,7 @@ PLAN = [
      "lekcje": ["czas_pracy_systemy", "nadgodziny_noc", "praktyki_hr_zagranica"],
      "zadania": ["k1z4", "k1z5", "k2z1", "k2z2"]},
     {"tydzien": 3, "etap": 1, "tytul": "Nadgodziny, ewidencja i audyt czasu pracy; urlop wypoczynkowy i staż pracy 2026",
-     "tematy": "Nadgodziny (50/100%, czas wolny), dyżur, ewidencja czasu pracy i 3 lata przechowywania, audyt kwartału brygady; urlop wypoczynkowy (wymiar, proporcjonalny, pierwszy w życiu, na żądanie), staż pracy po nowemu — także z umów zlecenia (2026), zaświadczenie ZUS",
+     "tematy": "Nadgodziny (50/100%, czas wolny), dyżur, ewidencja czasu pracy i jej przechowywanie (jak akta), audyt kwartału brygady; urlop wypoczynkowy (wymiar, proporcjonalny, pierwszy w życiu, na żądanie), staż pracy po nowemu — także z umów zlecenia (2026), zaświadczenie ZUS",
      "rola_asystenta": "Sprawdza rozliczenie nadgodzin i obliczenia wymiaru urlopu i stażu. Pytasz o kazusy („zatrudniony 15.03, 1/2 etatu, 11 lat stażu — ile urlopu?”), on ma zadać Ci pytania pomocnicze, nie podać wyniku.",
      "lekcje": ["ewidencja_czasu", "urlop_wypoczynkowy", "staz_pracy_2026"],
      "zadania": ["k2z3", "k2z4", "k2z5", "k3z1"]},

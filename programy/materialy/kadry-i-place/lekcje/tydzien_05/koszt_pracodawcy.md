@@ -22,10 +22,14 @@ Tydzień 5 · lekcja 20 z 48 · ≈ 60 min
 | FEP — praca w szczególnych warunkach lub charakterze (wykaz) | 1,5% |
 | PPK | 1,5% (do 4%) |
 ### Zwolnienia z FP i FGŚP
-- Kobiety od 55 lat i mężczyźni od 60 lat.
-- 12 miesięcy po powrocie z urlopu macierzyńskiego, rodzicielskiego lub wychowawczego.
-- 36 miesięcy za osoby 50+ zatrudnione z PUP (bezrobotne); 12 miesięcy za skierowanych do 30 lat.
-- Wynagrodzenie niższe niż minimalne w przeliczeniu na miesiąc (np. niepełny etat poniżej 4 806) — brak FP/FGŚP, jeśli łączna podstawa ze wszystkich tytułów jest niższa niż minimalna.
+| Sytuacja | FP | FGŚP |
+|---|---|---|
+| kobieta od 55 lat, mężczyzna od 60 lat | nie płacisz | nie płacisz |
+| 36 miesięcy po powrocie z urlopu macierzyńskiego, rodzicielskiego lub wychowawczego | nie płacisz | nie płacisz |
+| 12 miesięcy za osobę 50+ zatrudnioną z rejestru bezrobotnych PUP | nie płacisz | nie płacisz |
+| 12 miesięcy za skierowanego bezrobotnego do 30 lat | nie płacisz | nie płacisz |
+| podstawa ze WSZYSTKICH tytułów w przeliczeniu na miesiąc niższa niż minimalne wynagrodzenie (np. 1/2 etatu za 2 500 zł i 1/4 etatu za 1 300 zł u innego pracodawcy — razem 3 800 zł; pracownik składa o tym oświadczenie) | nie płacisz | płacisz — FGŚP nie ma progu |
+FP i FGŚP liczysz od pełnej podstawy — limit 30-krotności ich nie dotyczy.
 ### Składka wypadkowa — skąd się bierze stopa
 | Płatnik | Stopa |
 |---|---|
@@ -45,7 +49,7 @@ Zarząd pyta „ile kosztuje pracownik”. Odpowiedź: ok. 1,21–1,25 × brutto
 | Forma | Koszt ZUS firmy | Ryzyko |
 |---|---|---|
 | umowa o pracę | pełne składki | — |
-| zlecenie z pełnymi składkami | tyle samo w ZUS; bez FP/FGŚP przy zbiegu; bez urlopu i 33 dni chorobowego | — |
+| zlecenie z pełnymi składkami | tyle samo w ZUS co etat (FP tylko, gdy podstawa ≥ minimalnej); bez urlopu i 33 dni chorobowego | — |
 | B2B | brak kosztów ZUS po stronie firmy | art. 22 §1¹ KP — ustalenie stosunku pracy: składki 5 lat wstecz z odsetkami, których nie potrącisz pracownikowi, urlopy, nadgodziny, PIP |
 Limit 30-krotności obniża koszt w końcówce roku dla wysokich pensji — brak emerytalnej i rentowej po 282 600 zł podstawy.
 
@@ -60,7 +64,7 @@ koszt miesięczny 7 137,60 zł; rocznie + ZFŚS 2 943,23 → 88 594 zł + badani
 
 1. „emerytalna 585,60 + rentowa 390,00”: pracodawca płaci emerytalną 9,76% (tyle samo co pracownik) i rentową 6,5% (pracownik tylko 1,5%) — od podstawy do 30-krotności.
 2. „wypadkowa 72,00”: 1,20% × 6 000 — stopa AGRO-MLEKO ustalona przez ZUS na podstawie IWA (obowiązuje 1.04.2026–31.03.2027); mały płatnik (≤ 9 ubezp.) miałby 1,67%, firma bez IWA — stopę z grupy PKD.
-3. „FP 0 (zwolnienie 55+) + FGŚP 0”: za kobietę, która ukończyła 55 lat (mężczyzna 60), nie płacisz FP ani FGŚP (art. 104b ustawy o promocji zatrudnienia; art. 9b ustawy o FGŚP) — oszczędność 2,55% = 153 zł miesięcznie.
+3. „FP 0 (zwolnienie 55+) + FGŚP 0”: za kobietę, która ukończyła 55 lat (mężczyzna 60), nie płacisz FP ani FGŚP (przepisy o składce na Fundusz Pracy w ustawie o rynku pracy i służbach zatrudnienia — do 31.05.2025 art. 104b ustawy o promocji zatrudnienia; art. 9b ustawy o ochronie roszczeń pracowniczych) — oszczędność 2,55% = 153 zł miesięcznie.
 4. „PPK 90,00”: wpłata pracodawcy 1,5% — koszt, nie składka ZUS; z PIT po stronie pracownika.
 5. „1 137,60; koszt miesięczny 7 137,60”: 6 000 + 1 047,60 składek + 90 PPK = 7 137,60 (× 1,19 brutto).
 6. „rocznie + ZFŚS 2 943,23 → 88 594”: 12 × 7 137,60 = 85 651,20 + odpis podstawowy 2 943,23 (37,5% przeciętnego wynagrodzenia) = 88 594,43; do tego badania, BHP, odzież, ewentualne nadgodziny i absencje.
@@ -75,7 +79,7 @@ koszt miesięczny 7 137,60 zł; rocznie + ZFŚS 2 943,23 → 88 594 zł + badani
 
 ## W praktyce — jak to robisz w firmie
 1. Ustal stopę wypadkową (PKD lub decyzja ZUS po IWA) obowiązującą od 1 kwietnia.
-2. Sprawdź zwolnienia z FP/FGŚP (wiek, powrót z urlopu rodzicielskiego, 50+ z PUP, poniżej minimalnej).
+2. Sprawdź zwolnienia z FP/FGŚP (wiek 55/60, 36 mies. po urlopie rodzicielskim, 12 mies. 50+ z PUP) i próg minimalnego wynagrodzenia — dotyczy tylko FP.
 3. Policz koszt: brutto × (1 + składki pracodawcy) + PPK + ZFŚS/rok + BHP.
 4. Przedstaw zarządowi budżet rocznie z rezerwą na chorobowe i urlopy.
 
@@ -83,7 +87,7 @@ koszt miesięczny 7 137,60 zł; rocznie + ZFŚS 2 943,23 → 88 594 zł + badani
 Policz jak w demonstracji koszt miesięczny i roczny (z ZFŚS) dla trzech osób: Haliny Mazur (54 lata, 7 800, bez PPK), Tomasza Lisa (47 lat, 14 000, PPK) i Piotra Nowaka (1/2 etatu, 2 500, bez PPK, bez innych tytułów). Plik: cwiczenia/tydzien_05/koszt_pracodawcy_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_05/koszt_pracodawcy_1.md` · rozwiązanie: `rozwiazania/tydzien_05/koszt_pracodawcy_1.md`
-✔ Poprawny wynik wygląda tak: Mazur: składki 761,28 + 507,00 + 93,60 + 191,10 + 7,80 = 1 560,78 → 9 360,78/mies. → 112 329,36 + 2 943,23 = 115 272,59 rocznie; Lis: 1 366,40 + 910,00 + 168,00 + 343,00 + 14,00 = 2 801,40 + PPK 210 → 17 011,40 → 204 136,80 + 2 943,23 = 207 080,03; Nowak: 244,00 + 162,50 + 30,00 + FP 0 + FGŚP 0 (podstawa 2 500 < minimalne, jedyny tytuł) = 436,50 → 2 936,50 → 35 238 + 1 471,62 (odpis × 1/2 etatu) = 36 709,62.
+✔ Poprawny wynik wygląda tak: Mazur: składki 761,28 + 507,00 + 93,60 + 191,10 + 7,80 = 1 560,78 → 9 360,78/mies. → 112 329,36 + 2 943,23 = 115 272,59 rocznie; Lis: 1 366,40 + 910,00 + 168,00 + 343,00 + 14,00 = 2 801,40 + PPK 210 → 17 011,40 → 204 136,80 + 2 943,23 = 207 080,03; Nowak: 244,00 + 162,50 + 30,00 + FP 0 (łączna podstawa z obu etatów 3 800 < minimalne) + FGŚP 2,50 = 439,00 → 2 939,00 → 35 268 + 1 471,62 (odpis × 1/2 etatu) = 36 739,62.
 
 ## 5 · Ćwiczenie samodzielne
 Zarząd rozważa dla nowego specjalisty (10 000 zł brutto oczekiwane „na rękę ok. 6 900”) trzy formy: etat z PPK, zlecenie (pełne składki, bez PPK, KUP 20%) i B2B z fakturą 12 000 netto + VAT. Zdecyduj: (a) ile firma zapłaci miesięcznie w każdej formie, (b) co traci pracownik na B2B względem etatu (wymień 5 uprawnień), (c) czy B2B jest tu legalne, jeśli osoba ma pracować 8–16 w biurze pod kierownikiem. Plik: cwiczenia/tydzien_05/koszt_pracodawcy_2.md. Czas: 20 minut.
@@ -100,14 +104,14 @@ Zarząd rozważa dla nowego specjalisty (10 000 zł brutto oczekiwane „na ręk
   - Prawdopodobna przyczyna: Stopa 1,67% dotyczy tylko płatników zgłaszających do 9 osób.
   - Jak sprawdzić: Warsztat → Firma ćwiczeniowa → Regulaminy: stopa firmy 1,20% (decyzja ZUS po IWA).
   - Poprawka: Stosuj stopę z zawiadomienia ZUS (od 1 kwietnia) lub z grupy PKD; IWA składaj do 31 stycznia.
-- ✘ **FP naliczone u pracownika 1/2 etatu z 2 500 zł.**
+- ✘ **FP naliczony u pracownika 1/2 etatu z 2 500 zł (albo: pominięty także FGŚP).**
   - Prawdopodobna przyczyna: Nie sprawdzono progu minimalnego wynagrodzenia w przeliczeniu na miesiąc.
-  - Jak sprawdzić: Czy pracownik ma inne tytuły (oświadczenie)? Jeśli nie i 2 500 < 4 806 — bez FP/FGŚP.
-  - Poprawka: W Warsztacie pole „Pensja wg umowy” = 2 500 → krok „FP/FGŚP nienależne”.
+  - Jak sprawdzić: Czy pracownik ma inne tytuły (oświadczenie)? Jeśli nie i 2 500 < 4 806 — bez FP; FGŚP 0,10% płacisz zawsze (brak progu).
+  - Poprawka: W Warsztacie pole „Pensja wg umowy” = 2 500 → krok „FP nienależny… FGŚP płacisz normalnie”.
 
 ## Pułapki
-- FP od pełnej kwoty u pracownika na 1/2 etatu z 2 500 zł bez innych tytułów — nie płacisz (poniżej minimalnej).
-- IWA nie złożona 3 lata z rzędu — ZUS nie ustali stopy indywidualnie, ale brak IWA to wykroczenie.
+- FP u pracownika na 1/2 etatu z 2 500 zł bez innych tytułów — nie płacisz (poniżej minimalnej); FGŚP 2,50 zł — płacisz.
+- IWA niezłożona albo z danymi zaniżającymi stopę — ZUS ustala decyzją stopę w wysokości 150% na cały rok składkowy (art. 34 ustawy wypadkowej).
 
 ## Dodatkowe zadania
 1. Policz roczny koszt 8 pracowników z rozbiciem na fundusze.
@@ -116,7 +120,7 @@ Zarząd rozważa dla nowego specjalisty (10 000 zł brutto oczekiwane „na ręk
 
 ## Sprawdzenie — odpowiedz na głos, potem rozwiń
 - **Kiedy nie płacisz FP i FGŚP za pracownika?**
-  - Kobieta 55+/mężczyzna 60+, 12 mies. po urlopach rodzicielskich, 36 mies. za 50+ z PUP, wynagrodzenie poniżej minimalnej ze wszystkich tytułów.
+  - Kobieta 55+/mężczyzna 60+, 36 mies. po urlopach rodzicielskich, 12 mies. za 50+ z PUP. Przy podstawie poniżej minimalnego wynagrodzenia (ze wszystkich tytułów) nie płacisz tylko FP — FGŚP tak.
 - **Od kiedy obowiązuje nowa stopa wypadkowa?**
   - Od 1 kwietnia do 31 marca następnego roku.
 - **Ile kosztuje pracodawcę pensja minimalna 2026 (bez PPK)?**

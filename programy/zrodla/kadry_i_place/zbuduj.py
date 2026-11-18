@@ -7,6 +7,7 @@ Uruchom:  python zbuduj.py   →  ../../kadry-i-place.json
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -40,6 +41,9 @@ from szablony import SZABLONY_DODATKOWE           # noqa: E402
 from lekcje_zagranica import LEKCJE_ZAGRANICA, STANDARD_ZAGRANICA, CELE_ZAGRANICA  # noqa: E402
 from zrodla_lekcji import ZRODLA, ZRODLA_KURSU     # noqa: E402
 import reszta                                     # noqa: E402
+from odpowiedzi_cw import ODPOWIEDZI               # noqa: E402
+from formularze import FORMULARZE, KROKI_FORMULARZY  # noqa: E402
+from aktualizacje import AKTUALIZACJE              # noqa: E402
 
 STANDARD = {}
 for _m in (STANDARD_1, STANDARD_2, STANDARD_3, STANDARD_4, STANDARD_5, STANDARD_DELEGACJE, STANDARD_ZAGRANICA):
@@ -53,6 +57,35 @@ NADPISZ_W_PRAKTYCE = {
                            "Przejdź w symulatorze eZUS/Płatnik pełną ścieżkę dokumentu: przygotuj → weryfikuj → wyślij → UPP w Rejestrze.",
                            "Wygeneruj w e-Urząd: PIT jeden PIT-11 i zapisz go do projektu — zobacz, które pola rozumiesz."],
 }
+
+
+def klucz_w_tekscie(pole, tekst):
+    """Czy wartość z klucza odpowiedzi występuje w treści/wyniku/rozwiązaniu ćwiczenia (klucz nie może się rozjechać z rozwiązaniem)."""
+    import datetime as _dt
+    import re as _re
+    t = tekst.replace("\u00a0", " ").replace("\u202f", " ")
+    typ = pole.get("typ", "kwota")
+    if typ in ("kwota", "liczba"):
+        w = float(pole["wartosc"])
+        war = set()
+        if w == int(w):
+            i = int(w)
+            war |= {f"{i:,}".replace(",", " "), str(i)}
+        s = f"{w:,.2f}".replace(",", " ").replace(".", ",")
+        war |= {s, s.replace(" ", "")}
+        if w != int(w):
+            war.add(str(w).replace(".", ","))
+        return any(_re.search(r"(?<![\d,])" + _re.escape(v) + r"(?![\d])", t) for v in war)
+    if typ == "data":
+        d = _dt.date.fromisoformat(pole["wartosc"])
+        war = {f"{d.day}.{d.month:02d}.{d.year}", f"{d.day:02d}.{d.month:02d}.{d.year}", f"{d.day}.{d.month:02d}", f"{d.day:02d}.{d.month:02d}"}
+        return any(_re.search(r"(?<![\d.])" + _re.escape(v) + r"(?!\d)", t) for v in war)
+    if typ == "tekst":
+        w = pole.get("wartosc")
+        war = list(w) if isinstance(w, (list, tuple)) else ([w] if w else [])
+        war += list(pole.get("zawiera") or [])
+        return any(str(v).lower() in t.lower() for v in war)
+    return True
 
 
 def _sciezka_cw(lekcja_id, tydzien, nr):
@@ -249,6 +282,8 @@ def zbuduj():
             z.update(NADPISZ.get(z["id"], {}))        # wersja „wszystko w Mentorze” (Warsztat zamiast kont zewnętrznych)
             if z["id"] in DOPISZ_KROK:
                 z["kroki"] = list(z.get("kroki", [])) + [DOPISZ_KROK[z["id"]]]
+            if z["id"] in KROKI_FORMULARZY:
+                z["kroki"] = list(z.get("kroki", [])) + [KROKI_FORMULARZY[z["id"]]]
             # pliki: żadnych arkuszy — wyniki w .md/.csv z Warsztatu
             pl = []
             for f in z.get("pliki", []):
@@ -270,6 +305,7 @@ def zbuduj():
     tygodnie.sort(key=lambda w: w["tydzien"])
     assert set(NADPISZ) <= id_zadan, set(NADPISZ) - id_zadan
     assert set(DOPISZ_KROK) <= id_zadan, set(DOPISZ_KROK) - id_zadan
+    assert set(KROKI_FORMULARZY) <= id_zadan, set(KROKI_FORMULARZY) - id_zadan
 
     # quizy: pytania z dawnych tygodni (reszta.QUIZY) dopasowane do lekcji → trafiają do tygodnia, w którym jest ta lekcja;
     # QUIZY_DODATKOWE uzupełniają tygodnie, które po zmianie harmonogramu miałyby za mało pytań
@@ -292,6 +328,35 @@ def zbuduj():
     szablony = dict(reszta.SZABLONY)
     szablony.update(SZABLONY_DODATKOWE)
 
+    # klucze odpowiedzi do ćwiczeń (sprawdzanie automatyczne w Mentorze) — każda wartość musi być w wyniku/rozwiązaniu
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3]))      # katalog repozytorium — moduł odpowiedzi.py
+    import odpowiedzi as _odp
+    rozjazdy = []
+    for lid, cwicz in ODPOWIEDZI.items():
+        assert lid in lekcje_po_id, f"odpowiedzi: nieznana lekcja {lid}"
+        for nr, pola in cwicz.items():
+            cw_l = lekcje_po_id[lid]["cwiczenia"]
+            assert 1 <= nr <= len(cw_l), f"odpowiedzi: {lid} nie ma ćwiczenia {nr}"
+            bl_ = _odp.waliduj_pola(pola, f"{lid}:{nr}")
+            assert not bl_, bl_
+            c = cw_l[nr - 1]
+            tekst = " ".join(str(c.get(k, "")) for k in ("tresc", "wynik", "rozwiazanie"))
+            rozjazdy += [f"{lid}:{nr} pole „{p_['id']}” = {p_['wartosc']!r}" for p_ in pola if not klucz_w_tekscie(p_, tekst)]
+            c["odpowiedzi"] = pola
+    import datetime as _dt
+    assert [a_["data"] for a_ in AKTUALIZACJE] == sorted(a_["data"] for a_ in AKTUALIZACJE), "aktualizacje nie są w kolejności dat"
+    for a_ in AKTUALIZACJE:
+        _dt.date.fromisoformat(a_["data"])
+        assert a_["temat"] and a_["co"] and a_["gdzie"] and a_["lekcje"], a_
+        assert all(x_ in lekcje_po_id for x_ in a_["lekcje"]), a_["lekcje"]
+    for f_ in FORMULARZE:
+        assert f_["lekcja"] in lekcje_po_id, f_["id"]
+        bl_ = _odp.waliduj_pola([p_ for s_ in f_["sekcje"] for p_ in s_["pola"]], f"formularz {f_['id']}")
+        assert not bl_, bl_
+        for nazwa_ in re.findall(r"Formularze → „([^”]+)”", " ".join(KROKI_FORMULARZY.values())):
+            assert any(x["nazwa"].startswith(nazwa_.rstrip("…")) for x in FORMULARZE), nazwa_
+    assert not rozjazdy, "klucz odpowiedzi nie występuje w wyniku/rozwiązaniu ćwiczenia:\n  " + "\n  ".join(rozjazdy)
+
     program = {
         "format": "mentor-program/1",
         "id": "kadry-i-place",
@@ -303,8 +368,8 @@ def zbuduj():
                 "i przygotowujesz firmę do kontroli PIP/ZUS (po reformie z 2026 r.). Wszystko na fikcyjnej firmie AGRO-MLEKO, z liczbami obowiązującymi w 2026 r. "
                 "i podstawą prawną przy każdej liczbie; każda zaktualizowana lekcja ma listę sprawdzonych źródeł (Dz.U., ELI, EUR-Lex, TSUE, MOP, EU-OSHA, ACAS, CIPD) z datą dostępu. "
                 "Dwie lekcje przenoszą do polskich realiów materiały zagraniczne: koordynację ZUS i delegowanie w UE oraz procedury HR z ACAS/CIPD. Uczysz się z asystentem AI (Claude Code, API albo tryb offline): kazusy rozwiązujesz sam, asystent pyta i wskazuje przepisy.",
-        "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude; audyt źródeł 18.11.2026)",
-        "wersja": "2.2",
+        "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude; pełny audyt merytoryczny ze źródłami: 18.11.2026)",
+        "wersja": "3.0",
         "jezyk": "pl",
         "katalog_projektu": "kadry-praktyka",
         "stanowisko": "Specjalista ds. kadr i płac",
@@ -312,9 +377,9 @@ def zbuduj():
         "dni_w_tygodniu": [0, 1, 2, 3, 4],
         "dzien_quizu": 5,
         "dzien_wolny": 6,
-        "poziom": "od podstaw — bez znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych",
+        "poziom": "od podstaw do poziomu samodzielnego specjalisty — bez wymaganej wcześniej znajomości prawa pracy, księgowości i arkuszy kalkulacyjnych",
         "system": "Windows 10/11 (Mentor.exe); działa też z Pythonem 3.10+ na innych systemach",
-        "wymagania_wstepne": ["ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) przez 16 tygodni — razem ok. 130 godzin; każdy tydzień mieści się w 9 godzinach",
+        "wymagania_wstepne": ["ok. 90 minut dziennie od poniedziałku do piątku i do 90 minut w sobotę (quiz, powtórka, dokończenie zadania) przez 16 tygodni — razem ok. 136 godzin; każdy tydzień mieści się w 9 godzinach",
                               "jeden folder na dysku na pliki ćwiczeń", "Mentor (ten program) — nic więcej: żadnych kont, instalacji ani arkuszy; internet niepotrzebny"],
         "umiejetnosci_koncowe": ["zawrzeć i rozwiązać umowę o pracę z kompletem dokumentów i w terminach", "policzyć wymiar czasu pracy, nadgodziny, nocne, urlop i pensję za część miesiąca",
                                  "sporządzić i skontrolować listę płac od brutto do netto (PPK, chorobowe, zasiłek, benefity, delegacje, potrącenia)", "ustalić podstawę zasiłku, rozliczyć zleceniobiorcę, przygotować komplet DRA/RCA/RSA i korektę",
@@ -335,6 +400,8 @@ def zbuduj():
         "parametry": PARAMETRY,
         "narzedzia": NARZEDZIA,
         "przepisy": PRZEPISY,
+        "formularze": FORMULARZE,
+        "aktualizacje": AKTUALIZACJE,
         "etapy": ETAPY,
         "tygodnie": tygodnie,
         "lekcje": lekcje,

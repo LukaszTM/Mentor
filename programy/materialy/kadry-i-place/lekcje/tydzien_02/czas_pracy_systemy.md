@@ -1,5 +1,5 @@
 # Czas pracy: normy, systemy, okresy rozliczeniowe, odpoczynek
-Tydzień 2 · lekcja 9 z 48 · ≈ 55 min
+Tydzień 2 · lekcja 9 z 48 · ≈ 60 min
 
 **Po tej lekcji potrafisz:** liczysz wymiar czasu pracy miesiąca, dobierasz system i okres rozliczeniowy oraz układasz grafik z 11/35 h odpoczynku.
 
@@ -30,18 +30,31 @@ Doba to 24 godziny od rozpoczęcia pracy. Drugie rozpoczęcie pracy w tej samej 
 | podstawowy | 8 h | — |
 | równoważny | do 12 h | dozór urządzeń, pogotowie — do 16 h; pilnowanie — do 24 h; okres 1 miesiąc, wyjątkowo 3–4 |
 | zadaniowy | — | bez ewidencji godzin; wymiar zadań musi być realny w normach |
-| przerywany | — | jedna przerwa do 5 h, 60% wynagrodzenia za przerwę; tylko w układzie lub porozumieniu |
+| przerywany | — | jedna przerwa do 5 h niewliczana do czasu pracy, płatna w wysokości połowy wynagrodzenia przestojowego (art. 139 §1); tylko w układzie lub porozumieniu |
 | skrócony tydzień, weekendowy | do 12 h | na wniosek pracownika |
 | ruchomy | — | przedziały rozpoczynania albo różne godziny |
 | ruch ciągły | — | do 43 h średnio |
 | indywidualny rozkład | — | na wniosek |
 System i okres rozliczeniowy ustala regulamin, układ albo obwieszczenie.
 Harmonogram (grafik) sporządzasz na co najmniej 1 miesiąc. Przekazujesz go 1 tydzień przed (art. 129 §3). Wyjątek: rozkład wynika z regulaminu lub umowy.
+### Kierowcy — odrębne normy
+Kierowca-pracownik podlega ustawie z 16.04.2004 o czasie pracy kierowców, a przy pojazdach powyżej 3,5 t (od 1.07.2026 także 2,5–3,5 t w przewozie międzynarodowym) — również rozporządzeniu (WE) 561/2006. Kodeks pracy stosujesz tam, gdzie ustawa milczy.
+| Co | Limit | Podstawa |
+|---|---|---|
+| czas pracy (jazda, załadunek, obsługa pojazdu, formalności) | 8 h na dobę i przeciętnie 40 h; z nadgodzinami przeciętnie 48 h tygodniowo, w pojedynczym tygodniu do 60 h; okres rozliczeniowy do 4 miesięcy | art. 11–12 ustawy |
+| przerwa w pracy | po 6 kolejnych godzinach pracy: 30 min (praca do 9 h) albo 45 min (ponad 9 h); można dzielić na części po co najmniej 15 min | art. 13 |
+| praca w nocy | gdy kierowca pracuje w porze nocnej (dla tego limitu: cztery godziny między 0:00 a 7:00 ustalone u pracodawcy), czas pracy w tej dobie — najwyżej 10 h | art. 21 |
+| odpoczynek | 11 h w dobie (może być w pojeździe z miejscem do spania), 35 h w tygodniu | art. 14 |
+| jazda | 9 h dziennie (dwa razy w tygodniu 10 h), 56 h w tygodniu, 90 h w dwóch kolejnych tygodniach; po 4,5 h jazdy przerwa 45 min (albo 15 + 30) | rozporządzenie 561/2006, art. 6–7 |
+| odpoczynek kierowcy | dzienny 11 h (skrócony 9 h — najwyżej 3 razy między odpoczynkami tygodniowymi), tygodniowy 45 h (skrócony 24 h z rekompensatą) | rozporządzenie 561/2006, art. 8 |
+Liczysz dwa zegary osobno: czas PRACY (ustawa) i czas JAZDY (rozporządzenie) — przekroczenie któregokolwiek jest naruszeniem.
+Ewidencję prowadzisz dla każdego kierowcy niezależnie od systemu czasu pracy, z danych tachografu i karty kierowcy.
+Diety i ryczałty kierowców omawia lekcja „Podróże służbowe: diety, ryczałty, kilometrówka…”. W AGRO-MLEKO te normy dotyczą kierowców z działu logistyki.
 ### Niedziele i święta
 Praca dozwolona tylko w przypadkach z art. 151¹⁰: ruch ciągły, praca zmianowa, handel w ograniczonym zakresie, usługi i inne wymienione.
 | Praca w | Rekompensata |
 |---|---|
-| niedzielę | dzień wolny w 6 dniach przed lub po; inaczej dodatek 100% |
+| niedzielę | dzień wolny w 6 dniach przed lub po tej niedzieli; gdy niemożliwe — do końca okresu rozliczeniowego; gdy i to niemożliwe — dodatek 100% za każdą godzinę (art. 151¹¹) |
 | święto | dzień wolny w okresie rozliczeniowym; inaczej dodatek 100% |
 Raz na 4 tygodnie pracownik ma wolną niedzielę.
 ### Przerwy
@@ -64,11 +77,11 @@ Operator 12-godzinny: 160 h = 13 zmian 12 h + 1 zmiana 4 h (lub 13 zmian i 4 h �
 
 1. Metoda kodeksowa (art. 130 §1): „4 pełne tygodnie (1–28.12) × 40 = 160 h” — pełne tygodnie liczysz od 1. dnia miesiąca (1.12 to wtorek; tydzień = 7 kolejnych dni, nie pon–nd).
 2. „pozostałe dni pon–pt: 29, 30, 31.12 = 3 × 8 = 24 h → 184 h” — dni wystające poza pełne tygodnie dodajesz po 8 h, ale tylko poniedziałek–piątek.
-3. „święta w dniu innym niż niedziela: 24.12 (czw), 25.12 (pt), 26.12 (sb) = 3 × 8 = 24 h → 160 h” — każde święto obniża wymiar o 8 h (art. 130 §2); od 2024 r. Wigilia jest dniem wolnym; święto w sobotę też obniża (dlatego za 26.12 w sobotę pracownicy dostają inny dzień wolny).
-4. Metoda kontrolna (Warsztat): 23 dni pon–pt × 8 = 184 h − 3 święta × 8 = 160 h; dni pracy: 23 − 2 święta w pon–pt = 21 (sobota 26.12 nie jest dniem pracy, ale obniża wymiar).
+3. „święta w dniu innym niż niedziela: 24.12 (czw), 25.12 (pt), 26.12 (sb) = 3 × 8 = 24 h → 160 h” — każde święto obniża wymiar o 8 h (art. 130 §2); od 2025 r. Wigilia (24.12) jest dniem ustawowo wolnym od pracy; święto w sobotę też obniża (dlatego za 26.12 w sobotę pracownicy dostają inny dzień wolny).
+4. Metoda kontrolna (Warsztat): 23 dni pon–pt × 8 = 184 h − 3 święta × 8 = 160 h; dni pon–pt bez świąt: 23 − 2 = 21, ale jeden z nich jest dniem wolnym za święto w sobotę 26.12 → 20 dni pracy (160 h / 8).
 5. „Operator 12-godzinny: 160 h = 13 zmian 12 h + 1 zmiana 4 h” — w równoważnym do 12 h grafik musi zsumować się do wymiaru; 13 × 12 = 156 + 4 = 160; w 3-miesięcznym okresie te 4 h można „przesunąć” do innego miesiąca, byle okres zbilansował się do sumy wymiarów.
 
-✔ **Oczekiwany wynik:** grudzień 2026: wymiar 160 h, 21 dni pracy (plus dzień wolny za święto w sobotę 26.12).
+✔ **Oczekiwany wynik:** grudzień 2026: wymiar 160 h = 20 dni pracy (21 dni pon–pt bez świąt minus dzień wolny za święto w sobotę 26.12).
 
 ## 3 · Jak to uruchomić
 1. Warsztat → Czas pracy → karta „Wymiar czasu pracy i dodatek nocny”: Rok 2026, Miesiąc 12 → „Policz” → porównaj z kartką (184 − 24 = 160).

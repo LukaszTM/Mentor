@@ -1,9 +1,9 @@
 # Sygnaliści, praca zdalna, RODO i monitoring w kadrach
-Tydzień 14 · lekcja 46 z 48 · ≈ 65 min
+Tydzień 14 · lekcja 46 z 48 · ≈ 70 min
 
 **Po tej lekcji potrafisz:** masz procedurę zgłoszeń wewnętrznych, regulamin pracy zdalnej z ryczałtem oraz zgodne z RODO monitoring, kontrolę trzeźwości i retencję danych.
 
-**Po co mi to?** firma ≥ 50 osób musi mieć procedurę zgłoszeń wewnętrznych (sygnaliści), każdy wniosek o pracę zdalną wymaga odpowiedzi w 7 dni i ryczałtu z kalkulacją, a monitoring bez 2-tygodniowego uprzedzenia jest nielegalny — trzy obszary, w których PIP i UODO pytają o dokument z datą.
+**Po co mi to?** firma ≥ 50 osób musi mieć procedurę zgłoszeń wewnętrznych (sygnaliści), wniosek rodzica małego dziecka o pracę zdalną jest wiążący (odmowa tylko z przyczyną, w 7 dni roboczych), a ryczałt wymaga kalkulacji, a monitoring bez 2-tygodniowego uprzedzenia jest nielegalny — trzy obszary, w których PIP i UODO pytają o dokument z datą.
 
 ## Czego potrzebujesz
 - Warsztat → Przepisy: „Sygnaliści — procedura zgłoszeń wewnętrznych” (ustawa z 14.06.2024), „Praca zdalna” (art. 67¹⁸–67³³ KP), „Kontrola trzeźwości i monitoring” (art. 22¹ᶜ–22¹ᶠ, 22², 22³).
@@ -14,7 +14,7 @@ Tydzień 14 · lekcja 46 z 48 · ≈ 65 min
 ## 1 · Wyjaśnienie od podstaw
 ### Sygnaliści (ustawa z 14.06.2024, Dz.U. 2024 poz. 928)
 Obowiązuje od 25.09.2024; zgłoszenia zewnętrzne od 25.12.2024.
-Procedurę zgłoszeń wewnętrznych MUSI mieć podmiot, na rzecz którego pracę zarobkową wykonuje co najmniej 50 osób — stan na 1 stycznia lub 1 lipca. Liczysz osoby, nie etaty: pracowników, zleceniobiorców, B2B, praktykantów, stażystów.
+Procedurę zgłoszeń wewnętrznych MUSI mieć podmiot, na rzecz którego pracę zarobkową wykonuje co najmniej 50 osób — stan na 1 stycznia lub 1 lipca. Do progu liczysz pracowników W PRZELICZENIU NA PEŁNE ETATY oraz osoby pracujące za wynagrodzeniem na innej podstawie (zlecenie, B2B), jeśli same nie zatrudniają do tej pracy innych osób (art. 23 ust. 2). AGRO-MLEKO: 58,5 etatu pracowników + zleceniobiorcy → próg 50 przekroczony.
 | Element procedury | Zasada |
 |---|---|
 | wdrożenie | konsultacje ze związkami lub przedstawicielami 5–10 dni; wejście w życie 7 dni po podaniu do wiadomości |
@@ -34,12 +34,12 @@ Trzy rodzaje: całkowita, hybrydowa, okazjonalna.
 | Element | Zasada |
 |---|---|
 | uzgodnienie | przy zawarciu umowy albo w trakcie — wniosek papierowy lub elektroniczny |
-| wniosek WIĄŻĄCY | ciężarna; rodzic dziecka do 4 lat; rodzic dziecka z niepełnosprawnością; opiekun osoby z niepełnosprawnością — odmowa tylko, gdy niemożliwe ze względu na organizację lub rodzaj pracy; odpowiedź 7 dni |
+| wniosek WIĄŻĄCY | ciężarna; rodzic dziecka do 4 lat; rodzic dziecka z niepełnosprawnością; opiekun osoby z niepełnosprawnością — odmowa tylko, gdy niemożliwe ze względu na organizację lub rodzaj pracy — z przyczyną, na papierze lub elektronicznie, w 7 dni roboczych od wniosku |
 | polecenie pracodawcy | tylko w stanie nadzwyczajnym lub epidemii albo gdy zapewnienie BHP w zakładzie jest czasowo niemożliwe; oświadczenie pracownika o warunkach |
 | zasady | porozumienie ze związkami, regulamin (po konsultacji), porozumienie indywidualne lub polecenie: grupy, kontrola, koszty, BHP, komunikacja |
 | obowiązki pracodawcy | materiały, narzędzia (lub ekwiwalent za własne), instalacja, serwis, szkolenia; POKRYCIE KOSZTÓW energii i usług telekomunikacyjnych — ryczałt lub ekwiwalent odpowiadający przewidywanym kosztom, bez PIT i ZUS; ocena ryzyka i informacja BHP; oświadczenie pracownika o bezpiecznych warunkach lokalowych i technicznych; zakaz prac niebezpiecznych |
 | kontrola | praca, BHP, bezpieczeństwo informacji — w uzgodnieniu z pracownikiem, w godzinach pracy, bez naruszania prywatności |
-| cofnięcie | na wniosek każdej strony w 30 dni; nie dla grup z wnioskiem wiążącym bez przyczyny |
+| zaprzestanie pracy zdalnej uzgodnionej w trakcie zatrudnienia (art. 67²²) | wiążący wniosek każdej ze stron; termin powrotu ustalają strony — najpóźniej 30 dni od wniosku; wobec osób z wnioskiem wiążącym pracodawca może to zrobić tylko, gdy dalsza praca zdalna nie jest możliwa ze względu na organizację lub rodzaj pracy |
 | wypadek przy pracy zdalnej | oględziny miejsca za zgodą |
 | OKAZJONALNA | do 24 dni w roku na wniosek; bez obowiązku kosztów i ekwiwalentu (można); bez regulaminu; ewidencja dni, oświadczenie BHP; nieproporcjonalna do etatu |
 | praca zdalna z zagranicy | ryzyko podatkowe i ZUS (A1, 183 dni) — uzgodnij miejsce |
@@ -70,17 +70,17 @@ Trzy rodzaje: całkowita, hybrydowa, okazjonalna.
 **Wniosek o pracę zdalną hybrydową (dziecko 3 lata) i nowe kamery w magazynie — dwa procesy w tym samym tygodniu**
 
 ```
-Pracownica (dziecko 3 lata) wnioskuje 2.11.2026 o pracę zdalną hybrydową 3 dni/tydz. (księgowość): wniosek wiążący → odpowiedź do 9.11; odmowa tylko gdy organizacja/rodzaj pracy nie pozwala (księgowość — trudno uzasadnić); porozumienie indywidualne: miejsce (adres), dni, kontrola uzgodniona, ryczałt 80 zł/mies. (energia 40 + internet 40 — kalkulacja: 3 dni × 8 h × 0,25 kWh × 0,95 zł + część abonamentu), sprzęt firmowy, oświadczenie BHP i RODO (zasady pracy z dokumentami płacowymi w domu: szyfrowany dysk, zakaz druku). Jednocześnie monitoring kamer w nowym magazynie: zmiana regulaminu pracy, konsultacja, 2 tygodnie informacja, tabliczki, retencja 3 mies., klauzula dla pracowników do akt B.
+Pracownica (dziecko 3 lata) wnioskuje 2.11.2026 o pracę zdalną hybrydową 3 dni/tydz. (księgowość): wniosek wiążący → ewentualna odmowa z przyczyną w 7 dni roboczych, czyli do 10.11 (sobotę 7.11 licz jak dzień roboczy); odmowa tylko gdy organizacja/rodzaj pracy nie pozwala (księgowość — trudno uzasadnić); porozumienie indywidualne: miejsce (adres), dni, kontrola uzgodniona, ryczałt 55 zł/mies. (energia 25 + internet 30 — kalkulacja: 13 dni × 8 h × 0,25 kW × 0,95 zł = 24,70 zł + połowa abonamentu 60 zł), sprzęt firmowy, oświadczenie BHP i RODO (zasady pracy z dokumentami płacowymi w domu: szyfrowany dysk, zakaz druku). Jednocześnie monitoring kamer w nowym magazynie: zmiana regulaminu pracy, konsultacja, 2 tygodnie informacja, tabliczki, retencja 3 mies., klauzula dla pracowników do akt B.
 ```
 
-1. „wniosek 2.11.2026, dziecko 3 lata, księgowość, 3 dni/tydz. → wniosek wiążący → odpowiedź do 9.11”: art. 67¹⁹ §6–7: wniosek rodzica dziecka do 4 lat pracodawca musi uwzględnić, chyba że nie jest to możliwe ze względu na organizację lub rodzaj pracy; odmowa na piśmie z przyczyną w 7 dni roboczych; księgowość — trudno uzasadnić odmowę.
+1. „wniosek 2.11.2026, dziecko 3 lata, księgowość, 3 dni/tydz. → wniosek wiążący → ewentualna odmowa z przyczyną w 7 dni roboczych, czyli do 10.11”: art. 67¹⁹ §6–7: wniosek rodzica dziecka do 4 lat pracodawca musi uwzględnić, chyba że nie jest to możliwe ze względu na organizację lub rodzaj pracy; o przyczynie odmowy informuje na papierze lub elektronicznie w 7 dni roboczych od wniosku (licz ostrożnie: 3, 4, 5, 6, 7 — sobota, 9, 10 listopada; niedziel i świąt nie liczysz); księgowość — trudno uzasadnić odmowę.
 2. „porozumienie indywidualne: miejsce (adres), dni, kontrola uzgodniona”: praca zdalna wymaga uzgodnienia miejsca (konkretny adres), zasad komunikacji, kontroli (w godzinach pracy, uzgodnione formy, bez naruszania prywatności) — w porozumieniu lub regulaminie pracy zdalnej (art. 67²⁰).
-3. „ryczałt 80 zł/mies. (energia 40 + internet 40 — kalkulacja: 3 dni × 8 h × 0,25 kWh × 0,95 zł + część abonamentu)”: pracodawca pokrywa koszty energii i internetu (art. 67²⁴) — ekwiwalent lub ryczałt z KALKULACJĄ (normy zużycia, ceny); udokumentowany ryczałt nie jest przychodem (art. 67²⁵) — bez PIT i ZUS; kwota „200 zł dla wszystkich” bez kalkulacji → nadwyżka przychodem.
+3. „ryczałt 55 zł/mies. (energia 25 + internet 30 — kalkulacja: 13 dni × 8 h × 0,25 kW × 0,95 zł = 24,70 zł + połowa abonamentu 60 zł)”: 3 dni × 4,33 tygodnia = 13 dni w miesiącu; pracodawca pokrywa koszty energii i internetu (art. 67²⁴) — ekwiwalent lub ryczałt z KALKULACJĄ (normy zużycia, ceny); udokumentowany ryczałt nie jest przychodem (art. 67²⁵) — bez PIT i ZUS; kwota „200 zł dla wszystkich” bez kalkulacji → nadwyżka przychodem.
 4. „sprzęt firmowy, oświadczenie BHP i RODO (szyfrowany dysk, zakaz druku)”: ocena ryzyka i informacja BHP dla pracy zdalnej, oświadczenie o warunkach lokalowych; procedura ochrony danych (dokumenty płacowe w domu) i potwierdzenie zapoznania.
 5. „monitoring kamer w nowym magazynie: zmiana regulaminu pracy, konsultacja, 2 tygodnie informacja, tabliczki, retencja 3 mies., klauzula do akt B”: art. 22² — cel (bezpieczeństwo, mienie), zakres i sposób w regulaminie pracy (zmiana — konsultacja z przedstawicielem; wejście 2 tygodnie po ogłoszeniu); informacja pracowników na piśmie nie później niż 2 tygodnie przed uruchomieniem; oznaczenie pomieszczeń; nagrania 3 miesiące (dłużej tylko jako dowód); zakaz w pomieszczeniach socjalnych/szatniach.
 6. Sygnaliści w tle: zgłoszenie np. „kamery nagrywają szatnię” może trafić do kanału wewnętrznego — procedura (≥ 50 osób) z potwierdzeniem w 7 dni, działaniami następczymi i informacją zwrotną w 3 miesiące, ochroną przed odwetem; rejestr zgłoszeń.
 
-✔ **Oczekiwany wynik:** porozumienie o pracy zdalnej z ryczałtem 80 zł udokumentowanym kalkulacją (bez PIT/ZUS) i odpowiedź w 7 dni; monitoring wdrożony z 2-tygodniowym uprzedzeniem, klauzulą i retencją 3 mies.; kanał sygnalistów gotowy na zgłoszenie.
+✔ **Oczekiwany wynik:** porozumienie o pracy zdalnej z ryczałtem 55 zł udokumentowanym kalkulacją (bez PIT/ZUS) i odpowiedź przed upływem 7 dni roboczych; monitoring wdrożony z 2-tygodniowym uprzedzeniem, klauzulą i retencją 3 mies.; kanał sygnalistów gotowy na zgłoszenie.
 
 ## 3 · Jak to uruchomić
 1. Prompty → Szablony → „Procedura zgłoszeń wewnętrznych” → procedura_sygnalisci.md (kanały, osoby, terminy 7 dni / 3 mies., rejestr, ochrona przed odwetem, konsultacje 5–10 dni z przedstawicielem).
@@ -98,7 +98,7 @@ Pracownica (dziecko 3 lata) wnioskuje 2.11.2026 o pracę zdalną hybrydową 3 dn
 Ewa Sobczak (administracja, dziecko 2 lata) wnioskuje 16.11.2026 o pracę zdalną 2 dni w tygodniu z domu (laptop 65 W, monitor 30 W, 8 h, cena energii 0,95 zł/kWh, internet 60 zł/mies. z czego do pracy 1/3). Przygotuj jak w demonstracji: odpowiedź (termin, treść), porozumienie (10 elementów), kalkulację ryczałtu, listę dokumentów BHP/RODO. Plik: cwiczenia/tydzien_14/sygnalisci_zdalna_rodo_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_14/sygnalisci_zdalna_rodo_1.md` · rozwiązanie: `rozwiazania/tydzien_14/sygnalisci_zdalna_rodo_1.md`
-✔ Poprawny wynik wygląda tak: odpowiedź do 25.11 (7 dni roboczych od poniedziałku 16.11 — święto 11.11 było wcześniej, więc nie wpływa na termin) — uwzględnienie (wniosek wiążący, administracja); ryczałt: energia 2 dni × 4,33 tyg. × 8 h × 0,095 kW = 6,58 kWh × 0,95 = 6,25 zł + internet 20 zł → ryczałt 26,25 → 27 zł/mies. (udokumentowany, bez PIT/ZUS); porozumienie: miejsce (adres), dni (wt, czw), godziny, komunikacja, kontrola (zdalna, w godzinach, uzgodniona), sprzęt firmy, ryczałt, BHP, ochrona danych, zasady zmiany/zakończenia (3 mies. wypowiedzenie uzgodnienia); dokumenty: ocena ryzyka + informacja BHP, oświadczenie o warunkach lokalowych i BHP, oświadczenie RODO/procedura danych, potwierdzenie zapoznania.
+✔ Poprawny wynik wygląda tak: odpowiedź najpóźniej 24.11 (7 dni roboczych od poniedziałku 16.11: 17, 18, 19, 20, 21 — sobota, 23, 24; święto 11.11 było wcześniej) — uwzględnienie (wniosek wiążący, administracja); ryczałt: energia 2 dni × 4,33 tyg. × 8 h × 0,095 kW = 6,58 kWh × 0,95 = 6,25 zł + internet 20 zł → ryczałt 26,25 → 27 zł/mies. (udokumentowany, bez PIT/ZUS); porozumienie: miejsce (adres), dni (wt, czw), godziny, komunikacja, kontrola (zdalna, w godzinach, uzgodniona), sprzęt firmy, ryczałt, BHP, ochrona danych, zasady zmiany/zakończenia (wniosek o zaprzestanie — powrót w terminie do 30 dni, art. 67²²); dokumenty: ocena ryzyka + informacja BHP, oświadczenie o warunkach lokalowych i BHP, oświadczenie RODO/procedura danych, potwierdzenie zapoznania.
 
 ## 5 · Ćwiczenie samodzielne
 Przeprowadź mini-audyt RODO i compliance w kadrach AGRO-MLEKO (10 pytań z pliku ćwiczenia): m.in. upoważnienia do danych, rejestr czynności, umowy powierzenia (biuro rachunkowe? program kadrowy w chmurze), tabela retencji (akta 10 lat, kary 1 rok, trzeźwość 1 rok, monitoring 3 mies., CV), kontrola trzeźwości (zapis w regulaminie? informacja 2 tyg.?), procedura naruszeń 72 h, sygnaliści (procedura? konsultacje? rejestr?), monitoring poczty. Dla każdego: stan (TAK/NIE/CZĘŚCIOWO), ryzyko, działanie, termin. Plik: cwiczenia/tydzien_14/sygnalisci_zdalna_rodo_2.md. Czas: 20 minut.

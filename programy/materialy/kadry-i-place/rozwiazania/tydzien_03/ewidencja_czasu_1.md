@@ -27,15 +27,15 @@ Pierwsze wiersze: „01.12 wt | 06–18 | 12 | 0 | — | — | grafik”; „02.
 | 09.12 śr | — | 0 | — | — | CH | e-ZLA |
 | 10.12 czw | 18:00–06:00 | 12 | 8 | — | — | grafik |
 | 11.12 pt | — | 0 | — | — | W5 | |
-| 12.12 sb | 06:00–20:00 | 14 | 0 | 2 (dobowe) | — | polecenie 7/12 |
+| 12.12 sb | 06:00–19:00 | 13 | 0 | 1 (dobowa) | — | polecenie 7/12; odpoczynek 11 h zachowany |
 | 13.12 nd | — | 0 | — | — | WN | |
 | 14.12 pn | 06:00–18:00 | 12 | 0 | — | — | grafik |
 | 15.12 wt | — | 0 | — | — | W5 | |
-Suma 1–15.12: praca 74 h (w tym 2 nadgodziny), UW 12 h, CH 8–9.12 (2 dni), nocne 16 h.
+Suma 1–15.12: praca 73 h (w tym 1 nadgodzina), UW 12 h, CH 8–9.12 (2 dni), nocne 16 h.
 ```
 
 ## Oczekiwany wynik
-15 wierszy; nocne tylko przy zmianach 18–6 (po 8 h); UW 12 h; CH 2 dni; nadgodziny 2 h z numerem polecenia; dni wolne z kodem W5/WN/WŚ.
+15 wierszy; nocne tylko przy zmianach 18–6 (po 8 h); UW 12 h; CH 2 dni; 1 nadgodzina dobowa z numerem polecenia (13 h pracy = 11 h odpoczynku zachowane); dni wolne z kodem W5/WN/WŚ.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

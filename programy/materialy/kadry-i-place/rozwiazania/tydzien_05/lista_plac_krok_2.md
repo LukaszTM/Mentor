@@ -7,14 +7,14 @@ Zasada: najpierw własna próba. Podpowiedzi odkrywaj po kolei — rozwiązanie 
 Które obciążenie NIE dotyczy wynagrodzenia chorobowego: składki społeczne, zdrowotna czy PIT?
 
 ## Podpowiedź 2 — gdzie szukać
-Lekcja, sekcja „Zaokrąglenia”: chorobowe — podstawa zdrowotnej i PIT, bez społecznych; Warsztat → Lista płac ma osobne pole „Wynagrodzenie chorobowe”.
+Lekcja, sekcja „Trzy składniki specjalne”: chorobowe — podstawa zdrowotnej i PIT, bez społecznych; Warsztat → Lista płac ma osobne pole „Wynagrodzenie chorobowe”.
 
 ## Podpowiedź 3 — częściowy przykład
 Szkic: pensja 5 400 − 1 800 = 3 600 (dzielnik 30 przy chorobie); społeczne od 3 600 = 493,56; zdrowotna od (3 600 − 493,56 + 1 334,60); podstawa PIT = 3 600 + 1 334,60 + 54 − 493,56 − 250…
 
 ## Pełne rozwiązanie
 ```
-1. Pensja za przepracowaną część: 5 400 − 5 400/30 × 10 = 3 600,00 (§11 rozp. urlopowego — choroba: dzielnik 30).
+1. Pensja za przepracowaną część: 5 400 − 5 400/30 × 10 = 3 600,00 (§11 rozporządzenia MPiPS z 29.05.1996 o ustalaniu wynagrodzenia w okresie niewykonywania pracy — choroba: dzielnik 30).
 2. Składki społeczne TYLKO od 3 600: 351,36 + 54,00 + 88,20 = 493,56 (wynagrodzenie chorobowe wyłączone — §2 ust. 1 pkt 24 rozp. składkowego).
 3. Zdrowotna od 3 600 − 493,56 + 1 334,60 = 4 441,04 → 399,69 (chorobowe podlega zdrowotnej).
 4. PPK: pracodawca 1,5% × 3 600 = 54,00; pracownik 2% × 3 600 = 72,00 (od podstawy składek emerytalnych — chorobowe nie wchodzi).

@@ -72,7 +72,7 @@
 
 ## Rekrutacja: dane kandydata, jawność wynagrodzeń, RODO (tydzień 1)
 - ✘ **Ogłoszenie: „wynagrodzenie: od 4 806 zł”.**
-  - przyczyna: Brak górnej kwoty — nie jest to przedział; obowiązek z art. 22¹ᵇ KP niespełniony.
+  - przyczyna: „Od 4 806” to ani konkretna kwota początkowa, ani przedział (brak górnej granicy) — obowiązek z art. 18³ᶜᵃ KP niespełniony.
   - jak sprawdzić: Czy kandydat na podstawie ogłoszenia wie, ile może dostać maksymalnie?
   - poprawka: Podaj dolną i górną kwotę zasadniczego z siatki płac (np. 4 806–5 200) i nazwij składniki zmienne.
 - ✘ **CV odrzuconych kandydatów leżą w skrzynce kadr rok po rekrutacji.**
@@ -87,14 +87,14 @@
 ## Umowa o pracę: rodzaje, limity 33/3, treść art. 29 (tydzień 1)
 - ✘ **Umowa próbna 3 mies., potem określona na 5 miesięcy.**
   - przyczyna: Próbna mogła trwać maksymalnie 1 miesiąc (planowana określona < 6 mies.) — art. 25 §2² pkt 1.
-  - jak sprawdzić: Czy w umowie próbnej wpisano planowany czas kolejnej umowy (art. 29 §1¹)?
+  - jak sprawdzić: Czy w umowie próbnej wpisano planowany czas kolejnej umowy (art. 29 §1 pkt 6 — obowiązkowo, gdy plan jest krótszy niż 12 miesięcy)?
   - poprawka: Przy krótkich planach: próbna 1 lub 2 miesiące; w umowie próbnej zapisz planowany okres kolejnej umowy.
 - ✘ **W umowie brak miejsca wykonywania pracy / wymiaru etatu.**
   - przyczyna: Niepełna treść art. 29 §1 (rodzaj pracy, miejsce, wynagrodzenie ze składnikami, wymiar, dzień rozpoczęcia).
   - jak sprawdzić: Przejdź listę art. 29 §1 punkt po punkcie na szablonie.
   - poprawka: Uzupełnij; przy zmianie — porozumienie zmieniające, nie „korekta”.
-- ✘ **Wynagrodzenie 2 300 zł dla 1/2 etatu uznane za „poniżej minimalnej”.**
-  - przyczyna: Minimalne dla części etatu jest proporcjonalne: 4 806 × 1/2 = 2 403 zł — więc 2 300 faktycznie jest za nisko.
+- ✘ **Umowa na 1/2 etatu z wynagrodzeniem zasadniczym 2 300 zł.**
+  - przyczyna: Minimalne dla części etatu jest proporcjonalne: 4 806 × 1/2 = 2 403 zł — 2 300 zł jest poniżej minimum.
   - jak sprawdzić: Policz 4 806 × wymiar etatu.
   - poprawka: Zasadnicze co najmniej 2 403 zł (art. 8 ust. 1 ustawy o minimalnym wynagrodzeniu).
 
@@ -130,7 +130,7 @@
 - ✘ **Stawka 35,71 zł użyta w listopadzie (6 000 zł).**
   - przyczyna: Dzielnik 168 „na stałe”; listopad 2026 ma 160 h → 37,50 zł.
   - jak sprawdzić: Warsztat → Czas pracy → wymiar miesiąca, w którym były nadgodziny.
-  - poprawka: Stawka = zasadnicze / wymiar danego miesiąca (§4 rozporządzenia urlopowego w zw. z art. 151¹ §3).
+  - poprawka: Stawka = zasadnicze / wymiar danego miesiąca (§ 4a rozporządzenia MPiPS z 29.05.1996 w sprawie sposobu ustalania wynagrodzenia w okresie niewykonywania pracy w zw. z art. 151¹ §3 KP).
 - ✘ **Czas wolny 1:1,5 udzielony w następnym okresie rozliczeniowym.**
   - przyczyna: Czas wolny z inicjatywy pracodawcy musi być w tym samym okresie rozliczeniowym (art. 151² §2).
   - jak sprawdzić: Porównaj datę nadgodzin i datę wolnego z granicami okresu (produkcja: kwartały).
@@ -199,7 +199,7 @@
 ## Urlopy rodzicielskie 2026: macierzyński, rodzicielski, ojcowski, wychowawczy, ochrona (tydzień 4)
 - ✘ **Rodzicielski matki zaplanowany na 41 tygodni.**
   - przyczyna: Pominięto 9 nieprzenoszalnych tygodni ojca (art. 182¹ᵃ §4).
-  - jak sprawdzić: Czy ojciec jest uprawniony (ubezpieczony)? Jeśli tak — matka max 32 tyg.
+  - jak sprawdzić: Ile tygodni wpisano we wniosku matki? Jeden rodzic może wykorzystać najwyżej 32 — także wtedy, gdy drugi rodzic z urlopu nie skorzysta.
   - poprawka: 32 tyg. dla matki; 9 tyg. ojca przepada, jeśli ich nie wykorzysta.
 - ✘ **Wniosek o rodzicielski złożony 25. dnia po porodzie — wypłacono 81,5%.**
   - przyczyna: Termin 21 dni przekroczony → macierzyński 100%, rodzicielski 70%, bez prawa do 81,5%.
@@ -214,15 +214,15 @@
 - ✘ **Urlop opiekuńczy (art. 173¹) rozliczony jako płatny 100%.**
   - przyczyna: Pomylenie z art. 188 (opieka nad zdrowym dzieckiem — płatna) lub z zasiłkiem opiekuńczym (ZUS, 80%).
   - jak sprawdzić: Kto jest podopiecznym i jaki przepis we wniosku? Art. 173¹ = bezpłatny.
-  - poprawka: Potrąć pełną stawkę za godziny; RSA kod 151; staż zachowany.
+  - poprawka: Potrąć pełną stawkę za godziny; RSA kod 131; staż zachowany.
 - ✘ **Pensja pomniejszona przez 30 za urlop bezpłatny.**
   - przyczyna: Dzielnik 30 dotyczy wyłącznie choroby (§11); inne nieobecności — przez wymiar godzin.
   - jak sprawdzić: Czy nieobecność jest chorobą/zasiłkiem? Jeśli nie — przez wymiar.
   - poprawka: 6 000/160 × godziny nieobecności.
 - ✘ **Odpowiedź na wniosek o elastyczną organizację pracy po 3 tygodniach.**
-  - przyczyna: Art. 188¹ §4 — odpowiedź w 7 dni od wniosku, z uzasadnieniem odmowy.
+  - przyczyna: Art. 188¹ §5 — odpowiedź w 7 dni od wniosku, z uzasadnieniem odmowy.
   - jak sprawdzić: Data wpływu wniosku + 7 dni.
-  - poprawka: Odpowiedz w 7 dni; brak odpowiedzi nie oznacza zgody, ale jest wykroczeniem (art. 281 §1 pkt 5b).
+  - poprawka: Odpowiedz w 7 dni; brak odpowiedzi nie oznacza zgody, ale jest wykroczeniem (art. 281 §1 pkt 5a).
 
 ## Powtórka etapu 1: od ogłoszenia do urlopu — prawo pracy w praktyce (tydzień 4)
 - ✘ **Urlop proporcjonalny 21,67 zaokrąglony do 21.**
@@ -258,7 +258,7 @@
   - jak sprawdzić: Czy dochód narastająco w kartotece jest aktualizowany co miesiąc?
   - poprawka: Prowadź narastająco dochód i podstawę ER; w Warsztacie wpisuj „dochód narastająco po” z poprzedniego miesiąca.
 - ✘ **KUP 300 zastosowane „bo pracownik dojeżdża 40 km”.**
-  - przyczyna: Podwyższone KUP wymagają oświadczenia pracownika (art. 32 ust. 7) — sam fakt dojazdu nie wystarcza.
+  - przyczyna: Podwyższone KUP wymagają oświadczenia pracownika (PIT-2 część F; art. 22 ust. 2 pkt 3 ustawy o PIT) — sam fakt dojazdu nie wystarcza.
   - jak sprawdzić: Czy w aktach B jest oświadczenie o zamieszkaniu poza miejscowością zakładu?
   - poprawka: Bez oświadczenia 250; z oświadczeniem 300 nawet przy kilku dojazdach w miesiącu.
 - ✘ **Po ustaniu zatrudnienia wypłata (ekwiwalent) z kwotą zmniejszającą 300.**
@@ -275,10 +275,10 @@
   - przyczyna: Stopa 1,67% dotyczy tylko płatników zgłaszających do 9 osób.
   - jak sprawdzić: Warsztat → Firma ćwiczeniowa → Regulaminy: stopa firmy 1,20% (decyzja ZUS po IWA).
   - poprawka: Stosuj stopę z zawiadomienia ZUS (od 1 kwietnia) lub z grupy PKD; IWA składaj do 31 stycznia.
-- ✘ **FP naliczone u pracownika 1/2 etatu z 2 500 zł.**
+- ✘ **FP naliczony u pracownika 1/2 etatu z 2 500 zł (albo: pominięty także FGŚP).**
   - przyczyna: Nie sprawdzono progu minimalnego wynagrodzenia w przeliczeniu na miesiąc.
-  - jak sprawdzić: Czy pracownik ma inne tytuły (oświadczenie)? Jeśli nie i 2 500 < 4 806 — bez FP/FGŚP.
-  - poprawka: W Warsztacie pole „Pensja wg umowy” = 2 500 → krok „FP/FGŚP nienależne”.
+  - jak sprawdzić: Czy pracownik ma inne tytuły (oświadczenie)? Jeśli nie i 2 500 < 4 806 — bez FP; FGŚP 0,10% płacisz zawsze (brak progu).
+  - poprawka: W Warsztacie pole „Pensja wg umowy” = 2 500 → krok „FP nienależny… FGŚP płacisz normalnie”.
 
 ## Wynagrodzenie za urlop i ekwiwalent (tydzień 6)
 - ✘ **Ekwiwalent policzony ze współczynnika 20,92 u pracownika na 3/4 etatu.**
@@ -286,7 +286,7 @@
   - jak sprawdzić: Etat < 1? Współczynnik × etat (20,92 × 0,75 = 15,69).
   - poprawka: Podstawa / 15,69 / 8 × godziny.
 - ✘ **Premia roczna wliczona do wynagrodzenia urlopowego.**
-  - przyczyna: §6 pkt 1–2 wyłącza składniki za okresy dłuższe niż miesiąc z urlopowego; do EKWIWALENTU wchodzą (1/12).
+  - przyczyna: §12 rozporządzenia urlopowego: składniki za okresy dłuższe niż miesiąc wypłacasz w zwykłych terminach — do urlopowego nie wchodzą; do EKWIWALENTU wchodzą w średniej z 12 miesięcy (§17).
   - jak sprawdzić: Urlopowe czy ekwiwalent? Składnik miesięczny czy roczny?
   - poprawka: Urlopowe: tylko składniki miesięczne; ekwiwalent: + 1/12 rocznych.
 - ✘ **Choroba pomniejszona przez wymiar godzin (5 400/160 × 48 h).**
@@ -300,7 +300,7 @@
   - jak sprawdzić: Czy po potrąceniu zostało ≥ minimalne netto dla tego pracownika?
   - poprawka: Potrącenie = min(granica, netto − kwota wolna); zwróć pracownikowi nadwyżkę.
 - ✘ **Zajęcie na „karcie podarunkowej” z ZFŚS albo na diecie.**
-  - przyczyna: Świadczenia z ZFŚS i diety nie są wynagrodzeniem za pracę — komornik zajmuje je odrębnie (w całości lub wg KPC), nie w trybie art. 87.
+  - przyczyna: Diety i zwrot kosztów podróży służbowej w ogóle nie podlegają egzekucji (art. 831 §1 pkt 2 KPC). Świadczenia z ZFŚS nie są wynagrodzeniem za pracę — komornik zajmuje je odrębnie (w całości lub wg KPC), nie w trybie art. 87.
   - jak sprawdzić: Czy pismo komornika obejmuje „wierzytelności” poza wynagrodzeniem?
   - poprawka: Rozróżnij: wynagrodzenie (art. 87) vs inne wierzytelności (zajęcie wierzytelności — bez kwot wolnych z KP).
 - ✘ **Nadpłata wynagrodzenia potrącona z następnej pensji „bo program się pomylił”.**
@@ -396,7 +396,7 @@
   - jak sprawdzić: Data zawiadomienia + 14 dni; czy zespół powołany?
   - poprawka: Protokół w 14 dni; do czasu uznania — wypłata 80% z korektą do 100% po protokole.
 - ✘ **Zasiłek macierzyński w RSA z kodem 313.**
-  - przyczyna: Kody: 327 (macierzyński za urlop macierzyński), 319 (rodzicielski), 325 (ojcowski).
+  - przyczyna: Kody: 311 (zasiłek macierzyński za urlop macierzyński), 319 (rodzicielski), 338 (9 nieprzenoszalnych tygodni rodzicielskiego), 327 (ojcowski); 313 to zasiłek chorobowy.
   - jak sprawdzić: Jaki urlop? Sprawdź Warsztat → Przepisy / tabela kodów w Ściądze.
   - poprawka: Popraw kod w RSA; kwota do odliczenia w DRA bez zmian.
 
@@ -418,7 +418,7 @@
 - ✘ **Symulator: „Uczeń/student do 26 lat na zleceniu nie podlega ubezpieczeniom — nie zgłaszasz go wcale”.**
   - przyczyna: Próba ZUA/ZZA dla studenta.
   - jak sprawdzić: Czy osoba ma status studenta i < 26 lat? Jeśli tak — brak tytułu.
-  - poprawka: Nie zgłaszasz; po utracie statusu — ZUA od następnego dnia.
+  - poprawka: Nie zgłaszasz; po obronie lub skreśleniu — ZUA od następnego dnia, po 26. urodzinach — od dnia urodzin.
 - ✘ **Zleceniobiorca ze zbiegiem zgłoszony ZUA z pełnymi składkami.**
   - przyczyna: Brak oświadczenia o innych tytułach lub jego zignorowanie.
   - jak sprawdzić: Oświadczenie: etat ≥ minimalne u innego? Działalność? Inne zlecenia (sumowanie do minimalnej)?
@@ -430,13 +430,13 @@
 
 ## Cudzoziemcy (ustawa 2025), delegowanie, B2B i ryzyko art. 22 KP (tydzień 9)
 - ✘ **Powiadomienie o obywatelu Ukrainy złożone listownie / po 20 dniach.**
-  - przyczyna: Tylko elektronicznie (praca.gov.pl) i tylko w 14 dni — po terminie praca jest nielegalna.
-  - jak sprawdzić: Data podjęcia pracy + 14 dni; potwierdzenie z praca.gov.pl?
+  - przyczyna: Tylko elektronicznie (praca.gov.pl) i tylko w 7 dni od rozpoczęcia pracy — po terminie grozi grzywna 1 000–3 000 zł.
+  - jak sprawdzić: Data rozpoczęcia pracy + 7 dni; potwierdzenie z praca.gov.pl?
   - poprawka: Powiadom natychmiast (UPO w aktach); za okres bez powiadomienia — ryzyko grzywny; konsultacja prawna.
 - ✘ **Wiza wygasła, umowa trwa, pracownik nadal pracuje.**
   - przyczyna: Brak kalendarza terminów legalności pobytu.
   - jak sprawdzić: Czy złożono wniosek o kartę pobytu przed końcem wizy (stempel w paszporcie)?
-  - poprawka: Jeśli nie — natychmiast zaprzestań powierzania pracy (porozumienie stron albo rozwiązanie z powodu utraty uprawnień koniecznych do wykonywania pracy — art. 52 §1 pkt 3 lub wypowiedzenie); kalendarz z alertami 60 i 30 dni przed.
+  - poprawka: Jeśli nie — natychmiast przestań dopuszczać do pracy; umowę zakończ porozumieniem stron albo wypowiedzeniem (art. 52 §1 pkt 3 — zawiniona utrata uprawnień — jest tu sporny, skonsultuj z prawnikiem); kalendarz z alertami 60 i 30 dni przed.
 - ✘ **B2B z „wnioskiem urlopowym” i laptopem firmy.**
   - przyczyna: Atrybuty pracownicze w umowie cywilnej — dowód podporządkowania.
   - jak sprawdzić: Test 8 cech ≥ 4 pracowniczych?
@@ -455,6 +455,10 @@
   - przyczyna: Minimalne netto z PPK = 3 501,73.
   - jak sprawdzić: Warsztat → Potrącenia z PPK 2.
   - poprawka: Kwota wolna z parametrami pracownika.
+- ✘ **Zajęcie komornicze policzone od łącznego netto razem z zasiłkiem.**
+  - przyczyna: Zasiłek nie jest wynagrodzeniem za pracę — ma własne granice (25% / 60% brutto) i kwoty wolne z ustawy emerytalnej (art. 139–141).
+  - jak sprawdzić: Warsztat → Potrącenia: wpisz zasiłek brutto i dni — narzędzie liczy obie części osobno.
+  - poprawka: Licz osobno: wynagrodzenie z chorobowym według art. 87–87¹ KP, zasiłek według ustawy emerytalnej; potem zsumuj.
 
 ## Dokumenty zgłoszeniowe ZUS: ZUA, ZZA, ZWUA, ZCNA, ZIUA, kody tytułu (tydzień 10)
 - ✘ **Symulator: „Niepoprawny PESEL (błąd sumy kontrolnej lub długości)”.**
@@ -494,12 +498,12 @@
   - jak sprawdzić: Czy DRA 02 ma sumy po zmianie?
   - poprawka: DRA zawsze; RCA/RSA — tylko zmienione.
 - ✘ **Zwrot nadpłaconych składek pracownikowi bez PIT i zdrowotnej.**
-  - przyczyna: Zwrot jest przychodem w miesiącu wypłaty (były odliczone od podstaw).
+  - przyczyna: Zwracane składki były wcześniej odliczone od podstawy zdrowotnej i od dochodu.
   - jak sprawdzić: Czy od zwrotu naliczono 9% zdrowotnej i zaliczkę?
-  - poprawka: Lista dodatkowa: przychód = zwrot; zdrowotna + zaliczka (bez składek społecznych).
+  - poprawka: Zdrowotną dopłać w korekcie RCA za miesiąc nadpłaty, zaliczkę pobierz przy zwrocie (zwrot zwiększa dochód); bez składek społecznych od zwrotu.
 
 ## Rozliczenie roczne płatnika: PIT-4R, PIT-8AR, PIT-11, IFT-1R, korekty (tydzień 11)
-- ✘ **Pensja za grudzień 2026 (wypłata 10.01.2027) w PIT-11 za 2026.**
+- ✘ **Pensja za grudzień 2026 (wypłata 8.01.2027) w PIT-11 za 2026.**
   - przyczyna: Ujęcie memoriałowe zamiast kasowego.
   - jak sprawdzić: Data wypłaty > 31.12? Jeśli tak — rok następny.
   - poprawka: PIT-11 za rok wypłaty; to samo w ZUS (komplet 01 2027).
@@ -577,20 +581,24 @@
   - przyczyna: Okres w tygodniach kończy się w sobotę (art. 30 §2¹) — liczony od pierwszej niedzieli po doręczeniu.
   - jak sprawdzić: Warsztat → kalkulator: doręczenie wtorek 17.11 → koniec sobota 5.12, nie 1.12.
   - poprawka: Koniec = sobota po upływie 2 pełnych tygodni; w miesiącach — ostatni dzień miesiąca.
-- ✘ **Art. 52 doręczony 40 dni po tym, jak kierownik dowiedział się o kradzieży.**
-  - przyczyna: Termin 1 miesiąca (art. 52 §2) biegnie od wiedzy osoby uprawnionej — jeśli kierownik ma obowiązek raportować, liczy się od jego wiedzy.
-  - jak sprawdzić: Kiedy osoba uprawniona (lub jej bezpośredni informator) się dowiedziała?
-  - poprawka: Po terminie — tylko wypowiedzenie z przyczyną (art. 52 wadliwy).
+- ✘ **Art. 52 doręczony 40 dni po tym, jak prezes dowiedział się o kradzieży — „bo trwało postępowanie wyjaśniające”.**
+  - przyczyna: Termin 1 miesiąca (art. 52 §2) biegnie od dnia, w którym wiadomość dotarła do osoby uprawnionej do rozwiązania umowy (zarząd, osoba wyznaczona — art. 3¹); wiedza ochrony czy brygadzisty go nie uruchamia, ale wewnętrzne wyjaśnianie sprawy też go nie wydłuża ponad miesiąc od uzyskania wiarygodnej wiadomości.
+  - jak sprawdzić: Kiedy osoba uprawniona dostała notatkę lub zgłoszenie? Policz datą: 4.11 → ostatni dzień 4.12.
+  - poprawka: Po terminie zostaje tylko wypowiedzenie z konkretną przyczyną (albo kara porządkowa w swoich terminach); art. 52 po miesiącu = odszkodowanie albo przywrócenie do pracy.
 
 ## Zwolnienia grupowe i indywidualne, odprawy, przejście zakładu (art. 23¹) (tydzień 13)
 - ✘ **Odprawa oskładkowana i policzona od pensji zasadniczej bez zmiennych.**
   - przyczyna: Odprawa jest zwolniona ze składek; podstawa liczona jak ekwiwalent (ze zmiennymi).
   - jak sprawdzić: Warsztat → Lista płac: odprawa nie wchodzi w „Zasadnicze”; policz podstawę jak ekwiwalent.
   - poprawka: Podstawa = stałe + średnia zmiennych; bez ZUS; PIT tak.
-- ✘ **Wypowiedzenia wręczone w dniu zawiadomienia PUP.**
-  - przyczyna: Art. 6: wypowiedzenie najwcześniej PO zawiadomieniu PUP (a rozwiązanie po 30 dniach).
-  - jak sprawdzić: Data zawiadomienia PUP vs data doręczenia.
-  - poprawka: Wręczaj dzień po zawiadomieniu; rozwiązanie ≥ 30 dni po.
+- ✘ **Wypowiedzenia wręczone rano, zawiadomienie o ustaleniach wysłane do PUP po południu.**
+  - przyczyna: Art. 6 ust. 1: wypowiedzenie dopiero PO zawiadomieniu PUP z art. 4 (a rozwiązanie umowy po upływie 30 dni od niego).
+  - jak sprawdzić: Data i godzina wpływu zawiadomienia do PUP (potwierdzenie) vs data doręczenia wypowiedzeń.
+  - poprawka: Najpierw zawiadomienie z potwierdzeniem wpływu, potem wypowiedzenia — bezpiecznie następnego dnia; rozwiązanie nie wcześniej niż 30 dni po zawiadomieniu.
+- ✘ **Odprawa policzona wg stażu z dnia wręczenia wypowiedzenia (1 rok 11 mies. → 1 pensja).**
+  - przyczyna: Staż do odprawy liczysz na dzień rozwiązania umowy — okres wypowiedzenia też jest zatrudnieniem.
+  - jak sprawdzić: Data zatrudnienia → data rozwiązania: czy po drodze mijają 2 albo 8 lat?
+  - poprawka: Przelicz na dzień rozwiązania: równo 2 lata to już 2 pensje, ponad 8 lat — 3.
 - ✘ **„Kryteria doboru nie były potrzebne, bo likwidujemy cały dział”.**
   - przyczyna: Przy likwidacji WSZYSTKICH stanowisk danego rodzaju kryteria nie są potrzebne; przy części — obowiązkowe i do wskazania w wypowiedzeniu.
   - jak sprawdzić: Czy zostają pracownicy na tych samych stanowiskach?
@@ -599,12 +607,12 @@
 ## Świadectwo pracy i rozliczenie końcowe pracownika (tydzień 13)
 - ✘ **W świadectwie wpisano „przyczyna: kradzież”.**
   - przyczyna: Świadectwo zawiera tryb i podstawę prawną, nie przyczynę.
-  - jak sprawdzić: Czy ust. 4 (sposób ustania) ma tylko: tryb + artykuł?
+  - jak sprawdzić: Czy ust. 4 wzoru (ustanie stosunku pracy) ma tylko: tryb + artykuł?
   - poprawka: Sprostuj z urzędu (nowe świadectwo); wpis przyczyny narusza dobra osobiste.
 - ✘ **Lista końcowa z kwotą zmniejszającą 300 zł.**
-  - przyczyna: Po ustaniu zatrudnienia oświadczenia PIT-2 pomija się (art. 31a ust. 7).
-  - jak sprawdzić: Data wypłaty > data ustania?
-  - poprawka: PIT-2 = 0; KUP 250 zostaje.
+  - przyczyna: Po ustaniu zatrudnienia płatnik pomija PIT-2 i inne oświadczenia złożone wcześniej (art. 31a ust. 7).
+  - jak sprawdzić: Data wypłaty > data ustania? Czy były pracownik złożył PIT-2 ponownie już po ustaniu?
+  - poprawka: PIT-2 = 0; KUP 250 zostaje; nowe oświadczenie złożone po ustaniu — stosujesz.
 - ✘ **Świadectwo „po dostarczeniu obiegówki”.**
   - przyczyna: Wydanie świadectwa nie może być uzależnione od rozliczenia (art. 97 §1³).
   - jak sprawdzić: Czy świadectwo wydano w dniu ustania?

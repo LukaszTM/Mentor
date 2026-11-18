@@ -64,7 +64,7 @@ ACAS_CODE = _z("ACAS, Code of Practice on disciplinary and grievance procedures 
 ACAS_PERF = _z("ACAS, Performance management — reviews and appraisals (tłumaczenie własne w lekcji)", "https://www.acas.org.uk/performance")
 CIPD_INDUCTION = _z("CIPD, Induction factsheet — wdrożenie pracownika (tłumaczenie własne w lekcji)", "https://www.cipd.org/uk/knowledge/factsheets/induction-factsheet/")
 CIPD_RETENTION = _z("CIPD, Employee turnover and retention factsheet — exit interviews", "https://www.cipd.org/uk/knowledge/factsheets/turnover-retention-factsheet/")
-SHRM_EXIT = _z("SHRM, Exit interview questions (9.04.2025; pełna treść dla członków)", "https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions")
+SHRM_EXIT = _z("SHRM, Exit interview questions (9.04.2025) — źródło płatne, nieobowiązkowe: w lekcji tylko wzmianka, treść oparta na ACAS i CIPD", "https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions")
 
 ZRODLA = {
     "zrodla_prawa": [KP_TJ, ISAP_KP, LEGISLACJA, SEJM, EURLEX_883],

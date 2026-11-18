@@ -7,7 +7,7 @@ Tydzień 3 · lekcja 14 z 48 · ≈ 60 min
 
 ## Czego potrzebujesz
 - Lekcja „Urlop wypoczynkowy” — wymiar 20/26.
-- Regulamin wynagradzania AGRO-MLEKO: dodatek stażowy 2% za rok pracy W FIRMIE (staż zakładowy — tego nowelizacja nie zmienia).
+- Regulamin wynagradzania AGRO-MLEKO: dodatek stażowy 2% za rok pracy W FIRMIE (staż zakładowy — nowelizacja zmienia go tylko o zlecenia wykonywane wcześniej dla TEJ firmy, art. 302¹ §7).
 - Pojęcia: staż ogólny (do urlopu, nagród jubileuszowych wg regulaminu), staż zakładowy (okres wypowiedzenia, odprawa), zaświadczenie ZUS o okresach ubezpieczenia.
 
 ## 1 · Wyjaśnienie od podstaw
@@ -36,8 +36,8 @@ Okresy nakładające się liczysz raz — korzystniejszy.
 - Dokumenty zagraniczne — z tłumaczeniem.
 ### Terminy i skutki
 Pracownicy już zatrudnieni mają 24 miesiące (od 1.01 albo 1.05.2026) na dostarczenie dokumentów.
-Uprawnienia nabywa się od dnia przedstawienia dokumentów, nie wcześniej niż od wejścia w życie.
-Przykład: wymiar urlopu rośnie z 20 na 26 dni → w roku bieżącym przysługuje różnica (urlop uzupełniający) od dnia przedstawienia zaświadczenia.
+Uprawnienia przysługują od dnia ich nabycia (np. przekroczenia 10 lat po doliczeniu okresów), ale nie wcześniej niż od 1.01.2026 albo 1.05.2026 — także gdy dokumenty wpłyną później, byle w terminie 24 miesięcy (wyjaśnienia MRPiPS).
+Przykład: po doliczeniu zlecenia staż przekracza 10 lat już 1.05.2026 → wymiar rośnie z 20 na 26 dni i za 2026 r. przysługuje pełna różnica 6 dni (urlop uzupełniający, art. 158). Za lata sprzed wejścia w życie nic nie wyrównujesz.
 Spory rozstrzyga sąd pracy.
 ### Co robi dział kadr
 - Komunikat do pracowników i wzór wniosku.
@@ -56,12 +56,12 @@ Staż przed nowelizacją: 4 lata (2022–2026) → 20 dni. Po: + 3 (zlecenie) + 
 ```
 
 1. „2016–2019 zlecenie (ubezpieczony)”: okres umowy zlecenia, z którego odprowadzano składki emerytalno-rentowe, wlicza się do stażu (art. 302¹ §1 KP od 2026 r.) → +3 lata.
-2. „2019–2021 działalność (składki opłacone)”: pozarolnicza działalność z opłaconymi składkami → +2 lata; działalność z „ulgą na start” (tylko zdrowotne) się nie wlicza — bo brak ubezpieczeń emerytalno-rentowych.
-3. „2020–2021 równolegle dzieło”: umowa o dzieło nie jest tytułem do ubezpieczeń → nie wlicza się nigdy; a nawet gdyby — okresy równoległe liczysz raz (art. 302¹ §3).
+2. „2019–2021 działalność (składki opłacone)”: pozarolnicza działalność z opłaconymi składkami → +2 lata (art. 302¹ §1). Uwaga: pierwsze 6 miesięcy „ulgi na start” (tylko składka zdrowotna) też się wlicza — przepis mówi o tym wprost (§4 pkt 1); dokumentem jest zaświadczenie ZUS o zgłoszeniu do ubezpieczenia zdrowotnego.
+3. „2020–2021 równolegle dzieło”: umowa o dzieło nie jest tytułem do ubezpieczeń → nie wlicza się nigdy; a nawet gdyby — okresy równoległe liczysz raz (art. 302¹ §9).
 4. „Staż przed: 4 lata → 20 dni; po: 9 lat → 20 dni; po 1 roku → 26”: 4 (2022–2026) + 3 + 2 = 9 lat → nadal poniżej 10 → 20 dni; 10 lat minie w 2027 r. → wtedy urlop uzupełniający 6 dni od dnia nabycia (art. 158).
-5. „Zaświadczenie dostarczone 10.06.2026 — przelicz staż; okres wypowiedzenia bez zmian”: nowy staż liczysz od dnia dostarczenia dowodów (nie wstecz); staż ZAKŁADOWY (od 2022 u Ciebie) decyduje o okresie wypowiedzenia i odprawie — nowelizacja go nie dotyczy.
+5. „Zaświadczenie dostarczone 10.06.2026 — przelicz staż; okres wypowiedzenia bez zmian”: doliczone okresy działają od dnia nabycia uprawnienia, nie wcześniej niż od 1.05.2026 (prywatny pracodawca) — nie od dnia wpływu dokumentu i nie wstecz przed 1.05.2026; na dokumenty pracownik ma 24 miesiące. Staż ZAKŁADOWY (od 2022 u Ciebie) decyduje o okresie wypowiedzenia i odprawie — rośnie tylko o zlecenia wykonywane dla TEGO pracodawcy (art. 302¹ §7), a tu ich nie było.
 
-✔ **Oczekiwany wynik:** staż ogólny 9 lat od 10.06.2026 (20 dni urlopu, 26 od 2027 z urlopem uzupełniającym); staż zakładowy 4 lata (okres wypowiedzenia 3 miesiące — bez zmian).
+✔ **Oczekiwany wynik:** staż ogólny 9 lat — z doliczonymi okresami od 1.05.2026 (20 dni urlopu, 26 od 2027 z urlopem uzupełniającym); staż zakładowy 4 lata (okres wypowiedzenia 3 miesiące — bez zmian).
 
 ## 3 · Jak to uruchomić
 1. Otwórz przyklady/tydzien_03/zaswiadczenie_zus_wzor.md — jak wygląda zaświadczenie o okresach ubezpieczenia (fikcyjne, dla osób z FIRMA.md).
@@ -76,16 +76,16 @@ Staż przed nowelizacją: 4 lata (2022–2026) → 20 dni. Po: + 3 (zlecenie) + 
 4. Zapisz nowy staż w programie kadrowym; dokumenty do części B.
 
 ## 4 · Ćwiczenie prowadzone
-Ewa Sobczak (od 1.03.2021 w firmie, wcześniej: 2012–2016 etat w innej firmie, 2016–2018 zlecenie z ubezpieczeniem, 2017–2018 równolegle drugie zlecenie, 2018–2021 działalność na ulgach: 6 mies. ulga na start, potem składki preferencyjne, szkoła średnia). Dostarczyła zaświadczenie ZUS 1.11.2026. Ustal jak w demonstracji staż ogólny przed i po, wymiar urlopu i od kiedy. Plik: cwiczenia/tydzien_03/staz_pracy_2026_1.md. Czas: 20 minut.
+Ewa Sobczak (od 1.03.2021 w firmie, wcześniej: 2012–2016 etat w innej firmie, 2016–2018 zlecenie z ubezpieczeniem, 2017–2018 równolegle drugie zlecenie, 2018–2021 działalność na ulgach: 6 mies. ulga na start, potem składki preferencyjne, szkoła średnia). Dostarczyła zaświadczenia ZUS 1.11.2026. Ustal jak w demonstracji staż ogólny przed i po, wymiar urlopu i od kiedy liczysz nowy staż. Plik: cwiczenia/tydzien_03/staz_pracy_2026_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_03/staz_pracy_2026_1.md` · rozwiązanie: `rozwiazania/tydzien_03/staz_pracy_2026_1.md`
-✔ Poprawny wynik wygląda tak: przed: 4 (szkoła średnia) + 4 (2012–2016) + 5,7 (2021–XI 2026) ≈ 13,7 lat → już 26 dni; po: + 2 (zlecenie 2016–2018; drugie zlecenie równoległe nie liczy się podwójnie) + 2,5 (działalność ze składkami preferencyjnymi 2018,5–2021; ulga na start 6 mies. — nie) ≈ 18 lat → nadal 26 dni (maks.); zmiana wpływa tylko na składniki zależne od stażu ogólnego w regulaminie (u AGRO-MLEKO dodatek stażowy jest zakładowy → bez zmian).
+✔ Poprawny wynik wygląda tak: przed: 4 (szkoła średnia) + 4 (2012–2016) + 5,7 (2021–XI 2026) ≈ 13,7 lat → już 26 dni; po: + 2 (zlecenie 2016–2018; drugie zlecenie równoległe nie liczy się podwójnie) + 3 (działalność 2018–2021: 6 mies. ulgi na start — wlicza się, §4 pkt 1 — i 2,5 roku składek preferencyjnych) ≈ 18,7 roku → nadal 26 dni (maks.); nowy staż obowiązuje od 1.05.2026, nie od dnia wpływu zaświadczenia; zmiana wpływa tylko na składniki zależne od stażu ogólnego w regulaminie (u AGRO-MLEKO dodatek stażowy jest zakładowy → bez zmian).
 
 ## 5 · Ćwiczenie samodzielne
-Marek Zieliński (w firmie od 1.03.2025, szkoła zasadnicza, wcześniej 2015–2019 własna działalność ze składkami, 2019–2025 zlecenia w agencji z przerwami: łącznie 4 lata ubezpieczenia) dostarcza zaświadczenie 20.11.2026. Zdecyduj: (a) czy od 20.11.2026 ma prawo do 26 dni i ile dni urlopu uzupełniającego za 2026 mu przysługuje, (b) czy zmienia się jego okres wypowiedzenia, (c) co z urlopem za 2025, gdy staż 10 lat „wstecznie” przekroczyłby już w 2025 — czy wyrównujesz. Plik: cwiczenia/tydzien_03/staz_pracy_2026_2.md. Czas: 20 minut.
+Marek Zieliński (w firmie od 1.03.2025, szkoła zasadnicza, wcześniej 2015–2019 własna działalność ze składkami, 2019–2025 zlecenia w agencji z przerwami: łącznie 4 lata ubezpieczenia) dostarcza zaświadczenie 20.11.2026. Zdecyduj: (a) od kiedy ma prawo do 26 dni i ile dni urlopu uzupełniającego za 2026 mu przysługuje, (b) czy zmienia się jego okres wypowiedzenia, (c) co z urlopem za 2025, gdy staż 10 lat „wstecznie” przekroczyłby już w 2025 — czy wyrównujesz. Plik: cwiczenia/tydzien_03/staz_pracy_2026_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_03/staz_pracy_2026_2.md` · rozwiązanie: `rozwiazania/tydzien_03/staz_pracy_2026_2.md`
-✔ Poprawny wynik wygląda tak: (a) staż: 3 (szkoła zasadnicza) + 4 (działalność) + 4 (zlecenia) + 1,7 (firma) = 12,7 → 26 dni; uzupełniający za 2026: 6 dni (art. 158) od 20.11.2026, bez proporcji za cały rok, bo prawo nabyte w trakcie roku; (b) nie — okres wypowiedzenia zależy od stażu u tego pracodawcy (1 rok 8 mies. → 1 miesiąc); (c) nie — nowe zasady działają od dostarczenia dowodów (przepisy przejściowe nowelizacji: skutki od dnia udokumentowania, bez wyrównań wstecz).
+✔ Poprawny wynik wygląda tak: (a) staż na 1.05.2026: 3 (szkoła zasadnicza) + 4 (działalność) + 4 (zlecenia) + 1,2 (firma) = 12,2 ≥ 10 → prawo do 26 dni od 1.05.2026 (dzień stosowania ustawy u prywatnego pracodawcy), mimo że zaświadczenie wpływa 20.11.2026 — mieści się w 24 miesiącach; uzupełniający za 2026: pełne 6 dni (art. 158), bez proporcji; (b) nie — okres wypowiedzenia zależy od stażu u tego pracodawcy (1 rok 8 mies. → 1 miesiąc), a zleceń dla AGRO-MLEKO nie było; (c) nie — uprawnienia przysługują od dnia nabycia, ale nie wcześniej niż od 1.05.2026; za 2025 nic nie wyrównujesz.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Do stażu wliczono 3 lata umowy o dzieło „bo pracownik przedstawił umowę”.**

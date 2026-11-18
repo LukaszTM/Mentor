@@ -57,7 +57,7 @@ QUIZY = {
         {"p": "Minimalna stawka godzinowa na zleceniu w 2026 r.:", "o": ["30,50 zł", "31,40 zł", "32,30 zł", "28,10 zł"], "odp": 1, "w": "Obowiązek ewidencji godzin."},
         {"p": "Umowę o dzieło zgłaszasz do ZUS na formularzu:", "o": ["ZUA", "RUD w 7 dni", "ZZA", "Nie zgłaszasz"], "odp": 1, "w": "Dzieło z osobą niebędącą pracownikiem."},
         {"p": "Wpłata podstawowa pracownika do PPK:", "o": ["0,5%", "1,5%", "2%", "4%"], "odp": 2, "w": "Obniżenie do 0,5% przy wynagrodzeniu ≤ 120% minimalnego."},
-        {"p": "Powiadomienie PUP o zatrudnieniu obywatela Ukrainy (status UKR) składasz w:", "o": ["3 dni", "7 dni", "14 dni", "30 dni"], "odp": 1, "w": "Od 5.03.2026 (ustawa z 23.01.2026, Dz.U. 2026 poz. 203) — 7 dni przez praca.gov.pl; do 4.03.2026 było 14 dni."},
+        {"p": "Powiadomienie PUP o zatrudnieniu obywatela Ukrainy (status UKR) składasz w:", "o": ["3 dni", "7 dni", "14 dni", "30 dni"], "odp": 1, "w": "7 dni od rozpoczęcia pracy, przez praca.gov.pl (termin 7 dni — od 1.07.2024; od 5.03.2026 podstawą jest art. 5a ustawy z 20.03.2025, dodany ustawą z 23.01.2026, Dz.U. 2026 poz. 203)."},
     ],
     8: [
         {"p": "Kod tytułu ubezpieczenia pracownika:", "o": ["01 10", "04 11", "05 10", "12 11"], "odp": 0, "w": "04 11 — zleceniobiorca."},
@@ -119,7 +119,7 @@ PROMPTY = [
      "tresc": "Oto moje pismo: @[plik.md]. Sprawdź jako PIP i jako pełnomocnik pracownika: czy ma wszystkie elementy obowiązkowe (podstawa, przyczyna, pouczenie, terminy, podpis), czy jakieś sformułowanie da się podważyć. Nie przepisuj pisma — wypunktuj braki i zadaj pytania."},
     {"nazwa": "Czy to już obowiązuje?", "kiedy": "Gdy czytasz o „zmianach w prawie pracy”",
      "tresc": "Temat: [np. jawność wynagrodzeń]. Rozdziel wyraźnie: (1) co obowiązuje dziś z datą i numerem Dz.U., (2) co jest projektem i na jakim etapie, (3) czego nie wiesz na pewno. Podaj, gdzie mam to zweryfikować (ISAP, legislacja.gov.pl, sejm.gov.pl)."},
-    {"nazwa": "Symulacja kontroli", "kiedy": "Tydzień 11 i przed audytem",
+    {"nazwa": "Symulacja kontroli", "kiedy": "Tydzień 15 i przed audytem",
      "tresc": "Wciel się w inspektora PIP / kontrolera ZUS. Kontrolujesz [obszar: czas pracy / umowy cywilnoprawne / zasiłki] w firmie opisanej w @FIRMA.md. Zadawaj mi po jednym pytaniu o dokumenty i liczby; po każdej odpowiedzi powiedz, co byś sprawdził dalej. Na końcu wypisz ustalenia i środki prawne."},
     {"nazwa": "Wytłumacz pracownikowi", "kiedy": "Gdy musisz przekazać trudną informację",
      "tresc": "Muszę wyjaśnić pracownikowi [sytuacja, np. potrącenie komornicze / niższe netto po przekroczeniu progu]. Pomóż mi ułożyć 5-zdaniowe wyjaśnienie prostym językiem, bez żargonu, z jedną liczbą i jednym przepisem. Zapytaj mnie najpierw o 2 fakty, których brakuje."},
@@ -163,7 +163,7 @@ Data: [RRRR-MM-DD]   Dotyczy: [pracownik / dział — dane fikcyjne]
 ## Decyzja i działania
 [kto, co, do kiedy; dokumenty do akt (część A/B/C/D/E)]
 """},
-    "wypowiedzenie": {"nazwa": "Wypowiedzenie umowy o pracę przez pracodawcę", "kiedy": "Tydzień 10 — zawsze z przyczyną i pouczeniem",
+    "wypowiedzenie": {"nazwa": "Wypowiedzenie umowy o pracę przez pracodawcę", "kiedy": "Tydzień 13 — zawsze z przyczyną i pouczeniem",
                       "tresc": """[Miejscowość], [data]
 [Nazwa pracodawcy, adres]
 
@@ -203,7 +203,7 @@ Potrącone kwoty będziemy przekazywać na rachunek [nr] w terminach wypłat.
 
 [podpis osoby upoważnionej]
 """},
-    "protokol_kontroli_l4": {"nazwa": "Protokół kontroli prawidłowości wykorzystywania zwolnienia", "kiedy": "Tydzień 6 — po reformie 13.04.2026",
+    "protokol_kontroli_l4": {"nazwa": "Protokół kontroli prawidłowości wykorzystywania zwolnienia", "kiedy": "Tydzień 8 — po reformie 13.04.2026",
                              "tresc": """PROTOKÓŁ KONTROLI PRAWIDŁOWOŚCI WYKORZYSTYWANIA ZWOLNIENIA LEKARSKIEGO
 
 Płatnik: [nazwa]   Upoważnienie nr [..] z dnia [..] dla: [imię i nazwisko kontrolującego/-ych]
@@ -217,7 +217,7 @@ Ocena: [ ] nie stwierdzono nieprawidłowości
        [ ] praca zarobkowa w rozumieniu art. 17 ustawy zasiłkowej: [opis]
        [ ] aktywność niezgodna z celem zwolnienia: [opis]
 
-Pouczenie: ubezpieczony może wnieść uwagi do protokołu w terminie 3 dni od jego otrzymania. W razie sporu sprawę rozstrzyga ZUS w drodze decyzji.
+Pouczenie: ubezpieczony może wnieść zastrzeżenia do protokołu w terminie 7 dni od jego otrzymania (art. 68e ust. 4 ustawy zasiłkowej); rozpatruje je ZUS. W razie sporu sprawę rozstrzyga ZUS w drodze decyzji.
 
 Podpisy kontrolujących: [..]      Podpis ubezpieczonego / adnotacja o odmowie: [..]
 Uwagi ubezpieczonego: [..]
@@ -229,26 +229,26 @@ CHECKLISTA = [
     {"po": "Po tygodniu 0 — warsztat", "punkty": [
         "Mam tabelę 25 wskaźników 2026 z linkami do źródeł",
         "Znajduję przepis w Warsztat → Przepisy i wiem, czym jest tekst ujednolicony w ISAP",
-        "Znam 10 narzędzi Warsztatu i wiem, do czego służą PEL i UPL-1 w prawdziwym eZUS/e-Deklaracjach",
+        "Znam 11 narzędzi Warsztatu i wiem, do czego służą PEL i UPL-1 w prawdziwym eZUS/e-Deklaracjach",
         "Mam katalog kadry-praktyka z FIRMA.md i dziennik.md (commit w Git)"]},
-    {"po": "Po etapie 1 — prawo pracy (tyg. 1–3)", "punkty": [
+    {"po": "Po etapie 1 — prawo pracy (tyg. 1–4)", "punkty": [
         "Piszę ogłoszenie zgodne z jawnością wynagrodzeń i klauzulę RODO",
         "Liczę limity 33/3 i okres próbny; znam treść art. 29 i terminy onboardingu",
         "Układam grafik z zachowaniem 11/35 h i liczę nadgodziny 50/100%",
         "Liczę urlop proporcjonalny i staż z zleceniami (2026); rozpisuję urlopy rodzicielskie"]},
-    {"po": "Po etapie 2 — płace (tyg. 4–7)", "punkty": [
+    {"po": "Po etapie 2 — płace (tyg. 5–9)", "punkty": [
         "Liczę brutto→netto ręcznie w 4 wariantach (i potwierdzam w Warsztacie) oraz pełny koszt pracodawcy",
         "Liczę wynagrodzenie urlopowe, ekwiwalent (20,92) i potrącenia komornicze z kwotą wolną",
         "Rozliczam 33 dni, podstawę zasiłku z uzupełnianiem i zasiłek opiekuńczy; znam reformę kontroli L4",
         "Rozliczam zlecenie ze zbiegiem, dzieło (RUD), PPK (2%/1,5%) i zatrudnienie cudzoziemca"]},
-    {"po": "Po etapie 3 — ZUS, US, kalendarz (tyg. 8–9)", "punkty": [
+    {"po": "Po etapie 3 — ZUS, US, kalendarz (tyg. 10–12)", "punkty": [
         "Składam w symulatorze eZUS/Płatnik komplet ZUA/ZWUA/ZCNA i DRA/RCA/RSA z właściwymi kodami i identyfikatorami (bez błędów weryfikacji)",
         "Robię korektę po 30-krotności z rozliczeniem PIT",
         "Generuję PIT-4R/PIT-11 z kartoteki w Warsztacie, liczę odpis ZFŚS i wpłatę PFRON",
         "Mam kalendarz roczny z 60 terminami i alertami"]},
-    {"po": "Po etapie 4 — zakończenie, compliance, projekt (tyg. 10–11)", "punkty": [
+    {"po": "Po etapie 4 — zakończenie, compliance, projekt (tyg. 13–15)", "punkty": [
         "Piszę wypowiedzenie z przyczyną i pouczeniem, rozwiązanie z art. 52 w terminie 1 miesiąca",
-        "Liczę odprawy (limit 72 090) i rozliczam pracownika końcowo; wypełniam świadectwo",
+        "Liczę odprawy (limit 72 090 zł; od 2027 r. 74 250 zł) i rozliczam pracownika końcowo; wypełniam świadectwo wg urzędowego wzoru",
         "Mam procedurę antymobbingową (ustawa z 19.06.2026), sygnalistów i regulamin pracy zdalnej",
         "Przeszedłem audyt 60 pytań i mam teczkę kontrolną; projekt końcowy w repozytorium"]},
 ]
@@ -259,12 +259,12 @@ SCIAGA_WSKAZNIKI = [
     ("Minimalna stawka godzinowa", "31,40 zł (2026) · 32,30 zł (2027)"),
     ("Składki pracownika", "emerytalna 9,76 · rentowa 1,5 · chorobowa 2,45 = 13,71% · zdrowotna 9% (od podstawy − 13,71%)"),
     ("Składki pracodawcy", "emerytalna 9,76 · rentowa 6,5 · wypadkowa 0,67–3,33 (1,67 do 9 ubezp.) · FP 2,45 · FGŚP 0,10 · FEP 1,5"),
-    ("Limit 30-krotności", "282 600 zł (2026)"),
+    ("Limit 30-krotności", "282 600 zł (2026) · 300 990 zł (2027 — M.P. 2026 poz. 1098)"),
     ("PIT", "12% do 120 000 zł dochodu · 32% ponad · kwota zmniejszająca 300 zł/mies. (PIT-2) · KUP 250/300 · ulga dla młodych 85 528"),
-    ("Współczynnik ekwiwalentu", "20,92 (2026, pełny etat)"),
+    ("Współczynnik ekwiwalentu", "20,92 (2026 i 2027, pełny etat: 251 dni roboczych / 12)"),
     ("Odpis ZFŚS", "2 943,23 zł (37,5% × 7 848,60) · 75% do 31.05 · reszta do 30.09"),
     ("Odprawa — limit", "72 090 zł (15 × minimalne) · 74 250 zł (2027)"),
-    ("Grzywny i mandaty PIP (od 8.07.2026)", "grzywna 2 000–60 000 zł (recydywa, dłużnicy alimentacyjni 3 000–90 000) · mandat do 10 000 zł · cudzoziemcy 3 000–50 000 · stawka min. zleceń 1 000–30 000"),
+    ("Grzywny i mandaty PIP (od 8.07.2026)", "grzywna 2 000–60 000 zł (recydywa, dłużnicy alimentacyjni 3 000–90 000) · mandat 2 000–5 000 zł, recydywa do 10 000 · cudzoziemcy 3 000–50 000 · stawka min. zleceń 1 000–30 000"),
     ("Odsetki (XI 2026)", "ustawowe za opóźnienie 9,25% · podatkowe i ZUS za zwłokę 10,50% (od 5.03.2026) · ZUS nie pobiera, gdy ≤ 48,06 zł"),
     ("Mobbing — min. zadośćuczynienie", "28 836 zł (6 × minimalne; albo odszkodowanie) od 5.11.2026"),
     ("Dodatek nocny", "20% × (4 806 / wymiar miesiąca) za godzinę"),
@@ -279,14 +279,14 @@ SCIAGA_TERMINY = [
     ("10. dnia miesiąca", "Najpóźniejszy termin wypłaty wynagrodzenia za miesiąc poprzedni (art. 85)"),
     ("15. / 20.", "ZUS DRA/RCA/RSA + składki: 15. osoby prawne, 20. pozostali, 5. budżet · PPK do 15. · PIT zaliczka i DEK-I-0 do 20. · Wn-D do 25."),
     ("14 dni", "Protokół powypadkowy · wniosek o sprostowanie świadectwa · zastrzeżenia do protokołu ZUS · PIT-11 na wniosek po ustaniu · rozliczenie delegacji"),
-    ("30 dni", "Odwołanie od decyzji PIP o ustaleniu stosunku pracy (od 8.07.2026) · odpowiedź na wystąpienie PIP · uzgodnienie regulaminu antymobbingowego ze związkami"),
+    ("30 dni", "Odpowiedź na wystąpienie PIP (najpóźniej) · uzgodnienie regulaminu antymobbingowego ze związkami · korekty po protokole kontroli ZUS · powrót z pracy zdalnej po wiążącym wniosku (art. 67²²) · zwolnienie grupowe: rozwiązanie umów najwcześniej 30 dni po zawiadomieniu PUP"),
     ("21 dni", "Odwołanie do sądu pracy · wniosek o rodzicielski dla 81,5% · wniosek o wychowawczy / elastyczną organizację"),
-    ("31 stycznia", "PIT-4R, PIT-8AR, PIT-11 do US · ZUS IWA · informacja o nietworzeniu ZFŚS (< 50) · DEK-R do 20.01"),
-    ("koniec lutego", "PIT-11 pracownikom · IFT-1R · IMIR · informacja o autozapisie PPK (2027)"),
+    ("31 stycznia", "PIT-4R, PIT-8AR, PIT-11 do US · ZUS IWA · informacja o nietworzeniu ZFŚS (< 50) · DEK-R do 20.01 — w 2027 r. 31.01 to niedziela → 1 lutego"),
+    ("koniec lutego", "PIT-11 pracownikom · IFT-1R · IMIR — w 2027 r. 28.02 to niedziela → 1 marca · informacja o autozapisie PPK (2027) — przekaż do piątku 26.02"),
     ("31 marca / 20 kwietnia", "ZSWA · decyzja ZUS o stopie wypadkowej (od 1.04)"),
     ("31 maja / 30 września", "75% odpisu ZFŚS · reszta odpisu i urlopy zaległe"),
     ("30 listopada / 31 grudnia", "Stan ubezpieczonych do chorobowego (płatnik zasiłków) · korekta ZFŚS, plan urlopów, limit nadgodzin"),
-    ("1 miesiąc", "Art. 52 od uzyskania wiadomości · odwołanie od decyzji ZUS · wypowiedzenie przy stażu ≥ 6 mies."),
+    ("1 miesiąc", "Art. 52 od uzyskania wiadomości · odwołanie od decyzji ZUS · odwołanie do sądu pracy od decyzji okręgowego inspektora o ustaleniu stosunku pracy (od 8.07.2026) · wypowiedzenie przy stażu ≥ 6 mies."),
     ("5 lat / 10 lat", "Przedawnienie składek ZUS i korekt; dokumentacja podatkowa · akta osobowe (od 2019) i dokumentacja pracownicza"),
 ]
 SCIAGA_ZUS = [
@@ -294,11 +294,11 @@ SCIAGA_ZUS = [
     ("ZWUA / ZCNA / ZIUA", "wyrejestrowanie (data = dzień po ustaniu) / członek rodziny / zmiana danych identyfikacyjnych"),
     ("DRA / RCA / RSA / RPA", "deklaracja zbiorcza / składki imienne / przerwy i zasiłki / przychody za inny rok, składniki obok chorobowego"),
     ("Kody tytułu", "01 10 pracownik · 04 11 zleceniobiorca · 05 10 działalność · 05 70 preferencyjne · 05 40 ulga na start · 12 11 wychowawczy · 30 00 po ustaniu"),
-    ("Kody przerw RSA", "111 bezpłatny · 121 wychowawczy · 151 usprawiedliwiona bez wynagr. · 152 nieusprawiedliwiona · 313 zasiłek chorobowy · 314 wypadkowy · 312 opiekuńczy · 327/319/325 macierzyński/rodzicielski/ojcowski · 321 rehabilitacyjne · 331 wynagrodzenie chorobowe"),
+    ("Kody przerw RSA", "111 bezpłatny · 121 wychowawczy · 131 urlop opiekuńczy · 151 usprawiedliwiona bez wynagr. i zasiłku · 152 nieusprawiedliwiona · 313 zasiłek chorobowy · 314 wypadkowy · 312 opiekuńczy · 311 macierzyński · 319 rodzicielski · 338 rodzicielski (9 tyg. nieprzenoszalnych) · 327 ojcowski · 341 uzupełniający macierzyński · 321 rehabilitacyjne · 331 wynagrodzenie chorobowe"),
     ("Identyfikator", "01 MM RRRR pierwotny · 02–39 korekty"),
     ("Z-3 / Z-3a / Z-15A / Z-15B", "zaświadczenie płatnika (pracownik / zleceniobiorca) · wniosek o opiekuńczy (dziecko / inny członek rodziny)"),
     ("ZNp-7 / US-3 / RD-3 / RZS-P / RSR", "świadczenie rehabilitacyjne · A1 · saldo · zwrot nadpłaty · układ ratalny"),
-    ("IWA / ZSWA / IMIR", "wypadkowa do 31.01 · prace w szczególnych warunkach do 31.03 · roczna informacja dla ubezpieczonego do 28.02"),
+    ("IWA / ZSWA / IMIR", "wypadkowa do 31.01 · prace w szczególnych warunkach do 31.03 · roczna informacja dla ubezpieczonego do 28.02 (w 2027 r.: 1.02 i 1.03 — niedziele)"),
     ("PIT-2 / PIT-4R / PIT-11 / PIT-8AR / IFT-1R", "oświadczenia pracownika · zaliczki roczne · informacja o przychodach · ryczałt · nierezydenci"),
     ("DEK-I-0 / Wn-D / INF-D-P", "PFRON wpłata do 20. · dofinansowanie do 25. · załącznik za pracownika"),
     ("UPL-1 / PEL / e-Doręczenia", "pełnomocnictwo podatkowe · pełnomocnictwo ZUS · skrzynka do pism urzędowych"),
@@ -354,8 +354,8 @@ MOTYWACJA_POWROT = [
 POJECIA = {
     "brutto": "Wynagrodzenie przed odliczeniem składek ZUS pracownika, składki zdrowotnej i zaliczki PIT — kwota z umowy.",
     "netto": "To, co pracownik dostaje na konto: brutto minus składki społeczne (13,71%), zdrowotna (9%), zaliczka PIT i wpłata PPK pracownika.",
-    "koszt pracodawcy": "Brutto plus składki finansowane przez pracodawcę (emerytalna 9,76, rentowa 6,5, wypadkowa, FP 2,45, FGŚP 0,10) i PPK 1,5% — ok. 1,21–1,25 × brutto.",
-    "podstawa wymiaru składek": "Przychód ze stosunku pracy bez wyłączeń z rozporządzenia składkowego (odprawy, ekwiwalenty, ZFŚS…), od którego liczy się składki.",
+    "koszt pracodawcy": "Brutto plus składki finansowane przez pracodawcę (emerytalna 9,76, rentowa 6,5, wypadkowa, FP 2,45, FGŚP 0,10) i PPK 1,5% — w AGRO-MLEKO (wypadkowa 1,20%) 1,2001 × brutto, z PPK 1,2151; przy innych stopach wypadkowej ok. 1,19–1,24.",
+    "podstawa wymiaru składek": "Przychód ze stosunku pracy (w rozumieniu PIT) bez wyłączeń z §2 rozporządzenia składkowego (m.in. odprawy i odszkodowania, diety do limitu, ekwiwalent za odzież i narzędzia, świadczenia z ZFŚS) oraz bez wynagrodzenia chorobowego i zasiłków. Uwaga: ekwiwalent za urlop JEST oskładkowany.",
     "limit 30-krotności": "Roczny limit podstawy składek emerytalnej i rentowej (2026: 282 600 zł); po przekroczeniu nalicza się tylko chorobową, wypadkową, zdrowotną, FP/FGŚP.",
     "płatnik": "Podmiot zobowiązany do obliczenia, pobrania i wpłacenia składek (płatnik składek — ZUS) lub zaliczek (płatnik podatku — US); w kadrach to pracodawca.",
     "płatnik zasiłków": "Pracodawca, który sam wypłaca zasiłki, bo na 30 listopada poprzedniego roku zgłaszał do chorobowego ponad 20 osób; mniejsi — zasiłki wypłaca ZUS.",
@@ -383,9 +383,9 @@ POJECIA = {
     "art. 22 KP": "Definicja stosunku pracy: praca pod kierownictwem, w miejscu i czasie wyznaczonym, osobiście, za wynagrodzeniem — niezależnie od nazwy umowy (B2B, zlecenie).",
     "akta osobowe": "Dokumentacja pracownika w 5 częściach: A (rekrutacja), B (przebieg), C (ustanie), D (kary), E (trzeźwość); 10 lat po ustaniu (od 2019).",
     "świadectwo pracy": "Dokument wydawany w dniu ustania zatrudnienia: okres, stanowiska, tryb rozwiązania, urlop, nieobecności, zajęcia — bez przyczyny i ocen.",
-    "odprawa": "Świadczenie przy rozwiązaniu z przyczyn niedotyczących pracownika (1/2/3-miesięczne, do 72 090 zł; bez ZUS, z PIT) — pracodawca ≥ 20 pracowników; także emerytalna i pośmiertna.",
+    "odprawa": "Świadczenie przy rozwiązaniu z przyczyn niedotyczących pracownika (1/2/3-miesięczne wg stażu zakładowego na dzień rozwiązania umowy; limit 15 × minimalne: 72 090 zł w 2026, 74 250 zł w 2027; bez ZUS, z PIT) — pracodawca ≥ 20 pracowników; także emerytalna i pośmiertna.",
     "mobbing": "Od 5.11.2026: uporczywe (powtarzalne, nawracające lub stałe) nękanie pracownika — poniżanie, izolowanie, zastraszanie…; zadośćuczynienie min. 6× minimalne wynagrodzenie albo odszkodowanie; regres wobec sprawcy.",
-    "dyskryminacja": "Gorsze traktowanie ze względu na cechę (płeć, wiek, niepełnosprawność…) — bezpośrednie lub pośrednie; odszkodowanie nie niższe niż minimalne wynagrodzenie.",
+    "dyskryminacja": "Gorsze traktowanie ze względu na cechę (płeć, wiek, niepełnosprawność…) — bezpośrednie lub pośrednie, także przez założenie i przez skojarzenie; od 5.11.2026 zadośćuczynienie nie niższe niż minimalne wynagrodzenie (przy wielokrotnym naruszeniu — 3 × minimalne) albo odszkodowanie (art. 18³ᵈ); pracownik uprawdopodabnia, pracodawca dowodzi.",
     "jawność wynagrodzeń": "Od 24.12.2025: widełki dla kandydata i zakaz pytania o historię zarobków; dyrektywa 2023/970 (raporty luki płacowej, prawo do informacji) — projekt UC127.",
     "luka płacowa": "Różnica średnich/median wynagrodzeń kobiet i mężczyzn w tej samej kategorii pracy: (M − K)/M × 100%; ≥ 5% nieuzasadnione → wspólna ocena wynagrodzeń.",
     "sygnalista": "Osoba zgłaszająca naruszenie prawa w kontekście pracy, chroniona przed odwetem (ustawa z 14.06.2024); procedura wewnętrzna od 50 osób.",

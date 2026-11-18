@@ -17,7 +17,7 @@ Szkic: „15.11 = niedziela → następny dzień roboczy = poniedziałek 16.11; 
 ZUS za październik 2026: termin 15.11 (niedziela) → 16.11.2026 (poniedziałek). Reguła: termin przypadający w sobotę lub dzień ustawowo wolny upływa następnego dnia roboczego (art. 31 ustawy systemowej w zw. z art. 12 §5 Ordynacji podatkowej).
 ZUS za listopad 2026: 15.12.2026 (wtorek) — bez przesunięcia; PPK: wpłaty do instytucji też do 15.12.
 PIT (zaliczki od wypłat listopadowych wypłaconych 10.11): 20.12 (niedziela) → 21.12.2026 (poniedziałek).
-Uwaga praktyczna: przelew zlecasz dzień wcześniej — liczy się dzień obciążenia rachunku firmy (ZUS) / wpływu (US).
+Uwaga praktyczna: przelew zlecasz dzień wcześniej — liczy się dzień obciążenia rachunku firmy — tak samo w ZUS i w urzędzie skarbowym (art. 60 §1 pkt 2 Ordynacji podatkowej).
 ```
 
 ## Oczekiwany wynik

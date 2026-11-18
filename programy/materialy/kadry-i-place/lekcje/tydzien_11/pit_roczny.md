@@ -22,19 +22,22 @@ Składasz przez e-Deklaracje lub e-Urząd Skarbowy, z podpisem kwalifikowanym os
 | koniec lutego | IFT-1R | dla nierezydentów — i do US |
 | koniec lutego | ZUS IMIR | roczna informacja dla ubezpieczonego |
 Po ustaniu zatrudnienia w trakcie roku PIT-11 składasz w standardowym terminie. Na WNIOSEK podatnika — w 14 dni (art. 39 ust. 2 PIT).
+Termin, który wypada w sobotę lub dzień ustawowo wolny, przesuwa się na najbliższy dzień roboczy (art. 12 §5 Ordynacji podatkowej). Za 2026 r.: 31.01.2027 i 28.02.2027 to niedziele — PIT-4R, PIT-8AR i PIT-11 wysyłasz do urzędu najpóźniej w poniedziałek 1.02.2027, a PIT-11, IFT-1R i IMIR przekazujesz najpóźniej w poniedziałek 1.03.2027.
+Projekt UDER105 (stan na 17.11.2026: po konsultacjach publicznych, nie trafił do Sejmu): PIT-11, PIT-8C i IFT-1R podatnik dostawałby tylko na wniosek, a dane widziałby w e-Urzędzie Skarbowym; wersja z 28.04.2026 miała obowiązywać od 1.01.2027 i objąć już dochody z 2026 r. Dopóki ustawa nie jest ogłoszona — przekazujesz PIT-11 wszystkim; status sprawdź na legislacja.gov.pl przed wysyłką.
 Płatnik nie rozlicza już podatnika (PIT-40 zniesiony). Podatnik korzysta z Twój e-PIT, zasilonego Twoimi PIT-11. Błąd w PIT-11 = błąd w zeznaniu pracownika.
 ### Treść PIT-11
 Sprawdź numer formularza na podatki.gov.pl — od 2024 obowiązuje wersja 29 lub nowsza.
 | Sekcja | Co wpisujesz |
 |---|---|
 | dane | płatnik i podatnik: PESEL/NIP, adres (zagraniczny dla nierezydentów) |
-| przychody wg źródeł | stosunek pracy (osobno przychody z 50% KUP); zlecenia (działalność wykonywana osobiście); zasiłki z ubezpieczenia społecznego wypłacone przez zakład pracy (inne źródła) |
+| przychody wg źródeł (część E) | wiersz 1 — stosunek pracy: poz. 29 przychód, 30 koszty, 31 dochód, 33 zaliczka (przychody z 50% KUP osobno: poz. 34–35); wiersz 2 — to samo dla podatnika do 26 lat, gdy przychód nie korzysta z ulgi (poz. 36–40); wiersz 6 — zlecenia, czyli działalność wykonywana osobiście (poz. 58–61); wiersz 15 — inne źródła, w tym zasiłki z ubezpieczenia społecznego wypłacone przez zakład pracy (poz. 90–94) |
 | czego tu nie ma | należności z art. 30 ust. 1 pkt 5a (ryczałt) — w PIT-8AR |
-| KUP | faktycznie zastosowane: 250/300, 20%, 50% |
-| dochód i zaliczki | zaliczki pobrane |
-| składki społeczne | podlegające odliczeniu; składki od przychodów zwolnionych — osobno |
-| składka zdrowotna | od 2022 BRAK pola — nie wykazujesz |
-| przychody ZWOLNIONE | ulga dla młodych (stosunek pracy i zlecenia osobno, zasiłek macierzyński osobno), na powrót, 4+, dla seniorów — z zaznaczeniem, które zwolnienie i czy stosowane na wniosek |
+| KUP | faktycznie zastosowane: 250/300, 20%, 50%; rodzaj kosztów pracowniczych zaznaczasz w części D (poz. 28) |
+| dochód i zaliczki | zaliczki pobrane; gdy pracownik dostał i pensję, i zasiłek, łączną zaliczkę wykazujesz w wierszu 1 (poz. 33) — w wierszu 15 tylko wtedy, gdy pobrano ją wyłącznie od zasiłków |
+| składki społeczne | poz. 95 — podlegające odliczeniu; składki od przychodów zwolnionych — osobno |
+| składka zdrowotna | część G, poz. 122 — wykazujesz kwotę pobraną przez płatnika; od 2022 r. nie odlicza się jej od podatku, ale jest potrzebna m.in. do dodatkowego zwrotu ulgi na dzieci |
+| przychody ZWOLNIONE (część G) | ulga dla młodych: poz. 109 razem, w tym 110 stosunek pracy, 111 zlecenia, 113 zasiłek macierzyński; ulga na powrót, 4+, dla seniorów: poz. 114–117 i kwadraty 118–120 — zaznaczasz, które zwolnienie stosowałeś |
+| numeracja | pozycje podane dla PIT-11 w wersji 29 (obowiązującej dla wypłat od 2022 r.) — przed wysyłką sprawdź numer wersji na podatki.gov.pl |
 | zwolnienia przedmiotowe (ZFŚS do 1 000 zł, posiłki) | nie wykazujesz |
 | wpłaty pracodawcy na PPK | w przychodzie ze stosunku pracy |
 Zgodność: suma zaliczek z PIT-11 = PIT-4R = wpłaty na mikrorachunek. Suma przychodów = kartoteka płacowa.
@@ -59,12 +62,12 @@ Przechowywanie: 5 lat od końca roku, w którym upłynął termin płatności po
 
 ```
 Pracownik zatrudniony do 31.05.2026, pensja za maj wypłacona 10.06, ekwiwalent 10.06, trzynastka za 2026 wypłacona w lutym 2027 (po ustaniu):
-PIT-11 za 2026 (do 31.01.2027 do US, do 28.02.2027 pracownikowi — lub na wniosek w 14 dni): wypłaty I–VI 2026 (w tym czerwcowe, bo zasada kasowa).
+PIT-11 za 2026 (do US do 1.02.2027, pracownikowi do 1.03.2027 — 31.01 i 28.02 to niedziele — lub na wniosek w 14 dni): wypłaty I–VI 2026 (w tym czerwcowe, bo zasada kasowa; wypłata 10.06 jest już po ustaniu zatrudnienia — bez kwoty zmniejszającej, art. 31a ust. 7).
 PIT-11 za 2027: trzynastka (bez kwoty zmniejszającej — oświadczenia pominięte po ustaniu; KUP 250 — tak; RCA kod 30 00 w ZUS).
 ```
 
-1. „pensja za maj wypłacona 10.06, ekwiwalent 10.06 → PIT-11 za 2026 (wypłaty I–VI)”: zasada kasowa — liczy się data postawienia do dyspozycji; wypłata 10.06 należy do 2026 r. mimo ustania 31.05; PIT-11 obejmuje też składki społeczne i zdrowotne pobrane oraz zaliczki.
-2. „PIT-11 za 2026: do 31.01.2027 do US (elektronicznie, UPL-1), do 28.02.2027 pracownikowi — lub na wniosek w 14 dni”: po ustaniu zatrudnienia pracownik może wnioskować o PIT-11 wcześniej (art. 39 ust. 2) — wtedy 14 dni.
+1. „pensja za maj wypłacona 10.06, ekwiwalent 10.06 → PIT-11 za 2026 (wypłaty I–VI)”: zasada kasowa — liczy się data postawienia do dyspozycji; wypłata 10.06 należy do 2026 r. mimo ustania 31.05; PIT-11 obejmuje też pobrane składki społeczne (poz. 95) i zaliczki (poz. 33), a w części G — informacyjnie — pobraną składkę zdrowotną (poz. 122).
+2. „PIT-11 za 2026: do US do 1.02.2027, pracownikowi do 1.03.2027 — lub na wniosek w 14 dni”: ustawowe terminy to koniec stycznia (urząd — elektronicznie, UPL-1) i koniec lutego (podatnik); 31.01.2027 i 28.02.2027 to niedziele, więc oba przesuwają się na poniedziałek; po ustaniu zatrudnienia pracownik może wnioskować o PIT-11 wcześniej (art. 39 ust. 2) — wtedy 14 dni.
 3. „trzynastka za 2026 wypłacona w lutym 2027 → PIT-11 za 2027 (bez kwoty zmniejszającej — oświadczenia pominięte po ustaniu; KUP 250 — tak)”: wypłata po ustaniu stosunku pracy jest nadal przychodem ze stosunku pracy (nie „inne źródła”): KUP 250 stosujesz, kwoty zmniejszającej nie (art. 31a ust. 7); ZUS: RCA kod 30 00.
 4. PIT-4R za 2026: suma zaliczek pobranych w każdym miesiącu (od wszystkich pracowników, zleceniobiorców, zasiłków) = kwoty wpłacone na mikrorachunek do 20. następnego miesiąca; różnice (np. korekta listy) wyjaśniasz w kolumnie i korygujesz wpłatę z odsetkami.
 5. Uzgodnienie w styczniu: PIT-4R (miesiące) ↔ suma PIT-11 (osoby) ↔ przelewy; rozbieżność najczęściej z: zasiłków (zaliczka bez KUP), list dodatkowych, zwrotów składek, umów do 200 zł (ryczałt → PIT-8AR, nie PIT-11).
@@ -85,19 +88,19 @@ PIT-11 za 2027: trzynastka (bez kwoty zmniejszającej — oświadczenia pominię
 4. Błąd — korekta PIT-11 do US i podatnika; po ustaniu na wniosek w 14 dni.
 
 ## 4 · Ćwiczenie prowadzone
-Anna Kowalczyk pracuje od 1.10.2026 (6 000, PPK): pensja za październik wypłacona 10.11, za listopad 10.12, za grudzień 10.01.2027. Sporządź jak w demonstracji PIT-11 za 2026: przychód (z PPK pracodawcy), KUP, składki społeczne, zaliczki, zdrowotna; wskaż, co trafi do PIT-11 za 2027. Porównaj z Warsztatem. Plik: cwiczenia/tydzien_11/pit_roczny_1.md. Czas: 20 minut.
+Anna Kowalczyk pracuje od 1.10.2026 (6 000; umowa o prowadzenie PPK zawarta dopiero w styczniu 2027): pensja za październik wypłacona 10.11, za listopad 10.12, za grudzień 8.01.2027 (10.01 to niedziela). Sporządź jak w demonstracji PIT-11 za 2026: przychód, KUP, składki społeczne, zaliczki; wskaż, co trafi do PIT-11 za 2027 i co zmieni w nim PPK. Porównaj z Warsztatem. Plik: cwiczenia/tydzien_11/pit_roczny_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_11/pit_roczny_1.md` · rozwiązanie: `rozwiazania/tydzien_11/pit_roczny_1.md`
-✔ Poprawny wynik wygląda tak: w 2026 r. wypłacono 2 pensje (10.11 i 10.12): przychód 2 × 6 090 = 12 180 (6 000 + 90 PPK pracodawcy); KUP 2 × 250 = 500; składki społeczne 2 × 822,60 = 1 645,20; dochód 12 180 − 500 − 1 645,20 = 10 034,80; zaliczki 2 × 302 = 604; zdrowotna 2 × 465,97 = 931,94 (informacyjnie); pensja grudniowa (wypłata 10.01.2027) → PIT-11 za 2027.
+✔ Poprawny wynik wygląda tak: w 2026 r. wypłacono 2 pensje (10.11 i 10.12): przychód 2 × 6 000 = 12 000 (bez PPK — pierwsze wpłaty w 2027); KUP 2 × 250 = 500; dochód w PIT-11 (poz. 31) = przychód − koszty = 11 500; składki społeczne 2 × 822,60 = 1 645,20 wykazujesz osobno (poz. 95) — do progu 120 000 zł w liście płac liczy się dochód po składkach: 9 854,80; zaliczki 2 × 291 = 582; zdrowotna 2 × 465,97 = 931,94 (część G, poz. 122 — informacyjnie); pensja grudniowa (wypłata 8.01.2027) → PIT-11 za 2027, w którym przychód powiększą wpłaty pracodawcy na PPK (90 zł miesięcznie).
 
 ## 5 · Ćwiczenie samodzielne
 Uzgadniasz PIT-4R za 2026 z przelewami: suma zaliczek z 12 list płac = 118 420 zł; suma przelewów na mikrorachunek = 117 950 zł; różnica 470 zł. Masz trzy podejrzenia: (1) zasiłek chorobowy 3 900 zł Zielińskiego z grudnia policzony na liście z KUP; (2) umowa o dzieło 180 zł z majem (ryczałt 12%) ujęta w PIT-4R; (3) zwrot składek dyrektorowi 2 860,04 (lekcja „Korekty”) bez zaliczki. Zdecyduj, które podejrzenia dają jakie kwoty, które tłumaczą różnicę, co korygujesz i gdzie (PIT-4R / PIT-8AR / PIT-11 / dopłata z odsetkami). Plik: cwiczenia/tydzien_11/pit_roczny_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_11/pit_roczny_2.md` · rozwiązanie: `rozwiazania/tydzien_11/pit_roczny_2.md`
-✔ Poprawny wynik wygląda tak: (1) zasiłek bez KUP: zaliczka powinna być wyższa o 12% × 250 = 30 zł — niedopłata 30 (korekta listy, dopłata z odsetkami, PIT-11 Zielińskiego); (2) ryczałt 12% × 180 = 21,60 → 22 zł należy do PIT-8AR, nie do PIT-4R — przenosisz (PIT-4R o 22 mniej, PIT-8AR o 22 więcej; wpłata była — kwoty się nie zmieniają); (3) zwrot składek 2 860,04 → zaliczka 32% × 2 860 = 915,20 → 915 — brak = niedopłata 915; łącznie wyjaśnione: +30 + 915 − 22 = 923 ≠ 470 → różnica 470 nie wynika tylko z tych trzech; sprawdź listy dodatkowe i korekty; wniosek: nie „domykaj” PIT-4R na siłę, znajdź wszystkie pozycje.
+✔ Poprawny wynik wygląda tak: (1) zasiłek bez KUP: zaliczka powinna być wyższa o 12% × 250 = 30 zł — niedopłata 30 (korekta listy, dopłata z odsetkami, PIT-11 Zielińskiego); (2) ryczałt 12% × 180 = 21,60 → 22 zł należy do PIT-8AR, nie do PIT-4R — przenosisz (PIT-4R o 22 mniej, PIT-8AR o 22 więcej; wpłata była — kwoty się nie zmieniają); (3) zwrot składek 2 860,04 → zaliczka 32% × 2 860 = 915,20 → 915 — brak = niedopłata 915; (1) i (3) to niedopłaty 30 + 915 = 945 zł — więcej niż różnica 470, a (2) jest dla przelewów neutralne → różnica 470 nie wynika tylko z tych trzech pozycji; sprawdź listy dodatkowe i korekty; wniosek: nie „domykaj” PIT-4R na siłę, znajdź wszystkie pozycje.
 
 ## 6 · Typowe błędy i naprawa
-- ✘ **Pensja za grudzień 2026 (wypłata 10.01.2027) w PIT-11 za 2026.**
+- ✘ **Pensja za grudzień 2026 (wypłata 8.01.2027) w PIT-11 za 2026.**
   - Prawdopodobna przyczyna: Ujęcie memoriałowe zamiast kasowego.
   - Jak sprawdzić: Data wypłaty > 31.12? Jeśli tak — rok następny.
   - Poprawka: PIT-11 za rok wypłaty; to samo w ZUS (komplet 01 2027).
@@ -123,7 +126,7 @@ Uzgadniasz PIT-4R za 2026 z przelewami: suma zaliczek z 12 list płac = 118 420 
 - **Do kiedy PIT-11 trafia do urzędu, a do kiedy do pracownika?**
   - Do US — 31 stycznia; do podatnika — koniec lutego (na wniosek po ustaniu — 14 dni).
 - **Czy w PIT-11 wykazujesz składkę zdrowotną?**
-  - Nie — od 2022 nie podlega odliczeniu, formularz nie ma tego pola.
+  - Tak — w części G (poz. 122 w wersji 29) kwotę pobraną przez płatnika. Od 2022 r. nie odlicza się jej od podatku, ale liczy się m.in. przy dodatkowym zwrocie ulgi na dzieci.
 - **Gdzie w PIT-11 trafia zasiłek chorobowy wypłacony przez pracodawcę?**
   - W przychodach z innych źródeł (zasiłki pieniężne z ubezpieczenia społecznego), bez KUP.
 

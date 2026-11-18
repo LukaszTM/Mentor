@@ -18,7 +18,7 @@ RAPORT Z AUDYTU KADROWO-PŁACOWEGO — AGRO-MLEKO sp. z o.o. (stan: listopad 202
 Audyt 60 pytań objął zatrudnienie, czas pracy, płace, zasiłki, ZUS/US, ZFŚS/PFRON, ustanie zatrudnienia i procedury compliance. Firma prowadzi dokumentację w większości poprawnie; zidentyfikowano 5 ryzyk o łącznej wartości ok. 95 000 zł (w tym 66 000 zł rocznie możliwych oszczędności) i 3 obszary wymagające decyzji zarządu.
 | # | Ryzyko | Kwota | Sankcja | Przedawnienie |
 |---|---|---|---|---|
-| 1 | Brak dodatków 100% za niedziele (11 osób, 3 mies.) | 4 380 zł + odsetki ok. 340 zł; ten sam błąd mógł dotyczyć 36 mies. (do ok. 50 000) | nakaz płacowy, mandat 1 500 / grzywna 2 000–60 000 (od 8.07.2026) | 3 lata (art. 291) |
+| 1 | Brak dodatków 100% za niedziele (11 osób, 3 mies.) | 4 380 zł + odsetki ok. 340 zł; ten sam błąd mógł dotyczyć 36 mies. (do ok. 50 000) | nakaz płacowy, mandat 2 000–5 000 / grzywna 2 000–60 000 (od 8.07.2026) | 3 lata (art. 291) |
 | 2 | Zlecenie poniżej stawki minimalnej (25 zł/h) | 768 zł/mies. od II 2026 (ok. 7 700) | grzywna 1 000–30 000 (art. 8e ustawy o minimalnym wynagrodzeniu) | 3 lata |
 | 3 | Świadczenia z ZFŚS bez kryterium | składki od 18 600 zł (ok. 6 300 + odsetki) | decyzja ZUS, wykroczenie art. 12a | 5 lat |
 | 4 | Wpłaty PFRON przy 2,0 z 3,51 etatu | 5 524 zł/mies. (66 000/rok) — do uniknięcia | — | — |

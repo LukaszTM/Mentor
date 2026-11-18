@@ -13,7 +13,7 @@ Tydzień 2 · lekcja 11 z 48 · ≈ 70 min
 
 ## 1 · Wyjaśnienie od podstaw
 ### Po co kadrowcowi materiały zagraniczne
-Polskie prawo pracy mówi, CO musisz zrobić (badania, szkolenie BHP, informacja o warunkach zatrudnienia, wysłuchanie przed karą). Rzadko mówi JAK to zrobić dobrze. Brytyjskie ACAS (Advisory, Conciliation and Arbitration Service — państwowa służba doradcza i rozjemcza) i CIPD (Chartered Institute of Personnel and Development — organizacja zawodowa HR) od dziesięcioleci publikują bezpłatne, sprawdzone w sądach pracy procedury: jak wdrożyć pracownika, jak prowadzić rozmowę okresową, jak rozpatrzyć skargę, jak ukarać. Amerykańskie SHRM robi to samo (większość treści tylko dla członków). Z tych materiałów bierzesz METODĘ, a do każdego kroku dopisujesz polski przepis. Tłumaczysz pojęcia, nie przepisy.
+Polskie prawo pracy mówi, CO musisz zrobić (badania, szkolenie BHP, informacja o warunkach zatrudnienia, wysłuchanie przed karą). Rzadko mówi JAK to zrobić dobrze. Brytyjskie ACAS (Advisory, Conciliation and Arbitration Service — państwowa służba doradcza i rozjemcza) i CIPD (Chartered Institute of Personnel and Development — organizacja zawodowa HR) od dziesięcioleci publikują bezpłatne, sprawdzone w sądach pracy procedury: jak wdrożyć pracownika, jak prowadzić rozmowę okresową, jak rozpatrzyć skargę, jak ukarać. Amerykańskie SHRM robi to samo (większość treści tylko dla członków). W tym kursie korzystasz wyłącznie z materiałów dostępnych bez opłat: ACAS to agencja publiczna, a jej treści są udostępniane na otwartej licencji rządowej (Open Government Licence) — wolno je cytować i tłumaczyć z podaniem źródła; factsheety CIPD są ogólnodostępne. Tłumaczenia w tej lekcji są robocze: zanim wdrożysz procedurę w firmie, przeczytaj oryginał (linki w części „Źródła”). Z tych materiałów bierzesz METODĘ, a do każdego kroku dopisujesz polski przepis. Tłumaczysz pojęcia, nie przepisy.
 Zasada bezpieczeństwa: praktyka zagraniczna nigdy nie obniża polskiego standardu (art. 18 KP). Gdy ACAS pozwala na coś, czego KP zakazuje — wygrywa KP.
 ### Słowniczek EN–PL, który spotkasz w materiałach i w firmach z zagranicznym kapitałem
 | Termin | Po polsku | Uwaga prawna (PL) |
@@ -103,7 +103,7 @@ MIARY: rotacja w okresie próbnym (cel < 15%), ankieta 30/90 dni, czas do samodz
 ✔ **Oczekiwany wynik:** plan wdrożenia w tabeli: data | krok | podstawa (przepis KP / dobra praktyka CIPD-ACAS) | dokument do akt | odpowiedzialny — z 6 terminami ustawowymi i 5 elementami dobrej praktyki.
 
 ## 3 · Jak to uruchomić
-1. Prompty → Szablony → „Checklista onboardingu” → skopiuj jako onboarding_30_60_90.md; dodaj kolumnę „podstawa”.
+1. Prompty → Szablony → „Onboarding — checklista z terminami i częścią akt” → skopiuj jako onboarding_30_60_90.md; dodaj kolumnę „podstawa”.
 2. Otwórz cwiczenia/tydzien_02/praktyki_hr_zagranica_1.md — tabela kroków ACAS do przetłumaczenia i zmapowania.
 3. Warsztat → Przepisy → wpisz „108”, „109”, „112” — kary porządkowe; „94³” — procedura.
 4. Oczekiwany wynik: dwie tabele (skarga wg ACAS → procedura PL; dyscyplina wg ACAS → art. 108–113) i plan 30–60–90 z podstawami.
@@ -166,7 +166,7 @@ Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmienił
 - ACAS, Performance management — reviews and appraisals (tłumaczenie własne w lekcji) (dostęp 18.11.2026) — <https://www.acas.org.uk/performance>
 - CIPD, Induction factsheet — wdrożenie pracownika (tłumaczenie własne w lekcji) (dostęp 18.11.2026) — <https://www.cipd.org/uk/knowledge/factsheets/induction-factsheet/>
 - CIPD, Employee turnover and retention factsheet — exit interviews (dostęp 18.11.2026) — <https://www.cipd.org/uk/knowledge/factsheets/turnover-retention-factsheet/>
-- SHRM, Exit interview questions (9.04.2025; pełna treść dla członków) (dostęp 18.11.2026) — <https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions>
+- SHRM, Exit interview questions (9.04.2025) — źródło płatne, nieobowiązkowe: w lekcji tylko wzmianka, treść oparta na ACAS i CIPD (dostęp 18.11.2026) — <https://www.shrm.org/topics-tools/tools/forms/exit-interview-questions>
 - Kodeks pracy — tekst jednolity Dz.U. 2026 poz. 1245 (dostęp 18.11.2026) — <https://eli.gov.pl/eli/DU/2026/1245/ogl>
 - Rozporządzenie (UE) 2016/679 — RODO (dostęp 18.11.2026) — <https://eur-lex.europa.eu/eli/reg/2016/679/oj/pol>
 

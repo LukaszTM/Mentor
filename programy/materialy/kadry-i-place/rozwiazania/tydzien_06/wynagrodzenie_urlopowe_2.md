@@ -14,7 +14,7 @@ Szkic: 5 400/30 = 180 × 6 = 1 080; 5 400/160 = 33,75 × 24 = 810; 5 400 − 1 0
 
 ## Pełne rozwiązanie
 ```
-Choroba (§11 rozp. urlopowego): 5 400 / 30 × 6 = 1 080,00 — dzielnik 30 zawsze, dni KALENDARZOWE niezdolności (e-ZLA obejmuje 2–7.11 łącznie z weekendem 7.11 — sobotą; za każdy dzień L4 przysługuje wynagrodzenie chorobowe, więc za każdy pomniejszasz pensję).
+Choroba (§11 rozporządzenia MPiPS z 29.05.1996 o ustalaniu wynagrodzenia w okresie niewykonywania pracy): 5 400 / 30 × 6 = 1 080,00 — dzielnik 30 zawsze, dni KALENDARZOWE niezdolności (e-ZLA obejmuje 2–7.11 łącznie z weekendem 7.11 — sobotą; za każdy dzień L4 przysługuje wynagrodzenie chorobowe, więc za każdy pomniejszasz pensję).
 Urlop bezpłatny (§12): 5 400 / 160 h (wymiar XI 2026) × 24 h (dwa dni po 12 h z grafiku) = 810,00.
 Pensja za przepracowaną część: 5 400 − 1 080 − 810 = 3 510,00 zł; do tego wynagrodzenie chorobowe 6 × stawka dzienna (lekcja tygodnia 7) i ewentualne zmienne.
 Składki społeczne i PPK od 3 510 (+ zmienne); zdrowotna i PIT także od chorobowego; RSA: 331 (2–7.11) i 111 (urlop bezpłatny).

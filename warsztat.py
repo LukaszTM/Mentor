@@ -20,7 +20,8 @@ from program import P
 NARZEDZIA = [
     ("firma", "🏭", "Firma ćwiczeniowa"), ("place", "💰", "Lista płac"), ("zasilki", "🩺", "Zasiłki i chorobowe"),
     ("urlopy", "🏖", "Urlopy i ekwiwalent"), ("czas", "⏰", "Czas pracy"), ("potracenia", "⚖", "Potrącenia"),
-    ("delegacje", "🚚", "Delegacje i diety"), ("zus", "📨", "eZUS / Płatnik"), ("pit", "🧾", "e-Urząd: PIT"), ("przepisy", "📚", "Przepisy"),
+    ("delegacje", "🚚", "Delegacje i diety"), ("zus", "📨", "eZUS / Płatnik"), ("pit", "🧾", "e-Urząd: PIT"), ("formularze", "📝", "Formularze"),
+    ("przepisy", "📚", "Przepisy"),
 ]
 NAZWY = {k: n for k, _, n in NARZEDZIA}
 MIESIACE = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"]
@@ -39,18 +40,31 @@ def stan(app):
         w["osoby"] = json.loads(json.dumps(P.firma_osoby))
         for o in w["osoby"]:
             o.setdefault("dokumenty", [])
+    else:
+        # dane stałe osób (uwagi, flagi zbiegu tytułów, kod) odświeżamy z programu — zgłoszenia i kartoteka użytkownika zostają
+        wzor = {o.get("id"): o for o in (P.firma_osoby or [])}
+        for o in w["osoby"]:
+            src = wzor.get(o.get("id"))
+            if src and (o.get("imie"), o.get("nazwisko")) == (src.get("imie"), src.get("nazwisko")):
+                for k in ("uwagi", "kod", "stanowisko", "inny_tytul", "student", "mlody"):
+                    if k in src:
+                        o[k] = src[k]
     for k in ("kartoteka", "rsa", "komplety", "wyslane", "pit_wyslane"):
         w.setdefault(k, [])
-    if "ezla" not in w:
+    if "ezla" not in w or (w.get("ezla_wersja") != 2 and not any(z.get("pobrane") for z in w.get("ezla", []))):
         w["ezla"] = _seed_ezla(w["osoby"])
+    w["ezla_wersja"] = 2
     return w
 
 
 def _seed_ezla(osoby):
     """Fikcyjne e-ZLA w skrzynce płatnika (jak w eZUS) — dla osób z firmy ćwiczeniowej."""
     rok = kadry.DOMYSLNE["rok"]
-    wz = [(0, (3, 10), (3, 19), "A", "choroba"), (1, (6, 2), (6, 25), "", "choroba"), (4, (11, 3), (11, 9), "", "opieka nad dzieckiem (PESEL dziecka)"),
-          (6, (9, 14), (10, 2), "", "choroba — pobyt w szpitalu 14–20.09"), (2, (11, 16), (11, 27), "", "choroba"), (7, (5, 1), (5, 14), "", "wypadek w drodze do pracy")]
+    # zwolnienia zgodne z historią firmy z lekcji: Zieliński 12 + 12 + 15 dni (pula 33 kończy się 24.11), Mazur 50+ (14 dni), opieki z listopada
+    wz = [(2, (2, 2), (2, 27), "", "choroba (pracownik 50+: 14 dni wynagrodzenia chorobowego)"), (1, (3, 9), (3, 20), "", "choroba"), (1, (7, 20), (7, 31), "", "choroba"),
+          (7, (10, 5), (10, 16), "", "wypadek w drodze do pracy (100%)"), (4, (11, 3), (11, 9), "", "opieka nad dzieckiem (PESEL dziecka)"),
+          (1, (11, 16), (11, 30), "", "choroba (9 dni z puli 33, potem zasiłek)"), (6, (11, 16), (11, 20), "", "opieka nad dzieckiem (PESEL dziecka)"),
+          (4, (12, 28), (12, 31), "", "choroba")]
     out = []
     for i, (idx, od, do, kod, opis) in enumerate(wz, 1):
         if idx >= len(osoby):
@@ -73,6 +87,35 @@ def _data(s):
         except ValueError:
             pass
     return None
+
+
+def _nast_miesiac(m):
+    """„2026-11” → „2026-12”; „2026-12” → „2027-01”; inne napisy (np. „2026-12-dod”) zwraca bez zmian."""
+    try:
+        r, mm = int(m[:4]), int(m[5:7])
+        if len(m) != 7 or m[4] != "-" or not 1 <= mm <= 12:
+            return m
+    except (ValueError, IndexError):
+        return m
+    return f"{r + (mm == 12)}-{mm % 12 + 1:02d}"
+
+
+def _termin(rok, miesiac, dzien):
+    """Termin ustawowy przesunięty na najbliższy dzień roboczy (sobota, niedziela, święto → następny dzień). Zwraca „1.02.2027”."""
+    try:
+        if miesiac == 2 and dzien >= 28:
+            dzien = 29 if (rok % 4 == 0 and (rok % 100 != 0 or rok % 400 == 0)) else 28
+        d = dt.date(rok, miesiac, dzien)
+    except ValueError:
+        return "—"
+    while d.weekday() >= 5 or d in kadry.swieta(d.year):
+        d += dt.timedelta(days=1)
+    return f"{d.day}.{d.month:02d}.{d.year}"
+
+
+def _wyplata(x):
+    """Miesiąc WYPŁATY wiersza kartoteki (zasada kasowa: decyduje o komplecie ZUS i roku PIT). Stare wiersze bez pola — miesiąc listy."""
+    return (x.get("wyplata") or x.get("miesiac") or "").strip()
 
 
 def _liczba(s, dom=0.0):
@@ -212,6 +255,91 @@ def _karta(parent, tytul=None):
     return k
 
 
+# ============================================================ FORMULARZE (wzory prawdziwych druków ze sprawdzaniem)
+def formularz_md(f, wpisy, wynik=None):
+    """Wypełniony formularz jako Markdown (do katalogu projektu): sekcje, pola, wpisy ucznia i ocena pól."""
+    oceny = {x["id"]: x for x in (wynik or {}).get("wyniki", [])}
+    md = [f"# {f['nazwa']}", "", f"Wzór: {f.get('wzor', '')}", "", "## Scenariusz", "", f.get("scenariusz", ""), ""]
+    for s in f.get("sekcje", []):
+        md += [f"## {s['tytul']}", "", "| Pole | Wpis | Ocena |", "|---|---|---|"]
+        for p in s.get("pola", []):
+            o = oceny.get(p["id"], {}).get("ok")
+            md.append(f"| {p['etykieta']} | {(wpisy or {}).get(p['id'], '') or '—'} | {'✔' if o is True else '✘' if o is False else '—'} |")
+        md.append("")
+    if wynik:
+        md.append(f"Wynik: {wynik['ok']}/{wynik['max']} pól poprawnie.")
+    return "\n".join(md) + "\n"
+
+
+def BUDUJ_formularze(app, parent):
+    M = _M()
+    import odpowiedzi as O
+    import odpowiedzi_ui as OU
+    formy = list(P.formularze or [])
+    k = _karta(parent, "Formularze — prawdziwe druki ze sprawdzaniem")
+    M.etykieta(k, "Pola mają numery z urzędowych wzorów: ZUS ZUA, ZWUA, RCA, RSA, PIT-2 (wersja 9), PIT-11 (wersja 29) i świadectwa pracy. Najpierw policz i zdecyduj sam "
+                  "(kartka, Warsztat, Przepisy), potem wpisz wartości. Mentor oceni każde pole osobno i nie zdradzi wyniku — klucz odsłonisz dopiero po dwóch próbach.",
+               10, wrap=700, kolor=M.K["szary"]).pack(fill="x")
+    if not formy:
+        M.etykieta(k, "Ten program nie ma formularzy.", 10).pack(fill="x", pady=(6, 0))
+        return
+    w = stan(app)
+    ids = [f["id"] for f in formy]
+    wyb = w.get("formularz") if w.get("formularz") in ids else ids[0]
+
+    def etyk(f):
+        z = OU.zapis(app, "formularz:" + f["id"])
+        return ("✔ " if z.get("komplet") else "◐ " if z.get("proby") else "○ ") + f["nazwa"]
+
+    etykiety = [etyk(f) for f in formy]
+    r = tk.Frame(k, bg=M.K["karta"])
+    r.pack(fill="x", pady=(8, 0))
+    tk.Label(r, text="Formularz:", font=M.czc(10, "bold"), bg=M.K["karta"], fg=M.K["tekst"]).pack(side="left")
+    var = tk.StringVar(value=etykiety[ids.index(wyb)])
+    cb = ttk.Combobox(r, textvariable=var, values=etykiety, width=70, state="readonly")
+    cb.pack(side="left", padx=8)
+
+    def zmien(_e=None):
+        w["formularz"] = ids[etykiety.index(var.get())]
+        app.stan.zapisz()
+        app.pokaz("warsztat")
+
+    cb.bind("<<ComboboxSelected>>", zmien)
+    zrobione = sum(1 for f in formy if OU.zapis(app, "formularz:" + f["id"]).get("komplet"))
+    M.etykieta(k, f"Ukończone: {zrobione} z {len(formy)}   (○ nietknięty · ◐ w trakcie · ✔ komplet)", 9, kolor=M.K["szary"]).pack(fill="x", pady=(4, 0))
+
+    f = formy[ids.index(wyb)]
+    kk = _karta(parent, f["nazwa"])
+    M.etykieta(kk, "Wzór: " + f.get("wzor", ""), 9, kolor=M.K["szary"], wrap=700).pack(fill="x")
+    M.etykieta(kk, f.get("scenariusz", ""), 10, wrap=700).pack(fill="x", pady=(4, 0))
+    pola = [dict(p, sekcja=s["tytul"]) for s in f.get("sekcje", []) for p in s.get("pola", [])]
+    klucz = "formularz:" + f["id"]
+    miejsce = {}
+
+    def po(_w=None):
+        z = OU.zapis(app, klucz)
+        m = miejsce.get("po")
+        if m is not None and f.get("po") and (z.get("komplet") or z.get("pokazane")) and not m.winfo_children():
+            M.etykieta(m, "➜ " + f["po"], 10, kolor=M.K["ziel"], wrap=700).pack(fill="x", pady=(6, 0))
+
+    panel = OU.panel(app, kk, pola, klucz, W=700, po_sprawdzeniu=po, po_pokazaniu=po, naglowek=False)
+    miejsce["po"] = tk.Frame(kk, bg=M.K["karta"])
+    miejsce["po"].pack(fill="x")
+    po()
+    r2 = tk.Frame(kk, bg=M.K["karta"])
+    r2.pack(fill="x", pady=(8, 0))
+    st = _status(kk)
+
+    def zapisz():
+        wpisy = {i: v.get() for i, v in panel.zmienne.items()}
+        zapisz_do_projektu(app, "formularze", f["id"] + ".md", formularz_md(f, wpisy, O.sprawdz(pola, wpisy)), st)
+
+    M.przycisk(r2, "Zapisz wypełniony formularz do projektu", zapisz, "drugi").pack(side="left")
+    if f.get("lekcja") and P.lekcja(f["lekcja"]):
+        M.przycisk(r2, "Lekcja: " + P.lekcja(f["lekcja"])["nazwa"][:44], lambda: app.pokaz_lekcje(f["lekcja"]), "drugi").pack(side="left", padx=8)
+    parent.formularz_panel = panel                     # uchwyt dla testów GUI
+
+
 # ============================================================ FIRMA
 def BUDUJ_firma(app, parent):
     M = _M()
@@ -258,13 +386,20 @@ def BUDUJ_place(app, parent):
     osoby = ["— własne dane —"] + [_osoba_etykieta(o) for o in w["osoby"]]
     f.pole("osoba", "Osoba", osoby[0], 30, opcje=osoby, podpowiedz="readonly")
     rok = par.get("rok", kadry.DOMYSLNE["rok"])
-    f.pole("miesiac", "Miesiąc", f"{rok}-{min(dt.date.today().month, 12):02d}", 8)
+    m0 = f"{rok}-{min(dt.date.today().month, 12):02d}"
+    f.pole("miesiac", "Miesiąc (lista za)", m0, 8)
+    f.pole("wyplata", "Wypłata w miesiącu", _nast_miesiac(m0), 8)
+    f.pola["miesiac"].trace_add("write", lambda *_: f.pola["wyplata"].set(_nast_miesiac(f.get("miesiac").strip())))
+    M.etykieta(k, "AGRO-MLEKO płaci do 10. dnia następnego miesiąca, więc lista za listopad (2026-11) jest wypłacana w grudniu (2026-12). "
+               "O komplecie ZUS i o roku w PIT-11 decyduje miesiąc WYPŁATY (zasada kasowa) — pole wypełnia się samo, zmień je przy wypłacie w tym samym miesiącu.",
+               9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(0, 4))
     f.nowy_wiersz()
     f.pole("zasadnicze", "Zasadnicze", "6000", 10)
     f.pole("zmienne", "Nadgodziny/premie/nocne", "0", 10)
     f.pole("natura", "Świadczenia w naturze", "0", 10)
     f.pole("wyn_chorobowe", "Wynagrodzenie chorobowe", "0", 10)
     f.pole("zasilek", "Zasiłek (płatnik wypłaca)", "0", 10)
+    f.pole("bez_zus", "Odprawa / odszkod. (bez ZUS)", "0", 9)
     f.pole("potracenia", "Potrącenia", "0", 10)
     f.pole("kup", "KUP", "250", 6, opcje=["0", "250", "300"])
     f.pole("pit2", "PIT-2 (kwota zmn.)", "300", 6, opcje=["0", "300", "150", "100"])
@@ -274,7 +409,7 @@ def BUDUJ_place(app, parent):
     f.pole("er_narast", "Podst. emer.-rent. narast.", "0", 10)
     f.pole("ulga", "ulga dla młodych (do 26 lat)", False, check=True)
     f.pole("fp_zw", "zwolnienie z FP/FGŚP (55+/60+)", False, check=True)
-    f.pole("umowna", "Pensja wg umowy (pełny mies., do FP)", "0", 10)
+    f.pole("umowna", "Pensja wg umowy (do FP)", "0", 9)
 
     def wypelnij(*_):
         i = osoby.index(f.get("osoba")) - 1
@@ -289,6 +424,9 @@ def BUDUJ_place(app, parent):
         f.pola["ppk_pracod"].set(str(par.get("ppk_pracod", 1.5)) if o.get("ppk") else "0")
         f.pola["ulga"].set(bool(o.get("mlody")))
         f.pola["fp_zw"].set(bool(o.get("fp_zwolnienie")))
+        # składniki zmienne poprzedniej osoby nie mogą „przejść” na następną
+        for kk in ("zmienne", "natura", "wyn_chorobowe", "zasilek", "bez_zus", "potracenia", "dochod", "er_narast"):
+            f.pola[kk].set("0")
 
     f.pola["osoba"].trace_add("write", wypelnij)
     r = tk.Frame(k, bg=M.K["karta"])
@@ -301,11 +439,11 @@ def BUDUJ_place(app, parent):
         wyn = kadry.lista_plac(zasadnicze=f.liczba("zasadnicze"), zmienne=f.liczba("zmienne"), natura=f.liczba("natura"), wyn_chorobowe=f.liczba("wyn_chorobowe"),
                                zasilek=f.liczba("zasilek"), kup=f.liczba("kup"), pit2=f.liczba("pit2"), ppk_prac=f.liczba("ppk_prac"), ppk_pracod=f.liczba("ppk_pracod"),
                                ulga_mlodych=f.bool("ulga"), dochod_narast=f.liczba("dochod"), podstawa_er_narast=f.liczba("er_narast"), fp_zwolnienie=f.bool("fp_zw"),
-                               potracenia=f.liczba("potracenia"), par=par, pensja_umowna=f.liczba("umowna"))
+                               potracenia=f.liczba("potracenia"), par=par, pensja_umowna=f.liczba("umowna"), bez_zus=f.liczba("bez_zus"))
         ostatni.clear()
         ostatni.update(wyn)
         if pokaz:
-            _ustaw(txt, _formatuj_kroki(f"Lista płac — {f.get('osoba')} — {f.get('miesiac')}", wyn["kroki"]) +
+            _ustaw(txt, _formatuj_kroki(f"Lista płac — {f.get('osoba')} — za {f.get('miesiac')} (wypłata {f.get('wyplata')})", wyn["kroki"]) +
                    f"\n\nNETTO: {kadry.fmt(wyn['netto'])} zł   ·   koszt pracodawcy: {kadry.fmt(wyn['koszt'])} zł   ·   dochód narastająco po: {kadry.fmt(wyn['dochod_narast_po'])}")
         return wyn
 
@@ -326,13 +464,15 @@ def BUDUJ_place(app, parent):
         wyn = policz(False)
         i = osoby.index(f.get("osoba")) - 1
         o = w["osoby"][i] if i >= 0 else None
-        wiersz = {"miesiac": f.get("miesiac").strip(), "pesel": o["pesel"] if o else "", "osoba": f"{o['imie']} {o['nazwisko']}" if o else "własne dane",
+        wiersz = {"miesiac": f.get("miesiac").strip(), "wyplata": f.get("wyplata").strip() or f.get("miesiac").strip(),
+                  "pesel": o["pesel"] if o else "", "osoba": f"{o['imie']} {o['nazwisko']}" if o else "własne dane",
                   "kod": o.get("kod", "0110") if o else "0110",
                   **{kk: wyn[kk] for kk in ("przychod_oskl", "podstawa_er", "emer", "rent", "chor", "podstawa_zdr", "zdrowotna", "ppk_prac", "ppk_pracod", "przychod_pracy",
-                                            "zwolnione", "kup", "podstawa_pit", "zaliczka", "zasilek", "wyn_chorobowe", "netto", "emer_p", "rent_p", "wyp", "fp", "fgsp", "koszt")}}
+                                            "zwolnione", "kup", "podstawa_pit", "zaliczka", "zasilek", "wyn_chorobowe", "bez_zus", "netto", "emer_p", "rent_p", "wyp", "fp", "fgsp", "koszt")}}
         w["kartoteka"] = [x for x in w["kartoteka"] if not (x["miesiac"] == wiersz["miesiac"] and x["osoba"] == wiersz["osoba"])] + [wiersz]
         app.stan.zapisz()
-        st.configure(text=f"✔ dodano do listy płac {wiersz['miesiac']}: {wiersz['osoba']} (wierszy w miesiącu: {sum(1 for x in w['kartoteka'] if x['miesiac'] == wiersz['miesiac'])})", fg=M.K["ziel"])
+        st.configure(text=f"✔ dodano do listy płac za {wiersz['miesiac']} (wypłata {wiersz['wyplata']} → komplet ZUS i PIT za ten miesiąc): {wiersz['osoba']} "
+                          f"(wierszy na liście: {sum(1 for x in w['kartoteka'] if x['miesiac'] == wiersz['miesiac'])})", fg=M.K["ziel"])
 
     def lista():
         m = f.get("miesiac").strip()
@@ -350,7 +490,7 @@ def BUDUJ_place(app, parent):
             return
         zapisz_do_projektu(app, "04-place", f"lista_plac_{m}.md", "```\n" + _tabela_listy(m, wiersze) + "\n```\n", st)
         buf = io.StringIO()
-        pola = ["miesiac", "osoba", "przychod_oskl", "emer", "rent", "chor", "zdrowotna", "kup", "ppk_pracod", "podstawa_pit", "zaliczka", "ppk_prac", "wyn_chorobowe", "zasilek", "netto", "emer_p", "rent_p", "wyp", "fp", "fgsp", "koszt"]
+        pola = ["miesiac", "osoba", "przychod_oskl", "emer", "rent", "chor", "zdrowotna", "kup", "ppk_pracod", "podstawa_pit", "zaliczka", "ppk_prac", "wyn_chorobowe", "zasilek", "bez_zus", "netto", "emer_p", "rent_p", "wyp", "fp", "fgsp", "koszt"]
         wr = csv.DictWriter(buf, fieldnames=pola, delimiter=";", extrasaction="ignore")
         wr.writeheader()
         for x in wiersze:
@@ -384,19 +524,25 @@ def BUDUJ_place(app, parent):
 
 
 def _tabela_listy(m, wiersze):
-    naglowek = f"{'Osoba':<22}{'Brutto':>10}{'Społ.':>9}{'Zdrow.':>9}{'Zaliczka':>9}{'PPK pr.':>8}{'Chorob.':>9}{'Zasiłek':>9}{'NETTO':>10}{'Koszt':>11}"
-    linie = [f"Lista płac {m}", naglowek, "-" * len(naglowek)]
-    s = {kk: 0.0 for kk in ("przychod_oskl", "spol", "zdrowotna", "zaliczka", "ppk_prac", "wyn_chorobowe", "zasilek", "netto", "koszt")}
+    jest_bz = any(x.get("bez_zus") for x in wiersze)      # odprawy/odszkodowania — kolumna tylko wtedy, gdy występują
+    bz_n = f"{'Bez ZUS':>10}" if jest_bz else ""
+    naglowek = f"{'Osoba':<22}{'Brutto':>10}{'Społ.':>9}{'Zdrow.':>9}{'Zaliczka':>9}{'PPK pr.':>8}{'Chorob.':>9}{'Zasiłek':>9}{bz_n}{'NETTO':>10}{'Koszt':>11}"
+    wyp = sorted({_wyplata(x) for x in wiersze})
+    linie = [f"Lista płac za {m}" + (f" — wypłata w {', '.join(wyp)}" if wyp and wyp != [m] else ""), naglowek, "-" * len(naglowek)]
+    s = {kk: 0.0 for kk in ("przychod_oskl", "spol", "zdrowotna", "zaliczka", "ppk_prac", "wyn_chorobowe", "zasilek", "bez_zus", "netto", "koszt")}
     for x in wiersze:
         spol = x["emer"] + x["rent"] + x["chor"]
+        bz = f"{kadry.fmt(x.get('bez_zus', 0.0)):>10}" if jest_bz else ""
         linie.append(f"{x['osoba'][:21]:<22}{kadry.fmt(x['przychod_oskl']):>10}{kadry.fmt(spol):>9}{kadry.fmt(x['zdrowotna']):>9}{kadry.fmt(x['zaliczka']):>9}"
-                     f"{kadry.fmt(x['ppk_prac']):>8}{kadry.fmt(x['wyn_chorobowe']):>9}{kadry.fmt(x['zasilek']):>9}{kadry.fmt(x['netto']):>10}{kadry.fmt(x['koszt']):>11}")
+                     f"{kadry.fmt(x['ppk_prac']):>8}{kadry.fmt(x['wyn_chorobowe']):>9}{kadry.fmt(x['zasilek']):>9}{bz}{kadry.fmt(x['netto']):>10}{kadry.fmt(x['koszt']):>11}")
         for kk in s:
-            s[kk] += spol if kk == "spol" else x[kk]
+            s[kk] += spol if kk == "spol" else x.get(kk, 0.0)
     linie.append("-" * len(naglowek))
+    bz = f"{kadry.fmt(s['bez_zus']):>10}" if jest_bz else ""
     linie.append(f"{'RAZEM':<22}{kadry.fmt(s['przychod_oskl']):>10}{kadry.fmt(s['spol']):>9}{kadry.fmt(s['zdrowotna']):>9}{kadry.fmt(s['zaliczka']):>9}"
-                 f"{kadry.fmt(s['ppk_prac']):>8}{kadry.fmt(s['wyn_chorobowe']):>9}{kadry.fmt(s['zasilek']):>9}{kadry.fmt(s['netto']):>10}{kadry.fmt(s['koszt']):>11}")
-    linie.append(f"\nZaliczka PIT do US (do 20. następnego mies.): {kadry.fmt(s['zaliczka'])}   ·   bilans: brutto = netto + obciążenia pracownika")
+                 f"{kadry.fmt(s['ppk_prac']):>8}{kadry.fmt(s['wyn_chorobowe']):>9}{kadry.fmt(s['zasilek']):>9}{bz}{kadry.fmt(s['netto']):>10}{kadry.fmt(s['koszt']):>11}")
+    linie.append(f"\nZaliczka PIT do US (do 20. następnego mies.): {kadry.fmt(s['zaliczka'])}   ·   bilans: brutto"
+                 + (" + chorobowe + zasiłek + bez ZUS" if jest_bz else "") + " = netto + obciążenia pracownika")
     return "\n".join(linie)
 
 
@@ -490,11 +636,17 @@ def BUDUJ_urlopy(app, parent):
     f.pole("staz", "Staż pracy (lata)", "4", 5)
     f.pole("etat", "Etat", "1", 5)
     f.pole("mies", "Miesięcy w roku", "12", 5)
+    f.pole("poprz", "Urlop u poprzedniego pracodawcy (dni)", "0", 5)
     f.pole("pierwsza", "pierwsza praca w życiu", False, check=True)
-    txt = _wynik(k, 6)
-    M.przycisk(k, "Policz wymiar", lambda: _ustaw(txt, _formatuj_kroki("Wymiar urlopu", kadry.wymiar_urlopu(f.liczba("staz"), f.liczba("etat", 1), f.bool("pierwsza"), int(f.liczba("mies", 12)))["kroki"]) +
-                                                 f"\n\nUrlop: {kadry.wymiar_urlopu(f.liczba('staz'), f.liczba('etat', 1), f.bool('pierwsza'), int(f.liczba('mies', 12)))['dni']} dni = "
-                                                 f"{kadry.wymiar_urlopu(f.liczba('staz'), f.liczba('etat', 1), f.bool('pierwsza'), int(f.liczba('mies', 12)))['godziny']} h (w tym 4 dni na żądanie)")).pack(anchor="w", pady=(6, 0))
+    M.etykieta(k, "„Urlop u poprzedniego pracodawcy” to dni za ten rok ze świadectwa pracy (wykorzystane razem z ekwiwalentem) — suma w roku nie może "
+               "przekroczyć 20/26 dni (art. 155³ §2 KP).", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(4, 0))
+    txt = _wynik(k, 7)
+
+    def policz_wymiar():
+        w = kadry.wymiar_urlopu(f.liczba("staz"), f.liczba("etat", 1), f.bool("pierwsza"), int(f.liczba("mies", 12)), u_poprzedniego=f.liczba("poprz"))
+        _ustaw(txt, _formatuj_kroki("Wymiar urlopu", w["kroki"]) + f"\n\nUrlop: {w['dni']:g} dni = {w['godziny']:g} h (w tym urlop na żądanie — 4 dni w roku łącznie u wszystkich pracodawców)")
+
+    M.przycisk(k, "Policz wymiar", policz_wymiar).pack(anchor="w", pady=(6, 0))
     txt.pack_forget(); txt.pack(fill="both", expand=True, pady=(8, 0))
 
     k = _karta(parent, f"Ekwiwalent za urlop (współczynnik {kadry.wspolczynnik_ekwiwalentu(rok)} w {rok})")
@@ -562,12 +714,15 @@ def BUDUJ_czas(app, parent):
 
     k = _karta(parent, "Nadgodziny (art. 151¹ KP)")
     f2 = Formularz(k, 2)
-    f2.pole("zas", "Zasadnicze + stałe dodatki", "6000", 9)
+    f2.pole("zas", "Wynagrodzenie zasadnicze", "6000", 9)
+    f2.pole("dod", "Stałe dodatki (funkcyjny, stażowy)", "0", 9)
     f2.pole("wym", "Wymiar miesiąca (h)", "168", 5)
     f2.pole("h50", "Nadgodziny 50% (dobowe, dzień roboczy)", "0", 5)
     f2.pole("h100", "Nadgodziny 100% (noc, nd/święto, średniotyg.)", "0", 5)
-    txt2 = _wynik(k, 7)
-    M.przycisk(k, "Policz", lambda: _ustaw(txt2, _formatuj_kroki("Nadgodziny", kadry.nadgodziny(f2.liczba("zas"), f2.liczba("wym", 160), f2.liczba("h50"), f2.liczba("h100"))["kroki"]))).pack(anchor="w", pady=(6, 0))
+    M.etykieta(k, "Dwie stawki: NORMALNE wynagrodzenie za każdą nadgodzinę liczysz od zasadniczego ze stałymi dodatkami, a DODATEK 50%/100% — tylko od "
+               "stawki zasadniczej (art. 151¹ §3 KP). Dzielnik to wymiar miesiąca, w którym wystąpiły nadgodziny.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(4, 0))
+    txt2 = _wynik(k, 8)
+    M.przycisk(k, "Policz", lambda: _ustaw(txt2, _formatuj_kroki("Nadgodziny", kadry.nadgodziny(f2.liczba("zas"), f2.liczba("wym", 160), f2.liczba("h50"), f2.liczba("h100"), f2.liczba("dod"))["kroki"]))).pack(anchor="w", pady=(6, 0))
     txt2.pack_forget(); txt2.pack(fill="both", expand=True, pady=(8, 0))
 
     k = _karta(parent, "Okres wypowiedzenia i data rozwiązania")
@@ -585,7 +740,8 @@ def BUDUJ_czas(app, parent):
             _ustaw(txt3, "Podaj datę RRRR-MM-DD.")
             return
         _ustaw(txt3, f"Okres: {opis}\nDoręczono {d} ({['pn', 'wt', 'śr', 'cz', 'pt', 'sb', 'nd'][d.weekday()]}) → umowa rozwiąże się {kadry.koniec_wypowiedzenia(d, okres)}\n"
-                     "Tygodniowy kończy się w sobotę, miesięczny — ostatniego dnia miesiąca, dni robocze — bez sobót, niedziel i świąt.")
+                     "Tygodniowy kończy się w sobotę, miesięczny — ostatniego dnia miesiąca. Okres liczony w dniach roboczych (3 dni): "
+                     "dzień roboczy to każdy dzień oprócz niedziel i świąt — sobota się liczy.")
 
     M.przycisk(k, "Policz", policz3).pack(anchor="w", pady=(6, 0))
     txt3.pack_forget(); txt3.pack(fill="both", expand=True, pady=(8, 0))
@@ -604,13 +760,46 @@ def BUDUJ_potracenia(app, parent):
     f.pole("pit2", "PIT-2", "300", 5, opcje=["0", "300", "150", "100"])
     f.pole("ppk", "PPK pracownika %", "0", 5)
     f.pole("etat", "Etat", "1", 5)
-    txt = _wynik(k, 9)
+    f.nowy_wiersz()
+    f.pole("zas", "Zasiłek brutto w tym netto (0 = brak)", "0", 9)
+    f.pole("zas_dni", "Dni zasiłku", "0", 5)
+    f.pole("zas_zal", "Zaliczka PIT od zasiłku (puste = 12%)", "", 7)
+    M.etykieta(k, "Rodzaje: alimenty (3/5, bez kwoty wolnej) · inne — komornik (1/2, wolne 100% minimalnego netto) · zaliczka (wolne 75%) · kara (wolne 90%) · "
+               "zgoda_pracodawca — dobrowolne na rzecz pracodawcy (wolne 100%, art. 91 §2 pkt 1) · zgoda_inne — dobrowolne na rzecz innych podmiotów (wolne 80%, pkt 2). "
+               "Niepełny etat: kwota wolna = minimalne netto pełnego etatu × etat (art. 87¹ §2).", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(4, 0))
+    M.etykieta(k, "Zasiłek (chorobowy, opiekuńczy, macierzyński) liczysz OSOBNO — art. 139–141 ustawy emerytalnej: granica od zasiłku brutto (alimenty 60%, inne egzekucje 25%), "
+               f"kwota wolna {kadry.fmt(dict(kadry.DOMYSLNE, **par)['zas_wolna_alimenty'])} / {kadry.fmt(dict(kadry.DOMYSLNE, **par)['zas_wolna_inne'])} zł miesięcznie × dni/30 (do 28.02.2027; nowe kwoty co roku 1 marca). "
+               "Wpisz netto z listy płac (z zasiłkiem) — narzędzie wydzieli część z wynagrodzenia. Wynagrodzenie chorobowe to wynagrodzenie, nie zasiłek.",
+               9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(2, 0))
+    txt = _wynik(k, 12)
     st = _status(k)
 
     def policz():
         zaj = f.liczba("zaj") or None
-        w = kadry.potracenia(f.liczba("netto"), f.get("rodzaj"), zaj, f.liczba("kup"), f.liczba("pit2"), f.liczba("ppk"), f.liczba("etat", 1), par)
-        _ustaw(txt, _formatuj_kroki("Potrącenie", w["kroki"]) + f"\n\nPotrącasz: {kadry.fmt(w['max'])} zł · pracownik otrzymuje: {kadry.fmt(w['zostaje'])} zł")
+        rodzaj = f.get("rodzaj")
+        netto, zas, dni = f.liczba("netto"), f.liczba("zas"), f.liczba("zas_dni")
+        if zas <= 0:
+            w = kadry.potracenia(netto, rodzaj, zaj, f.liczba("kup"), f.liczba("pit2"), f.liczba("ppk"), f.liczba("etat", 1), par)
+            _ustaw(txt, _formatuj_kroki("Potrącenie", w["kroki"], szer=72, zawijaj=True) + f"\n\nPotrącasz: {kadry.fmt(w['max'])} zł · pracownik otrzymuje: {kadry.fmt(w['zostaje'])} zł")
+            return
+        if rodzaj not in ("alimenty", "inne"):
+            _ustaw(txt, "Z zasiłku potrąca się tylko należności egzekwowane (rodzaj: alimenty albo inne) — potrąceń dobrowolnych, zaliczek i kar z zasiłku nie ma.\n"
+                        "Wpisz netto samego wynagrodzenia i zasiłek 0, żeby policzyć potrącenie z wynagrodzenia.")
+            return
+        if dni <= 0:
+            _ustaw(txt, "Podaj liczbę dni zasiłku — kwota wolna z zasiłku to kwota miesięczna / 30 × dni.")
+            return
+        zal = _liczba(f.get("zas_zal"), None) if str(f.get("zas_zal")).strip() else None
+        wz = kadry.potracenia_zasilek(zas, dni, rodzaj, zaj, zal, par)
+        netto_wyn = kadry.zl(netto - wz["netto"])
+        zaj_wyn = None if zaj is None else max(0.0, kadry.zl(zaj - wz["max"]))
+        ww = kadry.potracenia(netto_wyn, rodzaj, zaj_wyn, f.liczba("kup"), f.liczba("pit2"), f.liczba("ppk"), f.liczba("etat", 1), par)
+        if zaj is not None and zaj_wyn == 0:
+            ww = dict(ww, max=0.0, zostaje=netto_wyn)
+        razem = kadry.zl(wz["max"] + ww["max"])
+        _ustaw(txt, _formatuj_kroki("A. Z zasiłku (ustawa emerytalna, art. 139–141)", wz["kroki"], szer=72, zawijaj=True) + "\n\n"
+               + _formatuj_kroki("B. Z wynagrodzenia (Kodeks pracy) — netto bez zasiłku", [("Netto z wynagrodzenia = netto łączne − netto zasiłku", netto_wyn)] + ww["kroki"], szer=72, zawijaj=True)
+               + f"\n\nPotrącasz razem: {kadry.fmt(razem)} zł (z zasiłku {kadry.fmt(wz['max'])} + z wynagrodzenia {kadry.fmt(ww['max'])})\nPracownik otrzymuje: {kadry.fmt(kadry.zl(netto - razem))} zł")
 
     r = tk.Frame(k, bg=M.K["karta"])
     r.pack(fill="x", pady=(6, 0))
@@ -801,20 +990,25 @@ def BUDUJ_zus(app, parent):
     f.pole("kod", "Kod tytułu (np. 011000)", "011000", 9)
     f.pole("data", "Data powstania/ustania", f"{rok}-01-01", 11)
     f.pole("chorobowe", "dobrowolne chorobowe (zlecenie)", False, check=True)
-    f.pole("kod_wyrej", "ZWUA: kod przyczyny", "100", 6, opcje=list(kadry.KODY_WYREJ))
-    f.pole("tryb", "ZWUA: tryb rozwiązania", "", 3, opcje=[""] + list(kadry.TRYBY_ROZW))
+    f.pole("kod_wyrej", "ZWUA IV.03: kod przyczyny", "100", 6, opcje=list(kadry.KODY_WYREJ))
+    f.pole("tryb", "ZWUA V.02: kod trybu", "", 5, opcje=[""] + list(kadry.TRYBY_ROZW))
+    f.pole("podstawa", "ZWUA V.03: kod podstawy prawnej", "", 5, opcje=[""] + list(kadry.PODSTAWY_ROZW))
+    f.pole("strona", "ZWUA V.05: strona inicjująca (1 pracownik / 2 pracodawca)", "", 3, opcje=["", "1", "2"])
     f.pole("czlonek_pesel", "ZCNA: PESEL członka", "", 12)
     f.pole("stopien", "ZCNA: pokrewieństwo", "11", 4, opcje=["01", "11", "21", "30", "31", "32"])
     f.pole("czlonek", "ZCNA: imię i nazwisko", "", 20)
     M.etykieta(k, "Kody tytułu: " + " · ".join(f"{kk[:2]} {kk[2:]} {v}" for kk, v in kadry.KODY_TYTULU.items()) + "\n5. znak: 0 brak / 1 emerytura / 2 renta; 6. znak: niepełnosprawność 0–3. "
-               "Kody przyczyny ZWUA: 100 ustanie tytułu, 500 zgon, 600 inna. Tryby rozwiązania: " + " · ".join(f"{kk} {v}" for kk, v in kadry.TRYBY_ROZW.items()), 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(6, 0))
+               "Kody przyczyny ZWUA: " + " · ".join(f"{kk} {v}" for kk, v in kadry.KODY_WYREJ.items()) + ".\nBlok V ZWUA (tylko pracownicy, przy kodzie 100 lub 500) — tryb: "
+               + " · ".join(f"{kk} {v}" for kk, v in kadry.TRYBY_ROZW.items()) + ".\nPodstawa prawna: " + " · ".join(f"{kk} {v}" for kk, v in kadry.PODSTAWY_ROZW.items())
+               + ". Kody wg załącznika nr 24 do rozporządzenia MRPiPS z 9.04.2026 (Dz.U. 2026 poz. 518).", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(6, 0))
     txt = _wynik(k, 9)
     st = _status(k)
     ostatnia = {}
 
     def dok_z_form():
         return {"typ": f.get("typ"), "kod": f.get("kod").strip(), "data": _data(f.get("data")), "chorobowe": f.bool("chorobowe"), "kod_wyrej": f.get("kod_wyrej"),
-                "tryb": f.get("tryb"), "czlonek_pesel": f.get("czlonek_pesel").strip(), "stopien": f.get("stopien"), "czlonek": f.get("czlonek").strip()}
+                "tryb": f.get("tryb").strip(), "podstawa": f.get("podstawa").strip(), "strona": f.get("strona").strip(),
+                "czlonek_pesel": f.get("czlonek_pesel").strip(), "stopien": f.get("stopien"), "czlonek": f.get("czlonek").strip()}
 
     def weryfikuj():
         o = w["osoby"][osoby.index(f.get("osoba"))]
@@ -845,7 +1039,9 @@ def BUDUJ_zus(app, parent):
         dok = ostatnia["dok"]
         upp = f"UPP-{rok}{random.randint(100000, 999999)}"
         wpis = {"typ": dok["typ"], "kod": dok["kod"], "data": str(dok["data"]), "status": "przyjęty", "upp": upp, "wyslano": str(dt.date.today()),
-                "kod_wyrej": dok["kod_wyrej"] if dok["typ"] == "ZWUA" else "", "tryb": dok["tryb"] if dok["typ"] == "ZWUA" else "", "czlonek": dok.get("czlonek", "") if dok["typ"] == "ZCNA" else ""}
+                "kod_wyrej": dok["kod_wyrej"] if dok["typ"] == "ZWUA" else "", "tryb": dok["tryb"] if dok["typ"] == "ZWUA" else "",
+                "podstawa": dok.get("podstawa", "") if dok["typ"] == "ZWUA" else "", "strona": dok.get("strona", "") if dok["typ"] == "ZWUA" else "",
+                "czlonek": dok.get("czlonek", "") if dok["typ"] == "ZCNA" else ""}
         o.setdefault("dokumenty", []).append(wpis)
         w["wyslane"].append({"osoba": f"{o['imie']} {o['nazwisko']}", **wpis})
         app.stan.zapisz()
@@ -864,8 +1060,10 @@ def BUDUJ_zus(app, parent):
     f2 = Formularz(k, 2)
     f2.pole("miesiac", "Miesiąc (RRRR-MM)", f"{rok}-{dt.date.today().month:02d}", 8)
     f2.pole("ident", "Identyfikator", "01", 4, opcje=["01", "02", "03", "04"])
-    M.etykieta(k, "RCA powstaje z wierszy listy płac tego miesiąca (narzędzie „Lista płac” → „Dodaj do listy miesiąca”). RSA dodajesz tutaj lub pobierasz z e-ZLA.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(4, 6))
-    f3 = Formularz(k, 3)
+    M.etykieta(k, "Komplet składasz za miesiąc WYPŁATY (zasada kasowa). RCA powstaje z list płac wypłaconych w tym miesiącu — pole „Wypłata w miesiącu” w narzędziu „Lista płac” "
+               "(lista za 2026-11 wypłacona 10.12 → komplet 2026-12). RSA dodajesz tutaj lub pobierasz z e-ZLA: świadczenia (331, 313, 312, 311…) w komplecie za miesiąc ich wypłaty, "
+               "z faktycznym okresem; przerwy bez świadczeń (111, 121, 131, 151, 152) — w komplecie za miesiąc, w którym wystąpiły.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(4, 6))
+    f3 = Formularz(k, 2)
     f3.pole("osoba", "RSA: osoba", osoby[0], 30, opcje=osoby, podpowiedz="readonly")
     f3.pole("kod", "kod przerwy", "313", 5, opcje=list(kadry.KODY_PRZERW))
     f3.pole("od", "od", f"{rok}-{dt.date.today().month:02d}-01", 11)
@@ -875,13 +1073,16 @@ def BUDUJ_zus(app, parent):
     txt2 = _wynik(k, 16)
     st2 = _status(k)
 
+    def _rsa_komplet(x):
+        return x.get("komplet") or x.get("od", "")[:7]
+
     def rsa_miesiaca():
         m = f2.get("miesiac").strip()
-        return [x for x in w["rsa"] if x.get("od", "").startswith(m)]
+        return [x for x in w["rsa"] if _rsa_komplet(x) == m]
 
     def rca_miesiaca():
         m = f2.get("miesiac").strip()
-        return [x for x in w["kartoteka"] if x["miesiac"] == m and x.get("pesel")]
+        return [x for x in w["kartoteka"] if _wyplata(x) == m and x.get("pesel")]
 
     def dodaj_rsa():
         o = w["osoby"][osoby.index(f3.get("osoba"))]
@@ -889,16 +1090,24 @@ def BUDUJ_zus(app, parent):
         if not od or not do:
             st2.configure(text="Popraw daty RSA.", fg=M.K["czerw"])
             return
-        w["rsa"].append({"pesel": o["pesel"], "osoba": f"{o['imie']} {o['nazwisko']}", "kod_przerwy": f3.get("kod"), "od": str(od), "do": str(do), "kwota": f3.liczba("kwota")})
+        w["rsa"].append({"pesel": o["pesel"], "osoba": f"{o['imie']} {o['nazwisko']}", "kod_przerwy": f3.get("kod"), "od": str(od), "do": str(do), "kwota": f3.liczba("kwota"),
+                         "komplet": f2.get("miesiac").strip()})
         app.stan.zapisz()
         pokaz_komplet()
 
     def rca_wiersze():
-        out = []
+        """Jeden RCA na osobę: kilka list wypłaconych w tym samym miesiącu (np. lista dodatkowa) sumuje się w jednym raporcie."""
+        out = {}
         for x in rca_miesiaca():
-            out.append({"pesel": x["pesel"], "osoba": x["osoba"], "kod": x.get("kod", "0110"), "podstawa_er": x["podstawa_er"], "podstawa_ch": x["przychod_oskl"], "podstawa_zdr": x["podstawa_zdr"],
-                        "emer": x["emer"], "rent": x["rent"], "chor": x["chor"], "wyp": x["wyp"], "zdr": x["zdrowotna"], "emer_p": x["emer_p"], "rent_p": x["rent_p"], "fp": x["fp"], "fgsp": x["fgsp"]})
-        return out
+            r_ = {"pesel": x["pesel"], "osoba": x["osoba"], "kod": x.get("kod", "0110"), "podstawa_er": x["podstawa_er"], "podstawa_ch": x["przychod_oskl"], "podstawa_zdr": x["podstawa_zdr"],
+                  "emer": x["emer"], "rent": x["rent"], "chor": x["chor"], "wyp": x["wyp"], "zdr": x["zdrowotna"], "emer_p": x["emer_p"], "rent_p": x["rent_p"], "fp": x["fp"], "fgsp": x["fgsp"]}
+            if x["pesel"] in out:
+                for kk, v in r_.items():
+                    if isinstance(v, (int, float)):
+                        out[x["pesel"]][kk] = kadry.zl(out[x["pesel"]][kk] + v)
+            else:
+                out[x["pesel"]] = r_
+        return list(out.values())
 
     def rsa_wiersze():
         return [dict(x, od=_data(x["od"]), do=_data(x["do"])) for x in rsa_miesiaca()]
@@ -907,12 +1116,14 @@ def BUDUJ_zus(app, parent):
         m = f2.get("miesiac").strip()
         rca, rsa = rca_wiersze(), rsa_wiersze()
         s = kadry.dra_sumy(rca, rsa, par)
-        linie = [f"KOMPLET {f2.get('ident')} {m[5:7]} {m[:4]} — płatnik AGRO-MLEKO sp. z o.o. (termin: 15. dnia następnego miesiąca)", "",
+        listy = sorted({x["miesiac"] for x in rca_miesiaca()})
+        linie = [f"KOMPLET {f2.get('ident')} {m[5:7]} {m[:4]} — płatnik AGRO-MLEKO sp. z o.o. (termin: 15. dnia następnego miesiąca)",
+                 "Listy płac wypłacone w tym miesiącu: " + (", ".join(f"za {x}" for x in listy) if listy else "brak"), "",
                  "ZUS RCA (imienne raporty składkowe):", f"{'Osoba':<22}{'Kod':<7}{'Podst. ER':>10}{'Podst. CH':>10}{'Emer.':>9}{'Rent.':>8}{'Chor.':>8}{'Wyp.':>8}{'Zdrow.':>9}"]
         for x in rca:
             linie.append(f"{x['osoba'][:21]:<22}{x['kod']:<7}{kadry.fmt(x['podstawa_er']):>10}{kadry.fmt(x['podstawa_ch']):>10}{kadry.fmt(x['emer'] + x['emer_p']):>9}{kadry.fmt(x['rent'] + x['rent_p']):>8}{kadry.fmt(x['chor']):>8}{kadry.fmt(x['wyp']):>8}{kadry.fmt(x['zdr']):>9}")
         if not rca:
-            linie.append("  (brak — dodaj osoby w „Lista płac” → „Dodaj do listy miesiąca”)")
+            linie.append(f"  (brak — w „Lista płac” nie ma wierszy z polem „Wypłata w miesiącu” = {m}; lista za {m} wypłacana 10. następnego miesiąca trafia do kolejnego kompletu)")
         linie += ["", "ZUS RSA (przerwy i świadczenia):"]
         for x in rsa:
             linie.append(f"  {x['osoba']:<22}{x['kod_przerwy']} {kadry.KODY_PRZERW.get(x['kod_przerwy'], '?')[:40]:<42}{x['od']} – {x['do']}  {kadry.fmt(x.get('kwota', 0))}")
@@ -963,11 +1174,13 @@ def BUDUJ_zus(app, parent):
     r = tk.Frame(k, bg=M.K["karta"])
     r.pack(fill="x", pady=(6, 0))
     M.przycisk(r, "Dodaj RSA", dodaj_rsa, "drugi").pack(side="left")
-    M.przycisk(r, "Usuń RSA miesiąca", lambda: (w.update(rsa=[x for x in w["rsa"] if not x.get("od", "").startswith(f2.get("miesiac").strip())]), app.stan.zapisz(), pokaz_komplet()), "drugi").pack(side="left", padx=8)
-    M.przycisk(r, "Pokaż komplet", pokaz_komplet, "drugi").pack(side="left")
-    M.przycisk(r, "Weryfikuj", weryfikuj2).pack(side="left", padx=8)
-    M.przycisk(r, "Wyślij (symulacja)", wyslij2, "drugi").pack(side="left")
-    M.przycisk(r, "Zapisz do projektu", zapisz2, "drugi").pack(side="left", padx=8)
+    M.przycisk(r, "Pokaż komplet", pokaz_komplet, "drugi").pack(side="left", padx=8)
+    M.przycisk(r, "Weryfikuj", weryfikuj2).pack(side="left")
+    M.przycisk(r, "Wyślij (symulacja)", wyslij2, "drugi").pack(side="left", padx=8)
+    rb = tk.Frame(k, bg=M.K["karta"])
+    rb.pack(fill="x", pady=(6, 0))
+    M.przycisk(rb, "Zapisz do projektu", zapisz2, "drugi").pack(side="left")
+    M.przycisk(rb, "Usuń RSA kompletu", lambda: (w.update(rsa=[x for x in w["rsa"] if _rsa_komplet(x) != f2.get("miesiac").strip()]), app.stan.zapisz(), pokaz_komplet()), "drugi").pack(side="left", padx=8)
     txt2.pack_forget(); txt2.pack(fill="both", expand=True, pady=(8, 0)); st2.pack_forget(); st2.pack(fill="x")
 
     # --- e-ZLA
@@ -976,28 +1189,33 @@ def BUDUJ_zus(app, parent):
     st3 = _status(k)
 
     def pokaz_ezla():
-        linie = [f"{'Nr':<12}{'Osoba':<24}{'Od':<12}{'Do':<12}{'Dni':>4}  {'Kod':<4}{'Opis':<40}{'Pobrane'}"]
+        linie = [f"{'Nr':<12}{'Osoba':<19}{'Od':<11}{'Do':<11}{'Dni':>4} {'Kod':<4}{'RSA':<4}{'Opis'}"]
         for z in w["ezla"]:
             dni = (_data(z["do"]) - _data(z["od"])).days + 1
-            linie.append(f"{z['nr']:<12}{z['osoba']:<24}{z['od']:<12}{z['do']:<12}{dni:>4}  {z['kod'] or '—':<4}{z['opis']:<40}{'✔' if z['pobrane'] else ''}")
-        linie.append("\nKody: A — ta sama choroba po przerwie < 60 dni, B — ciąża, C — alkohol (5 dni bez zasiłku), D — gruźlica, E — po ustaniu tytułu.")
+            linie.append(f"{z['nr']:<12}{z['osoba'][:18]:<19}{z['od']:<11}{z['do']:<11}{dni:>4} {z['kod'] or '—':<4}{'✔' if z['pobrane'] else '':<4}{z['opis']}")
+        linie.append("\nKolumna RSA: ✔ = pobrane do raportu. Kody: A — ta sama choroba po przerwie < 60 dni, B — ciąża,\nC — alkohol (5 dni bez zasiłku), D — gruźlica, E — po ustaniu tytułu.")
         _ustaw(txt3, "\n".join(linie))
 
     pokaz_ezla()
-    f4 = Formularz(k, 3)
+    f4 = Formularz(k, 2)
     f4.pole("nr", "e-ZLA", w["ezla"][0]["nr"] if w["ezla"] else "", 12, opcje=[z["nr"] for z in w["ezla"]], podpowiedz="readonly")
     f4.pole("kod_rsa", "Kod przerwy do RSA", "331", 5, opcje=["331", "313", "312", "314"])
     f4.pole("kwota", "Kwota świadczenia", "0", 9)
+    f4.pole("komplet", "Komplet (miesiąc wypłaty)", _nast_miesiac(w["ezla"][0]["od"][:7]) if w["ezla"] else "", 8)
+    f4.pola["nr"].trace_add("write", lambda *_: f4.pola["komplet"].set(_nast_miesiac(next((z["od"][:7] for z in w["ezla"] if z["nr"] == f4.get("nr")), ""))))
+    M.etykieta(k, "Świadczenie za zwolnienie wykazujesz w komplecie za miesiąc, w którym je WYPŁACASZ — przy wypłacie 10. następnego miesiąca to miesiąc po zwolnieniu (pole wypełnia się samo).",
+               9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(2, 0))
 
     def pobierz():
         z = next((x for x in w["ezla"] if x["nr"] == f4.get("nr")), None)
         if not z:
             return
         z["pobrane"] = True
-        w["rsa"].append({"pesel": z["pesel"], "osoba": z["osoba"], "kod_przerwy": f4.get("kod_rsa"), "od": z["od"], "do": z["do"], "kwota": f4.liczba("kwota")})
+        kompl = f4.get("komplet").strip() or _nast_miesiac(z["od"][:7])
+        w["rsa"].append({"pesel": z["pesel"], "osoba": z["osoba"], "kod_przerwy": f4.get("kod_rsa"), "od": z["od"], "do": z["do"], "kwota": f4.liczba("kwota"), "komplet": kompl})
         app.stan.zapisz()
         pokaz_ezla()
-        st3.configure(text=f"✔ {z['nr']} dodano do RSA jako {f4.get('kod_rsa')} ({z['od']} – {z['do']})", fg=M.K["ziel"])
+        st3.configure(text=f"✔ {z['nr']} dodano do RSA jako {f4.get('kod_rsa')} ({z['od']} – {z['do']}) — komplet {kompl}", fg=M.K["ziel"])
 
     r = tk.Frame(k, bg=M.K["karta"])
     r.pack(fill="x", pady=(6, 0))
@@ -1023,7 +1241,8 @@ def BUDUJ_pit(app, parent):
     par = P.parametry or {}
     rok = par.get("rok", kadry.DOMYSLNE["rok"])
     k = _karta(parent, "e-Urząd Skarbowy (symulacja): PIT-11 i PIT-4R")
-    M.etykieta(k, "Kartoteka to wiersze dodane w „Lista płac” → „Dodaj do listy miesiąca”. PIT-11 sumuje wypłaty pracownika w roku (zasada kasowa), PIT-4R — zaliczki miesięczne płatnika.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(0, 6))
+    M.etykieta(k, "Kartoteka to wiersze dodane w „Lista płac” → „Dodaj do listy miesiąca”. PIT-11 sumuje WYPŁATY pracownika w roku (zasada kasowa — liczy się pole „Wypłata w miesiącu”: "
+               "lista za grudzień wypłacona w styczniu należy do następnego roku), PIT-4R — zaliczki płatnika według miesięcy wypłat.", 9, kolor=M.K["szary"], wrap=820).pack(fill="x", pady=(0, 6))
     f = Formularz(k, 2)
     f.pole("rok", "Rok podatkowy", str(rok), 6)
     osoby = sorted({x["osoba"] for x in w["kartoteka"]}) or ["— brak wierszy w kartotece —"]
@@ -1033,7 +1252,7 @@ def BUDUJ_pit(app, parent):
 
     def wiersze_roku():
         r = f.get("rok").strip()
-        return [x for x in w["kartoteka"] if x["miesiac"].startswith(r)]
+        return [x for x in w["kartoteka"] if _wyplata(x).startswith(r)]
 
     def pit11():
         os_ = f.get("osoba")
@@ -1046,16 +1265,24 @@ def BUDUJ_pit(app, parent):
         przych = s("przychod_pracy")
         zwol = s("zwolnione")
         skl = s("emer") + s("rent") + s("chor")
-        linie = [f"PIT-11 za {f.get('rok')} — INFORMACJA O PRZYCHODACH Z INNYCH ŹRÓDEŁ ORAZ O DOCHODACH I POBRANYCH ZALICZKACH (wersja ćwiczeniowa)",
-                 f"Płatnik: AGRO-MLEKO sp. z o.o.      Podatnik: {os_}   PESEL {o.get('pesel', '')}", f"Miesięcy z wypłatą: {len(ww)}  ({', '.join(x['miesiac'] for x in ww)})", "",
+        mlody = bool(zwol) or bool(o.get("mlody"))
+        w1, p_prz, p_kup, p_doch, p_zal = ("wiersz 2 (podatnik do 26 lat — przychody nieobjęte ulgą)", 36, 37, 38, 40) if mlody else ("wiersz 1", 29, 30, 31, 33)
+        rok_n = int(f.get("rok") or 0) + 1
+        linie = [f"PIT-11 za {f.get('rok')} — INFORMACJA O PRZYCHODACH Z INNYCH ŹRÓDEŁ ORAZ O DOCHODACH I POBRANYCH ZALICZKACH (wersja ćwiczeniowa; pozycje wg PIT-11 w wersji 29)",
+                 f"Płatnik: AGRO-MLEKO sp. z o.o.      Podatnik: {os_}   PESEL {o.get('pesel', '')}", f"Wypłat w roku: {len(ww)}  (miesiące wypłat: {', '.join(sorted(_wyplata(x) for x in ww))})", "",
+                 "D. KOSZTY UZYSKANIA PRZYCHODÓW — poz. 28: z jednego stosunku pracy " + ("podwyższone (300 zł)" if any(x.get("kup") == 300 for x in ww) else "podstawowe (250 zł)"), "",
                  "E. DOCHODY PODATNIKA, POBRANE ZALICZKI ORAZ SKŁADKI",
-                 f"  Należności ze stosunku pracy — przychód: {kadry.fmt(kadry.zl(przych - zwol)):>12}   KUP: {kadry.fmt(s('kup')):>10}   dochód: {kadry.fmt(kadry.zl(przych - zwol - s('kup'))):>12}",
-                 f"  Zasiłki pieniężne z ubezpieczenia społecznego (inne źródła): {kadry.fmt(s('zasilek')):>12}",
-                 f"  Pobrane zaliczki razem: {kadry.fmt(s('zaliczka')):>12}", f"  Składki na ubezpieczenia społeczne podlegające odliczeniu: {kadry.fmt(kadry.zl(skl)):>12}",
-                 f"  Składka zdrowotna: {kadry.fmt(s('zdrowotna'))} (od 2022 nie podlega odliczeniu — pole informacyjne tylko w tej symulacji)", ""]
+                 f"  {w1}. Należności ze stosunku pracy",
+                 f"     poz. {p_prz} przychód: {kadry.fmt(kadry.zl(przych - zwol)):>12}   poz. {p_kup} koszty: {kadry.fmt(s('kup')):>10}   poz. {p_doch} dochód: {kadry.fmt(kadry.zl(przych - zwol - s('kup'))):>12}",
+                 f"     poz. {p_zal} zaliczka pobrana przez płatnika (łącznie z zaliczką od zasiłków): {kadry.fmt(s('zaliczka')):>12}",
+                 f"  wiersz 15. Inne źródła — zasiłki z ubezpieczenia społecznego wypłacone przez płatnika: poz. 90 przychód: {kadry.fmt(s('zasilek')):>12}",
+                 f"  poz. 95 składki na ubezpieczenia społeczne podlegające odliczeniu: {kadry.fmt(kadry.zl(skl)):>12}", "",
+                 "G. PRZYCHODY ZWOLNIONE I INFORMACJE DODATKOWE"]
         if zwol:
-            linie += ["G. PRZYCHODY ZWOLNIONE OD PODATKU", f"  Ulga dla młodych — przychody ze stosunku pracy: {kadry.fmt(zwol)}", ""]
-        linie.append("Terminy: do urzędu skarbowego — do 31 stycznia (elektronicznie, UPL-1); podatnikowi — do końca lutego.")
+            linie.append(f"  poz. 109 / 110 ulga dla młodych — przychody ze stosunku pracy: {kadry.fmt(zwol)}")
+        linie += [f"  poz. 122 składka na ubezpieczenie zdrowotne pobrana przez płatnika: {kadry.fmt(s('zdrowotna'))} (informacyjnie — od 2022 r. bez odliczenia od podatku)", "",
+                  f"Terminy: do urzędu skarbowego — do {_termin(rok_n, 1, 31)} (elektronicznie, UPL-1); podatnikowi — do {_termin(rok_n, 2, 28)} "
+                  "(koniec stycznia i lutego; termin w sobotę lub dzień wolny przesuwa się na najbliższy dzień roboczy)."]
         _ustaw(txt, "\n".join(linie))
 
     def pit4r():
@@ -1064,16 +1291,20 @@ def BUDUJ_pit(app, parent):
             _ustaw(txt, "Brak wierszy w kartotece za ten rok.")
             return
         linie = [f"PIT-4R za {f.get('rok')} — DEKLARACJA ROCZNA O ZALICZKACH NA PODATEK DOCHODOWY (wersja ćwiczeniowa)", "Płatnik: AGRO-MLEKO sp. z o.o.", "",
-                 f"{'Miesiąc':<12}{'Liczba podatników':>18}{'Zaliczka należna':>18}{'Termin wpłaty':>16}"]
+                 f"{'Wypłata w':<12}{'Liczba podatników':>18}{'Zaliczka należna':>18}{'Termin wpłaty':>16}"]
         razem = 0.0
-        for m in sorted({x["miesiac"] for x in ww}):
-            mm = [x for x in ww if x["miesiac"] == m]
+        for m in sorted({_wyplata(x) for x in ww}):
+            mm = [x for x in ww if _wyplata(x) == m]
             z = kadry.zl(sum(x["zaliczka"] for x in mm))
             razem += z
-            r_, m_ = int(m[:4]), int(m[5:7])
-            nm = dt.date(r_ + (m_ == 12), m_ % 12 + 1, 20)
-            linie.append(f"{m:<12}{len(mm):>18}{kadry.fmt(z):>18}{str(nm):>16}")
-        linie += ["", f"RAZEM zaliczki: {kadry.fmt(kadry.zl(razem))}   (musi się zgadzać z wpłatami na mikrorachunek i z sumą PIT-11)", "Termin złożenia: do 31 stycznia następnego roku."]
+            try:
+                r_, m_ = int(m[:4]), int(m[5:7])
+                nm = str(dt.date(r_ + (m_ == 12), m_ % 12 + 1, 20))
+            except ValueError:
+                nm = "—"
+            linie.append(f"{m:<12}{len({x['osoba'] for x in mm}):>18}{kadry.fmt(z):>18}{nm:>16}")
+        linie += ["", f"RAZEM zaliczki: {kadry.fmt(kadry.zl(razem))}   (musi się zgadzać z wpłatami na mikrorachunek i z sumą PIT-11)",
+                  f"Termin złożenia: do {_termin(int(f.get('rok') or 0) + 1, 1, 31)} (koniec stycznia; w sobotę lub dzień wolny — najbliższy dzień roboczy)."]
         _ustaw(txt, "\n".join(linie))
 
     def wyslij():

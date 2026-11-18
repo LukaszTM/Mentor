@@ -10,22 +10,22 @@ Które z 5 osób w ogóle NIE podlegają zgłoszeniu w ZUS i jaki dokument zamia
 Demonstracja, kroki 1–2; Ściąga → kody tytułu (01 10 pracownik, 04 11 zleceniobiorca) i szósty znak = niepełnosprawność (0–3).
 
 ## Podpowiedź 3 — częściowy przykład
-Tabela — pierwszy wiersz: „Kowalczyk | ZUA | 01 10 0 0 | 2026-10-01 | do 2026-10-08 | UPP …”; Sobczak: 01 10 0 2; Pawlak: 04 11 0 0 + dobrowolne chorobowe; Król: 04 11 0 0; Michalska: RUD (bez ZUA).
+Tabela — pierwszy wiersz: „Kowalczyk | ZUA | 01 10 0 0 | 2026-10-01 | do 2026-10-08 | UPP …”; Sobczak: 01 10 0 2; Pawlak: ZZA 04 11 0 0 (tylko zdrowotne); Król: ZUA 04 11 0 0 + dobrowolne chorobowe; Michalska: RUD (bez ZUA).
 
 ## Pełne rozwiązanie
 ```
 | Osoba | Dokument | Kod tytułu | Data powstania | Termin | Uwagi |
 |---|---|---|---|---|---|
 | Anna Kowalczyk | ZUA | 01 10 0 0 | 2026-10-01 | 2026-10-08 | wszystkie ubezpieczenia; UPP z Rejestru |
-| Ewa Sobczak | ZUA | 01 10 0 2 | 2021-03-01 | 2021-03-08 | szósty znak 2 = lekki stopień niepełnosprawności; symulator ostrzega o terminie (data historyczna) |
-| Agnieszka Pawlak | ZUA | 04 11 0 0 | 2026-02-01 | 2026-02-08 | jedyny tytuł → pełne składki; zaznacz „dobrowolne chorobowe” (od dnia wniosku, nie wstecz) |
-| Robert Król | ZUA | 04 11 0 0 | 2024-06-01 | 2024-06-08 | pełne składki; PPK obsługujesz poza ZUS |
+| Ewa Sobczak | ZUA | 01 10 0 2 | 2021-03-01 | 2021-03-08 | szósty znak 2 = umiarkowany stopień niepełnosprawności (1 — lekki, 3 — znaczny); symulator ostrzega o terminie (data historyczna) |
+| Agnieszka Pawlak | ZZA | 04 11 0 0 | 2026-02-01 | 2026-02-08 | etat 5 000 zł u innego pracodawcy (oświadczenie) → ze zlecenia tylko zdrowotne; przy ZUA symulator ostrzega o zbiegu tytułów |
+| Robert Król | ZUA | 04 11 0 0 | 2024-06-01 | 2024-06-08 | jedyny tytuł → pełne składki; zaznacz „dobrowolne chorobowe” (od dnia wniosku, nie wstecz); PPK obsługujesz poza ZUS |
 | Joanna Michalska | — (RUD) | — | umowa 2026-11-02 | 2026-11-09 | umowa o dzieło: brak tytułu; RUD przez eZUS w 7 dni od zawarcia, chyba że wykonawca jest pracownikiem zamawiającego |
 Michał Dąbrowski (student) — poza ćwiczeniem: brak zgłoszenia (symulator: „nie zgłaszasz go wcale”).
 ```
 
 ## Oczekiwany wynik
-4 ZUA przyjęte z UPP; Michalska — brak zgłoszenia (RUD w 7 dni od 2.11 → do 9.11.2026); Sobczak kod 011002; terminy: 7 dni od daty powstania obowiązku; symulator ostrzega „Zgłoszenie po terminie 7 dni” dla dat historycznych — w notatce zaznaczasz, że ćwiczysz wstecz.
+3 ZUA i 1 ZZA (Pawlak) przyjęte z UPP; Michalska — brak zgłoszenia (RUD w 7 dni od 2.11 → do 9.11.2026); Sobczak kod 011002; terminy: 7 dni od daty powstania obowiązku; symulator ostrzega „Zgłoszenie po terminie 7 dni” dla dat historycznych — w notatce zaznaczasz, że ćwiczysz wstecz.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

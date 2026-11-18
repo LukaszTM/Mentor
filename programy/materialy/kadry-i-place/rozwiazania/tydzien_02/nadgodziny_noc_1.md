@@ -22,7 +22,7 @@ Razem = 573,75 zł brutto (składki i PIT jak od pensji; na liście płac w polu
 ```
 
 ## Oczekiwany wynik
-stawka 5 400 / 160 = 33,75; normalne 10 × 33,75 = 337,50; dodatek 50% 6 × 16,88 = 101,25; dodatek 100% 4 × 33,75 = 135,00; razem 573,75 zł.
+stawka 5 400 / 160 = 33,75; normalne 10 × 33,75 = 337,50; dodatek 50% 6 × 50% × 33,75 = 101,25; dodatek 100% 4 × 33,75 = 135,00; razem 573,75 zł.
 
 ## Wyjaśnij własnymi słowami
 Dlaczego to działa? Co by się zmieniło, gdyby zmienił się jeden fakt (etat, staż, data, kwota)?

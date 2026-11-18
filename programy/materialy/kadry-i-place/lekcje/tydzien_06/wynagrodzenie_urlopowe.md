@@ -91,7 +91,7 @@ Marek Zieliński (5 400 zł, listopad 2026, wymiar 160 h) w jednym miesiącu: ch
   - Jak sprawdzić: Etat < 1? Współczynnik × etat (20,92 × 0,75 = 15,69).
   - Poprawka: Podstawa / 15,69 / 8 × godziny.
 - ✘ **Premia roczna wliczona do wynagrodzenia urlopowego.**
-  - Prawdopodobna przyczyna: §6 pkt 1–2 wyłącza składniki za okresy dłuższe niż miesiąc z urlopowego; do EKWIWALENTU wchodzą (1/12).
+  - Prawdopodobna przyczyna: §12 rozporządzenia urlopowego: składniki za okresy dłuższe niż miesiąc wypłacasz w zwykłych terminach — do urlopowego nie wchodzą; do EKWIWALENTU wchodzą w średniej z 12 miesięcy (§17).
   - Jak sprawdzić: Urlopowe czy ekwiwalent? Składnik miesięczny czy roczny?
   - Poprawka: Urlopowe: tylko składniki miesięczne; ekwiwalent: + 1/12 rocznych.
 - ✘ **Choroba pomniejszona przez wymiar godzin (5 400/160 × 48 h).**

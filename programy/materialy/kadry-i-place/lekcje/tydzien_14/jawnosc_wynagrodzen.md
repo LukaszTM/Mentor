@@ -6,7 +6,7 @@ Tydzień 14 · lekcja 45 z 48 · ≈ 65 min
 **Po co mi to?** widełki w ogłoszeniach i zakaz pytania o zarobki już obowiązują, a dyrektywa 2023/970 (projekt UC127) przyniesie prawo pracownika do informacji o średnich płacach i raportowanie luki — kto policzy lukę dziś, nie będzie tłumaczył 7% różnicy w sądzie jutro.
 
 ## Czego potrzebujesz
-- Dane płacowe kategorii „operator linii” (przyklady/tydzien_11/dane_luka_placowa.md — 30 osób, płeć, zasadnicze, staż, nocne).
+- Dane płacowe kategorii „operator linii” (przyklady/tydzien_14/dane_luka_placowa.md — 30 osób, płeć, zasadnicze, staż, nocne).
 - Warsztat → Przepisy: „Jawność wynagrodzeń — co nadchodzi” (dyrektywa 2023/970, projekt UC127 — status: PROJEKT), „Informacja o wynagrodzeniu dla kandydata” (obowiązuje od 24.12.2025), „Dyskryminacja i równe wynagrodzenie” (art. 18³ᶜ).
 - Pojęcia: luka płacowa (średnia i mediana K/M w kategorii), kategoria pracowników (ta sama praca lub praca o tej samej wartości), wartościowanie (umiejętności, wysiłek, odpowiedzialność, warunki), siatka płac, obiektywne kryteria (staż, kwalifikacje, nocne), próg 5% (dyrektywa — wspólna ocena wynagrodzeń), prawo do informacji (2 miesiące).
 
@@ -18,10 +18,10 @@ Tydzień 14 · lekcja 45 z 48 · ≈ 65 min
 - Obowiązek informowania o postanowieniach układu lub regulaminu wynagradzania dotyczących stanowiska.
 Sankcja: ustawa z 4.06.2025 nie dodała osobnego wykroczenia do art. 281 KP. Ryzyko to roszczenie kandydata z art. 18³ᵈ (zadośćuczynienie nie niższe niż minimalne wynagrodzenie albo odszkodowanie), wystąpienie PIP i wizerunek. Kary pieniężne 2 000–60 000 zł przewiduje dopiero projekt UC127.
 ### Co nadchodzi — dyrektywa (UE) 2023/970
-Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może wszcząć postępowanie o naruszenie). Projekt UC127 (zmiana KP i innych ustaw): pierwsza wersja XII 2025, druga 29.04.2026 po uzgodnieniach; Rada Ministrów planuje przyjęcie w IV kw. 2026; do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. W projekcie: sprawozdania o luce płacowej dla pracodawców od 100 pracowników, kary pieniężne 2 000–60 000 zł, organ monitorujący — PIP. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
+Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może wszcząć postępowanie o naruszenie). Projekt UC127 (zmiana KP i innych ustaw): pierwsza wersja XII 2025, druga 29.04.2026 po uzgodnieniach; Rada Ministrów planuje przyjęcie w IV kw. 2026; do Sejmu nie trafił (stan 18.11.2026); wejście w życie 6 miesięcy po ogłoszeniu. W projekcie (wersja z 29.04.2026): sprawozdania o luce płacowej dla pracodawców od 100 pracowników składane przez narzędzie prowadzone przez Prezesa GUS, odpowiedź na wniosek pracownika o informację w 30 dni (dyrektywa pozwala na 2 miesiące), kary pieniężne 2 000–60 000 zł, nowe zadania kontrolne PIP. Sprawdź status na legislacja.gov.pl lub sejm.gov.pl.
 | Element dyrektywy | Zasada |
 |---|---|
-| prawo do informacji | pracownik może żądać informacji o swoim indywidualnym wynagrodzeniu oraz o ŚREDNIM poziomie wynagrodzeń (w podziale na płeć) dla kategorii pracowników wykonujących tę samą pracę lub pracę tej samej wartości; odpowiedź w 2 miesiące; pracodawca co roku przypomina o tym prawie |
+| prawo do informacji | pracownik może żądać informacji o swoim indywidualnym wynagrodzeniu oraz o ŚREDNIM poziomie wynagrodzeń (w podziale na płeć) dla kategorii pracowników wykonujących tę samą pracę lub pracę tej samej wartości; odpowiedź najpóźniej w 2 miesiące (polski projekt: 30 dni); pracodawca co roku przypomina o tym prawie |
 | zakaz klauzul poufności | pracownik może ujawniać swoje wynagrodzenie w celu egzekwowania równości; klauzule w umowach stają się bezskuteczne |
 | przejrzyste kryteria | ustalania wynagrodzeń, poziomów i progresji — obiektywne, neutralne płciowo, łatwo dostępne; pracodawcy z co najmniej 50 pracownikami udostępniają obowiązkowo |
 | wspólna ocena wynagrodzeń | z przedstawicielami pracowników, gdy luka w jakiejkolwiek kategorii ≥ 5%, nieuzasadniona obiektywnie i nieusunięta w 6 miesięcy |
@@ -34,7 +34,7 @@ Termin transpozycji: 7.06.2026 — Polska spóźniona (Komisja Europejska może 
 | 150–249 | co 3 lata, od 2027 |
 | 100–149 | co 3 lata, od 2031 |
 Zakres raportu: luka w wynagrodzeniu średnim i medianie; luka w składnikach zmiennych; odsetek kobiet i mężczyzn otrzymujących składniki zmienne; luka w kwartylach; luka wg kategorii pracowników (podstawowe + zmienne).
-Raport trafia do organu monitorującego (w projekcie: PIP) i do wiadomości pracowników.
+Raport trafia do organu monitorującego (wyznaczy go ustawa) i do wiadomości pracowników oraz ich przedstawicieli.
 ### Co robić teraz — przygotowanie 12–18 miesięcy
 | Krok | Co robisz |
 |---|---|
@@ -50,22 +50,22 @@ Z perspektywy kadr: każdy awans i podwyżka z uzasadnieniem w aktach (B); zmian
 **Kategoria „operator linii”: 18 mężczyzn i 12 kobiet — luka 7%, z czego 2,8% bez wyjaśnienia**
 
 ```
-Kategoria „operator linii”: 18 M (średnia 5 980, mediana 5 900), 12 K (średnia 5 560, mediana 5 500). Luka średnia = (5 980 − 5 560)/5 980 = 7,0%; mediana 6,8%. Analiza: M mają średnio 2 lata więcej stażu (dodatek stażowy 2%/rok = ~240 zł) i częściej pracują w nocy (dodatek nocny średnio 180 zł). Po korekcie o obiektywne składniki: w wynagrodzeniu zasadniczym M 5 450, K 5 300 → 2,8% pozostaje niewyjaśnione (różne daty podwyżek) → plan: wyrównanie w 2027 (koszt 12 × 150 × 12 = 21 600 zł) i reguła „podwyżka wg siatki, nie wg negocjacji”.
+Kategoria „operator linii”: 18 M (średnia 5 980, mediana 5 900), 12 K (średnia 5 560, mediana 5 500). Luka średnia = (5 980 − 5 560)/5 980 = 7,0%; mediana 6,8%. Analiza różnicy 420 zł: M mają średnio o rok dłuższy staż (dodatek stażowy 2% za rok — ok. 110 zł więcej) i częściej pracują w nocy (dodatek nocny średnio o 160 zł wyższy) — razem 270 zł. Po korekcie o obiektywne składniki: w wynagrodzeniu zasadniczym M 5 450, K 5 300 → 150 zł, czyli 2,8% pozostaje niewyjaśnione (różne daty podwyżek) → plan: wyrównanie w 2027 (koszt 12 × 150 × 12 = 21 600 zł) i reguła „podwyżka wg siatki, nie wg negocjacji”.
 ```
 
 1. „18 M (średnia 5 980, mediana 5 900), 12 K (średnia 5 560, mediana 5 500)”: liczysz na wynagrodzeniu całkowitym (zasadnicze + stałe dodatki + zmienne za rok/12) osobno dla K i M w JEDNEJ kategorii; średnia i mediana (mediana odporna na wartości skrajne).
 2. „Luka średnia = (5 980 − 5 560)/5 980 = 7,0%; mediana 6,8%”: wzór dyrektywy: różnica względem średniej mężczyzn; > 5% → w reżimie dyrektywy obowiązek wspólnej oceny wynagrodzeń, jeśli nie da się uzasadnić obiektywnie i nie naprawi się w 6 miesięcy.
-3. „M mają średnio 2 lata więcej stażu (dodatek stażowy 2%/rok = ~240 zł) i częściej pracują w nocy (dodatek nocny średnio 180 zł)”: rozkładasz różnicę na składniki z obiektywnym kryterium (staż, nocne) — te są dozwolone, jeśli kryterium jest neutralne i stosowane jednakowo.
+3. „M mają średnio o rok dłuższy staż (dodatek stażowy — ok. 110 zł więcej) i częściej pracują w nocy (dodatek nocny średnio o 160 zł wyższy) — razem 270 zł”: rozkładasz różnicę 420 zł na składniki z obiektywnym kryterium (staż, nocne) — te są dozwolone, jeśli kryterium jest neutralne i stosowane jednakowo; reszta (420 − 270 = 150 zł) siedzi w wynagrodzeniu zasadniczym.
 4. „Po korekcie o obiektywne składniki: zasadnicze M 5 450, K 5 300 → 2,8% pozostaje niewyjaśnione (różne daty podwyżek)”: porównujesz zasadnicze — różnica wynika z indywidualnych negocjacji przy zatrudnieniu, nie z kryteriów → to jest ryzyko (art. 18³ᶜ: równe wynagrodzenie za jednakową pracę).
 5. „plan: wyrównanie w 2027 (koszt 12 × 150 × 12 = 21 600 zł) i reguła „podwyżka wg siatki, nie wg negocjacji””: naprawa: podniesienie zasadniczego 12 kobiet o 150 zł (koszt roczny z narzutami ok. 26 000) + siatka płac z widełkami i kryteriami progresji, żeby luka nie wróciła.
 6. Dokumentacja: arkusz z obliczeniem, uzasadnienie składników obiektywnych, plan naprawczy z datami — to będzie treść raportu po transpozycji (pracodawcy 100–149: co 3 lata; AGRO-MLEKO (62) — poniżej progu raportowania, ale prawo do informacji pracownika obejmie wszystkich).
 
-✔ **Oczekiwany wynik:** luka 7,0% (średnia) / 6,8% (mediana); 4,2 pkt wyjaśnione stażem i nocnymi; 2,8% w zasadniczym — do wyrównania w 2027 (21 600 zł) i siatka płac.
+✔ **Oczekiwany wynik:** luka 7,0% (średnia) / 6,8% (mediana); z 420 zł różnicy 270 zł wyjaśniają staż i nocne, 150 zł (2,8% zasadniczego) — do wyrównania w 2027 (21 600 zł) i siatka płac.
 
 ## 3 · Jak to uruchomić
-1. Otwórz przyklady/tydzien_11/dane_luka_placowa.md (30 wierszy) i cwiczenia/tydzien_14/jawnosc_wynagrodzen_1.md (tabela do uzupełnienia: n, średnia, mediana, luka, składniki).
+1. Otwórz przyklady/tydzien_14/dane_luka_placowa.md (30 wierszy) i cwiczenia/tydzien_14/jawnosc_wynagrodzen_1.md (tabela do uzupełnienia: n, średnia, mediana, luka, składniki).
 2. Policz ręcznie (sumy, mediana = środkowa wartość po posortowaniu) — bez arkusza; przy 12 i 18 wartościach to 10 minut; wynik porównaj z rozwiązaniem po własnej próbie.
-3. Prompty → Szablony → „Odpowiedź na wniosek pracownika o informację o wynagrodzeniach” (termin 2 miesiące wg projektu) i „Siatka płac — szablon”.
+3. Prompty → Szablony → „Odpowiedź na wniosek pracownika o informację o wynagrodzeniach…” (termin: dyrektywa — do 2 miesięcy, projekt UC127 — 30 dni) i „Siatka płac — szablon (5 kategorii × widełki × kryteria progresji)”.
 4. Oczekiwany wynik: luka w 3 kategoriach z rozbiciem na składniki, siatka płac 5 kategorii × widełki, wzór odpowiedzi na wniosek.
 
 ## W praktyce — jak to robisz w firmie
@@ -75,16 +75,16 @@ Kategoria „operator linii”: 18 M (średnia 5 980, mediana 5 900), 12 K (śre
 4. Usuń klauzule poufności; przygotuj dane do raportu w strukturze dyrektywy.
 
 ## 4 · Ćwiczenie prowadzone
-Z pliku przyklady/tydzien_11/dane_luka_placowa.md policz jak w demonstracji lukę dla kategorii „pakowacz” (8 M, 10 K): średnia i mediana zasadniczego + dodatków, luka %, a potem rozłóż różnicę na staż (2%/rok zasadniczego) i nocne; wskaż część niewyjaśnioną i zaproponuj korektę z kosztem. Plik: cwiczenia/tydzien_14/jawnosc_wynagrodzen_1.md. Czas: 20 minut.
+Z pliku przyklady/tydzien_14/dane_luka_placowa.md policz jak w demonstracji lukę dla kategorii „pakowacz” (8 M, 10 K): średnia i mediana zasadniczego + dodatków, luka %, a potem rozłóż różnicę na staż (2%/rok zasadniczego) i nocne; wskaż część niewyjaśnioną i zaproponuj korektę z kosztem. Plik: cwiczenia/tydzien_14/jawnosc_wynagrodzen_1.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_14/jawnosc_wynagrodzen_1.md` · rozwiązanie: `rozwiazania/tydzien_14/jawnosc_wynagrodzen_1.md`
-✔ Poprawny wynik wygląda tak: M: średnia 5 230, mediana 5 200; K: średnia 5 010, mediana 5 000; luka 4,2% (średnia) / 3,8% (mediana) — poniżej 5%, ale: po korekcie o staż (M +1,5 roku → ok. 150 zł) i nocne (M +60 zł) zasadnicze M 5 020 vs K 4 990 → 0,6% — w granicach błędu; działanie: siatka i monitoring, bez wyrównań; dokumentacja uzasadnienia.
+✔ Poprawny wynik wygląda tak: M: średnia 5 230, mediana 5 200; K: średnia 5 010, mediana 5 000; luka 4,2% (średnia) / 3,8% (mediana) — poniżej 5%, ale: po odjęciu wpływu stażu (M +1,5 roku → ok. 150 zł) i nocnych (M 110 zł, K 50 zł) zostaje 4 970 vs 4 960 → 10 zł (0,2%) — brak luki w zasadniczym; działanie: siatka i monitoring, bez wyrównań; dokumentacja uzasadnienia.
 
 ## 5 · Ćwiczenie samodzielne
 Zarząd proponuje: (1) wpisać do wszystkich umów klauzulę poufności wynagrodzenia „pod rygorem kary umownej 2 000 zł”, (2) na wnioski pracowników o informację o średnich płacach odpowiadać „po transpozycji dyrektywy”, (3) w ogłoszeniach podawać „wynagrodzenie zgodne z siatką — do uzgodnienia”. Zdecyduj dla każdego: dopuszczalne dziś? po transpozycji? skutki; napisz odpowiedź (10 zdań) na wniosek Katarzyny Wójcik z 10.11.2026 o informację o średnim wynagrodzeniu pracowników produkcji w podziale na płeć. Plik: cwiczenia/tydzien_14/jawnosc_wynagrodzen_2.md. Czas: 20 minut.
 
 📄 Plik startowy: `cwiczenia/tydzien_14/jawnosc_wynagrodzen_2.md` · rozwiązanie: `rozwiazania/tydzien_14/jawnosc_wynagrodzen_2.md`
-✔ Poprawny wynik wygląda tak: (1) dziś: klauzula nie może zakazywać ujawniania wynagrodzenia w celu przeciwdziałania dyskryminacji (art. 18³ᵉ — ochrona przed odwetem; orzecznictwo: ujawnienie płacy dla ochrony praw nie narusza tajemnicy); kara umowna w umowie o pracę — niedopuszczalna (art. 300 w zw. z zasadami KP; SN); po transpozycji: klauzule bezskuteczne (art. 7 dyrektywy); (2) dziś brak ustawowego obowiązku udzielenia informacji o średnich płacach (poza art. 18³ᶜ w sporze), ale odmowa „na przyszłość” jest ryzykowna — lepiej odpowiedzieć na zasadach dyrektywy dobrowolnie; po transpozycji: obowiązek w 2 miesiące; (3) niedopuszczalne już dziś — art. 22¹ᵇ wymaga kwoty/przedziału w ogłoszeniu; odpowiedź: potwierdzenie wniosku, podstawa (art. 18³ᶜ, dobrowolnie wg art. 7 dyrektywy), kategoria „pracownik produkcji” (n K/M), średnie i mediana K/M, kryteria (staż, nocne, premia regulaminowa), informacja o prawie do równego wynagrodzenia i ochronie przed odwetem, termin, podpis.
+✔ Poprawny wynik wygląda tak: (1) dziś: klauzula nie może zakazywać ujawniania wynagrodzenia w celu przeciwdziałania dyskryminacji (art. 18³ᵉ — ochrona przed odwetem; orzecznictwo: ujawnienie płacy dla ochrony praw nie narusza tajemnicy); kara umowna w umowie o pracę — niedopuszczalna (art. 300 w zw. z zasadami KP; SN); po transpozycji: klauzule bezskuteczne (art. 7 dyrektywy); (2) dziś brak ustawowego obowiązku udzielenia informacji o średnich płacach (poza art. 18³ᶜ w sporze), ale odmowa „na przyszłość” jest ryzykowna — lepiej odpowiedzieć na zasadach dyrektywy dobrowolnie; po transpozycji: obowiązek w 2 miesiące; (3) jako jedyna informacja — niedopuszczalne już dziś: art. 18³ᶜᵃ wymaga podania kwoty początkowej lub przedziału w ogłoszeniu, a jeśli tam ich nie ma — przed rozmową kwalifikacyjną (bez rozmów: przed nawiązaniem stosunku pracy); odpowiedź: potwierdzenie wniosku, podstawa (art. 18³ᶜ, dobrowolnie wg art. 7 dyrektywy), kategoria „pracownik produkcji” (n K/M), średnie i mediana K/M, kryteria (staż, nocne, premia regulaminowa), informacja o prawie do równego wynagrodzenia i ochronie przed odwetem, termin, podpis.
 
 ## 6 · Typowe błędy i naprawa
 - ✘ **Luka policzona na całej firmie: „tylko 3%, nie ma problemu”.**

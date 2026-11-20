@@ -352,7 +352,7 @@ def tabela_md(parent, wiersze, W=600, bg=None):
     bg = bg or K["karta"]
     dane = []
     for w in wiersze:
-        kom = [c.strip() for c in w.strip().strip("|").split("|")]
+        kom = [c.strip().replace("\x00", "|") for c in w.replace("\\|", "\x00").strip().strip("|").split("|")]   # \| = znak | w komórce
         if kom and all(set(c) <= set("-: ") for c in kom):
             continue                      # wiersz separatora |---|---|
         dane.append(kom)

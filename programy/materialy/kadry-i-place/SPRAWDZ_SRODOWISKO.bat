@@ -34,7 +34,7 @@ if exist "%TU%Mentor.exe" (
 )
 rem --- kurs
 if exist "%TU%programy\kadry-i-place.json" (echo [3] Plik kursu programy\kadry-i-place.json: JEST) else (
-    if exist "%TU%kurs_mentor.json" (echo [3] Plik kursu kurs_mentor.json: JEST ^(wgraj w Mentorze: Ustawienia - Wgraj program z pliku^)) else (echo [3] Plik kursu: BRAK & set BRAK=1))
+    if exist "%TU%kurs_mentor.json" (echo [3] Plik kursu kurs_mentor.json: JEST ^(wgraj w Mentorze caly ZIP: Ustawienia - Importuj kurs ZIP^)) else (echo [3] Plik kursu: BRAK & set BRAK=1))
 rem --- materialy
 set "MAT=%TU%programy\materialy\kadry-i-place"
 if not exist "%MAT%\START_TUTAJ.md" set "MAT=%TU%"

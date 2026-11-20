@@ -17,9 +17,10 @@
 - wydać projekt końcowy 1.0.0 z testami, CI, README i portfolio gotowym dla rekrutera lub klienta
 
 ## Pierwsze 30 minut
-1. **Rozpakuj ZIP** do zwykłego folderu (nie pracuj „w środku” archiwum).
-2. **Uruchom Mentora** (`URUCHOM_KURS.bat` albo `Mentor.exe`). Windows może zapytać o uruchomienie niepodpisanego programu: „Więcej informacji → Uruchom mimo to”.
-3. **Ustawienia → Program nauczania → „Vibe coding od podstaw”** (kurs jest wbudowany; `kurs_mentor.json` to ten sam plik — „Wgraj program z pliku…” tylko na komputerze bez tego kursu).
+Kurs **nie jest wbudowany w Mentora** — to osobna paczka, którą wgrywasz sam(a), kiedy chcesz zacząć.
+1. **Zainstaluj Mentora** (2.9.0 lub nowszy, paczka `Mentor-windows.zip`): rozpakuj do zwykłego folderu i uruchom `Mentor.exe`. Windows może zapytać o uruchomienie niepodpisanego programu: „Więcej informacji → Uruchom mimo to”.
+2. **Wgraj kurs: Ustawienia → Program nauczania → „📦 Importuj kurs ZIP…”** → wybierz plik `Vibe-coding-kurs.zip` (nie musisz go rozpakowywać). Mentor najpierw pokaże podgląd — nazwę, wersję, liczbę lekcji, wymagania i listę skryptów, których **nie uruchamia** — a po Twojej zgodzie rozpakuje kurs do swojego katalogu danych i przełączy się na niego.
+3. **Sprawdź:** Ustawienia → Program nauczania pokazuje „Vibe coding od podstaw”, a Plan — 16 tygodni. (Plik `kurs_mentor.json` sam, przez „Importuj JSON…”, nie wystarczy: bez paczki Mentor nie ma testów z `WERYFIKATORY/` i materiałów.)
 4. **Mój projekt → „📁 Utwórz katalog roboczy kursu”** (Dokumenty\Mentor\vibe-coding\PRACA) → **„📂 Skopiuj materiały kursu tutaj”** (nic nie nadpisuje).
 5. **Środowisko → „⬇ Zainstaluj brakujące”** — Python i biblioteki kursu (pytest, flask, requests) w osobnym .venv, za Twoją zgodą.
 6. **Panel → Diagnoza** (10 pytań) → **Lekcje → „Jak uczyć się z tego kursu”** → **Plan → Tydzień 0**.

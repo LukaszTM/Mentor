@@ -12,7 +12,7 @@
 
 ## Aktualizacja kursu / Mentora
 - Nowa wersja ZIP: rozpakuj do NOWEGO folderu, skopiuj do niego `mentor_dane.json` ze starego. Id zadań i lekcji są stałe — postępy pasują.
-- Import nowej wersji kursu plikiem (Ustawienia → Wgraj program z pliku) nie usuwa postępów; stary plik kursu możesz usunąć z `programy/`.
+- Import nowej wersji kursu (Ustawienia → „📦 Importuj kurs ZIP…” → nowszy `Kadry-i-place-kurs.zip`) nie usuwa postępów — są zapisane pod identyfikatorem kursu.
 
 ## Odinstalowanie
 - Mentor nie instaluje się w systemie: usuń folder paczki. Katalog projektu i kopia `mentor_dane.json` zostają, jeśli chcesz.

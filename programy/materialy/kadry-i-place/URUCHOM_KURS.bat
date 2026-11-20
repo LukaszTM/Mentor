@@ -17,6 +17,6 @@ if exist "%TU%mentor.py" (
     python "%TU%mentor.py"
     exit /b %errorlevel%
 )
-echo Nie znaleziono Mentor.exe w folderze "%TU%". Rozpakuj caly ZIP do jednego folderu.
+echo Nie znaleziono Mentor.exe w folderze "%TU%". Uruchom Mentora i wgraj kurs: Ustawienia - Program nauczania - Importuj kurs ZIP - plik Kadry-i-place-kurs.zip.
 pause
 exit /b 1

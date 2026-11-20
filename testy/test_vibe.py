@@ -118,7 +118,7 @@ def test_paczka_materialow(repo, vibe):
     p = subprocess.run([sys.executable, str(mat / "testy" / "sprawdz_kurs.py")], capture_output=True, text=True, encoding="utf-8")
     assert p.returncode == 0, p.stdout + p.stderr
     assert json.loads((mat / "kurs_mentor.json").read_text(encoding="utf-8")) == vibe, "paczka nieaktualna — uruchom materialy.py"
-    for f in ("START_TUTAJ.md", "pytest.ini", "dane/rezerwacje.csv", "pomoc/diff_agenta.md", "pomoc/brief_klienta.md", "przyklady/odpowiedzi_agenta/v4z3.md", "rozwiazania/kod/system.py"):
+    for f in ("START_TUTAJ.md", "mentor-manifest.json", "pytest.ini", "dane/rezerwacje.csv", "pomoc/diff_agenta.md", "pomoc/brief_klienta.md", "przyklady/odpowiedzi_agenta/v4z3.md", "rozwiazania/kod/system.py"):
         assert (mat / f).is_file(), f
     calosc = "\n".join(x.read_text(encoding="utf-8", errors="ignore") for x in mat.rglob("*") if x.is_file() and x.suffix in (".md", ".py", ".json", ".txt", ".csv", ".ini", ".bat"))
     import re
@@ -128,11 +128,14 @@ def test_paczka_materialow(repo, vibe):
 
 
 def test_mentor_end_to_end(repo, vibe, srodowisko_kursu, tmp_path):
-    """Mentor uruchamia weryfikator z paczki tak jak u ucznia: suma SHA-256, izolacja, MENTOR_WORKSPACE."""
+    """Kurs nie jest wbudowany: uczeń importuje Vibe-coding-kurs.zip (Importuj kurs ZIP…), a Mentor uruchamia weryfikator z zaimportowanej
+    paczki tak jak u ucznia: suma SHA-256, izolacja, MENTOR_WORKSPACE."""
+    import paczki
     import srodowisko
-    cel = program.KATALOG_PROGRAMOW / "materialy" / "vibe-coding"
-    if not cel.exists():
-        shutil.copytree(repo / "programy" / "materialy" / "vibe-coding", cel)
+    zp = shutil.make_archive(str(tmp_path / "Vibe-coding-kurs"), "zip", repo / "programy" / "materialy", "vibe-coding")
+    assert paczki.przejrzyj_zip(zp)["manifest"]["course_id"] == "vibe-coding"
+    paczki.importuj_zip(zp, nadpisz=True, utworz_prace=False)
+    assert program.katalog_materialow("vibe-coding") == program.KATALOG_KURSOW / "vibe-coding" / "paczka"
     sr = srodowisko.Srodowisko("vibe-coding", vibe.get("srodowisko"))
     sr.venv = srodowisko_kursu.venv
     zad = next(z for w in vibe["tygodnie"] for z in w["zadania"] if z["id"] == "v1z4")
@@ -151,3 +154,4 @@ def test_mentor_end_to_end(repo, vibe, srodowisko_kursu, tmp_path):
     (praca / "rabaty.py").write_text("def inna():\n    pass\n", encoding="utf-8")
     w = C.wykonaj_sprawdzenie(sr, d, praca / "rabaty.py")
     assert w["status"] == C.STATUS_BLAD and "brakuje funkcji" in w["opis"], w
+    paczki.usun_kurs("vibe-coding")

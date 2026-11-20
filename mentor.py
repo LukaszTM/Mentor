@@ -2972,6 +2972,9 @@ class Mentor(tk.Tk):
             etykieta(r, f"  {nazwa}" + (f" — {pod}" if pod else "") + ("  [paczka ZIP]" if z_paczki else ""), 10, wrap=560).pack(side="left", fill="x", expand=True)
             if not akt and n_tyg:
                 przycisk(r, "Przełącz", lambda s_=sc: self.ustaw_program(s_), "drugi").pack(side="right")
+        etykieta(k, "Kursy nie są wbudowane w Mentora (poza domyślnym „Python od zera → Junior QA”). Nowy kurs, np. „Kadry i płace” albo "
+                    "„Vibe coding od podstaw”, wgrywasz z jego paczki ZIP (Kadry-i-place-kurs.zip, Vibe-coding-kurs.zip) przyciskiem „📦 Importuj kurs ZIP…”.",
+                 9, kolor=K["szary"], wrap=820).pack(fill="x", pady=(8, 0))
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(8, 0))
         przycisk(r, "📦 Importuj kurs ZIP…", self._importuj_zip, "glowny").pack(side="left")

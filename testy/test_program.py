@@ -5,7 +5,9 @@ import json
 import os
 from pathlib import Path
 
+import paczki
 import program
+import pytest
 
 
 def test_katalog_danych_z_env():
@@ -18,6 +20,38 @@ def test_katalog_danych_z_env():
 def test_wbudowane_programy_rozpakowane():
     nazwy = {sc.name for sc, *_ in program.lista_programow()}
     assert {"python-junior-qa.json", "kadry-i-place.json"} <= nazwy
+
+
+def test_kursy_nie_sa_wbudowane_w_mentora(repo):
+    """Jedyny program w EXE i w Mentor-windows.zip to domyślny python-junior-qa; kursy (kadry, vibe) to osobne paczki ZIP do importu."""
+    spec = (repo / "mentor.spec").read_text(encoding="utf-8")
+    datas = spec[spec.index("datas=["):spec.index("],", spec.index("datas=["))]
+    assert '"programy/python-junior-qa.json"' in datas
+    for zakazane in ("kadry-i-place", "vibe-coding", "programy/materialy"):
+        assert zakazane not in datas, zakazane
+    ci = (repo / ".github" / "workflows" / "build-exe.yml").read_text(encoding="utf-8")
+    pakowanie = ci[ci.index("- name: Spakuj"):ci.index("Compress-Archive -Path pakiet\\Mentor")]
+    assert "Copy-Item -Recurse programy pakiet" not in pakowanie and "materialy" not in pakowanie
+    assert "sprawdz_paczki.py Mentor-windows.zip Kadry-i-place-kurs.zip Vibe-coding-kurs.zip" in ci
+    for kid in ("kadry-i-place", "vibe-coding"):
+        assert "nie jest wbudowany w Mentora" in (repo / "programy" / "materialy" / kid / "START_TUTAJ.md").read_text(encoding="utf-8")
+
+
+@pytest.mark.parametrize("kid", ["kadry-i-place", "vibe-coding"])
+def test_paczka_kursu_importuje_sie_z_zip(repo, kid, tmp_path):
+    """Paczka kursu (tak jak w CI: folder w ZIP) ma mentor-manifest.json, importuje się, a Mentor bierze materiały z kursy/<id>/paczka."""
+    import shutil
+    zp = shutil.make_archive(str(tmp_path / kid), "zip", repo / "programy" / "materialy", kid)
+    pg = paczki.przejrzyj_zip(zp)
+    assert pg["manifest"] and pg["manifest"]["course_id"] == kid and pg["id"] == kid
+    w = paczki.importuj_zip(zp, nadpisz=True, utworz_prace=False)
+    try:
+        assert w["id"] == kid
+        assert program.katalog_materialow(kid) == program.KATALOG_KURSOW / kid / "paczka"
+        assert (program.katalog_materialow(kid) / "START_TUTAJ.md").is_file()
+        assert kid in {json.loads(p.read_text(encoding="utf-8")).get("id") for p, *_ in program.lista_programow()}
+    finally:
+        paczki.usun_kurs(kid)
 
 
 def test_walidacja_wbudowanych(repo):

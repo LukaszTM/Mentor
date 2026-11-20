@@ -60,18 +60,22 @@ jobs:
           New-Item -ItemType Directory -Path pakiet\Mentor | Out-Null
           Copy-Item dist\Mentor.exe pakiet\Mentor\
           Copy-Item README.md pakiet\Mentor\
-          Copy-Item -Recurse programy pakiet\Mentor\programy
-          Get-ChildItem -Recurse -Directory -Filter __pycache__ pakiet\Mentor\programy | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-          # pliki startowe kursu w korzeniu paczki (STANDARD_KURSOW §5–6): START_TUTAJ, skrypty .bat, kurs_mentor.json, manifest.json
-          $mat = "programy\materialy\kadry-i-place"
-          foreach ($f in @("START_TUTAJ.md", "SPRAWDZ_SRODOWISKO.bat", "INSTALACJA.bat", "URUCHOM_KURS.bat", "kurs_mentor.json", "manifest.json")) { Copy-Item "$mat\$f" pakiet\Mentor\ }
+          # Mentor bez dodatkowych kursów: tylko domyślny program, szablon, opis formatu i lock zależności.
+          # Kursy (Kadry i płace, Vibe coding) są osobnymi paczkami ZIP — uczeń wgrywa je sam: Ustawienia → Importuj kurs ZIP…
+          New-Item -ItemType Directory -Path pakiet\Mentor\programy | Out-Null
+          foreach ($f in @("python-junior-qa.json", "szablon-programu.json", "FORMAT.md", "STANDARD_KURSOW.md")) { Copy-Item "programy\$f" pakiet\Mentor\programy\ }
+          Copy-Item -Recurse programy\zaleznosci pakiet\Mentor\programy\zaleznosci
           Compress-Archive -Path pakiet\Mentor -DestinationPath Mentor-windows.zip
-          # osobna paczka samego kursu (do importu w innym Mentorze / do czytania offline)
+          # osobne paczki kursów do importu w Mentorze
           New-Item -ItemType Directory -Path pakiet\kurs | Out-Null
-          Copy-Item -Recurse $mat pakiet\kurs\Kadry-i-place
+          Copy-Item -Recurse programy\materialy\kadry-i-place pakiet\kurs\Kadry-i-place
+          Copy-Item -Recurse programy\materialy\vibe-coding pakiet\kurs\Vibe-coding
+          Get-ChildItem -Recurse -Directory -Filter __pycache__ pakiet\kurs | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
           Compress-Archive -Path pakiet\kurs\Kadry-i-place -DestinationPath Kadry-i-place-kurs.zip
-          Copy-Item -Recurse "programy\materialy\vibe-coding" pakiet\kurs\Vibe-coding
           Compress-Archive -Path pakiet\kurs\Vibe-coding -DestinationPath Vibe-coding-kurs.zip
+      - name: Sprawdź paczki (Mentor bez kursów, import ZIP kursów)
+        shell: pwsh
+        run: python programy/zrodla/sprawdz_paczki.py Mentor-windows.zip Kadry-i-place-kurs.zip Vibe-coding-kurs.zip
       - uses: actions/upload-artifact@v4
         with:
           name: Mentor-windows
@@ -90,13 +94,15 @@ jobs:
           body: |
             **Mentor.exe** — interaktywny nauczyciel (Windows 10/11, 64-bit, bez instalacji).
 
-            Pobierz **`Mentor-windows.zip`** (zalecane: exe + README + programy + paczka materiałów kursu kadrowego: START_TUTAJ.md, SPRAWDZ_SRODOWISKO.bat, INSTALACJA.bat, URUCHOM_KURS.bat, ćwiczenia, rozwiązania, pomoc)
-            albo `Mentor.exe` (sam program; przy pierwszym uruchomieniu rozpakuje wbudowane programy i materiały do folderu `programy/` obok siebie).
-            `Kadry-i-place-kurs.zip` — sam kurs (kurs_mentor.json + materiały) do wgrania w innym Mentorze lub do czytania offline.
-            `Vibe-coding-kurs.zip` — kurs „Vibe coding od podstaw” (16 tygodni, Claude Code + Codex): materiały, niezależne testy zadań (WERYFIKATORY), rozwiązania wzorcowe.
+            Pobierz **`Mentor-windows.zip`** (zalecane: exe + README + domyślny program „Python od zera → Junior QA”)
+            albo `Mentor.exe` (sam program).
 
-            **Nowe (2.9):** wbudowany kurs **„Vibe coding od podstaw”** — od plików i terminala do własnej aplikacji z agentami AI: specyfikacja, testy, Git i GitHub,
-            przegląd zmian agenta, bezpieczeństwo, prawo, CI, praca z klientem i projekt końcowy; zadania sprawdzane niezależnymi testami, ścieżka bez płatnego konta.
+            **Kursy są osobnymi paczkami — nie są wbudowane w Mentora.** Pobierz wybrany kurs i wgraj go w Mentorze:
+            Ustawienia → Program nauczania → **📦 Importuj kurs ZIP…** (podgląd przed importem, skryptów z paczki Mentor nie uruchamia).
+            - `Kadry-i-place-kurs.zip` — „Kadry i płace — kurs zaawansowany (praktyka 2026)”, 16 tygodni.
+            - `Vibe-coding-kurs.zip` — „Vibe coding od podstaw”, 16 tygodni (Claude Code + Codex): materiały, niezależne testy zadań (WERYFIKATORY), rozwiązania wzorcowe.
+
+            **Nowe (2.9.1):** kursy nie są już wbudowane w Mentora — każdy kurs wgrywasz sam z paczki ZIP. Kursy zaimportowane wcześniej i postępy zostają.
 
             Windows SmartScreen może ostrzec przy pierwszym uruchomieniu (plik bez podpisu): „Więcej informacji” → „Uruchom mimo to”.
 

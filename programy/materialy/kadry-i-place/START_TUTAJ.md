@@ -15,10 +15,11 @@
 - zamknąć rok (PIT-4R, PIT-11, ZFŚS, PFRON) i przygotować firmę do kontroli PIP/ZUS z procedurami 2026/2027
 
 ## Pierwsze 30 minut (krok po kroku)
-1. **Rozpakuj ZIP** do zwykłego folderu, np. `C:\Users\<Ty>\Mentor` (ścieżka może mieć spacje i polskie znaki). Nie uruchamiaj z wnętrza archiwum.
-2. **Sprawdź środowisko (opcjonalnie):** kliknij dwukrotnie `SPRAWDZ_SRODOWISKO.bat` — wypisze po polsku, co wykrył; niczego nie zmienia.
-3. **Uruchom Mentora:** `URUCHOM_KURS.bat` albo `Mentor.exe` (Windows może zapytać „Czy chcesz uruchomić?” — plik nie jest podpisany certyfikatem; wybierz „Więcej informacji → Uruchom mimo to”). Alternatywa z Pythonem: `python mentor.py`.
-4. **W Mentorze:** Ustawienia → Program nauczania → „Kadry i płace — kurs zaawansowany (praktyka 2026)” (jest wbudowany; `kurs_mentor.json` w tej paczce to ten sam plik — użyj „Wgraj program z pliku…” tylko na innym komputerze z Mentorem bez tego kursu).
+Kurs **nie jest wbudowany w Mentora** — to osobna paczka, którą wgrywasz sam(a), kiedy chcesz zacząć.
+1. **Zainstaluj Mentora** (2.8.1 lub nowszy, paczka `Mentor-windows.zip`): rozpakuj do zwykłego folderu, np. `C:\Users\<Ty>\Mentor` (ścieżka może mieć spacje i polskie znaki), i uruchom `Mentor.exe` (Windows może zapytać „Czy chcesz uruchomić?” — plik nie jest podpisany certyfikatem; wybierz „Więcej informacji → Uruchom mimo to”).
+2. **Wgraj kurs: Ustawienia → Program nauczania → „📦 Importuj kurs ZIP…”** → wybierz plik `Kadry-i-place-kurs.zip` (nie musisz go rozpakowywać). Mentor najpierw pokaże podgląd — nazwę, wersję, liczbę lekcji i zadań, listę skryptów, których **nie uruchamia** — a po Twojej zgodzie rozpakuje kurs do swojego katalogu danych i przełączy się na niego.
+3. **Sprawdź (opcjonalnie):** jeśli rozpakowałeś(-aś) też ten ZIP, `SPRAWDZ_SRODOWISKO.bat` wypisze po polsku, co wykrył; niczego nie zmienia. (Sam `kurs_mentor.json` przez „Importuj JSON…” nie wystarczy — bez paczki Mentor nie ma materiałów kursu.)
+4. **W Mentorze:** Ustawienia → Program nauczania pokazuje „Kadry i płace — kurs zaawansowany (praktyka 2026)”, a Plan — 16 tygodni.
 5. **Przewodnik „Jak zacząć”** otworzy się sam: wpisz imię, **„Wybierz katalog…”** (utwórz folder `kadry-praktyka` w Dokumentach) i kliknij **„Skopiuj materiały kursu do katalogu projektu”** — to skopiuje do Twojego folderu: START_TUTAJ.md, `cwiczenia/`, `przyklady/`, `rozwiazania/`, `pomoc/`, `lekcje/`. (To samo zrobi `INSTALACJA.bat`, jeśli wolisz poza Mentorem.)
 6. **Diagnoza na start** (Panel → Pierwsze kroki → Diagnoza; 10 pytań, 5 minut, nie blokuje nauki) — wynik wskaże lekcje, przy których warto zwolnić.
 7. **Lekcje → pierwsza lekcja** „Start: jak uczyć się z tego programu” (15 minut) → test 3 pytań.

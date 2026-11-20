@@ -9,13 +9,10 @@ a = Analysis(
     pathex=["."],
     binaries=[],
     datas=[
-        ("programy/python-junior-qa.json", "programy"),
-        ("programy/kadry-i-place.json", "programy"),
-        ("programy/vibe-coding.json", "programy"),
+        ("programy/python-junior-qa.json", "programy"),          # jedyny wbudowany program; inne kursy = osobne paczki ZIP (Importuj kurs ZIP…)
         ("programy/szablon-programu.json", "programy"),
         ("programy/FORMAT.md", "programy"),
         ("programy/STANDARD_KURSOW.md", "programy"),
-        ("programy/materialy", "programy/materialy"),
         ("programy/zaleznosci", "programy/zaleznosci"),      # requirements.lock z sumami SHA-256 (instalacja bibliotek kursu)
         ("srodowisko_testy", "srodowisko_testy"),            # testy końcowe środowiska: pytest, lokalne API, Selenium + strona HTML
         ("mentor.ico", "."),

@@ -1,5 +1,18 @@
 # Zmiany w Mentorze
 
+## 2.9.1 — kursy nie są wbudowane w Mentora
+
+- **Mentor zawiera tylko domyślny program** „Python od zera → Junior QA”. Kursy „Kadry i płace” i „Vibe coding od podstaw” nie są już w `Mentor.exe`
+  ani w `Mentor-windows.zip` — to osobne paczki z wydania (`Kadry-i-place-kurs.zip`, `Vibe-coding-kurs.zip`), które uczeń wgrywa sam:
+  Ustawienia → Program nauczania → **📦 Importuj kurs ZIP…** (podgląd, zgoda, bezpieczne rozpakowanie do `kursy/<id>/`, skrypty z paczki nigdy nie są uruchamiane).
+- Obie paczki mają `mentor-manifest.json` (schemat `mentor-course/1`): podgląd pokazuje manifest i prawdziwe wymagania (kurs kadrowy — bez Pythona i bibliotek;
+  vibe coding — Python, pytest/flask/requests, opcjonalnie Git, Claude Code, Codex od właściwych tygodni).
+- `START_TUTAJ.md` obu kursów i skrypty `.bat` prowadzą przez import ZIP zamiast wyboru „wbudowanego” kursu.
+- Kursy zaimportowane lub rozpakowane wcześniej (2.9.0) i postępy zostają bez zmian — Mentor niczego nie usuwa.
+- Kontrola wydania: `programy/zrodla/sprawdz_paczki.py` (CI) — `Mentor-windows.zip` bez kursów; każda paczka kursu importuje się do pustego katalogu danych,
+  materiały i weryfikatory są brane z `kursy/<id>/paczka`, sumy SHA-256 zgodne. Testy: `test_kursy_nie_sa_wbudowane_w_mentora`, `test_paczka_kursu_importuje_sie_z_zip`,
+  test end-to-end kursu vibe przez import ZIP.
+
 ## 2.9.0 — nowy kurs „Vibe coding od podstaw” (16 tygodni, Claude Code + Codex) i konfigurowalny Warsztat
 
 - **Kurs „Vibe coding od podstaw” 1.0** (`programy/vibe-coding.json`, źródła `programy/zrodla/vibe_coding/`): dla osoby zaczynającej od zera — pliki, terminal,

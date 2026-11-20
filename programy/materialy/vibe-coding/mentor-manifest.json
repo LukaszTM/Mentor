@@ -1,0 +1,48 @@
+{
+ "schema": "mentor-course/1",
+ "course_id": "vibe-coding",
+ "version": "1.0",
+ "entrypoint": "kurs_mentor.json",
+ "title": "Vibe coding od podstaw",
+ "mentor_min": "2.9.0",
+ "requirements": {
+  "python": ">=3.11,<3.14",
+  "python_packages": [
+   "pytest",
+   "requests",
+   "flask"
+  ],
+  "required_tools": [],
+  "optional_tools": [
+   {
+    "name": "git",
+    "from_week": 6
+   },
+   {
+    "name": "claude",
+    "from_week": 4
+   },
+   {
+    "name": "codex",
+    "from_week": 4
+   }
+  ]
+ },
+ "checks": [
+  {
+   "kind": "python_import",
+   "module": "pytest"
+  },
+  {
+   "kind": "python_import",
+   "module": "requests"
+  },
+  {
+   "kind": "python_import",
+   "module": "flask"
+  },
+  {
+   "kind": "pytest_sample"
+  }
+ ]
+}

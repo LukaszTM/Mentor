@@ -154,10 +154,11 @@ START_TUTAJ = """# START TUTAJ — Kadry i płace: kurs zaawansowany (praktyka 2
 {umiejetnosci}
 
 ## Pierwsze 30 minut (krok po kroku)
-1. **Rozpakuj ZIP** do zwykłego folderu, np. `C:\\Users\\<Ty>\\Mentor` (ścieżka może mieć spacje i polskie znaki). Nie uruchamiaj z wnętrza archiwum.
-2. **Sprawdź środowisko (opcjonalnie):** kliknij dwukrotnie `SPRAWDZ_SRODOWISKO.bat` — wypisze po polsku, co wykrył; niczego nie zmienia.
-3. **Uruchom Mentora:** `URUCHOM_KURS.bat` albo `Mentor.exe` (Windows może zapytać „Czy chcesz uruchomić?” — plik nie jest podpisany certyfikatem; wybierz „Więcej informacji → Uruchom mimo to”). Alternatywa z Pythonem: `python mentor.py`.
-4. **W Mentorze:** Ustawienia → Program nauczania → „Kadry i płace — kurs zaawansowany (praktyka 2026)” (jest wbudowany; `kurs_mentor.json` w tej paczce to ten sam plik — użyj „Wgraj program z pliku…” tylko na innym komputerze z Mentorem bez tego kursu).
+Kurs **nie jest wbudowany w Mentora** — to osobna paczka, którą wgrywasz sam(a), kiedy chcesz zacząć.
+1. **Zainstaluj Mentora** (2.8.1 lub nowszy, paczka `Mentor-windows.zip`): rozpakuj do zwykłego folderu, np. `C:\\Users\\<Ty>\\Mentor` (ścieżka może mieć spacje i polskie znaki), i uruchom `Mentor.exe` (Windows może zapytać „Czy chcesz uruchomić?” — plik nie jest podpisany certyfikatem; wybierz „Więcej informacji → Uruchom mimo to”).
+2. **Wgraj kurs: Ustawienia → Program nauczania → „📦 Importuj kurs ZIP…”** → wybierz plik `Kadry-i-place-kurs.zip` (nie musisz go rozpakowywać). Mentor najpierw pokaże podgląd — nazwę, wersję, liczbę lekcji i zadań, listę skryptów, których **nie uruchamia** — a po Twojej zgodzie rozpakuje kurs do swojego katalogu danych i przełączy się na niego.
+3. **Sprawdź (opcjonalnie):** jeśli rozpakowałeś(-aś) też ten ZIP, `SPRAWDZ_SRODOWISKO.bat` wypisze po polsku, co wykrył; niczego nie zmienia. (Sam `kurs_mentor.json` przez „Importuj JSON…” nie wystarczy — bez paczki Mentor nie ma materiałów kursu.)
+4. **W Mentorze:** Ustawienia → Program nauczania pokazuje „Kadry i płace — kurs zaawansowany (praktyka 2026)”, a Plan — 16 tygodni.
 5. **Przewodnik „Jak zacząć”** otworzy się sam: wpisz imię, **„Wybierz katalog…”** (utwórz folder `kadry-praktyka` w Dokumentach) i kliknij **„Skopiuj materiały kursu do katalogu projektu”** — to skopiuje do Twojego folderu: START_TUTAJ.md, `cwiczenia/`, `przyklady/`, `rozwiazania/`, `pomoc/`, `lekcje/`. (To samo zrobi `INSTALACJA.bat`, jeśli wolisz poza Mentorem.)
 6. **Diagnoza na start** (Panel → Pierwsze kroki → Diagnoza; 10 pytań, 5 minut, nie blokuje nauki) — wynik wskaże lekcje, przy których warto zwolnić.
 7. **Lekcje → pierwsza lekcja** „Start: jak uczyć się z tego programu” (15 minut) → test 3 pytań.
@@ -232,7 +233,7 @@ if exist "%TU%Mentor.exe" (
 )
 rem --- kurs
 if exist "%TU%programy\kadry-i-place.json" (echo [3] Plik kursu programy\kadry-i-place.json: JEST) else (
-    if exist "%TU%kurs_mentor.json" (echo [3] Plik kursu kurs_mentor.json: JEST ^(wgraj w Mentorze: Ustawienia - Wgraj program z pliku^)) else (echo [3] Plik kursu: BRAK & set BRAK=1))
+    if exist "%TU%kurs_mentor.json" (echo [3] Plik kursu kurs_mentor.json: JEST ^(wgraj w Mentorze caly ZIP: Ustawienia - Importuj kurs ZIP^)) else (echo [3] Plik kursu: BRAK & set BRAK=1))
 rem --- materialy
 set "MAT=%TU%programy\materialy\kadry-i-place"
 if not exist "%MAT%\START_TUTAJ.md" set "MAT=%TU%"
@@ -330,7 +331,7 @@ if exist "%TU%mentor.py" (
     python "%TU%mentor.py"
     exit /b %errorlevel%
 )
-echo Nie znaleziono Mentor.exe w folderze "%TU%". Rozpakuj caly ZIP do jednego folderu.
+echo Nie znaleziono Mentor.exe w folderze "%TU%". Uruchom Mentora i wgraj kurs: Ustawienia - Program nauczania - Importuj kurs ZIP - plik Kadry-i-place-kurs.zip.
 pause
 exit /b 1
 """
@@ -451,7 +452,7 @@ def _pomoc(d):
 
 ## Aktualizacja kursu / Mentora
 - Nowa wersja ZIP: rozpakuj do NOWEGO folderu, skopiuj do niego `mentor_dane.json` ze starego. Id zadań i lekcji są stałe — postępy pasują.
-- Import nowej wersji kursu plikiem (Ustawienia → Wgraj program z pliku) nie usuwa postępów; stary plik kursu możesz usunąć z `programy/`.
+- Import nowej wersji kursu (Ustawienia → „📦 Importuj kurs ZIP…” → nowszy `Kadry-i-place-kurs.zip`) nie usuwa postępów — są zapisane pod identyfikatorem kursu.
 
 ## Odinstalowanie
 - Mentor nie instaluje się w systemie: usuń folder paczki. Katalog projektu i kopia `mentor_dane.json` zostają, jeśli chcesz.
@@ -576,15 +577,19 @@ def zbuduj_materialy():
     _w("ZRODLA.md", "\n".join(zr))
     shutil.copy(ZRODLO, CEL / "kurs_mentor.json")
     shutil.copy(TU / "RAPORT_CHECKLISTA.md", CEL / "RAPORT_CHECKLISTA.md")
+    # mentor-manifest.json (schemat mentor-course/1) — czytany przez Mentora przy „Importuj kurs ZIP…”; kurs nie potrzebuje Pythona ani bibliotek
+    _w("mentor-manifest.json", json.dumps({"schema": "mentor-course/1", "course_id": d["id"], "version": d["wersja"], "entrypoint": "kurs_mentor.json",
+                                           "title": d["nazwa"], "mentor_min": "2.8.1", "requirements": {"required_tools": [], "optional_tools": []}, "checks": []},
+                                          ensure_ascii=False, indent=1))
     # manifest z sumami kontrolnymi (bez samego manifestu)
     pliki = {}
     for p in sorted(CEL.rglob("*")):
         if p.is_file() and p.name != "manifest.json":
             pliki[p.relative_to(CEL).as_posix()] = hashlib.sha256(p.read_bytes()).hexdigest()
     manifest = {"kurs": d["id"], "nazwa": d["nazwa"], "wersja": d["wersja"], "format": d["format"], "stan_prawny": d["stan_prawny"],
-                "mentor_min": "2.5.0", "liczby": {"tygodnie": len(d["tygodnie"]), "lekcje": n, "zadania": sum(len(w["zadania"]) for w in d["tygodnie"]),
+                "mentor_min": "2.8.1", "liczby": {"tygodnie": len(d["tygodnie"]), "lekcje": n, "zadania": sum(len(w["zadania"]) for w in d["tygodnie"]),
                                                   "cwiczenia": licz["cwiczenia"], "quizy": sum(len(v) for v in d["quizy"].values()), "diagnoza": len(d["diagnoza"])},
-                "struktura": ["START_TUTAJ.md", "ZRODLA.md", "SPRAWDZ_SRODOWISKO.bat", "INSTALACJA.bat", "URUCHOM_KURS.bat", "kurs_mentor.json", "manifest.json", "instalatory/", "lekcje/", "przyklady/", "cwiczenia/", "rozwiazania/", "projekty/", "testy/", "pomoc/"],
+                "struktura": ["START_TUTAJ.md", "ZRODLA.md", "SPRAWDZ_SRODOWISKO.bat", "INSTALACJA.bat", "URUCHOM_KURS.bat", "kurs_mentor.json", "mentor-manifest.json", "manifest.json", "instalatory/", "lekcje/", "przyklady/", "cwiczenia/", "rozwiazania/", "projekty/", "testy/", "pomoc/"],
                 "licencja": "materiały kursu — do użytku z Mentorem; dane fikcyjne; brak plików firm trzecich, kluczy i danych prywatnych",
                 "pliki": pliki}
     _w("manifest.json", json.dumps(manifest, ensure_ascii=False, indent=1))

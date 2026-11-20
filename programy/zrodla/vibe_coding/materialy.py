@@ -111,9 +111,10 @@ START = """# START TUTAJ — Vibe coding od podstaw
 {umiejetnosci}
 
 ## Pierwsze 30 minut
-1. **Rozpakuj ZIP** do zwykłego folderu (nie pracuj „w środku” archiwum).
-2. **Uruchom Mentora** (`URUCHOM_KURS.bat` albo `Mentor.exe`). Windows może zapytać o uruchomienie niepodpisanego programu: „Więcej informacji → Uruchom mimo to”.
-3. **Ustawienia → Program nauczania → „Vibe coding od podstaw”** (kurs jest wbudowany; `kurs_mentor.json` to ten sam plik — „Wgraj program z pliku…” tylko na komputerze bez tego kursu).
+Kurs **nie jest wbudowany w Mentora** — to osobna paczka, którą wgrywasz sam(a), kiedy chcesz zacząć.
+1. **Zainstaluj Mentora** (2.9.0 lub nowszy, paczka `Mentor-windows.zip`): rozpakuj do zwykłego folderu i uruchom `Mentor.exe`. Windows może zapytać o uruchomienie niepodpisanego programu: „Więcej informacji → Uruchom mimo to”.
+2. **Wgraj kurs: Ustawienia → Program nauczania → „📦 Importuj kurs ZIP…”** → wybierz plik `Vibe-coding-kurs.zip` (nie musisz go rozpakowywać). Mentor najpierw pokaże podgląd — nazwę, wersję, liczbę lekcji, wymagania i listę skryptów, których **nie uruchamia** — a po Twojej zgodzie rozpakuje kurs do swojego katalogu danych i przełączy się na niego.
+3. **Sprawdź:** Ustawienia → Program nauczania pokazuje „Vibe coding od podstaw”, a Plan — 16 tygodni. (Plik `kurs_mentor.json` sam, przez „Importuj JSON…”, nie wystarczy: bez paczki Mentor nie ma testów z `WERYFIKATORY/` i materiałów.)
 4. **Mój projekt → „📁 Utwórz katalog roboczy kursu”** (Dokumenty\\Mentor\\vibe-coding\\PRACA) → **„📂 Skopiuj materiały kursu tutaj”** (nic nie nadpisuje).
 5. **Środowisko → „⬇ Zainstaluj brakujące”** — Python i biblioteki kursu (pytest, flask, requests) w osobnym .venv, za Twoją zgodą.
 6. **Panel → Diagnoza** (10 pytań) → **Lekcje → „Jak uczyć się z tego kursu”** → **Plan → Tydzień 0**.
@@ -210,7 +211,7 @@ URUCHOM_BAT = r"""@echo off
 chcp 65001 >nul
 if exist "%~dp0..\Mentor.exe" (start "" "%~dp0..\Mentor.exe" & goto :eof)
 if exist "%~dp0Mentor.exe" (start "" "%~dp0Mentor.exe" & goto :eof)
-echo Nie znaleziono Mentor.exe obok paczki. Uruchom Mentora recznie i wybierz program „Vibe coding od podstaw”.
+echo Nie znaleziono Mentor.exe obok paczki. Uruchom Mentora i wgraj kurs: Ustawienia - Program nauczania - Importuj kurs ZIP - plik Vibe-coding-kurs.zip.
 pause
 """
 
@@ -236,6 +237,15 @@ print(f"Plików w manifeście: {len(m['pliki'])}, weryfikatorów: {len(integ)}, 
 print("OK — paczka kompletna" if not zle else "BŁĘDY:\\n" + "\\n".join(zle))
 sys.exit(1 if zle else 0)
 '''
+
+
+def manifest_importu(d):
+    """mentor-manifest.json (schemat mentor-course/1): Mentor czyta go przy „Importuj kurs ZIP…” — id, wersja, plik kursu, wymagania środowiska."""
+    s = d["srodowisko"]
+    return {"schema": "mentor-course/1", "course_id": d["id"], "version": d["wersja"], "entrypoint": "kurs_mentor.json", "title": d["nazwa"], "mentor_min": "2.9.0",
+            "requirements": {"python": s["python"], "python_packages": list(s["pakiety"]), "required_tools": list(s.get("narzedzia_wymagane") or []),
+                             "optional_tools": [{"name": k, "from_week": v} for k, v in s["narzedzia_opcjonalne"].items()]},
+            "checks": list(s.get("sprawdzenia") or [])}
 
 
 def zbuduj_materialy():
@@ -291,11 +301,12 @@ def zbuduj_materialy():
     _w("ZRODLA.md", "\n".join(zr) + "\n")
     shutil.copyfile(ZRODLO, CEL / "kurs_mentor.json")
     shutil.copyfile(TU / "RAPORT_CHECKLISTA.md", CEL / "RAPORT_CHECKLISTA.md")
+    _w("mentor-manifest.json", json.dumps(manifest_importu(d), ensure_ascii=False, indent=1))
     pliki = {p.relative_to(CEL).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(CEL.rglob("*")) if p.is_file() and p.name != "manifest.json"}
     manifest = {"kurs": d["id"], "nazwa": d["nazwa"], "wersja": d["wersja"], "format": d["format"], "stan_prawny": d["stan_prawny"], "mentor_min": "2.9.0",
                 "liczby": {"tygodnie": len(d["tygodnie"]), "lekcje": n, "zadania": sum(len(w["zadania"]) for w in d["tygodnie"]), "cwiczenia": licz["cwiczenia"],
                            "quizy": sum(len(v) for v in d["quizy"].values()), "diagnoza": len(d["diagnoza"]), "weryfikatory": len(integ)},
-                "struktura": ["START_TUTAJ.md", "ZRODLA.md", "INTEGRITY.json", "kurs_mentor.json", "manifest.json", "pytest.ini", "lekcje/", "przyklady/", "cwiczenia/", "rozwiazania/",
+                "struktura": ["START_TUTAJ.md", "ZRODLA.md", "INTEGRITY.json", "kurs_mentor.json", "mentor-manifest.json", "manifest.json", "pytest.ini", "lekcje/", "przyklady/", "cwiczenia/", "rozwiazania/",
                               "dane/", "WERYFIKATORY/", "pomoc/", "testy/"],
                 "licencja": "materiały kursu — do użytku z Mentorem; dane fikcyjne; brak plików firm trzecich, kluczy i danych prywatnych",
                 "pliki": pliki}

@@ -34,6 +34,8 @@ def przygotuj_wzorzec(cel):
     """Kopia wzorców jako repozytorium Git z historią podobną do pracy kursanta (commity, origin/main)."""
     cel = Path(cel)
     shutil.copytree(TU / "wzorce", cel, dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__"))
+    for f in ("notatki", "dane", "raporty"):              # puste foldery nie trafiają do Gita — tworzone jak u kursanta (mkdir)
+        (cel / f).mkdir(exist_ok=True)
     _git(cel, "init", "-q", "-b", "main")
     kal = (cel / "kalendarz.py").read_text(encoding="utf-8")
     czesci = kal.split("\n\n\n")

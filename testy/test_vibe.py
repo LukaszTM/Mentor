@@ -84,14 +84,14 @@ def test_typowe_pomylki_sa_rozpoznawane(vibe):
                     assert ok is False and info == b["komunikat"], (l["id"], p["id"], b, info)
 
 
-def test_kod_z_lekcji_daje_podane_wyjscie(zrodla):
+def test_kod_z_lekcji_daje_podane_wyjscie(zrodla, srodowisko_kursu):
     import wspolne
     import zbuduj  # noqa: F401  (rejestruje kod ze wszystkich lekcji)
     assert len(wspolne.KOD_DO_SPRAWDZENIA) >= 15
     for gdzie, kod, oczekiwane in wspolne.KOD_DO_SPRAWDZENIA:
         if oczekiwane is None:
             continue
-        p = subprocess.run([sys.executable, "-X", "utf8", "-c", kod], capture_output=True, text=True, encoding="utf-8", timeout=60)
+        p = subprocess.run([str(srodowisko_kursu.python_venv()), "-X", "utf8", "-c", kod], capture_output=True, text=True, encoding="utf-8", timeout=60)
         assert p.stdout.replace("\r\n", "\n") == oczekiwane, (gdzie, p.stdout, p.stderr[-500:])
 
 

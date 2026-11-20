@@ -1,0 +1,4 @@
+body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 0 auto; padding: 1rem; line-height: 1.5; }
+img { max-width: 100%; height: auto; }
+form { display: grid; gap: .5rem; max-width: 100%; }
+@media (min-width: 600px) { body { padding: 2rem; } }

@@ -28,10 +28,14 @@ jobs:
           python programy/zrodla/python_junior_qa/zbuduj.py
           python programy/zrodla/kadry_i_place/zbuduj.py
           python programy/zrodla/kadry_i_place/materialy.py
+          python programy/zrodla/vibe_coding/zbuduj.py
+          python programy/zrodla/vibe_coding/materialy.py
       - name: Test importu i walidacji programu
-        run: python -c "import program; [print(f, program.wczytaj(f) or 'OK') for f in ('programy/python-junior-qa.json', 'programy/kadry-i-place.json')]"
+        run: python -c "import program; [print(f, program.wczytaj(f) or 'OK') for f in ('programy/python-junior-qa.json', 'programy/kadry-i-place.json', 'programy/vibe-coding.json')]"
       - name: Test paczki materiałów (STANDARD §10 — import, pliki, sumy kontrolne)
-        run: python programy/materialy/kadry-i-place/testy/sprawdz_kurs.py
+        run: |
+          python programy/materialy/kadry-i-place/testy/sprawdz_kurs.py
+          python programy/materialy/vibe-coding/testy/sprawdz_kurs.py
       - name: Testy pytest (ZIP, środowiska, instalacja .venv z locka, testy końcowe z Edge, ćwiczenia, GUI)
         shell: pwsh
         env:
@@ -66,6 +70,8 @@ jobs:
           New-Item -ItemType Directory -Path pakiet\kurs | Out-Null
           Copy-Item -Recurse $mat pakiet\kurs\Kadry-i-place
           Compress-Archive -Path pakiet\kurs\Kadry-i-place -DestinationPath Kadry-i-place-kurs.zip
+          Copy-Item -Recurse "programy\materialy\vibe-coding" pakiet\kurs\Vibe-coding
+          Compress-Archive -Path pakiet\kurs\Vibe-coding -DestinationPath Vibe-coding-kurs.zip
       - uses: actions/upload-artifact@v4
         with:
           name: Mentor-windows
@@ -73,6 +79,7 @@ jobs:
             dist/Mentor.exe
             Mentor-windows.zip
             Kadry-i-place-kurs.zip
+            Vibe-coding-kurs.zip
       - name: Release (najnowsza wersja)
         if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
@@ -86,6 +93,10 @@ jobs:
             Pobierz **`Mentor-windows.zip`** (zalecane: exe + README + programy + paczka materiałów kursu kadrowego: START_TUTAJ.md, SPRAWDZ_SRODOWISKO.bat, INSTALACJA.bat, URUCHOM_KURS.bat, ćwiczenia, rozwiązania, pomoc)
             albo `Mentor.exe` (sam program; przy pierwszym uruchomieniu rozpakuje wbudowane programy i materiały do folderu `programy/` obok siebie).
             `Kadry-i-place-kurs.zip` — sam kurs (kurs_mentor.json + materiały) do wgrania w innym Mentorze lub do czytania offline.
+            `Vibe-coding-kurs.zip` — kurs „Vibe coding od podstaw” (16 tygodni, Claude Code + Codex): materiały, niezależne testy zadań (WERYFIKATORY), rozwiązania wzorcowe.
+
+            **Nowe (2.9):** wbudowany kurs **„Vibe coding od podstaw”** — od plików i terminala do własnej aplikacji z agentami AI: specyfikacja, testy, Git i GitHub,
+            przegląd zmian agenta, bezpieczeństwo, prawo, CI, praca z klientem i projekt końcowy; zadania sprawdzane niezależnymi testami, ścieżka bez płatnego konta.
 
             Windows SmartScreen może ostrzec przy pierwszym uruchomieniu (plik bez podpisu): „Więcej informacji” → „Uruchom mimo to”.
 
@@ -97,3 +108,4 @@ jobs:
             dist/Mentor.exe
             Mentor-windows.zip
             Kadry-i-place-kurs.zip
+            Vibe-coding-kurs.zip

@@ -1,0 +1,8 @@
+ Volume in drive C has no label.
+ Directory of C:\Users\Anna\Documents\Mentor\vibe-coding\PRACA
+
+23.11.2026  19:02    <DIR>          .
+23.11.2026  19:02    <DIR>          dane
+23.11.2026  19:02    <DIR>          notatki
+23.11.2026  19:05    <DIR>          raporty
+CMD: zachęta bez PS; PowerShell: zachęta zaczyna się od PS

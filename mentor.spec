@@ -11,6 +11,7 @@ a = Analysis(
     datas=[
         ("programy/python-junior-qa.json", "programy"),
         ("programy/kadry-i-place.json", "programy"),
+        ("programy/vibe-coding.json", "programy"),
         ("programy/szablon-programu.json", "programy"),
         ("programy/FORMAT.md", "programy"),
         ("programy/STANDARD_KURSOW.md", "programy"),

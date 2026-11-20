@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pod Lipą — agroturystyka i kalkulator pobytu</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <h1>Pod Lipą</h1>
+  <section><h2>O nas</h2><p>Gospodarstwo agroturystyczne (dane fikcyjne, projekt szkoleniowy).</p>
+    <img src="img/lipa.jpg" alt="Drewniany dom pod rozłożystą lipą, przed nim ławka"></section>
+  <section><h2>Pokoje</h2><p>Lipowy, Dębowy, Klonowy.</p></section>
+  <section><h2>Kalkulator pobytu</h2>
+    <form id="kalkulator">
+      <label for="noce">Liczba nocy</label>
+      <input id="noce" name="noce" type="number" min="1" value="2">
+      <label for="osoby">Liczba osób</label>
+      <input id="osoby" name="osoby" type="number" min="1" value="2">
+      <button type="submit">Policz koszt</button>
+    </form>
+    <p id="wynik" aria-live="polite"></p>
+  </section>
+  <section><h2>Kontakt</h2><p>kontakt@pod-lipa.example</p></section>
+  <script src="kalkulator.js"></script>
+</body>
+</html>

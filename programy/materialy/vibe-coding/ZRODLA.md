@@ -1,0 +1,112 @@
+# Źródła kursu — sprawdzone materiały
+
+Każda pozycja: tytuł, data dostępu, adres. Materiały zagraniczne streszczono i przetłumaczono w lekcjach.
+
+- Collins: „vibe coding” słowem roku 2025; cytat A. Karpathy’ego z lutego 2025 (tech.co, 6.11.2025) (dostęp 19.11.2026) — <https://tech.co/news/vibe-coding-word-of-year-2025>
+- Stack Overflow Developer Survey 2025 — AI (84% używa, 46% nie ufa dokładności) (dostęp 19.11.2026) — <https://survey.stackoverflow.co/2025/ai>
+- METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX) (dostęp 19.11.2026) — <https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/>
+- Claude Code — przewodnik po terminalu dla nowych użytkowników (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/terminal-guide>
+- Anthropic — Prompt engineering overview (dokumentacja Claude) (dostęp 19.11.2026) — <https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview>
+- Python — moduł statistics (lista funkcji, oficjalna dokumentacja) (dostęp 19.11.2026) — <https://docs.python.org/3/library/statistics.html>
+- Cloud Security Alliance — slopsquatting i halucynowane paczki (omówienie badania USENIX Security 2025) (dostęp 19.11.2026) — <https://labs.cloudsecurityalliance.org/research/csa-research-note-slopsquatting-ai-supply-chain-20260419/>
+- Microsoft — Jak pokazać rozszerzenia nazw plików w Eksploratorze plików (dostęp 19.11.2026) — <https://support.microsoft.com/windows/common-file-name-extensions-in-windows-da4a4430-8e76-89c5-59f7-1cdbbc75cb01>
+- Microsoft Learn — polecenia wiersza poleceń Windows (cd, dir, mkdir, type) (dostęp 19.11.2026) — <https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands>
+- Claude Code — instalacja i wymagania systemowe (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/setup>
+- Python — oficjalny tutorial (python.org, wersja polskojęzyczna częściowo; tłumaczenie robocze w lekcji) (dostęp 19.11.2026) — <https://docs.python.org/3/tutorial/>
+- Python — używanie Pythona w Windows (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://docs.python.org/3/using/windows.html>
+- Python — venv: środowiska wirtualne (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://docs.python.org/3/library/venv.html>
+- Python tutorial — 3. An Informal Introduction to Python (liczby, napisy) (dostęp 19.11.2026) — <https://docs.python.org/3/tutorial/introduction.html>
+- Python tutorial — 4.1 if Statements (dostęp 19.11.2026) — <https://docs.python.org/3/tutorial/controlflow.html>
+- Python tutorial — 4.8 Defining Functions (def, return) (dostęp 19.11.2026) — <https://docs.python.org/3/tutorial/controlflow.html#defining-functions>
+- Python tutorial — 5. Data Structures (listy, słowniki) (dostęp 19.11.2026) — <https://docs.python.org/3/tutorial/datastructures.html>
+- Python — Błędy i wyjątki (oficjalny tutorial, rozdz. 8) (dostęp 19.11.2026) — <https://docs.python.org/3/tutorial/errors.html>
+- Python — Built-in Exceptions (lista wyjątków i ich znaczenie) (dostęp 19.11.2026) — <https://docs.python.org/3/library/exceptions.html>
+- Claude Code — Best practices (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/best-practices>
+- Anthropic — Be clear, direct, and detailed (dokumentacja Claude) (dostęp 19.11.2026) — <https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct>
+- Anthropic — Use examples (multishot prompting) (dokumentacja Claude) (dostęp 19.11.2026) — <https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/multishot-prompting>
+- OpenAI — Prompt engineering guide (dokumentacja platformy) (dostęp 19.11.2026) — <https://platform.openai.com/docs/guides/prompt-engineering>
+- Atlassian — Acceptance criteria: definicja i przykłady (tłumaczenie robocze) (dostęp 19.11.2026) — <https://www.atlassian.com/work-management/project-management/acceptance-criteria>
+- Claude Help Center — Using Claude Code with your Pro or Max plan (dostęp 19.11.2026) — <https://support.claude.com/en/articles/14552983>
+- Ceny planów Claude 2026 — zestawienie (dupple.com, 2.11.2026) (dostęp 19.11.2026) — <https://dupple.com/learn/claude-code-pricing>
+- Codex — Pricing (plany ChatGPT i dostęp do Codex) (dostęp 19.11.2026) — <https://chatgpt.com/codex/pricing/>
+- Claude Code — Manage costs effectively (/usage, /context, /clear, /compact) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/costs>
+- OpenAI Codex CLI — README (instalacja, logowanie, licencja Apache-2.0) (dostęp 19.11.2026) — <https://cdn.jsdelivr.net/gh/openai/codex@main/README.md>
+- Codex — aplikacja na Windows (ChatGPT desktop, sandbox Windows, WSL2) (dostęp 19.11.2026) — <https://learn.chatgpt.com/docs/app/windows>
+- Codex — Permission modes (Ask for approval, Approve for me, Full access) (dostęp 19.11.2026) — <https://learn.chatgpt.com/docs/permission-modes>
+- Codex — Sandboxing (read-only, workspace-write, danger-full-access) (dostęp 19.11.2026) — <https://learn.chatgpt.com/docs/sandboxing?surface=cli>
+- Codex CLI — slash commands (/init, /diff, /status, /compact, /new, /review, /permissions) (dostęp 20.11.2026) — <https://developers.openai.com/codex/cli/slash-commands>
+- Claude Code — Permission modes (default, acceptEdits, plan, auto…) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/permission-modes>
+- Claude Code — Configure permissions (reguły allow/ask/deny, /permissions) (dostęp 20.11.2026) — <https://code.claude.com/docs/en/permissions>
+- Claude Code — Checkpointing (/rewind, Esc Esc) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/checkpointing>
+- Claude Code — How Claude remembers your project (CLAUDE.md, @import, AGENTS.md) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/memory>
+- Codex — Custom instructions with AGENTS.md (kolejność, limit 32 KiB) (dostęp 20.11.2026) — <https://learn.chatgpt.com/docs/agent-configuration/agents-md>
+- Pro Git (książka, wyd. 2, git-scm.com) — rozdz. 2: Podstawy Gita; dostępne tłumaczenie na polski (dostęp 19.11.2026) — <https://git-scm.com/book/pl/v2>
+- Git for Windows — pobieranie (git-scm.com) (dostęp 19.11.2026) — <https://git-scm.com/downloads/win>
+- GitHub Docs — Ignoring files (.gitignore) (dostęp 19.11.2026) — <https://docs.github.com/en/get-started/git-basics/ignoring-files>
+- Git — dokumentacja polecenia git restore (dostęp 19.11.2026) — <https://git-scm.com/docs/git-restore>
+- GitHub Docs — Quickstart for repositories (tworzenie repozytorium) (dostęp 19.11.2026) — <https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories>
+- GitHub Docs — Configuring two-factor authentication (dostęp 19.11.2026) — <https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication>
+- Git — dokumentacja polecenia git diff (dostęp 19.11.2026) — <https://git-scm.com/docs/git-diff>
+- Veracode — GenAI Code Security Report (30.07.2025): 45% próbek kodu z AI z lukami (dostęp 19.11.2026) — <https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/>
+- Python — datetime: date.fromisoformat (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://docs.python.org/3/library/datetime.html#datetime.date.fromisoformat>
+- pytest — Get started (oficjalna dokumentacja) (dostęp 20.11.2026) — <https://docs.pytest.org/en/stable/getting-started.html>
+- pytest — How to write and report assertions (pytest.raises) (dostęp 20.11.2026) — <https://docs.pytest.org/en/stable/how-to/assert.html>
+- pytest — Parametrizing tests (dostęp 20.11.2026) — <https://docs.pytest.org/en/stable/how-to/parametrize.html>
+- Python — pdb i breakpoint() (oficjalna dokumentacja) (dostęp 20.11.2026) — <https://docs.python.org/3/library/pdb.html>
+- Python FAQ — Why are default values shared between objects? (mutowalne wartości domyślne) (dostęp 20.11.2026) — <https://docs.python.org/3/faq/programming.html#why-are-default-values-shared-between-objects>
+- Python — datetime.strptime: kody formatu (%d, %m, %Y) (dostęp 20.11.2026) — <https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes>
+- Martin Fowler — Refactoring (definicja i katalog refaktoryzacji) (dostęp 20.11.2026) — <https://refactoring.com/>
+- PEP 8 — Style Guide for Python Code (dostęp 20.11.2026) — <https://peps.python.org/pep-0008/>
+- MDN — Podstawy HTML (Learn web development) (dostęp 20.11.2026) — <https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content>
+- MDN — Podstawy CSS i media queries (dostęp 20.11.2026) — <https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics>
+- MDN — Formularze w HTML (label, input) (dostęp 20.11.2026) — <https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms>
+- W3C — WCAG 2.2 w skrócie (Web Content Accessibility Guidelines) (dostęp 20.11.2026) — <https://www.w3.org/WAI/standards-guidelines/wcag/>
+- MDN — JavaScript: zdarzenia i DOM (Learn web development) (dostęp 20.11.2026) — <https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting>
+- MDN — Event.preventDefault() (dostęp 20.11.2026) — <https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault>
+- MDN — Node.textContent (różnica z innerHTML, bezpieczeństwo) (dostęp 20.11.2026) — <https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent>
+- GitHub Docs — What is GitHub Pages? / Quickstart (dostęp 20.11.2026) — <https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages>
+- GitHub Docs — GitHub Pages limits (1 GB, 100 GB/mies., 10 min) (dostęp 19.11.2026) — <https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits>
+- GitHub Docs — Configuring a publishing source for your GitHub Pages site (dostęp 20.11.2026) — <https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site>
+- Python — moduł csv (DictReader, delimiter) — oficjalna dokumentacja (dostęp 20.11.2026) — <https://docs.python.org/3/library/csv.html>
+- Python — moduł json (dump, load, ensure_ascii) (dostęp 20.11.2026) — <https://docs.python.org/3/library/json.html>
+- Python — pathlib (ścieżki niezależne od systemu) (dostęp 20.11.2026) — <https://docs.python.org/3/library/pathlib.html>
+- Flask — Quickstart (trasy, request.args, jsonify, tryb debug) (dostęp 20.11.2026) — <https://flask.palletsprojects.com/en/stable/quickstart/>
+- Flask — Application Factories (create_app) (dostęp 20.11.2026) — <https://flask.palletsprojects.com/en/stable/patterns/appfactories/>
+- Flask — Testing Flask Applications (test_client) (dostęp 20.11.2026) — <https://flask.palletsprojects.com/en/stable/testing/>
+- Flask — Deploying to Production (serwer deweloperski nie do produkcji) (dostęp 20.11.2026) — <https://flask.palletsprojects.com/en/stable/deploying/>
+- Python — sqlite3 (placeholders ?, ostrzeżenie o SQL injection) (dostęp 20.11.2026) — <https://docs.python.org/3/library/sqlite3.html>
+- OWASP — SQL Injection Prevention Cheat Sheet (dostęp 20.11.2026) — <https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html>
+- Requests — Quickstart (params, timeout, raise_for_status) (dostęp 20.11.2026) — <https://requests.readthedocs.io/en/latest/user/quickstart/>
+- Python — os.environ (zmienne środowiskowe) (dostęp 20.11.2026) — <https://docs.python.org/3/library/os.html#os.environ>
+- Microsoft Learn — setx (trwałe zmienne środowiskowe w Windows) (dostęp 20.11.2026) — <https://learn.microsoft.com/windows-server/administration/windows-commands/setx>
+- OWASP — Secrets Management Cheat Sheet (dostęp 20.11.2026) — <https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html>
+- Python — shutil.move i operacje na plikach (dostęp 20.11.2026) — <https://docs.python.org/3/library/shutil.html>
+- Microsoft Learn — schtasks create (Harmonogram zadań z wiersza poleceń) (dostęp 20.11.2026) — <https://learn.microsoft.com/windows-server/administration/windows-commands/schtasks-create>
+- OWASP Top 10 — najważniejsze ryzyka aplikacji webowych (dostęp 20.11.2026) — <https://owasp.org/www-project-top-ten/>
+- OWASP — Cross Site Scripting Prevention Cheat Sheet (dostęp 20.11.2026) — <https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html>
+- Flask — Security Considerations (XSS, autoescape, SECRET_KEY) (dostęp 20.11.2026) — <https://flask.palletsprojects.com/en/stable/web-security/>
+- OWASP Top 10 for LLM Applications 2025 (omówienie HackerOne) (dostęp 19.11.2026) — <https://www.hackerone.com/blog/owasp-top-10-llm-applications-2025>
+- PARP — Czy treści wygenerowane przez AI są chronione prawem autorskim? (13.05.2024) (dostęp 19.11.2026) — <https://www.parp.gov.pl/component/content/article/86541>
+- choosealicense.com — wybór licencji open source (GitHub) (dostęp 20.11.2026) — <https://choosealicense.com/>
+- UODO — RODO: zasady przetwarzania danych osobowych (art. 5) (dostęp 20.11.2026) — <https://uodo.gov.pl/pl/p/rodo>
+- AI Act po „Digital Omnibus” — rozporządzenie (UE) 2026/1744, harmonogram stosowania (actuia.com) (dostęp 19.11.2026) — <https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/>
+- Anthropic — Consumer Terms of Service (prawa do Outputs) (dostęp 20.11.2026) — <https://www.anthropic.com/legal/consumer-terms>
+- OpenAI — Terms of Use (własność Output) (dostęp 20.11.2026) — <https://openai.com/policies/terms-of-use/>
+- Działalność nierejestrowana 2026: limit 10 813,50 zł (money.pl) (dostęp 20.11.2026) — <https://direct.money.pl/artykuly/porady/dzialalnosc-nierejestrowana-2026-limit-10-813,50-zl,-po-przekroczeniu-7-dni-na-ceidg>
+- Google Engineering Practices — What to look for in a code review (dostęp 20.11.2026) — <https://google.github.io/eng-practices/review/reviewer/looking-for.html>
+- GitHub Docs — About pull requests (dostęp 20.11.2026) — <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>
+- GitHub Docs — About READMEs (dostęp 20.11.2026) — <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes>
+- Diátaxis — systematyczne podejście do dokumentacji technicznej (dostęp 20.11.2026) — <https://diataxis.fr/>
+- GitHub Docs — Building and testing Python (GitHub Actions) (dostęp 20.11.2026) — <https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python>
+- GitHub Docs — About billing for GitHub Actions (minuty, repozytoria publiczne) (dostęp 20.11.2026) — <https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions>
+- GitHub Docs — Workflow syntax for GitHub Actions (dostęp 20.11.2026) — <https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions>
+- Atlassian — User stories: przykłady i szablon (tłumaczenie robocze) (dostęp 20.11.2026) — <https://www.atlassian.com/agile/project-management/user-stories>
+- GitHub Docs — Managing your profile README (dostęp 20.11.2026) — <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme>
+- GitHub Docs — Pinning items to your profile (dostęp 20.11.2026) — <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile>
+- MIT Career Advising — The STAR method for behavioral interviews (dostęp 20.11.2026) — <https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/>
+- Semantic Versioning 2.0.0 (semver.org, wersja polska) (dostęp 20.11.2026) — <https://semver.org/lang/pl/>
+- Keep a Changelog (wersja polska) (dostęp 20.11.2026) — <https://keepachangelog.com/pl/1.1.0/>
+- GitHub Docs — About releases (tagi i wydania) (dostęp 20.11.2026) — <https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases>
+- Atlassian — Retrospektywa: jak ją przeprowadzić (dostęp 20.11.2026) — <https://www.atlassian.com/team-playbook/plays/retrospective>
+- Rozporządzenie (UE) 2024/1689 — AI Act (EUR-Lex) (dostęp 20.11.2026) — <https://eur-lex.europa.eu/eli/reg/2024/1689/oj>
+- GitHub — Codex CLI (openai/codex) (dostęp 19.11.2026) — <https://github.com/openai/codex>

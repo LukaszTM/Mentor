@@ -888,9 +888,9 @@ class Mentor(tk.Tk):
         if P.narzedzia:
             z, k = karta(w, tytul="Warsztat · wszystko w jednym miejscu — bez kont, instalacji i arkuszy")
             z.pack(fill="x", padx=28, pady=(12, 0))
-            nazwy = [n[2] for n in warsztat.NARZEDZIA if n[0] in P.narzedzia]
-            etykieta(k, "Zadania, które w prawdziwej pracy robi się w zewnętrznych systemach (eZUS, Płatnik, e-Urząd) albo w arkuszu, tu wykonujesz w zakładce Warsztat: "
-                     + ", ".join(nazwy) + ". Każde narzędzie pokazuje obliczenie krok po kroku i ma przycisk „Zapisz do projektu”. Zasada kursu: najpierw liczysz sam, potem sprawdzasz w Warsztacie.", 10, wrap=W).pack(fill="x")
+            nazwy = [n[2] for n in warsztat.narzedzia_programu()]
+            etykieta(k, warsztat.opis_warsztatu().get("start") or ("Zadania, które w prawdziwej pracy robi się w zewnętrznych systemach (eZUS, Płatnik, e-Urząd) albo w arkuszu, tu wykonujesz w zakładce Warsztat: "
+                     + ", ".join(nazwy) + ". Każde narzędzie pokazuje obliczenie krok po kroku i ma przycisk „Zapisz do projektu”. Zasada kursu: najpierw liczysz sam, potem sprawdzasz w Warsztacie."), 10, wrap=W).pack(fill="x")
             przycisk(k, "🧰 Otwórz Warsztat", lambda: self.pokaz("warsztat"), "drugi").pack(anchor="w", pady=(8, 0))
 
         # krok 4 — asystent
@@ -1896,7 +1896,7 @@ class Mentor(tk.Tk):
         lewa = tk.Frame(cialo, bg=K["tlo"], width=190)
         lewa.pack(side="left", fill="y")
         lewa.pack_propagate(False)
-        dostepne = [n for n in warsztat.NARZEDZIA if n[0] in P.narzedzia]
+        dostepne = warsztat.narzedzia_programu()
         if not dostepne:
             etykieta(cialo, "Ten program nie ma narzędzi Warsztatu.", 11, kolor=K["szary"]).pack(fill="x", padx=16)
             return
@@ -1984,7 +1984,10 @@ class Mentor(tk.Tk):
         z, k = karta(w, tytul="Git")
         z.pack(fill="x", padx=28, pady=(12, 0))
         if not (p / ".git").exists():
-            etykieta(k, "To nie jest jeszcze repozytorium Git. Zadanie 4 z tygodnia 0: poproś Claude „poprowadź mnie przez git init…”.", 10, kolor=K["czerw"], wrap=800).pack(fill="x")
+            lg = None if P.id == "python-junior-qa" else next((l for l in P.lekcje if "git" in [str(x).lower() for x in l.get("slowa", [])]), None)
+            rada = (f"Lekcja „{lg['nazwa']}” (tydzień {lg.get('tydzien')}) poprowadzi Cię przez git init i pierwsze commity." if lg
+                    else "Zadanie 4 z tygodnia 0: poproś Claude „poprowadź mnie przez git init…”.")
+            etykieta(k, "To nie jest jeszcze repozytorium Git. " + rada, 10, kolor=K["czerw"], wrap=800).pack(fill="x")
         elif shutil.which("git") is None:
             etykieta(k, "Git nie jest zainstalowany lub nie ma go w PATH.", 10, kolor=K["czerw"]).pack(fill="x")
         else:

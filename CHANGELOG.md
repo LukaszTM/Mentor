@@ -1,5 +1,24 @@
 # Zmiany w Mentorze
 
+## 2.9.0 — nowy kurs „Vibe coding od podstaw” (16 tygodni, Claude Code + Codex) i konfigurowalny Warsztat
+
+- **Kurs „Vibe coding od podstaw” 1.0** (`programy/vibe-coding.json`, źródła `programy/zrodla/vibe_coding/`): dla osoby zaczynającej od zera — pliki, terminal,
+  czytanie kodu i traceback, rozmowa z AI i specyfikacja (tydz. 0–3); Claude Code i Codex w Windows, tryby uprawnień, AGENTS.md/CLAUDE.md, małe kroki, Git i GitHub,
+  przegląd zmian agenta, kontekst i koszty (4–7); testy jako umowa, debugowanie, refaktoryzacja, HTML/CSS/JS z GitHub Pages, CSV/JSON, Flask, SQLite, API z kluczami,
+  automatyzacje (8–11); bezpieczeństwo kodu i agenta (XSS, SQL injection, sekrety, slopsquatting, prompt injection, reguły deny), prawo (prawa do kodu z AI, licencje,
+  RODO, AI Act po Digital Omnibus), pull requesty z recenzją AI, README, CI w GitHub Actions, wymagania klienta i wycena, portfolio, rozmowa rekrutacyjna i projekt końcowy
+  — mini system rezerwacji wydany jako 1.0.0 (12–15). 48 lekcji według standardu, 96 ćwiczeń — każde z polami „Twoje odpowiedzi”, 73 zadania (≈ 117 h, każdy tydzień ≤ 9 h),
+  80 pytań quizowych, diagnoza, 10 kart przeglądu w Warsztacie, kalendarz aktualizacji (ceny planów, wersje narzędzi, terminy AI Act).
+- **Niezależne testy zadań**: 39 zadań z kodem i plikami sprawdzają weryfikatory z paczki (`WERYFIKATORY/test_t00…t15.py`, suma SHA-256 w kursie i `INTEGRITY.json`):
+  zachowanie funkcji, testy ucznia uruchamiane na mutantach, struktura HTML i JS (z Node.js — także wyniki), API Flask, SQL injection, historia Gita, tag wydania.
+  `programy/zrodla/vibe_coding/sprawdz_weryfikatory.py` pilnuje, że każdy test przechodzi na rozwiązaniu wzorcowym i nie przechodzi na pustym katalogu, plikach startowych
+  z błędami i zapisach pracy agenta z celowym błędem (ścieżka bez płatnego konta).
+- **Fakty sprawdzone u źródeł (19–20.11.2026)**: dokumentacja Claude Code (instalacja, tryby, uprawnienia, pamięć, checkpointy, koszty), Codex (instalacja, tryby, piaskownica,
+  AGENTS.md, polecenia), cenniki, raporty Veracode 2025, METR 2025, Stack Overflow 2025, badanie slopsquatting (USENIX 2025), OWASP Top 10 dla LLM 2025, PARP, AI Act — 108 źródeł z datą dostępu.
+- **Warsztat konfigurowalny przez program** (pole `warsztat_opis`): nazwy narzędzi, nagłówek i opis formularzy, tekst na ekranie startowym — kurs kadrowy bez zmian.
+- **Mój projekt**: wskazówka o repozytorium Git wskazuje lekcję o Gicie bieżącego kursu (zamiast stałego tekstu kursu Python).
+- Testy: `testy/test_vibe.py` (budowanie ze źródeł, klucze odpowiedzi, kod z lekcji, sumy, weryfikatory na wzorcach i błędach, paczka, Mentor end-to-end).
+
 ## 2.8.1 — kurs „Kadry i płace” 3.1: drugi przegląd przed wydaniem — klucze zgodne z rozwiązaniami, PIT-11 według urzędowego wzoru
 
 Przegląd wszystkich 87 ćwiczeń z kluczem (treść ↔ wynik ↔ rozwiązanie ↔ klucz), 10 formularzy i 225 pytań testowych; numeracja PIT-11 porównana z urzędowym wzorem PIT-11(29).

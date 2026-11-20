@@ -24,6 +24,21 @@ NARZEDZIA = [
     ("przepisy", "📚", "Przepisy"),
 ]
 NAZWY = {k: n for k, _, n in NARZEDZIA}
+
+
+def opis_warsztatu():
+    """Teksty Warsztatu nadpisywane przez program (pole „warsztat_opis”): nazwy narzędzi, nagłówek i opis formularzy, tekst na ekranie startowym."""
+    o = getattr(P, "warsztat_opis", None) if hasattr(P, "d") else None
+    return o if isinstance(o, dict) else {}
+
+
+def nazwa_narzedzia(klucz):
+    return (opis_warsztatu().get("nazwy") or {}).get(klucz) or NAZWY.get(klucz, klucz)
+
+
+def narzedzia_programu():
+    """[(klucz, ikona, nazwa)] narzędzi dostępnych w bieżącym programie — z nazwami z programu, jeśli je podaje."""
+    return [(k, i, nazwa_narzedzia(k)) for k, i, _ in NARZEDZIA if k in (P.narzedzia or [])]
 MIESIACE = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"]
 
 
@@ -276,9 +291,10 @@ def BUDUJ_formularze(app, parent):
     import odpowiedzi as O
     import odpowiedzi_ui as OU
     formy = list(P.formularze or [])
-    k = _karta(parent, "Formularze — prawdziwe druki ze sprawdzaniem")
-    M.etykieta(k, "Pola mają numery z urzędowych wzorów: ZUS ZUA, ZWUA, RCA, RSA, PIT-2 (wersja 9), PIT-11 (wersja 29) i świadectwa pracy. Najpierw policz i zdecyduj sam "
-                  "(kartka, Warsztat, Przepisy), potem wpisz wartości. Mentor oceni każde pole osobno i nie zdradzi wyniku — klucz odsłonisz dopiero po dwóch próbach.",
+    ow = opis_warsztatu()
+    k = _karta(parent, ow.get("formularze_tytul") or "Formularze — prawdziwe druki ze sprawdzaniem")
+    M.etykieta(k, ow.get("formularze_opis") or ("Pola mają numery z urzędowych wzorów: ZUS ZUA, ZWUA, RCA, RSA, PIT-2 (wersja 9), PIT-11 (wersja 29) i świadectwa pracy. Najpierw policz i zdecyduj sam "
+                  "(kartka, Warsztat, Przepisy), potem wpisz wartości. Mentor oceni każde pole osobno i nie zdradzi wyniku — klucz odsłonisz dopiero po dwóch próbach."),
                10, wrap=700, kolor=M.K["szary"]).pack(fill="x")
     if not formy:
         M.etykieta(k, "Ten program nie ma formularzy.", 10).pack(fill="x", pady=(6, 0))
@@ -294,7 +310,7 @@ def BUDUJ_formularze(app, parent):
     etykiety = [etyk(f) for f in formy]
     r = tk.Frame(k, bg=M.K["karta"])
     r.pack(fill="x", pady=(8, 0))
-    tk.Label(r, text="Formularz:", font=M.czc(10, "bold"), bg=M.K["karta"], fg=M.K["tekst"]).pack(side="left")
+    tk.Label(r, text=ow.get("formularze_etykieta") or "Formularz:", font=M.czc(10, "bold"), bg=M.K["karta"], fg=M.K["tekst"]).pack(side="left")
     var = tk.StringVar(value=etykiety[ids.index(wyb)])
     cb = ttk.Combobox(r, textvariable=var, values=etykiety, width=70, state="readonly")
     cb.pack(side="left", padx=8)
@@ -334,9 +350,9 @@ def BUDUJ_formularze(app, parent):
         wpisy = {i: v.get() for i, v in panel.zmienne.items()}
         zapisz_do_projektu(app, "formularze", f["id"] + ".md", formularz_md(f, wpisy, O.sprawdz(pola, wpisy)), st)
 
-    M.przycisk(r2, "Zapisz wypełniony formularz do projektu", zapisz, "drugi").pack(side="left")
+    M.przycisk(r2, "Zapisz wypełnioną kartę do projektu" if ow.get("formularze_etykieta") == "Karta:" else "Zapisz wypełniony formularz do projektu", zapisz, "drugi").pack(side="left")
     if f.get("lekcja") and P.lekcja(f["lekcja"]):
-        M.przycisk(r2, "Otwórz lekcję do tego formularza", lambda: app.pokaz_lekcje(f["lekcja"]), "drugi").pack(side="left", padx=8)
+        M.przycisk(r2, "Otwórz lekcję do tej karty" if ow.get("formularze_etykieta") == "Karta:" else "Otwórz lekcję do tego formularza", lambda: app.pokaz_lekcje(f["lekcja"]), "drugi").pack(side="left", padx=8)
     parent.formularz_panel = panel                     # uchwyt dla testów GUI
 
 

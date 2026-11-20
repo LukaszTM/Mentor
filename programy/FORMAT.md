@@ -170,6 +170,7 @@ Zadania 1–4 Mentor pokazuje jako pon–czw, ostatnie jako „zadanie tygodnia�
 | `bledy` | `{"TypeError": {co, pytanie}}` — tłumaczenie błędów; brak = wbudowany słownik błędów Pythona |
 | `pytania_rekrutacyjne` | `[["kategoria", "pytanie", "wzorzec"]]` — dla `/rekrutacja` |
 | `formularze` | ćwiczenia na wzorach prawdziwych druków (Warsztat → Formularze; narzędzie `"formularze"` w `narzedzia`): `[{"id", "nazwa", "wzor", "lekcja", "scenariusz", "sekcje": [{"tytul": "III.B. …", "pola": [pola jak w `odpowiedzi`]}], "po": "komentarz po komplecie"}]`; stan w `odpowiedzi["formularz:<id>"]`, zapis wypełnionego druku do `formularze/<id>.md` w projekcie |
+| `warsztat_opis` | opcjonalne teksty Warsztatu dla kursów spoza kadr: `{"nazwy": {"formularze": "Karty przeglądu"}, "formularze_tytul": "…", "formularze_opis": "…", "formularze_etykieta": "Karta:", "start": "tekst karty Warsztatu na ekranie startowym"}`; brak pola = teksty domyślne (formularze urzędowe kursu kadrowego) |
 | `aktualizacje` | kalendarz aktualizacji kursu: `[{"data": "2027-01-01", "temat": "…", "co": "co sprawdzić", "gdzie": "źródło", "lekcje": ["id"]}]` — Panel pokazuje kartę „Aktualność przepisów” (termin minął albo mija w 30 dni), Ściąga pełną listę z przyciskiem „Sprawdzone” |
 
 Walidacja: program z brakującym polem obowiązkowym, powtórzonym `id` zadania, lekcją bez `id`/`nazwa`/`wyjasnienie`

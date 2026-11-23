@@ -125,21 +125,27 @@ def test_przyklady_pytest_z_lekcji_przechodza(zrodla, srodowisko_kursu, tmp_path
             assert p.returncode == 0, (gdzie, p.stdout[-800:])
 
 
-def test_sklep_testowy_ma_celowe_defekty(repo):
-    """Sklep testowy działa zgodnie z README w ścieżkach podstawowych i ma defekty opisane w rozwiązaniach (materiał na raporty błędów)."""
-    import importlib.util
-    spec = importlib.util.spec_from_file_location("sklep_testowy", repo / "programy" / "zrodla" / "python_junior_qa" / "projekty" / "sklep_testowy" / "app.py")
-    m = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(m)
-    k = m.app.test_client()
-    assert k.post("/logowanie", data={"login": "tester", "haslo": "zle"}).status_code == 401
-    assert k.post("/logowanie", data={"login": "tester", "haslo": "Test123!"}).status_code == 302
-    h = k.get("/produkty").get_data(as_text=True)
-    assert "Witaj, tester!" in h and h.count('class="produkt"') == 20
-    assert k.get("/produkty?q=długopis").get_data(as_text=True).count('class="produkt"') == 0, "defekt: wyszukiwarka wrażliwa na wielkość liter"
-    k.post("/koszyk/dodaj/1", data={"ilosc": "10"})
-    assert "Suma: 4,50 zł" in k.get("/koszyk").get_data(as_text=True), "defekt: suma dla ilości ≥ 10"
-    assert k.get("/api/produkty?kategoria=biuro").json[0]["nazwa"] == "Segregator A4"
+def test_sklep_testowy_ma_celowe_defekty(repo, srodowisko_kursu):
+    """Sklep testowy działa zgodnie z README w ścieżkach podstawowych i ma celowe defekty (materiał na raporty błędów). Uruchamiany Pythonem kursu (Flask)."""
+    skrypt = """
+import importlib.util, sys
+spec = importlib.util.spec_from_file_location("sklep_testowy", sys.argv[1])
+m = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(m)
+k = m.app.test_client()
+assert k.post("/logowanie", data={"login": "tester", "haslo": "zle"}).status_code == 401
+assert k.post("/logowanie", data={"login": "tester", "haslo": "Test123!"}).status_code == 302
+h = k.get("/produkty").get_data(as_text=True)
+assert "Witaj, tester!" in h and h.count('class="produkt"') == 20
+assert k.get("/produkty?q=długopis").get_data(as_text=True).count('class="produkt"') == 0, "defekt: wyszukiwarka"
+k.post("/koszyk/dodaj/1", data={"ilosc": "10"})
+assert "Suma: 4,50 zł" in k.get("/koszyk").get_data(as_text=True), "defekt: suma dla ilości >= 10"
+assert k.get("/api/produkty?kategoria=biuro").json[0]["nazwa"] == "Segregator A4"
+print("OK")
+"""
+    app = repo / "programy" / "zrodla" / "python_junior_qa" / "projekty" / "sklep_testowy" / "app.py"
+    p = subprocess.run([str(srodowisko_kursu.python_venv()), "-X", "utf8", "-c", skrypt, str(app)], capture_output=True, text=True, encoding="utf-8")
+    assert p.returncode == 0 and "OK" in p.stdout, p.stdout + p.stderr[-1500:]
 
 
 def test_brak_odniesien_osobistych(repo):

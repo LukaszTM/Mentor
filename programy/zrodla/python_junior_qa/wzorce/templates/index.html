@@ -1,0 +1,5 @@
+{% extends "baza.html" %}{% block tytul %}Produkty{% endblock %}{% block tresc %}
+<h1>Produkty</h1>
+<table id="produkty"><tr><th>Nazwa</th><th>Kategoria</th><th>Cena</th><th>Ilość</th></tr>
+{% for p in produkty %}<tr class="produkt"><td><a href="/produkt/{{ p.id }}" data-test="produkt-{{ p.id }}">{{ p.nazwa }}</a></td><td>{{ p.kategoria }}</td><td>{{ p.cena|zl }} zł</td><td>{{ p.ilosc }}</td></tr>{% endfor %}
+</table>{% if not produkty %}<p data-test="pusto">Brak produktów</p>{% endif %}{% endblock %}

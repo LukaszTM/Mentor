@@ -1,0 +1,7 @@
+{% extends "baza.html" %}{% block tytul %}Dodaj produkt{% endblock %}{% block tresc %}
+<h1>Dodaj produkt</h1>{% if blad %}<p data-test="blad">{{ blad }}</p>{% endif %}
+<form method="post"><label>Nazwa <input id="nazwa" name="nazwa" value="{{ dane.nazwa }}"></label>
+<label>Kategoria <input id="kategoria" name="kategoria" value="{{ dane.kategoria }}"></label>
+<label>Cena <input id="cena" name="cena" value="{{ dane.cena }}"></label>
+<label>Ilość <input id="ilosc" name="ilosc" value="{{ dane.ilosc or 0 }}"></label>
+<button data-test="zapisz">Zapisz</button></form>{% endblock %}

@@ -30,6 +30,7 @@ def modul(nazwa):
         sys.path.insert(0, str(WS))
     spec = importlib.util.spec_from_file_location(f"uczen_{nazwa}", p)
     m = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = m          # Flask i inne biblioteki szukają katalogu modułu po nazwie (szablony templates/)
     try:
         spec.loader.exec_module(m)
     except (OSError, EOFError) as e:
@@ -76,8 +77,12 @@ def rzuca(f, *a, wyjatek=ValueError, opis="", **k):
     except wyjatek:
         return
     except Exception as e:  # noqa: BLE001
-        pytest.fail(f"{opis}: oczekiwano {wyjatek.__name__}, a funkcja rzuciła {type(e).__name__}: {e}")
-    pytest.fail(f"{opis}: oczekiwano {wyjatek.__name__}, a funkcja zwróciła {w!r}")
+        pytest.fail(f"{opis}: oczekiwano {_nazwa_wyjatku(wyjatek)}, a funkcja rzuciła {type(e).__name__}: {e}")
+    pytest.fail(f"{opis}: oczekiwano {_nazwa_wyjatku(wyjatek)}, a funkcja zwróciła {w!r}")
+
+
+def _nazwa_wyjatku(w):
+    return " albo ".join(x.__name__ for x in w) if isinstance(w, tuple) else w.__name__
 
 
 def git(*args):

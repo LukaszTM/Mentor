@@ -23,21 +23,20 @@ def test_wbudowane_programy_rozpakowane():
 
 
 def test_kursy_nie_sa_wbudowane_w_mentora(repo):
-    """Jedyny program w EXE i w Mentor-windows.zip to domyślny python-junior-qa; kursy (kadry, vibe) to osobne paczki ZIP do importu."""
+    """EXE i Mentor-windows.zip nie zawierają żadnego kursu; każdy kurs (Python, kadry, vibe) to osobna paczka ZIP do importu."""
     spec = (repo / "mentor.spec").read_text(encoding="utf-8")
     datas = spec[spec.index("datas=["):spec.index("],", spec.index("datas=["))]
-    assert '"programy/python-junior-qa.json"' in datas
-    for zakazane in ("kadry-i-place", "vibe-coding", "programy/materialy"):
+    for zakazane in ("python-junior-qa", "kadry-i-place", "vibe-coding", "programy/materialy"):
         assert zakazane not in datas, zakazane
     ci = (repo / ".github" / "workflows" / "build-exe.yml").read_text(encoding="utf-8")
     pakowanie = ci[ci.index("- name: Spakuj"):ci.index("Compress-Archive -Path pakiet\\Mentor")]
-    assert "Copy-Item -Recurse programy pakiet" not in pakowanie and "materialy" not in pakowanie
-    assert "sprawdz_paczki.py Mentor-windows.zip Kadry-i-place-kurs.zip Vibe-coding-kurs.zip" in ci
-    for kid in ("kadry-i-place", "vibe-coding"):
+    assert "Copy-Item -Recurse programy pakiet" not in pakowanie and "materialy" not in pakowanie and ".json\"" not in pakowanie.replace("szablon-programu.json\"", "")
+    assert "sprawdz_paczki.py Mentor-windows.zip Python-junior-qa-kurs.zip Python-junior-qa-demo.zip Kadry-i-place-kurs.zip Vibe-coding-kurs.zip" in ci
+    for kid in ("python-junior-qa", "python-junior-qa-demo", "kadry-i-place", "vibe-coding"):
         assert "nie jest wbudowany w Mentora" in (repo / "programy" / "materialy" / kid / "START_TUTAJ.md").read_text(encoding="utf-8")
 
 
-@pytest.mark.parametrize("kid", ["kadry-i-place", "vibe-coding"])
+@pytest.mark.parametrize("kid", ["python-junior-qa", "python-junior-qa-demo", "kadry-i-place", "vibe-coding"])
 def test_paczka_kursu_importuje_sie_z_zip(repo, kid, tmp_path):
     """Paczka kursu (tak jak w CI: folder w ZIP) ma mentor-manifest.json, importuje się, a Mentor bierze materiały z kursy/<id>/paczka."""
     import shutil
@@ -68,7 +67,8 @@ def test_kurs_python_ma_srodowisko_i_cwiczenia(kurs_json):
     assert len(cw) >= 30
     for z in cw:
         spr = z["cwiczenie"].get("sprawdzenie") or {}
-        assert spr.get("rodzaj") in ("uruchom_bez_bledu", "wyjscie_zawiera", "pytest", "plik_istnieje"), z["id"]
+        assert spr.get("rodzaj") in ("uruchom_bez_bledu", "wyjscie_zawiera", "pytest", "plik_istnieje", "test_zewnetrzny"), z["id"]
+    assert sum(1 for z in cw if z["cwiczenie"]["sprawdzenie"]["rodzaj"] == "test_zewnetrzny") >= 50, "zadania sprawdzane niezależnymi testami z paczki"
 
 
 def test_meta_kursu_brak():

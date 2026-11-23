@@ -1,0 +1,53 @@
+# Źródła kursu — sprawdzone materiały
+
+Każda pozycja: tytuł, data dostępu, adres. Materiały zagraniczne streszczono i przetłumaczono w lekcjach.
+
+- ISTQB — Certified Tester Foundation Level (CTFL) v4.0 (sylabus v4.0.1, egzamin 40 pytań, próg 26, 60 min) (dostęp 23.11.2026) — <https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0>
+- Antyweb — barometr justjoin.it i rocketjobs.pl za I kw. 2026: oferty juniorskie 5% ogłoszeń (10.04.2026) (dostęp 23.11.2026) — <https://antyweb.pl/rynek-pracy-it-juniorzy>
+- Python — Poradnik (oficjalna dokumentacja, wersja polska) (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/>
+- Python — Using Python on Windows (dostęp 23.11.2026) — <https://docs.python.org/3/using/windows.html>
+- Python — Poradnik: Nieformalne wprowadzenie (liczby, napisy, listy) (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/introduction.html>
+- Python — datetime: Basic date and time types (dostęp 23.11.2026) — <https://docs.python.org/3/library/datetime.html>
+- Python 3.15.0 — informacja o wydaniu (9.10.2026; instalator Windows, Python install manager) (dostęp 23.11.2026) — <https://python.org/downloads/release/python-3150/>
+- Python — Poradnik: Środowiska wirtualne i pakiety (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/venv.html>
+- JetBrains — Unified PyCharm (darmowe funkcje podstawowe, Pro w subskrypcji, Community włączony do jednego produktu) (dostęp 23.11.2026) — <https://www.jetbrains.com/help/pycharm/2026.3/unified-pycharm.html>
+- Claude Code — Set up Claude Code (instalacja, Windows) (dostęp 23.11.2026) — <https://code.claude.com/docs/en/setup>
+- Pro Git (wydanie 2, wersja polska) — Scott Chacon, Ben Straub (dostęp 23.11.2026) — <https://git-scm.com/book/pl/v2>
+- Pro Git PL — Podstawy Gita (rejestrowanie zmian, historia, cofanie) (dostęp 23.11.2026) — <https://git-scm.com/book/pl/v2/Podstawy-Gita-Rejestrowanie-zmian-w-repozytorium>
+- GitHub Docs — About READMEs (dostęp 23.11.2026) — <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes>
+- Claude Code — Best practices (dostęp 23.11.2026) — <https://code.claude.com/docs/en/best-practices>
+- Claude Code — How Claude remembers your project (CLAUDE.md) (dostęp 23.11.2026) — <https://code.claude.com/docs/en/memory>
+- Python — Built-in Types (str, list, dict: metody) (dostęp 23.11.2026) — <https://docs.python.org/3/library/stdtypes.html>
+- Python — Poradnik: Wejście i wyjście (f-stringi, pliki) (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/inputoutput.html>
+- Python — Poradnik: Więcej narzędzi kontroli przepływu (if, for, range, funkcje) (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/controlflow.html>
+- SJSI — Egzamin przykładowy CTFL 4.0, wersja polska (terminologia: pomyłka, defekt, awaria, klasy równoważności, wartości brzegowe) (dostęp 23.11.2026) — <https://testerzy.pl/pliki/certyfikacja/egzamin-przykladowy-ctfl-ver-4-0-pytania-pl.pdf/podglad>
+- ISTQB Glossary — słownik terminów testowania (dostępny w języku polskim) (dostęp 23.11.2026) — <https://glossary.istqb.org/>
+- Python — Poradnik: Struktury danych (listy, krotki, słowniki) (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/datastructures.html>
+- PEP 257 — Docstring Conventions (dostęp 23.11.2026) — <https://peps.python.org/pep-0257/>
+- Python — Poradnik: Moduły (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/modules.html>
+- Python — Poradnik: Błędy i wyjątki (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/errors.html>
+- Python — random: Generate pseudo-random numbers (dostęp 23.11.2026) — <https://docs.python.org/3/library/random.html>
+- Python — csv: CSV File Reading and Writing (dostęp 23.11.2026) — <https://docs.python.org/3/library/csv.html>
+- Pro Git PL — Gałęzie Gita (dostęp 23.11.2026) — <https://git-scm.com/book/pl/v2/Ga%C5%82%C4%99zie-Gita-Czym-jest-ga%C5%82%C4%85%C5%BA>
+- Git — Reference (git restore, git stash, git log) (dostęp 23.11.2026) — <https://git-scm.com/docs>
+- GitHub Docs — About pull requests (dostęp 23.11.2026) — <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>
+- Python — Poradnik: Klasy (dostęp 23.11.2026) — <https://docs.python.org/pl/3/tutorial/classes.html>
+- PEP 8 — Style Guide for Python Code (dostęp 23.11.2026) — <https://peps.python.org/pep-0008/>
+- Python — json: JSON encoder and decoder (dostęp 23.11.2026) — <https://docs.python.org/3/library/json.html>
+- Flask — dokumentacja (3.1.x): Quickstart, szablony, testowanie (dostęp 23.11.2026) — <https://flask.palletsprojects.com/>
+- Python — pdb: The Python Debugger (breakpoint()) (dostęp 23.11.2026) — <https://docs.python.org/3/library/pdb.html>
+- pytest — Get Started (dostęp 23.11.2026) — <https://docs.pytest.org/en/stable/getting-started.html>
+- pytest — How to write and report assertions in tests (dostęp 23.11.2026) — <https://docs.pytest.org/en/stable/how-to/assert.html>
+- pytest — Changelog (9.2.0 z 27.10.2026; 9.0 bez Pythona 3.9) (dostęp 23.11.2026) — <https://pytest.org/en/latest/changelog.html>
+- pytest — How to parametrize fixtures and test functions (dostęp 23.11.2026) — <https://docs.pytest.org/en/stable/how-to/parametrize.html>
+- pytest — How to use fixtures (dostęp 23.11.2026) — <https://docs.pytest.org/en/stable/how-to/fixtures.html>
+- pytest — How to use temporary directories and files in tests (tmp_path) (dostęp 23.11.2026) — <https://docs.pytest.org/how-to/tmp_path.html>
+- Selenium — Selenium Manager (sterowniki i przeglądarki automatycznie, od 4.6; cache, SE_OFFLINE) (dostęp 23.11.2026) — <https://selenium.dev/documentation/selenium_manager>
+- Selenium (Python) — Waits: explicit i implicit (dostęp 23.11.2026) — <https://selenium-python.readthedocs.io/waits.html>
+- Selenium — Page object models (test practices) (dostęp 23.11.2026) — <https://selenium.dev/documentation/test_practices/encouraged/page_object_models>
+- Selenium Python API — selenium.webdriver.support.wait (WebDriverWait) (dostęp 23.11.2026) — <https://www.selenium.dev/selenium/docs/api/py/selenium_webdriver_support/selenium.webdriver.support.wait.html>
+- GitHub Docs — Building and testing Python (actions/checkout@v6, actions/setup-python, pytest) (dostęp 23.11.2026) — <https://docs.github.com/en/actions/tutorials/build-and-test-code/python>
+- Python — sqlite3: DB-API 2.0 interface for SQLite (placeholders ?) (dostęp 23.11.2026) — <https://docs.python.org/3/library/sqlite3.html>
+- OWASP — SQL Injection Prevention Cheat Sheet (zapytania parametryzowane) (dostęp 23.11.2026) — <https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html>
+- OWASP — Query Parameterization Cheat Sheet (dostęp 23.11.2026) — <https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html>
+- Bulldogjob — IT Community Report 2025: wynagrodzenia testerów manualnych (junior UoP 6 900 zł brutto) (dostęp 23.11.2026) — <https://bulldogjob.com/it-report/salaries/tester>

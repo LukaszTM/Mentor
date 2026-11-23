@@ -6,3 +6,4 @@ __pycache__/
 raport.html
 zadania.json
 produkty.txt
+*.db

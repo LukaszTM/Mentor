@@ -9,7 +9,6 @@ a = Analysis(
     pathex=["."],
     binaries=[],
     datas=[
-        ("programy/python-junior-qa.json", "programy"),          # jedyny wbudowany program; inne kursy = osobne paczki ZIP (Importuj kurs ZIP…)
         ("programy/szablon-programu.json", "programy"),
         ("programy/FORMAT.md", "programy"),
         ("programy/STANDARD_KURSOW.md", "programy"),

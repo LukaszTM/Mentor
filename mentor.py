@@ -791,11 +791,26 @@ class Mentor(tk.Tk):
             messagebox.showinfo("Nowa odznaka!", f"{o['ikona']}  {o['nazwa']}\n\n{o['opis']}", parent=self)
         self._odswiez_stopke()
 
+    def _brak_kursu(self, w):
+        """Ekran startowy bez kursu: kursy nie są wbudowane w Mentora — uczeń wgrywa paczkę ZIP kursu."""
+        z, k = karta(w, tytul="Wgraj kurs, żeby zacząć")
+        z.pack(fill="x", padx=28, pady=(24, 0))
+        etykieta(k, "Mentor nie ma wbudowanych kursów. Kurs to osobna paczka ZIP (np. Python-junior-qa-kurs.zip, Kadry-i-place-kurs.zip, Vibe-coding-kurs.zip) — "
+                    "pobierasz ją od autora kursu albo ze strony wydania Mentora i wgrywasz jednym przyciskiem. Mentor pokaże podgląd (nazwa, wersja, lekcje, wymagania, "
+                    "skrypty, których nie uruchamia) i dopiero po Twojej zgodzie rozpakuje kurs do swojego katalogu danych.", 11, wrap=820).pack(fill="x")
+        r = tk.Frame(k, bg=K["karta"])
+        r.pack(fill="x", pady=(12, 0))
+        przycisk(r, "📦 Importuj kurs ZIP…", self._importuj_zip, "glowny").pack(side="left")
+        przycisk(r, "Ustawienia → Program nauczania", lambda: self.pokaz("ustawienia"), "drugi").pack(side="left", padx=8)
+
     # ================================================================== PANEL
     # ================================================================ JAK ZACZĄĆ
     def widok_start(self):
         w = self._strona("Jak zacząć — przewodnik po Mentorze", f"Program: {P.nazwa}. Dziesięć minut, które oszczędzą tygodnie błądzenia. "
                          "Wrócisz tu zawsze przyciskiem „Jak zacząć” na Panelu.")
+        if not P.wszystkie_zadania():
+            self._brak_kursu(w)
+            return
         W = 860
 
         # krok 1 — imię i katalog
@@ -946,6 +961,9 @@ class Mentor(tk.Tk):
         w = self._strona("")
         for ch in w.winfo_children():
             ch.destroy()
+        if not P.wszystkie_zadania():
+            self._brak_kursu(w)
+            return
         imie = self.stan.d["imie"]
         s = self.stan.statystyki()
         d = dzis()
@@ -2972,8 +2990,8 @@ class Mentor(tk.Tk):
             etykieta(r, f"  {nazwa}" + (f" — {pod}" if pod else "") + ("  [paczka ZIP]" if z_paczki else ""), 10, wrap=560).pack(side="left", fill="x", expand=True)
             if not akt and n_tyg:
                 przycisk(r, "Przełącz", lambda s_=sc: self.ustaw_program(s_), "drugi").pack(side="right")
-        etykieta(k, "Kursy nie są wbudowane w Mentora (poza domyślnym „Python od zera → Junior QA”). Nowy kurs, np. „Kadry i płace” albo "
-                    "„Vibe coding od podstaw”, wgrywasz z jego paczki ZIP (Kadry-i-place-kurs.zip, Vibe-coding-kurs.zip) przyciskiem „📦 Importuj kurs ZIP…”.",
+        etykieta(k, "Kursy nie są wbudowane w Mentora. Każdy kurs — np. „Python od zera → Junior QA”, „Kadry i płace”, „Vibe coding od podstaw” — "
+                    "wgrywasz z jego paczki ZIP (Python-junior-qa-kurs.zip, Kadry-i-place-kurs.zip, Vibe-coding-kurs.zip) przyciskiem „📦 Importuj kurs ZIP…”.",
                  9, kolor=K["szary"], wrap=820).pack(fill="x", pady=(8, 0))
         r = tk.Frame(k, bg=K["karta"])
         r.pack(fill="x", pady=(8, 0))

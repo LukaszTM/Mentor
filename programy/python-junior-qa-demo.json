@@ -199,7 +199,7 @@
        "plik_testu": "WERYFIKATORY/test_t00.py",
        "wybor": "claude_md",
        "limit_s": 90,
-       "sha256": "367e234c5285a42377b2b8c914d7616063f5bf0e6ad90cfc51139afa8c17aa91"
+       "sha256": "3baee6972b45626270145910e31bfdf963adacc7840df06d7f74b23e6be1f926"
       },
       "podpowiedz": "Każda zasada w osobnej linii od „- ”, co najmniej 3 słowa. Przykład: „- Nie podawaj gotowych rozwiązań — najpierw pytanie naprowadzające.”",
       "szablon": "# Zasady nauki — kurs „Python od zera → Junior QA”\n\n- Tłumacz po polsku i prostymi słowami.\n- \n- \n"
@@ -270,7 +270,7 @@
        "plik_testu": "WERYFIKATORY/test_t00.py",
        "wybor": "repo",
        "limit_s": 90,
-       "sha256": "367e234c5285a42377b2b8c914d7616063f5bf0e6ad90cfc51139afa8c17aa91"
+       "sha256": "3baee6972b45626270145910e31bfdf963adacc7840df06d7f74b23e6be1f926"
       },
       "podpowiedz": "Test sprawdza: folder .git w PRACA, co najmniej jeden commit, hello.py i README.md w `git ls-files`, README zaczyna się od „# ”, `git remote get-url origin` zawiera github.com.",
       "szablon": "# Nauka Pythona\n\nMoje programy z kursu „Python od zera → Junior QA”.\n"
@@ -304,7 +304,7 @@
        "plik_testu": "WERYFIKATORY/test_t00.py",
        "wybor": "notatki",
        "limit_s": 90,
-       "sha256": "367e234c5285a42377b2b8c914d7616063f5bf0e6ad90cfc51139afa8c17aa91"
+       "sha256": "3baee6972b45626270145910e31bfdf963adacc7840df06d7f74b23e6be1f926"
       },
       "podpowiedz": "Każda sekcja: co najmniej 20 słów. Przykład zmiennej: „pudełko z etykietą cena, w którym leży 4.50”.",
       "szablon": "# Notatki z kursu\n\n## Zmienna\n\n\n## Funkcja\n\n\n## Pętla\n\n"
@@ -390,7 +390,7 @@
        "plik_testu": "WERYFIKATORY/test_t01.py",
        "wybor": "kalkulator",
        "limit_s": 90,
-       "sha256": "95fbd585497836d530a70e0f85a0f4afed58c11112c3b83864004c3c296b0a5e"
+       "sha256": "105f9ce637d068feb446b8a92da1fc9638891d6791391b38379213ade721ac5f"
       },
       "przyklad": "cena = float(input(\"Cena: \"))\nwaluta = input(\"Waluta (PLN/EUR): \").strip()\nif waluta == \"PLN\":\n    print(cena, \"zł\")\nelif waluta == \"EUR\":\n    print(round(cena * 4.25, 2), \"zł (po kursie 4.25)\")\nelse:\n    print(\"Nieznana waluta\")\n",
       "podpowiedz": "Test uruchamia program kilka razy: dane w kolejności liczba, działanie, liczba. Dla / i 0 wypisz np. „Nie można dzielić przez zero”.",
@@ -425,7 +425,7 @@
        "plik_testu": "WERYFIKATORY/test_t01.py",
        "wybor": "wiek",
        "limit_s": 90,
-       "sha256": "95fbd585497836d530a70e0f85a0f4afed58c11112c3b83864004c3c296b0a5e"
+       "sha256": "105f9ce637d068feb446b8a92da1fc9638891d6791391b38379213ade721ac5f"
       },
       "podpowiedz": "Kolejność warunków: najpierw wiek < 0, potem >= 18, na końcu else. Słowa „pełnoletni” / „niepełnoletni” muszą wystąpić w wyjściu.",
       "stdin": "2000\n"
@@ -460,7 +460,7 @@
        "plik_testu": "WERYFIKATORY/test_t01.py",
        "wybor": "rabat",
        "limit_s": 90,
-       "sha256": "95fbd585497836d530a70e0f85a0f4afed58c11112c3b83864004c3c296b0a5e"
+       "sha256": "105f9ce637d068feb446b8a92da1fc9638891d6791391b38379213ade721ac5f"
       },
       "przyklad": "waga = float(input(\"Waga paczki (kg): \"))\nif waga > 30:\n    print(\"Za ciężka\")\nelif waga > 10:\n    print(\"Koszt: 24.99 zł\")\nelse:\n    print(\"Koszt: 14.99 zł\")\n",
       "podpowiedz": "do_zaplaty = kwota * (100 - rabat) / 100; wypisz f\"Do zapłaty: {do_zaplaty:.2f} zł\" i f\"Rabat: {rabat}%\".",
@@ -496,7 +496,7 @@
        "plik_testu": "WERYFIKATORY/test_t01.py",
        "wybor": "bmi",
        "limit_s": 90,
-       "sha256": "95fbd585497836d530a70e0f85a0f4afed58c11112c3b83864004c3c296b0a5e"
+       "sha256": "105f9ce637d068feb446b8a92da1fc9638891d6791391b38379213ade721ac5f"
       },
       "podpowiedz": "Najpierw walidacja (≤ 0, > 3), potem obliczenie i kategoria. Słowa w wyjściu: „większe od zera”, „metrach”, nazwy kategorii.",
       "stdin": "1.80\n81\n"
@@ -577,7 +577,7 @@
        "plik_testu": "WERYFIKATORY/test_t02.py",
        "wybor": "lista_zakupow",
        "limit_s": 90,
-       "sha256": "8d0a81c6bfb142879d43d824f051a6e2521523d8f9b45d64289dfbad45b710b9"
+       "sha256": "832dc8fd5bc95ba2168a2eb639ea2466d9594167e76d7e63305250470d44fccb"
       },
       "podpowiedz": "Test wpisuje kolejno opcje i nazwy, np. 1, zeszyt, 1, klej, 2, klej, 3, 0. Numeracja „1. nazwa” — kropka i spacja po numerze.",
       "stdin": "1\nzeszyt\n1\nklej\n3\n0\n"
@@ -609,7 +609,7 @@
        "plik_testu": "WERYFIKATORY/test_t02.py",
        "wybor": "suma",
        "limit_s": 90,
-       "sha256": "8d0a81c6bfb142879d43d824f051a6e2521523d8f9b45d64289dfbad45b710b9"
+       "sha256": "832dc8fd5bc95ba2168a2eb639ea2466d9594167e76d7e63305250470d44fccb"
       },
       "podpowiedz": "Liczby jako float — wtedy średnia 12/3 wypisze się jako 4.0.",
       "stdin": "5\n3\n4\n0\n"
@@ -641,7 +641,7 @@
        "plik_testu": "WERYFIKATORY/test_t02.py",
        "wybor": "napisy",
        "limit_s": 90,
-       "sha256": "8d0a81c6bfb142879d43d824f051a6e2521523d8f9b45d64289dfbad45b710b9"
+       "sha256": "832dc8fd5bc95ba2168a2eb639ea2466d9594167e76d7e63305250470d44fccb"
       },
       "podpowiedz": "Najdłuższe słowo: zmienna najdluzsze = \"\" i porównanie len(s) > len(najdluzsze) — przy remisie zostaje pierwsze.",
       "stdin": "Ala ma kota i psa\n"
@@ -675,7 +675,7 @@
        "plik_testu": "WERYFIKATORY/test_t02.py",
        "wybor": "zgadnij",
        "limit_s": 90,
-       "sha256": "8d0a81c6bfb142879d43d824f051a6e2521523d8f9b45d64289dfbad45b710b9"
+       "sha256": "832dc8fd5bc95ba2168a2eb639ea2466d9594167e76d7e63305250470d44fccb"
       },
       "podpowiedz": "def ocen(strzal, sekret): if strzal < sekret: return \"za mało\" … Słowo „prób” musi pojawić się w komunikacie końcowym.",
       "stdin": "50\n25\n75\n"
@@ -725,7 +725,7 @@
        "plik_testu": "WERYFIKATORY/test_t03.py",
        "wybor": "funkcje",
        "limit_s": 90,
-       "sha256": "512fec2ecbf91e3e03a90666799a5b3798a8bda9804732ca8a535c1786699203"
+       "sha256": "e8024e766afad08fbdf7dc6f532cf8b656a2b6920fb61a7e90077277c62b3241"
       },
       "podpowiedz": "raise ValueError(\"lista jest pusta\") na początku maksimum, gdy not lista."
      }
@@ -757,7 +757,7 @@
        "plik_testu": "WERYFIKATORY/test_t03.py",
        "wybor": "stany",
        "limit_s": 90,
-       "sha256": "512fec2ecbf91e3e03a90666799a5b3798a8bda9804732ca8a535c1786699203"
+       "sha256": "e8024e766afad08fbdf7dc6f532cf8b656a2b6920fb61a7e90077277c62b3241"
       },
       "podpowiedz": "stany.get(nazwa, 0) + ilosc dodaje do istniejącej albo zerowej ilości."
      }
@@ -789,7 +789,7 @@
        "plik_testu": "WERYFIKATORY/test_t03.py",
        "wybor": "bledy",
        "limit_s": 90,
-       "sha256": "512fec2ecbf91e3e03a90666799a5b3798a8bda9804732ca8a535c1786699203"
+       "sha256": "e8024e766afad08fbdf7dc6f532cf8b656a2b6920fb61a7e90077277c62b3241"
       },
       "podpowiedz": "Komunikat przy złym wpisie musi zawierać słowa „nie liczba”, np. „To nie liczba — spróbuj jeszcze raz”.",
       "stdin": "abc\n9\n2\n"
@@ -823,7 +823,7 @@
        "plik_testu": "WERYFIKATORY/test_t03.py",
        "wybor": "losowanie",
        "limit_s": 90,
-       "sha256": "512fec2ecbf91e3e03a90666799a5b3798a8bda9804732ca8a535c1786699203"
+       "sha256": "e8024e766afad08fbdf7dc6f532cf8b656a2b6920fb61a7e90077277c62b3241"
       },
       "podpowiedz": "random.Random(seed) tworzy osobny generator — sample z niego jest powtarzalny dla tego samego seed."
      }
@@ -855,7 +855,7 @@
        "plik_testu": "WERYFIKATORY/test_t03.py",
        "wybor": "menedzer",
        "limit_s": 90,
-       "sha256": "512fec2ecbf91e3e03a90666799a5b3798a8bda9804732ca8a535c1786699203"
+       "sha256": "e8024e766afad08fbdf7dc6f532cf8b656a2b6920fb61a7e90077277c62b3241"
       },
       "podpowiedz": "Wspólna funkcja pomocnicza _sprawdz(zadania, nr) z raise ValueError oszczędza powtórzeń w oznacz i usun.",
       "stdin": "1\nZamówić papier\n3\n0\n"

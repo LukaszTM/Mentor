@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Kontrola paczek wydania (CI i ręcznie): python programy/zrodla/sprawdz_paczki.py Mentor-windows.zip Kadry-i-place-kurs.zip Vibe-coding-kurs.zip
+"""Kontrola paczek wydania (CI i ręcznie): python programy/zrodla/sprawdz_paczki.py Mentor-windows.zip Python-junior-qa-kurs.zip Kadry-i-place-kurs.zip Vibe-coding-kurs.zip
 
-- Mentor-windows.zip: tylko domyślny program — żadnych dodatkowych kursów (plików kursów, materiałów, kurs_mentor.json).
+- Mentor-windows.zip: bez żadnego kursu (plików kursów, materiałów, kurs_mentor.json).
 - paczka kursu: ma mentor-manifest.json, importuje się przez „Importuj kurs ZIP…” (paczki.importuj_zip) do pustego katalogu danych,
   Mentor znajduje materiały w kursy/<id>/paczka, a weryfikatory zadań mają sumy SHA-256 zgodne z kursem; sprawdz_kurs.py z paczki przechodzi.
 Kod wyjścia 0 = OK."""
@@ -16,7 +16,7 @@ import zipfile
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-NIE_W_MENTORZE = ("kadry-i-place.json", "vibe-coding.json", "kurs_mentor.json", "materialy/", "START_TUTAJ.md", "WERYFIKATORY/")
+NIE_W_MENTORZE = ("python-junior-qa.json", "python-junior-qa-demo.json", "kadry-i-place.json", "vibe-coding.json", "kurs_mentor.json", "materialy/", "START_TUTAJ.md", "WERYFIKATORY/")
 
 
 def sprawdz_mentora(zp):
@@ -25,8 +25,6 @@ def sprawdz_mentora(zp):
     bledy = [f"{zp.name}: kurs wbudowany w paczkę Mentora — {n}" for n in nazwy if any(x in n for x in NIE_W_MENTORZE)]
     if not any(n.endswith("Mentor.exe") for n in nazwy):
         bledy.append(f"{zp.name}: brak Mentor.exe")
-    if not any(n.endswith("programy/python-junior-qa.json") for n in nazwy):
-        bledy.append(f"{zp.name}: brak domyślnego programu python-junior-qa.json")
     return bledy
 
 

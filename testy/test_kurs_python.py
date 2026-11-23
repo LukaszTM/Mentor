@@ -1,84 +1,196 @@
 # -*- coding: utf-8 -*-
-"""Kurs Python → Junior QA: każde automatyczne sprawdzenie zalicza wzorcowe rozwiązanie napisane wg kroków zadania i NIE zalicza samego szablonu."""
+"""Kurs „Python od zera → Junior QA” 3.0: budowanie ze źródeł (pełny i demo), standard lekcji, klucze odpowiedzi, kod w lekcjach, niezależne weryfikatory zadań
+(przechodzą na rozwiązaniach wzorcowych, nie przechodzą na pustym katalogu i plikach startowych z błędami), sklep testowy, paczka materiałów, brak odniesień osobistych i Mentor end-to-end."""
+
+import json
+import shutil
+import subprocess
+import sys
 
 import pytest
 
 import cwiczenia as C
-
-ROZW = {
-"t0z3": 'import datetime\nprint("Cześć, tu Ola")\nprint("Dziś jest", datetime.date.today())\n',
-"t1z1": 'imie = "Krasula"\nwaga_kg = 612.5\nwiek_lat = 4\nrasa = "HF"\nczy_zdrowe = True\nprint(imie, type(imie))\nprint(waga_kg, type(waga_kg))\nprint(wiek_lat, type(wiek_lat))\nprint(rasa, type(rasa))\nprint(czy_zdrowe, type(czy_zdrowe))\n',
-"t1z2": 'a = float(input("Pierwsza liczba: "))\ndzialanie = input("Działanie (+ - * /): ")\nb = float(input("Druga liczba: "))\nif dzialanie == "+":\n    print("Wynik:", a + b)\nelif dzialanie == "-":\n    print("Wynik:", a - b)\nelif dzialanie == "*":\n    print("Wynik:", a * b)\nelif dzialanie == "/":\n    if b == 0:\n        print("Nie można dzielić przez zero")\n    else:\n        print("Wynik:", a / b)\nelse:\n    print("Nieznane działanie")\n',
-"t1z3": 'import datetime\nrok_urodzenia = int(input("Rok urodzenia: "))\nrok = datetime.date.today().year\nwiek = rok - rok_urodzenia\nprint(f"Masz {wiek} lat")\nif wiek < 0:\n    print("to jeszcze nie ten rok")\nelif wiek >= 18:\n    print("pełnoletni")\nelse:\n    print("niepełnoletni")\n',
-"t1z4": 'litry = float(input("Litry mleka: "))\ntluszcz = float(input("Tłuszcz w %: "))\nkg = litry * 1.03\nif tluszcz > 4.0:\n    cena = 2.10\nelif tluszcz > 3.5:\n    cena = 1.90\nelse:\n    cena = 1.70\nwartosc = litry * cena\nprint("Kilogramy:", round(kg, 1))\nprint("Cena za litr:", cena)\nprint(f"Wartość dostawy: {wartosc:.2f} zł")\n',
-"t1z5": 'wzrost = float(input("Wzrost w m: "))\nwaga = float(input("Waga w kg: "))\nif wzrost <= 0 or waga <= 0:\n    print("Podaj wartości większe od zera")\nelse:\n    if wzrost > 3:\n        print("Uwaga: wzrost podaj w metrach, nie centymetrach")\n    bmi = waga / (wzrost * wzrost)\n    if bmi < 18.5:\n        kat = "niedowaga"\n    elif bmi < 25:\n        kat = "norma"\n    elif bmi < 30:\n        kat = "nadwaga"\n    else:\n        kat = "otyłość"\n    print(f"BMI: {bmi:.1f}, {kat}")\n',
-"t2z1": 'for a in range(1, 11):\n    for b in range(1, 11):\n        print(f"{a} x {b} = {a * b}")\n    print()\n',
-"t2z3": 'liczby = []\nwhile True:\n    x = float(input("Liczba (0 = koniec): "))\n    if x == 0:\n        break\n    liczby.append(x)\nif len(liczby) == 0:\n    print("nic nie podano")\nelse:\n    print("suma:", sum(liczby))\n    print("średnia:", sum(liczby) / len(liczby))\n    print("max:", max(liczby))\n',
-"t2z4": 'tekst = input("Wpisz zdanie: ").strip()\nprint(tekst.upper())\nprint(tekst[::-1])\nprint(len(tekst))\nlicznik = 0\nfor litera in tekst.lower():\n    if litera in "aeiouyąęó":\n        licznik += 1\nprint(licznik)\nslowa = tekst.split()\nprint(len(slowa))\nnajdluzsze = ""\nfor s in slowa:\n    if len(s) > len(najdluzsze):\n        najdluzsze = s\nprint(najdluzsze)\n',
-"t3z1": 'def pole_prostokata(a, b):\n    """Pole."""\n    return a * b\n\n\ndef czy_parzysta(n):\n    """Parzysta?"""\n    return n % 2 == 0\n\n\ndef maksimum(lista):\n    """Max bez max()."""\n    najwieksza = lista[0]\n    for x in lista:\n        if x > najwieksza:\n            najwieksza = x\n    return najwieksza\n\n\ndef odwroc(napis):\n    """Od tyłu."""\n    return napis[::-1]\n\n\ndef silnia(n):\n    """n!"""\n    wynik = 1\n    for i in range(1, n + 1):\n        wynik *= i\n    return wynik\n\n\nprint(pole_prostokata(3, 4))\nprint(czy_parzysta(7))\nprint(maksimum([3, 9, 2]))\nprint(odwroc("kot"))\nprint(silnia(5))\nprint(silnia(0))\n',
-"t3z2": 'wagi = {"Krasula": 612, "Mućka": 580}\n\n\ndef dodaj(wagi, imie, waga):\n    wagi[imie] = waga\n\n\ndef usun(wagi, imie):\n    if imie in wagi:\n        del wagi[imie]\n    else:\n        print("nie ma takiego zwierzęcia")\n\n\ndef wypisz_posortowane(wagi):\n    for imie, waga in sorted(wagi.items(), key=lambda p: p[1]):\n        print(imie, waga)\n\n\nwhile True:\n    wybor = input("1 dodaj, 2 usuń, 3 wypisz, 0 koniec: ")\n    if wybor == "1":\n        dodaj(wagi, input("imię: "), float(input("waga: ")))\n    elif wybor == "2":\n        usun(wagi, input("imię: "))\n    elif wybor == "3":\n        wypisz_posortowane(wagi)\n    elif wybor == "0":\n        break\n    else:\n        print("nieznana opcja")\n',
-"t3z3": 'def wczytaj_liczbe(komunikat):\n    while True:\n        try:\n            return float(input(komunikat))\n        except ValueError:\n            print("To nie liczba")\n\n\na = wczytaj_liczbe("Pierwsza: ")\nb = wczytaj_liczbe("Druga: ")\ntry:\n    print("a / b =", a / b)\nexcept ZeroDivisionError:\n    print("Nie dzielimy przez zero")\n',
-"t3z4": 'import random\nimport datetime\nstado = ["Krasula", "Mućka", "Łaciata", "Jagoda", "Malina", "Bura", "Siwa", "Zorza"]\ndo_kontroli = random.sample(stado, 3)\nprint("Do kontroli:", do_kontroli)\ndzis = datetime.date.today()\ntermin = dzis + datetime.timedelta(days=7)\nprint(termin.strftime("%d.%m.%Y"), termin.strftime("%A"))\nprint("Dni do Nowego Roku:", (datetime.date(dzis.year + 1, 1, 1) - dzis).days)\n',
-"t4z2": 'imiona = ["Krasula", "Mućka", "Łaciata", "Jagoda", "Malina"]\nwith open("stado.txt", "w", encoding="utf-8") as f:\n    for imie in imiona:\n        f.write(imie + "\\n")\nwith open("stado.txt", encoding="utf-8") as f:\n    for linia in f:\n        print(linia.strip())\n',
-"t5z1": 'class Zwierze:\n    def __init__(self, imie, rasa, waga):\n        self.imie = imie\n        self.rasa = rasa\n        self.waga = waga\n\n    def opis(self):\n        return f"{self.imie} ({self.rasa}), {self.waga} kg"\n\n    def przybierz(self, kg):\n        self.waga += kg\n\n    def __str__(self):\n        return self.opis()\n\n\nkrasula = Zwierze("Krasula", "HF", 612)\nmucka = Zwierze("Mućka", "Simental", 580)\nkrasula.przybierz(8)\nfor z in [krasula, mucka]:\n    print(z)\n',
-"t5z4": 'import requests\nurl = "https://api.open-meteo.com/v1/forecast?latitude=51.78&longitude=22.62&daily=temperature_2m_min,temperature_2m_max&timezone=Europe/Warsaw"\ntry:\n    odp = requests.get(url, timeout=10)\n    if odp.status_code != 200:\n        print("Serwer odpowiedział kodem", odp.status_code)\n    else:\n        dane = odp.json()\n        print(dane["daily"]["time"][0], dane["daily"]["temperature_2m_min"][0], dane["daily"]["temperature_2m_max"][0])\nexcept requests.exceptions.RequestException as e:\n    print("Brak połączenia z internetem:", type(e).__name__)\n',
-}
-
-TEST_FUNKCJE = (
-    "from funkcje import pole_prostokata, czy_parzysta, maksimum, odwroc, silnia\n\n\n"
-    "def test_pole():\n    assert pole_prostokata(3, 4) == 12\n\n\n"
-    "def test_parzysta():\n    assert czy_parzysta(7) is False\n\n\n"
-    "def test_maksimum():\n    assert maksimum([3, 9, 2]) == 9\n\n\n"
-    "def test_odwroc():\n    assert odwroc(\"kot\") == \"tok\"\n\n\n"
-    "def test_silnia():\n    assert silnia(5) == 120 and silnia(0) == 1\n"
-)
+import odpowiedzi as O
+import program
 
 
-def _zad(kurs_json, zid):
-    return next(z for t in kurs_json["tygodnie"] for z in t["zadania"] if z["id"] == zid)
+MODULY = ("zbuduj", "reszta", "powtorki", "wspolne", "sprawdz_weryfikatory", "zadania_wszystkie", "materialy", "zrodla",
+          *(f"zadania{i}" for i in range(4)), *(f"etap{i}{b}" for i in range(5) for b in ("", "b")))
 
 
-@pytest.mark.parametrize("zid", sorted(ROZW))
-def test_wzorcowe_rozwiazanie_zalicza_a_szablon_nie(srodowisko_kursu, kurs_json, tmp_path, zid):
-    d = C.definicja(_zad(kurs_json, zid))
-    assert d and d["sprawdzenie"]["rodzaj"] != "plik_istnieje"
-    plik = tmp_path / d["plik"]
-    plik.write_text(d["szablon"], encoding="utf-8")
-    assert C.wykonaj_sprawdzenie(srodowisko_kursu, d, plik)["status"] != C.STATUS_ZALICZONE, "sam szablon nie może zaliczać"
-    plik.write_text(ROZW[zid], encoding="utf-8")
-    w = C.wykonaj_sprawdzenie(srodowisko_kursu, d, plik)
-    if zid == "t5z4" and w["status"] != C.STATUS_ZALICZONE:
-        pytest.skip("t5z4 wymaga internetu albo poprawnej obsługi braku sieci: " + w["opis"])
-    assert w["status"] == C.STATUS_ZALICZONE, (w["opis"], w["szczegoly"][:500])
+def _wyczysc():
+    for m in MODULY:
+        sys.modules.pop(m, None)
 
 
-def test_pytest_t7z1(srodowisko_kursu, kurs_json, tmp_path):
-    d = C.definicja(_zad(kurs_json, "t7z1"))
-    (tmp_path / "funkcje.py").write_text(ROZW["t3z1"].split("\n\n\nprint")[0] + "\n", encoding="utf-8")
-    plik = tmp_path / "test_funkcje.py"
-    plik.write_text(TEST_FUNKCJE, encoding="utf-8")
-    w = C.wykonaj_sprawdzenie(srodowisko_kursu, d, plik)
-    assert w["status"] == C.STATUS_ZALICZONE and "5 passed" in w["opis"], w
+@pytest.fixture(scope="module")
+def zrodla(repo):
+    """Źródła kursu na początku sys.path; moduły o tych samych nazwach z innych kursów (zbuduj, reszta, powtorki) usunięte z pamięci."""
+    z = repo / "programy" / "zrodla" / "python_junior_qa"
+    _wyczysc()
+    sys.path.insert(0, str(z))
+    yield z
+    sys.path.remove(str(z))
+    _wyczysc()
 
 
-def test_program_czekajacy_na_dane_nie_jest_bledem(srodowisko_kursu, kurs_json, tmp_path):
-    d = C.definicja(_zad(kurs_json, "t3z2"))
-    plik = tmp_path / "slownik.py"
-    plik.write_text('while True:\n    if input("q = koniec: ") == "q":\n        break\n', encoding="utf-8")
-    w = C.wykonaj_sprawdzenie(srodowisko_kursu, d, plik)
-    assert w["status"] == C.STATUS_WYMAGA and "więcej danych" in w["opis"]
+@pytest.fixture(scope="module")
+def vibe(repo):
+    return json.loads((repo / "programy" / "python-junior-qa.json").read_text(encoding="utf-8"))
 
 
-def test_kazde_cwiczenie_ma_spojne_dane(kurs_json):
-    """stdin sprawdzenia i stdin przycisku Uruchom nie mogą się różnić; podpowiedź/przykład w zadaniach z testem tygodni 0–3."""
-    for t in kurs_json["tygodnie"]:
-        for z in t["zadania"]:
-            c = z.get("cwiczenie")
-            if not c:
-                continue
-            spr = c.get("sprawdzenie") or {}
-            if c.get("stdin") and spr.get("stdin"):
-                assert c["stdin"] == spr["stdin"], z["id"]
-            assert z["kroki"][-1].startswith("W Mentorze") or z["id"] == "t0z3", z["id"]
-            if t["tydzien"] <= 3 and spr.get("rodzaj") in ("wyjscie_zawiera", "uruchom_bez_bledu"):
-                assert c.get("podpowiedz"), z["id"]
+def test_json_zgodny_ze_zrodlami(zrodla, vibe):
+    import zbuduj
+    zbudowany = json.loads(json.dumps(zbuduj.zbuduj(), ensure_ascii=False))
+    assert zbudowany == vibe, "programy/python-junior-qa.json nieaktualny — uruchom programy/zrodla/python_junior_qa/zbuduj.py"
+    demo = json.loads(json.dumps(zbuduj.zbuduj(demo=True), ensure_ascii=False))
+    assert demo == json.loads((zbuduj.CEL_DEMO).read_text(encoding="utf-8")), "python-junior-qa-demo.json nieaktualny — zbuduj.py --demo"
+    assert demo["id"] == "python-junior-qa-demo" and len(demo["tygodnie"]) == 4 and all(l["tydzien"] < 4 for l in demo["lekcje"])
+
+
+def test_walidacja_i_struktura(vibe):
+    assert program.waliduj(vibe) == []
+    assert vibe["id"] == "python-junior-qa" and len(vibe["tygodnie"]) == 13 and len(vibe["lekcje"]) == 39
+    assert [z["id"] for w in vibe["tygodnie"] for z in w["zadania"]] == [f"t{t}z{n}" for t in range(13) for n in range(1, 6)], "identyfikatory zadań stabilne"
+    assert all(w["czas_min"] <= 540 for w in vibe["tygodnie"])
+    assert 85 * 60 <= sum(w["czas_min"] for w in vibe["tygodnie"]) <= 110 * 60
+    for l in vibe["lekcje"]:
+        assert [c["rodzaj"] for c in l["cwiczenia"]] == ["prowadzone", "samodzielne"], l["id"]
+        assert l["zrodla"] and all(z[1].startswith("https://") for z in l["zrodla"]), l["id"]
+        assert len(l["typowe_bledy"]) >= 2 and 3 <= len(l["test"]) <= 5, l["id"]
+    lekcje = {l["id"] for l in vibe["lekcje"]}
+    assert all(q["lekcja"] in lekcje for qs in vibe["quizy"].values() for q in qs)
+    assert all(q["lekcja"] in lekcje for q in vibe["diagnoza"])
+
+
+def test_klucze_odpowiedzi_przyjmuja_poprawne_wartosci(vibe):
+    n = 0
+    for l in vibe["lekcje"]:
+        for c in l["cwiczenia"]:
+            if c.get("odpowiedzi"):
+                assert O.waliduj_pola(c["odpowiedzi"], l["id"]) == []
+                wynik = O.sprawdz(c["odpowiedzi"], {p["id"]: O.poprawna(p) for p in c["odpowiedzi"]})
+                assert wynik["komplet"], (l["id"], wynik)
+                n += 1
+    assert n >= 75, n
+
+
+def test_typowe_pomylki_sa_rozpoznawane(vibe):
+    """Pola z listą „bledy” dają podpowiedź (nie „nie zgadza się”) dla typowej pomyłki — i nigdy nie zaliczają jej."""
+    for l in vibe["lekcje"]:
+        for c in l["cwiczenia"]:
+            for p in c.get("odpowiedzi") or []:
+                for b in p.get("bledy") or []:
+                    ok, info = O.sprawdz_pole(p, b["wartosc"])
+                    assert ok is False and info == b["komunikat"], (l["id"], p["id"], b, info)
+
+
+def test_kod_z_lekcji_daje_podane_wyjscie(zrodla, srodowisko_kursu):
+    import wspolne
+    import zbuduj  # noqa: F401  (rejestruje kod ze wszystkich lekcji)
+    assert len(wspolne.KOD_DO_SPRAWDZENIA) >= 30
+    for gdzie, kod, oczekiwane in wspolne.KOD_DO_SPRAWDZENIA:
+        if oczekiwane is None:
+            continue
+        p = subprocess.run([str(srodowisko_kursu.python_venv()), "-X", "utf8", "-c", kod], capture_output=True, text=True, encoding="utf-8", timeout=60)
+        assert p.stdout.replace("\r\n", "\n") == oczekiwane, (gdzie, p.stdout, p.stderr[-500:])
+
+
+def test_sumy_weryfikatorow_w_zadaniach(zrodla, vibe):
+    import zbuduj
+    n = 0
+    for w in vibe["tygodnie"]:
+        for z in w["zadania"]:
+            s = z["cwiczenie"]["sprawdzenie"]
+            if s["rodzaj"] == "test_zewnetrzny":
+                assert s["sha256"] == zbuduj.sha_weryfikatora(s["plik_testu"].split("/")[-1]), z["id"]
+                n += 1
+    assert n >= 55, n
+
+
+@pytest.mark.skipif(not shutil.which("git"), reason="weryfikatory z repozytorium wymagają programu git")
+def test_weryfikatory_wzorce_puste_i_bledne(zrodla, srodowisko_kursu):
+    import sprawdz_weryfikatory as SW
+    assert SW.kontrola(log=lambda *_: None, python=str(srodowisko_kursu.python_venv())) == []
+
+
+def test_przyklady_pytest_z_lekcji_przechodza(zrodla, srodowisko_kursu, tmp_path):
+    import wspolne
+    import zbuduj  # noqa: F401
+    for gdzie, kod, _ in wspolne.KOD_DO_SPRAWDZENIA:
+        if gdzie in ("pytest", "parametrize_fixture"):
+            f = tmp_path / f"test_{gdzie}.py"
+            f.write_text(kod, encoding="utf-8")
+            p = subprocess.run([str(srodowisko_kursu.python_venv()), "-m", "pytest", "-q", "-p", "no:cacheprovider", str(f)], capture_output=True, text=True, encoding="utf-8", cwd=tmp_path)
+            assert p.returncode == 0, (gdzie, p.stdout[-800:])
+
+
+def test_sklep_testowy_ma_celowe_defekty(repo):
+    """Sklep testowy działa zgodnie z README w ścieżkach podstawowych i ma defekty opisane w rozwiązaniach (materiał na raporty błędów)."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("sklep_testowy", repo / "programy" / "zrodla" / "python_junior_qa" / "projekty" / "sklep_testowy" / "app.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    k = m.app.test_client()
+    assert k.post("/logowanie", data={"login": "tester", "haslo": "zle"}).status_code == 401
+    assert k.post("/logowanie", data={"login": "tester", "haslo": "Test123!"}).status_code == 302
+    h = k.get("/produkty").get_data(as_text=True)
+    assert "Witaj, tester!" in h and h.count('class="produkt"') == 20
+    assert k.get("/produkty?q=długopis").get_data(as_text=True).count('class="produkt"') == 0, "defekt: wyszukiwarka wrażliwa na wielkość liter"
+    k.post("/koszyk/dodaj/1", data={"ilosc": "10"})
+    assert "Suma: 4,50 zł" in k.get("/koszyk").get_data(as_text=True), "defekt: suma dla ilości ≥ 10"
+    assert k.get("/api/produkty?kategoria=biuro").json[0]["nazwa"] == "Segregator A4"
+
+
+def test_brak_odniesien_osobistych(repo):
+    """Kurs dla odbiorców zewnętrznych: żadnych danych i odniesień do życia prywatnego autora."""
+    import re
+    zakazane = re.compile(r"łukasz|lukasz|kapsl|gospodarstw|krow|krasul|mućk|radzy|brzost|obora|ciągnik|mleko|stado|LukaszTM|@gmail", re.I)
+    for baza in (repo / "programy" / "zrodla" / "python_junior_qa", repo / "programy" / "materialy" / "python-junior-qa"):
+        for p in baza.rglob("*"):
+            if p.is_file() and p.suffix in (".py", ".md", ".json", ".csv", ".txt", ".bat", ".yml", ".html"):
+                t = p.read_text(encoding="utf-8", errors="ignore")
+                assert not zakazane.search(t), (p, zakazane.search(t).group(0))
+    assert not zakazane.search((repo / "programy" / "python-junior-qa.json").read_text(encoding="utf-8"))
+
+
+def test_paczka_materialow(repo, vibe):
+    mat = repo / "programy" / "materialy" / "python-junior-qa"
+    p = subprocess.run([sys.executable, str(mat / "testy" / "sprawdz_kurs.py")], capture_output=True, text=True, encoding="utf-8")
+    assert p.returncode == 0, p.stdout + p.stderr
+    assert json.loads((mat / "kurs_mentor.json").read_text(encoding="utf-8")) == vibe, "paczka nieaktualna — uruchom materialy.py (i materialy.py --demo)"
+    for f in ("START_TUTAJ.md", "mentor-manifest.json", "pytest.ini", "dane/produkty.csv", "projekty/sklep_testowy/app.py", "projekty/cudzy_projekt/app.py", "przyklady/do_poprawy.py", "przyklady/magazyn_ukryty.py", "przyklady/tydzien_01/zmienne.py", "rozwiazania/kod/app.py", "pomoc/FAQ.md"):
+        assert (mat / f).is_file(), f
+    calosc = "\n".join(x.read_text(encoding="utf-8", errors="ignore") for x in mat.rglob("*") if x.is_file() and x.suffix in (".md", ".py", ".json", ".txt", ".csv", ".ini", ".bat"))
+    import re
+    assert not re.search(r"sk-" + r"ant-[A-Za-z0-9]", calosc), "klucz Anthropic w paczce"
+    assert not re.search(r"[\w.]+@gmail\.com", calosc), "prawdziwy adres e-mail w paczce"
+    assert "BEGIN PRIVATE KEY" not in calosc
+
+
+def test_mentor_end_to_end(repo, vibe, srodowisko_kursu, tmp_path):
+    """Kurs nie jest wbudowany: uczeń importuje Python-junior-qa-kurs.zip, a Mentor uruchamia weryfikator z zaimportowanej paczki (SHA-256, izolacja, MENTOR_WORKSPACE)."""
+    import paczki
+    import srodowisko
+    zp = shutil.make_archive(str(tmp_path / "Python-junior-qa-kurs"), "zip", repo / "programy" / "materialy", "python-junior-qa")
+    assert paczki.przejrzyj_zip(zp)["manifest"]["course_id"] == "python-junior-qa"
+    paczki.importuj_zip(zp, nadpisz=True, utworz_prace=False)
+    assert program.katalog_materialow("python-junior-qa") == program.KATALOG_KURSOW / "python-junior-qa" / "paczka"
+    sr = srodowisko.Srodowisko("python-junior-qa", vibe.get("srodowisko"))
+    sr.venv = srodowisko_kursu.venv
+    praca = tmp_path / "PRACA"
+    praca.mkdir()
+    zad = next(z for w in vibe["tygodnie"] for z in w["zadania"] if z["id"] == "t1z2")
+    d = C.definicja(zad)
+    (praca / "kalkulator.py").write_text("a = float(input())\nd = input()\nb = float(input())\nprint(a + b)\n", encoding="utf-8")
+    w = C.wykonaj_sprawdzenie(sr, d, praca / "kalkulator.py")
+    assert w["status"] == C.STATUS_BLAD, w
+    shutil.copy(repo / "programy" / "zrodla" / "python_junior_qa" / "wzorce" / "kalkulator.py", praca / "kalkulator.py")
+    w = C.wykonaj_sprawdzenie(sr, d, praca / "kalkulator.py")
+    assert w["status"] == C.STATUS_ZALICZONE, w
+    zad = next(z for w in vibe["tygodnie"] for z in w["zadania"] if z["id"] == "t3z1")
+    d = C.definicja(zad)
+    (praca / "funkcje.py").write_text("def inna():\n    pass\n", encoding="utf-8")
+    w = C.wykonaj_sprawdzenie(sr, d, praca / "funkcje.py")
+    assert w["status"] == C.STATUS_BLAD and "brakuje funkcji" in w["opis"].lower(), w
+    paczki.usun_kurs("python-junior-qa")

@@ -17,8 +17,15 @@ WER = TU / "weryfikatory"
 
 
 def zloz_test(nazwa):
-    """Treść pliku testu z paczki: wspólny początek + właściwe testy (test działa jako jeden plik)."""
-    return (WER / "_wspolne.py").read_text(encoding="utf-8") + "\n\n" + (WER / nazwa).read_text(encoding="utf-8")
+    """Treść pliku testu z paczki: wspólny początek + właściwe testy (test działa jako jeden plik).
+    Linia „# wzorce: a.py, b.py” na początku testu wkleja słownik WZORZEC {nazwa: kod} z rozwiązań wzorcowych — do testów mutacyjnych."""
+    t = (WER / nazwa).read_text(encoding="utf-8")
+    wstawka = ""
+    pierwsza = t.splitlines()[0] if t else ""
+    if pierwsza.startswith("# wzorce:"):
+        pliki = [x.strip() for x in pierwsza.split(":", 1)[1].split(",") if x.strip()]
+        wstawka = "WZORZEC = " + repr({f: (TU / "wzorce" / f).read_text(encoding="utf-8") for f in pliki}) + "\n\n"
+    return (WER / "_wspolne.py").read_text(encoding="utf-8") + "\n\n" + wstawka + t
 
 
 def testy():
@@ -44,6 +51,11 @@ def przygotuj_wzorzec(cel):
     _git(cel, "add", "TYDZIEN4.md"); _git(cel, "commit", "-q", "-m", "Dodaj podsumowanie tygodnia 4")
     _git(cel, "switch", "-q", "main")
     _git(cel, "merge", "-q", "--no-ff", "feature/tydzien4", "-m", "Merge pull request #1 from kursant/feature/tydzien4")
+    shas = subprocess.run(["git", "-C", str(cel), "log", "--format=%h", "-n", "3"], capture_output=True, text=True, check=True).stdout.split()
+    (cel / "RECENZJA.md").write_text("# Recenzja projektu jak senior tester\n\n" + "".join(
+        f"## Uwaga {i}: {u}\nDecyzja: wdrażam — commit {sha}.\n\n" for i, (u, sha) in enumerate(zip(
+            ["hasło w kodzie konfiguracji", "brak testu wydania całego stanu", "time.sleep w testach E2E"], shas), 1)), encoding="utf-8")
+    _git(cel, "add", "RECENZJA.md"); _git(cel, "commit", "-q", "-m", "Dodaj RECENZJA.md z decyzjami po przeglądzie")
     _git(cel, "remote", "add", "origin", "https://github.com/kursant/nauka-python.git")
     _git(cel, "update-ref", "refs/remotes/origin/main", "HEAD")
     return cel
@@ -89,7 +101,7 @@ def kontrola(log=print, python=sys.executable):
             k, out = uruchom(test, pusty, wyb, python=python)
             if k == 0:
                 bledy.append(f"{zid}: {test} -k {wyb} przechodzi na PUSTYM katalogu")
-            if "deselected" in out and "passed" not in out and "failed" not in out:
+            if "deselected" in out and "passed" not in out and "failed" not in out and "error" not in out:
                 bledy.append(f"{zid}: {test} -k {wyb} nie wybiera żadnego testu")
         # pliki startowe z błędami i zapisy agenta z celowym błędem — test musi je złapać
         for zid, test, wyb, plik_ucznia, kod in zapisy_z_bledem():

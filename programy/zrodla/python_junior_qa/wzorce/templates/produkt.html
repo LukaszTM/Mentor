@@ -1,0 +1,7 @@
+{% extends "baza.html" %}{% block tytul %}{{ p.nazwa }}{% endblock %}{% block tresc %}
+<h1 data-test="nazwa">{{ p.nazwa }}</h1><p>Stan: <span data-test="stan">{{ p.ilosc }}</span> szt. · cena {{ p.cena|zl }} zł</p>
+{% if blad %}<p data-test="blad">{{ blad }}</p>{% endif %}
+<form method="post"><select id="typ" name="typ"><option value="przyjecie">przyjęcie</option><option value="wydanie">wydanie</option></select>
+<input id="ilosc" name="ilosc"> <button data-test="wykonaj">Wykonaj</button></form>
+<table id="historia"><tr><th>Data</th><th>Operacja</th><th>Ilość</th></tr>
+{% for data, typ, ilosc in historia %}<tr class="operacja"><td>{{ data }}</td><td>{{ typ }}</td><td>{{ ilosc }}</td></tr>{% endfor %}</table>{% endblock %}

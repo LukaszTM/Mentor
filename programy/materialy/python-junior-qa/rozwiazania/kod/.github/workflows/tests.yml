@@ -1,0 +1,20 @@
+name: Testy
+on: [push, pull_request]
+jobs:
+  testy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Zależności
+        run: python -m pip install -r requirements.txt
+      - name: Testy z raportem
+        run: python -m pytest -v --html=raport.html --self-contained-html test_funkcje.py test_bmi.py test_menedzer.py test_magazyn.py
+      - name: Raport jako artefakt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: raport-testow
+          path: raport.html

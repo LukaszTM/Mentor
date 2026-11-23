@@ -1,0 +1,56 @@
+{
+ "schema": "mentor-course/1",
+ "course_id": "python-junior-qa-demo",
+ "version": "3.0-demo",
+ "entrypoint": "kurs_mentor.json",
+ "title": "Python od zera → Junior QA (wersja demonstracyjna)",
+ "mentor_min": "2.9.1",
+ "requirements": {
+  "python": ">=3.11,<3.14",
+  "python_packages": [
+   "pytest",
+   "requests",
+   "selenium",
+   "flask"
+  ],
+  "required_tools": [],
+  "optional_tools": [
+   {
+    "name": "git",
+    "from_week": 0
+   },
+   {
+    "name": "claude",
+    "from_week": 0
+   }
+  ]
+ },
+ "checks": [
+  {
+   "kind": "python_import",
+   "module": "pytest"
+  },
+  {
+   "kind": "python_import",
+   "module": "requests"
+  },
+  {
+   "kind": "python_import",
+   "module": "selenium"
+  },
+  {
+   "kind": "python_import",
+   "module": "flask"
+  },
+  {
+   "kind": "pytest_sample"
+  },
+  {
+   "kind": "local_api"
+  },
+  {
+   "kind": "selenium_browser",
+   "optional": true
+  }
+ ]
+}

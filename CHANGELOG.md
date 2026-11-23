@@ -1,5 +1,24 @@
 # Zmiany w Mentorze
 
+## 2.10.0 — kurs „Python od zera → Junior QA” 3.0 według standardu; Mentor bez wbudowanych kursów
+
+- **Kurs Python → Junior QA 3.0** (źródła `programy/zrodla/python_junior_qa/`, przepisane od nowa): 39 lekcji według `STANDARD_KURSOW.md` — po co, wymagania, wyjaśnienie od podstaw,
+  kompletna demonstracja omówiona linia po linii (kod każdej demonstracji jest uruchamiany w testach i musi dawać pokazany wynik), jak uruchomić, ćwiczenie prowadzone i samodzielne
+  z 3 podpowiedziami i polami „Twoje odpowiedzi”, typowe błędy (komunikat → przyczyna → diagnoza → poprawka), test i źródła; 4 rozbudowane powtórki etapów i diagnoza na start.
+  Nowa lekcja „Podstawy testowania” (pomyłka/defekt/awaria, poziomy, piramida, klasy równoważności, wartości brzegowe — terminologia polskiej wersji sylabusa ISTQB/SJSI) i „Testy aplikacji webowej”.
+- **Bez odniesień osobistych**: usunięte przykłady i dane z życia prywatnego autora; świat ćwiczeń to fikcyjny sklep papierniczy „Papierowy Kot”, projekt portfolio — aplikacja „Magazyn”.
+- **Prawdziwe sprawdzanie zadań**: 60 z 65 zadań sprawdzają niezależne testy z paczki (`WERYFIKATORY/test_t00…t12.py`, SHA-256): programy uruchamiane z danymi (także złymi),
+  funkcje na wielu przypadkach, testy ucznia uruchamiane na kodzie wzorcowym i na mutantach, Page Object na sterowniku-atrapie, aplikacja Flask przez test_client, struktura dokumentów
+  (przypadki testowe, raporty błędów, plan testów), repozytorium Git (gałąź scalona przez PR, porządek, commity z recenzji). `sprawdz_weryfikatory.py` pilnuje, że każdy test przechodzi na wzorcu
+  i nie przechodzi na pustym katalogu i plikach startowych z błędami.
+- **Lokalny sklep testowy** (`projekty/sklep_testowy`, Flask, port 5001) zamiast zewnętrznych stron: API, Selenium, raporty błędów; 6 celowych defektów względem jego specyfikacji. Działa offline.
+- **Źródła sprawdzone 23.11.2026**: polska dokumentacja Pythona i Pro Git, ISTQB CTFL 4.0 i egzamin przykładowy SJSI, pytest 9.2, Selenium Manager, GitHub Actions, Flask, OWASP, PyCharm (unified),
+  Python 3.15, rynek pracy (barometr justjoin.it, Bulldogjob) — każda lekcja ma źródła z datą dostępu, paczka — `ZRODLA.md`.
+- **Wersja demonstracyjna** `Python-junior-qa-demo.zip` (tygodnie 0–3, osobny identyfikator `python-junior-qa-demo`).
+- **Mentor nie ma już wbudowanego żadnego kursu**: kurs Python jest osobną paczką `Python-junior-qa-kurs.zip` (jak kadry i vibe coding). Bez kursu Panel i „Jak zacząć” pokazują ekran
+  „Wgraj kurs” z przyciskiem „📦 Importuj kurs ZIP…”. Kursy zaimportowane wcześniej i postępy zostają; identyfikatory zadań t0z1…t12z5 bez zmian.
+- Testy: `testy/test_kurs_python.py` przepisany (budowanie pełne i demo, standard lekcji, klucze odpowiedzi, kod demonstracji, weryfikatory, sklep testowy, brak odniesień osobistych, Mentor end-to-end przez import ZIP).
+
 ## 2.9.1 — kursy nie są wbudowane w Mentora
 
 - **Mentor zawiera tylko domyślny program** „Python od zera → Junior QA”. Kursy „Kadry i płace” i „Vibe coding od podstaw” nie są już w `Mentor.exe`

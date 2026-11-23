@@ -21,8 +21,13 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python bmi.py
+python app.py
 ```
+
+![Lista produktów w aplikacji Magazyn](zrzuty/lista.png)
 
 ## Jak testuję
 
-Testy pytest w plikach `test_*.py`: `python -m pytest -v`.
+Testy jednostkowe pytest (parametrize, fixtures, tmp_path) w plikach `test_*.py`, testy E2E w Selenium z Page Object Model w `tests/` (strony w `pages/`), CI w GitHub Actions z raportem HTML. Uruchomienie: `python -m pytest -v`.
+
+![Testy](https://github.com/anna-nowak/nauka-python/actions/workflows/tests.yml/badge.svg)

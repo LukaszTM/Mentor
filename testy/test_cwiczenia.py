@@ -14,11 +14,10 @@ def test_definicje_z_kursu(kurs_json):
     d = C.definicja(_zad(kurs_json, "t0z3"))
     assert d["plik"] == "hello.py" and d["sprawdzenie"]["rodzaj"] == "wyjscie_zawiera" and d["przyklad"] and d["szablon"]
     d = C.definicja(_zad(kurs_json, "t1z2"))
-    assert d["sprawdzenie"]["stdin"] == "6\n*\n3\n" and d["sprawdzenie"]["tekst"] == ["18"]
-    d = C.definicja(_zad(kurs_json, "t7z1"))
-    assert d["sprawdzenie"]["rodzaj"] == "pytest"
-    assert C.definicja(_zad(kurs_json, "t0z1")) is None, "zadanie bez pliku .py — bez ćwiczenia"
-    assert C.definicja(_zad(kurs_json, "t0z2")) is None, "CLAUDE.md to nie .py"
+    assert d["plik"] == "kalkulator.py" and d["sprawdzenie"]["rodzaj"] == "test_zewnetrzny" and d["sprawdzenie"]["sha256"]
+    d = C.definicja(_zad(kurs_json, "t0z2"))
+    assert d["plik"] == "CLAUDE.md" and d["sprawdzenie"]["rodzaj"] == "test_zewnetrzny", "dokument sprawdzany testem struktury"
+    assert C.definicja({"id": "x", "tytul": "X", "pliki": []}) is None, "zadanie bez pliku — bez ćwiczenia"
     d = C.definicja({"id": "x", "tytul": "X", "pliki": ["cos.py"]})
     assert d["sprawdzenie"] == {"rodzaj": "plik_istnieje"} and "cos.py" in d["szablon"], "domyślne: tylko istnienie pliku"
     d = C.definicja({"id": "x", "tytul": "X", "pliki": ["cos.py"], "cwiczenie": {"sprawdzenie": {"rodzaj": "nieznany"}}})
@@ -47,7 +46,8 @@ def test_wyjscie_zawiera_i_bledy(srodowisko_kursu, kurs_json, tmp_path):
     p.write_text('print("Cześć"\n', encoding="utf-8")
     w = C.wykonaj_sprawdzenie(sr, d, p)
     assert w["status"] == C.STATUS_BLAD and "SyntaxError" in w["opis"]
-    d = C.definicja(_zad(kurs_json, "t1z3"))
+    d = C.definicja({"id": "x", "tytul": "X", "pliki": ["wiek.py"], "cwiczenie": {"plik": "wiek.py", "sprawdzenie": {
+        "rodzaj": "wyjscie_zawiera", "stdin": "2000\n", "tekst": ["pełnoletni"], "nie_zawiera": ["niepełnoletni"]}}})
     p = tmp_path / "wiek.py"
     p.write_text('r=int(input())\nprint("niepełnoletni" if 2026-r<18 else "pełnoletni")\n', encoding="utf-8")
     assert C.wykonaj_sprawdzenie(sr, d, p)["status"] == C.STATUS_ZALICZONE
@@ -62,7 +62,8 @@ def test_wyjscie_zawiera_i_bledy(srodowisko_kursu, kurs_json, tmp_path):
 
 def test_sprawdzenie_pytest(srodowisko_kursu, kurs_json, tmp_path):
     sr = srodowisko_kursu
-    d = C.definicja(_zad(kurs_json, "t7z1"))
+    d = C.definicja({"id": "x", "tytul": "X", "pliki": ["test_funkcje.py"], "cwiczenie": {"plik": "test_funkcje.py", "sprawdzenie": {"rodzaj": "pytest"},
+                     "szablon": "from funkcje import pole_prostokata\n\n\ndef test_pole():\n    assert pole_prostokata(3, 4) == 12\n"}})
     (tmp_path / "funkcje.py").write_text("def pole_prostokata(a, b):\n    return a * b\n", encoding="utf-8")
     p = tmp_path / "test_funkcje.py"
     p.write_text(d["szablon"], encoding="utf-8")

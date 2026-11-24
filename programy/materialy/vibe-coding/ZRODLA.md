@@ -4,7 +4,7 @@ Każda pozycja: tytuł, data dostępu, adres. Materiały zagraniczne streszczono
 
 - Collins: „vibe coding” słowem roku 2025; cytat A. Karpathy’ego z lutego 2025 (tech.co, 6.11.2025) (dostęp 19.11.2026) — <https://tech.co/news/vibe-coding-word-of-year-2025>
 - Stack Overflow Developer Survey 2025 — AI (84% używa, 46% nie ufa dokładności) (dostęp 19.11.2026) — <https://survey.stackoverflow.co/2025/ai>
-- METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX) (dostęp 19.11.2026) — <https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/>
+- METR (10.07.2025): Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity — badanie RCT, z AI 19% wolniej (dostęp 24.11.2026) — <https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/>
 - Claude Code — przewodnik po terminalu dla nowych użytkowników (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/terminal-guide>
 - Anthropic — Prompt engineering overview (dokumentacja Claude) (dostęp 19.11.2026) — <https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview>
 - Python — moduł statistics (lista funkcji, oficjalna dokumentacja) (dostęp 19.11.2026) — <https://docs.python.org/3/library/statistics.html>
@@ -26,8 +26,8 @@ Każda pozycja: tytuł, data dostępu, adres. Materiały zagraniczne streszczono
 - Anthropic — Use examples (multishot prompting) (dokumentacja Claude) (dostęp 19.11.2026) — <https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/multishot-prompting>
 - OpenAI — Prompt engineering guide (dokumentacja platformy) (dostęp 19.11.2026) — <https://platform.openai.com/docs/guides/prompt-engineering>
 - Atlassian — Acceptance criteria: definicja i przykłady (tłumaczenie robocze) (dostęp 19.11.2026) — <https://www.atlassian.com/work-management/project-management/acceptance-criteria>
-- Claude Help Center — Using Claude Code with your Pro or Max plan (dostęp 19.11.2026) — <https://support.claude.com/en/articles/14552983>
-- Ceny planów Claude 2026 — zestawienie (dupple.com, 2.11.2026) (dostęp 19.11.2026) — <https://dupple.com/learn/claude-code-pricing>
+- Claude Help Center — Use Claude Code with your Pro or Max plan (limity 5-godzinne i tygodniowe) (dostęp 24.11.2026) — <https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan>
+- Claude — Plans & Pricing (Pro 20 USD / 17 USD rocznie, Max 100 USD, Ultra 200 USD; ceny bez podatku) (dostęp 24.11.2026) — <https://claude.com/pricing>
 - Codex — Pricing (plany ChatGPT i dostęp do Codex) (dostęp 19.11.2026) — <https://chatgpt.com/codex/pricing/>
 - Claude Code — Manage costs effectively (/usage, /context, /clear, /compact) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/costs>
 - OpenAI Codex CLI — README (instalacja, logowanie, licencja Apache-2.0) (dostęp 19.11.2026) — <https://cdn.jsdelivr.net/gh/openai/codex@main/README.md>
@@ -86,10 +86,10 @@ Każda pozycja: tytuł, data dostępu, adres. Materiały zagraniczne streszczono
 - OWASP — Cross Site Scripting Prevention Cheat Sheet (dostęp 20.11.2026) — <https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html>
 - Flask — Security Considerations (XSS, autoescape, SECRET_KEY) (dostęp 20.11.2026) — <https://flask.palletsprojects.com/en/stable/web-security/>
 - OWASP Top 10 for LLM Applications 2025 (omówienie HackerOne) (dostęp 19.11.2026) — <https://www.hackerone.com/blog/owasp-top-10-llm-applications-2025>
-- PARP — Czy treści wygenerowane przez AI są chronione prawem autorskim? (13.05.2024) (dostęp 19.11.2026) — <https://www.parp.gov.pl/component/content/article/86541>
+- PARP — Wytwory powstałe przy udziale AI — w jaki sposób je chronić? (13.05.2024) (dostęp 24.11.2026) — <https://www.parp.gov.pl/component/content/article/86364:wytwory-powstale-przy-udziale-ai-w-jaki-sposob-je-chronic>
 - choosealicense.com — wybór licencji open source (GitHub) (dostęp 20.11.2026) — <https://choosealicense.com/>
 - UODO — RODO: zasady przetwarzania danych osobowych (art. 5) (dostęp 20.11.2026) — <https://uodo.gov.pl/pl/p/rodo>
-- AI Act po „Digital Omnibus” — rozporządzenie (UE) 2026/1744, harmonogram stosowania (actuia.com) (dostęp 19.11.2026) — <https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/>
+- Rozporządzenie (UE) 2026/1744 („Digital Omnibus” dla AI Act) — EUR-Lex, w mocy od 27.07.2026 (dostęp 24.11.2026) — <https://eur-lex.europa.eu/eli/reg/2026/1744/oj>
 - Anthropic — Consumer Terms of Service (prawa do Outputs) (dostęp 20.11.2026) — <https://www.anthropic.com/legal/consumer-terms>
 - OpenAI — Terms of Use (własność Output) (dostęp 20.11.2026) — <https://openai.com/policies/terms-of-use/>
 - Działalność nierejestrowana 2026: limit 10 813,50 zł (money.pl) (dostęp 20.11.2026) — <https://direct.money.pl/artykuly/porady/dzialalnosc-nierejestrowana-2026-limit-10-813,50-zl,-po-przekroczeniu-7-dni-na-ceidg>

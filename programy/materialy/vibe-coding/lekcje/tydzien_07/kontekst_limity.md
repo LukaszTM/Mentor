@@ -15,7 +15,7 @@ Przy każdej Twojej wiadomości agent wysyła modelowi całą dotychczasową roz
 | cel | Claude Code | Codex |
 |---|---|---|
 | ile kontekstu zajęte | `/context` (wykres: instrukcje, pliki, rozmowa) | `/status` |
-| limity planu | `/usage` | `/status` |
+| limity planu | `/usage` | `/usage` |
 | nowy temat, czysta kartka | `/clear` | `/new` |
 | streszczenie zamiast kasowania | `/compact` (można dodać, co zachować: `/compact zachowaj decyzje o rabatach`) | `/compact` |
 | zmiana modelu | `/model` | `/model` |

@@ -114,7 +114,7 @@ Masz własny proces pracy z agentami na jednej stronie, plan dalszej nauki i kal
 Narzędzia, ceny i przepisy zmieniają się — przed użyciem w pracy otwórz źródło.
 - Claude Code — Best practices (dostęp 19.11.2026) — <https://code.claude.com/docs/en/best-practices>
 - Stack Overflow Developer Survey 2025 — AI (zaufanie, vibe coding w pracy zawodowej) (dostęp 19.11.2026) — <https://survey.stackoverflow.co/2025/ai>
-- AI Act po „Digital Omnibus” — harmonogram (actuia.com) (dostęp 19.11.2026) — <https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/>
+- Rozporządzenie (UE) 2026/1744 („Digital Omnibus” dla AI Act) — EUR-Lex (dostęp 24.11.2026) — <https://eur-lex.europa.eu/eli/reg/2026/1744/oj>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Pierwsza faza procesu przy zleceniu:

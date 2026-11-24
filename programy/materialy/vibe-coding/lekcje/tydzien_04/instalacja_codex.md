@@ -44,7 +44,7 @@ W CLI tryb zmienisz poleceniem `/permissions`; przy starcie możesz go podać ja
 |---|---|---|
 | instrukcje projektu | CLAUDE.md (czyta też AGENTS.md, gdy nie ma CLAUDE.md) | AGENTS.md |
 | zmiana trybu zgód | Shift + Tab, `/permissions` (reguły) | `/permissions` |
-| limity i zużycie | `/usage`, `/context` | `/status` |
+| limity i zużycie | `/usage`, `/context` | `/usage`, `/status` |
 | podsumowanie rozmowy | `/compact` | `/compact` |
 | przerwanie | Esc | Esc |
 Nazwy modeli zmieniają się często — kurs ich nie wpisuje; sprawdzisz je w `/model`.

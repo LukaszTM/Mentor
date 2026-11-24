@@ -122,7 +122,7 @@ Wiesz, co zbudujesz, ile to kosztuje i jak wygląda dzień; rozumiesz różnicę
 Narzędzia, ceny i przepisy zmieniają się — przed użyciem w pracy otwórz źródło.
 - Collins: „vibe coding” słowem roku 2025; cytat A. Karpathy’ego z lutego 2025 (tech.co, 6.11.2025) (dostęp 19.11.2026) — <https://tech.co/news/vibe-coding-word-of-year-2025>
 - Stack Overflow Developer Survey 2025 — AI (84% używa, 46% nie ufa dokładności) (dostęp 19.11.2026) — <https://survey.stackoverflow.co/2025/ai>
-- METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX) (dostęp 19.11.2026) — <https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/>
+- METR (10.07.2025): Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity — badanie RCT, z AI 19% wolniej (dostęp 24.11.2026) — <https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/>
 - Claude Code — przewodnik po terminalu dla nowych użytkowników (oficjalna dokumentacja) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/terminal-guide>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)

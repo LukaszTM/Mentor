@@ -106,10 +106,10 @@ Znasz zasady praw do kodu z AI, wybierasz licencję, sprawdzasz licencje zależn
 
 ## Źródła (data dostępu w nawiasie)
 Narzędzia, ceny i przepisy zmieniają się — przed użyciem w pracy otwórz źródło.
-- PARP — Czy treści wygenerowane przez AI są chronione prawem autorskim? (13.05.2024) (dostęp 19.11.2026) — <https://www.parp.gov.pl/component/content/article/86541>
+- PARP — Wytwory powstałe przy udziale AI — w jaki sposób je chronić? (13.05.2024) (dostęp 24.11.2026) — <https://www.parp.gov.pl/component/content/article/86364:wytwory-powstale-przy-udziale-ai-w-jaki-sposob-je-chronic>
 - choosealicense.com — wybór licencji open source (GitHub) (dostęp 20.11.2026) — <https://choosealicense.com/>
 - UODO — RODO: zasady przetwarzania danych osobowych (art. 5) (dostęp 20.11.2026) — <https://uodo.gov.pl/pl/p/rodo>
-- AI Act po „Digital Omnibus” — rozporządzenie (UE) 2026/1744, harmonogram stosowania (actuia.com) (dostęp 19.11.2026) — <https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/>
+- Rozporządzenie (UE) 2026/1744 („Digital Omnibus” dla AI Act) — EUR-Lex, w mocy od 27.07.2026 (dostęp 24.11.2026) — <https://eur-lex.europa.eu/eli/reg/2026/1744/oj>
 - Anthropic — Consumer Terms of Service (prawa do Outputs) (dostęp 20.11.2026) — <https://www.anthropic.com/legal/consumer-terms>
 - OpenAI — Terms of Use (własność Output) (dostęp 20.11.2026) — <https://openai.com/policies/terms-of-use/>
 - Działalność nierejestrowana 2026: limit 10 813,50 zł (money.pl) (dostęp 20.11.2026) — <https://direct.money.pl/artykuly/porady/dzialalnosc-nierejestrowana-2026-limit-10-813,50-zl,-po-przekroczeniu-7-dni-na-ceidg>

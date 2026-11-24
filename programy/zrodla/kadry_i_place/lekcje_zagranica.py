@@ -180,9 +180,9 @@ LEKCJE_ZAGRANICA = [
          "(przesunięcie godzin, częstsze przerwy w cieniu, woda, aklimatyzacja nowych i powracających pracowników przez 7–14 dni, lekka odzież, obserwacja objawów: zawroty, nudności, "
          "zaprzestanie potnienia — natychmiast przerwać pracę, chłodzić, wezwać pomoc), szkolenie pracowników i kierowników, uwzględnienie wieku i stanu zdrowia.\n"
          "Polska — rozporządzenie MRPiPS z 9.07.2026 zmieniające rozporządzenie w sprawie ogólnych przepisów BHP (Dz.U. 2026 poz. 927), obowiązuje od 11.01.2027: przy temperaturze "
-         "w pomieszczeniu pracy powyżej 28°C (na zewnątrz powyżej 25°C) pracodawca wprowadza środki techniczne lub organizacyjne (klimatyzacja, wentylacja, przerwy, zmiana godzin, "
-         "ograniczenie wysiłku) i konsultuje je z komisją BHP lub przedstawicielami pracowników; przy 35°C w pomieszczeniu albo 32°C na zewnątrz przy pracy wymagającej wysiłku — "
-         "wstrzymanie pracy do czasu obniżenia temperatury, z zachowaniem wynagrodzenia. Nadal obowiązują napoje profilaktyczne (powyżej 28°C / 25°C) i zimne napoje bez limitu.\n"
+         "w pomieszczeniu pracy powyżej 28°C (25°C przy pracy wymagającej dużego wysiłku) pracodawca wprowadza środki techniczne lub organizacyjne (klimatyzacja, wentylacja, przerwy, zmiana godzin, "
+         "ograniczenie wysiłku), a na otwartej przestrzeni powyżej 25°C — środki organizacyjne; rozwiązania organizacyjne konsultuje z komisją BHP (bez komisji — w trybie art. 237¹¹ᵃ KP, po opinii lekarza medycyny pracy). Powyżej 35°C w pomieszczeniu albo 32°C na zewnątrz przy pracy wymagającej dużego wysiłku — "
+         "prac się nie wykonuje, dopóki temperatura nie spadnie (§ 30a; wyjątki m.in. dla służb ratowniczych, ochrony zdrowia, żłobków, funkcjonariuszy i żołnierzy). Rozporządzenie nie reguluje wynagrodzenia za ten czas — stosujesz art. 81 §1 KP (gotowość do pracy). Nadal obowiązują napoje profilaktyczne (powyżej 28°C / 25°C) i zimne napoje bez limitu.\n"
          "## Słowniczek EN–PL do rozliczeń międzynarodowych\n"
          "| EN | PL |\n|---|---|\n"
          "| posted worker / posting | pracownik delegowany / delegowanie |\n"
@@ -222,7 +222,7 @@ LEKCJE_ZAGRANICA = [
          {"p": "Maksymalny okres delegowania, przez który pracownik pozostaje w ZUS na podstawie art. 12 rozporządzenia 883/2004:", "o": ["6 miesięcy", "12 miesięcy", "24 miesiące", "36 miesięcy"], "odp": 2, "w": "Zaświadczenie A1 (wniosek US-3)."},
          {"p": "Wyrok TSUE C-55/18 (CCOO) dotyczy:", "o": ["Urlopu w czasie choroby", "Obowiązku rejestrowania dobowego czasu pracy", "Dyżuru domowego", "Płacy minimalnej"], "odp": 1, "w": "Ewidencja godzin od–do."},
          {"p": "Dyrektywa 2019/1158 wprowadziła do KP m.in.:", "o": ["Urlop opiekuńczy 5 dni i zwolnienie z powodu siły wyższej", "Jawność wynagrodzeń", "Domniemanie stosunku pracy dla platform", "Limit 48 h czasu pracy"], "odp": 0, "w": "Nowelizacja z 26.04.2023 (art. 173¹, 148¹, 188¹)."},
-         {"p": "Od 11.01.2027 przy pracy w pomieszczeniu w temperaturze powyżej 35°C pracodawca:", "o": ["Wydaje dodatkowe napoje i tyle", "Wstrzymuje pracę z zachowaniem wynagrodzenia", "Skraca dobę do 10 h", "Nie ma obowiązków — to zalecenie EU-OSHA"], "odp": 1, "w": "Rozporządzenie MRPiPS z 9.07.2026 (Dz.U. 2026 poz. 927); od 28°C — środki techniczne/organizacyjne."},
+         {"p": "Od 11.01.2027 przy pracy w pomieszczeniu w temperaturze powyżej 35°C pracodawca:", "o": ["Wydaje dodatkowe napoje i tyle", "Nie powierza tej pracy, dopóki temperatura nie spadnie", "Skraca dobę do 10 h", "Nie ma obowiązków — to zalecenie EU-OSHA"], "odp": 1, "w": "Rozporządzenie MRPiPS z 9.07.2026 (Dz.U. 2026 poz. 927); od 28°C — środki techniczne/organizacyjne."},
      ]},
 ]
 

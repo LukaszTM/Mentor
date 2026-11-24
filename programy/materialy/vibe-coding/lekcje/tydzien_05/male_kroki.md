@@ -123,10 +123,10 @@ Narzędzia, ceny i przepisy zmieniają się — przed użyciem w pracy otwórz �
   - B) Kryterium „Gotowe, gdy…”
   - C) Emoji
   - D) Nazwą modelu
-- Nowa rozmowa w Codex:
+- Nowa rozmowa w Codex bez czyszczenia ekranu terminala:
   - A) /new
-  - B) /clear
-  - C) /restart
+  - B) /restart
+  - C) /reset
   - D) /init
 
 Odpowiedzi: B, B, B, A

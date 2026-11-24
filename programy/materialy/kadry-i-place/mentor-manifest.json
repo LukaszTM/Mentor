@@ -1,7 +1,7 @@
 {
  "schema": "mentor-course/1",
  "course_id": "kadry-i-place",
- "version": "3.1",
+ "version": "3.2",
  "entrypoint": "kurs_mentor.json",
  "title": "Kadry i płace — kurs zaawansowany (praktyka 2026)",
  "mentor_min": "2.8.1",

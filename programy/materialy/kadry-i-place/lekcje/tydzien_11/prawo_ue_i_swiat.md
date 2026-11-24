@@ -67,7 +67,7 @@ Trzy powody. (1) ROZPORZĄDZENIA UE obowiązują w Polsce bezpośrednio — koor
 | nr 183 (2000) — ochrona macierzyństwa | 14 tygodni urlopu, ochrona przed zwolnieniem | Polska stosuje wcześniejszą konwencję nr 103; KP daje więcej (20 tygodni) |
 ### EU-OSHA i upały — przewodnik „Heat at work” (2023, wersja polska) a polskie rozporządzenie z 9.07.2026
 EU-OSHA (Europejska Agencja Bezpieczeństwa i Zdrowia w Pracy, Bilbao) zaleca: ocena ryzyka cieplnego dla stanowisk w pomieszczeniach i na zewnątrz, plan działań na upał (przesunięcie godzin, częstsze przerwy w cieniu, woda, aklimatyzacja nowych i powracających pracowników przez 7–14 dni, lekka odzież, obserwacja objawów: zawroty, nudności, zaprzestanie potnienia — natychmiast przerwać pracę, chłodzić, wezwać pomoc), szkolenie pracowników i kierowników, uwzględnienie wieku i stanu zdrowia.
-Polska — rozporządzenie MRPiPS z 9.07.2026 zmieniające rozporządzenie w sprawie ogólnych przepisów BHP (Dz.U. 2026 poz. 927), obowiązuje od 11.01.2027: przy temperaturze w pomieszczeniu pracy powyżej 28°C (na zewnątrz powyżej 25°C) pracodawca wprowadza środki techniczne lub organizacyjne (klimatyzacja, wentylacja, przerwy, zmiana godzin, ograniczenie wysiłku) i konsultuje je z komisją BHP lub przedstawicielami pracowników; przy 35°C w pomieszczeniu albo 32°C na zewnątrz przy pracy wymagającej wysiłku — wstrzymanie pracy do czasu obniżenia temperatury, z zachowaniem wynagrodzenia. Nadal obowiązują napoje profilaktyczne (powyżej 28°C / 25°C) i zimne napoje bez limitu.
+Polska — rozporządzenie MRPiPS z 9.07.2026 zmieniające rozporządzenie w sprawie ogólnych przepisów BHP (Dz.U. 2026 poz. 927), obowiązuje od 11.01.2027: przy temperaturze w pomieszczeniu pracy powyżej 28°C (25°C przy pracy wymagającej dużego wysiłku) pracodawca wprowadza środki techniczne lub organizacyjne (klimatyzacja, wentylacja, przerwy, zmiana godzin, ograniczenie wysiłku), a na otwartej przestrzeni powyżej 25°C — środki organizacyjne; rozwiązania organizacyjne konsultuje z komisją BHP (bez komisji — w trybie art. 237¹¹ᵃ KP, po opinii lekarza medycyny pracy). Powyżej 35°C w pomieszczeniu albo 32°C na zewnątrz przy pracy wymagającej dużego wysiłku — prac się nie wykonuje, dopóki temperatura nie spadnie (§ 30a; wyjątki m.in. dla służb ratowniczych, ochrony zdrowia, żłobków, funkcjonariuszy i żołnierzy). Rozporządzenie nie reguluje wynagrodzenia za ten czas — stosujesz art. 81 §1 KP (gotowość do pracy). Nadal obowiązują napoje profilaktyczne (powyżej 28°C / 25°C) i zimne napoje bez limitu.
 ### Słowniczek EN–PL do rozliczeń międzynarodowych
 | EN | PL |
 |---|---|
@@ -212,7 +212,7 @@ Przed zastosowaniem w pracy sprawdź, czy od daty dostępu nic się nie zmienił
   - D) Limit 48 h czasu pracy
 - Od 11.01.2027 przy pracy w pomieszczeniu w temperaturze powyżej 35°C pracodawca:
   - A) Wydaje dodatkowe napoje i tyle
-  - B) Wstrzymuje pracę z zachowaniem wynagrodzenia
+  - B) Nie powierza tej pracy, dopóki temperatura nie spadnie
   - C) Skraca dobę do 10 h
   - D) Nie ma obowiązków — to zalecenie EU-OSHA
 

@@ -104,7 +104,7 @@ Rozpoznajesz 6 porażek agenta, przechodzisz z pętli poprawek do diagnozy, daje
 Narzędzia, ceny i przepisy zmieniają się — przed użyciem w pracy otwórz źródło.
 - Claude Code — Best practices (dostęp 19.11.2026) — <https://code.claude.com/docs/en/best-practices>
 - Claude Code — Checkpointing (/rewind, Esc Esc) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/checkpointing>
-- METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX) (dostęp 19.11.2026) — <https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/>
+- METR (10.07.2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (dostęp 24.11.2026) — <https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Ten sam błąd wraca po 3 poprawkach. Ruch:

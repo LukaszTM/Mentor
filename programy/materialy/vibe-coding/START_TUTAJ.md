@@ -1,6 +1,6 @@
 # START TUTAJ — Vibe coding od podstaw
 
-**Wersja kursu:** 1.0 · stan na: 20 listopada 2026 · format `mentor-program/1`
+**Wersja kursu:** 1.1 · stan na: 20 listopada 2026 · format `mentor-program/1`
 **Poziom:** od zera — bez wcześniejszej znajomości plików, terminala, programowania i narzędzi AI.
 **Czas:** 16 tygodni, ok. 80 minut dziennie (pn–pt) i do 90 minut w sobotę — razem ok. 118 godzin; żaden tydzień nie przekracza 9 godzin (czas policzony z treści lekcji i zadań).
 **System:** Windows 10 (1809+) / 11 — Mentor.exe; Claude Code i Codex instalowane w tygodniu 4.

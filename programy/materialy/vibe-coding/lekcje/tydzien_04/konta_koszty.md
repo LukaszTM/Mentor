@@ -15,11 +15,11 @@ Tydzień 4 · lekcja 13 z 48 · ≈ 50 min
 |---|---|---|
 | dostęp w planie | Pro, Max, Team, Enterprise; darmowy plan claude.ai NIE obejmuje Claude Code | ChatGPT Plus i wyższe: CLI, IDE, web; Free i Go — ograniczony dostęp tylko w aplikacji desktop (wdrażany stopniowo) |
 | najtańszy pełny plan | Pro: 20 USD/mies. (17 USD przy płatności rocznej) | Plus: 20 USD/mies. |
-| wyższe plany | Max 5x: 100 USD, Max 20x: 200 USD | Pro: od 100 USD |
+| wyższe plany | Max: 100 USD (5× użycia Pro), Ultra: 200 USD (dawniej Max 20x, od 30.10.2026) | Pro: od 100 USD |
 | płatność za użycie | konto API (Console) — płacisz za tokeny | klucz API — płacisz za tokeny |
 Ceny podano bez podatku (stan: listopad 2026). W Polsce dolicza się VAT 23%: 20 USD × 1,23 = 24,60 USD, czyli ok. 90–100 zł zależnie od kursu dolara. Ceny i nazwy planów zmieniają się kilka razy w roku — kalendarz aktualizacji kursu przypomina, kiedy sprawdzić strony cenników.
 ### Limity: okno 5-godzinne i tygodniowe
-Subskrypcja to nie „bez limitu”. Oba narzędzia liczą użycie w oknach: krótkim (ok. 5 godzin) i tygodniowym. Po przekroczeniu Claude Code pokazuje komunikat o limicie sesji lub tygodnia i trzeba poczekać (albo dokupić użycie). W Claude Code stan limitów pokazuje polecenie `/usage`, w Codex — `/status`.
+Subskrypcja to nie „bez limitu”. Oba narzędzia liczą użycie w oknach: krótkim (ok. 5 godzin) i tygodniowym. Po przekroczeniu Claude Code pokazuje komunikat o limicie sesji lub tygodnia i trzeba poczekać (albo dokupić użycie). W Claude Code stan limitów pokazuje polecenie `/usage`, w Codex — `/usage` (limity konta), a `/status` — zużycie tokenów w bieżącej sesji.
 ### Subskrypcja czy API?
 - Subskrypcja: stała cena, limity. Dla nauki i małych projektów — prawie zawsze lepsza.
 - API: płacisz za każdy token, bez sufitu. Dokumentacja Claude Code podaje, że w firmach średni koszt to ok. 13 USD na programistę na aktywny dzień, 150–250 USD miesięcznie. Dla początkującego to łatwa droga do niespodzianki na karcie.
@@ -29,7 +29,7 @@ Subskrypcja to nie „bez limitu”. Oba narzędzia liczą użycie w oknach: kr�
 - Najmocniejszy model do prostych zadań (`/model` zmienia model).
 ### Decyzja dla kursu
 - Wystarczy JEDEN plan: Claude Pro albo ChatGPT Plus. Lekcje pokazują oba narzędzia; zadania wykonasz tym, które masz.
-- Kup na miesiąc, ustaw przypomnienie o odnowieniu, oceniaj po 2 tygodniach w `/usage` / `/status`.
+- Kup na miesiąc, ustaw przypomnienie o odnowieniu, oceniaj po 2 tygodniach w `/usage` (w obu narzędziach).
 - Ścieżka bez konta: każde zadanie z agentem ma zapis jego pracy z jednym celowo wstawionym błędem — ćwiczysz czytanie i poprawianie kodu agenta.
 ### Bezpieczeństwo konta
 Włącz weryfikację dwuetapową (2FA) na koncie Anthropic/OpenAI i GitHub. Nie udostępniaj konta innym — dostęp do agenta to dostęp do Twoich plików.
@@ -54,7 +54,7 @@ Alternatywa API: 13 USD dziennie × 20 dni = 260 USD = ok. 990 zł/mies. bez VAT
 
 ## 3 · Jak to uruchomić
 1. Przeglądarka → claude.com/pricing, chatgpt.com/codex/pricing.
-2. Po zakupie: w Claude Code `/usage`, w Codex `/status`.
+2. Po zakupie: `/usage` w Claude Code i w Codex.
 
 ## W praktyce
 - Koszt narzędzi wpisuj do wyceny dla klienta.
@@ -75,7 +75,7 @@ Dopasuj: (1) masz już ChatGPT Plus, (2) nie masz żadnego planu i chcesz zaczą
 ## 6 · Typowe błędy i naprawa
 - ✘ **„You've hit your session limit” w środku zadania.**
   - Przyczyna: Wyczerpane okno 5-godzinne (długa sesja, duży kontekst).
-  - Jak sprawdzić: `/usage` (Claude Code) albo `/status` (Codex).
+  - Jak sprawdzić: `/usage` (w Claude Code i w Codex).
   - Poprawka: Poczekaj do odnowienia okna; na przyszłość krótsze sesje, `/clear` między zadaniami (tydzień 7).
 - ✘ **Claude Code po zalogowaniu mówi, że plan nie obejmuje dostępu.**
   - Przyczyna: Darmowy plan claude.ai nie obejmuje Claude Code.
@@ -101,15 +101,15 @@ Dopasuj: (1) masz już ChatGPT Plus, (2) nie masz żadnego planu i chcesz zaczą
 - **Czym różni się subskrypcja od API?**
   - Subskrypcja: stała cena z limitami okien; API: płatność za każdy token bez sufitu.
 - **Jak sprawdzisz, ile limitu zostało?**
-  - W Claude Code `/usage`, w Codex `/status`.
+  - `/usage` — w Claude Code i w Codex.
 
 ## Co potrafię teraz bez patrzenia na przykład?
 Wybierasz jeden plan albo ścieżkę bez konta, liczysz koszt z VAT, rozumiesz okna limitów i dlaczego API nie jest „tańsze” dla początkującego.
 
 ## Źródła (data dostępu w nawiasie)
 Narzędzia, ceny i przepisy zmieniają się — przed użyciem w pracy otwórz źródło.
-- Claude Help Center — Using Claude Code with your Pro or Max plan (dostęp 19.11.2026) — <https://support.claude.com/en/articles/14552983>
-- Ceny planów Claude 2026 — zestawienie (dupple.com, 2.11.2026) (dostęp 19.11.2026) — <https://dupple.com/learn/claude-code-pricing>
+- Claude Help Center — Use Claude Code with your Pro or Max plan (limity 5-godzinne i tygodniowe) (dostęp 24.11.2026) — <https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan>
+- Claude — Plans & Pricing (Pro 20 USD / 17 USD rocznie, Max 100 USD, Ultra 200 USD; ceny bez podatku) (dostęp 24.11.2026) — <https://claude.com/pricing>
 - Codex — Pricing (plany ChatGPT i dostęp do Codex) (dostęp 19.11.2026) — <https://chatgpt.com/codex/pricing/>
 - Claude Code — Manage costs effectively (/usage, /context, /clear, /compact) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/costs>
 

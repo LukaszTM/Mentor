@@ -11,7 +11,7 @@ META = {
              "pilnujesz sekretów, danych osobowych i bezpieczeństwa, rozmawiasz z klientem i masz portfolio. Start od zera: bez znajomości plików, terminala i kodu. "
              "Każde zadanie z kodem sprawdzają niezależne testy z paczki kursu (weryfikowane sumą SHA-256); zadania z agentem mają ścieżkę bez płatnego konta."),
     "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude; fakty o narzędziach, cenach i prawie sprawdzone u źródeł 19–20.11.2026)",
-    "wersja": "1.0", "jezyk": "pl", "katalog_projektu": "pod-lipa",
+    "wersja": "1.1", "jezyk": "pl", "katalog_projektu": "pod-lipa",
     "stanowisko": "Twórca aplikacji z agentami AI (vibe coder) — poziom początkujący/junior",
     "czas_dziennie_min": 80, "dni_w_tygodniu": [0, 1, 2, 3, 4], "dzien_quizu": 5, "dzien_wolny": 6,
     "poziom": "od zera — bez wcześniejszej znajomości plików, terminala, programowania i narzędzi AI",
@@ -188,8 +188,8 @@ SCIAGA = [
     {"tytul": "6 dziur w kodzie od AI", "pozycje": [["XSS", "HTML z danych użytkownika → escape() / szablon z autoescape; w JS textContent"], ["SQL injection", "tylko execute(\"… = ?\", (x,))"],
                                                    ["Sekrety", "os.environ; brak → RuntimeError; .env w .gitignore i w deny"], ["Debug", "debug=True i host 0.0.0.0 tylko lokalnie — nigdy w kodzie produkcyjnym"],
                                                    ["Walidacja", "na serwerze, złe dane → 400"], ["Zależności", "każda paczka sprawdzona na pypi.org (slopsquatting)"]]},
-    {"tytul": "Koszty i terminy (stan 20.11.2026)", "pozycje": [["Claude Pro / ChatGPT Plus", "po 20 USD/mies. bez VAT (≈ 24,60 USD z VAT 23%)"], ["Max / Pro (wyższe)", "Claude Max 5x 100 USD, 20x 200 USD · ChatGPT Pro od 100 USD"],
-                                                               ["Limity", "okno ok. 5 h + tygodniowe — /usage (Claude Code), /status (Codex)"], ["AI Act", "art. 50: 2.08.2026 (przejściowo do 2.12.2026) · wysokie ryzyko: 2.12.2027 / 2.08.2028"],
+    {"tytul": "Koszty i terminy (stan 20.11.2026)", "pozycje": [["Claude Pro / ChatGPT Plus", "po 20 USD/mies. bez VAT (≈ 24,60 USD z VAT 23%)"], ["Max / Ultra / Pro (wyższe)", "Claude Max 100 USD, Ultra 200 USD (dawniej Max 20x) · ChatGPT Pro od 100 USD"],
+                                                               ["Limity", "okno ok. 5 h + tygodniowe — /usage (Claude Code i Codex)"], ["AI Act", "art. 50: 2.08.2026 (przejściowo do 2.12.2026) · wysokie ryzyko: 2.12.2027 / 2.08.2028"],
                                                                ["Działalność nierejestrowana 2026", "10 813,50 zł przychodu na kwartał; po przekroczeniu 7 dni na CEIDG"], ["GitHub Pages", "strona ≤ 1 GB, 100 GB/mies., Free — tylko repo publiczne"]]},
 ]
 

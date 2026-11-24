@@ -270,7 +270,7 @@ KONTEKST = L(
         "| cel | Claude Code | Codex |\n"
         "|---|---|---|\n"
         "| ile kontekstu zajęte | `/context` (wykres: instrukcje, pliki, rozmowa) | `/status` |\n"
-        "| limity planu | `/usage` | `/status` |\n"
+        "| limity planu | `/usage` | `/usage` |\n"
         "| nowy temat, czysta kartka | `/clear` | `/new` |\n"
         "| streszczenie zamiast kasowania | `/compact` (można dodać, co zachować: `/compact zachowaj decyzje o rabatach`) | `/compact` |\n"
         "| zmiana modelu | `/model` | `/model` |\n"
@@ -409,7 +409,7 @@ GDY_MYLI = L(
           T("ImportError dla paczki spoza pypi.org sugeruje:", ["Brak internetu", "Zmyśloną zależność", "Złą wersję Windows", "Błąd Gita"], 1, "Halucynacja paczki."),
           T("Najlepsza informacja zwrotna dla agenta:", ["„Źle”", "Czerwony test z poleceniem uruchomienia", "Zrzut ekranu pulpitu", "„Postaraj się”"], 1, "Agent sam sprawdzi poprawkę.")],
     w_praktyce=["Przy uporczywym błędzie — zawsze najpierw diagnoza.", "Zasady z porażek trafiają do AGENTS.md."],
-    zrodla=[Z_CC_BEST, Z_CC_CHECK, ["METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX)", "https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/", D]],
+    zrodla=[Z_CC_BEST, Z_CC_CHECK, ["METR (10.07.2025): badanie RCT — doświadczeni programiści z AI 19% wolniej", "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/", "dostęp 24.11.2026"]],
 )
 
 POWTORKA_1 = L(

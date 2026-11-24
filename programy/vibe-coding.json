@@ -5,7 +5,7 @@
  "podtytul": "16 tygodni · od plików i terminala do własnej aplikacji z Claude Code i Codex — specyfikacja, testy, Git, bezpieczeństwo, klient i portfolio",
  "opis": "Po 16 tygodniach budujesz z agentami AI (Claude Code, Codex) działające aplikacje — od skryptu i strony internetowej po mini system rezerwacji z bazą danych — i umiesz udowodnić, że działają: piszesz specyfikację z przykładami, testy, przeglądasz zmiany agenta, prowadzisz projekt w Git i GitHub z CI, pilnujesz sekretów, danych osobowych i bezpieczeństwa, rozmawiasz z klientem i masz portfolio. Start od zera: bez znajomości plików, terminala i kodu. Każde zadanie z kodem sprawdzają niezależne testy z paczki kursu (weryfikowane sumą SHA-256); zadania z agentem mają ścieżkę bez płatnego konta.",
  "autor": "Mentor — kurs otwarty (treść wygenerowana z Claude; fakty o narzędziach, cenach i prawie sprawdzone u źródeł 19–20.11.2026)",
- "wersja": "1.0",
+ "wersja": "1.1",
  "jezyk": "pl",
  "katalog_projektu": "pod-lipa",
  "stanowisko": "Twórca aplikacji z agentami AI (vibe coder) — poziom początkujący/junior",
@@ -3070,9 +3070,9 @@
      "dostęp 19.11.2026"
     ],
     [
-     "METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX)",
-     "https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/",
-     "dostęp 19.11.2026"
+     "METR (10.07.2025): Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity — badanie RCT, z AI 19% wolniej",
+     "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+     "dostęp 24.11.2026"
     ],
     [
      "Claude Code — przewodnik po terminalu dla nowych użytkowników (oficjalna dokumentacja)",
@@ -5776,7 +5776,7 @@
     "Lekcja „Jak działa model AI” (tokeny).",
     "Decyzja budżetowa z planu nauki (zadanie v0z1)."
    ],
-   "wyjasnienie": "## Dwa narzędzia, dwa ekosystemy\n| | Claude Code (Anthropic) | Codex (OpenAI) |\n|---|---|---|\n| dostęp w planie | Pro, Max, Team, Enterprise; darmowy plan claude.ai NIE obejmuje Claude Code | ChatGPT Plus i wyższe: CLI, IDE, web; Free i Go — ograniczony dostęp tylko w aplikacji desktop (wdrażany stopniowo) |\n| najtańszy pełny plan | Pro: 20 USD/mies. (17 USD przy płatności rocznej) | Plus: 20 USD/mies. |\n| wyższe plany | Max 5x: 100 USD, Max 20x: 200 USD | Pro: od 100 USD |\n| płatność za użycie | konto API (Console) — płacisz za tokeny | klucz API — płacisz za tokeny |\nCeny podano bez podatku (stan: listopad 2026). W Polsce dolicza się VAT 23%: 20 USD × 1,23 = 24,60 USD, czyli ok. 90–100 zł zależnie od kursu dolara. Ceny i nazwy planów zmieniają się kilka razy w roku — kalendarz aktualizacji kursu przypomina, kiedy sprawdzić strony cenników.\n## Limity: okno 5-godzinne i tygodniowe\nSubskrypcja to nie „bez limitu”. Oba narzędzia liczą użycie w oknach: krótkim (ok. 5 godzin) i tygodniowym. Po przekroczeniu Claude Code pokazuje komunikat o limicie sesji lub tygodnia i trzeba poczekać (albo dokupić użycie). W Claude Code stan limitów pokazuje polecenie `/usage`, w Codex — `/status`.\n## Subskrypcja czy API?\n- Subskrypcja: stała cena, limity. Dla nauki i małych projektów — prawie zawsze lepsza.\n- API: płacisz za każdy token, bez sufitu. Dokumentacja Claude Code podaje, że w firmach średni koszt to ok. 13 USD na programistę na aktywny dzień, 150–250 USD miesięcznie. Dla początkującego to łatwa droga do niespodzianki na karcie.\n## Co zużywa limit najszybciej\n- Długie rozmowy (cały kontekst jest wysyłany za każdym razem) — tydzień 7.\n- Ogólne polecenia („popraw cały projekt”) — agent czyta wszystko.\n- Najmocniejszy model do prostych zadań (`/model` zmienia model).\n## Decyzja dla kursu\n- Wystarczy JEDEN plan: Claude Pro albo ChatGPT Plus. Lekcje pokazują oba narzędzia; zadania wykonasz tym, które masz.\n- Kup na miesiąc, ustaw przypomnienie o odnowieniu, oceniaj po 2 tygodniach w `/usage` / `/status`.\n- Ścieżka bez konta: każde zadanie z agentem ma zapis jego pracy z jednym celowo wstawionym błędem — ćwiczysz czytanie i poprawianie kodu agenta.\n## Bezpieczeństwo konta\nWłącz weryfikację dwuetapową (2FA) na koncie Anthropic/OpenAI i GitHub. Nie udostępniaj konta innym — dostęp do agenta to dostęp do Twoich plików.",
+   "wyjasnienie": "## Dwa narzędzia, dwa ekosystemy\n| | Claude Code (Anthropic) | Codex (OpenAI) |\n|---|---|---|\n| dostęp w planie | Pro, Max, Team, Enterprise; darmowy plan claude.ai NIE obejmuje Claude Code | ChatGPT Plus i wyższe: CLI, IDE, web; Free i Go — ograniczony dostęp tylko w aplikacji desktop (wdrażany stopniowo) |\n| najtańszy pełny plan | Pro: 20 USD/mies. (17 USD przy płatności rocznej) | Plus: 20 USD/mies. |\n| wyższe plany | Max: 100 USD (5× użycia Pro), Ultra: 200 USD (dawniej Max 20x, od 30.10.2026) | Pro: od 100 USD |\n| płatność za użycie | konto API (Console) — płacisz za tokeny | klucz API — płacisz za tokeny |\nCeny podano bez podatku (stan: listopad 2026). W Polsce dolicza się VAT 23%: 20 USD × 1,23 = 24,60 USD, czyli ok. 90–100 zł zależnie od kursu dolara. Ceny i nazwy planów zmieniają się kilka razy w roku — kalendarz aktualizacji kursu przypomina, kiedy sprawdzić strony cenników.\n## Limity: okno 5-godzinne i tygodniowe\nSubskrypcja to nie „bez limitu”. Oba narzędzia liczą użycie w oknach: krótkim (ok. 5 godzin) i tygodniowym. Po przekroczeniu Claude Code pokazuje komunikat o limicie sesji lub tygodnia i trzeba poczekać (albo dokupić użycie). W Claude Code stan limitów pokazuje polecenie `/usage`, w Codex — `/usage` (limity konta), a `/status` — zużycie tokenów w bieżącej sesji.\n## Subskrypcja czy API?\n- Subskrypcja: stała cena, limity. Dla nauki i małych projektów — prawie zawsze lepsza.\n- API: płacisz za każdy token, bez sufitu. Dokumentacja Claude Code podaje, że w firmach średni koszt to ok. 13 USD na programistę na aktywny dzień, 150–250 USD miesięcznie. Dla początkującego to łatwa droga do niespodzianki na karcie.\n## Co zużywa limit najszybciej\n- Długie rozmowy (cały kontekst jest wysyłany za każdym razem) — tydzień 7.\n- Ogólne polecenia („popraw cały projekt”) — agent czyta wszystko.\n- Najmocniejszy model do prostych zadań (`/model` zmienia model).\n## Decyzja dla kursu\n- Wystarczy JEDEN plan: Claude Pro albo ChatGPT Plus. Lekcje pokazują oba narzędzia; zadania wykonasz tym, które masz.\n- Kup na miesiąc, ustaw przypomnienie o odnowieniu, oceniaj po 2 tygodniach w `/usage` (w obu narzędziach).\n- Ścieżka bez konta: każde zadanie z agentem ma zapis jego pracy z jednym celowo wstawionym błędem — ćwiczysz czytanie i poprawianie kodu agenta.\n## Bezpieczeństwo konta\nWłącz weryfikację dwuetapową (2FA) na koncie Anthropic/OpenAI i GitHub. Nie udostępniaj konta innym — dostęp do agenta to dostęp do Twoich plików.",
    "przyklad": "Kalkulacja na kartce (kurs 3,80 zł/USD — wpisz aktualny):\n\nClaude Pro: 20 USD × 1,23 VAT = 24,60 USD × 3,80 = 93,48 zł/mies.\n4 miesiące kursu (tydzień 4–15, ok. 3 miesiące + zapas): ok. 280–375 zł.\nAlternatywa API: 13 USD dziennie × 20 dni = 260 USD = ok. 990 zł/mies. bez VAT — dlatego dla nauki wybieramy subskrypcję.",
    "demonstracja": {
     "tytul": "Sprawdzenie cennika i decyzja w 10 minut",
@@ -5790,7 +5790,7 @@
    },
    "jak_uruchomic": [
     "Przeglądarka → claude.com/pricing, chatgpt.com/codex/pricing.",
-    "Po zakupie: w Claude Code `/usage`, w Codex `/status`."
+    "Po zakupie: `/usage` w Claude Code i w Codex."
    ],
    "cwiczenia": [
     {
@@ -5906,7 +5906,7 @@
     {
      "komunikat": "„You've hit your session limit” w środku zadania.",
      "przyczyna": "Wyczerpane okno 5-godzinne (długa sesja, duży kontekst).",
-     "diagnoza": "`/usage` (Claude Code) albo `/status` (Codex).",
+     "diagnoza": "`/usage` (w Claude Code i w Codex).",
      "poprawka": "Poczekaj do odnowienia okna; na przyszłość krótsze sesje, `/clear` między zadaniami (tydzień 7)."
     },
     {
@@ -5942,7 +5942,7 @@
     ],
     [
      "Jak sprawdzisz, ile limitu zostało?",
-     "W Claude Code `/usage`, w Codex `/status`."
+     "`/usage` — w Claude Code i w Codex."
     ]
    ],
    "podsumowanie": "Wybierasz jeden plan albo ścieżkę bez konta, liczysz koszt z VAT, rozumiesz okna limitów i dlaczego API nie jest „tańsze” dla początkującego.",
@@ -5998,14 +5998,14 @@
    ],
    "zrodla": [
     [
-     "Claude Help Center — Using Claude Code with your Pro or Max plan",
-     "https://support.claude.com/en/articles/14552983",
-     "dostęp 19.11.2026"
+     "Claude Help Center — Use Claude Code with your Pro or Max plan (limity 5-godzinne i tygodniowe)",
+     "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+     "dostęp 24.11.2026"
     ],
     [
-     "Ceny planów Claude 2026 — zestawienie (dupple.com, 2.11.2026)",
-     "https://dupple.com/learn/claude-code-pricing",
-     "dostęp 19.11.2026"
+     "Claude — Plans & Pricing (Pro 20 USD / 17 USD rocznie, Max 100 USD, Ultra 200 USD; ceny bez podatku)",
+     "https://claude.com/pricing",
+     "dostęp 24.11.2026"
     ],
     [
      "Codex — Pricing (plany ChatGPT i dostęp do Codex)",
@@ -6257,9 +6257,9 @@
      "dostęp 19.11.2026"
     ],
     [
-     "Claude Help Center — Using Claude Code with your Pro or Max plan",
-     "https://support.claude.com/en/articles/14552983",
-     "dostęp 19.11.2026"
+     "Claude Help Center — Use Claude Code with your Pro or Max plan (limity 5-godzinne i tygodniowe)",
+     "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+     "dostęp 24.11.2026"
     ]
    ],
    "czas_min": 50
@@ -6284,7 +6284,7 @@
     "Plan ChatGPT Plus lub wyższy dla CLI (Free i Go — ograniczony dostęp tylko w aplikacji, wdrażany stopniowo).",
     "Lekcja „Instalacja Claude Code” (analogiczne kroki)."
    ],
-   "wyjasnienie": "## Dwie formy Codex\n| | Codex CLI (terminal) | Codex w aplikacji ChatGPT desktop |\n|---|---|---|\n| instalacja | PowerShell: `powershell -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 \\| iex\"` albo `npm install -g @openai/codex` (wymaga Node.js) | Microsoft Store albo `winget install --id 9PLM9XGG6VKS -s msstore` |\n| start | `codex` w katalogu projektu | wybierasz folder projektu w aplikacji |\n| izolacja na Windows | natywna piaskownica Windows albo WSL2 | natywna piaskownica Windows albo WSL2 |\nLogowanie: „Sign in with ChatGPT” (konta Plus, Pro, Business, Edu, Enterprise) albo klucz API (płatność za tokeny — lekcja o kosztach). Codex CLI jest otwartym oprogramowaniem (licencja Apache-2.0).\n## Piaskownica (sandbox) — co agent może dotknąć\n| tryb piaskownicy | co wolno |\n|---|---|\n| read-only | tylko czytać pliki |\n| workspace-write | czytać i zmieniać pliki w katalogu projektu; wyjście poza katalog lub internet wymaga zgody |\n| danger-full-access | wszystko na komputerze i w sieci — tylko w izolowanych maszynach |\n## Tryby uprawnień (aplikacja i CLI)\n- „Ask for approval” — pracuje w katalogu projektu, pyta przed wyjściem poza niego i przed dostępem do internetu. Tryb startowy w kursie.\n- „Approve for me” — Codex sam ocenia prośby o zgodę (automatyczny przegląd). Wygodniej, mniej kontroli.\n- „Full access” — cały komputer i internet bez pytania. W kursie: nigdy.\nW CLI tryb zmienisz poleceniem `/permissions`; przy starcie możesz go podać jawnie: `codex --sandbox workspace-write --ask-for-approval on-request`.\n## Polecenia w sesji Codex CLI\n| polecenie | co robi |\n|---|---|\n| `/init` | tworzy szkielet pliku AGENTS.md (instrukcje projektu — tydzień 5) |\n| `/diff` | pokazuje zmiany w plikach (Git) |\n| `/status` | ustawienia sesji, model, tryb zgód, zużycie tokenów |\n| `/compact` | streszcza rozmowę, by zwolnić kontekst |\n| `/new` | nowa rozmowa bez wychodzenia |\n| `/review` | prośba o przegląd zmian w katalogu (ryzyka, brakujące testy) |\n| `/model` | zmiana modelu |\n## Claude Code i Codex — ta sama praca, inne przyciski\n| czynność | Claude Code | Codex |\n|---|---|---|\n| instrukcje projektu | CLAUDE.md (czyta też AGENTS.md, gdy nie ma CLAUDE.md) | AGENTS.md |\n| zmiana trybu zgód | Shift + Tab, `/permissions` (reguły) | `/permissions` |\n| limity i zużycie | `/usage`, `/context` | `/status` |\n| podsumowanie rozmowy | `/compact` | `/compact` |\n| przerwanie | Esc | Esc |\nNazwy modeli zmieniają się często — kurs ich nie wpisuje; sprawdzisz je w `/model`.",
+   "wyjasnienie": "## Dwie formy Codex\n| | Codex CLI (terminal) | Codex w aplikacji ChatGPT desktop |\n|---|---|---|\n| instalacja | PowerShell: `powershell -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 \\| iex\"` albo `npm install -g @openai/codex` (wymaga Node.js) | Microsoft Store albo `winget install --id 9PLM9XGG6VKS -s msstore` |\n| start | `codex` w katalogu projektu | wybierasz folder projektu w aplikacji |\n| izolacja na Windows | natywna piaskownica Windows albo WSL2 | natywna piaskownica Windows albo WSL2 |\nLogowanie: „Sign in with ChatGPT” (konta Plus, Pro, Business, Edu, Enterprise) albo klucz API (płatność za tokeny — lekcja o kosztach). Codex CLI jest otwartym oprogramowaniem (licencja Apache-2.0).\n## Piaskownica (sandbox) — co agent może dotknąć\n| tryb piaskownicy | co wolno |\n|---|---|\n| read-only | tylko czytać pliki |\n| workspace-write | czytać i zmieniać pliki w katalogu projektu; wyjście poza katalog lub internet wymaga zgody |\n| danger-full-access | wszystko na komputerze i w sieci — tylko w izolowanych maszynach |\n## Tryby uprawnień (aplikacja i CLI)\n- „Ask for approval” — pracuje w katalogu projektu, pyta przed wyjściem poza niego i przed dostępem do internetu. Tryb startowy w kursie.\n- „Approve for me” — Codex sam ocenia prośby o zgodę (automatyczny przegląd). Wygodniej, mniej kontroli.\n- „Full access” — cały komputer i internet bez pytania. W kursie: nigdy.\nW CLI tryb zmienisz poleceniem `/permissions`; przy starcie możesz go podać jawnie: `codex --sandbox workspace-write --ask-for-approval on-request`.\n## Polecenia w sesji Codex CLI\n| polecenie | co robi |\n|---|---|\n| `/init` | tworzy szkielet pliku AGENTS.md (instrukcje projektu — tydzień 5) |\n| `/diff` | pokazuje zmiany w plikach (Git) |\n| `/status` | ustawienia sesji, model, tryb zgód, zużycie tokenów |\n| `/compact` | streszcza rozmowę, by zwolnić kontekst |\n| `/new` | nowa rozmowa bez wychodzenia |\n| `/review` | prośba o przegląd zmian w katalogu (ryzyka, brakujące testy) |\n| `/model` | zmiana modelu |\n## Claude Code i Codex — ta sama praca, inne przyciski\n| czynność | Claude Code | Codex |\n|---|---|---|\n| instrukcje projektu | CLAUDE.md (czyta też AGENTS.md, gdy nie ma CLAUDE.md) | AGENTS.md |\n| zmiana trybu zgód | Shift + Tab, `/permissions` (reguły) | `/permissions` |\n| limity i zużycie | `/usage`, `/context` | `/usage`, `/status` |\n| podsumowanie rozmowy | `/compact` | `/compact` |\n| przerwanie | Esc | Esc |\nNazwy modeli zmieniają się często — kurs ich nie wpisuje; sprawdzisz je w `/model`.",
    "przyklad": "PS C:\\Users\\Anna> powershell -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\"\n(nowe okno)\nPS C:\\Users\\Anna> cd Documents\\Mentor\\vibe-coding\\PRACA\nPS C:\\...\\PRACA> codex --sandbox workspace-write --ask-for-approval on-request\n> Sign in with ChatGPT  (przeglądarka)\n> Opisz w 2 zdaniach pliki w tym katalogu. Niczego nie zmieniaj.",
    "demonstracja": {
     "tytul": "Codex w trybie „pytaj o zgodę” — pierwsza sesja tylko do odczytu",
@@ -7187,15 +7187,15 @@
      "w": "Agent może się sam sprawdzić."
     },
     {
-     "p": "Nowa rozmowa w Codex:",
+     "p": "Nowa rozmowa w Codex bez czyszczenia ekranu terminala:",
      "o": [
       "/new",
-      "/clear",
       "/restart",
+      "/reset",
       "/init"
      ],
      "odp": 0,
-     "w": "W Claude Code — /clear."
+     "w": "/clear w Codex też zaczyna nową rozmowę, ale czyści ekran; w Claude Code — /clear."
     }
    ],
    "w_praktyce": [
@@ -7948,7 +7948,7 @@
    "wymagania": [
     "Lekcje „Konta, plany i koszty” i „Małe kroki”."
    ],
-   "wyjasnienie": "## Dlaczego kontekst kosztuje\nPrzy każdej Twojej wiadomości agent wysyła modelowi całą dotychczasową rozmowę: instrukcje (CLAUDE.md/AGENTS.md), przeczytane pliki, wyniki komend, swoje odpowiedzi. Godzinna sesja to dziesiątki tysięcy tokenów przy KAŻDEJ wiadomości. Dlatego długie sesje szybciej zużywają limit i — gdy okno się zapełnia — gorzej pamiętają wcześniejsze ustalenia.\n## Polecenia\n| cel | Claude Code | Codex |\n|---|---|---|\n| ile kontekstu zajęte | `/context` (wykres: instrukcje, pliki, rozmowa) | `/status` |\n| limity planu | `/usage` | `/status` |\n| nowy temat, czysta kartka | `/clear` | `/new` |\n| streszczenie zamiast kasowania | `/compact` (można dodać, co zachować: `/compact zachowaj decyzje o rabatach`) | `/compact` |\n| zmiana modelu | `/model` | `/model` |\n| wysiłek rozumowania | `/effort` | (wybór modelu/ustawień) |\n| powrót do starej sesji | `/resume`, nazwanie `/rename` | (historia sesji w aplikacji) |\n## Strategie z dokumentacji (w skrócie)\n- `/clear` między niezwiązanymi zadaniami — najtańsze.\n- Konkretne prośby zamiast „popraw cały projekt” — agent czyta mniej plików.\n- Tryb planu przy złożonych zadaniach — mniej prób i błędów.\n- Lżejszy model do prostych zadań, mocniejszy do trudnych (nazwy modeli sprawdzasz w `/model` — zmieniają się).\n- Krótkie pliki instrukcji (każda linia CLAUDE.md jest wysyłana przy każdej wiadomości).\n## Notatka przekazania (handoff)\nPrzed `/clear` po dłuższej pracy poproś: „Zapisz w notatki/stan.md: co zrobione, decyzje, co dalej, otwarte pytania — maks. 15 linii”. Nowa sesja: „Przeczytaj notatki/stan.md i AGENTS.md”. To tańsze i pewniejsze niż wielogodzinna rozmowa.\n## Planowanie dnia pod limity\nOkno ok. 5 godzin: rozkładaj trudne zadania na początek okna, nie zostawiaj ich na koniec. Gdy limit się kończy — przejdź do pracy bez agenta: przegląd diffów, testy, README, dziennik.",
+   "wyjasnienie": "## Dlaczego kontekst kosztuje\nPrzy każdej Twojej wiadomości agent wysyła modelowi całą dotychczasową rozmowę: instrukcje (CLAUDE.md/AGENTS.md), przeczytane pliki, wyniki komend, swoje odpowiedzi. Godzinna sesja to dziesiątki tysięcy tokenów przy KAŻDEJ wiadomości. Dlatego długie sesje szybciej zużywają limit i — gdy okno się zapełnia — gorzej pamiętają wcześniejsze ustalenia.\n## Polecenia\n| cel | Claude Code | Codex |\n|---|---|---|\n| ile kontekstu zajęte | `/context` (wykres: instrukcje, pliki, rozmowa) | `/status` |\n| limity planu | `/usage` | `/usage` |\n| nowy temat, czysta kartka | `/clear` | `/new` |\n| streszczenie zamiast kasowania | `/compact` (można dodać, co zachować: `/compact zachowaj decyzje o rabatach`) | `/compact` |\n| zmiana modelu | `/model` | `/model` |\n| wysiłek rozumowania | `/effort` | (wybór modelu/ustawień) |\n| powrót do starej sesji | `/resume`, nazwanie `/rename` | (historia sesji w aplikacji) |\n## Strategie z dokumentacji (w skrócie)\n- `/clear` między niezwiązanymi zadaniami — najtańsze.\n- Konkretne prośby zamiast „popraw cały projekt” — agent czyta mniej plików.\n- Tryb planu przy złożonych zadaniach — mniej prób i błędów.\n- Lżejszy model do prostych zadań, mocniejszy do trudnych (nazwy modeli sprawdzasz w `/model` — zmieniają się).\n- Krótkie pliki instrukcji (każda linia CLAUDE.md jest wysyłana przy każdej wiadomości).\n## Notatka przekazania (handoff)\nPrzed `/clear` po dłuższej pracy poproś: „Zapisz w notatki/stan.md: co zrobione, decyzje, co dalej, otwarte pytania — maks. 15 linii”. Nowa sesja: „Przeczytaj notatki/stan.md i AGENTS.md”. To tańsze i pewniejsze niż wielogodzinna rozmowa.\n## Planowanie dnia pod limity\nOkno ok. 5 godzin: rozkładaj trudne zadania na początek okna, nie zostawiaj ich na koniec. Gdy limit się kończy — przejdź do pracy bez agenta: przegląd diffów, testy, README, dziennik.",
    "przyklad": "Sesja przed i po porządkach (wartości przykładowe):\n\n/context → 142 tys. tokenów: instrukcje 3 tys., pliki 61 tys., rozmowa 78 tys.\nProśba: „Zapisz notatki/stan.md (maks. 15 linii)”.\n/clear\n„Przeczytaj notatki/stan.md i AGENTS.md, potem zrób punkt 3 planu.”\n/context → 18 tys. tokenów.",
    "demonstracja": {
     "tytul": "Sesja, która „zgłupiała”, i jej naprawa",
@@ -8422,9 +8422,9 @@
      "dostęp 19.11.2026"
     ],
     [
-     "METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX)",
-     "https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/",
-     "dostęp 19.11.2026"
+     "METR (10.07.2025): badanie RCT — doświadczeni programiści z AI 19% wolniej",
+     "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+     "dostęp 24.11.2026"
     ]
    ],
    "czas_min": 50
@@ -12158,9 +12158,9 @@
    ],
    "zrodla": [
     [
-     "PARP — Czy treści wygenerowane przez AI są chronione prawem autorskim? (13.05.2024)",
-     "https://www.parp.gov.pl/component/content/article/86541",
-     "dostęp 19.11.2026"
+     "PARP — Wytwory powstałe przy udziale AI — w jaki sposób je chronić? (13.05.2024)",
+     "https://www.parp.gov.pl/component/content/article/86364:wytwory-powstale-przy-udziale-ai-w-jaki-sposob-je-chronic",
+     "dostęp 24.11.2026"
     ],
     [
      "choosealicense.com — wybór licencji open source (GitHub)",
@@ -12173,9 +12173,9 @@
      "dostęp 20.11.2026"
     ],
     [
-     "AI Act po „Digital Omnibus” — rozporządzenie (UE) 2026/1744, harmonogram stosowania (actuia.com)",
-     "https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/",
-     "dostęp 19.11.2026"
+     "Rozporządzenie (UE) 2026/1744 („Digital Omnibus” dla AI Act) — EUR-Lex, w mocy od 27.07.2026",
+     "https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
+     "dostęp 24.11.2026"
     ],
     [
      "Anthropic — Consumer Terms of Service (prawa do Outputs)",
@@ -14187,9 +14187,9 @@
      "dostęp 19.11.2026"
     ],
     [
-     "AI Act po „Digital Omnibus” — harmonogram (actuia.com)",
-     "https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/",
-     "dostęp 19.11.2026"
+     "Rozporządzenie (UE) 2026/1744 („Digital Omnibus” dla AI Act) — EUR-Lex",
+     "https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
+     "dostęp 24.11.2026"
     ]
    ],
    "czas_min": 45
@@ -15709,12 +15709,12 @@
      "po 20 USD/mies. bez VAT (≈ 24,60 USD z VAT 23%)"
     ],
     [
-     "Max / Pro (wyższe)",
-     "Claude Max 5x 100 USD, 20x 200 USD · ChatGPT Pro od 100 USD"
+     "Max / Ultra / Pro (wyższe)",
+     "Claude Max 100 USD, Ultra 200 USD (dawniej Max 20x) · ChatGPT Pro od 100 USD"
     ],
     [
      "Limity",
-     "okno ok. 5 h + tygodniowe — /usage (Claude Code), /status (Codex)"
+     "okno ok. 5 h + tygodniowe — /usage (Claude Code i Codex)"
     ],
     [
      "AI Act",
@@ -16809,9 +16809,9 @@
    "dostęp 19.11.2026"
   ],
   [
-   "METR (2025): badanie RCT — doświadczeni programiści z AI 19% wolniej (omówienie DX)",
-   "https://getdx.com/blog/metr-study-on-how-ai-affects-developer-productivity/",
-   "dostęp 19.11.2026"
+   "METR (10.07.2025): Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity — badanie RCT, z AI 19% wolniej",
+   "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+   "dostęp 24.11.2026"
   ],
   [
    "Claude Code — przewodnik po terminalu dla nowych użytkowników (oficjalna dokumentacja)",
@@ -16919,14 +16919,14 @@
    "dostęp 19.11.2026"
   ],
   [
-   "Claude Help Center — Using Claude Code with your Pro or Max plan",
-   "https://support.claude.com/en/articles/14552983",
-   "dostęp 19.11.2026"
+   "Claude Help Center — Use Claude Code with your Pro or Max plan (limity 5-godzinne i tygodniowe)",
+   "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+   "dostęp 24.11.2026"
   ],
   [
-   "Ceny planów Claude 2026 — zestawienie (dupple.com, 2.11.2026)",
-   "https://dupple.com/learn/claude-code-pricing",
-   "dostęp 19.11.2026"
+   "Claude — Plans & Pricing (Pro 20 USD / 17 USD rocznie, Max 100 USD, Ultra 200 USD; ceny bez podatku)",
+   "https://claude.com/pricing",
+   "dostęp 24.11.2026"
   ],
   [
    "Codex — Pricing (plany ChatGPT i dostęp do Codex)",
@@ -17219,9 +17219,9 @@
    "dostęp 19.11.2026"
   ],
   [
-   "PARP — Czy treści wygenerowane przez AI są chronione prawem autorskim? (13.05.2024)",
-   "https://www.parp.gov.pl/component/content/article/86541",
-   "dostęp 19.11.2026"
+   "PARP — Wytwory powstałe przy udziale AI — w jaki sposób je chronić? (13.05.2024)",
+   "https://www.parp.gov.pl/component/content/article/86364:wytwory-powstale-przy-udziale-ai-w-jaki-sposob-je-chronic",
+   "dostęp 24.11.2026"
   ],
   [
    "choosealicense.com — wybór licencji open source (GitHub)",
@@ -17234,9 +17234,9 @@
    "dostęp 20.11.2026"
   ],
   [
-   "AI Act po „Digital Omnibus” — rozporządzenie (UE) 2026/1744, harmonogram stosowania (actuia.com)",
-   "https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/",
-   "dostęp 19.11.2026"
+   "Rozporządzenie (UE) 2026/1744 („Digital Omnibus” dla AI Act) — EUR-Lex, w mocy od 27.07.2026",
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
+   "dostęp 24.11.2026"
   ],
   [
    "Anthropic — Consumer Terms of Service (prawa do Outputs)",

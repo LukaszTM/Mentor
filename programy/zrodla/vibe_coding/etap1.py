@@ -12,8 +12,8 @@ Z_CC_PERM = ["Claude Code — Configure permissions (reguły allow/ask/deny, /pe
 Z_CC_MEM = ["Claude Code — How Claude remembers your project (CLAUDE.md, @import, AGENTS.md)", "https://code.claude.com/docs/en/memory", D]
 Z_CC_CHECK = ["Claude Code — Checkpointing (/rewind, Esc Esc)", "https://code.claude.com/docs/en/checkpointing", D]
 Z_CC_BEST = ["Claude Code — Best practices", "https://code.claude.com/docs/en/best-practices", D]
-Z_CL_PLANS = ["Claude Help Center — Using Claude Code with your Pro or Max plan", "https://support.claude.com/en/articles/14552983", D]
-Z_CL_PRICE = ["Ceny planów Claude 2026 — zestawienie (dupple.com, 2.11.2026)", "https://dupple.com/learn/claude-code-pricing", D]
+Z_CL_PLANS = ["Claude Help Center — Use Claude Code with your Pro or Max plan (limity 5-godzinne i tygodniowe)", "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan", "dostęp 24.11.2026"]
+Z_CL_PRICE = ["Claude — Plans & Pricing (Pro 20 USD / 17 USD rocznie, Max 100 USD, Ultra 200 USD; ceny bez podatku)", "https://claude.com/pricing", "dostęp 24.11.2026"]
 Z_CX_README = ["OpenAI Codex CLI — README (instalacja, logowanie, licencja Apache-2.0)", "https://cdn.jsdelivr.net/gh/openai/codex@main/README.md", D]
 Z_CX_WIN = ["Codex — aplikacja na Windows (ChatGPT desktop, sandbox Windows, WSL2)", "https://learn.chatgpt.com/docs/app/windows", D]
 Z_CX_PERM = ["Codex — Permission modes (Ask for approval, Approve for me, Full access)", "https://learn.chatgpt.com/docs/permission-modes", D]
@@ -36,13 +36,13 @@ KONTA = L(
         "|---|---|---|\n"
         "| dostęp w planie | Pro, Max, Team, Enterprise; darmowy plan claude.ai NIE obejmuje Claude Code | ChatGPT Plus i wyższe: CLI, IDE, web; Free i Go — ograniczony dostęp tylko w aplikacji desktop (wdrażany stopniowo) |\n"
         "| najtańszy pełny plan | Pro: 20 USD/mies. (17 USD przy płatności rocznej) | Plus: 20 USD/mies. |\n"
-        "| wyższe plany | Max 5x: 100 USD, Max 20x: 200 USD | Pro: od 100 USD |\n"
+        "| wyższe plany | Max: 100 USD (5× użycia Pro), Ultra: 200 USD (dawniej Max 20x, od 30.10.2026) | Pro: od 100 USD |\n"
         "| płatność za użycie | konto API (Console) — płacisz za tokeny | klucz API — płacisz za tokeny |\n"
         "Ceny podano bez podatku (stan: listopad 2026). W Polsce dolicza się VAT 23%: 20 USD × 1,23 = 24,60 USD, czyli ok. 90–100 zł zależnie od kursu dolara. "
         "Ceny i nazwy planów zmieniają się kilka razy w roku — kalendarz aktualizacji kursu przypomina, kiedy sprawdzić strony cenników.\n"
         "## Limity: okno 5-godzinne i tygodniowe\n"
         "Subskrypcja to nie „bez limitu”. Oba narzędzia liczą użycie w oknach: krótkim (ok. 5 godzin) i tygodniowym. Po przekroczeniu Claude Code pokazuje komunikat o limicie sesji lub tygodnia i trzeba poczekać (albo dokupić użycie). "
-        "W Claude Code stan limitów pokazuje polecenie `/usage`, w Codex — `/status`.\n"
+        "W Claude Code stan limitów pokazuje polecenie `/usage`, w Codex — `/usage` (limity konta), a `/status` — zużycie tokenów w bieżącej sesji.\n"
         "## Subskrypcja czy API?\n"
         "- Subskrypcja: stała cena, limity. Dla nauki i małych projektów — prawie zawsze lepsza.\n"
         "- API: płacisz za każdy token, bez sufitu. Dokumentacja Claude Code podaje, że w firmach średni koszt to ok. 13 USD na programistę na aktywny dzień, 150–250 USD miesięcznie. Dla początkującego to łatwa droga do niespodzianki na karcie.\n"
@@ -52,7 +52,7 @@ KONTA = L(
         "- Najmocniejszy model do prostych zadań (`/model` zmienia model).\n"
         "## Decyzja dla kursu\n"
         "- Wystarczy JEDEN plan: Claude Pro albo ChatGPT Plus. Lekcje pokazują oba narzędzia; zadania wykonasz tym, które masz.\n"
-        "- Kup na miesiąc, ustaw przypomnienie o odnowieniu, oceniaj po 2 tygodniach w `/usage` / `/status`.\n"
+        "- Kup na miesiąc, ustaw przypomnienie o odnowieniu, oceniaj po 2 tygodniach w `/usage` (w obu narzędziach).\n"
         "- Ścieżka bez konta: każde zadanie z agentem ma zapis jego pracy z jednym celowo wstawionym błędem — ćwiczysz czytanie i poprawianie kodu agenta.\n"
         "## Bezpieczeństwo konta\n"
         "Włącz weryfikację dwuetapową (2FA) na koncie Anthropic/OpenAI i GitHub. Nie udostępniaj konta innym — dostęp do agenta to dostęp do Twoich plików."),
@@ -66,7 +66,7 @@ KONTA = L(
         "Zadaj sobie pytanie: z którego ekosystemu już korzystasz (masz ChatGPT Plus? — wybierz Codex)? Jeśli żadnego — wybierz jeden i nie zmieniaj przez miesiąc.",
         "Ustaw w kalendarzu przypomnienie 2 dni przed odnowieniem: „ocenić /usage — zostaję, zmieniam, rezygnuję?”."],
         "wynik": "Masz decyzję z kwotą w złotych, datą sprawdzenia ceny i przypomnieniem — bez dwóch planów „na zapas”."},
-    jak_uruchomic=["Przeglądarka → claude.com/pricing, chatgpt.com/codex/pricing.", "Po zakupie: w Claude Code `/usage`, w Codex `/status`."],
+    jak_uruchomic=["Przeglądarka → claude.com/pricing, chatgpt.com/codex/pricing.", "Po zakupie: `/usage` w Claude Code i w Codex."],
     cwiczenia=[
         C("prowadzone",
           "Policz: (1) koszt planu za 20 USD z VAT 23% w dolarach, (2) w złotych przy kursie 3,80 zł/USD, (3) ile zapłacisz przez 3 miesiące. Czas: 15 minut.",
@@ -87,7 +87,7 @@ KONTA = L(
            wy("s4", "(4) Rada: klucz API zamiast planu", ["Codex w ramach Plus", "Claude Pro", "ścieżka bez konta", "zostań przy subskrypcji"], "zostań przy subskrypcji")]),
     ],
     typowe_bledy=[
-        B("„You've hit your session limit” w środku zadania.", "Wyczerpane okno 5-godzinne (długa sesja, duży kontekst).", "`/usage` (Claude Code) albo `/status` (Codex).", "Poczekaj do odnowienia okna; na przyszłość krótsze sesje, `/clear` między zadaniami (tydzień 7)."),
+        B("„You've hit your session limit” w środku zadania.", "Wyczerpane okno 5-godzinne (długa sesja, duży kontekst).", "`/usage` (w Claude Code i w Codex).", "Poczekaj do odnowienia okna; na przyszłość krótsze sesje, `/clear` między zadaniami (tydzień 7)."),
         B("Claude Code po zalogowaniu mówi, że plan nie obejmuje dostępu.", "Darmowy plan claude.ai nie obejmuje Claude Code.", "Ustawienia konta na claude.ai → plan.", "Pro lub wyższy albo konto API (Console); albo ścieżka bez konta."),
         B("Rachunek API wyższy niż subskrypcja.", "Płatność za tokeny bez limitu.", "Panel rozliczeń dostawcy.", "Ustaw limit wydatków w panelu API albo wróć do subskrypcji."),
     ],
@@ -96,7 +96,7 @@ KONTA = L(
     zadania=["Zapisz w koszty.md decyzję z kwotą w złotych i datą sprawdzenia ceny.", "Włącz 2FA na koncie dostawcy AI.", "Ustaw przypomnienie przed odnowieniem planu."],
     pytania=[["Czy darmowy plan claude.ai daje Claude Code?", "Nie — potrzebny Pro, Max, Team, Enterprise albo konto API."],
              ["Czym różni się subskrypcja od API?", "Subskrypcja: stała cena z limitami okien; API: płatność za każdy token bez sufitu."],
-             ["Jak sprawdzisz, ile limitu zostało?", "W Claude Code `/usage`, w Codex `/status`."]],
+             ["Jak sprawdzisz, ile limitu zostało?", "`/usage` — w Claude Code i w Codex."]],
     podsumowanie="Wybierasz jeden plan albo ścieżkę bez konta, liczysz koszt z VAT, rozumiesz okna limitów i dlaczego API nie jest „tańsze” dla początkującego.",
     test=[T("Ile planów płatnych potrzebujesz do kursu?", ["0 — zawsze", "1 (albo ścieżka bez konta)", "2", "3"], 1, "Claude Pro albo ChatGPT Plus."),
           T("20 USD + VAT 23% to:", ["20 USD", "23 USD", "24,60 USD", "26 USD"], 2, "20 × 1,23."),
@@ -232,7 +232,7 @@ INST_CODEX = L(
         "|---|---|---|\n"
         "| instrukcje projektu | CLAUDE.md (czyta też AGENTS.md, gdy nie ma CLAUDE.md) | AGENTS.md |\n"
         "| zmiana trybu zgód | Shift + Tab, `/permissions` (reguły) | `/permissions` |\n"
-        "| limity i zużycie | `/usage`, `/context` | `/status` |\n"
+        "| limity i zużycie | `/usage`, `/context` | `/usage`, `/status` |\n"
         "| podsumowanie rozmowy | `/compact` | `/compact` |\n"
         "| przerwanie | Esc | Esc |\n"
         "Nazwy modeli zmieniają się często — kurs ich nie wpisuje; sprawdzisz je w `/model`."),
@@ -530,7 +530,7 @@ MALE_KROKI = L(
     test=[T("Najlepsza pierwsza prośba do nowego zadania:", ["Napisz wszystko", "Przeczytaj pliki i zaproponuj plan, nie zmieniaj plików", "Uprość projekt", "Zrób to szybko"], 1, "Eksploracja i plan."),
           T("Sygnał, że krok jest za duży:", ["Zmiana 1 funkcji", "Agent chce zmienić 5 plików naraz", "Jeden test", "Krótki diff"], 1, "Podziel."),
           T("Każda prośba powinna kończyć się:", ["Podziękowaniem", "Kryterium „Gotowe, gdy…”", "Emoji", "Nazwą modelu"], 1, "Agent może się sam sprawdzić."),
-          T("Nowa rozmowa w Codex:", ["/new", "/clear", "/restart", "/init"], 0, "W Claude Code — /clear.")],
+          T("Nowa rozmowa w Codex bez czyszczenia ekranu terminala:", ["/new", "/restart", "/reset", "/init"], 0, "/clear w Codex też zaczyna nową rozmowę, ale czyści ekran; w Claude Code — /clear.")],
     w_praktyce=["Plan w punktach to część dokumentacji zadania — zapisz go w specyfikacji.", "Jedna sesja = jeden temat."],
     zrodla=[Z_CC_BEST, Z_CC_MODES, Z_CC_COSTS],
 )

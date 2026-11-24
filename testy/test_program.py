@@ -84,7 +84,7 @@ def test_migracja_struktura():
 def test_kurs_kadry_zrodla_i_lekcje_zagraniczne(repo):
     """Kurs kadrowy 3.1: 48 lekcji, lekcje z materiałów zagranicznych w planie, źródła lekcji [tytuł, https, data dostępu], rejestr źródeł programu."""
     d = json.loads((repo / "programy" / "kadry-i-place.json").read_text(encoding="utf-8"))
-    assert d["wersja"] == "3.1" and d["stan_prawny"] == "18 listopada 2026"
+    assert d["wersja"] == "3.2" and d["stan_prawny"] == "18 listopada 2026"
     lekcje = {l["id"]: l for l in d["lekcje"]}
     assert len(lekcje) == 48
     assert lekcje["praktyki_hr_zagranica"]["tydzien"] == 2 and lekcje["prawo_ue_i_swiat"]["tydzien"] == 11

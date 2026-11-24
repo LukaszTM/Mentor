@@ -983,7 +983,7 @@ WYJASNIENIA["zasilki_inne"] = """## Zasiłek opiekuńczy (art. 32–35) — 80% 
 Łącznie nie więcej niż 60 dni w roku na wszystkich uprawnionych — oboje rodziców razem.
 Zasiłek nie przysługuje, gdy inny domownik może zapewnić opiekę. Wyjątek: dziecko do 2 lat.
 Dokumenty: e-ZLA na opiekę (lekarz wpisuje PESEL dziecka); wniosek Z-15A (dziecko) lub Z-15B (inny członek rodziny) — oświadczenie, kto jeszcze się opiekuje.
-Dodatkowy zasiłek opiekuńczy dla ojca: do 8 tygodni, gdy matka jest w szpitalu w okresie macierzyńskiego.
+Dodatkowy zasiłek opiekuńczy dla ojca (art. 32a ustawy zasiłkowej): do 8 tygodni od porodu, gdy matka uprawniona do zasiłku macierzyńskiego przebywa w szpitalu (albo ma orzeczenie o niezdolności do samodzielnej egzystencji lub porzuciła dziecko) — niezależnie od limitu 60 dni. Po 8 tygodniach macierzyńskiego matka w szpitalu może przerwać urlop, a ojciec przejmuje jego część (art. 180 §10 KP).
 
 ## Zasiłek macierzyński
 Wypłaca płatnik zasiłków albo ZUS. Podstawa — jak przy chorobowym. Bez wyczekiwania.

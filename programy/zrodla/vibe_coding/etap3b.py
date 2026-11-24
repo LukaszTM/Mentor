@@ -465,5 +465,5 @@ POWTORKA_3 = L(
           T("Nowe narzędzie AI sprawdzasz:", ["Na nowym, ciekawym projekcie bez testów", "Na tej samej specyfikacji i testach co obecne", "Czytając reklamy", "Wcale"], 1, "Porównanie na tym samym."),
           T("Umiejętność, której AI nie zastąpi na rozmowie:", ["Pisanie promptów", "Czytanie i wyjaśnianie kodu", "Instalacja", "Kopiowanie"], 1, "Ćwiczona od tygodnia 1.")],
     w_praktyce=["proces.md przy biurku.", "Kwartalny przegląd: ceny, wersje, zależności."],
-    zrodla=[Z_CC_BEST, Z_SO, ["AI Act po „Digital Omnibus” — harmonogram (actuia.com)", "https://www.actuia.com/en/news/digital-omnibus-on-ai-published-in-the-official-journal/", "dostęp 19.11.2026"]],
+    zrodla=[Z_CC_BEST, Z_SO, ["Rozporządzenie (UE) 2026/1744 („Digital Omnibus” dla AI Act) — EUR-Lex", "https://eur-lex.europa.eu/eli/reg/2026/1744/oj", "dostęp 24.11.2026"]],
 )

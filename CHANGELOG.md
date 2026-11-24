@@ -1,5 +1,14 @@
 # Zmiany w Mentorze
 
+## Kursy: przegląd faktów 24.11.2026 — Kadry i płace 3.2, Vibe coding 1.1 (Mentor bez zmian)
+
+- **Kadry i płace 3.2**: upały w pracy — poprawny przepis (§ 30a rozporządzenia BHP, nie „§ 15a–15c”), próg 25°C także w pomieszczeniu przy ciężkiej pracy, na otwartej przestrzeni tylko środki
+  organizacyjne, wyjątki od wstrzymania prac; usunięte nieprawdziwe zdanie o „zachowaniu wynagrodzenia” z rozporządzenia (wynagrodzenie — art. 81 §1 KP). Dodatkowy zasiłek opiekuńczy ojca
+  z podstawą prawną (art. 32a ustawy zasiłkowej) i warunkami. Trzy zdublowane pytania quizów zastąpione nowymi (urlop opiekuńczy, dodatkowy urlop osoby z niepełnosprawnością,
+  odwołanie od decyzji PIP o stosunku pracy).
+- **Vibe coding 1.1**: plany Claude według cennika z listopada 2026 (Max 100 USD, Ultra 200 USD — dawniej Max 20x); limity w Codex — `/usage` (konto) i `/status` (sesja);
+  pytanie o nową rozmowę w Codex bez dwóch poprawnych odpowiedzi; źródła wyłącznie pierwotne: Claude Help Center (poprawny artykuł), claude.com/pricing, METR, PARP (poprawny artykuł), EUR-Lex (rozporządzenie 2026/1744).
+
 ## 2.10.0 — kurs „Python od zera → Junior QA” 3.0 według standardu; Mentor bez wbudowanych kursów
 
 - **Kurs Python → Junior QA 3.0** (źródła `programy/zrodla/python_junior_qa/`, przepisane od nowa): 39 lekcji według `STANDARD_KURSOW.md` — po co, wymagania, wyjaśnienie od podstaw,

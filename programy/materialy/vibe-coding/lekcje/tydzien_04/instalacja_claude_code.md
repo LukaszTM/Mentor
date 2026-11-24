@@ -118,7 +118,7 @@ Instalujesz Claude Code z oficjalnego adresu, sprawdzasz wersję i claude doctor
 Narzędzia, ceny i przepisy zmieniają się — przed użyciem w pracy otwórz źródło.
 - Claude Code — Set up Claude Code (instalacja, wymagania, Windows) (dostęp 19.11.2026) — <https://code.claude.com/docs/en/setup>
 - Claude Code — Terminal guide for new users (dostęp 19.11.2026) — <https://code.claude.com/docs/en/terminal-guide>
-- Claude Help Center — Using Claude Code with your Pro or Max plan (dostęp 19.11.2026) — <https://support.claude.com/en/articles/14552983>
+- Claude Help Center — Use Claude Code with your Pro or Max plan (limity 5-godzinne i tygodniowe) (dostęp 24.11.2026) — <https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan>
 
 ## Test (w Mentorze: Lekcje → Sprawdź się)
 - Zalecana komenda instalacji w PowerShell:
